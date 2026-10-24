@@ -1,0 +1,2738 @@
+{
+ "ep": [
+  {
+   "ID": 1,
+   "Unit": "Skills and concepts",
+   "Topic": "Historical concepts",
+   "Exam skill or knowledge tested": "Define the historical concepts",
+   "EP question type": "Multiple choice",
+   "Stimulus (text to paste as text stimulus)": null,
+   "Question": "A historian notices that peasants still paid rent to a landowner after the Black Death, but now in money rather than labour. Which historical concept best describes this observation?",
+   "Option A": "Contestability",
+   "Option B": "Continuity and change",
+   "Option C": "Empathy",
+   "Option D": "Perspectives",
+   "Correct answer": "B",
+   "Feedback shown to students": "Something stayed the same (rent) while its form changed (money instead of labour). That is continuity and change working together.",
+   "Teacher notes": "Applies the concept rather than asking for the definition. Tests the most-confused pair."
+  },
+  {
+   "ID": 2,
+   "Unit": "Skills and concepts",
+   "Topic": "Historical concepts",
+   "Exam skill or knowledge tested": "Define the historical concepts",
+   "EP question type": "Multiple choice",
+   "Stimulus (text to paste as text stimulus)": null,
+   "Question": "Two textbooks disagree about whether Commodore Perry's arrival or internal problems did more to end the Tokugawa shogunate. Which historical concept does this disagreement illustrate?",
+   "Option A": "Contestability",
+   "Option B": "Cause and effect",
+   "Option C": "Significance",
+   "Option D": "Evidence",
+   "Correct answer": "A",
+   "Feedback shown to students": "When historians interpret the same past differently, the interpretation is contestable. The disagreement is about causes, but the concept describing a disagreement itself is contestability.",
+   "Teacher notes": null
+  },
+  {
+   "ID": 3,
+   "Unit": "Skills and concepts",
+   "Topic": "Historical concepts",
+   "Exam skill or knowledge tested": "Define the historical concepts",
+   "EP question type": "Fill the gaps (dropdown)",
+   "Stimulus (text to paste as text stimulus)": null,
+   "Question": "Complete the passage.\nHistorians judge the [significance] of an event by asking how many people it affected, how deeply it changed their lives and how long the change lasted. To understand why people acted as they did without judging them by today's standards, historians use [empathy]. The clues gathered from a source by asking questions of it are called [evidence].",
+   "Option A": "Blank 1 options: significance / perspective / contestability",
+   "Option B": "Blank 2 options: empathy / evidence / continuity",
+   "Option C": "Blank 3 options: evidence / sources / facts",
+   "Option D": null,
+   "Correct answer": "significance; empathy; evidence",
+   "Feedback shown to students": "Significance is judged by scale, depth and duration. Empathy is understanding people in their own context. Evidence is what you draw out of a source, not the source itself.",
+   "Teacher notes": null
+  },
+  {
+   "ID": 4,
+   "Unit": "Skills and concepts",
+   "Topic": "Source analysis",
+   "Exam skill or knowledge tested": "Identify origin (who and when)",
+   "EP question type": "Multiple choice",
+   "Stimulus (text to paste as text stimulus)": "Source caption. Adapted from the Decameron by Giovanni Boccaccio, written in Florence, Italy, c. 1350.",
+   "Question": "In which century was this source created?",
+   "Option A": "12th century",
+   "Option B": "13th century",
+   "Option C": "14th century",
+   "Option D": "15th century",
+   "Correct answer": "C",
+   "Feedback shown to students": "1350 falls in the 1300s, which is the 14th century. Add one to the hundreds digit to find the century.",
+   "Teacher notes": "Students repeatedly lose the century question. Pair with a Japan version."
+  },
+  {
+   "ID": 5,
+   "Unit": "Skills and concepts",
+   "Topic": "Source analysis",
+   "Exam skill or knowledge tested": "Identify origin (who and when)",
+   "EP question type": "Multiple choice",
+   "Stimulus (text to paste as text stimulus)": "Source caption. Woodblock print by Katsushika Hokusai, produced in Edo, Japan, 1831.",
+   "Question": "What is the origin of this source?",
+   "Option A": "A Japanese artist working in the 17th century",
+   "Option B": "A Japanese artist working in the 19th century",
+   "Option C": "A European traveller visiting Japan in the 18th century",
+   "Option D": "A Japanese official writing in the Meiji period",
+   "Correct answer": "B",
+   "Feedback shown to students": "Origin means who made it, where and when. 1831 is the 19th century and Edo was the shogun's capital, so this was made inside Tokugawa Japan before Perry arrived in 1853.",
+   "Teacher notes": null
+  },
+  {
+   "ID": 6,
+   "Unit": "Skills and concepts",
+   "Topic": "Source analysis",
+   "Exam skill or knowledge tested": "Apply COMA to explain purpose",
+   "EP question type": "Multiple choice",
+   "Stimulus (text to paste as text stimulus)": "Source caption. Wall painting of the Last Judgement showing demons dragging sinners into hell, painted inside a village church in England, c. 1400. Most villagers could not read.",
+   "Question": "Using COMA, what was the most likely purpose of this painting?",
+   "Option A": "To decorate the church so that wealthy visitors would donate money",
+   "Option B": "To record an actual event that the villagers had witnessed",
+   "Option C": "To teach an audience that could not read what the Church said would happen to sinners",
+   "Option D": "To criticise the priests who ran the church",
+   "Correct answer": "C",
+   "Feedback shown to students": "Content (hell), origin (inside a church), audience (villagers who could not read). Put together, the message was a visual warning about sin that reinforced the Church's authority.",
+   "Teacher notes": null
+  },
+  {
+   "ID": 7,
+   "Unit": "Skills and concepts",
+   "Topic": "Source analysis",
+   "Exam skill or knowledge tested": "Draw conclusions using evidence",
+   "EP question type": "Highlight",
+   "Stimulus (text to paste as text stimulus)": "Adapted from a letter by a European merchant visiting Nagasaki, 1640s.\n\"Only the Dutch and the Chinese may now trade here, and only on the small island built for them in the harbour. No Japanese ship may sail abroad and any Japanese who has lived overseas is forbidden to return. The missionaries have all been expelled and the Christian faith is outlawed on pain of death.\"",
+   "Question": "Highlight the TWO phrases that give evidence that sakoku restricted the movement of Japanese people, not only foreigners.",
+   "Option A": null,
+   "Option B": null,
+   "Option C": null,
+   "Option D": null,
+   "Correct answer": "No Japanese ship may sail abroad; any Japanese who has lived overseas is forbidden to return",
+   "Feedback shown to students": "Sakoku worked in both directions. The source shows restrictions on foreigners (Dutch and Chinese only, one island) and on Japanese (no sailing abroad, no return). The two highlighted phrases are the evidence for the second part.",
+   "Teacher notes": "EP Highlight question. Students select words in the passage. Set the two target phrases as correct."
+  },
+  {
+   "ID": 8,
+   "Unit": "Skills and concepts",
+   "Topic": "Chronology",
+   "Exam skill or knowledge tested": "Read a timeline and order events",
+   "EP question type": "Fill the gaps (dropdown)",
+   "Stimulus (text to paste as text stimulus)": null,
+   "Question": "Put these events in order by choosing the correct event for each position.\nEarliest [Battle of Hastings, 1066] then [First Crusade begins, 1096] then [Genpei War ends and Minamoto Yoritomo becomes shogun, 1192] then [Black Death reaches Europe, 1347] then [Battle of Sekigahara, 1600] then [Commodore Perry arrives in Japan, 1853].",
+   "Option A": "Each blank offers all six events as dropdown options",
+   "Option B": null,
+   "Option C": null,
+   "Option D": null,
+   "Correct answer": "Hastings 1066; First Crusade 1096; Yoritomo shogun 1192; Black Death 1347; Sekigahara 1600; Perry 1853",
+   "Feedback shown to students": "The two units overlap in time. The first shogun ruled a century after Hastings and the Black Death struck Europe while the Kamakura shogunate was in power in Japan.",
+   "Teacher notes": "EP has no ordering question. Use fill the gaps with a dropdown at each position and the same six options in every dropdown. Dates are removed in the student view if you want it harder."
+  },
+  {
+   "ID": 9,
+   "Unit": "Skills and concepts",
+   "Topic": "Chronology",
+   "Exam skill or knowledge tested": "Read a timeline and order events",
+   "EP question type": "Multiple choice",
+   "Stimulus (text to paste as text stimulus)": null,
+   "Question": "Which of the following happened in Japan while the Black Death was spreading through Europe in the late 1340s?",
+   "Option A": "The Tokugawa shogunate was enforcing sakoku",
+   "Option B": "The Kamakura shogunate had recently fallen and the Ashikaga shoguns held power",
+   "Option C": "Emperor Meiji was modernising the army",
+   "Option D": "The Genpei War was being fought",
+   "Correct answer": "B",
+   "Feedback shown to students": "The Kamakura shogunate ended in 1333 and the Ashikaga (Muromachi) shogunate began in 1336, so this is the period that overlaps with the Black Death. Sakoku and Meiji are centuries later, and the Genpei War was 150 years earlier.",
+   "Teacher notes": null
+  },
+  {
+   "ID": 10,
+   "Unit": "Skills and concepts",
+   "Topic": "Turning points",
+   "Exam skill or knowledge tested": "Explain a turning point",
+   "EP question type": "Multiple choice",
+   "Stimulus (text to paste as text stimulus)": null,
+   "Question": "Which statement gives the strongest reason for calling the Battle of Sekigahara (1600) a turning point?",
+   "Option A": "It was the largest battle in Japanese history",
+   "Option B": "Many samurai died on both sides",
+   "Option C": "It ended more than a century of civil war and allowed Tokugawa Ieyasu to establish a shogunate that ruled for over 250 years",
+   "Option D": "It was fought near Kyoto, the home of the emperor",
+   "Correct answer": "C",
+   "Feedback shown to students": "A turning point changes the direction of history. Size, casualties and location are details. The long-term consequence (Tokugawa rule and 250 years of peace) is what makes it a turning point.",
+   "Teacher notes": "Distractors are true facts that are not reasons. Trains students to separate description from significance, the gap the moderation notes flagged."
+  },
+  {
+   "ID": 11,
+   "Unit": "Medieval Europe",
+   "Topic": "Feudalism and hierarchy",
+   "Exam skill or knowledge tested": "Key features of the feudal system",
+   "EP question type": "Multiple choice",
+   "Stimulus (text to paste as text stimulus)": null,
+   "Question": "Which exchange best describes the agreement at the heart of European feudalism?",
+   "Option A": "The Church gave land to kings in return for tithes",
+   "Option B": "A lord granted a fief to a vassal in return for loyalty and military service",
+   "Option C": "Peasants paid money to knights in return for weapons",
+   "Option D": "Merchants gave goods to nobles in return for titles",
+   "Correct answer": "B",
+   "Feedback shown to students": "Feudalism was built on land for service. The lord gave a fief (land) and the vassal gave loyalty and service, usually as a knight.",
+   "Teacher notes": null
+  },
+  {
+   "ID": 12,
+   "Unit": "Medieval Europe",
+   "Topic": "Feudalism and hierarchy",
+   "Exam skill or knowledge tested": "Social hierarchy and roles",
+   "EP question type": "Fill the gaps (dropdown)",
+   "Stimulus (text to paste as text stimulus)": null,
+   "Question": "Complete the hierarchy from the top down.\nThe [monarch] owned all the land and granted large estates to the [nobles], who in turn gave smaller fiefs to [knights] in return for military service. At the bottom, [peasants] farmed the land and gave a share of their produce to the lord of the manor.",
+   "Option A": "Each blank offers: monarch / nobles / knights / peasants / clergy",
+   "Option B": null,
+   "Option C": null,
+   "Option D": null,
+   "Correct answer": "monarch; nobles; knights; peasants",
+   "Feedback shown to students": "Land flowed downwards and service flowed upwards. The clergy sat alongside this structure rather than inside it, which is why it is the distractor.",
+   "Teacher notes": null
+  },
+  {
+   "ID": 13,
+   "Unit": "Medieval Europe",
+   "Topic": "Feudalism and hierarchy",
+   "Exam skill or knowledge tested": "Social hierarchy and roles",
+   "EP question type": "Multiple choice",
+   "Stimulus (text to paste as text stimulus)": null,
+   "Question": "What was the main difference between a serf and a free peasant?",
+   "Option A": "Serfs were paid in coins while free peasants were paid in food",
+   "Option B": "Serfs were bound to their lord's land and could not leave without permission, while free peasants could move",
+   "Option C": "Serfs lived in towns while free peasants lived on manors",
+   "Option D": "Serfs could become knights but free peasants could not",
+   "Correct answer": "B",
+   "Feedback shown to students": "A serf was tied to the manor and owed labour to the lord. Freedom of movement was the key difference, and it is why the labour shortage after the Black Death mattered so much to serfs.",
+   "Teacher notes": null
+  },
+  {
+   "ID": 14,
+   "Unit": "Medieval Europe",
+   "Topic": "Feudalism and hierarchy",
+   "Exam skill or knowledge tested": "How feudalism maintained order",
+   "EP question type": "Multiple choice",
+   "Stimulus (text to paste as text stimulus)": null,
+   "Question": "Why did feudalism help a medieval king keep control of a large kingdom without a modern army or police force?",
+   "Option A": "Every subject swore an oath directly to the king",
+   "Option B": "Nobles who held land from the king were obliged to supply knights and keep order in their own regions",
+   "Option C": "The Church forced peasants to obey the king",
+   "Option D": "Kings employed professional soldiers paid from taxes",
+   "Correct answer": "B",
+   "Feedback shown to students": "The king could not govern everywhere at once. Granting land to nobles made them responsible for defending and controlling their region, in return for their oath of loyalty.",
+   "Teacher notes": null
+  },
+  {
+   "ID": 15,
+   "Unit": "Medieval Europe",
+   "Topic": "Feudalism and hierarchy",
+   "Exam skill or knowledge tested": "Key terms",
+   "EP question type": "Textbox (exact answer)",
+   "Stimulus (text to paste as text stimulus)": null,
+   "Question": "What is the name for the land a lord granted to a vassal in return for loyalty and service? (one word)",
+   "Option A": null,
+   "Option B": null,
+   "Option C": null,
+   "Option D": null,
+   "Correct answer": "fief",
+   "Feedback shown to students": "A fief was the land itself. The vassal was the person who received it.",
+   "Teacher notes": "EP Textbox. Add alternative accepted answers: fief, Fief, feif (common misspelling, your call)."
+  },
+  {
+   "ID": 16,
+   "Unit": "Medieval Europe",
+   "Topic": "Feudalism and hierarchy",
+   "Exam skill or knowledge tested": "Key terms",
+   "EP question type": "True/False",
+   "Stimulus (text to paste as text stimulus)": null,
+   "Question": "True or false. A vassal was always a knight.",
+   "Option A": "True",
+   "Option B": "False",
+   "Option C": null,
+   "Option D": null,
+   "Correct answer": "False",
+   "Feedback shown to students": "A vassal was anyone who swore loyalty to a lord in return for land or protection. Nobles were vassals of the king, and knights were vassals of nobles. The word describes the relationship, not the job.",
+   "Teacher notes": null
+  },
+  {
+   "ID": 17,
+   "Unit": "Medieval Europe",
+   "Topic": "Feudalism and hierarchy",
+   "Exam skill or knowledge tested": "Knights and chivalry",
+   "EP question type": "Multiple select",
+   "Stimulus (text to paste as text stimulus)": null,
+   "Question": "Which TWO of the following were expectations of a knight under the code of chivalry?",
+   "Option A": "Protect the weak and defenceless",
+   "Option B": "Accumulate as much land as possible",
+   "Option C": "Show loyalty to his lord",
+   "Option D": "Avoid all combat unless ordered by the Church",
+   "Correct answer": "A, C",
+   "Feedback shown to students": "Chivalry demanded courage, loyalty, protection of the weak, courtesy and devotion to the Church. Gaining land was a reward, not a rule, and knights were expected to fight.",
+   "Teacher notes": null
+  },
+  {
+   "ID": 18,
+   "Unit": "Medieval Europe",
+   "Topic": "Feudalism and hierarchy",
+   "Exam skill or knowledge tested": "Compare roles across units",
+   "EP question type": "Multiple choice",
+   "Stimulus (text to paste as text stimulus)": null,
+   "Question": "A European knight and a Japanese samurai were similar in that both...",
+   "Option A": "were paid a salary by the central government",
+   "Option B": "were warriors who served a lord in return for land or income and followed a code of conduct",
+   "Option C": "were elected by the peasants they protected",
+   "Option D": "were forbidden to own weapons in peacetime",
+   "Correct answer": "B",
+   "Feedback shown to students": "Both were warrior classes bound by loyalty to a lord, rewarded with land or a stipend, and guided by a code (chivalry or bushido). The differences lie in religion, the role of the emperor and the detail of the codes.",
+   "Teacher notes": "Prepares for the compare-style short answer."
+  },
+  {
+   "ID": 19,
+   "Unit": "Medieval Europe",
+   "Topic": "Feudalism and hierarchy",
+   "Exam skill or knowledge tested": "Perspectives",
+   "EP question type": "Multiple choice",
+   "Stimulus (text to paste as text stimulus)": null,
+   "Question": "A peasant and a noble living on the same manor in 1250 would most likely have had different perspectives on feudalism because...",
+   "Option A": "they spoke different languages",
+   "Option B": "the system gave the noble protection and wealth while it gave the peasant protection but demanded labour and limited freedom",
+   "Option C": "the noble was not part of the feudal system",
+   "Option D": "peasants were not religious",
+   "Correct answer": "B",
+   "Feedback shown to students": "Perspective depends on position in society. The same system looked like security and status from the top and like obligation from the bottom.",
+   "Teacher notes": null
+  },
+  {
+   "ID": 20,
+   "Unit": "Medieval Europe",
+   "Topic": "Feudalism and hierarchy",
+   "Exam skill or knowledge tested": "Long-term change",
+   "EP question type": "Multiple choice",
+   "Stimulus (text to paste as text stimulus)": null,
+   "Question": "Which development did the most to weaken feudalism in the later Middle Ages?",
+   "Option A": "The invention of the printing press",
+   "Option B": "The growth of towns, trade and a money economy alongside the labour shortage after the Black Death",
+   "Option C": "The First Crusade",
+   "Option D": "The building of stone castles",
+   "Correct answer": "B",
+   "Feedback shown to students": "When labour became scarce and money more common, peasants could demand wages or leave for towns. Lords lost their grip on the land-for-labour bargain.",
+   "Teacher notes": "Links the three Medieval Europe topics together."
+  },
+  {
+   "ID": 21,
+   "Unit": "Medieval Europe",
+   "Topic": "Law and order",
+   "Exam skill or knowledge tested": "Crimes and punishments",
+   "EP question type": "Multiple choice",
+   "Stimulus (text to paste as text stimulus)": null,
+   "Question": "Why were most punishments in medieval Europe carried out in public, in the market square or at the town gate?",
+   "Option A": "Because prisons were full",
+   "Option B": "To shame the offender and warn others, since there was no police force and fear was the main deterrent",
+   "Option C": "So the king could watch personally",
+   "Option D": "To raise money by selling tickets",
+   "Correct answer": "B",
+   "Feedback shown to students": "With no police, order depended on deterrence. Stocks, pillories and executions were public so that the whole community saw the consequences of breaking the law.",
+   "Teacher notes": null
+  },
+  {
+   "ID": 22,
+   "Unit": "Medieval Europe",
+   "Topic": "Law and order",
+   "Exam skill or knowledge tested": "Crimes and punishments",
+   "EP question type": "Fill the gaps (dropdown)",
+   "Stimulus (text to paste as text stimulus)": null,
+   "Question": "Match each crime to its likely medieval punishment.\nA baker who sold underweight loaves might be put in the [stocks or pillory]. A peasant caught poaching deer in the lord's forest could face [a fine, mutilation or hanging]. A noble found guilty of treason against the king faced [execution and loss of all property]. A person accused of heresy could be [excommunicated or burned at the stake].",
+   "Option A": "Each blank offers all four punishments",
+   "Option B": null,
+   "Option C": null,
+   "Option D": null,
+   "Correct answer": "stocks or pillory; a fine, mutilation or hanging; execution and loss of all property; excommunicated or burned at the stake",
+   "Feedback shown to students": "Punishments matched the seriousness of the crime and who was offended. Cheating customers was a public nuisance, poaching stole from the lord, treason attacked the king and heresy attacked the Church.",
+   "Teacher notes": null
+  },
+  {
+   "ID": 23,
+   "Unit": "Medieval Europe",
+   "Topic": "Law and order",
+   "Exam skill or knowledge tested": "Trial methods",
+   "EP question type": "Multiple choice",
+   "Stimulus (text to paste as text stimulus)": null,
+   "Question": "In a trial by ordeal, an accused person might carry a red-hot iron and have the wound inspected three days later. What belief made this seem a fair way to decide guilt?",
+   "Option A": "That burns always heal in three days",
+   "Option B": "That God would protect the innocent and reveal the guilty through the outcome",
+   "Option C": "That the lord could tell liars by their faces",
+   "Option D": "That pain made people confess",
+   "Correct answer": "B",
+   "Feedback shown to students": "Medieval justice assumed God intervened in the world. The ordeal was a way of asking God for a verdict. Trial by jury of local men gradually replaced it after the Church withdrew support in 1215.",
+   "Teacher notes": null
+  },
+  {
+   "ID": 24,
+   "Unit": "Medieval Europe",
+   "Topic": "Law and order",
+   "Exam skill or knowledge tested": "Role of religion in law",
+   "EP question type": "Multiple choice",
+   "Stimulus (text to paste as text stimulus)": null,
+   "Question": "Which statement best explains the Church's role in medieval law and order?",
+   "Option A": "The Church had no part in legal matters",
+   "Option B": "The Church ran its own courts under canon law, judged crimes such as heresy, and its threat of excommunication and hell shaped how people behaved",
+   "Option C": "The Church only punished priests",
+   "Option D": "The Church replaced the king's courts entirely",
+   "Correct answer": "B",
+   "Feedback shown to students": "Two systems ran side by side. The king's courts handled most crime, while Church courts applied canon law to clergy, marriage, wills and belief. Fear of damnation was itself a form of social control.",
+   "Teacher notes": null
+  },
+  {
+   "ID": 25,
+   "Unit": "Medieval Europe",
+   "Topic": "Law and order",
+   "Exam skill or knowledge tested": "Key terms",
+   "EP question type": "Textbox (exact answer)",
+   "Stimulus (text to paste as text stimulus)": null,
+   "Question": "What is the term for a crime that involves betraying or plotting against the king? (one word)",
+   "Option A": null,
+   "Option B": null,
+   "Option C": null,
+   "Option D": null,
+   "Correct answer": "treason",
+   "Feedback shown to students": "Treason was the most serious crime against the state and was punished by death and the loss of the offender's property.",
+   "Teacher notes": "EP Textbox. Accept treason and Treason."
+  },
+  {
+   "ID": 26,
+   "Unit": "Medieval Europe",
+   "Topic": "Castles and knights",
+   "Exam skill or knowledge tested": "Role and significance of castles",
+   "EP question type": "Multiple choice",
+   "Stimulus (text to paste as text stimulus)": null,
+   "Question": "Why were castles significant to power and authority in medieval Europe, beyond their use in battle?",
+   "Option A": "They were the only buildings that could store grain",
+   "Option B": "They were a visible symbol of the lord's power, a centre for collecting taxes and administering justice, and a base from which to control the surrounding land",
+   "Option C": "They were built to house peasants",
+   "Option D": "They were used mainly as churches",
+   "Correct answer": "B",
+   "Feedback shown to students": "A castle said who ruled the area. The lord's court, treasury and garrison were inside it, and its sheer size reminded everyone of the hierarchy.",
+   "Teacher notes": null
+  },
+  {
+   "ID": 27,
+   "Unit": "Medieval Europe",
+   "Topic": "Castles and knights",
+   "Exam skill or knowledge tested": "Change over time",
+   "EP question type": "Multiple choice",
+   "Stimulus (text to paste as text stimulus)": null,
+   "Question": "How did castle design change between the 11th and 13th centuries?",
+   "Option A": "Castles became smaller and made of wood",
+   "Option B": "Simple wooden motte-and-bailey castles were replaced by stone keeps and then concentric stone castles with multiple walls and towers",
+   "Option C": "Castles were abandoned for cities",
+   "Option D": "Castles were built underground",
+   "Correct answer": "B",
+   "Feedback shown to students": "Stone resisted fire and siege engines. Concentric designs forced attackers through several layers of defence. This is continuity and change in action, as the purpose stayed the same while the form evolved.",
+   "Teacher notes": null
+  },
+  {
+   "ID": 28,
+   "Unit": "Medieval Europe",
+   "Topic": "Castles and knights",
+   "Exam skill or knowledge tested": "Chivalry",
+   "EP question type": "Multiple select",
+   "Stimulus (text to paste as text stimulus)": null,
+   "Question": "Which TWO expectations were part of the knight's code of chivalry?",
+   "Option A": "Fight bravely and never show cowardice",
+   "Option B": "Treat all peasants as equals",
+   "Option C": "Defend the Church and the Christian faith",
+   "Option D": "Refuse to serve any lord",
+   "Correct answer": "A, C",
+   "Feedback shown to students": "Chivalry combined military courage, loyalty to lord, service to the Church and courtesy, especially towards noblewomen. It did not extend equality to peasants, who knights often treated harshly.",
+   "Teacher notes": null
+  },
+  {
+   "ID": 29,
+   "Unit": "Medieval Europe",
+   "Topic": "Castles and knights",
+   "Exam skill or knowledge tested": "Chivalry and perspectives",
+   "EP question type": "Multiple choice",
+   "Stimulus (text to paste as text stimulus)": null,
+   "Question": "A chronicle written by a monk praises a knight for his chivalry, while a peasant's village was burned by the same knight during a war. What does this tell a historian?",
+   "Option A": "The monk was lying",
+   "Option B": "Chivalry was an ideal that governed how knights treated other nobles and the Church, and different groups experienced knights very differently",
+   "Option C": "Peasants did not exist in that region",
+   "Option D": "The knight was not a real knight",
+   "Correct answer": "B",
+   "Feedback shown to students": "Sources reflect perspective. The code protected the knight's own class. Contrasting sources let historians see the gap between the ideal and the reality.",
+   "Teacher notes": null
+  },
+  {
+   "ID": 30,
+   "Unit": "Medieval Europe",
+   "Topic": "Castles and knights",
+   "Exam skill or knowledge tested": "Tournaments and status",
+   "EP question type": "Multiple choice",
+   "Stimulus (text to paste as text stimulus)": null,
+   "Question": "What purpose did tournaments serve for medieval knights?",
+   "Option A": "They were a way of farming land",
+   "Option B": "They provided training for war and a public stage to display skill and win status, reputation and prizes",
+   "Option C": "They were religious festivals run by the Church",
+   "Option D": "They decided who would become king",
+   "Correct answer": "B",
+   "Feedback shown to students": "Tournaments were practice, sport and advertisement in one. A knight's reputation, and therefore his prospects of land and marriage, could be made in the lists.",
+   "Teacher notes": null
+  },
+  {
+   "ID": 31,
+   "Unit": "Medieval Europe",
+   "Topic": "Catholic Church",
+   "Exam skill or knowledge tested": "Influence on everyday life",
+   "EP question type": "Multiple select",
+   "Stimulus (text to paste as text stimulus)": null,
+   "Question": "Which TWO show how the Catholic Church influenced the everyday life of an ordinary medieval villager?",
+   "Option A": "The village year was organised around Church festivals and holy days, and every major life event, from baptism to burial, happened in the church",
+   "Option B": "Villagers elected the Pope",
+   "Option C": "Villagers paid a tithe of one tenth of their produce to the Church",
+   "Option D": "The Church ran the king's army",
+   "Correct answer": "A, C",
+   "Feedback shown to students": "The Church was present at birth, marriage and death, set the calendar and took a share of every harvest. Its reach into daily life was greater than the king's.",
+   "Teacher notes": null
+  },
+  {
+   "ID": 32,
+   "Unit": "Medieval Europe",
+   "Topic": "Catholic Church",
+   "Exam skill or knowledge tested": "Hierarchy of the clergy",
+   "EP question type": "Fill the gaps (dropdown)",
+   "Stimulus (text to paste as text stimulus)": null,
+   "Question": "Complete the hierarchy of the clergy from the top down.\nThe [Pope] in Rome was head of the Church. Below him, [bishops] oversaw large regions called dioceses from their cathedrals. In each village, a [priest] conducted mass and heard confession. [Monks and nuns] lived apart in monasteries and convents, praying, copying books and caring for the sick.",
+   "Option A": "Each blank offers: Pope / bishops / priest / Monks and nuns / cardinals",
+   "Option B": null,
+   "Option C": null,
+   "Option D": null,
+   "Correct answer": "Pope; bishops; priest; Monks and nuns",
+   "Feedback shown to students": "The Church had its own hierarchy running parallel to the feudal one, with its own courts, taxes and lands. Bishops were often as powerful as nobles.",
+   "Teacher notes": null
+  },
+  {
+   "ID": 33,
+   "Unit": "Medieval Europe",
+   "Topic": "Catholic Church",
+   "Exam skill or knowledge tested": "Sources of power",
+   "EP question type": "Multiple choice",
+   "Stimulus (text to paste as text stimulus)": null,
+   "Question": "Which statement best explains why the Catholic Church was so powerful in medieval Europe?",
+   "Option A": "It had the largest army",
+   "Option B": "It controlled the path to heaven in a society where almost everyone believed in hell, and it also owned vast lands and collected tithes",
+   "Option C": "The Pope was also the king of England",
+   "Option D": "It controlled all trade",
+   "Correct answer": "B",
+   "Feedback shown to students": "Spiritual power was the foundation. Fear of damnation and the Church's monopoly on the sacraments gave it authority over kings and peasants alike. Land and wealth reinforced it.",
+   "Teacher notes": null
+  },
+  {
+   "ID": 34,
+   "Unit": "Medieval Europe",
+   "Topic": "Catholic Church",
+   "Exam skill or knowledge tested": "Political power",
+   "EP question type": "Multiple choice",
+   "Stimulus (text to paste as text stimulus)": null,
+   "Question": "How could the Pope put pressure on a king who defied him?",
+   "Option A": "By sending the Crusaders to attack the king",
+   "Option B": "By excommunicating the king, which cut him off from the Church and gave his subjects and rivals a reason to disobey him",
+   "Option C": "By raising the king's taxes",
+   "Option D": "By cancelling the king's coronation",
+   "Correct answer": "B",
+   "Feedback shown to students": "Excommunication was a political weapon. A king outside the Church risked losing the loyalty of nobles who feared for their own souls. Several kings backed down rather than face it.",
+   "Teacher notes": null
+  },
+  {
+   "ID": 35,
+   "Unit": "Medieval Europe",
+   "Topic": "Catholic Church",
+   "Exam skill or knowledge tested": "Cultural and economic power",
+   "EP question type": "Multiple choice",
+   "Stimulus (text to paste as text stimulus)": null,
+   "Question": "Which of these shows the Church's CULTURAL power rather than its political or economic power?",
+   "Option A": "Owning about one third of the land in Europe",
+   "Option B": "Monasteries preserving and copying books, running schools and producing most of the art and architecture of the period",
+   "Option C": "Excommunicating a king",
+   "Option D": "Collecting the tithe",
+   "Correct answer": "B",
+   "Feedback shown to students": "Political power is about control of rulers, economic power is about land and money, cultural power is about ideas, learning and art. The Church was dominant in all three, and the exam asks students to tell them apart.",
+   "Teacher notes": null
+  },
+  {
+   "ID": 36,
+   "Unit": "Medieval Europe",
+   "Topic": "Catholic Church",
+   "Exam skill or knowledge tested": "Key terms",
+   "EP question type": "Textbox (exact answer)",
+   "Stimulus (text to paste as text stimulus)": null,
+   "Question": "What is the name of the religious punishment that cut a person off from the Church and its sacraments? (one word)",
+   "Option A": null,
+   "Option B": null,
+   "Option C": null,
+   "Option D": null,
+   "Correct answer": "excommunication",
+   "Feedback shown to students": "Excommunication meant no confession, no communion and, people believed, no entry to heaven. It was feared by kings and peasants alike.",
+   "Teacher notes": "EP Textbox. Accept excommunication and Excommunication."
+  },
+  {
+   "ID": 37,
+   "Unit": "Medieval Europe",
+   "Topic": "Catholic Church",
+   "Exam skill or knowledge tested": "Continuity and change",
+   "EP question type": "True/False",
+   "Stimulus (text to paste as text stimulus)": null,
+   "Question": "True or false. The power of the Catholic Church remained unchanged throughout the medieval period.",
+   "Option A": "True",
+   "Option B": "False",
+   "Option C": null,
+   "Option D": null,
+   "Correct answer": "False",
+   "Feedback shown to students": "Church power grew through the Crusades and the 12th and 13th centuries, then was shaken by the Black Death, when it could not stop the plague and lost many clergy. Historians look for both continuity and change.",
+   "Teacher notes": null
+  },
+  {
+   "ID": 38,
+   "Unit": "Medieval Europe",
+   "Topic": "The Crusades",
+   "Exam skill or knowledge tested": "Causes",
+   "EP question type": "Multiple choice",
+   "Stimulus (text to paste as text stimulus)": null,
+   "Question": "What was the main stated aim of the First Crusade in 1096?",
+   "Option A": "To conquer Spain for the Pope",
+   "Option B": "To capture Jerusalem and the Holy Land from Muslim rule and protect Christian pilgrims",
+   "Option C": "To destroy the Byzantine Empire",
+   "Option D": "To open a trade route to India",
+   "Correct answer": "B",
+   "Feedback shown to students": "Pope Urban II called on Christians to recover Jerusalem and aid the Byzantine emperor. Trade and land became consequences and motives for some, but the stated aim was religious.",
+   "Teacher notes": null
+  },
+  {
+   "ID": 39,
+   "Unit": "Medieval Europe",
+   "Topic": "The Crusades",
+   "Exam skill or knowledge tested": "Causes and perspectives",
+   "EP question type": "Highlight",
+   "Stimulus (text to paste as text stimulus)": "Adapted from Pope Urban II's speech at Clermont, 1095, as recorded by Robert the Monk.\n\"A foreign people has invaded the lands of the Christians in the East and destroyed the churches of God. Whoever goes to free the holy city will have all his sins forgiven. Let those who have been robbers now become soldiers of Christ. Let those who once fought their brothers now fight the enemies of God.\"",
+   "Question": "Highlight the phrase that shows the Pope offered a religious reward to those who joined the Crusade.",
+   "Option A": null,
+   "Option B": null,
+   "Option C": null,
+   "Option D": null,
+   "Correct answer": "will have all his sins forgiven",
+   "Feedback shown to students": "The promise of forgiveness of sins was a powerful motive in a society that feared hell. The other sentences give reasons (churches destroyed) and redirect knightly violence, but only this phrase is the reward.",
+   "Teacher notes": null
+  },
+  {
+   "ID": 40,
+   "Unit": "Medieval Europe",
+   "Topic": "The Crusades",
+   "Exam skill or knowledge tested": "Perspectives",
+   "EP question type": "Multiple choice",
+   "Stimulus (text to paste as text stimulus)": null,
+   "Question": "How would a Muslim living in Jerusalem in 1099 most likely have described the arrival of the Crusaders?",
+   "Option A": "As the return of rightful rulers",
+   "Option B": "As a violent foreign invasion of a city that had been under Muslim rule for over 400 years",
+   "Option C": "As a peaceful religious pilgrimage",
+   "Option D": "As a trade mission from Italy",
+   "Correct answer": "B",
+   "Feedback shown to students": "Perspectives differ by position. To Crusaders this was liberation. To the city's Muslim and Jewish inhabitants, many of whom were killed when the city fell, it was conquest.",
+   "Teacher notes": null
+  },
+  {
+   "ID": 41,
+   "Unit": "Medieval Europe",
+   "Topic": "The Crusades",
+   "Exam skill or knowledge tested": "Significance for the Church",
+   "EP question type": "Multiple choice",
+   "Stimulus (text to paste as text stimulus)": null,
+   "Question": "How did the Crusades strengthen the power of the Catholic Church in the short term?",
+   "Option A": "The Pope gained direct control of all European armies",
+   "Option B": "The Pope showed he could call thousands of knights and kings to war, and the Church gained wealth and land from those who left",
+   "Option C": "The Church abolished feudalism",
+   "Option D": "All Muslims converted to Christianity",
+   "Correct answer": "B",
+   "Feedback shown to students": "Only the Pope could unite rulers across Europe behind one cause. Crusaders also mortgaged or donated land to the Church before leaving, increasing its wealth.",
+   "Teacher notes": null
+  },
+  {
+   "ID": 42,
+   "Unit": "Medieval Europe",
+   "Topic": "The Crusades",
+   "Exam skill or knowledge tested": "Consequences (social and economic)",
+   "EP question type": "Multiple select",
+   "Stimulus (text to paste as text stimulus)": null,
+   "Question": "Which TWO of these were consequences of the Crusades for Europe?",
+   "Option A": "Increased trade with the East, bringing goods such as spices, silk and sugar",
+   "Option B": "The end of the Catholic Church",
+   "Option C": "New knowledge from the Islamic world, including in medicine, mathematics and astronomy",
+   "Option D": "The immediate collapse of feudalism in 1099",
+   "Correct answer": "A, C",
+   "Feedback shown to students": "Contact with the East expanded trade and knowledge. The Church survived and even grew stronger at first, and feudalism declined slowly for other reasons.",
+   "Teacher notes": null
+  },
+  {
+   "ID": 43,
+   "Unit": "Medieval Europe",
+   "Topic": "The Crusades",
+   "Exam skill or knowledge tested": "Consequences",
+   "EP question type": "Multiple choice",
+   "Stimulus (text to paste as text stimulus)": null,
+   "Question": "Italian cities such as Venice and Genoa benefited from the Crusades mainly because they...",
+   "Option A": "sent the largest armies",
+   "Option B": "transported and supplied Crusaders by sea and then controlled trade routes to the East",
+   "Option C": "were given Jerusalem to rule",
+   "Option D": "converted to Islam",
+   "Correct answer": "B",
+   "Feedback shown to students": "Ships, supplies and loans made the Italian ports rich and gave them trading posts in the East. This wealth later helped fund the Renaissance.",
+   "Teacher notes": null
+  },
+  {
+   "ID": 44,
+   "Unit": "Medieval Europe",
+   "Topic": "The Crusades",
+   "Exam skill or knowledge tested": "Chronology",
+   "EP question type": "Multiple choice",
+   "Stimulus (text to paste as text stimulus)": null,
+   "Question": "The Crusades took place roughly between...",
+   "Option A": "1066 and 1100",
+   "Option B": "1096 and 1291",
+   "Option C": "1347 and 1351",
+   "Option D": "1500 and 1600",
+   "Correct answer": "B",
+   "Feedback shown to students": "The First Crusade began in 1096 and the last Crusader stronghold, Acre, fell in 1291. Roughly two centuries.",
+   "Teacher notes": null
+  },
+  {
+   "ID": 45,
+   "Unit": "Medieval Europe",
+   "Topic": "The Crusades",
+   "Exam skill or knowledge tested": "Cause and effect",
+   "EP question type": "True/False",
+   "Stimulus (text to paste as text stimulus)": null,
+   "Question": "True or false. The Crusades were caused only by religion.",
+   "Option A": "True",
+   "Option B": "False",
+   "Option C": null,
+   "Option D": null,
+   "Correct answer": "False",
+   "Feedback shown to students": "Religion was the main stated cause, but knights also wanted land and glory, younger sons wanted inheritances they could not get at home, and merchants wanted trade. Historians look for several causes.",
+   "Teacher notes": null
+  },
+  {
+   "ID": 46,
+   "Unit": "Medieval Europe",
+   "Topic": "The Black Death",
+   "Exam skill or knowledge tested": "Causes and spread",
+   "EP question type": "Multiple choice",
+   "Stimulus (text to paste as text stimulus)": null,
+   "Question": "Which factor best explains how the Black Death spread from Asia to Europe in 1347?",
+   "Option A": "Crusader armies returning from Jerusalem",
+   "Option B": "Trade ships travelling along routes from the Black Sea to Italian ports such as Messina carried infected rats and fleas",
+   "Option C": "Pilgrims walking to Rome",
+   "Option D": "Viking longships from the north",
+   "Correct answer": "B",
+   "Feedback shown to students": "The plague followed trade. Genoese ships from Caffa on the Black Sea brought it to Sicily in 1347, and it spread along trade routes and rivers from there.",
+   "Teacher notes": null
+  },
+  {
+   "ID": 47,
+   "Unit": "Medieval Europe",
+   "Topic": "The Black Death",
+   "Exam skill or knowledge tested": "Causes and spread",
+   "EP question type": "Multiple select",
+   "Stimulus (text to paste as text stimulus)": null,
+   "Question": "Which TWO conditions in medieval towns helped the Black Death spread quickly?",
+   "Option A": "Crowded housing with poor sanitation and rubbish in the streets",
+   "Option B": "Advanced hospitals that gathered the sick together",
+   "Option C": "Very little understanding of how disease was transmitted",
+   "Option D": "Strict quarantine laws enforced by the king",
+   "Correct answer": "A, C",
+   "Feedback shown to students": "Dirty, crowded towns suited rats and fleas, and people did not know to isolate the sick or control vermin. Quarantine came later and was patchy.",
+   "Teacher notes": null
+  },
+  {
+   "ID": 48,
+   "Unit": "Medieval Europe",
+   "Topic": "The Black Death",
+   "Exam skill or knowledge tested": "Perspectives and beliefs",
+   "EP question type": "Multiple choice",
+   "Stimulus (text to paste as text stimulus)": null,
+   "Question": "Why did groups of flagellants whip themselves in public during the Black Death?",
+   "Option A": "To cure the disease through bleeding",
+   "Option B": "To entertain townspeople and raise money",
+   "Option C": "They believed the plague was God's punishment and that suffering would earn forgiveness",
+   "Option D": "The Church ordered them to do it",
+   "Correct answer": "C",
+   "Feedback shown to students": "Most people believed the plague was divine punishment. Flagellants tried to atone through pain. The Church eventually condemned them, which is why option D is wrong.",
+   "Teacher notes": null
+  },
+  {
+   "ID": 49,
+   "Unit": "Medieval Europe",
+   "Topic": "The Black Death",
+   "Exam skill or knowledge tested": "Draw conclusions from evidence",
+   "EP question type": "Highlight",
+   "Stimulus (text to paste as text stimulus)": "Adapted from the Decameron by Giovanni Boccaccio, Florence, c. 1350.\n\"Brother abandoned brother, and very often the wife her husband. Fathers and mothers refused to see or tend their children, as if they were strangers. The sick were left with only the help of servants, who demanded high wages. So many died that bodies were stacked in pits like goods in a ship.\"",
+   "Question": "Highlight the phrase that provides evidence of an ECONOMIC effect of the plague.",
+   "Option A": null,
+   "Option B": null,
+   "Option C": null,
+   "Option D": null,
+   "Correct answer": "servants, who demanded high wages",
+   "Feedback shown to students": "Most of the source describes social breakdown. The one economic clue is that labour became scarce and expensive, which foreshadows the long-term rise in wages and the decline of serfdom.",
+   "Teacher notes": null
+  },
+  {
+   "ID": 50,
+   "Unit": "Medieval Europe",
+   "Topic": "The Black Death",
+   "Exam skill or knowledge tested": "Short-term impacts",
+   "EP question type": "Multiple choice",
+   "Stimulus (text to paste as text stimulus)": null,
+   "Question": "Approximately what proportion of Europe's population died in the Black Death between 1347 and 1351?",
+   "Option A": "About 5 per cent",
+   "Option B": "About one tenth",
+   "Option C": "Between one third and one half",
+   "Option D": "Almost everyone",
+   "Correct answer": "C",
+   "Feedback shown to students": "Estimates range from a third to a half, roughly 25 million people. This scale is why the impacts were so deep and long-lasting.",
+   "Teacher notes": null
+  },
+  {
+   "ID": 51,
+   "Unit": "Medieval Europe",
+   "Topic": "The Black Death",
+   "Exam skill or knowledge tested": "Long-term impacts",
+   "EP question type": "Multiple choice",
+   "Stimulus (text to paste as text stimulus)": null,
+   "Question": "How did the Black Death change the position of surviving peasants?",
+   "Option A": "They were forced into stricter serfdom",
+   "Option B": "A shortage of workers allowed them to demand higher wages and better conditions, weakening the feudal system",
+   "Option C": "They all moved to the Holy Land",
+   "Option D": "Nothing changed for peasants",
+   "Correct answer": "B",
+   "Feedback shown to students": "Fewer workers meant lords competed for labour. Many peasants gained wages, freedom of movement or cheaper land, and attempts to reverse this led to revolts.",
+   "Teacher notes": null
+  },
+  {
+   "ID": 52,
+   "Unit": "Medieval Europe",
+   "Topic": "The Black Death",
+   "Exam skill or knowledge tested": "Impact on the Church",
+   "EP question type": "Multiple choice",
+   "Stimulus (text to paste as text stimulus)": null,
+   "Question": "Why did the Black Death weaken people's faith in the Catholic Church?",
+   "Option A": "The Church banned all religious services",
+   "Option B": "Prayers and processions did not stop the plague and many priests died or fled, so the Church seemed powerless",
+   "Option C": "The Pope converted to Islam",
+   "Option D": "The Church invented a cure and charged for it",
+   "Correct answer": "B",
+   "Feedback shown to students": "The Church claimed to stand between people and God. When it could not explain or stop the plague, and clergy died like everyone else, its authority was questioned.",
+   "Teacher notes": null
+  },
+  {
+   "ID": 53,
+   "Unit": "Medieval Europe",
+   "Topic": "The Black Death",
+   "Exam skill or knowledge tested": "Cause and effect (short vs long term)",
+   "EP question type": "Fill the gaps (dropdown)",
+   "Stimulus (text to paste as text stimulus)": null,
+   "Question": "Sort each impact by choosing short-term or long-term.\nMass burials in plague pits were a [short-term] impact. Rising wages for peasants were a [long-term] impact. The appearance of flagellants was a [short-term] impact. The weakening of feudalism was a [long-term] impact.",
+   "Option A": "Each blank offers: short-term / long-term",
+   "Option B": null,
+   "Option C": null,
+   "Option D": null,
+   "Correct answer": "short-term; long-term; short-term; long-term",
+   "Feedback shown to students": "Short-term impacts happened during or just after the outbreak. Long-term impacts unfolded over decades as the labour shortage reshaped society.",
+   "Teacher notes": "Directly targets the short vs long term structure used in past short-answer questions."
+  },
+  {
+   "ID": 54,
+   "Unit": "Medieval Europe",
+   "Topic": "The Black Death",
+   "Exam skill or knowledge tested": "Significance",
+   "EP question type": "True/False",
+   "Stimulus (text to paste as text stimulus)": null,
+   "Question": "True or false. The Black Death is considered a turning point because it caused immediate, permanent collapse of the Catholic Church.",
+   "Option A": "True",
+   "Option B": "False",
+   "Option C": null,
+   "Option D": null,
+   "Correct answer": "False",
+   "Feedback shown to students": "The Church survived for centuries. The Black Death is a turning point because it weakened feudalism and Church authority and shifted power towards ordinary workers over the following century, not because of a sudden collapse.",
+   "Teacher notes": "Targets over-claiming, which appeared in the moderation samples."
+  },
+  {
+   "ID": 55,
+   "Unit": "Medieval Europe",
+   "Topic": "The Black Death",
+   "Exam skill or knowledge tested": "Connections between topics",
+   "EP question type": "Multiple choice",
+   "Stimulus (text to paste as text stimulus)": null,
+   "Question": "Which statement correctly links the Crusades and the Black Death?",
+   "Option A": "The Crusades caused the Black Death",
+   "Option B": "Both increased trade and contact between Europe and the East, and the trade routes that grew after the Crusades were the same routes along which the plague travelled",
+   "Option C": "The Black Death ended the Crusades",
+   "Option D": "There is no connection",
+   "Correct answer": "B",
+   "Feedback shown to students": "The Crusades ended in 1291 and the plague arrived in 1347, so one did not directly cause the other. The link is trade. Expanded Mediterranean trade carried both goods and disease.",
+   "Teacher notes": null
+  },
+  {
+   "ID": 56,
+   "Unit": "Shogunate Japan",
+   "Topic": "Feudalism and samurai",
+   "Exam skill or knowledge tested": "Geography and development",
+   "EP question type": "Multiple choice",
+   "Stimulus (text to paste as text stimulus)": null,
+   "Question": "Japan is an archipelago with mountains covering about three quarters of its land. Which consequence followed most directly from this geography?",
+   "Option A": "Japan became a major horse-breeding nation",
+   "Option B": "Farming was concentrated in narrow coastal plains and valleys, and separate regions developed under local clans",
+   "Option C": "Japan was invaded frequently by its neighbours",
+   "Option D": "Rice could not be grown",
+   "Correct answer": "B",
+   "Feedback shown to students": "Mountains divided the islands into pockets of farmland, which encouraged strong regional clans and made central control difficult. The sea also protected Japan from most invasions.",
+   "Teacher notes": null
+  },
+  {
+   "ID": 57,
+   "Unit": "Shogunate Japan",
+   "Topic": "Feudalism and samurai",
+   "Exam skill or knowledge tested": "Geography and development",
+   "EP question type": "Multiple select",
+   "Stimulus (text to paste as text stimulus)": null,
+   "Question": "Which TWO ways did the sea shape early Japan?",
+   "Option A": "It protected Japan from invasion, including the failed Mongol attacks of 1274 and 1281",
+   "Option B": "It made Japan the centre of a European trading empire",
+   "Option C": "It provided fish and allowed coastal trade between regions",
+   "Option D": "It prevented any contact with China or Korea",
+   "Correct answer": "A, C",
+   "Feedback shown to students": "The sea was both a shield and a source of food and trade. Contact with China and Korea did occur, bringing Buddhism and writing, so option D is wrong.",
+   "Teacher notes": null
+  },
+  {
+   "ID": 58,
+   "Unit": "Shogunate Japan",
+   "Topic": "Feudalism and samurai",
+   "Exam skill or knowledge tested": "Origins of military rule",
+   "EP question type": "Multiple choice",
+   "Stimulus (text to paste as text stimulus)": null,
+   "Question": "Why is the Genpei War (1180 to 1185) considered a turning point in Japanese history?",
+   "Option A": "It unified Japan under the emperor",
+   "Option B": "The victorious Minamoto clan set up the first shogunate, beginning almost 700 years of rule by military leaders",
+   "Option C": "It ended the samurai class",
+   "Option D": "It opened Japan to Western trade",
+   "Correct answer": "B",
+   "Feedback shown to students": "After defeating the Taira, Minamoto Yoritomo was named shogun in 1192. From then on real power sat with military rulers, not the emperor.",
+   "Teacher notes": null
+  },
+  {
+   "ID": 59,
+   "Unit": "Shogunate Japan",
+   "Topic": "Feudalism and samurai",
+   "Exam skill or knowledge tested": "Hierarchy and roles",
+   "EP question type": "Fill the gaps (dropdown)",
+   "Stimulus (text to paste as text stimulus)": null,
+   "Question": "Complete the feudal hierarchy of Japan.\nThe [emperor] was the religious and ceremonial head of Japan but held little real power. The [shogun] was the military ruler who governed in his name. Powerful lords called [daimyo] controlled regions and were served by warriors called [samurai]. Below them, [peasants] farmed the land and made up most of the population.",
+   "Option A": "Each blank offers: emperor / shogun / daimyo / samurai / peasants / merchants",
+   "Option B": null,
+   "Option C": null,
+   "Option D": null,
+   "Correct answer": "emperor; shogun; daimyo; samurai; peasants",
+   "Feedback shown to students": "The emperor sat above the shogun in theory but below him in real power. Merchants ranked lowest among the four main classes.",
+   "Teacher notes": null
+  },
+  {
+   "ID": 60,
+   "Unit": "Shogunate Japan",
+   "Topic": "Feudalism and samurai",
+   "Exam skill or knowledge tested": "Role of the emperor",
+   "EP question type": "Multiple choice",
+   "Stimulus (text to paste as text stimulus)": null,
+   "Question": "Which statement best describes the emperor's role during the shogunate period?",
+   "Option A": "He commanded the samurai armies in battle",
+   "Option B": "He was a respected religious and ceremonial figurehead while the shogun held real political and military power",
+   "Option C": "He was elected by the daimyo every ten years",
+   "Option D": "He had been abolished by the Minamoto clan",
+   "Correct answer": "B",
+   "Feedback shown to students": "Shoguns ruled in the emperor's name, which gave their power legitimacy. The emperor remained in Kyoto with prestige but little control. This is why restoring his power in 1868 was so symbolic.",
+   "Teacher notes": null
+  },
+  {
+   "ID": 61,
+   "Unit": "Shogunate Japan",
+   "Topic": "Feudalism and samurai",
+   "Exam skill or knowledge tested": "Compare daimyo and samurai",
+   "EP question type": "Multiple choice",
+   "Stimulus (text to paste as text stimulus)": null,
+   "Question": "What was the main difference between a daimyo and a samurai?",
+   "Option A": "Daimyo were religious leaders and samurai were farmers",
+   "Option B": "Daimyo were landholding lords who commanded armies, while samurai were the warriors who served them in return for a stipend",
+   "Option C": "Samurai outranked daimyo",
+   "Option D": "Daimyo were foreigners",
+   "Correct answer": "B",
+   "Feedback shown to students": "Both belonged to the warrior class and followed bushido. The difference was rank and role. The daimyo owned the domain and the samurai served it.",
+   "Teacher notes": "Mirrors the compare question style. A similarity version follows."
+  },
+  {
+   "ID": 62,
+   "Unit": "Shogunate Japan",
+   "Topic": "Feudalism and samurai",
+   "Exam skill or knowledge tested": "Bushido",
+   "EP question type": "Multiple select",
+   "Stimulus (text to paste as text stimulus)": null,
+   "Question": "Which TWO values were central to bushido?",
+   "Option A": "Loyalty to one's lord, even unto death",
+   "Option B": "Accumulating personal wealth through trade",
+   "Option C": "Honour, including a readiness to die rather than be disgraced",
+   "Option D": "Equality between all social classes",
+   "Correct answer": "A, C",
+   "Feedback shown to students": "Bushido emphasised loyalty, honour, courage, discipline and frugality. Trade was considered beneath a samurai and equality contradicted the hierarchy.",
+   "Teacher notes": null
+  },
+  {
+   "ID": 63,
+   "Unit": "Shogunate Japan",
+   "Topic": "Feudalism and samurai",
+   "Exam skill or knowledge tested": "Bushido and behaviour",
+   "EP question type": "Multiple choice",
+   "Stimulus (text to paste as text stimulus)": null,
+   "Question": "A samurai whose lord was killed through his failure might commit seppuku. What does this reveal about bushido?",
+   "Option A": "That samurai feared punishment from the emperor",
+   "Option B": "That honour and loyalty were valued above the samurai's own life",
+   "Option C": "That samurai were poorly trained",
+   "Option D": "That seppuku was a form of medical treatment",
+   "Correct answer": "B",
+   "Feedback shown to students": "Seppuku restored honour after failure or disgrace. It shows how completely bushido tied a samurai's identity to loyalty and honour.",
+   "Teacher notes": null
+  },
+  {
+   "ID": 64,
+   "Unit": "Shogunate Japan",
+   "Topic": "Feudalism and samurai",
+   "Exam skill or knowledge tested": "Key terms",
+   "EP question type": "Textbox (exact answer)",
+   "Stimulus (text to paste as text stimulus)": null,
+   "Question": "What is the term for a samurai who has no master or lord? (one word)",
+   "Option A": null,
+   "Option B": null,
+   "Option C": null,
+   "Option D": null,
+   "Correct answer": "ronin",
+   "Feedback shown to students": "Ronin means wave man, someone adrift. Numbers grew after Sekigahara when defeated daimyo lost their domains and their samurai lost their positions.",
+   "Teacher notes": "EP Textbox. Accept ronin and Ronin."
+  },
+  {
+   "ID": 65,
+   "Unit": "Shogunate Japan",
+   "Topic": "Feudalism and samurai",
+   "Exam skill or knowledge tested": "Daimyo and the fall of the Ashikaga",
+   "EP question type": "Multiple choice",
+   "Stimulus (text to paste as text stimulus)": null,
+   "Question": "How did the daimyo contribute to the collapse of the Ashikaga shogunate in the 15th and 16th centuries?",
+   "Option A": "They supported the shogun loyally",
+   "Option B": "They built independent armies and fought each other for land, so the shogun lost control and Japan fell into the Sengoku, or Warring States, period",
+   "Option C": "They invited Western powers to rule Japan",
+   "Option D": "They abolished the samurai class",
+   "Correct answer": "B",
+   "Feedback shown to students": "A weak shogun could not restrain powerful regional lords. The Onin War (1467 to 1477) triggered a century of civil war that only ended with Sekigahara in 1600.",
+   "Teacher notes": null
+  },
+  {
+   "ID": 66,
+   "Unit": "Shogunate Japan",
+   "Topic": "Tokugawa Shogunate",
+   "Exam skill or knowledge tested": "Significance of Tokugawa Ieyasu",
+   "EP question type": "Multiple choice",
+   "Stimulus (text to paste as text stimulus)": null,
+   "Question": "What did Tokugawa Ieyasu do after winning the Battle of Sekigahara in 1600?",
+   "Option A": "He restored the emperor to full power",
+   "Option B": "He became shogun in 1603 and set up a government at Edo that brought over 250 years of peace",
+   "Option C": "He opened Japan to American trade",
+   "Option D": "He abolished the daimyo",
+   "Correct answer": "B",
+   "Feedback shown to students": "Ieyasu used victory to found the Tokugawa shogunate. Edo, today's Tokyo, became the political centre of Japan.",
+   "Teacher notes": null
+  },
+  {
+   "ID": 67,
+   "Unit": "Shogunate Japan",
+   "Topic": "Tokugawa Shogunate",
+   "Exam skill or knowledge tested": "Policies of control (sankin kotai)",
+   "EP question type": "Multiple choice",
+   "Stimulus (text to paste as text stimulus)": null,
+   "Question": "The policy of sankin kotai required daimyo to spend alternate years in Edo and leave their families there when they returned home. What was its main purpose?",
+   "Option A": "To educate the daimyo's children",
+   "Option B": "To keep daimyo under the shogun's watch, drain their wealth through travel and hold their families as hostages against rebellion",
+   "Option C": "To improve Japan's roads",
+   "Option D": "To spread Christianity",
+   "Correct answer": "B",
+   "Feedback shown to students": "Sankin kotai was about control. It cost daimyo heavily, kept them visible and made rebellion risky. Better roads and a booming Edo were side effects, not the purpose.",
+   "Teacher notes": null
+  },
+  {
+   "ID": 68,
+   "Unit": "Shogunate Japan",
+   "Topic": "Tokugawa Shogunate",
+   "Exam skill or knowledge tested": "Edicts",
+   "EP question type": "Multiple choice",
+   "Stimulus (text to paste as text stimulus)": null,
+   "Question": "What is an edict?",
+   "Option A": "A type of samurai sword",
+   "Option B": "An official order issued by the shogun or another authority that people were required to obey",
+   "Option C": "A Buddhist prayer",
+   "Option D": "A tax paid in rice",
+   "Correct answer": "B",
+   "Feedback shown to students": "The Tokugawa governed through edicts, such as the Laws for Military Houses controlling daimyo and the sakoku edicts restricting foreign contact.",
+   "Teacher notes": null
+  },
+  {
+   "ID": 69,
+   "Unit": "Shogunate Japan",
+   "Topic": "Tokugawa Shogunate",
+   "Exam skill or knowledge tested": "Edicts and control",
+   "EP question type": "Highlight",
+   "Stimulus (text to paste as text stimulus)": "Adapted from the Laws for the Military Houses (Buke Shohatto), issued by the Tokugawa shogunate, 1615.\n\"Daimyo must not repair their castles without permission, and new construction is strictly forbidden. Daimyo must report at once any plot or disturbance in a neighbouring domain. Marriages between daimyo families must not be arranged privately. The lords must live simply and avoid luxury.\"",
+   "Question": "Highlight the rule that was designed to stop daimyo forming alliances against the shogun.",
+   "Option A": null,
+   "Option B": null,
+   "Option C": null,
+   "Option D": null,
+   "Correct answer": "Marriages between daimyo families must not be arranged privately",
+   "Feedback shown to students": "Marriage created alliances between clans. Controlling it stopped rival daimyo from uniting. The castle rule limited military strength and the reporting rule turned daimyo into informers on each other.",
+   "Teacher notes": null
+  },
+  {
+   "ID": 70,
+   "Unit": "Shogunate Japan",
+   "Topic": "Tokugawa Shogunate",
+   "Exam skill or knowledge tested": "Sakoku",
+   "EP question type": "Multiple select",
+   "Stimulus (text to paste as text stimulus)": null,
+   "Question": "Which TWO statements about sakoku are correct?",
+   "Option A": "Japanese people were forbidden to leave Japan, and those overseas could not return",
+   "Option B": "All foreign trade was completely banned",
+   "Option C": "Limited trade continued with the Dutch and Chinese at Nagasaki",
+   "Option D": "Sakoku was introduced by the Meiji government",
+   "Correct answer": "A, C",
+   "Feedback shown to students": "Sakoku was near-isolation, not total isolation. A controlled window at Nagasaki let the shogunate monitor foreign ideas and goods. It was a Tokugawa policy, ended under pressure in the 1850s.",
+   "Teacher notes": null
+  },
+  {
+   "ID": 71,
+   "Unit": "Shogunate Japan",
+   "Topic": "Tokugawa Shogunate",
+   "Exam skill or knowledge tested": "Cause and effect of sakoku",
+   "EP question type": "Multiple choice",
+   "Stimulus (text to paste as text stimulus)": null,
+   "Question": "Why did the Tokugawa shoguns adopt sakoku in the 1630s?",
+   "Option A": "Japan had run out of goods to trade",
+   "Option B": "They feared that Christianity and foreign influence would undermine their control and that daimyo might gain wealth and weapons through foreign trade",
+   "Option C": "The emperor demanded it",
+   "Option D": "To prepare for an invasion of China",
+   "Correct answer": "B",
+   "Feedback shown to students": "The Shimabara Rebellion of 1637 to 1638 confirmed the shoguns' fear of Christianity as a rival loyalty. Restricting trade also stopped daimyo arming themselves through foreign contacts.",
+   "Teacher notes": null
+  },
+  {
+   "ID": 72,
+   "Unit": "Shogunate Japan",
+   "Topic": "Tokugawa Shogunate",
+   "Exam skill or knowledge tested": "Social hierarchy and policy",
+   "EP question type": "Multiple choice",
+   "Stimulus (text to paste as text stimulus)": null,
+   "Question": "Under the Tokugawa four-class system, merchants ranked below farmers and artisans even though many merchants became wealthy. What does this show about the system?",
+   "Option A": "That wealth was the basis of status",
+   "Option B": "That status was based on perceived usefulness to society, and merchants were seen as profiting from others' work",
+   "Option C": "That merchants were foreigners",
+   "Option D": "That farmers were the richest class",
+   "Correct answer": "B",
+   "Feedback shown to students": "The gap between official rank and real wealth grew during the long peace and became a source of tension, as impoverished samurai borrowed from the merchants they officially outranked.",
+   "Teacher notes": null
+  },
+  {
+   "ID": 73,
+   "Unit": "Shogunate Japan",
+   "Topic": "Tokugawa Shogunate",
+   "Exam skill or knowledge tested": "Everyday life and change",
+   "EP question type": "Multiple choice",
+   "Stimulus (text to paste as text stimulus)": null,
+   "Question": "Which development in Edo-period cities shows that the long peace changed Japanese society?",
+   "Option A": "Constant civil war between daimyo",
+   "Option B": "A flourishing urban culture including kabuki theatre, woodblock prints and pleasure districts, supported by a growing merchant class",
+   "Option C": "The abolition of the samurai",
+   "Option D": "The arrival of American warships",
+   "Correct answer": "B",
+   "Feedback shown to students": "Peace let cities grow and merchants prosper, which paid for a lively popular culture. Samurai, meanwhile, became administrators rather than fighters.",
+   "Teacher notes": null
+  },
+  {
+   "ID": 74,
+   "Unit": "Shogunate Japan",
+   "Topic": "Tokugawa Shogunate",
+   "Exam skill or knowledge tested": "Continuity and change",
+   "EP question type": "Fill the gaps (dropdown)",
+   "Stimulus (text to paste as text stimulus)": null,
+   "Question": "Decide whether each Tokugawa policy mainly produced continuity or change.\nBanning private wars between daimyo preserved the shogun's authority, so it created political [continuity]. The same ban turned samurai into officials rather than fighters, which was a social [change]. Sankin kotai kept the daimyo loyal, which was [continuity], but the travelling and spending it required made Edo into a huge commercial city, which was economic [change].",
+   "Option A": "Each blank offers: continuity / change",
+   "Option B": null,
+   "Option C": null,
+   "Option D": null,
+   "Correct answer": "continuity; change; continuity; change",
+   "Feedback shown to students": "One policy can produce both. Ask what stayed the same (who held power) and what shifted (how people lived and earned a living).",
+   "Teacher notes": "Directly reflects the 2025 exam's continuity and change framing of Tokugawa restrictions."
+  },
+  {
+   "ID": 75,
+   "Unit": "Shogunate Japan",
+   "Topic": "Tokugawa Shogunate",
+   "Exam skill or knowledge tested": "Long-term weaknesses",
+   "EP question type": "Multiple choice",
+   "Stimulus (text to paste as text stimulus)": null,
+   "Question": "Which problem had weakened the Tokugawa shogunate from within before Perry arrived in 1853?",
+   "Option A": "Too many foreign wars",
+   "Option B": "Samurai stipends paid in rice lost value while merchants grew rich, and peasants suffered famines and rising taxes, causing unrest",
+   "Option C": "The emperor commanded the army",
+   "Option D": "There were no roads",
+   "Correct answer": "B",
+   "Feedback shown to students": "Historians argue Perry was the trigger, not the only cause. Financial strain on samurai, peasant revolts and a rigid class system made the shogunate vulnerable to the shock of Western pressure.",
+   "Teacher notes": "Sets up the contestability of the Perry question in the extended response."
+  },
+  {
+   "ID": 76,
+   "Unit": "Shogunate Japan",
+   "Topic": "Meiji Restoration",
+   "Exam skill or knowledge tested": "Western pressure",
+   "EP question type": "Multiple choice",
+   "Stimulus (text to paste as text stimulus)": null,
+   "Question": "What did Commodore Matthew Perry demand when he arrived in Edo Bay in 1853?",
+   "Option A": "That Japan convert to Christianity",
+   "Option B": "That Japan open its ports to American ships for trade, supplies and the protection of shipwrecked sailors",
+   "Option C": "That the emperor abdicate",
+   "Option D": "That Japan join a war against China",
+   "Correct answer": "B",
+   "Feedback shown to students": "Perry carried a letter from the US President and returned in 1854 with more warships. The Treaty of Kanagawa opened two ports and ended more than 200 years of sakoku.",
+   "Teacher notes": null
+  },
+  {
+   "ID": 77,
+   "Unit": "Shogunate Japan",
+   "Topic": "Meiji Restoration",
+   "Exam skill or knowledge tested": "Cause and effect",
+   "EP question type": "Multiple choice",
+   "Stimulus (text to paste as text stimulus)": null,
+   "Question": "Why did the shogunate's response to Perry weaken its authority?",
+   "Option A": "The shogun defeated Perry but lost many ships",
+   "Option B": "The shogunate gave in to foreign demands, which showed it could not fulfil its basic duty of protecting Japan and angered many daimyo and samurai",
+   "Option C": "The shogun travelled to America",
+   "Option D": "Perry was made shogun",
+   "Correct answer": "B",
+   "Feedback shown to students": "The shogun's title literally meant barbarian-subduing general. Signing unequal treaties under threat destroyed the shogunate's claim to rule.",
+   "Teacher notes": null
+  },
+  {
+   "ID": 78,
+   "Unit": "Shogunate Japan",
+   "Topic": "Meiji Restoration",
+   "Exam skill or knowledge tested": "Perspectives",
+   "EP question type": "Multiple choice",
+   "Stimulus (text to paste as text stimulus)": null,
+   "Question": "In the 1860s the slogan 'Revere the emperor, expel the barbarians' was popular among some samurai. Which perspective does this reveal?",
+   "Option A": "Support for the shogun's treaties",
+   "Option B": "Anger at foreign intrusion combined with the belief that loyalty should return to the emperor rather than a failed shogun",
+   "Option C": "A desire to become American citizens",
+   "Option D": "Support for the merchant class",
+   "Correct answer": "B",
+   "Feedback shown to students": "Many lower-ranking samurai, especially in Satsuma and Choshu, saw the emperor as the symbol of a united Japan that could resist the West. Ironically, once in power they embraced Western methods.",
+   "Teacher notes": null
+  },
+  {
+   "ID": 79,
+   "Unit": "Shogunate Japan",
+   "Topic": "Meiji Restoration",
+   "Exam skill or knowledge tested": "Chronology and key events",
+   "EP question type": "Multiple choice",
+   "Stimulus (text to paste as text stimulus)": null,
+   "Question": "What happened in 1868?",
+   "Option A": "Perry arrived in Japan",
+   "Option B": "The last Tokugawa shogun gave up power and rule was restored to the emperor, who took the name Meiji",
+   "Option C": "Japan defeated Russia",
+   "Option D": "The Battle of Sekigahara",
+   "Correct answer": "B",
+   "Feedback shown to students": "1868 marks the Meiji Restoration. Perry came in 1853, Sekigahara was 1600 and the war with Russia was 1904 to 1905.",
+   "Teacher notes": null
+  },
+  {
+   "ID": 80,
+   "Unit": "Shogunate Japan",
+   "Topic": "Meiji Restoration",
+   "Exam skill or knowledge tested": "Reforms",
+   "EP question type": "Multiple select",
+   "Stimulus (text to paste as text stimulus)": null,
+   "Question": "Which TWO were reforms introduced during the Meiji period?",
+   "Option A": "A national conscript army replacing samurai armies, introduced in 1873",
+   "Option B": "The reintroduction of sakoku",
+   "Option C": "Compulsory education for all children",
+   "Option D": "The abolition of the emperor",
+   "Correct answer": "A, C",
+   "Feedback shown to students": "The Meiji government built a modern army, schools, railways, factories and a constitution (1889). Sakoku was abandoned, not restored, and the emperor was at the centre of the new state.",
+   "Teacher notes": null
+  },
+  {
+   "ID": 81,
+   "Unit": "Shogunate Japan",
+   "Topic": "Meiji Restoration",
+   "Exam skill or knowledge tested": "Consequences for the samurai",
+   "EP question type": "Multiple choice",
+   "Stimulus (text to paste as text stimulus)": null,
+   "Question": "What happened to the samurai class after the Meiji Restoration?",
+   "Option A": "They became the new ruling class",
+   "Option B": "Their privileges were abolished, including the right to carry swords and receive stipends, and the class was officially ended by the 1870s",
+   "Option C": "They were all sent overseas",
+   "Option D": "Nothing changed",
+   "Correct answer": "B",
+   "Feedback shown to students": "A modern conscript army made a hereditary warrior class unnecessary. Some samurai joined government or business, while others rebelled, most famously in the Satsuma Rebellion of 1877.",
+   "Teacher notes": null
+  },
+  {
+   "ID": 82,
+   "Unit": "Shogunate Japan",
+   "Topic": "Meiji Restoration",
+   "Exam skill or knowledge tested": "Continuity and change",
+   "EP question type": "Fill the gaps (dropdown)",
+   "Stimulus (text to paste as text stimulus)": null,
+   "Question": "Choose continuity or change for each statement about Japan after 1868.\nThe emperor remained the symbolic head of the nation, which is [continuity]. The feudal domains were replaced by prefectures run by the central government, which is [change]. Japan continued to be ruled by a small elite rather than by the people, which is [continuity]. Western dress, railways and factories transformed daily life in cities, which is [change].",
+   "Option A": "Each blank offers: continuity / change",
+   "Option B": null,
+   "Option C": null,
+   "Option D": null,
+   "Correct answer": "continuity; change; continuity; change",
+   "Feedback shown to students": "The Restoration changed how Japan was governed and how people lived, but the emperor and elite rule continued. Strong answers notice both.",
+   "Teacher notes": null
+  },
+  {
+   "ID": 83,
+   "Unit": "Shogunate Japan",
+   "Topic": "Meiji Restoration",
+   "Exam skill or knowledge tested": "Modernisation vs westernisation",
+   "EP question type": "Multiple choice",
+   "Stimulus (text to paste as text stimulus)": null,
+   "Question": "Japan adopted Western technology, military methods and a constitution but kept the emperor, Shinto and many traditions. Which statement best describes this?",
+   "Option A": "Japan became a Western country",
+   "Option B": "Japan modernised selectively, taking what would make it strong enough to resist the West while keeping its own identity",
+   "Option C": "Japan rejected all change",
+   "Option D": "Japan was colonised by the United States",
+   "Correct answer": "B",
+   "Feedback shown to students": "The Meiji slogan was rich country, strong army. Modernisation was a strategy for independence. Westernisation describes the cultural borrowing that came with it, and the two are not the same thing.",
+   "Teacher notes": "The moderation notes flagged confusion between modernisation and westernisation."
+  },
+  {
+   "ID": 84,
+   "Unit": "Shogunate Japan",
+   "Topic": "Meiji Restoration",
+   "Exam skill or knowledge tested": "Significance",
+   "EP question type": "Multiple choice",
+   "Stimulus (text to paste as text stimulus)": null,
+   "Question": "Which outcome best shows the significance of the Meiji Restoration?",
+   "Option A": "Japan remained isolated for another century",
+   "Option B": "Within 40 years Japan had become an industrial and military power able to defeat Russia in 1905, the first modern victory of an Asian nation over a European one",
+   "Option C": "Japan was divided into two countries",
+   "Option D": "The samurai regained power",
+   "Correct answer": "B",
+   "Feedback shown to students": "Significance is judged by scale and consequence. A feudal society became a world power within one lifetime, which reshaped Asia.",
+   "Teacher notes": null
+  },
+  {
+   "ID": 85,
+   "Unit": "Shogunate Japan",
+   "Topic": "Meiji Restoration",
+   "Exam skill or knowledge tested": "Connecting the three topics",
+   "EP question type": "Multiple choice",
+   "Stimulus (text to paste as text stimulus)": null,
+   "Question": "Which statement correctly connects feudal Japan, the Tokugawa shogunate and the Meiji Restoration?",
+   "Option A": "The Meiji Restoration created the samurai",
+   "Option B": "The Tokugawa used the feudal hierarchy and strict control to keep peace for 250 years, but the same rigidity left Japan unable to respond to Western pressure, and the Meiji government dismantled the feudal system to modernise",
+   "Option C": "The three periods had nothing to do with each other",
+   "Option D": "The Tokugawa were overthrown by the Crusaders",
+   "Correct answer": "B",
+   "Feedback shown to students": "Each period set up the next. Feudal loyalty gave the Tokugawa a system to control. Tokugawa stability bred the weaknesses Perry exposed. The Meiji leaders replaced feudalism with a modern state.",
+   "Teacher notes": "This is the synthesis the essay booklet is built around."
+  },
+  {
+   "ID": 86,
+   "Unit": "Medieval Europe",
+   "Topic": "Extended response",
+   "Exam skill or knowledge tested": "TEEAL analytical paragraph",
+   "EP question type": "Extended Response",
+   "Stimulus (text to paste as text stimulus)": null,
+   "Question": "Write ONE TEEAL paragraph in response to the following. Analyse the significance of the Crusades for medieval Europe. Your paragraph should state a clear argument, include at least two specific pieces of historical evidence, explain how the evidence supports your argument and link back to the question.",
+   "Option A": null,
+   "Option B": null,
+   "Option C": null,
+   "Option D": null,
+   "Correct answer": "Teacher marked",
+   "Feedback shown to students": "Strong responses argue for a specific significance (trade, Church power, knowledge, Italian cities) rather than listing effects, and explain why that change mattered over the long term.",
+   "Teacher notes": "Marking guide suggestion out of 8. Analysis 3, knowledge 2, structure 1, writing 2, to match the exam rubric."
+  },
+  {
+   "ID": 87,
+   "Unit": "Medieval Europe",
+   "Topic": "Extended response",
+   "Exam skill or knowledge tested": "Cause and effect",
+   "EP question type": "Extended Response",
+   "Stimulus (text to paste as text stimulus)": null,
+   "Question": "Explain why the Black Death weakened the feudal system. Write one paragraph of 6 to 8 sentences. Include a specific cause, at least one piece of evidence and a clear explanation of the link between the plague and the decline of feudalism.",
+   "Option A": null,
+   "Option B": null,
+   "Option C": null,
+   "Option D": null,
+   "Correct answer": "Teacher marked",
+   "Feedback shown to students": "Look for the chain. Population loss, labour shortage, peasants demanding wages or moving, lords unable to enforce old obligations, revolts when they tried.",
+   "Teacher notes": "Short-answer style practice for the 3 to 4 mark explain questions."
+  },
+  {
+   "ID": 88,
+   "Unit": "Medieval Europe",
+   "Topic": "Extended response",
+   "Exam skill or knowledge tested": "Evaluate an institution",
+   "EP question type": "Extended Response",
+   "Stimulus (text to paste as text stimulus)": null,
+   "Question": "Write ONE TEEAL paragraph in response to the following. Evaluate how the Catholic Church maintained its influence over medieval society. Choose the type of power you think mattered most (political, social, economic or cultural), support it with at least two specific examples and explain why it was more important than the others.",
+   "Option A": null,
+   "Option B": null,
+   "Option C": null,
+   "Option D": null,
+   "Correct answer": "Teacher marked",
+   "Feedback shown to students": "Strong responses pick one form of power and argue for it, rather than listing all four. Credit a judgement about why that form underpinned the rest, for example that spiritual authority made the tithe and excommunication possible.",
+   "Teacher notes": "Covers the evaluate-an-institution skill from the exam overview without reusing the 2024 essay prompt."
+  },
+  {
+   "ID": 89,
+   "Unit": "Shogunate Japan",
+   "Topic": "Extended response",
+   "Exam skill or knowledge tested": "Contestability and significance",
+   "EP question type": "Extended Response",
+   "Stimulus (text to paste as text stimulus)": null,
+   "Question": "Some historians argue that Commodore Perry's arrival caused the fall of the Tokugawa shogunate. Others argue the shogunate was already failing. Write ONE TEEAL paragraph that takes a position and supports it with evidence from both internal problems and external pressure.",
+   "Option A": null,
+   "Option B": null,
+   "Option C": null,
+   "Option D": null,
+   "Correct answer": "Teacher marked",
+   "Feedback shown to students": "The best responses weigh both and reach a judgement, for example that Perry was the trigger that exposed existing weaknesses.",
+   "Teacher notes": "Prepares the Perry essay without reusing the exam wording."
+  },
+  {
+   "ID": 90,
+   "Unit": "Shogunate Japan",
+   "Topic": "Extended response",
+   "Exam skill or knowledge tested": "Continuity and change",
+   "EP question type": "Extended Response",
+   "Stimulus (text to paste as text stimulus)": null,
+   "Question": "To what extent did the Meiji Restoration transform Japan? Write ONE TEEAL paragraph. Identify at least two major changes and one important continuity, and reach a judgement about how far Japan was transformed.",
+   "Option A": null,
+   "Option B": null,
+   "Option C": null,
+   "Option D": null,
+   "Correct answer": "Teacher marked",
+   "Feedback shown to students": "Reward specific reforms (conscription 1873, compulsory education, prefectures, 1889 constitution, railways) and a recognised continuity (emperor, elite rule, Shinto). The judgement matters more than the list.",
+   "Teacher notes": null
+  }
+ ],
+ "soc_exam": [
+  {
+   "type": "Multiple choice",
+   "q": "What was the main purpose of feudalism in medieval Europe?",
+   "opts": [
+    "To organise society through land, loyalty and service",
+    "To encourage trade with Asia",
+    "To give peasants political power",
+    "To spread Christianity to other countries"
+   ],
+   "correct": [
+    "A"
+   ],
+   "expl": "Feudalism was a system of land for service. Everything else, from castles to knights, grew out of that exchange."
+  },
+  {
+   "type": "Multiple choice",
+   "q": "Which statement BEST describes the relationship between a lord and a vassal?",
+   "opts": [
+    "The vassal paid the lord a tithe",
+    "The lord granted land to the vassal in return for loyalty and military service",
+    "The vassal gave land to the lord in return for protection",
+    "The lord and vassal were equals who shared land"
+   ],
+   "correct": [
+    "B"
+   ],
+   "expl": "The lord gave the fief, the vassal gave loyalty and service. Vassals could themselves be lords to knights below them."
+  },
+  {
+   "type": "Multiple choice",
+   "q": "What was the role of peasants in the feudal system?",
+   "opts": [
+    "They fought in the king's army as knights",
+    "They worked the land and produced the food that supported everyone above them",
+    "They collected taxes for the king",
+    "They ran the Church courts"
+   ],
+   "correct": [
+    "B"
+   ],
+   "expl": "Peasants were the largest group and the base of the pyramid. Without their labour the rest of the hierarchy could not exist."
+  },
+  {
+   "type": "Multiple choice",
+   "q": "Select ALL that were expectations of a knight under the code of chivalry.",
+   "opts": [
+    "Be loyal to his lord",
+    "Protect the weak and defenceless",
+    "Defend the Church",
+    "Own at least one castle",
+    "Avoid fighting in tournaments"
+   ],
+   "correct": [
+    "A",
+    "B",
+    "C"
+   ],
+   "expl": "Chivalry combined loyalty, courage, protection of the weak and service to the Church. Castles and tournaments were part of knightly life but not rules of the code."
+  },
+  {
+   "type": "Multiple choice",
+   "q": "Why were punishments in medieval Europe usually carried out in public?",
+   "opts": [
+    "To shame the offender and warn others against committing the same crime",
+    "To let the crowd decide if the punishment was fair",
+    "To show the wealth of the offender",
+    "To allow the accused to prove innocence"
+   ],
+   "correct": [
+    "A"
+   ],
+   "expl": "With no police force, public punishment was the main deterrent."
+  },
+  {
+   "type": "Multiple choice",
+   "q": "What was the role of a castle in medieval Europe beyond defence?",
+   "opts": [
+    "It was a place for peasants to live",
+    "It was a symbol of the lord's power and the centre for collecting taxes and giving justice",
+    "It was a church",
+    "It was a market for merchants"
+   ],
+   "correct": [
+    "B"
+   ],
+   "expl": "A castle announced who controlled the land. Government, justice and the lord's wealth were all inside it."
+  },
+  {
+   "type": "Multiple choice",
+   "q": "Select ALL the ways the Catholic Church influenced everyday life in medieval Europe.",
+   "opts": [
+    "It collected a tithe of one tenth of what people produced",
+    "It marked every stage of life from baptism to burial",
+    "It elected the king",
+    "It controlled education and preserved books through monasteries",
+    "It banned farming on weekdays"
+   ],
+   "correct": [
+    "A",
+    "B",
+    "D"
+   ],
+   "expl": "The Church touched daily life through money, ritual and learning. It crowned kings but did not elect them."
+  },
+  {
+   "type": "Multiple choice",
+   "q": "How did the Church keep its power over people who could not read?",
+   "opts": [
+    "By printing Bibles in English",
+    "Through paintings of heaven and hell, the threat of excommunication and control of the sacraments",
+    "By paying people to attend church",
+    "By running the king's army"
+   ],
+   "correct": [
+    "B"
+   ],
+   "expl": "Doom paintings, sermons and the sacraments made Church teaching visible. Fear of hell did the rest."
+  },
+  {
+   "type": "Multiple choice",
+   "q": "What was the main aim of the First Crusade?",
+   "opts": [
+    "To conquer Spain",
+    "To capture Jerusalem and the Holy Land from Muslim rule",
+    "To destroy the Byzantine Empire",
+    "To open trade with China"
+   ],
+   "correct": [
+    "B"
+   ],
+   "expl": "Pope Urban II called for the recovery of Jerusalem in 1095. Trade and land were motives for some Crusaders but not the stated aim."
+  },
+  {
+   "type": "Multiple choice",
+   "q": "Which consequence of the Crusades is shown by this source? 'People from different cultures now speak one another's languages. Merchants frequently arrive by sea, bringing goods from many different places.'",
+   "opts": [
+    "The end of the Catholic Church",
+    "Increased trade and cultural exchange between Europe and the East",
+    "The destruction of Jerusalem",
+    "The spread of the Black Death"
+   ],
+   "correct": [
+    "B"
+   ],
+   "expl": "The source describes contact and trade. Reading the evidence in the source, not just recalling facts, is what the exam rewards."
+  },
+  {
+   "type": "Multiple choice",
+   "q": "Which factor contributed MOST to the spread of the Black Death through Europe?",
+   "opts": [
+    "Trade routes and ships carrying infected rats and fleas between ports",
+    "Crusader armies",
+    "Castles being built too close together",
+    "Peasants refusing to work"
+   ],
+   "correct": [
+    "A"
+   ],
+   "expl": "The plague followed trade from the Black Sea to Messina in 1347 and then along roads and rivers."
+  },
+  {
+   "type": "Multiple choice",
+   "q": "Which was a LONG-TERM consequence of the Black Death?",
+   "opts": [
+    "Plague pits and mass burials",
+    "Flagellants whipping themselves in the streets",
+    "A labour shortage that gave surviving peasants bargaining power and weakened feudalism",
+    "Churches closing during the outbreak"
+   ],
+   "correct": [
+    "C"
+   ],
+   "expl": "The first three happened during the outbreak. The labour shortage reshaped society for a century."
+  },
+  {
+   "type": "Multiple choice",
+   "q": "A source is captioned 'Illuminated manuscript produced in Italy, c. 1290'. In which century was it created and what type of source is it?",
+   "opts": [
+    "12th century, secondary source",
+    "13th century, primary source",
+    "13th century, secondary source",
+    "14th century, primary source"
+   ],
+   "correct": [
+    "B"
+   ],
+   "expl": "1290 is in the 1200s, the 13th century. A manuscript made at the time is a primary source."
+  },
+  {
+   "type": "Open-ended",
+   "q": "Identify one crime committed in medieval Europe and describe one likely punishment for it.",
+   "opts": [],
+   "correct": [],
+   "expl": "Model answer. Theft, punished by a fine, time in the stocks, or for repeat offenders cutting off a hand. Or treason, punished by execution and loss of property."
+  },
+  {
+   "type": "Open-ended",
+   "q": "Explain one way the Black Death weakened the power of the Catholic Church.",
+   "opts": [],
+   "correct": [],
+   "expl": "Model answer. Prayers and processions did not stop the plague and many priests died or fled, so people began to doubt that the Church could protect them or explain God's will."
+  },
+  {
+   "type": "Multiple choice",
+   "q": "How did Japan's geography influence its early development?",
+   "opts": [
+    "Flat plains made it easy to unite the country",
+    "Mountains and islands separated regions, so strong local clans developed and farming was limited to coastal plains and valleys",
+    "Deserts prevented farming",
+    "Japan was easily invaded by China"
+   ],
+   "correct": [
+    "B"
+   ],
+   "expl": "Geography made central control hard and local loyalty strong, which is the root of Japanese feudalism."
+  },
+  {
+   "type": "Multiple choice",
+   "q": "Why is the Genpei War (1180 to 1185) a turning point in Japanese history?",
+   "opts": [
+    "The emperor regained full power",
+    "The Minamoto victory led to the first shogunate, beginning almost 700 years of rule by military leaders",
+    "Japan was conquered by the Mongols",
+    "The samurai class was abolished"
+   ],
+   "correct": [
+    "B"
+   ],
+   "expl": "Minamoto Yoritomo became shogun in 1192. Real power moved from the emperor to the shogun."
+  },
+  {
+   "type": "Multiple choice",
+   "q": "Who held the greatest political and military power in shogunate Japan?",
+   "opts": [
+    "The emperor",
+    "The daimyo",
+    "The shogun",
+    "The samurai"
+   ],
+   "correct": [
+    "C"
+   ],
+   "expl": "The shogun ruled in the emperor's name. The emperor kept prestige but little power."
+  },
+  {
+   "type": "Multiple choice",
+   "q": "Compare the daimyo and the samurai. Which statement is correct?",
+   "opts": [
+    "Both were landholding lords",
+    "Both belonged to the warrior class and followed bushido, but daimyo controlled domains while samurai served them",
+    "Samurai outranked daimyo",
+    "Daimyo were peasants who became warriors"
+   ],
+   "correct": [
+    "B"
+   ],
+   "expl": "Similarity, warrior class and bushido. Difference, rank and role. The exam asks for both."
+  },
+  {
+   "type": "Multiple choice",
+   "q": "Select ALL that were values of the bushido code.",
+   "opts": [
+    "Loyalty to one's lord",
+    "Honour, including death before disgrace",
+    "Self-discipline and frugality",
+    "Accumulating wealth through trade",
+    "Equality of all classes"
+   ],
+   "correct": [
+    "A",
+    "B",
+    "C"
+   ],
+   "expl": "Bushido was about loyalty, honour and discipline. Trade was beneath a samurai and equality contradicted the hierarchy."
+  },
+  {
+   "type": "Multiple choice",
+   "q": "Why did the Tokugawa shogunate rank farmers above merchants?",
+   "opts": [
+    "Farmers were wealthier",
+    "Farmers produced food, which was seen as essential, while merchants were seen as profiting from others' work",
+    "Merchants were foreigners",
+    "Farmers were trained as samurai"
+   ],
+   "correct": [
+    "B"
+   ],
+   "expl": "Status was based on usefulness to society, not wealth. Over time rich merchants and poor samurai made this a source of tension."
+  },
+  {
+   "type": "Multiple choice",
+   "q": "What was the significance of Tokugawa Ieyasu?",
+   "opts": [
+    "He restored the emperor to power in 1868",
+    "After winning the Battle of Sekigahara in 1600 he became shogun and founded a dynasty that ruled for over 250 years",
+    "He opened Japan to American trade",
+    "He led the Genpei War"
+   ],
+   "correct": [
+    "B"
+   ],
+   "expl": "Ieyasu ended a century of civil war and built the system of control that kept Japan at peace until the 1860s."
+  },
+  {
+   "type": "Multiple choice",
+   "q": "Select ALL the purposes of sankin kotai.",
+   "opts": [
+    "To keep daimyo under the shogun's observation in Edo",
+    "To drain daimyo wealth through the cost of travel and two households",
+    "To hold daimyo families in Edo as hostages against rebellion",
+    "To give daimyo more land",
+    "To train daimyo as samurai"
+   ],
+   "correct": [
+    "A",
+    "B",
+    "C"
+   ],
+   "expl": "Observation, expense and hostages. The policy was about preventing rebellion."
+  },
+  {
+   "type": "Multiple choice",
+   "q": "Define the term edict. Which option is correct?",
+   "opts": [
+    "A samurai sword",
+    "An official order from the shogun or another authority that people were required to obey",
+    "A tax paid in rice",
+    "A Buddhist temple"
+   ],
+   "correct": [
+    "B"
+   ],
+   "expl": "Examples include the Laws for Military Houses controlling daimyo, the sakoku edicts and the ban on Christianity."
+  },
+  {
+   "type": "Multiple choice",
+   "q": "Why did the Tokugawa shoguns ban Christianity?",
+   "opts": [
+    "It was too expensive",
+    "It created loyalty to a foreign religion and foreign powers that could challenge the shogun's authority",
+    "It was unpopular with peasants",
+    "The emperor demanded it"
+   ],
+   "correct": [
+    "B"
+   ],
+   "expl": "Converted daimyo had divided loyalties and missionaries were linked to European influence. The Shimabara Rebellion confirmed the shoguns' fears."
+  },
+  {
+   "type": "Multiple choice",
+   "q": "Which statement about sakoku is FALSE?",
+   "opts": [
+    "Japanese people were forbidden to leave Japan",
+    "Limited trade continued with the Dutch and Chinese at Nagasaki",
+    "All contact with the outside world was completely cut off",
+    "Christianity was banned"
+   ],
+   "correct": [
+    "C"
+   ],
+   "expl": "Sakoku was near-isolation, not total isolation. A controlled window at Nagasaki stayed open."
+  },
+  {
+   "type": "Multiple choice",
+   "q": "Which internal problem weakened the Tokugawa shogunate BEFORE Commodore Perry arrived in 1853?",
+   "opts": [
+    "Samurai fell into poverty and debt during the long peace while merchants grew rich",
+    "Japan lost a war to China",
+    "The emperor raised an army",
+    "Daimyo were allowed to build castles freely"
+   ],
+   "correct": [
+    "A"
+   ],
+   "expl": "Historians argue Perry was the trigger that exposed existing weaknesses, including poor samurai, peasant unrest and a rigid class system."
+  },
+  {
+   "type": "Multiple choice",
+   "q": "What were the main consequences of the Meiji Restoration of 1868?",
+   "opts": [
+    "Japan returned to sakoku",
+    "Power returned to the emperor, the feudal system was abolished and Japan rapidly modernised its army, industry and education",
+    "The samurai gained more privileges",
+    "Japan was colonised by the United States"
+   ],
+   "correct": [
+    "B"
+   ],
+   "expl": "Within 40 years Japan went from a feudal society to an industrial and military power."
+  },
+  {
+   "type": "Open-ended",
+   "q": "Explain one reason Japan adopted the policy of sakoku.",
+   "opts": [],
+   "correct": [],
+   "expl": "Model answer. The shoguns feared that Christianity and foreign trade would give daimyo outside allies, wealth and weapons that could be used against the shogunate, so they restricted contact to keep control."
+  },
+  {
+   "type": "Open-ended",
+   "q": "Explain how Commodore Perry's arrival in 1853 contributed to the fall of the Tokugawa shogunate.",
+   "opts": [],
+   "correct": [],
+   "expl": "Model answer. Perry's warships forced the shogun to sign unequal treaties and open ports. This showed the shogunate could not protect Japan, so daimyo and samurai lost faith in it and rallied to the emperor, leading to its collapse in 1868."
+  }
+ ],
+ "soc_warm": [
+  {
+   "type": "Multiple choice",
+   "q": "Which pair correctly matches a European feudal role with its closest Japanese equivalent?",
+   "opts": [
+    "King and emperor",
+    "Noble and daimyo",
+    "Knight and shogun",
+    "Peasant and samurai"
+   ],
+   "correct": [
+    "B"
+   ],
+   "expl": "Nobles and daimyo were both landholding lords who owed loyalty to a higher ruler and commanded their own warriors. The shogun was closer to a king in real power, and the emperor had little."
+  },
+  {
+   "type": "Multiple choice",
+   "q": "In both medieval Europe and shogunate Japan, land was granted in return for...",
+   "opts": [
+    "payment in gold",
+    "loyalty and military service",
+    "religious conversion",
+    "a share of trade profits"
+   ],
+   "correct": [
+    "B"
+   ],
+   "expl": "Land for service is the core of feudalism in both societies."
+  },
+  {
+   "type": "Multiple choice",
+   "q": "Which event happened FIRST?",
+   "opts": [
+    "The Black Death reaches Europe",
+    "Minamoto Yoritomo becomes the first shogun",
+    "The First Crusade begins",
+    "The Battle of Sekigahara"
+   ],
+   "correct": [
+    "C"
+   ],
+   "expl": "First Crusade 1096, Yoritomo 1192, Black Death 1347, Sekigahara 1600."
+  },
+  {
+   "type": "Multiple choice",
+   "q": "A source is captioned 'Woodblock print, Edo, 1830'. Which statement about its origin is correct?",
+   "opts": [
+    "It was made in the 18th century under the Tokugawa",
+    "It was made in the 19th century under the Tokugawa",
+    "It was made in the 19th century after the Meiji Restoration",
+    "It was made in the 17th century during sakoku"
+   ],
+   "correct": [
+    "B"
+   ],
+   "expl": "1830 is the 19th century. The Tokugawa ruled until 1868 and Edo was their capital."
+  },
+  {
+   "type": "Multiple choice",
+   "q": "Why did a medieval serf find it so hard to improve his position in society?",
+   "opts": [
+    "He was legally bound to the lord's land and owed labour he could not refuse",
+    "He was not allowed to attend church",
+    "He was required to become a knight",
+    "He had to pay the Pope directly"
+   ],
+   "correct": [
+    "A"
+   ],
+   "expl": "Serfs were tied to the manor. Freedom of movement, not wealth, was the key restriction."
+  },
+  {
+   "type": "Multiple choice",
+   "q": "Select ALL that were reasons people joined the First Crusade.",
+   "opts": [
+    "The promise of forgiveness of sins",
+    "The chance to gain land and wealth",
+    "To free Jerusalem from Muslim rule",
+    "To end the Black Death",
+    "To trade with Japan"
+   ],
+   "correct": [
+    "A",
+    "B",
+    "C"
+   ],
+   "expl": "Religion, land and the Holy Land all motivated Crusaders. The Black Death came 250 years later and Japan was unknown to Europeans."
+  },
+  {
+   "type": "Multiple choice",
+   "q": "Which consequence of the Crusades had the longest-lasting effect on Europe?",
+   "opts": [
+    "Jerusalem stayed in Christian hands permanently",
+    "Trade and contact with the East expanded, bringing goods, knowledge and wealth to Italian cities",
+    "All European kings lost their power",
+    "Castles were no longer built"
+   ],
+   "correct": [
+    "B"
+   ],
+   "expl": "The Crusader states were lost by 1291 but the trade links remained and helped fund the Renaissance."
+  },
+  {
+   "type": "Multiple choice",
+   "q": "The Black Death arrived in Europe in 1347 through...",
+   "opts": [
+    "Crusader knights returning from the Holy Land",
+    "trade ships docking at Sicilian and Italian ports",
+    "Mongol armies invading from the east",
+    "pilgrims travelling from Spain"
+   ],
+   "correct": [
+    "B"
+   ],
+   "expl": "The plague followed trade routes from the Black Sea to Messina and then inland."
+  },
+  {
+   "type": "Multiple choice",
+   "q": "What did flagellants believe?",
+   "opts": [
+    "That rats carried the plague",
+    "That the plague was God's punishment and self-inflicted pain would earn forgiveness",
+    "That the Pope had caused the plague",
+    "That the plague could be cured with herbs"
+   ],
+   "correct": [
+    "B"
+   ],
+   "expl": "Most medieval people saw the plague as divine punishment. Flagellants took that belief to an extreme."
+  },
+  {
+   "type": "Multiple choice",
+   "q": "Which was a LONG-TERM effect of the Black Death?",
+   "opts": [
+    "Bodies buried in mass graves",
+    "Towns emptied of people in 1348",
+    "Peasants demanding higher wages as labour became scarce",
+    "Church services cancelled during the outbreak"
+   ],
+   "correct": [
+    "C"
+   ],
+   "expl": "The other three happened during the outbreak. The labour shortage reshaped society over decades."
+  },
+  {
+   "type": "Multiple choice",
+   "q": "How did the Black Death affect the Catholic Church?",
+   "opts": [
+    "It made the Church more powerful than ever",
+    "Faith was shaken because prayer did not stop the plague and many clergy died or fled",
+    "The Church was abolished",
+    "The Church gained control of all medicine"
+   ],
+   "correct": [
+    "B"
+   ],
+   "expl": "The Church's authority rested on explaining the world. Its failure to stop the plague raised doubts that grew over the following century."
+  },
+  {
+   "type": "Multiple choice",
+   "q": "Japan's mountainous islands led to...",
+   "opts": [
+    "a single united kingdom from earliest times",
+    "strong regional clans and farming concentrated on narrow coastal plains",
+    "frequent invasion by Korea and China",
+    "no interest in fishing"
+   ],
+   "correct": [
+    "B"
+   ],
+   "expl": "Mountains divided the land into regions, which made strong local clans and weak central control likely."
+  },
+  {
+   "type": "Multiple choice",
+   "q": "Who held real political power in Japan after 1192?",
+   "opts": [
+    "The emperor",
+    "The shogun",
+    "Buddhist monks",
+    "The merchants"
+   ],
+   "correct": [
+    "B"
+   ],
+   "expl": "From Yoritomo onwards the shogun governed in the emperor's name while the emperor remained a figurehead in Kyoto."
+  },
+  {
+   "type": "Multiple choice",
+   "q": "Which statement about samurai and daimyo is a SIMILARITY?",
+   "opts": [
+    "Both owned large domains",
+    "Both belonged to the warrior class and followed bushido",
+    "Both were paid by merchants",
+    "Both outranked the shogun"
+   ],
+   "correct": [
+    "B"
+   ],
+   "expl": "The difference was rank. Daimyo were lords, samurai served them. The code and class were shared."
+  },
+  {
+   "type": "Multiple choice",
+   "q": "A samurai chooses death over surrender after his lord is defeated. This BEST shows which bushido value?",
+   "opts": [
+    "Thrift",
+    "Loyalty and honour",
+    "Skill in martial arts",
+    "Good living"
+   ],
+   "correct": [
+    "B"
+   ],
+   "expl": "Loyalty to the lord and personal honour outranked survival in bushido."
+  },
+  {
+   "type": "Multiple choice",
+   "q": "Tokugawa Ieyasu's victory at Sekigahara in 1600 was significant because it...",
+   "opts": [
+    "ended the samurai class",
+    "allowed him to become shogun and begin 250 years of peace under his family",
+    "opened Japan to American trade",
+    "restored the emperor to power"
+   ],
+   "correct": [
+    "B"
+   ],
+   "expl": "Significance comes from the consequence. One battle set up two and a half centuries of Tokugawa rule."
+  },
+  {
+   "type": "Multiple choice",
+   "q": "Select ALL the ways sankin kotai helped the shogun control the daimyo.",
+   "opts": [
+    "It kept daimyo under observation in Edo",
+    "It drained daimyo wealth through constant travel",
+    "It held daimyo families in Edo as hostages",
+    "It gave daimyo more land",
+    "It allowed daimyo to trade with Europe"
+   ],
+   "correct": [
+    "A",
+    "B",
+    "C"
+   ],
+   "expl": "Observation, expense and hostages. The policy was about control, not reward."
+  },
+  {
+   "type": "Multiple choice",
+   "q": "Which statement about sakoku is FALSE?",
+   "opts": [
+    "Japanese people could not leave Japan",
+    "Christianity was banned",
+    "All contact with the outside world was cut off",
+    "The Dutch and Chinese could trade at Nagasaki"
+   ],
+   "correct": [
+    "C"
+   ],
+   "expl": "Sakoku was near-isolation. A controlled trade window at Nagasaki stayed open for over 200 years."
+  },
+  {
+   "type": "Multiple choice",
+   "q": "Under the Tokugawa, merchants grew rich but ranked at the bottom of the four classes. What problem did this cause over time?",
+   "opts": [
+    "Merchants left Japan",
+    "Samurai with fixed rice stipends fell into debt to the merchants they officially outranked, creating resentment",
+    "Farmers stopped growing rice",
+    "The emperor became wealthy"
+   ],
+   "correct": [
+    "B"
+   ],
+   "expl": "The gap between official rank and real wealth was one of the internal weaknesses of the shogunate before Perry arrived."
+  },
+  {
+   "type": "Multiple choice",
+   "q": "Commodore Perry arrived in Japan in 1853 with...",
+   "opts": [
+    "missionaries asking to build churches",
+    "warships and a demand that Japan open its ports to trade",
+    "an army to conquer Japan",
+    "an offer to buy Hokkaido"
+   ],
+   "correct": [
+    "B"
+   ],
+   "expl": "Perry's steam warships demonstrated Western power. Japan could not refuse and signed the Treaty of Kanagawa in 1854."
+  },
+  {
+   "type": "Multiple choice",
+   "q": "Why did many samurai turn against the shogun after 1854?",
+   "opts": [
+    "The shogun banned swords",
+    "The shogun had given in to foreign demands and seemed unable to protect Japan",
+    "The shogun converted to Christianity",
+    "The shogun moved the capital to Kyoto"
+   ],
+   "correct": [
+    "B"
+   ],
+   "expl": "Protecting Japan from outsiders was the shogun's whole purpose. Signing unequal treaties destroyed his authority."
+  },
+  {
+   "type": "Multiple choice",
+   "q": "Select ALL that were Meiji reforms.",
+   "opts": [
+    "A conscript national army",
+    "Compulsory education",
+    "Railways and factories",
+    "A return to sakoku",
+    "The abolition of the emperor"
+   ],
+   "correct": [
+    "A",
+    "B",
+    "C"
+   ],
+   "expl": "The Meiji leaders modernised Japan to resist the West. Isolation ended and the emperor became the symbol of the new nation."
+  },
+  {
+   "type": "Multiple choice",
+   "q": "Japan copied Western technology and government but kept the emperor and Shinto. The best word for this is...",
+   "opts": [
+    "colonisation",
+    "isolation",
+    "selective modernisation",
+    "feudalism"
+   ],
+   "correct": [
+    "C"
+   ],
+   "expl": "Japan modernised on its own terms. Westernisation describes the cultural borrowing, modernisation describes the goal."
+  },
+  {
+   "type": "Open-ended",
+   "q": "In one sentence, explain why historians call the Battle of Hastings OR the Genpei War a turning point.",
+   "opts": [],
+   "correct": [],
+   "expl": "Model answer. The Genpei War ended with Yoritomo becoming shogun in 1192, shifting real power from the emperor to military rulers for the next 700 years. Or, Hastings in 1066 brought Norman rule and the feudal system to England."
+  },
+  {
+   "type": "Open-ended",
+   "q": "Name one short-term and one long-term impact of the Black Death.",
+   "opts": [],
+   "correct": [],
+   "expl": "Model answer. Short-term, mass deaths and plague pits or flagellants. Long-term, labour shortages raised wages and weakened feudalism, and faith in the Church declined."
+  },
+  {
+   "type": "Open-ended",
+   "q": "Give one piece of evidence that the Tokugawa shogunate was already weakening BEFORE Perry arrived.",
+   "opts": [],
+   "correct": [],
+   "expl": "Model answer. Samurai in debt to merchants, peasant uprisings and famines, or daimyo in the south-west (Satsuma, Choshu) resenting Tokugawa control."
+  }
+ ],
+ "soc_me": [
+  {
+   "type": "Multiple choice",
+   "q": "In the feudal system, a lord granted land to a vassal in return for...",
+   "opts": [
+    "payment in gold",
+    "loyalty and military service",
+    "religious conversion",
+    "a share of trade profits"
+   ],
+   "correct": [
+    "B"
+   ],
+   "expl": "Land for service is the core of feudalism. The land was the fief, the person receiving it was the vassal."
+  },
+  {
+   "type": "Multiple choice",
+   "q": "Put the feudal hierarchy in order from the top. Which option is correct?",
+   "opts": [
+    "Monarch, knights, nobles, peasants",
+    "Monarch, nobles, knights, peasants",
+    "Nobles, monarch, knights, peasants",
+    "Monarch, nobles, peasants, knights"
+   ],
+   "correct": [
+    "B"
+   ],
+   "expl": "Land flowed down from the monarch to nobles to knights. Peasants worked the land at the bottom."
+  },
+  {
+   "type": "Multiple choice",
+   "q": "Why did a medieval serf find it so hard to improve his position in society?",
+   "opts": [
+    "He was legally bound to the lord's land and owed labour he could not refuse",
+    "He was not allowed to attend church",
+    "He was required to become a knight",
+    "He had to pay the Pope directly"
+   ],
+   "correct": [
+    "A"
+   ],
+   "expl": "Serfs were tied to the manor. Freedom of movement, not wealth, was the key restriction."
+  },
+  {
+   "type": "Multiple choice",
+   "q": "How did feudalism help a king control a large kingdom without a police force or a paid army?",
+   "opts": [
+    "Every peasant swore an oath to the king personally",
+    "Nobles who held land from the king had to supply knights and keep order in their own regions",
+    "The Church policed the kingdom",
+    "Kings hired foreign soldiers"
+   ],
+   "correct": [
+    "B"
+   ],
+   "expl": "The king could not be everywhere. Granting land made nobles responsible for defence and order in return for their oath."
+  },
+  {
+   "type": "Multiple choice",
+   "q": "Select ALL that were expectations of a knight under the code of chivalry.",
+   "opts": [
+    "Show loyalty to his lord",
+    "Protect the weak and the Church",
+    "Treat peasants as equals",
+    "Fight bravely",
+    "Avoid all combat"
+   ],
+   "correct": [
+    "A",
+    "B",
+    "D"
+   ],
+   "expl": "Chivalry demanded loyalty, courage, protection of the weak and service to the Church. It did not extend equality to peasants."
+  },
+  {
+   "type": "Multiple choice",
+   "q": "Why were medieval punishments usually carried out in public?",
+   "opts": [
+    "Prisons were full",
+    "To shame the offender and deter others, since there was no police force",
+    "The king liked to watch",
+    "To raise money from spectators"
+   ],
+   "correct": [
+    "B"
+   ],
+   "expl": "With no police, fear of public punishment was the main way to keep order."
+  },
+  {
+   "type": "Multiple choice",
+   "q": "A person accused of a crime carries a red-hot iron and the wound is checked three days later. This is...",
+   "opts": [
+    "trial by jury",
+    "trial by combat",
+    "trial by ordeal",
+    "a tithe"
+   ],
+   "correct": [
+    "C"
+   ],
+   "expl": "Trial by ordeal asked God to reveal guilt through the outcome. It was replaced by juries after 1215."
+  },
+  {
+   "type": "Multiple choice",
+   "q": "Which crime was punished most severely in medieval Europe?",
+   "opts": [
+    "Selling underweight bread",
+    "Poaching a rabbit",
+    "Treason against the king",
+    "Missing church"
+   ],
+   "correct": [
+    "C"
+   ],
+   "expl": "Treason attacked the king himself and was punished by death and loss of all property."
+  },
+  {
+   "type": "Multiple choice",
+   "q": "Besides defence, why were castles important to a lord's power?",
+   "opts": [
+    "They stored all the kingdom's grain",
+    "They were a visible symbol of authority and the centre for collecting taxes and giving justice",
+    "They housed the peasants",
+    "They were used as churches"
+   ],
+   "correct": [
+    "B"
+   ],
+   "expl": "A castle told everyone who ruled the region. The lord's court, treasury and soldiers were inside it."
+  },
+  {
+   "type": "Multiple choice",
+   "q": "How did castle design change between 1066 and 1300?",
+   "opts": [
+    "Stone castles were replaced by wooden ones",
+    "Wooden motte-and-bailey castles were replaced by stone keeps and then concentric stone castles",
+    "Castles stopped being built",
+    "Castles moved underground"
+   ],
+   "correct": [
+    "B"
+   ],
+   "expl": "Stone resisted fire and siege engines. The purpose stayed the same while the form changed, which is continuity and change."
+  },
+  {
+   "type": "Multiple choice",
+   "q": "Select ALL the ways the Catholic Church was part of an ordinary villager's everyday life.",
+   "opts": [
+    "Baptism, marriage and burial happened in the church",
+    "Villagers paid a tithe of one tenth of their produce",
+    "Villagers elected the Pope",
+    "The year was organised around holy days and festivals",
+    "Villagers wrote the Bible"
+   ],
+   "correct": [
+    "A",
+    "B",
+    "D"
+   ],
+   "expl": "The Church set the calendar, marked every life event and took a share of every harvest."
+  },
+  {
+   "type": "Multiple choice",
+   "q": "What was the most important source of the Church's power in medieval Europe?",
+   "opts": [
+    "It had the largest army",
+    "It controlled the path to heaven in a society where almost everyone feared hell",
+    "The Pope was King of England",
+    "It owned all the ships"
+   ],
+   "correct": [
+    "B"
+   ],
+   "expl": "Spiritual power came first. Land, wealth and political influence were built on it."
+  },
+  {
+   "type": "Multiple choice",
+   "q": "How could the Pope put pressure on a king who defied him?",
+   "opts": [
+    "Send the Crusaders to attack him",
+    "Excommunicate him, cutting him off from the Church and giving his subjects a reason to disobey",
+    "Raise his taxes",
+    "Cancel his coronation"
+   ],
+   "correct": [
+    "B"
+   ],
+   "expl": "Excommunication was a political weapon. Nobles feared for their own souls if they stayed loyal to an excommunicated king."
+  },
+  {
+   "type": "Multiple choice",
+   "q": "Which of these shows the Church's CULTURAL power rather than political or economic power?",
+   "opts": [
+    "Owning about one third of the land in Europe",
+    "Monks copying books and running schools",
+    "Excommunicating a king",
+    "Collecting the tithe"
+   ],
+   "correct": [
+    "B"
+   ],
+   "expl": "Cultural power is about learning, ideas and art. The other options are economic or political."
+  },
+  {
+   "type": "Multiple choice",
+   "q": "Select ALL that were reasons people joined the First Crusade.",
+   "opts": [
+    "The promise of forgiveness of sins",
+    "The chance to gain land and wealth",
+    "To free Jerusalem from Muslim rule",
+    "To end the Black Death",
+    "To defeat the Vikings"
+   ],
+   "correct": [
+    "A",
+    "B",
+    "C"
+   ],
+   "expl": "Religion, land and the Holy Land all motivated Crusaders. The Black Death came 250 years later."
+  },
+  {
+   "type": "Multiple choice",
+   "q": "How would a Muslim living in Jerusalem in 1099 most likely have seen the Crusaders?",
+   "opts": [
+    "As rightful rulers returning",
+    "As a violent foreign invasion",
+    "As peaceful pilgrims",
+    "As traders from Italy"
+   ],
+   "correct": [
+    "B"
+   ],
+   "expl": "Perspectives depend on position. To Crusaders it was liberation. To the city's inhabitants, many of whom were killed, it was conquest."
+  },
+  {
+   "type": "Multiple choice",
+   "q": "Which consequence of the Crusades had the longest-lasting effect on Europe?",
+   "opts": [
+    "Jerusalem stayed in Christian hands permanently",
+    "Trade and contact with the East expanded, bringing goods, knowledge and wealth to Italian cities",
+    "All European kings lost their power",
+    "Castles were no longer built"
+   ],
+   "correct": [
+    "B"
+   ],
+   "expl": "The Crusader states were lost by 1291, but the trade links remained and helped fund the Renaissance."
+  },
+  {
+   "type": "Multiple choice",
+   "q": "The Crusades took place roughly between...",
+   "opts": [
+    "1066 and 1100",
+    "1096 and 1291",
+    "1347 and 1351",
+    "1500 and 1600"
+   ],
+   "correct": [
+    "B"
+   ],
+   "expl": "The First Crusade began in 1096 and the last Crusader stronghold fell in 1291."
+  },
+  {
+   "type": "Multiple choice",
+   "q": "The Black Death arrived in Europe in 1347 through...",
+   "opts": [
+    "Crusader knights returning from the Holy Land",
+    "trade ships docking at Sicilian and Italian ports",
+    "Mongol armies invading from the east",
+    "pilgrims travelling from Spain"
+   ],
+   "correct": [
+    "B"
+   ],
+   "expl": "The plague followed trade routes from the Black Sea to Messina and then inland."
+  },
+  {
+   "type": "Multiple choice",
+   "q": "What did flagellants believe?",
+   "opts": [
+    "That rats carried the plague",
+    "That the plague was God's punishment and self-inflicted pain would earn forgiveness",
+    "That the Pope had caused the plague",
+    "That the plague could be cured with herbs"
+   ],
+   "correct": [
+    "B"
+   ],
+   "expl": "Most medieval people saw the plague as divine punishment. Flagellants took that belief to an extreme."
+  },
+  {
+   "type": "Multiple choice",
+   "q": "Which was a LONG-TERM effect of the Black Death?",
+   "opts": [
+    "Bodies buried in mass graves",
+    "Towns emptied of people in 1348",
+    "Peasants demanding higher wages as labour became scarce",
+    "Church services cancelled during the outbreak"
+   ],
+   "correct": [
+    "C"
+   ],
+   "expl": "The other three happened during the outbreak. The labour shortage reshaped society over decades."
+  },
+  {
+   "type": "Multiple choice",
+   "q": "How did the Black Death affect the Catholic Church?",
+   "opts": [
+    "It made the Church more powerful than ever",
+    "Faith was shaken because prayer did not stop the plague and many clergy died or fled",
+    "The Church was abolished",
+    "The Church gained control of all medicine"
+   ],
+   "correct": [
+    "B"
+   ],
+   "expl": "The Church claimed to explain the world. Its failure to stop the plague raised doubts that grew over the following century."
+  },
+  {
+   "type": "Multiple choice",
+   "q": "A source is captioned 'Illuminated manuscript, Paris, c. 1250'. Which statement about its origin is correct?",
+   "opts": [
+    "It was made in the 12th century",
+    "It was made in the 13th century",
+    "It was made in the 14th century",
+    "It was made after the Black Death"
+   ],
+   "correct": [
+    "B"
+   ],
+   "expl": "1250 is in the 1200s, which is the 13th century. The Black Death came a century later."
+  },
+  {
+   "type": "Multiple choice",
+   "q": "Which event happened FIRST?",
+   "opts": [
+    "The Black Death reaches Europe",
+    "The First Crusade begins",
+    "The Battle of Hastings",
+    "The fall of Acre ends the Crusades"
+   ],
+   "correct": [
+    "C"
+   ],
+   "expl": "Hastings 1066, First Crusade 1096, fall of Acre 1291, Black Death 1347."
+  },
+  {
+   "type": "Open-ended",
+   "q": "In one sentence, explain why the Black Death is considered a turning point in history.",
+   "opts": [],
+   "correct": [],
+   "expl": "Model answer. It killed a third to a half of Europe's population, which weakened feudalism and the Church's authority and shifted power towards ordinary workers over the following century."
+  },
+  {
+   "type": "Open-ended",
+   "q": "Name one short-term and one long-term impact of the Black Death.",
+   "opts": [],
+   "correct": [],
+   "expl": "Model answer. Short-term, mass deaths and plague pits or flagellants. Long-term, labour shortages raised wages and weakened feudalism, and faith in the Church declined."
+  },
+  {
+   "type": "Open-ended",
+   "q": "Give one way the Crusades strengthened the Catholic Church and one way the Black Death weakened it.",
+   "opts": [],
+   "correct": [],
+   "expl": "Model answer. The Crusades showed the Pope could unite kings and knights behind one cause and brought the Church land and wealth. The Black Death showed the Church could not stop or explain the plague, and many clergy died or fled."
+  }
+ ],
+ "terms": [
+  {
+   "term": "Archipelago",
+   "def": "An area that contains a chain or group of islands scattered in lakes, rivers or the ocean."
+  },
+  {
+   "term": "Bakufu",
+   "def": "The Japanese term for the shogunate government, translating to 'tent government'."
+  },
+  {
+   "term": "Bushido",
+   "def": "The code of behaviour of the samurai that required honour, loyalty (even to death), good living, thrift and martial arts skill."
+  },
+  {
+   "term": "Canon Law",
+   "def": "Church law, especially in the Catholic Church, laid down by papal pronouncements."
+  },
+  {
+   "term": "Cause and effect",
+   "def": "The link between what causes an action or motivates someone to act in a certain way, and the outcome of that action."
+  },
+  {
+   "term": "Christianity",
+   "def": "The religion based on the person and teachings of Jesus Christ."
+  },
+  {
+   "term": "Clergy",
+   "def": "People ordained for religious duties, especially in the Christian church."
+  },
+  {
+   "term": "Contestability",
+   "def": "The idea that an interpretation or hypothesis may be challenged or left open to debate because of a lack of evidence or a different perspective."
+  },
+  {
+   "term": "Continuity and change",
+   "def": "The recognition that while many things change over time, some quite drastically, other things continue, even if in modified forms."
+  },
+  {
+   "term": "Crusades",
+   "def": "A series of wars fought by Christians and Muslims between 1096 and 1291 CE over control of the Holy Land."
+  },
+  {
+   "term": "Daimyo",
+   "def": "A Japanese lord, vassal to the shogun."
+  },
+  {
+   "term": "Edict",
+   "def": "An official order issued by the shogun or another authority in Japan that people were expected to obey."
+  },
+  {
+   "term": "Empathy",
+   "def": "The ability to understand what happened in the past by imagining how people living at the time thought, felt and experienced events, without judging them by today's values."
+  },
+  {
+   "term": "Emperor",
+   "def": "A sovereign ruler of great power and rank. Under the shogunate the emperor was a ceremonial and religious figurehead while governing power was in the hands of the shogun."
+  },
+  {
+   "term": "Evidence",
+   "def": "The information or clues discovered by asking specific questions about a historical source."
+  },
+  {
+   "term": "Excommunication",
+   "def": "A religious punishment that cut someone off from the church community and its sacraments, such as communion, confession and entry to heaven."
+  },
+  {
+   "term": "Feudalism",
+   "def": "A set of legal and military customs that organised the society of medieval Europe. A lord gave a fief to a vassal in exchange for loyalty and support."
+  },
+  {
+   "term": "Fief",
+   "def": "Land given by a lord to a vassal in medieval Europe in return for loyalty and service."
+  },
+  {
+   "term": "Flagellants",
+   "def": "A group of radical Christians during the Black Death who whipped themselves to gain God's forgiveness for their sins."
+  },
+  {
+   "term": "Heresy",
+   "def": "Doing or saying something regarded by the medieval Catholic Church as being in serious conflict with its teachings."
+  },
+  {
+   "term": "Hierarchy",
+   "def": "A way of organising people so that the most important is at the top, with others ranked underneath in decreasing order of importance. Social hierarchy arranges people according to power and wealth."
+  },
+  {
+   "term": "Holy Land",
+   "def": "The territory in today's Middle East now mostly made up of Israel and Palestine."
+  },
+  {
+   "term": "Knight",
+   "def": "A medieval warrior of Europe who pledged his services to a lord, sometimes to a king, in exchange for a fief."
+  },
+  {
+   "term": "Monarch",
+   "def": "A king or queen who administered the country, planned or fought wars and owned the land on which they ruled. The monarch sat at the top of the social hierarchy."
+  },
+  {
+   "term": "Nobles",
+   "def": "Wealthy subjects who lived on land granted to them (fiefs) in large manor houses. They were below the monarch on the social hierarchy."
+  },
+  {
+   "term": "Outcast",
+   "def": "A person rejected by Japanese society because their occupation conflicted with religious beliefs, typically jobs considered unclean such as grave digging or butchery."
+  },
+  {
+   "term": "Peasants",
+   "def": "The largest group in medieval society, who undertook the bulk of physical work, most of it related to farming."
+  },
+  {
+   "term": "Perspectives",
+   "def": "The way a person or particular people view some aspect of the past. Perspectives are shaped by prejudices, fears, uncertainties, age, gender and education."
+  },
+  {
+   "term": "Ronin",
+   "def": "A samurai without a master or lord."
+  },
+  {
+   "term": "Sakoku",
+   "def": "Japan's foreign policy of isolation during the Tokugawa shogunate (1633 to 1853) that forbade Japanese people leaving Japan or foreigners entering it. The penalty was death."
+  },
+  {
+   "term": "Samurai",
+   "def": "A Japanese medieval warrior who lived by the bushido code and was loyal to his daimyo."
+  },
+  {
+   "term": "Sankin Kotai",
+   "def": "A Tokugawa system that required daimyo to reside in Edo for periods of time, alternating with residence at their own castle."
+  },
+  {
+   "term": "Seppuku",
+   "def": "A ritual suicide common among samurai who felt they had been dishonoured, involving cutting open the belly."
+  },
+  {
+   "term": "Serf",
+   "def": "A medieval peasant who worked on the manor of a feudal lord and was bound to that land."
+  },
+  {
+   "term": "Shogun",
+   "def": "The title given to Japan's top military rulers between the 12th and 19th centuries."
+  },
+  {
+   "term": "Significance",
+   "def": "The importance of an event, person or development in the past, judged by how much it changed people's lives or how it helps us understand history today."
+  },
+  {
+   "term": "Tithe",
+   "def": "One tenth of annual produce or earnings, taken as a contribution for the support of the Catholic Church and clergy."
+  },
+  {
+   "term": "Treason",
+   "def": "Doing or saying something that goes against the laws of the king or is seen as a betrayal of the king."
+  },
+  {
+   "term": "Turning point",
+   "def": "An event or development that leads to a major change in the direction of history."
+  },
+  {
+   "term": "Vassal",
+   "def": "Under feudalism, a person who offered loyalty and service to a lord in return for protection and the granting of a fief."
+  },
+  {
+   "term": "Westernisation",
+   "def": "A process whereby societies adopt what is considered to be Western culture in areas such as industry, technology, science, education, politics, law and social norms."
+  }
+ ]
+}
