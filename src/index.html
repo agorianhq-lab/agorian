@@ -100,7 +100,8 @@ header>*{max-width:100%}
 .hero h1{font-size:clamp(36px,5.5vw,60px);color:var(--navy)}
 .hero h1 em{font-style:italic;color:var(--accent)}
 .hero p{max-width:60ch;color:var(--muted)}
-.herogrid>p{color:var(--ink);font-family:var(--display);font-weight:500;font-size:clamp(21px,2vw,27px);line-height:1.5}
+.herotext{display:grid;gap:18px;align-content:start}
+.herotext>p{color:var(--ink);font-family:var(--display);font-weight:500;font-size:clamp(21px,2vw,27px);line-height:1.5}
 .modes{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:16px}
 @media (max-width:900px){.modes{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:560px){.modes{grid-template-columns:1fr}}
@@ -136,11 +137,11 @@ header>*{max-width:100%}
 @media (min-width:900px){.topics{grid-template-columns:1fr 1fr;gap:12px 20px;align-items:start}.unit:last-child{grid-column:1/-1}.unit:last-child .tlist{display:grid;grid-template-columns:1fr 1fr;gap:8px 20px}}
 .unit{display:grid;gap:6px}
 .unit .eyebrow{margin-top:6px}
-.topic{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;text-align:left;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:13px 16px;cursor:pointer}
+.topic{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;text-align:left;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px 20px;min-height:68px;cursor:pointer}
 .topic{--u:var(--sk);--us:var(--sk-soft);--p:0%;border-left:4px solid var(--u);background:linear-gradient(90deg,color-mix(in srgb,var(--u) 28%,var(--surface)) var(--p),var(--surface) var(--p));position:relative;overflow:hidden}
 .topic::before{content:"";position:absolute;left:0;top:0;bottom:0;width:var(--p);background:linear-gradient(90deg,color-mix(in srgb,var(--u) 22%,transparent),color-mix(in srgb,var(--u) 38%,transparent));transition:width .6s ease}
 .topic>*{position:relative}
-.topic .pct{font-family:var(--display);font-weight:700;font-size:19px;color:var(--u);font-variant-numeric:tabular-nums;min-width:3.2ch;text-align:right}
+.topic .pct{font-family:var(--display);font-weight:700;font-size:24px;color:var(--u);font-variant-numeric:tabular-nums;min-width:3.2ch;text-align:right;display:inline-flex;align-items:center;justify-content:flex-end}
 .topic .pct.none{color:var(--muted);font-family:var(--body);font-weight:400;font-size:15px}
 .topic.eu{--u:var(--eu);--us:var(--eu-soft)} .topic.jp{--u:var(--jp);--us:var(--jp-soft)}
 .topic{transition:transform .15s,box-shadow .15s,border-color .15s}
@@ -151,10 +152,12 @@ header>*{max-width:100%}
 .topic .name,.topic .meta,.topic .bar,.topic .bar i{transition:color .15s,background .15s}
 .topic .name{color:var(--u)}
 .topic .uic{width:16px;height:16px;color:var(--u);flex:none}
-.unit .eyebrow{display:flex;align-items:center;gap:6px}
-.unit .eyebrow svg{width:14px;height:14px}
+.unit .eyebrow{display:flex;align-items:center;gap:8px;font-size:15px}
+.unit .eyebrow svg{width:18px;height:18px}
 .unit.eu .eyebrow{color:var(--eu)} .unit.jp .eyebrow{color:var(--jp)} .unit.sk .eyebrow{color:var(--sk)}
-.topic .name{font-weight:700;font-size:18px}
+.topic .name{font-weight:700;font-size:22px}
+.topic .tick{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--u);color:#fff;margin-left:8px;vertical-align:middle;font-size:16px;font-weight:700;line-height:1}
+.topic:hover .tick{background:#fff;color:var(--u)}
 .topic .meta{display:flex;gap:10px;align-items:center;font-size:14px;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
 .bar{width:72px;height:6px;border-radius:3px;background:var(--line);overflow:hidden}
 .bar i{display:block;height:100%;background:var(--sage)}
@@ -351,7 +354,7 @@ input.text.right{border-color:var(--ok);background:var(--ok-bg)} input.text.wron
 .fact.home{margin-top:18px}
 .factgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:14px}
 .ftile{--u:var(--accent);position:relative;min-height:250px;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);border-top:4px solid var(--u);background:var(--surface);box-shadow:var(--shadow);cursor:default;transition:transform .18s,box-shadow .18s;outline:none}
-.ftile .bg{position:absolute;inset:0;background-size:cover;background-position:center 30%;opacity:.55;transition:opacity .3s,transform .6s;transform:scale(1.02)}
+.ftile .bg{position:absolute;inset:0;background-size:cover;background-position:center 30%;opacity:.85;transition:opacity .3s,transform .6s;transform:scale(1.02)}
 .ftile .front{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:18px 20px;background:linear-gradient(180deg,transparent 30%,color-mix(in srgb,var(--navy) 82%,transparent));color:#fff;transition:opacity .25s}
 .ftile .front .eyebrow{color:#fff;opacity:.85;display:flex;gap:8px;align-items:center;font-size:12px}
 .ftile .front .tt{font-family:var(--display);font-size:24px;font-weight:700;line-height:1.15;margin-top:4px}
@@ -409,10 +412,11 @@ input.text.right{border-color:var(--ok);background:var(--ok-bg)} input.text.wron
 .switch.on{background:var(--navy)} .switch.on i{left:21px}
 @media (prefers-reduced-motion:reduce){.audiobtn .bars.on i{animation:none;height:8px}}
 /* daily banner */
-.daily{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;background:var(--navy);color:var(--navy-ink);border-radius:var(--radius);padding:16px 20px;margin-top:6px}
+.daily{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;background:var(--navy);color:var(--navy-ink);border-radius:var(--radius);padding:14px 18px;margin-top:0;border:2px solid var(--gold)}
 .daily p{color:inherit}
-.daily .t{font-family:var(--display);font-size:24px;font-weight:700}
-.daily .n{font-size:16px;opacity:.9}
+.daily .t{font-family:var(--display);font-size:21px;font-weight:700}
+.daily .n{font-size:14px;opacity:.9}
+.daily .btn{padding:9px 16px}
 .daily .btn{background:var(--gold);border-color:var(--gold);color:#1C2333}
 .daily .btn.done{background:transparent;color:var(--navy-ink);border-color:rgba(255,255,255,.4)}
 /* mastery */
@@ -447,7 +451,9 @@ footer{margin-top:40px;font-size:13px;color:var(--muted)}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}.mode:hover,.upanel:hover,.topic:hover{transform:none}}
 @media (max-width:480px){.score{grid-template-columns:1fr}}
 /* Outlines: every tile gets a firm 2px navy frame (user request). Accent edges stay on top. */
-.mode,.topic,.card,.check,.hubcard,.upanel,.ftile,.flash,.herogrid .pic,.welcome,.tl .ev{border-width:2px;border-style:solid;border-color:var(--navy)}
+.mode,.topic,.card,.check,.hubcard,.upanel,.ftile,.flash,.herogrid .pic,.welcome,.tl .ev,.clock,.qotd,.opt,.sample,.summary,.rv,.wbwrap,.rubric div,.audiopop{border-width:2px;border-style:solid;border-color:var(--navy)}
+.qotd{border-color:color-mix(in srgb,var(--gold) 70%,var(--navy))}
+.opt.correct,.opt.wrong,.opt.sel{border-width:2px}
 .mode{border-top:3px solid var(--m)}
 .ftile{border-top:4px solid var(--u)}
 .check{border-left:4px solid var(--u)}
@@ -500,7 +506,7 @@ footer{margin-top:40px;font-size:13px;color:var(--muted)}
   <symbol id="ic-sk" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="6"/><path d="M15.5 15.5 L21 21"/><path d="M8.5 11 h5 M11 8.5 v5"/></g></symbol>
 </svg>
 <main id="app"></main>
-<footer><p class="hint" style="margin-bottom:8px">What is recorded. Your name as you typed it, which questions you answered and whether you were right, so your teacher can see how the class is going. No email, no login, nothing else.</p><details class="credits"><summary>Image credits</summary>All artworks are in the public domain and sourced from Wikimedia Commons. Raphael, The School of Athens (1511). Katsushika Hokusai, The Great Wave off Kanagawa and Fine Wind, Clear Morning (c. 1831). Utagawa Hiroshige, Nihonbashi from The Fifty-three Stations of the Tokaido (1833). Photograph of a samurai in armour (1860s). The Bayeux Tapestry, scene 57 (c. 1070s). Limbourg brothers, Très Riches Heures du duc de Berry, September and October (c. 1412 to 1416). Toggenburg Bible (1411). Siege of Jerusalem, 13th-century manuscript, Bibliothèque nationale de France. Issunshi Hanasato, a terakoya school (Edo period). Utagawa Kuniyoshi, warrior print, Takata no baba (19th century). Pictorial map of the Tokaido highroad (Edo period). Laurentius de Voltolina, Henry of Germany lecturing at Bologna (14th century). Jean Miélot at his desk (15th century). Hokusai Manga, volume 6 (1817).</details></footer>
+<footer><p class="hint" style="margin-bottom:8px">What is recorded. Your name as you typed it, which questions you answered and whether you were right, so your teacher can see how the class is going. No email, no login, nothing else.</p><details class="credits"><summary>Image credits</summary>Artworks are sourced from Wikimedia Commons and are in the public domain unless a licence is noted. Raphael, The School of Athens (1511). Katsushika Hokusai, The Great Wave off Kanagawa and Fine Wind, Clear Morning (c. 1831). Utagawa Hiroshige, Nihonbashi from The Fifty-three Stations of the Tokaido (1833). Photograph of a samurai in armour (1860s). The Bayeux Tapestry, scene 57 (c. 1070s). Limbourg brothers, Très Riches Heures du duc de Berry, September and October (c. 1412 to 1416). Toggenburg Bible (1411). Siege of Jerusalem, 13th-century manuscript, Bibliothèque nationale de France. Issunshi Hanasato, a terakoya school (Edo period). Utagawa Kuniyoshi, warrior print, Takata no baba (19th century). Pictorial map of the Tokaido highroad (Edo period). Laurentius de Voltolina, Henry of Germany lecturing at Bologna (14th century). Jean Miélot at his desk (15th century). Hokusai Manga, volume 6 (1817). Fun facts: Domesday Book binding (The National Archives); Gothic armour by Lorenz Helmschmied, 1493, photo Kunsthistorisches Museum Wien (CC BY 4.0); Bayeux Tapestry, Dinan scene; Ordeal by cold water, 12th-century manuscript; Fountains Abbey, photo by Klaus with K (CC BY-SA 3.0); John Gregory Crace, Court of the Lions (1855, Metropolitan Museum of Art, CC0); Lazzaretto Vecchio, Venice, photo by Godromil; Queen Mary Psalter, reeve and serfs (c. 1310); Moko Shurai Ekotoba (c. 1293); portrait of Nitobe Inazo; Utagawa Hiroshige, daimyo procession, Suruga-cho (1856) and Chushingura Act XI (c. 1840); Kawahara Keiga, Dejima (1811); scroll of the Perry mission (1854, British Museum); Uchida Kuichi, Emperor Meiji (1873); Codex Manesse (c. 1305).</details></footer>
 </div>
 
 <script id="bank" type="application/json">__BANK__</script>
@@ -516,9 +522,10 @@ const UNITS = ['Medieval Europe','Shogunate Japan','Skills and concepts'];
 const AUTO = new Set(['mc','ms','gaps','text']);
 
 // ---------- storage (per viewer, best effort) ----------
+const MEM = {};
 const store = {
-  get(k,d){ try{ const v=localStorage.getItem('agorian:'+k); return v?JSON.parse(v):d }catch(e){ return d } },
-  set(k,v){ try{ localStorage.setItem('agorian:'+k, JSON.stringify(v)) }catch(e){} }
+  get(k,d){ if(k in MEM) return MEM[k]; try{ const v=localStorage.getItem('agorian:'+k); return v?JSON.parse(v):d }catch(e){ return d } },
+  set(k,v){ MEM[k]=v; try{ localStorage.setItem('agorian:'+k, JSON.stringify(v)) }catch(e){} }
 };
 let stats = store.get('stats', {}); // qid -> {a:attempts,c:correct}
 let sessionId = store.get('sid', null); if(!sessionId){ sessionId = Math.random().toString(36).slice(2,10); store.set('sid', sessionId) }
@@ -718,11 +725,11 @@ function confetti(){
 const IMG = __IMG__;
 const CAP = {
   'jp-wave':'Hokusai, The Great Wave off Kanagawa, c. 1831','jp-fuji':'Hokusai, Fine Wind, Clear Morning, c. 1831','jp-tokaido':'Hiroshige, Nihonbashi, Fifty-three Stations of the Tokaido, 1833','jp-samurai':'Samurai in armour, photograph, 1860s',
-  'eu-bayeux':'Bayeux Tapestry, the death of Harold, c. 1070s','eu-heures':'Limbourg brothers, Très Riches Heures, October, c. 1412','eu-castle':'Limbourg brothers, Très Riches Heures, September, c. 1412','eu-plague':'Toggenburg Bible, plague victims, 1411','eu-crusade':'Siege of Jerusalem 1099, 13th-century manuscript'};
+  'eu-bayeux':'Bayeux Tapestry, the death of Harold, c. 1070s','eu-heures':'Limbourg brothers, Très Riches Heures, October, c. 1412','eu-castle':'Limbourg brothers, Très Riches Heures, September, c. 1412','eu-plague':'Toggenburg Bible, plague victims, 1411','eu-crusade':'Siege of Jerusalem 1099, 13th-century manuscript','f-domesday':'Domesday Book binding, 1086','f-armour':'Gothic armour by Lorenz Helmschmied, 1493','f-motte':'Bayeux Tapestry, the motte at Dinan, c. 1070s','f-ordeal':'Ordeal by cold water, 12th-century manuscript','f-abbey':'Fountains Abbey, Yorkshire','f-alhambra':'Court of the Lions, Alhambra, 1855','f-lazzaretto':'Lazzaretto Vecchio, Venice','f-harvest':'Reeve and serfs, Queen Mary Psalter, c. 1310','f-mongol':'Takezaki Suenaga, Mongol invasion scroll, c. 1293','f-nitobe':'Nitobe Inazo','f-sankin':'Hiroshige, daimyo procession crossing a bridge','f-dejima':'Kawahara Keiga, Dutch ship arriving at Dejima, 1811','f-edo':'Hiroshige, Suruga-cho, One Hundred Famous Views of Edo, 1856','f-ronin':'Hiroshige, Chushingura Act XI, c. 1840','f-perry':'The Perry mission to Japan, Japanese scroll, 1854','f-meiji':'Emperor Meiji, photograph, 1873','f-manesse':'Codex Manesse, Walther von Klingen, c. 1305'};
 const TOPIC_IMG = {'Feudalism and hierarchy':'eu-heures','Law and order':'eu-heures','Castles and knights':'eu-castle','Catholic Church':'eu-castle','The Crusades':'eu-crusade','The Black Death':'eu-plague',
   'Feudalism and samurai':'jp-samurai','Tokugawa Shogunate':'jp-tokaido','Meiji Restoration':'jp-wave','Source analysis':'eu-bayeux','Chronology':'eu-heures','Comparing the two societies':'jp-fuji','Historical concepts':'eu-castle','Turning points':'eu-bayeux'};
 function stimImg(q){ const t=(q.stimulus||'').toLowerCase(); if(t.includes('decameron')) return 'eu-plague'; if(t.includes('hokusai')) return 'jp-fuji'; if(t.includes('military houses')) return 'jp-samurai'; if(t.includes('clermont')) return 'eu-crusade'; if(t.includes('nagasaki')) return 'jp-tokaido'; return null }
-const FOCUS = {'jp-wave':'center 40%','jp-fuji':'center 45%','jp-tokaido':'center 60%','jp-samurai':'center 22%','eu-bayeux':'center 45%','eu-heures':'center 62%','eu-castle':'center 45%','eu-plague':'center 15%','eu-crusade':'center 40%'};
+const FOCUS = {'jp-wave':'center 40%','jp-fuji':'center 45%','jp-tokaido':'center 60%','jp-samurai':'center 22%','eu-bayeux':'center 45%','eu-heures':'center 62%','eu-castle':'center 45%','eu-plague':'center 15%','eu-crusade':'center 40%','f-armour':'center 20%','f-nitobe':'center 15%','f-meiji':'center 12%','f-manesse':'center 70%','f-edo':'center 30%','f-abbey':'center','f-domesday':'center 30%','f-mongol':'center 35%'};
 const SMALL = new Set(['eu-crusade']);
 const art = (k,extra='') => k&&IMG[k] ? `<div class="qart ${SMALL.has(k)?'contain':''}" style="background-image:url(${IMG[k]});background-position:${FOCUS[k]||'center'}${extra}"><span class="cap">${esc(CAP[k])}</span></div>` : '';
 // did-you-know facts, keyed loosely to topics
@@ -747,6 +754,7 @@ const FACTS=[
  ['Meiji Restoration','Meiji means enlightened rule. The emperor who gave the era its name, Mutsuhito, was 15 years old when power was restored to him in 1868.'],
  ['Comparing the two societies','Both knights and samurai served lords in return for land, but samurai were also expected to be literate officials. By 1700 most samurai had never fought a battle.'],
 ];
+const FACT_IMG=['f-domesday','f-armour','f-motte','f-ordeal','f-abbey','f-alhambra','f-lazzaretto','f-harvest','eu-bayeux','jp-samurai','f-mongol','f-nitobe','f-sankin','f-dejima','f-edo','f-ronin','f-perry','f-meiji','f-manesse'];
 const FACT_TITLES=['The Domesday Book','The weight of armour','A castle in weeks','The end of trial by ordeal','The Church as landlord','Words from Arabic','Where quarantine comes from','Wages after the plague','Not a tapestry at all','To serve','The divine wind','Bushido\u2019s late birth','Processions of thousands','Dejima, the fan-shaped island','A million people in Edo','The 47 ronin','Perry\u2019s toy railway','Enlightened rule','Knights and samurai'];
 function factFor(topics){ const pool=FACTS.filter(f=>!topics||topics.includes(f[0])); const f=(pool.length?pool:FACTS)[Math.random()*(pool.length||FACTS.length)|0]; return `<div class="fact"><span class="lamp">?</span><div><b>Did you know</b>${esc(f[1])}</div></div>` }
 const MODEH = (name,title) => `<div class="modeh" style="--m:var(--${({practice:'accent',challenge:'gold',timeline:'teal',terms:'sage',write:'plum',facts:'rose'})[name]})"><span class="k"><svg><use href="#m-${name}"/></svg></span><h2>${title}</h2></div>`;
@@ -788,12 +796,12 @@ function home(){
       <div class="namerow"><label for="nameIn" class="hint">Your name</label><input class="text" id="nameIn" placeholder="First name and initial" autocomplete="off" value="${esc(studentName)}"><button class="btn primary" id="goWelcome">Let’s go</button><button class="soundbtn ${soundOn?'on':''}" id="snd0">${soundOn?'&#9835; Sound on':'&#9835; Sound off'}</button></div></div>`}
     <h1><em>Challenge</em> what you know.</h1>
     <div class="herogrid">
-      <p>The agora was the open square of Athens where citizens traded, voted and were questioned by Socrates. This is yours. Quick questions with an explanation after every answer, timed challenges, a timeline game, flashcards for the key terms and exam style paragraph prompts, all across Medieval Europe and Shogunate Japan.</p>
+      <div class="herotext"><p>The agora was the open square of Athens where citizens traded, voted and were questioned by Socrates. This is yours. Quick questions with an explanation after every answer, timed challenges, a timeline game, flashcards for the key terms and exam style paragraph prompts, all across Medieval Europe and Shogunate Japan.</p>
+      <div class="daily">
+        <div><p class="t">Today’s ten</p><p class="n">${dailyDone?'Done for today. Back tomorrow for the next set.':`Ten questions aimed at what you find hardest.${(()=>{const d=Q.filter(q=>AUTO.has(q.type)&&stats[q.id]&&stats[q.id].due&&stats[q.id].due<=Date.now()).length; return d?` ${d} due for a return visit.`:''})()}`} ${dayStreak>1?`Day streak <b>${dayStreak}</b>.`:''}</p></div>
+        <button class="btn ${dailyDone?'done':''}" data-go="daily">${dailyDone?'Do it again':'Start'}</button>
+      </div></div>
       <figure class="pic" style="margin:0"><img src="${IMG['gr-athens']}" alt="Raphael's fresco The School of Athens, philosophers in debate under a great arch"><figcaption class="cap">Raphael, The School of Athens, 1511. Athenian thinkers arguing in a great hall. Socrates is at the left in the olive robe, counting off his points on his fingers.</figcaption></figure>
-    </div>
-    <div class="daily">
-      <div><p class="t">Today’s ten</p><p class="n">${dailyDone?'Done for today. Back tomorrow for the next set.':`Ten questions aimed at what you find hardest.${(()=>{const d=Q.filter(q=>AUTO.has(q.type)&&stats[q.id]&&stats[q.id].due&&stats[q.id].due<=Date.now()).length; return d?` ${d} due for a return visit.`:''})()}`} ${dayStreak>1?`Day streak <b>${dayStreak}</b>.`:''}</p></div>
-      <button class="btn ${dailyDone?'done':''}" data-go="daily">${dailyDone?'Do it again':'Start'}</button>
     </div>
     <div class="units">
       <button class="upanel eu" data-unit="Medieval Europe"><span class="photo" style="background-image:url(${IMG['eu-bayeux']});background-position:right 40%;background-size:cover"></span><span class="t">Medieval Europe</span><span class="n">Feudalism, castles, the Church, the Crusades and the Black Death.</span><span class="cta">Practise this unit \u2192</span><svg class="art"><use href="#art-eu"/></svg></button>
@@ -814,7 +822,7 @@ function home(){
     <div class="topics">${UNITS.map(u=>`
       <div class="unit ${unitCls(u)}"><p class="eyebrow"><svg><use href="#ic-${unitCls(u)}"/></svg>${esc(u)}</p><div class="tlist" style="display:grid;gap:8px">${topicsIn(u).map(t=>{
         const s=topicStats(t), n=Q.filter(q=>q.topic===t&&AUTO.has(q.type)).length, pct=s.a?Math.round(100*s.c/s.a):0;
-        const m=mastery(t); return `<button class="topic ${unitCls(u)}" data-topic="${esc(t)}" style="--p:${s.a?pct:0}%"><span class="name">${esc(t)}${m?` <span class="badge ${m}" title="${m} mastery" style="margin-left:6px;vertical-align:middle"></span>`:''}</span><span class="pct ${s.a?'':'none'}">${s.a?pct+'%':'Not yet'}</span></button>`}).join('')}</div></div>`).join('')}
+        const m=mastery(t); return `<button class="topic ${unitCls(u)}" data-topic="${esc(t)}" style="--p:${s.a?pct:0}%"><span class="name">${esc(t)}${m?` <span class="badge ${m}" title="${m} mastery" style="margin-left:6px;vertical-align:middle"></span>`:''}</span><span class="pct ${s.a?'':'none'}">${s.a?pct+'%':'Not yet'}${s.a&&pct===100?'<span class="tick" aria-label="complete">&#10003;</span>':''}</span></button>`}).join('')}</div></div>`).join('')}
     </div>
   </section>`);
   app.querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>({setup, challenge, terms, write, daily, timeline, facts})[b.dataset.go]());
@@ -1142,7 +1150,7 @@ function facts(){
     h(`<section class="section"><div class="row" style="justify-content:space-between">${MODEH('facts','Fun facts')}<span class="pill">Read <b id="seenN">${seen.size}</b> / ${FACTS.length}</span></div>
     <p class="hint" style="margin:6px 0 0">Hover over a tile to read the fact. Tab and Enter work too.</p>
     <div class="row"><button class="btn ${filter==='all'?'primary':''}" data-f="all">Both units</button><button class="btn ${filter==='Medieval Europe'?'primary':''}" data-f="Medieval Europe">Medieval Europe</button><button class="btn ${filter==='Shogunate Japan'?'primary':''}" data-f="Shogunate Japan">Shogunate Japan</button></div>
-    <div class="factgrid">${pool.map(k=>{ const [topic,text]=FACTS[k]; const u=unitOf(topic); const c=unitCls(u); const img=TOPIC_IMG[topic]; const canP=Q.some(q=>q.topic===topic&&AUTO.has(q.type));
+    <div class="factgrid">${pool.map(k=>{ const [topic,text]=FACTS[k]; const u=unitOf(topic); const c=unitCls(u); const img=FACT_IMG[k]||TOPIC_IMG[topic]; const canP=Q.some(q=>q.topic===topic&&AUTO.has(q.type));
       return `<div class="ftile ${seen.has(k)?'read':''}" tabindex="0" data-k="${k}" data-topic="${esc(topic)}" style="--u:var(--${c})">
         ${img&&IMG[img]?`<div class="bg" style="background-image:url(${IMG[img]});background-position:${FOCUS[img]||'center'}"></div>`:''}
         <div class="front"><span class="eyebrow"><svg style="width:14px;height:14px"><use href="#ic-${c}"/></svg>${esc(topic)}</span><div class="tt">${esc(FACT_TITLES[k]||'Did you know?')}</div><div class="peek">Hover to reveal</div></div>
