@@ -173,7 +173,13 @@ input.text.right{border-color:var(--ok);background:var(--ok-bg)} input.text.wron
 .review{display:grid;gap:8px}
 .rv{border:1px solid var(--line);border-radius:10px;padding:11px 13px;font-size:15px;display:grid;gap:4px}
 .rv .q{font-weight:600}
-.summary{background:var(--bg);border:1px dashed var(--line);border-radius:10px;padding:12px 14px;font:13px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace;white-space:pre-wrap}
+.summary{background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:14px 16px;display:grid;gap:10px;font-size:15px;font-variant-numeric:tabular-nums}
+.sumhead{display:flex;justify-content:space-between;gap:10px;font-family:var(--display);font-weight:700;color:var(--navy);font-size:17px;border-bottom:1px solid var(--line);padding-bottom:8px}
+.sumgrid{display:grid;grid-template-columns:auto 1fr;gap:4px 16px}
+.sumgrid .k,.sumtopics .t{color:var(--muted)} .sumgrid .v{font-weight:700} .sumgrid small{font-weight:400;color:var(--muted)}
+.sumtopics{display:grid;grid-template-columns:1fr auto auto;gap:4px 16px;border-top:1px solid var(--line);padding-top:8px}
+.sumtopics .v,.sumtopics .p{text-align:right} .sumtopics .p{color:var(--muted);min-width:3.5ch}
+.sumfoot{border-top:1px solid var(--line);padding-top:8px} .sumfoot b{color:var(--accent);margin-right:6px}
 
 /* flashcards */
 .flash{max-width:980px;margin-inline:auto;min-height:240px;display:grid;place-items:center;text-align:center;padding:28px;cursor:pointer;border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);box-shadow:var(--shadow)}
@@ -605,14 +611,20 @@ function results(){
   let newBest=false; if(state.mode==='challenge'){ const b=store.get('best',0); if(c>b){ store.set('best',c); newBest=true } }
   if(n && pct>=80) setTimeout(confetti,200);
   const date=new Date().toLocaleDateString('en-AU',{day:'numeric',month:'short',year:'numeric'});
-  const summary=`Agorian ${({challenge:'Challenge',daily:'Daily ten',practice:'Practice'})[state.mode]} · ${date}\nScore ${c}/${n} (${pct}%) in ${mins}\n`+Object.entries(byTopic).map(([t,s])=>`  ${t}: ${s.c}/${s.a}`).join('\n')+(weak.length?`\nRevisit: ${weak.join(', ')}`:'\nNo weak topics this round.');
+  const modeName=({challenge:'Challenge',daily:'Daily ten',practice:'Practice'})[state.mode];
+  const rows=Object.entries(byTopic).map(([t,s])=>[t,`${s.c} / ${s.a}`,`${Math.round(100*s.c/s.a)}%`]);
+  const colw=Math.max(12,...rows.map(r=>r[0].length));
+  const summary=[`AGORIAN  ${modeName.toUpperCase()}`,date,'',`Score   ${c} / ${n}   (${pct}%)`,`Time    ${mins}`,'','By topic',...rows.map(r=>`  ${r[0].padEnd(colw)}  ${r[1].padStart(7)}  ${r[2].padStart(4)}`),'',weak.length?`Revisit  ${weak.join(', ')}`:'No weak topics this round.'].join('\n');
   h(`<section class="section">${MODEH(state.mode==='challenge'?'challenge':'practice',({challenge:'Challenge complete',daily:'Today’s ten complete',practice:'Practice complete'})[state.mode])}
   <div class="card">
     ${art(state.mode==='challenge'?'jp-fuji':(TOPIC_IMG[Object.keys(byTopic)[0]]||'eu-bayeux'))}
     <div class="score"><div class="ring" style="--p:${pct}"><b>${pct}%</b></div>
       <div><p style="font-size:18px;font-weight:600">${c} of ${n} correct</p><p class="muted">${n?verdict(pct):'No questions answered.'}${newBest?' <b style="color:var(--accent)">New personal best.</b>':''}</p></div></div>
     <div><p class="eyebrow" style="margin-bottom:8px">By topic</p><div class="bytopic">${Object.entries(byTopic).map(([t,s])=>`<div class="bt"><div><div style="margin-bottom:4px">${esc(t)}</div><div class="bar"><i style="width:${100*s.c/s.a}%;background:${s.c/s.a<0.6?'var(--accent)':'var(--sage)'}"></i></div></div><span class="n">${s.c}/${s.a}</span></div>`).join('')}</div></div>
-    <div><p class="eyebrow" style="margin-bottom:8px">Summary for your teacher</p><div class="summary" id="sum">${esc(summary)}</div>
+    <div><p class="eyebrow" style="margin-bottom:8px">Summary for your teacher</p><div class="summary" id="sum"><div class="sumhead"><span>Agorian · ${modeName}</span><span>${date}</span></div>
+        <div class="sumgrid"><span class="k">Score</span><span class="v">${c} / ${n} <small>(${pct}%)</small></span><span class="k">Time</span><span class="v">${mins}</span></div>
+        <div class="sumtopics">${rows.map(r=>`<span class="t">${esc(r[0])}</span><span class="v">${r[1]}</span><span class="p">${r[2]}</span>`).join('')}</div>
+        <div class="sumfoot">${weak.length?`<b>Revisit</b> ${esc(weak.join(', '))}`:'No weak topics this round.'}</div></div>
       <div class="row" style="margin-top:8px"><button class="btn" id="copy">Copy summary</button><span class="hint">Or screenshot this card.</span></div></div>
     ${factFor(weak.length?weak:Object.keys(byTopic))}
     ${A.some(a=>!a.correct)?`<div><p class="eyebrow" style="margin-bottom:8px">Questions to revisit</p><div class="review">${A.filter(a=>!a.correct).map(a=>`<div class="rv"><span class="q">${esc(a.q.question)}</span><span class="muted">${esc(a.q.explanation||a.q.model||'')}</span></div>`).join('')}</div></div>`:''}
