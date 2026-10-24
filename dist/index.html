@@ -48,6 +48,14 @@ p{margin:0}
 /* header */
 header{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;padding:30px 0 14px;text-align:center}
 .hdr-right{position:absolute;right:0;top:30px}
+.backbtn{position:absolute;left:0;top:34px;display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:8px 14px 8px 10px;font-weight:700;cursor:pointer;color:var(--navy)}
+.backbtn svg{width:18px;height:18px}
+.pager{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:4px}
+.pager .arrow{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:10px 16px;font-weight:700;cursor:pointer;color:var(--navy)}
+.pager .arrow:hover{border-color:var(--navy)} .pager .arrow:disabled{opacity:.35;cursor:default}
+.pager .arrow svg{width:18px;height:18px}
+.pager .where{font-size:14px;color:var(--muted);text-align:center}
+@media (max-width:700px){.backbtn span{display:none}.backbtn{padding:8px 10px}}
 .brand .mark{align-self:center;flex:none;width:52px;height:52px}
 .brand{display:flex;flex-direction:column;align-items:center;gap:6px;background:none;border:0;padding:0;cursor:pointer}
 .brand .top{display:flex;align-items:center;gap:14px}
@@ -330,6 +338,7 @@ footer{margin-top:40px;font-size:13px;color:var(--muted)}
 <div class="wrap" id="top">
 <header>
   <button class="brand" id="homeBtn" aria-label="Agorian home"><span class="top"><svg class="mark" viewBox="0 0 40 40" width="52" height="52" aria-hidden="true"><path d="M4 12 V4 H12 M28 4 H36 V12 M36 28 V36 H28 M12 36 H4 V28" fill="none" stroke="var(--navy)" stroke-width="3.5" stroke-linecap="square"/><path d="M17 10 L26.5 31 H22.3 L20.3 26.4 H13.7 L11.7 31 H7.5 Z M15 22.2 H19 L17 17.3 Z" fill="var(--accent)" fill-rule="evenodd"/><path d="M30.5 12 V20 M26.5 16 H34.5" stroke="var(--accent)" stroke-width="2.6" stroke-linecap="round"/></svg><span class="word">Agor<span>ian</span></span></span><span class="desc">Year 8 History Revision</span></button>
+  <button class="backbtn" id="backBtn" hidden aria-label="Back"><svg><use href="#ar-l"/></svg><span>Back</span></button>
   <div class="hdr-right"><span class="pill" id="streak" hidden>Streak <b id="streakN">0</b></span></div>
 </header>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -354,6 +363,8 @@ footer{margin-top:40px;font-size:13px;color:var(--muted)}
   <symbol id="m-timeline" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12 H21"/><circle cx="6" cy="12" r="2.2" fill="currentColor"/><circle cx="12" cy="12" r="2.2" fill="currentColor"/><circle cx="18" cy="12" r="2.2" fill="currentColor"/><path d="M6 7 V9.8 M12 17 V14.2 M18 7 V9.8"/></g></symbol>
   <symbol id="m-terms" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="3" y="7" width="14" height="12" rx="2"/><path d="M7 4 h14 v12"/><path d="M7 12 h6" stroke-linecap="round"/></g></symbol>
   <symbol id="m-write" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20 h16"/><path d="M14.5 4.5 l5 5 L9 20 H4 v-5 z"/><path d="M12.5 6.5 l5 5"/></g></symbol>
+  <symbol id="ar-l" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="ar-r" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
   <symbol id="m-facts" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 21h4"/><path d="M12 3a6.5 6.5 0 0 0-3.6 11.9c.6.4.9 1 .9 1.6V17h5.4v-.5c0-.6.3-1.2.9-1.6A6.5 6.5 0 0 0 12 3z"/></g></symbol>
   <symbol id="ic-jp" viewBox="0 0 24 24"><g fill="currentColor"><rect x="5" y="8" width="2.4" height="13"/><rect x="16.6" y="8" width="2.4" height="13"/><rect x="3.5" y="6" width="17" height="2.2" rx=".5"/><rect x="6" y="11" width="12" height="1.8"/><path d="M2 4.5 Q12 2.5 22 4.5 L21.5 6.5 Q12 4.8 2.5 6.5 Z"/></g></symbol>
   <symbol id="ic-eu" viewBox="0 0 24 24"><g fill="currentColor"><path d="M3 21 V8 h3 V6 h2 v2 h2 V6 h2 v2 h2 V6 h2 v2 h2 V6 h2 v2 h1 v13 z M10 21 v-5 a2 2 0 0 1 4 0 v5 z" fill-rule="evenodd"/></g></symbol>
@@ -400,6 +411,10 @@ const shuffle = a => { a=a.slice(); for(let i=a.length-1;i>0;i--){const j=Math.f
 const topicsIn = unit => [...new Set(Q.filter(q=>q.unit===unit && q.type!=='extended').map(q=>q.topic))];
 const L = 'ABCDEFGH';
 function h(html){ app.innerHTML = html; window.scrollTo({top:0}); }
+const hist=[]; let navLock=false;
+function screen(fn){ return function(...a){ if(!navLock){ const top=hist[hist.length-1]; if(!top||top.fn!==fn||JSON.stringify(top.a)!==JSON.stringify(a)) hist.push({fn,a}); if(hist.length>30) hist.shift(); } const b=document.getElementById('backBtn'); if(b) b.hidden=hist.length<2; return fn.apply(this,a) } }
+function goBack(){ if(hist.length<2) return; hist.pop(); const prev=hist[hist.length-1]; navLock=true; try{ prev.fn.apply(null,prev.a) } finally { navLock=false } const b=document.getElementById('backBtn'); if(b) b.hidden=hist.length<2 }
+const pager=(i,n,label)=>`<div class="pager"><button class="arrow" id="pg-prev" ${i<=0?'disabled':''}><svg><use href="#ar-l"/></svg>Previous</button><span class="where">${label}</span><button class="arrow" id="pg-next" ${i>=n-1?'disabled':''}>Next<svg><use href="#ar-r"/></svg></button></div>`;
 
 let state = { mode:null };
 const today = () => new Date().toISOString().slice(0,10);
@@ -505,7 +520,7 @@ function home(){
   </section>
   <section class="section">
     <h2>Your progress by topic</h2>
-    <p class="muted" style="font-size:14px">Accuracy from questions you've answered on this device. Tap a topic to practise it. Badges at 60, 80 and 95 per cent after eight or more answers.</p>
+    <p class="muted" style="font-size:14px">Accuracy from questions you've answered on this device. Tap a topic to practise it.</p>
     <div class="topics">${UNITS.map(u=>`
       <div class="unit ${unitCls(u)}"><p class="eyebrow"><svg><use href="#ic-${unitCls(u)}"/></svg>${esc(u)}</p><div class="tlist" style="display:grid;gap:8px">${topicsIn(u).map(t=>{
         const s=topicStats(t), n=Q.filter(q=>q.topic===t&&AUTO.has(q.type)).length, pct=s.a?Math.round(100*s.c/s.a):0;
@@ -701,7 +716,7 @@ function terms(){
   const draw=()=>{ const t=TERMS[order[i]];
     h(`<section class="section"><div class="row" style="justify-content:space-between">${MODEH('terms','Key terms')}<span class="pill">Known <b>${known.size}</b> / ${TERMS.length}</span></div>
     <div class="flash ${unitCls(termUnit(t.term))} ${flipped?'back':''}" id="flash" role="button" tabindex="0" aria-label="Flashcard, tap to flip">${flipped?`<div><p class="unit">${esc(termUnit(t.term))}</p><p class="term">${esc(t.term)}</p><p class="def" style="margin-top:10px">${esc(t.definition)}</p></div>`:`<div><p class="unit">${esc(termUnit(t.term))}</p><p class="term">${esc(t.term)}</p><p class="tap">Tap to see the definition</p></div>`}</div>
-    <div class="actions"><div class="row"><button class="btn" id="prev">Previous</button><button class="btn" id="next">Next</button></div>
+    <div class="actions"><div class="row"><button class="btn" id="prev" style="display:inline-flex;align-items:center;gap:6px"><svg style="width:18px;height:18px"><use href="#ar-l"/></svg>Previous</button><button class="btn" id="next" style="display:inline-flex;align-items:center;gap:6px">Next<svg style="width:18px;height:18px"><use href="#ar-r"/></svg></button></div>
       <div class="row"><button class="btn ${known.has(t.term)?'primary':''}" id="know">${known.has(t.term)?'Known ✓':'I know this'}</button><button class="btn quiet" id="unk" ${known.size?'':'disabled'}>Only unknown</button><button class="btn accent" id="sprint">Term sprint</button><button class="btn quiet" id="home">Home</button></div></div>
     <p class="hint">${i+1} of ${order.length}. Space flips, arrow keys move.</p></section>`);
     const f=app.querySelector('#flash'); f.onclick=()=>{flipped=!flipped;draw()}; f.onkeydown=e=>{ if(e.key===' '||e.key==='Enter'){e.preventDefault();flipped=!flipped;draw()} };
@@ -784,7 +799,7 @@ function facts(){
     <div class="card ${unitCls(u)}">${art(TOPIC_IMG[topic])}
       <span class="eyebrow" style="color:var(--${unitCls(u)});display:flex;gap:8px;align-items:center"><svg style="width:16px;height:16px"><use href="#ic-${unitCls(u)}"/></svg>${esc(u)} · ${esc(topic)}</span>
       <p class="qtext" style="font-weight:400;line-height:1.5">${esc(text)}</p>
-      <div class="actions"><div class="row"><button class="btn" id="prev">Previous</button><button class="btn primary" id="next">Another fact</button></div><div class="row">${Q.some(q=>q.topic===topic&&AUTO.has(q.type))?`<button class="btn accent" id="prac">Practise ${esc(topic)}</button>`:''}<button class="btn quiet" id="home">Home</button></div></div>
+      <div class="actions"><div class="row"><button class="btn" id="prev" style="display:inline-flex;align-items:center;gap:6px"><svg style="width:18px;height:18px"><use href="#ar-l"/></svg>Previous</button><button class="btn primary" id="next" style="display:inline-flex;align-items:center;gap:6px">Another fact<svg style="width:18px;height:18px"><use href="#ar-r"/></svg></button></div><div class="row">${Q.some(q=>q.topic===topic&&AUTO.has(q.type))?`<button class="btn accent" id="prac">Practise ${esc(topic)}</button>`:''}<button class="btn quiet" id="home">Home</button></div></div>
     </div><p class="hint">${i+1} of ${pool.length}. Arrow keys move.</p></section>`);
     app.querySelectorAll('[data-f]').forEach(b=>b.onclick=()=>{filter=b.dataset.f;i=0;draw()});
     app.querySelector('#next').onclick=()=>{i++;draw()}; app.querySelector('#prev').onclick=()=>{i=(i-1+pool.length)%pool.length;draw()};
@@ -873,20 +888,21 @@ function modelHTML(m){ return `<div class="legend">${TEEAL.map(t=>`<span class="
   <div class="row" style="justify-content:space-between"><span class="marks full">${esc(m.marks)}</span>${m.draft?'<span class="hint">Draft model, written in the style of the marked samples. Check before relying on it.</span>':'<span class="hint">From the marked exam samples.</span>'}</div><div class="feedback info"><b>Why it scores 8</b><span>${esc(m.why)}</span></div>` }
 
 function success(open){
-  const draw=(id)=>{
+  const draw=screen(function successPage(id){
     const sk=SHORT.find(x=>x.id===id);
     h(`<section class="section">${MODEH('write','What success looks like')}
     <p class="muted">Marked answers for every kind of exam question, with the reasons marks are won and lost. Written from the exam’s own mark scheme.</p>
-    ${sk?`<div class="card"><div class="row" style="justify-content:space-between"><h3 style="font-size:24px;color:var(--plum)">${esc(sk.title)}</h3><button class="btn quiet" id="back">All question types</button></div>${sk.body()}</div>`:
+    ${sk?`<div class="card"><div class="row" style="justify-content:space-between"><h3 style="font-size:24px;color:var(--plum)">${esc(sk.title)}</h3><button class="btn quiet" id="back">All question types</button></div>${sk.body()}${pager(SHORT.indexOf(sk),SHORT.length,`${SHORT.indexOf(sk)+1} of ${SHORT.length}`)}</div>`:
     `<div class="hub">${SHORT.map(x=>`<button class="hubcard" data-id="${x.id}"><b>${esc(x.title)}</b><span>${esc(x.sub)}</span></button>`).join('')}
       <button class="hubcard" data-go="write" style="border-left-color:var(--gold-ink)"><b>Model paragraphs</b><span>A full TEEAL answer for each of the five paragraph prompts, sentence by sentence.</span></button></div>
      <div class="row"><button class="btn quiet" id="home">Home</button></div>`}
     </section>`);
     app.querySelectorAll('[data-id]').forEach(b=>b.onclick=()=>draw(b.dataset.id));
     const bk=app.querySelector('#back'); if(bk) bk.onclick=()=>draw(null);
+    if(sk){ const k=SHORT.indexOf(sk); const pv=app.querySelector('#pg-prev'), nx=app.querySelector('#pg-next'); if(pv) pv.onclick=()=>draw(SHORT[k-1].id); if(nx) nx.onclick=()=>draw(SHORT[k+1].id); }
     const hm=app.querySelector('#home'); if(hm) hm.onclick=home;
     const w=app.querySelector('[data-go=write]'); if(w) w.onclick=write;
-  };
+  });
   draw(open||null);
 }
 
@@ -894,7 +910,7 @@ function success(open){
 function write(){
   const prompts=Q.filter(q=>q.type==='extended');
   const drafts=store.get('drafts',{});
-  const pick=(id)=>{
+  const pick=screen(function pickView(id){
     const q=prompts.find(p=>p.id===id);
     h(`<section class="section">${MODEH('write','Paragraph practice')}
     <div class="card">
@@ -911,6 +927,7 @@ function write(){
         ${[['t','My first sentence makes an argument, not a description.'],['e','I have at least two specific pieces of evidence with a name, date or place.'],['a','Every piece of evidence is followed by a because or this meant sentence.'],['j','My last sentence returns to the question with a judgement.'],['w','I have used the key terms and checked spelling.']].map(([k,t])=>`<label><input type="checkbox" id="sc-${q.id}-${k}"><span>${t}</span></label>`).join('')}</div>
       <div class="row" style="margin-top:12px"><button class="btn primary" id="save">Save draft</button><button class="btn quiet" id="back">All prompts</button></div>
       </div>
+      ${pager(prompts.indexOf(q),prompts.length,`Prompt ${prompts.indexOf(q)+1} of ${prompts.length}`)}
       <div id="pane-model" hidden>${SUCCESS[q.id]?modelHTML(SUCCESS[q.id]):'<p class="muted">No model paragraph for this prompt yet.</p>'}
         <div class="row" style="margin-top:12px"><button class="btn" id="rub">Rubric and short-answer examples</button><button class="btn quiet" id="back2">All prompts</button></div></div>
     </div></section>`);
@@ -919,8 +936,9 @@ function write(){
     app.querySelector('#guide').onclick=e=>{ const g=app.querySelector('#g'); g.hidden=!g.hidden; e.target.textContent=g.hidden?'Show marker guidance':'Hide marker guidance' };
     app.querySelector('#save').onclick=e=>{ drafts[q.id]=ta.value; store.set('drafts',drafts); e.target.textContent='Saved'; setTimeout(()=>e.target.textContent='Save draft',1500) };
     app.querySelector('#back').onclick=write; app.querySelector('#back2').onclick=write; app.querySelector('#rub').onclick=()=>success('paragraph');
+    { const k=prompts.indexOf(q); const pv=app.querySelector('#pg-prev'), nx=app.querySelector('#pg-next'); if(pv) pv.onclick=()=>pick(prompts[k-1].id); if(nx) nx.onclick=()=>pick(prompts[k+1].id); }
     app.querySelectorAll('.tab').forEach(t=>t.onclick=()=>{ app.querySelectorAll('.tab').forEach(x=>x.classList.toggle('on',x===t)); app.querySelector('#pane-write').hidden=t.dataset.tab!=='write'; app.querySelector('#pane-model').hidden=t.dataset.tab!=='model' });
-  };
+  });
   h(`<section class="section">${MODEH('write','Paragraph practice')}<p class="muted">Five exam style prompts. Each opens with the TEEAL scaffold, a model answer marked 8 out of 8, and the guidance a marker uses.</p>
   <button class="hubcard" id="succ" style="border-left-color:var(--gold-ink)"><b>What success looks like</b><span>Marked answers for every kind of exam question. Two-mark explains, compares, turning points, captions, impacts and the 8-mark paragraph.</span></button>
   <div class="topics">${prompts.map(p=>`<button class="topic" data-id="${p.id}" style="align-items:flex-start"><span><span class="eyebrow">${esc(p.unit)}</span><br><span class="name" style="font-weight:500">${esc(p.question.split('. ').slice(0,2).join('. '))}.</span></span><span class="meta">${drafts[p.id]?'Draft saved':''}</span></button>`).join('')}</div>
@@ -930,6 +948,8 @@ function write(){
 }
 
 document.getElementById('homeBtn').onclick=home;
+home=screen(home); setup=screen(setup); challenge=screen(challenge); terms=screen(terms); write=screen(write); daily=screen(daily); timeline=screen(timeline); teacher=screen(teacher); sprint=screen(sprint); facts=screen(facts);
+document.getElementById('backBtn').onclick=goBack;
 const ROUTES={practice:setup, challenge, terms, write, daily, timeline, teacher, sprint, facts, success};
 const r=(location.hash||'').slice(1); (ROUTES[r]||home)();
 })();
