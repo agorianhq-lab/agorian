@@ -249,6 +249,16 @@ input.text.right{border-color:var(--ok);background:var(--ok-bg)} input.text.wron
 .hubcard:hover{border-color:var(--plum)}
 .hubcard b{font-family:var(--display);font-size:20px;color:var(--plum)}
 .hubcard span{font-size:15px;color:var(--muted)}
+/* word bank */
+.wb{display:grid;gap:12px}
+.wb .grp{display:grid;gap:6px}
+.wb .grp .eyebrow{color:var(--plum)}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:5px 12px;font-size:15px;cursor:pointer;font-family:var(--body)}
+.chip:hover{border-color:var(--plum);color:var(--plum)}
+.chip.no{text-decoration:line-through;color:var(--bad);cursor:default;border-color:var(--bad-bg);background:var(--bad-bg)}
+.wbwrap{border:1px solid var(--line);border-radius:10px;padding:12px 14px;background:var(--bg)}
+.wbwrap summary{cursor:pointer;font-weight:700;color:var(--plum)}
 /* write */
 .scaffold{display:grid;gap:8px;font-size:15px}
 .scaffold .s{display:grid;grid-template-columns:52px 1fr;gap:10px;align-items:baseline}
@@ -877,6 +887,7 @@ const SHORT=[
    <tr><td>The last shogun resigns in 1868</td><td>Short</td><td>The event of the Restoration itself</td></tr>
    <tr><td>Japan defeats Russia in 1905</td><td>Long</td><td>Nearly 40 years after, the result of modernisation</td></tr>
    <tr><td>A national conscript army built by 1873</td><td>Short or long</td><td>Five years on. The point is your reasoning</td></tr></tbody></table></div></div>`},
+ {id:'words',title:'Words that analyse',sub:'The vocabulary that earns analysis marks, grouped by the job it does.',body:()=>wordBank(false)},
  {id:'paragraph',title:'The extended response (8 marks)',sub:'An 8 beside a 5. Find the three missing because sentences.',body:()=>`
   <div class="skill"><div class="rubric">${RUBRIC.map(r=>`<div><b>${r[0]}</b>${r[1]}<small>${r[2]}</small></div>`).join('')}</div>
   <p class="qtext" style="font-size:19px">${esc(CALIB.q)}</p>
@@ -884,6 +895,19 @@ const SHORT=[
   <div class="sample weak"><span class="marks weak">${CALIB.weak.marks}</span><p>${esc(CALIB.weak.text)}</p><p class="why"><b>Why 5.</b> ${esc(CALIB.weak.why)}</p></div></div>
   <p>The three habits that cost the most marks. Describing an event instead of explaining why it mattered. Answering a source question without quoting or pointing to the source. Giving two factors when the question asked for one, or a list when it asked for a link.</p></div>`}
 ];
+const WORDS=[
+ ['Cause and effect (the because sentence)',['because','led to','resulted in','triggered','contributed to','enabled','forced','meant that','as a consequence','in turn']],
+ ['Significance (the so what)',['significant because','turning point','lasting','far-reaching','reshaped','transformed','undermined','strengthened','marked the beginning of','the direction changed from']],
+ ['Continuity and change',['remained','continued','persisted','unchanged','whereas','however','shifted','replaced','declined','accelerated']],
+ ['Comparing and weighing',['similarly','both','whereas','in contrast','more than','rather than','mainly','to a large extent','to some extent','outweighed','the deeper cause','the trigger']],
+ ['Perspective and sources',['suggests','reveals','implies','portrays','from the perspective of','intended to','reliable because','limited because','exaggerates','omits']],
+ ['Judgement (the link sentence)',['therefore','this is why','overall','the strongest argument is','the most important factor was','historians treat this as']],
+];
+const WEAKWORDS=['very','important','a lot','many ways','good','bad','big','things'];
+function wordBank(insertable){ return `<div class="wb">${WORDS.map(([g,ws])=>`<div class="grp"><p class="eyebrow">${esc(g)}</p><div class="chips">${ws.map(w=>`<button class="chip" data-w="${esc(w)}" type="button">${esc(w)}</button>`).join('')}</div></div>`).join('')}
+  <div class="grp"><p class="eyebrow" style="color:var(--bad)">Words that assert without showing. Replace them.</p><div class="chips">${WEAKWORDS.map(w=>`<span class="chip no">${esc(w)}</span>`).join('')}</div></div>
+  <p class="hint">Because and which meant are worth more than any adjective. Mainly and to a large extent are small words that signal a judgement.${insertable?' Tap a word to drop it into your draft.':''}</p></div>` }
+function bindWordBank(ta){ app.querySelectorAll('.chip[data-w]').forEach(c=>c.onclick=()=>{ if(!ta) return; const w=c.dataset.w; const st=ta.selectionStart??ta.value.length, en=ta.selectionEnd??st; const before=ta.value.slice(0,st), after=ta.value.slice(en); const sp=before&&!/\s$/.test(before)?' ':''; ta.value=before+sp+w+(after&&!/^\s/.test(after)?' ':'')+after; const pos=(before+sp+w).length; ta.focus(); ta.setSelectionRange(pos,pos); ta.dispatchEvent(new Event('input')) }) }
 function modelHTML(m){ return `<div class="legend">${TEEAL.map(t=>`<span class="sent ${t[0]}" style="padding:0;border:0;background:none;display:inline">${t[1]}</span>`).join('')}</div><div class="model">${m.model.map(([tag,txt])=>`<div class="sent ${tag[0]}"><b>${tag}</b><span>${esc(txt)}</span></div>`).join('')}</div>
   <div class="row" style="justify-content:space-between"><span class="marks full">${esc(m.marks)}</span>${m.draft?'<span class="hint">Draft model, written in the style of the marked samples. Check before relying on it.</span>':'<span class="hint">From the marked exam samples.</span>'}</div><div class="feedback info"><b>Why it scores 8</b><span>${esc(m.why)}</span></div>` }
 
@@ -923,6 +947,7 @@ function write(){
       <textarea id="d${q.id}" placeholder="Write your paragraph here. It stays on this device." style="margin-top:12px">${esc(drafts[q.id]||'')}</textarea>
       <div class="row" style="justify-content:space-between;margin-top:8px"><span class="hint" id="wc"></span><button class="btn" id="guide">Show marker guidance</button></div>
       <div id="g" hidden class="feedback info" style="margin-top:8px"><b>What a marker looks for</b><span>${esc(q.guidance)}</span></div>
+      <details class="wbwrap" style="margin-top:12px"><summary>Words that analyse</summary><div style="margin-top:10px">${wordBank(true)}</div></details>
       <div class="selfcheck" style="margin-top:12px"><p class="eyebrow">Check your draft</p>
         ${[['t','My first sentence makes an argument, not a description.'],['e','I have at least two specific pieces of evidence with a name, date or place.'],['a','Every piece of evidence is followed by a because or this meant sentence.'],['j','My last sentence returns to the question with a judgement.'],['w','I have used the key terms and checked spelling.']].map(([k,t])=>`<label><input type="checkbox" id="sc-${q.id}-${k}"><span>${t}</span></label>`).join('')}</div>
       <div class="row" style="margin-top:12px"><button class="btn primary" id="save">Save draft</button><button class="btn quiet" id="back">All prompts</button></div>
@@ -931,7 +956,7 @@ function write(){
       <div id="pane-model" hidden>${SUCCESS[q.id]?modelHTML(SUCCESS[q.id]):'<p class="muted">No model paragraph for this prompt yet.</p>'}
         <div class="row" style="margin-top:12px"><button class="btn" id="rub">Rubric and short-answer examples</button><button class="btn quiet" id="back2">All prompts</button></div></div>
     </div></section>`);
-    const ta=app.querySelector('textarea'), wc=app.querySelector('#wc');
+    const ta=app.querySelector('textarea'), wc=app.querySelector('#wc'); bindWordBank(ta);
     const count=()=>{ const w=ta.value.trim().split(/\s+/).filter(Boolean).length, s=ta.value.split(/[.!?]+/).filter(x=>x.trim()).length; wc.textContent=`${w} words · ${s} sentences` }; count(); ta.oninput=count;
     app.querySelector('#guide').onclick=e=>{ const g=app.querySelector('#g'); g.hidden=!g.hidden; e.target.textContent=g.hidden?'Show marker guidance':'Hide marker guidance' };
     app.querySelector('#save').onclick=e=>{ drafts[q.id]=ta.value; store.set('drafts',drafts); e.target.textContent='Saved'; setTimeout(()=>e.target.textContent='Save draft',1500) };
