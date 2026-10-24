@@ -188,10 +188,18 @@ input.text.right{border-color:var(--ok);background:var(--ok-bg)} input.text.wron
 .sumfoot{border-top:1px solid var(--line);padding-top:8px} .sumfoot b{color:var(--accent);margin-right:6px}
 
 /* flashcards */
-.flash{max-width:980px;margin-inline:auto;min-height:240px;display:grid;place-items:center;text-align:center;padding:28px;cursor:pointer;border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);box-shadow:var(--shadow)}
-.flash .term{font-family:var(--display);font-size:44px;color:var(--navy)}
-.flash .def{font-size:22px;max-width:56ch}
-.flash .tap{font-size:12px;color:var(--muted);margin-top:12px}
+.flash{--u:var(--sk);--us:var(--sk-soft);max-width:980px;width:100%;margin-inline:auto;height:340px;display:grid;place-items:center;text-align:center;padding:32px;cursor:pointer;border:1px solid var(--line);border-radius:var(--radius);background:var(--u);color:#fff;box-shadow:var(--shadow);position:relative;overflow:hidden;transition:background .2s}
+.flash.eu{--u:var(--eu);--us:var(--eu-soft)} .flash.jp{--u:var(--jp);--us:var(--jp-soft)}
+.flash::before{content:"";position:absolute;inset:0;background:var(--pattern);opacity:.9;pointer-events:none}
+.flash.back{background:var(--us);color:var(--ink);border-color:var(--u);border-left:8px solid var(--u)}
+.flash>div{position:relative}
+.flash .unit{font-size:13px;letter-spacing:.08em;text-transform:uppercase;opacity:.85;margin-bottom:14px;font-weight:700}
+.flash.back .unit{color:var(--u);opacity:1}
+.flash .term{font-family:var(--display);font-size:clamp(40px,5vw,56px);line-height:1.1}
+.flash.back .term{font-size:22px;color:var(--u)}
+.flash .def{font-size:clamp(20px,2vw,24px);max-width:56ch;line-height:1.45}
+.flash .tap{font-size:13px;opacity:.8;margin-top:16px}
+@media (max-width:600px){.flash{height:300px;padding:22px}}
 
 /* write */
 .scaffold{display:grid;gap:8px;font-size:15px}
@@ -645,11 +653,14 @@ function results(){
 function verdict(p){ return p>=85?'Exam ready on these topics. Try the paragraph prompts next.':p>=65?'Solid. Read the explanations on the ones you missed and go again.':p>=40?'Getting there. Practise the weak topics below before the next challenge.':'Early days. Pick one topic at a time in Practice and build it up.' }
 
 // ---------- key terms ----------
+const JP_TERMS=new Set(['Archipelago','Bakufu','Bushido','Daimyo','Edict','Emperor','Outcast','Ronin','Sakoku','Samurai','Sankin Kotai','Seppuku','Shogun','Westernisation']);
+const SK_TERMS=new Set(['Cause and effect','Contestability','Continuity and change','Empathy','Evidence','Perspectives','Significance','Turning point']);
+const termUnit = t => JP_TERMS.has(t) ? 'Shogunate Japan' : SK_TERMS.has(t) ? 'Skills and concepts' : 'Medieval Europe';
 function terms(){
   let known = new Set(store.get('known', [])); let order = shuffle(TERMS.map((_,i)=>i)); let i=0, flipped=false;
   const draw=()=>{ const t=TERMS[order[i]];
     h(`<section class="section"><div class="row" style="justify-content:space-between">${MODEH('terms','Key terms')}<span class="pill">Known <b>${known.size}</b> / ${TERMS.length}</span></div>
-    <div class="flash" id="flash" role="button" tabindex="0" aria-label="Flashcard, tap to flip">${flipped?`<div><p class="eyebrow" style="margin-bottom:8px">${esc(t.term)}</p><p class="def">${esc(t.definition)}</p></div>`:`<div><p class="term">${esc(t.term)}</p><p class="tap">Tap to see the definition</p></div>`}</div>
+    <div class="flash ${unitCls(termUnit(t.term))} ${flipped?'back':''}" id="flash" role="button" tabindex="0" aria-label="Flashcard, tap to flip">${flipped?`<div><p class="unit">${esc(termUnit(t.term))}</p><p class="term">${esc(t.term)}</p><p class="def" style="margin-top:10px">${esc(t.definition)}</p></div>`:`<div><p class="unit">${esc(termUnit(t.term))}</p><p class="term">${esc(t.term)}</p><p class="tap">Tap to see the definition</p></div>`}</div>
     <div class="actions"><div class="row"><button class="btn" id="prev">Previous</button><button class="btn" id="next">Next</button></div>
       <div class="row"><button class="btn ${known.has(t.term)?'primary':''}" id="know">${known.has(t.term)?'Known ✓':'I know this'}</button><button class="btn quiet" id="unk" ${known.size?'':'disabled'}>Only unknown</button><button class="btn accent" id="sprint">Term sprint</button><button class="btn quiet" id="home">Home</button></div></div>
     <p class="hint">${i+1} of ${order.length}. Space flips, arrow keys move.</p></section>`);
