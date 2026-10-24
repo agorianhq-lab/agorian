@@ -8,6 +8,7 @@
   --bg:#F1EEE7; --surface:#FBFAF7; --ink:#1E2436; --muted:#636A7A; --line:#DAD5CB;
   --navy:#243A6B; --navy-ink:#FFFFFF; --accent:#C7431F; --gold:#CF9A3A; --sage:#4F7F6B; --blush:#F3E7DC;
   --eu:#7A2E2B; --eu-soft:#F0E3DE; --jp:#1F3A5F; --jp-soft:#E2E8F1; --sk:#4F7F6B; --sk-soft:#E4EEE8; --teal:#2A7A86; --plum:#6B3F7A; --gold-ink:#9A6616; --rose:#B8356A;
+  --pattern:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Cpath d='M4 60V4h56v56H12V12h40v40H20V20h24v24H28V28h8v8' fill='none' stroke='%23243A6B' stroke-width='3' opacity='.032'/%3E%3C/svg%3E");
   --ok:#3E7F5F; --ok-bg:#E3F1E8; --bad:#B23A24; --bad-bg:#F8E4DE;
   --display:"Fraunces",Georgia,"Times New Roman",serif;
   --body:"Atkinson Hyperlegible",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
@@ -17,12 +18,14 @@
   --bg:#151A26; --surface:#1E2434; --ink:#EDEAE3; --muted:#A4A9B6; --line:#343B4E;
   --navy:#4A5F9E; --navy-ink:#FFFFFF; --accent:#E8694A; --gold:#E2B45C; --sage:#6FA58D; --blush:#3A2F2B;
   --eu:#C9736C; --eu-soft:#3A2826; --jp:#7FA0D1; --jp-soft:#232E44; --sk:#6FA58D; --sk-soft:#1F3029; --teal:#5FB3BF; --plum:#B58AC4; --gold-ink:#E2B45C; --rose:#E27AA6;
+  --pattern:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Cpath d='M4 60V4h56v56H12V12h40v40H20V20h24v24H28V28h8v8' fill='none' stroke='%23E2B45C' stroke-width='3' opacity='.045'/%3E%3C/svg%3E");
   --ok:#6FBF95; --ok-bg:#1E3A2E; --bad:#F08A72; --bad-bg:#45251F;
   --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px -12px rgba(0,0,0,.5); color-scheme:dark}}
 :root[data-theme="dark"]{
   --bg:#151A26; --surface:#1E2434; --ink:#EDEAE3; --muted:#A4A9B6; --line:#343B4E;
   --navy:#4A5F9E; --navy-ink:#FFFFFF; --accent:#E8694A; --gold:#E2B45C; --sage:#6FA58D; --blush:#3A2F2B;
   --eu:#C9736C; --eu-soft:#3A2826; --jp:#7FA0D1; --jp-soft:#232E44; --sk:#6FA58D; --sk-soft:#1F3029; --teal:#5FB3BF; --plum:#B58AC4; --gold-ink:#E2B45C; --rose:#E27AA6;
+  --pattern:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Cpath d='M4 60V4h56v56H12V12h40v40H20V20h24v24H28V28h8v8' fill='none' stroke='%23E2B45C' stroke-width='3' opacity='.045'/%3E%3C/svg%3E");
   --ok:#6FBF95; --ok-bg:#1E3A2E; --bad:#F08A72; --bad-bg:#45251F;
   --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px -12px rgba(0,0,0,.5); color-scheme:dark}
 
@@ -30,8 +33,8 @@
 [hidden]{display:none!important}
 html,body{height:100%}
 body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.55 var(--body);
-  background-image:radial-gradient(900px 420px at 15% -10%,color-mix(in srgb,var(--accent) 9%,transparent),transparent 70%),radial-gradient(700px 380px at 95% 0%,color-mix(in srgb,var(--navy) 12%,transparent),transparent 70%),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .5 0 0 0 0 .45 0 0 0 0 .4 0 0 0 .07 0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
-  background-attachment:fixed,fixed,scroll;
+  background-image:radial-gradient(900px 420px at 15% -10%,color-mix(in srgb,var(--accent) 10%,transparent),transparent 70%),radial-gradient(700px 380px at 95% 0%,color-mix(in srgb,var(--navy) 14%,transparent),transparent 70%),var(--pattern),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .5 0 0 0 0 .45 0 0 0 0 .4 0 0 0 .07 0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-attachment:fixed,fixed,scroll,scroll;background-size:auto,auto,64px 64px,160px 160px;
   padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 48px}
 body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
 button{font:inherit;color:inherit}
@@ -55,6 +58,11 @@ header{display:flex;align-items:center;justify-content:space-between;gap:12px;pa
 
 /* home */
 .hero{padding:28px 0 20px;display:grid;gap:10px}
+.herogrid{display:grid;grid-template-columns:1.1fr .9fr;gap:22px;align-items:center}
+.herogrid .pic{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--line);background:var(--surface)}
+.herogrid .pic img{display:block;width:100%;height:auto}
+.herogrid .pic .cap{font-size:12px;color:var(--muted);padding:8px 12px;line-height:1.45}
+@media (max-width:700px){.herogrid{grid-template-columns:1fr}}
 .hero h1{font-size:clamp(34px,6.5vw,50px);color:var(--navy)}
 .hero h1 em{font-style:italic;color:var(--accent)}
 .hero p{max-width:60ch;color:var(--muted);font-size:18px}
@@ -173,7 +181,7 @@ input.text.right{border-color:var(--ok);background:var(--ok-bg)} input.text.wron
 
 
 /* unit panels with illustrations */
-.units{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;margin-top:18px}
+.units{display:grid;grid-template-columns:1fr;gap:14px;margin-top:18px}
 .upanel{position:relative;overflow:hidden;text-align:left;border:1px solid var(--line);border-radius:var(--radius);padding:18px 18px 16px;cursor:pointer;display:grid;gap:6px;min-height:150px;box-shadow:var(--shadow);background:var(--surface)}
 .upanel.eu{background:linear-gradient(135deg,var(--eu-soft),var(--surface) 70%)} .upanel.jp{background:linear-gradient(135deg,var(--jp-soft),var(--surface) 70%)}
 .upanel:hover{border-color:var(--navy)}
@@ -184,21 +192,23 @@ input.text.right{border-color:var(--ok);background:var(--ok-bg)} input.text.wron
 .upanel .cta{position:relative;font-size:14px;font-weight:600;margin-top:auto}
 .upanel.eu .cta{color:var(--eu)} .upanel.jp .cta{color:var(--jp)}
 /* artwork */
-.upanel{min-height:170px}
+.upanel{min-height:240px;padding-right:56%}
 .upanel .art{display:none}
 .upanel .photo{position:absolute;inset:0;background-size:cover;background-position:center;z-index:0}
 .upanel .photo::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--surface) 38%,color-mix(in srgb,var(--surface) 55%,transparent) 62%,transparent 100%)}
-.upanel.eu .photo::after{background:linear-gradient(90deg,var(--eu-soft) 50%,color-mix(in srgb,var(--eu-soft) 70%,transparent) 66%,transparent 92%)}
-.upanel.jp .photo::after{background:linear-gradient(90deg,var(--jp-soft) 50%,color-mix(in srgb,var(--jp-soft) 70%,transparent) 66%,transparent 92%)}
-.upanel .photo{background-position:right center}
+.upanel.eu .photo::after{background:linear-gradient(90deg,var(--eu-soft) 40%,color-mix(in srgb,var(--eu-soft) 60%,transparent) 46%,transparent 52%)}
+.upanel.jp .photo::after{background:linear-gradient(90deg,var(--jp-soft) 40%,color-mix(in srgb,var(--jp-soft) 60%,transparent) 46%,transparent 52%)}
+.upanel .photo{background-position:right center;background-repeat:no-repeat}
+.upanel .t{max-width:none} .upanel .n{max-width:none}
+@media (max-width:640px){.upanel{min-height:300px;padding-right:18px;padding-top:150px}.upanel .photo::after{background:linear-gradient(180deg,transparent 35%,var(--surface) 55%)}.upanel.eu .photo::after{background:linear-gradient(180deg,transparent 35%,var(--eu-soft) 55%)}.upanel.jp .photo::after{background:linear-gradient(180deg,transparent 35%,var(--jp-soft) 55%)}.upanel .photo{background-position:center top}}
 .upanel>span{position:relative;z-index:1}
-.qart{margin:-22px -22px 0;height:120px;background-size:cover;background-position:center 35%;border-radius:var(--radius) var(--radius) 0 0;position:relative}
-.qart::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,var(--surface) 100%)}
-.qart .cap{position:absolute;right:10px;bottom:6px;font-size:11px;color:var(--muted);z-index:1;text-align:right;max-width:70%}
-.stim img{display:block;max-width:100%;max-height:300px;margin:0 auto 10px;border-radius:6px;box-shadow:0 2px 8px rgba(0,0,0,.15)}
+.qart{margin:-22px -22px 0;height:210px;background-size:cover;background-position:center 35%;border-radius:var(--radius) var(--radius) 0 0;position:relative}
+.qart::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 70%,var(--surface) 100%)}
+.qart .cap{position:absolute;right:10px;bottom:6px;font-size:12px;color:var(--ink);background:color-mix(in srgb,var(--surface) 80%,transparent);padding:2px 6px;border-radius:4px;z-index:1;text-align:right;max-width:70%}
+.stim img{display:block;max-width:100%;max-height:420px;margin:0 auto 10px;border-radius:6px;box-shadow:0 2px 8px rgba(0,0,0,.15)}
 .credits{font-size:11px;color:var(--muted);margin-top:8px;line-height:1.5}
 .credits summary{cursor:pointer}
-@media (max-width:480px){.qart{height:90px}}
+@media (max-width:480px){.qart{height:160px}}
 /* unit band on quiz card */
 .card.eu{border-top:4px solid var(--eu)} .card.jp{border-top:4px solid var(--jp)} .card.sk{border-top:4px solid var(--sk)}
 .qhead .eyebrow{display:flex;align-items:center;gap:8px}
@@ -281,7 +291,7 @@ footer{margin-top:40px;font-size:13px;color:var(--muted)}
   <symbol id="ic-sk" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="6"/><path d="M15.5 15.5 L21 21"/><path d="M8.5 11 h5 M11 8.5 v5"/></g></symbol>
 </svg>
 <main id="app"></main>
-<footer><details class="credits"><summary>Image credits</summary>All artworks are in the public domain and sourced from Wikimedia Commons. Katsushika Hokusai, The Great Wave off Kanagawa and Fine Wind, Clear Morning (c. 1831). Utagawa Hiroshige, Nihonbashi from The Fifty-three Stations of the Tokaido (1833). Photograph of a samurai in armour (1860s). The Bayeux Tapestry, scene 57 (c. 1070s). Limbourg brothers, Très Riches Heures du duc de Berry, September and October (c. 1412 to 1416). Toggenburg Bible (1411). Siege of Jerusalem, 13th-century manuscript, Bibliothèque nationale de France.</details></footer>
+<footer><details class="credits"><summary>Image credits</summary>All artworks are in the public domain and sourced from Wikimedia Commons. Raphael, The School of Athens (1511). Katsushika Hokusai, The Great Wave off Kanagawa and Fine Wind, Clear Morning (c. 1831). Utagawa Hiroshige, Nihonbashi from The Fifty-three Stations of the Tokaido (1833). Photograph of a samurai in armour (1860s). The Bayeux Tapestry, scene 57 (c. 1070s). Limbourg brothers, Très Riches Heures du duc de Berry, September and October (c. 1412 to 1416). Toggenburg Bible (1411). Siege of Jerusalem, 13th-century manuscript, Bibliothèque nationale de France.</details></footer>
 </div>
 
 <script id="bank" type="application/json">__BANK__</script>
@@ -364,7 +374,6 @@ const FACTS=[
  ['Tokugawa Shogunate','In 1703 the 47 ronin avenged their lord and were then ordered to commit seppuku. Their story became Japan\u2019s most retold tale of loyalty.'],
  ['Meiji Restoration','When Perry returned in 1854 his gifts included a working quarter-size steam railway and a telegraph line. Officials rode the train for fun.'],
  ['Meiji Restoration','Meiji means enlightened rule. The emperor who gave the era its name, Mutsuhito, was 15 years old when power was restored to him in 1868.'],
- ['Chronology','The two units overlap. The first shogun took power in 1192, about a century after Hastings, and the Black Death struck Europe while the Kamakura shogunate still ruled Japan.'],
  ['Comparing the two societies','Both knights and samurai served lords in return for land, but samurai were also expected to be literate officials. By 1700 most samurai had never fought a battle.'],
 ];
 function factFor(topics){ const pool=FACTS.filter(f=>!topics||topics.includes(f[0])); const f=(pool.length?pool:FACTS)[Math.random()*(pool.length||FACTS.length)|0]; return `<div class="fact"><span class="lamp">?</span><div><b>Did you know</b>${esc(f[1])}</div></div>` }
@@ -404,14 +413,17 @@ function home(){
   <section class="hero">
     <p class="eyebrow">Semester 2 History exam</p>
     <h1><em>Challenge</em> what you know.</h1>
-    <p>The agora was the open square of Athens where citizens traded, voted and were questioned by Socrates. This is yours. Quick questions with an explanation after every answer, timed challenges, a timeline game, flashcards for the key terms and exam style paragraph prompts, all across Medieval Europe and Shogunate Japan.</p>
+    <div class="herogrid">
+      <p>The agora was the open square of Athens where citizens traded, voted and were questioned by Socrates. This is yours. Quick questions with an explanation after every answer, timed challenges, a timeline game, flashcards for the key terms and exam style paragraph prompts, all across Medieval Europe and Shogunate Japan.</p>
+      <figure class="pic" style="margin:0"><img src="${IMG['gr-athens']}" alt="Raphael's fresco The School of Athens, philosophers in debate under a great arch"><figcaption class="cap">Raphael, The School of Athens, 1511. Athenian thinkers arguing in a great hall. Socrates is at the left in the olive robe, counting off his points on his fingers.</figcaption></figure>
+    </div>
     <div class="daily">
       <div><p class="t">Today’s ten</p><p class="n">${dailyDone?'Done for today. Back tomorrow for the next set.':'Ten questions aimed at what you find hardest.'} ${dayStreak>1?`Day streak <b>${dayStreak}</b>.`:''}</p></div>
       <button class="btn ${dailyDone?'done':''}" data-go="daily">${dailyDone?'Do it again':'Start'}</button>
     </div>
     <div class="units">
-      <button class="upanel eu" data-unit="Medieval Europe"><span class="photo" style="background-image:url(${IMG['eu-bayeux']});background-position:right 30%"></span><span class="t">Medieval Europe</span><span class="n">Feudalism, castles, the Church, the Crusades and the Black Death.</span><span class="cta">Practise this unit \u2192</span><svg class="art"><use href="#art-eu"/></svg></button>
-      <button class="upanel jp" data-unit="Shogunate Japan"><span class="photo" style="background-image:url(${IMG['jp-wave']});background-position:right 40%"></span><span class="t">Shogunate Japan</span><span class="n">Samurai, the Tokugawa, sakoku and the Meiji Restoration.</span><span class="cta">Practise this unit \u2192</span><svg class="art"><use href="#art-jp"/></svg></button>
+      <button class="upanel eu" data-unit="Medieval Europe"><span class="photo" style="background-image:url(${IMG['eu-bayeux']});background-position:right 40%;background-size:cover"></span><span class="t">Medieval Europe</span><span class="n">Feudalism, castles, the Church, the Crusades and the Black Death.</span><span class="cta">Practise this unit \u2192</span><svg class="art"><use href="#art-eu"/></svg></button>
+      <button class="upanel jp" data-unit="Shogunate Japan"><span class="photo" style="background-image:url(${IMG['jp-wave']});background-position:right 55%;background-size:auto 100%"></span><span class="t">Shogunate Japan</span><span class="n">Samurai, the Tokugawa, sakoku and the Meiji Restoration.</span><span class="cta">Practise this unit \u2192</span><svg class="art"><use href="#art-jp"/></svg></button>
     </div>
     <div class="modes">
       <button class="mode practice" data-go="setup"><span class="k"><svg><use href="#m-practice"/></svg></span><span class="t">Practice</span><span class="n">Pick topics, answer at your pace, read the explanation after every question.</span></button>
