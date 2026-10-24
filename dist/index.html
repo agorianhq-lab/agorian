@@ -48,6 +48,10 @@ p{margin:0}
 /* header */
 header{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;padding:30px 0 14px;text-align:center}
 .hdr-right{position:absolute;right:0;top:30px}
+.qotd{position:absolute;left:0;top:26px;max-width:300px;display:grid;gap:4px;padding:10px 14px 10px 16px;border-left:3px solid var(--gold);background:color-mix(in srgb,var(--gold) 10%,var(--surface));border-radius:0 10px 10px 0;text-align:left}
+.qotd .q{font-family:var(--display);font-size:16px;line-height:1.35;color:var(--ink);font-style:italic}
+.qotd .a{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:700}
+@media (max-width:1000px){.qotd{position:static;max-width:none;margin:10px auto 0;text-align:center;border-left:0;border-top:3px solid var(--gold);border-radius:0 0 10px 10px}}
 .backbtn{position:absolute;left:0;top:34px;display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:8px 14px 8px 10px;font-weight:700;cursor:pointer;color:var(--navy)}
 .backbtn svg{width:18px;height:18px}
 .pager{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:4px}
@@ -365,6 +369,7 @@ footer{margin-top:40px;font-size:13px;color:var(--muted)}
 <div class="wrap" id="top">
 <header>
   <button class="brand" id="homeBtn" aria-label="Agorian home"><span class="top"><svg class="mark" viewBox="0 0 40 40" width="52" height="52" aria-hidden="true"><path d="M4 12 V4 H12 M28 4 H36 V12 M36 28 V36 H28 M12 36 H4 V28" fill="none" stroke="var(--navy)" stroke-width="3.5" stroke-linecap="square"/><path d="M17 10 L26.5 31 H22.3 L20.3 26.4 H13.7 L11.7 31 H7.5 Z M15 22.2 H19 L17 17.3 Z" fill="var(--accent)" fill-rule="evenodd"/><path d="M30.5 12 V20 M26.5 16 H34.5" stroke="var(--accent)" stroke-width="2.6" stroke-linecap="round"/></svg><span class="word">Agor<span>ian</span></span></span><span class="desc">Year 8 History Revision</span></button>
+  <aside class="qotd" id="qotd" hidden></aside>
   <button class="backbtn" id="backBtn" hidden aria-label="Back"><svg><use href="#ar-l"/></svg><span>Back</span></button>
   <div class="hdr-right"><span class="pill" id="streak" hidden>Streak <b id="streakN">0</b></span></div>
 </header>
@@ -435,13 +440,36 @@ const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':
 const shuffle = a => { a=a.slice(); for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]} return a };
 const topicsIn = unit => [...new Set(Q.filter(q=>q.unit===unit && q.type!=='extended').map(q=>q.topic))];
 const L = 'ABCDEFGH';
-function h(html){ app.innerHTML = html; window.scrollTo({top:0}); }
+function h(html){ app.innerHTML = html; window.scrollTo({top:0}); const qe=document.getElementById('qotd'); if(qe && !html.includes('class="hero"')) qe.hidden=true; }
 const hist=[]; let navLock=false;
 function screen(fn){ return function(...a){ if(!navLock){ const top=hist[hist.length-1]; if(!top||top.fn!==fn||JSON.stringify(top.a)!==JSON.stringify(a)) hist.push({fn,a}); if(hist.length>30) hist.shift(); } const b=document.getElementById('backBtn'); if(b) b.hidden=hist.length<2; return fn.apply(this,a) } }
 function goBack(){ if(hist.length<2) return; hist.pop(); const prev=hist[hist.length-1]; navLock=true; try{ prev.fn.apply(null,prev.a) } finally { navLock=false } const b=document.getElementById('backBtn'); if(b) b.hidden=hist.length<2 }
 const pager=(i,n,label)=>`<div class="pager"><button class="arrow" id="pg-prev" ${i<=0?'disabled':''}><svg><use href="#ar-l"/></svg>Previous</button><span class="where">${label}</span><button class="arrow" id="pg-next" ${i>=n-1?'disabled':''}>Next<svg><use href="#ar-r"/></svg></button></div>`;
 
 let state = { mode:null };
+const QUOTES=[
+ ['The unexamined life is not worth living.','Socrates, in Plato’s Apology'],
+ ['A journey of a thousand miles begins with a single step.','Laozi, Tao Te Ching'],
+ ['The mind is not a vessel to be filled but a fire to be kindled.','Plutarch'],
+ ['Today is victory over yourself of yesterday.','Miyamoto Musashi, The Book of Five Rings'],
+ ['Fall seven times, stand up eight.','Japanese proverb'],
+ ['It is not because things are difficult that we do not dare. It is because we do not dare that things are difficult.','Seneca'],
+ ['You have power over your mind, not outside events. Realise this, and you will find strength.','Marcus Aurelius, Meditations'],
+ ['To be ignorant of what happened before you were born is to remain always a child.','Cicero'],
+ ['What we hope ever to do with ease, we must first learn to do with diligence.','Samuel Johnson'],
+ ['Knowledge is power.','Francis Bacon'],
+ ['Great deeds are usually wrought at great risks.','Herodotus'],
+ ['It is not the man who has too little, but the man who craves more, that is poor.','Seneca'],
+ ['Confine yourself to the present.','Marcus Aurelius, Meditations'],
+ ['Well begun is half done.','Aristotle'],
+ ['Little by little, one travels far.','Spanish proverb'],
+ ['The secret of getting ahead is getting started.','Attributed to Mark Twain'],
+ ['Even a journey of great length is made of ordinary steps.','Japanese proverb'],
+ ['He who has a why to live can bear almost any how.','Friedrich Nietzsche'],
+ ['We suffer more often in imagination than in reality.','Seneca'],
+ ['Rome was not built in a day.','Medieval proverb'],
+];
+function quoteOfDay(){ const d=new Date(); const n=Math.floor((Date.UTC(d.getFullYear(),d.getMonth(),d.getDate()))/864e5); const [q,a]=QUOTES[n%QUOTES.length]; const el=document.getElementById('qotd'); el.innerHTML=`<span class="q">“${esc(q)}”</span><span class="a">${esc(a)}</span>`; }
 const today = () => new Date().toISOString().slice(0,10);
 function mastery(t){ const s=topicStats(t); if(s.a<8) return null; const p=s.c/s.a; return p>=.95?'gold':p>=.8?'silver':p>=.6?'bronze':null }
 const REDUCED = matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -516,7 +544,7 @@ const EVENTS=[
 
 // ---------- home ----------
 function home(){
-  state = {mode:null};
+  state = {mode:null}; quoteOfDay(); document.getElementById('qotd').hidden=false;
   const totalAuto = Q.filter(q=>AUTO.has(q.type)).length;
   const dailyDone = store.get('dailyDate','')===today(), dayStreak=store.get('dayStreak',0), best=store.get('best',0);
   h(`
