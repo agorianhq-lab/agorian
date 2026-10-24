@@ -90,13 +90,16 @@ header{position:relative;display:flex;flex-direction:column;align-items:center;j
 .mode{--m:var(--accent);border-top:3px solid var(--m);position:relative;overflow:hidden;transition:transform .18s,box-shadow .18s,border-color .18s,background .18s}
 .mode::after{content:"";position:absolute;inset:0;background:radial-gradient(420px 160px at 20% 0%,color-mix(in srgb,var(--m) 18%,transparent),transparent 70%);opacity:0;transition:opacity .25s;pointer-events:none}
 .mode:hover{transform:translateY(-4px);border-color:var(--m);background:var(--m);box-shadow:0 18px 36px -14px color-mix(in srgb,var(--m) 70%,transparent)}
-.mode:hover::after{opacity:0}
+.mode .pic{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transition:opacity .3s,transform .6s;transform:scale(1.06);pointer-events:none}
+.mode:hover .pic{opacity:1;transform:scale(1)}
+.mode:hover::after{opacity:1;background:linear-gradient(180deg,color-mix(in srgb,var(--m) 82%,transparent) 0%,color-mix(in srgb,var(--m) 62%,transparent) 55%,color-mix(in srgb,var(--m) 88%,transparent) 100%)}
+.mode .k,.mode .t,.mode .n{position:relative;z-index:1}
 .mode:hover .t,.mode:hover .n{color:#fff}
 .mode:hover .k{background:rgba(255,255,255,.18);box-shadow:inset 0 0 0 2px rgba(255,255,255,.5);color:#fff}
 .mode .k{width:58px;height:58px;border-radius:16px;background:linear-gradient(145deg,color-mix(in srgb,var(--m) 88%,#fff),color-mix(in srgb,var(--m) 100%,#000 12%));color:#fff;display:grid;place-items:center;box-shadow:0 6px 14px -6px color-mix(in srgb,var(--m) 70%,transparent),inset 0 1px 0 rgba(255,255,255,.35);transition:transform .18s}
 .mode .k svg{width:34px;height:34px;filter:drop-shadow(0 1px 1px rgba(0,0,0,.2))}
 .mode:hover .k{transform:scale(1.08) rotate(-4deg)}
-.mode .t{color:var(--m);position:relative} .mode .n{position:relative}
+.mode .t{color:var(--m)}
 .mode.facts{--m:var(--rose)} .mode.challenge{--m:var(--gold-ink)} .mode.challenge .t,.modeh[style*='--gold'] h2{color:var(--gold-ink)} .mode.timeline{--m:var(--teal)} .mode.terms{--m:var(--sage)} .mode.write{--m:var(--plum)}
 .modeh{display:flex;align-items:center;gap:10px}
 .modeh .k{width:38px;height:38px;border-radius:11px;display:grid;place-items:center;color:#fff;background:linear-gradient(145deg,color-mix(in srgb,var(--m) 88%,#fff),color-mix(in srgb,var(--m) 100%,#000 12%));box-shadow:0 4px 10px -5px color-mix(in srgb,var(--m) 70%,transparent)}
@@ -532,12 +535,12 @@ function home(){
       <button class="upanel jp" data-unit="Shogunate Japan"><span class="photo" style="background-image:url(${IMG['jp-wave']});background-position:right 55%;background-size:auto 100%"></span><span class="t">Shogunate Japan</span><span class="n">Samurai, the Tokugawa, sakoku and the Meiji Restoration.</span><span class="cta">Practise this unit \u2192</span><svg class="art"><use href="#art-jp"/></svg></button>
     </div>
     <div class="modes">
-      <button class="mode practice" data-go="setup"><span class="k"><svg><use href="#m-practice"/></svg></span><span class="t">Practice</span><span class="n">Pick topics, answer at your pace, read the explanation after every question.</span></button>
-      <button class="mode challenge" data-go="challenge"><span class="k"><svg><use href="#m-challenge"/></svg></span><span class="t">Challenge</span><span class="n">20 questions from both units against a 10 minute clock.${best?` Personal best ${best}/20.`:''}</span></button>
-      <button class="mode timeline" data-go="timeline"><span class="k"><svg><use href="#m-timeline"/></svg></span><span class="t">Timeline</span><span class="n">Six events, tap them in order. Dates appear as you place them.</span></button>
-      <button class="mode terms" data-go="terms"><span class="k"><svg><use href="#m-terms"/></svg></span><span class="t">Key terms</span><span class="n">Flashcards to flip and mark as known, plus a ten-definition sprint against the clock.</span></button>
-      <button class="mode write" data-go="write"><span class="k"><svg><use href="#m-write"/></svg></span><span class="t">Paragraph practice</span><span class="n">Exam prompts with a TEEAL scaffold, model answers and what success looks like.</span></button>
-      <button class="mode facts" data-go="facts"><span class="k"><svg><use href="#m-facts"/></svg></span><span class="t">Fun facts</span><span class="n">Did-you-know cards from both units. Read one, then practise the topic it came from.</span></button>
+      <button class="mode practice" data-go="setup"><span class="pic" style="background-image:url(${IMG['eu-heures']})"></span><span class="k"><svg><use href="#m-practice"/></svg></span><span class="t">Practice</span><span class="n">Pick topics, answer at your pace, read the explanation after every question.</span></button>
+      <button class="mode challenge" data-go="challenge"><span class="pic" style="background-image:url(${IMG['jp-samurai']})"></span><span class="k"><svg><use href="#m-challenge"/></svg></span><span class="t">Challenge</span><span class="n">20 questions from both units against a 10 minute clock.${best?` Personal best ${best}/20.`:''}</span></button>
+      <button class="mode timeline" data-go="timeline"><span class="pic" style="background-image:url(${IMG['jp-tokaido']})"></span><span class="k"><svg><use href="#m-timeline"/></svg></span><span class="t">Timeline</span><span class="n">Six events, tap them in order. Dates appear as you place them.</span></button>
+      <button class="mode terms" data-go="terms"><span class="pic" style="background-image:url(${IMG['eu-crusade']})"></span><span class="k"><svg><use href="#m-terms"/></svg></span><span class="t">Key terms</span><span class="n">Flashcards to flip and mark as known, plus a ten-definition sprint against the clock.</span></button>
+      <button class="mode write" data-go="write"><span class="pic" style="background-image:url(${IMG['eu-bayeux']})"></span><span class="k"><svg><use href="#m-write"/></svg></span><span class="t">Paragraph practice</span><span class="n">Exam prompts with a TEEAL scaffold, model answers and what success looks like.</span></button>
+      <button class="mode facts" data-go="facts"><span class="pic" style="background-image:url(${IMG['jp-fuji']})"></span><span class="k"><svg><use href="#m-facts"/></svg></span><span class="t">Fun facts</span><span class="n">Did-you-know cards from both units. Read one, then practise the topic it came from.</span></button>
     </div>
   </section>
   <section class="section">
