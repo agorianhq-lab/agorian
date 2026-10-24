@@ -612,7 +612,7 @@ function home(){
     <div class="topics">${UNITS.map(u=>`
       <div class="unit ${unitCls(u)}"><p class="eyebrow"><svg><use href="#ic-${unitCls(u)}"/></svg>${esc(u)}</p><div class="tlist" style="display:grid;gap:8px">${topicsIn(u).map(t=>{
         const s=topicStats(t), n=Q.filter(q=>q.topic===t&&AUTO.has(q.type)).length, pct=s.a?Math.round(100*s.c/s.a):0;
-        const m=mastery(t); return `<button class="topic ${unitCls(u)}" data-topic="${esc(t)}" style="--p:${s.a?pct:0}%"><span class="name" style="display:flex;align-items:center;gap:8px"><span class="badge ${m||''}" title="${m?m+' mastery':'Answer 8 or more to earn a badge'}"></span>${esc(t)}</span><span class="pct ${s.a?'':'none'}">${s.a?pct+'%':'Not yet'}</span></button>`}).join('')}</div></div>`).join('')}
+        const m=mastery(t); return `<button class="topic ${unitCls(u)}" data-topic="${esc(t)}" style="--p:${s.a?pct:0}%"><span class="name">${esc(t)}${m?` <span class="badge ${m}" title="${m} mastery" style="margin-left:6px;vertical-align:middle"></span>`:''}</span><span class="pct ${s.a?'':'none'}">${s.a?pct+'%':'Not yet'}</span></button>`}).join('')}</div></div>`).join('')}
     </div>
   </section>`);
   app.querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>({setup, challenge, terms, write, daily, timeline, facts})[b.dataset.go]());
