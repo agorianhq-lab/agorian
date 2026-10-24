@@ -349,8 +349,27 @@ input.text.right{border-color:var(--ok);background:var(--ok-bg)} input.text.wron
 .fact .lamp{width:28px;height:28px;border-radius:50%;background:var(--gold);display:grid;place-items:center;color:#1E2436;font-family:var(--display);font-weight:700;font-size:16px}
 .fact b{display:block;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:2px}
 .fact.home{margin-top:18px}
+.factgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:14px}
+.ftile{--u:var(--accent);position:relative;min-height:250px;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);border-top:4px solid var(--u);background:var(--surface);box-shadow:var(--shadow);cursor:default;transition:transform .18s,box-shadow .18s;outline:none}
+.ftile .bg{position:absolute;inset:0;background-size:cover;background-position:center 30%;opacity:.55;transition:opacity .3s,transform .6s;transform:scale(1.02)}
+.ftile .front{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:18px 20px;background:linear-gradient(180deg,transparent 30%,color-mix(in srgb,var(--navy) 82%,transparent));color:#fff;transition:opacity .25s}
+.ftile .front .eyebrow{color:#fff;opacity:.85;display:flex;gap:8px;align-items:center;font-size:12px}
+.ftile .front .tt{font-family:var(--display);font-size:24px;font-weight:700;line-height:1.15;margin-top:4px}
+.ftile .front .peek{font-size:13px;opacity:.8;margin-top:6px}
+.ftile .back{position:absolute;inset:0;padding:20px 22px;background:var(--u);color:#fff;display:flex;flex-direction:column;gap:10px;opacity:0;transform:translateY(12px);transition:opacity .25s,transform .25s;overflow:auto}
+.ftile .back .eyebrow{color:#fff;opacity:.9;font-size:12px;padding-right:64px}
+.ftile .back p{font-size:15.5px;line-height:1.5;margin:0}
+.ftile .back .row{margin-top:auto}
+.ftile .back .btn{background:#fff;color:var(--u);border-color:#fff;font-size:14px;padding:7px 12px}
+.ftile:hover,.ftile:focus-within,.ftile.open{transform:translateY(-4px);box-shadow:0 18px 36px -14px color-mix(in srgb,var(--u) 70%,transparent)}
+.ftile:hover .back,.ftile:focus-within .back,.ftile.open .back{opacity:1;transform:none}
+.ftile:hover .front,.ftile:focus-within .front,.ftile.open .front{opacity:0}
+.ftile.read::after{content:"Read";position:absolute;top:10px;right:12px;font-size:11px;letter-spacing:.06em;text-transform:uppercase;background:#fff;color:var(--u);border-radius:999px;padding:2px 8px;font-weight:700;z-index:2}
+.ftile:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+@media (max-width:900px){.factgrid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:600px){.factgrid{grid-template-columns:1fr}.ftile{min-height:220px}}
 /* welcome card */
-.welcome{background:var(--surface);border:1px solid var(--line);border-left:6px solid var(--accent);border-radius:var(--radius);padding:22px 24px;display:grid;gap:14px;box-shadow:var(--shadow);margin-top:6px}
+.welcome{background:var(--surface);border:2px solid var(--navy);outline:4px solid color-mix(in srgb,var(--navy) 14%,transparent);outline-offset:0;border-radius:var(--radius);padding:22px 24px;display:grid;gap:14px;box-shadow:var(--shadow);margin-top:6px}
 .welcome h2{font-size:26px;color:var(--navy)}
 .welcome ol{margin:0;padding-left:22px;display:grid;gap:6px;font-size:17px}
 .welcome .namerow{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
@@ -427,6 +446,15 @@ canvas#fx{position:fixed;inset:0;pointer-events:none;z-index:50}
 footer{margin-top:40px;font-size:13px;color:var(--muted)}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}.mode:hover,.upanel:hover,.topic:hover{transform:none}}
 @media (max-width:480px){.score{grid-template-columns:1fr}}
+/* Outlines: every tile gets a firm 2px navy frame (user request). Accent edges stay on top. */
+.mode,.topic,.card,.check,.hubcard,.upanel,.ftile,.flash,.herogrid .pic,.welcome,.tl .ev{border-width:2px;border-style:solid;border-color:var(--navy)}
+.mode{border-top:3px solid var(--m)}
+.ftile{border-top:4px solid var(--u)}
+.check{border-left:4px solid var(--u)}
+.hubcard{border-left:5px solid var(--plum)}
+.mode:hover{border-color:var(--m)}
+.topic:hover{border-color:var(--u,var(--navy))}
+
 </style>
 
 <div class="wrap" id="top">
@@ -719,6 +747,7 @@ const FACTS=[
  ['Meiji Restoration','Meiji means enlightened rule. The emperor who gave the era its name, Mutsuhito, was 15 years old when power was restored to him in 1868.'],
  ['Comparing the two societies','Both knights and samurai served lords in return for land, but samurai were also expected to be literate officials. By 1700 most samurai had never fought a battle.'],
 ];
+const FACT_TITLES=['The Domesday Book','The weight of armour','A castle in weeks','The end of trial by ordeal','The Church as landlord','Words from Arabic','Where quarantine comes from','Wages after the plague','Not a tapestry at all','To serve','The divine wind','Bushido\u2019s late birth','Processions of thousands','Dejima, the fan-shaped island','A million people in Edo','The 47 ronin','Perry\u2019s toy railway','Enlightened rule','Knights and samurai'];
 function factFor(topics){ const pool=FACTS.filter(f=>!topics||topics.includes(f[0])); const f=(pool.length?pool:FACTS)[Math.random()*(pool.length||FACTS.length)|0]; return `<div class="fact"><span class="lamp">?</span><div><b>Did you know</b>${esc(f[1])}</div></div>` }
 const MODEH = (name,title) => `<div class="modeh" style="--m:var(--${({practice:'accent',challenge:'gold',timeline:'teal',terms:'sage',write:'plum',facts:'rose'})[name]})"><span class="k"><svg><use href="#m-${name}"/></svg></span><h2>${title}</h2></div>`;
 const unitCls = u => u==='Medieval Europe'?'eu':u==='Shogunate Japan'?'jp':'sk';
@@ -1107,22 +1136,29 @@ async function teacher(){
 // ---------- fun facts ----------
 function facts(){
   const unitOf = t => (Q.find(q=>q.topic===t)||{}).unit || 'Skills and concepts';
-  let filter = 'all'; let order = shuffle(FACTS.map((_,i)=>i)); let i=0; let seen = new Set(store.get('factsSeen',[]));
+  let filter = 'all'; let seen = new Set(store.get('factsSeen',[]));
   const draw=()=>{
-    const pool = order.filter(k=>filter==='all'||unitOf(FACTS[k][0])===filter); if(!pool.length){ filter='all'; return draw() }
-    if(i>=pool.length) i=0; const k=pool[i], [topic,text]=FACTS[k]; const u=unitOf(topic); seen.add(k); store.set('factsSeen',[...seen]);
-    h(`<section class="section"><div class="row" style="justify-content:space-between">${MODEH('facts','Fun facts')}<span class="pill">Read <b>${seen.size}</b> / ${FACTS.length}</span></div>
+    const pool = FACTS.map((_,k)=>k).filter(k=>filter==='all'||unitOf(FACTS[k][0])===filter);
+    h(`<section class="section"><div class="row" style="justify-content:space-between">${MODEH('facts','Fun facts')}<span class="pill">Read <b id="seenN">${seen.size}</b> / ${FACTS.length}</span></div>
+    <p class="hint" style="margin:6px 0 0">Hover over a tile to read the fact. Tab and Enter work too.</p>
     <div class="row"><button class="btn ${filter==='all'?'primary':''}" data-f="all">Both units</button><button class="btn ${filter==='Medieval Europe'?'primary':''}" data-f="Medieval Europe">Medieval Europe</button><button class="btn ${filter==='Shogunate Japan'?'primary':''}" data-f="Shogunate Japan">Shogunate Japan</button></div>
-    <div class="card ${unitCls(u)}">${art(TOPIC_IMG[topic])}
-      <span class="eyebrow" style="color:var(--${unitCls(u)});display:flex;gap:8px;align-items:center"><svg style="width:16px;height:16px"><use href="#ic-${unitCls(u)}"/></svg>${esc(u)} · ${esc(topic)}</span>
-      <p class="qtext" style="font-weight:400;line-height:1.5">${esc(text)}</p>
-      <div class="actions"><div class="row"><button class="btn" id="prev" style="display:inline-flex;align-items:center;gap:6px"><svg style="width:18px;height:18px"><use href="#ar-l"/></svg>Previous</button><button class="btn primary" id="next" style="display:inline-flex;align-items:center;gap:6px">Another fact<svg style="width:18px;height:18px"><use href="#ar-r"/></svg></button></div><div class="row">${Q.some(q=>q.topic===topic&&AUTO.has(q.type))?`<button class="btn accent" id="prac">Practise ${esc(topic)}</button>`:''}<button class="btn quiet" id="home">Home</button></div></div>
-    </div><p class="hint">${i+1} of ${pool.length}. Arrow keys move.</p></section>`);
-    app.querySelectorAll('[data-f]').forEach(b=>b.onclick=()=>{filter=b.dataset.f;i=0;draw()});
-    app.querySelector('#next').onclick=()=>{i++;draw()}; app.querySelector('#prev').onclick=()=>{i=(i-1+pool.length)%pool.length;draw()};
-    const pr=app.querySelector('#prac'); if(pr) pr.onclick=()=>startQuiz({mode:'practice',topics:[topic],timed:false,count:10});
+    <div class="factgrid">${pool.map(k=>{ const [topic,text]=FACTS[k]; const u=unitOf(topic); const c=unitCls(u); const img=TOPIC_IMG[topic]; const canP=Q.some(q=>q.topic===topic&&AUTO.has(q.type));
+      return `<div class="ftile ${seen.has(k)?'read':''}" tabindex="0" data-k="${k}" data-topic="${esc(topic)}" style="--u:var(--${c})">
+        ${img&&IMG[img]?`<div class="bg" style="background-image:url(${IMG[img]});background-position:${FOCUS[img]||'center'}"></div>`:''}
+        <div class="front"><span class="eyebrow"><svg style="width:14px;height:14px"><use href="#ic-${c}"/></svg>${esc(topic)}</span><div class="tt">${esc(FACT_TITLES[k]||'Did you know?')}</div><div class="peek">Hover to reveal</div></div>
+        <div class="back"><span class="eyebrow">${esc(u)} · ${esc(topic)}</span><p>${esc(text)}</p>${canP?`<div class="row"><button class="btn prac" data-t="${esc(topic)}">Practise ${esc(topic)}</button></div>`:''}</div>
+      </div>`}).join('')}</div>
+    <div class="actions" style="margin-top:18px"><span class="hint">${pool.length} facts${filter==='all'?' across both units':''}.</span><button class="btn quiet" id="home">Home</button></div></section>`);
+    app.querySelectorAll('[data-f]').forEach(b=>b.onclick=()=>{filter=b.dataset.f;draw()});
+    const mark=t=>{ const k=+t.dataset.k; if(!seen.has(k)){ seen.add(k); store.set('factsSeen',[...seen]); t.classList.add('read'); const n=app.querySelector('#seenN'); if(n) n.textContent=seen.size } };
+    app.querySelectorAll('.ftile').forEach(t=>{
+      t.addEventListener('mouseenter',()=>mark(t)); t.addEventListener('focus',()=>mark(t));
+      t.onclick=e=>{ if(e.target.closest('.prac')) return; t.classList.toggle('open'); mark(t) };
+      t.onkeydown=e=>{ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); t.classList.toggle('open'); mark(t) } };
+    });
+    app.querySelectorAll('.prac').forEach(b=>b.onclick=()=>startQuiz({mode:'practice',topics:[b.dataset.t],timed:false,count:10}));
     app.querySelector('#home').onclick=home;
-    document.onkeydown=e=>{ if(!app.querySelector('#next')){document.onkeydown=null;return} if(e.key==='ArrowRight') app.querySelector('#next').click(); if(e.key==='ArrowLeft') app.querySelector('#prev').click() };
+    document.onkeydown=null;
   };
   draw();
 }
