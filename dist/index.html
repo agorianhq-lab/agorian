@@ -469,7 +469,7 @@ const QUOTES=[
  ['We suffer more often in imagination than in reality.','Seneca'],
  ['Rome was not built in a day.','Medieval proverb'],
 ];
-function quoteOfDay(){ const d=new Date(); const n=Math.floor((Date.UTC(d.getFullYear(),d.getMonth(),d.getDate()))/864e5); const [q,a]=QUOTES[n%QUOTES.length]; const el=document.getElementById('qotd'); el.innerHTML=`<span class="q">“${esc(q)}”</span><span class="a">${esc(a)}</span>`; }
+function quoteOfDay(){ const n=Math.floor(Date.now()/36e5); const [q,a]=QUOTES[n%QUOTES.length]; const el=document.getElementById('qotd'); el.innerHTML=`<span class="eyebrow" style="font-size:11px;color:var(--gold-ink)">Quote of the hour</span><span class="q">“${esc(q)}”</span><span class="a">${esc(a)}</span>`; }
 const today = () => new Date().toISOString().slice(0,10);
 function mastery(t){ const s=topicStats(t); if(s.a<8) return null; const p=s.c/s.a; return p>=.95?'gold':p>=.8?'silver':p>=.6?'bronze':null }
 const REDUCED = matchMedia('(prefers-reduced-motion: reduce)').matches;
