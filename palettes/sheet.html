@@ -1,0 +1,85 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Atkinson+Hyperlegible:wght@400;700&display=swap">
+<style>
+body{margin:0;background:#fff;font-family:"Atkinson Hyperlegible",system-ui,sans-serif;color:#222;padding:28px}
+h1{font-family:Fraunces,serif;font-size:24px;margin:0 0 4px}
+p.sub{margin:0 0 20px;color:#666;font-size:14px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.card{border:1px solid #ddd;border-radius:14px;overflow:hidden}
+.card h2{font-family:Fraunces,serif;font-size:18px;margin:0;padding:12px 16px 2px}
+.card p{margin:0;padding:0 16px 10px;font-size:13px;color:#555;line-height:1.45}
+.sw{display:flex;gap:0;height:28px}
+.sw span{flex:1;position:relative}
+.sw span::after{content:attr(data-n);position:absolute;left:6px;bottom:4px;font-size:10px;color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.6)}
+/* mini mock */
+.mock{padding:16px;background:var(--bg);display:grid;gap:10px}
+.mock .brand{font-family:Fraunces,serif;font-weight:700;font-size:30px;color:var(--navy);text-align:center;line-height:1}
+.mock .brand sup{color:var(--accent);font-size:.5em;margin-left:-.06em}
+.mock .h{font-family:Fraunces,serif;font-weight:700;font-size:22px;color:var(--navy);text-align:center}
+.mock .h em{color:var(--accent)}
+.mock .daily{background:var(--navy);color:#fff;border-radius:10px;padding:10px 14px;display:flex;justify-content:space-between;align-items:center;font-size:13px}
+.mock .daily b{font-family:Fraunces,serif;font-size:16px}
+.mock .daily i{background:var(--gold);color:#1a1a1a;font-style:normal;padding:5px 10px;border-radius:7px;font-weight:700;font-size:12px}
+.mock .tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.mock .t{background:var(--surface);border:1px solid var(--line);border-top:3px solid var(--m);border-radius:9px;padding:9px;display:grid;gap:5px}
+.mock .t .k{width:26px;height:26px;border-radius:7px;background:var(--m)}
+.mock .t b{font-family:Fraunces,serif;color:var(--m);font-size:13px}
+.mock .topics{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.mock .tp{border:1px solid var(--line);border-left:4px solid var(--u);border-radius:7px;padding:7px 10px;font-size:12px;font-weight:700;color:var(--u);background:linear-gradient(90deg,color-mix(in srgb,var(--u) 28%,var(--surface)) var(--p),var(--surface) var(--p));display:flex;justify-content:space-between}
+.mock .ok{background:var(--okbg);border-left:4px solid var(--ok);border-radius:7px;padding:7px 10px;font-size:12px}
+</style></head><body>
+<h1>Agorian palette options</h1>
+<p class="sub">Each shown on the same mock of the home screen. The first is the current palette, for comparison. Mode colours are set per palette, unit colours (Europe, Japan, Skills) too.</p>
+<div class="grid">
+
+<div class="card" style="--bg:#F1EEE7;--surface:#FBFAF7;--line:#DAD5CB;--navy:#243A6B;--accent:#C7431F;--gold:#CF9A3A;--ok:#3E7F5F;--okbg:#E3F1E8">
+<h2>A · Current. Deck navy, vermilion, gold on stone</h2>
+<p>Taken from your revision deck. Warm, familiar, strongly "school History". The red and gold lean a little toward the common cream-and-terracotta look.</p>
+<div class="sw"><span style="background:#243A6B" data-n="navy"></span><span style="background:#C7431F" data-n="vermilion"></span><span style="background:#CF9A3A" data-n="gold"></span><span style="background:#4F7F6B" data-n="sage"></span><span style="background:#7A2E2B" data-n="Europe"></span><span style="background:#1F3A5F" data-n="Japan"></span><span style="background:#F1EEE7" data-n=""></span></div>
+<div class="mock"><div class="brand">A<sup>+</sup>gorian</div><div class="h"><em>Challenge</em> what you know.</div>
+<div class="daily"><span><b>Today's ten</b></span><i>Start</i></div>
+<div class="tiles"><div class="t" style="--m:#C7431F"><span class="k"></span><b>Practice</b></div><div class="t" style="--m:#9A6616"><span class="k"></span><b>Challenge</b></div><div class="t" style="--m:#2A7A86"><span class="k"></span><b>Timeline</b></div><div class="t" style="--m:#4F7F6B"><span class="k"></span><b>Key terms</b></div><div class="t" style="--m:#6B3F7A"><span class="k"></span><b>Paragraphs</b></div><div class="t" style="--m:#B8356A"><span class="k"></span><b>Fun facts</b></div></div>
+<div class="topics"><div class="tp" style="--u:#7A2E2B;--p:73%"><span>The Black Death</span><span>73%</span></div><div class="tp" style="--u:#1F3A5F;--p:40%"><span>Tokugawa Shogunate</span><span>40%</span></div></div>
+<div class="ok"><b>Correct.</b> Land for service is the core of feudalism.</div></div></div>
+
+<div class="card" style="--bg:#F4F1EA;--surface:#FFFFFF;--line:#DCD6CA;--navy:#1E2A4A;--accent:#D14E2E;--gold:#D9A441;--ok:#2F7A5B;--okbg:#DFF0E6">
+<h2>B · Indigo and persimmon. Edo dye colours</h2>
+<p>Built from ai indigo and kaki persimmon, the two dyes of Edo-period cloth, with a cooler near-white ground and a sharper red. Crisper and more modern than A while keeping the Japan unit at its heart. Europe shifts to a wine red, Japan to a deep indigo, so the two units sit further apart.</p>
+<div class="sw"><span style="background:#1E2A4A" data-n="indigo"></span><span style="background:#D14E2E" data-n="persimmon"></span><span style="background:#D9A441" data-n="gold"></span><span style="background:#2F7A5B" data-n="green"></span><span style="background:#8C2F39" data-n="Europe"></span><span style="background:#2B4C7E" data-n="Japan"></span><span style="background:#F4F1EA" data-n=""></span></div>
+<div class="mock"><div class="brand">A<sup>+</sup>gorian</div><div class="h"><em>Challenge</em> what you know.</div>
+<div class="daily"><span><b>Today's ten</b></span><i>Start</i></div>
+<div class="tiles"><div class="t" style="--m:#D14E2E"><span class="k"></span><b>Practice</b></div><div class="t" style="--m:#A86B12"><span class="k"></span><b>Challenge</b></div><div class="t" style="--m:#1F7A8C"><span class="k"></span><b>Timeline</b></div><div class="t" style="--m:#2F7A5B"><span class="k"></span><b>Key terms</b></div><div class="t" style="--m:#5B3F8C"><span class="k"></span><b>Paragraphs</b></div><div class="t" style="--m:#C23A6E"><span class="k"></span><b>Fun facts</b></div></div>
+<div class="topics"><div class="tp" style="--u:#8C2F39;--p:73%"><span>The Black Death</span><span>73%</span></div><div class="tp" style="--u:#2B4C7E;--p:40%"><span>Tokugawa Shogunate</span><span>40%</span></div></div>
+<div class="ok"><b>Correct.</b> Land for service is the core of feudalism.</div></div></div>
+
+<div class="card" style="--bg:#EEF0F4;--surface:#FFFFFF;--line:#D3D8E2;--navy:#1B3A6B;--accent:#C8102E;--gold:#E0B23A;--ok:#2E7D5B;--okbg:#DDF0E6">
+<h2>C · Lapis and vermilion. Illuminated manuscript</h2>
+<p>From the pigments of medieval manuscripts, ultramarine from lapis lazuli, vermilion, and gold leaf, on a cool pale ground like vellum under glass. The most "Medieval Europe" of the set and the highest contrast, which reads well on school laptops. The red is a true scarlet rather than an orange-red.</p>
+<div class="sw"><span style="background:#1B3A6B" data-n="lapis"></span><span style="background:#C8102E" data-n="vermilion"></span><span style="background:#E0B23A" data-n="gold leaf"></span><span style="background:#2E7D5B" data-n="verdigris"></span><span style="background:#7B1E2B" data-n="Europe"></span><span style="background:#23456F" data-n="Japan"></span><span style="background:#EEF0F4" data-n=""></span></div>
+<div class="mock"><div class="brand">A<sup>+</sup>gorian</div><div class="h"><em>Challenge</em> what you know.</div>
+<div class="daily"><span><b>Today's ten</b></span><i>Start</i></div>
+<div class="tiles"><div class="t" style="--m:#C8102E"><span class="k"></span><b>Practice</b></div><div class="t" style="--m:#A6781A"><span class="k"></span><b>Challenge</b></div><div class="t" style="--m:#1E6F8C"><span class="k"></span><b>Timeline</b></div><div class="t" style="--m:#2E7D5B"><span class="k"></span><b>Key terms</b></div><div class="t" style="--m:#5E3A8C"><span class="k"></span><b>Paragraphs</b></div><div class="t" style="--m:#B5306A"><span class="k"></span><b>Fun facts</b></div></div>
+<div class="topics"><div class="tp" style="--u:#7B1E2B;--p:73%"><span>The Black Death</span><span>73%</span></div><div class="tp" style="--u:#23456F;--p:40%"><span>Tokugawa Shogunate</span><span>40%</span></div></div>
+<div class="ok"><b>Correct.</b> Land for service is the core of feudalism.</div></div></div>
+
+<div class="card" style="--bg:#F6F2EA;--surface:#FFFDF8;--line:#E0D8CA;--navy:#2E2A26;--accent:#B5451B;--gold:#C9A227;--ok:#3F7A4F;--okbg:#E4F0E4">
+<h2>D · Terracotta and black. Athenian pottery</h2>
+<p>From black-figure and red-figure vases, the pottery of the agora itself. Near-black ink instead of navy, a burnt terracotta accent, a clay-coloured ground. Ties the brand to its name most directly and looks the least like other school sites. Riskier, because the near-black is heavier and the warmth can tip into brown if overused.</p>
+<div class="sw"><span style="background:#2E2A26" data-n="black glaze"></span><span style="background:#B5451B" data-n="terracotta"></span><span style="background:#C9A227" data-n="ochre"></span><span style="background:#3F7A4F" data-n="olive"></span><span style="background:#8A3A2E" data-n="Europe"></span><span style="background:#34506B" data-n="Japan"></span><span style="background:#F6F2EA" data-n=""></span></div>
+<div class="mock"><div class="brand">A<sup>+</sup>gorian</div><div class="h"><em>Challenge</em> what you know.</div>
+<div class="daily"><span><b>Today's ten</b></span><i>Start</i></div>
+<div class="tiles"><div class="t" style="--m:#B5451B"><span class="k"></span><b>Practice</b></div><div class="t" style="--m:#8F6F12"><span class="k"></span><b>Challenge</b></div><div class="t" style="--m:#2A6F7A"><span class="k"></span><b>Timeline</b></div><div class="t" style="--m:#3F7A4F"><span class="k"></span><b>Key terms</b></div><div class="t" style="--m:#6A3D6E"><span class="k"></span><b>Paragraphs</b></div><div class="t" style="--m:#A6395F"><span class="k"></span><b>Fun facts</b></div></div>
+<div class="topics"><div class="tp" style="--u:#8A3A2E;--p:73%"><span>The Black Death</span><span>73%</span></div><div class="tp" style="--u:#34506B;--p:40%"><span>Tokugawa Shogunate</span><span>40%</span></div></div>
+<div class="ok"><b>Correct.</b> Land for service is the core of feudalism.</div></div></div>
+
+<div class="card" style="--bg:#EDF2F0;--surface:#FFFFFF;--line:#D2DCD7;--navy:#17324D;--accent:#0F7A7B;--gold:#E9AB4D;--ok:#2E7D5B;--okbg:#DCEFE6">
+<h2>E · Midnight and teal. The roadmap's proposal</h2>
+<p>The palette ChatGPT suggested in the roadmap, included so you can judge it beside the others. Cool, clean and contemporary, closer to a software product than a History classroom. It would need a different accent for "wrong" since teal reads as success, and the Japan and Europe colours get harder to tell apart on a cool ground.</p>
+<div class="sw"><span style="background:#17324D" data-n="midnight"></span><span style="background:#0F7A7B" data-n="aegean teal"></span><span style="background:#E9AB4D" data-n="muted gold"></span><span style="background:#2E7D5B" data-n="green"></span><span style="background:#7A2E2B" data-n="Europe"></span><span style="background:#1F3A5F" data-n="Japan"></span><span style="background:#EDF2F0" data-n=""></span></div>
+<div class="mock"><div class="brand">A<sup>+</sup>gorian</div><div class="h"><em>Challenge</em> what you know.</div>
+<div class="daily"><span><b>Today's ten</b></span><i>Start</i></div>
+<div class="tiles"><div class="t" style="--m:#0F7A7B"><span class="k"></span><b>Practice</b></div><div class="t" style="--m:#A87A1E"><span class="k"></span><b>Challenge</b></div><div class="t" style="--m:#2C5F8A"><span class="k"></span><b>Timeline</b></div><div class="t" style="--m:#2E7D5B"><span class="k"></span><b>Key terms</b></div><div class="t" style="--m:#5B3F8C"><span class="k"></span><b>Paragraphs</b></div><div class="t" style="--m:#B8356A"><span class="k"></span><b>Fun facts</b></div></div>
+<div class="topics"><div class="tp" style="--u:#7A2E2B;--p:73%"><span>The Black Death</span><span>73%</span></div><div class="tp" style="--u:#1F3A5F;--p:40%"><span>Tokugawa Shogunate</span><span>40%</span></div></div>
+<div class="ok"><b>Correct.</b> Land for service is the core of feudalism.</div></div></div>
+
+</div></body></html>

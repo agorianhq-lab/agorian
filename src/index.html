@@ -74,7 +74,10 @@ header>*{max-width:100%}
 .brand{display:flex;flex-direction:column;align-items:center;gap:6px;background:none;border:0;padding:0;cursor:pointer}
 .brand .top{display:flex;align-items:center;gap:14px}
 .brand .word{font-family:var(--display);font-weight:700;font-size:clamp(44px,5vw,64px);letter-spacing:-.01em;color:var(--navy);line-height:1}
-.brand .word span{color:var(--accent)}
+.brand .word .a{position:relative;display:inline-block}
+.brand .word sup{position:absolute;left:100%;top:-.04em;font-size:.5em;line-height:1;color:var(--accent);font-weight:700;margin-left:-.1em}
+.brand .word{letter-spacing:-.01em}
+.brand .word .a{margin-right:.12em}
 .brand .desc{font-family:var(--display);font-size:clamp(17px,1.6vw,22px);color:var(--muted);letter-spacing:.02em}
 .hdr-right{display:flex;gap:8px;align-items:center}
 .pill{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);border-radius:999px;padding:4px 10px;font-size:13px;background:var(--surface);color:var(--muted)}
@@ -382,7 +385,7 @@ footer{margin-top:40px;font-size:13px;color:var(--muted)}
 
 <div class="wrap" id="top">
 <header>
-  <button class="brand" id="homeBtn" aria-label="Agorian home"><span class="top"><svg class="mark" viewBox="0 0 40 40" width="52" height="52" aria-hidden="true"><path d="M4 12 V4 H12 M28 4 H36 V12 M36 28 V36 H28 M12 36 H4 V28" fill="none" stroke="var(--navy)" stroke-width="3.5" stroke-linecap="square"/><path d="M17 10 L26.5 31 H22.3 L20.3 26.4 H13.7 L11.7 31 H7.5 Z M15 22.2 H19 L17 17.3 Z" fill="var(--accent)" fill-rule="evenodd"/><path d="M30.5 12 V20 M26.5 16 H34.5" stroke="var(--accent)" stroke-width="2.6" stroke-linecap="round"/></svg><span class="word">Agor<span>ian</span></span></span><span class="desc">Year 8 History Revision</span></button>
+  <button class="brand" id="homeBtn" aria-label="Agorian home"><span class="top"><span class="word"><span class="a">A<sup>+</sup></span>gorian</span></span><span class="desc">Year 8 History Revision</span></button>
   <aside class="qotd" id="qotd" hidden></aside>
   <button class="backbtn" id="backBtn" hidden aria-label="Back"><svg><use href="#ar-l"/></svg><span>Back</span></button>
   <div class="hdr-right"><span class="pill" id="streak" hidden>Streak <b id="streakN">0</b></span></div>
