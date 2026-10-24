@@ -127,12 +127,16 @@ header{position:relative;display:flex;flex-direction:column;align-items:center;j
 .unit{display:grid;gap:6px}
 .unit .eyebrow{margin-top:6px}
 .topic{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;text-align:left;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:13px 16px;cursor:pointer}
-.topic{--u:var(--sk);--us:var(--sk-soft);border-left:4px solid var(--u);background:linear-gradient(90deg,var(--us),var(--surface) 55%)}
+.topic{--u:var(--sk);--us:var(--sk-soft);--p:0%;border-left:4px solid var(--u);background:linear-gradient(90deg,color-mix(in srgb,var(--u) 28%,var(--surface)) var(--p),var(--surface) var(--p));position:relative;overflow:hidden}
+.topic::before{content:"";position:absolute;left:0;top:0;bottom:0;width:var(--p);background:linear-gradient(90deg,color-mix(in srgb,var(--u) 22%,transparent),color-mix(in srgb,var(--u) 38%,transparent));transition:width .6s ease}
+.topic>*{position:relative}
+.topic .pct{font-family:var(--display);font-weight:700;font-size:19px;color:var(--u);font-variant-numeric:tabular-nums;min-width:3.2ch;text-align:right}
+.topic .pct.none{color:var(--muted);font-family:var(--body);font-weight:400;font-size:15px}
 .topic.eu{--u:var(--eu);--us:var(--eu-soft)} .topic.jp{--u:var(--jp);--us:var(--jp-soft)}
 .topic{transition:transform .15s,box-shadow .15s,border-color .15s}
 .topic:hover{border-color:var(--u);background:var(--u);transform:translateX(3px);box-shadow:0 10px 22px -12px color-mix(in srgb,var(--u) 70%,transparent)}
 .topic:hover .name,.topic:hover .meta{color:#fff}
-.topic:hover .bar{background:rgba(255,255,255,.3)} .topic:hover .bar i{background:#fff}
+.topic:hover .pct{color:#fff} .topic:hover::before{background:rgba(255,255,255,.18)}
 .topic:hover .badge{box-shadow:0 0 0 2px rgba(255,255,255,.7)}
 .topic .name,.topic .meta,.topic .bar,.topic .bar i{transition:color .15s,background .15s}
 .topic .name{color:var(--u)}
@@ -372,7 +376,7 @@ table.tt{width:100%;border-collapse:collapse;font-size:14px}
 canvas#fx{position:fixed;inset:0;pointer-events:none;z-index:50}
 footer{margin-top:40px;font-size:13px;color:var(--muted)}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}.mode:hover,.upanel:hover,.topic:hover{transform:none}}
-@media (max-width:480px){.score{grid-template-columns:1fr}.topic .meta .bar{display:none}}
+@media (max-width:480px){.score{grid-template-columns:1fr}}
 </style>
 
 <div class="wrap" id="top">
@@ -608,7 +612,7 @@ function home(){
     <div class="topics">${UNITS.map(u=>`
       <div class="unit ${unitCls(u)}"><p class="eyebrow"><svg><use href="#ic-${unitCls(u)}"/></svg>${esc(u)}</p><div class="tlist" style="display:grid;gap:8px">${topicsIn(u).map(t=>{
         const s=topicStats(t), n=Q.filter(q=>q.topic===t&&AUTO.has(q.type)).length, pct=s.a?Math.round(100*s.c/s.a):0;
-        const m=mastery(t); return `<button class="topic ${unitCls(u)}" data-topic="${esc(t)}"><span class="name" style="display:flex;align-items:center;gap:8px"><span class="badge ${m||''}" title="${m?m+' mastery':'Answer 8 or more to earn a badge'}"></span>${esc(t)}</span><span class="meta"><span>${n} q</span><span class="bar"><i style="width:${pct}%"></i></span><span>${s.a?pct+'%':'–'}</span></span></button>`}).join('')}</div></div>`).join('')}
+        const m=mastery(t); return `<button class="topic ${unitCls(u)}" data-topic="${esc(t)}" style="--p:${s.a?pct:0}%"><span class="name" style="display:flex;align-items:center;gap:8px"><span class="badge ${m||''}" title="${m?m+' mastery':'Answer 8 or more to earn a badge'}"></span>${esc(t)}</span><span class="pct ${s.a?'':'none'}">${s.a?pct+'%':'Not yet'}</span></button>`}).join('')}</div></div>`).join('')}
     </div>
   </section>`);
   app.querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>({setup, challenge, terms, write, daily, timeline, facts})[b.dataset.go]());
