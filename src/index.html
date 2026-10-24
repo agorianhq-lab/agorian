@@ -7,7 +7,7 @@
 :root{
   --bg:#F1EEE7; --surface:#FBFAF7; --ink:#1E2436; --muted:#636A7A; --line:#DAD5CB;
   --navy:#243A6B; --navy-ink:#FFFFFF; --accent:#C7431F; --gold:#CF9A3A; --sage:#4F7F6B; --blush:#F3E7DC;
-  --eu:#7A2E2B; --eu-soft:#F0E3DE; --jp:#1F3A5F; --jp-soft:#E2E8F1; --sk:#4F7F6B; --sk-soft:#E4EEE8; --teal:#2A7A86; --plum:#6B3F7A; --gold-ink:#9A6616;
+  --eu:#7A2E2B; --eu-soft:#F0E3DE; --jp:#1F3A5F; --jp-soft:#E2E8F1; --sk:#4F7F6B; --sk-soft:#E4EEE8; --teal:#2A7A86; --plum:#6B3F7A; --gold-ink:#9A6616; --rose:#B8356A;
   --ok:#3E7F5F; --ok-bg:#E3F1E8; --bad:#B23A24; --bad-bg:#F8E4DE;
   --display:"Fraunces",Georgia,"Times New Roman",serif;
   --body:"Atkinson Hyperlegible",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
@@ -16,13 +16,13 @@
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
   --bg:#151A26; --surface:#1E2434; --ink:#EDEAE3; --muted:#A4A9B6; --line:#343B4E;
   --navy:#4A5F9E; --navy-ink:#FFFFFF; --accent:#E8694A; --gold:#E2B45C; --sage:#6FA58D; --blush:#3A2F2B;
-  --eu:#C9736C; --eu-soft:#3A2826; --jp:#7FA0D1; --jp-soft:#232E44; --sk:#6FA58D; --sk-soft:#1F3029; --teal:#5FB3BF; --plum:#B58AC4; --gold-ink:#E2B45C;
+  --eu:#C9736C; --eu-soft:#3A2826; --jp:#7FA0D1; --jp-soft:#232E44; --sk:#6FA58D; --sk-soft:#1F3029; --teal:#5FB3BF; --plum:#B58AC4; --gold-ink:#E2B45C; --rose:#E27AA6;
   --ok:#6FBF95; --ok-bg:#1E3A2E; --bad:#F08A72; --bad-bg:#45251F;
   --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px -12px rgba(0,0,0,.5); color-scheme:dark}}
 :root[data-theme="dark"]{
   --bg:#151A26; --surface:#1E2434; --ink:#EDEAE3; --muted:#A4A9B6; --line:#343B4E;
   --navy:#4A5F9E; --navy-ink:#FFFFFF; --accent:#E8694A; --gold:#E2B45C; --sage:#6FA58D; --blush:#3A2F2B;
-  --eu:#C9736C; --eu-soft:#3A2826; --jp:#7FA0D1; --jp-soft:#232E44; --sk:#6FA58D; --sk-soft:#1F3029; --teal:#5FB3BF; --plum:#B58AC4; --gold-ink:#E2B45C;
+  --eu:#C9736C; --eu-soft:#3A2826; --jp:#7FA0D1; --jp-soft:#232E44; --sk:#6FA58D; --sk-soft:#1F3029; --teal:#5FB3BF; --plum:#B58AC4; --gold-ink:#E2B45C; --rose:#E27AA6;
   --ok:#6FBF95; --ok-bg:#1E3A2E; --bad:#F08A72; --bad-bg:#45251F;
   --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px -12px rgba(0,0,0,.5); color-scheme:dark}
 
@@ -68,7 +68,7 @@ header{display:flex;align-items:center;justify-content:space-between;gap:12px;pa
 .mode .k{width:38px;height:38px;border-radius:10px;background:color-mix(in srgb,var(--m) 16%,var(--surface));color:var(--m);display:grid;place-items:center}
 .mode .k svg{width:22px;height:22px}
 .mode .t{color:var(--m)}
-.mode.challenge{--m:var(--gold)} .mode.challenge .t,.modeh[style*='--gold'] h2{color:var(--gold-ink)} .mode.timeline{--m:var(--teal)} .mode.terms{--m:var(--sage)} .mode.write{--m:var(--plum)}
+.mode.facts{--m:var(--rose)} .mode.challenge{--m:var(--gold)} .mode.challenge .t,.modeh[style*='--gold'] h2{color:var(--gold-ink)} .mode.timeline{--m:var(--teal)} .mode.terms{--m:var(--sage)} .mode.write{--m:var(--plum)}
 .modeh{display:flex;align-items:center;gap:10px}
 .modeh .k{width:32px;height:32px;border-radius:9px;display:grid;place-items:center;color:var(--m);background:color-mix(in srgb,var(--m) 16%,var(--surface))}
 .modeh .k svg{width:18px;height:18px}
@@ -275,6 +275,7 @@ footer{margin-top:40px;font-size:13px;color:var(--muted)}
   <symbol id="m-timeline" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12 H21"/><circle cx="6" cy="12" r="2.2" fill="currentColor"/><circle cx="12" cy="12" r="2.2" fill="currentColor"/><circle cx="18" cy="12" r="2.2" fill="currentColor"/><path d="M6 7 V9.8 M12 17 V14.2 M18 7 V9.8"/></g></symbol>
   <symbol id="m-terms" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="3" y="7" width="14" height="12" rx="2"/><path d="M7 4 h14 v12"/><path d="M7 12 h6" stroke-linecap="round"/></g></symbol>
   <symbol id="m-write" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20 h16"/><path d="M14.5 4.5 l5 5 L9 20 H4 v-5 z"/><path d="M12.5 6.5 l5 5"/></g></symbol>
+  <symbol id="m-facts" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 21h4"/><path d="M12 3a6.5 6.5 0 0 0-3.6 11.9c.6.4.9 1 .9 1.6V17h5.4v-.5c0-.6.3-1.2.9-1.6A6.5 6.5 0 0 0 12 3z"/></g></symbol>
   <symbol id="ic-jp" viewBox="0 0 24 24"><g fill="currentColor"><rect x="5" y="8" width="2.4" height="13"/><rect x="16.6" y="8" width="2.4" height="13"/><rect x="3.5" y="6" width="17" height="2.2" rx=".5"/><rect x="6" y="11" width="12" height="1.8"/><path d="M2 4.5 Q12 2.5 22 4.5 L21.5 6.5 Q12 4.8 2.5 6.5 Z"/></g></symbol>
   <symbol id="ic-eu" viewBox="0 0 24 24"><g fill="currentColor"><path d="M3 21 V8 h3 V6 h2 v2 h2 V6 h2 v2 h2 V6 h2 v2 h2 V6 h2 v2 h1 v13 z M10 21 v-5 a2 2 0 0 1 4 0 v5 z" fill-rule="evenodd"/></g></symbol>
   <symbol id="ic-sk" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="6"/><path d="M15.5 15.5 L21 21"/><path d="M8.5 11 h5 M11 8.5 v5"/></g></symbol>
@@ -367,7 +368,7 @@ const FACTS=[
  ['Comparing the two societies','Both knights and samurai served lords in return for land, but samurai were also expected to be literate officials. By 1700 most samurai had never fought a battle.'],
 ];
 function factFor(topics){ const pool=FACTS.filter(f=>!topics||topics.includes(f[0])); const f=(pool.length?pool:FACTS)[Math.random()*(pool.length||FACTS.length)|0]; return `<div class="fact"><span class="lamp">?</span><div><b>Did you know</b>${esc(f[1])}</div></div>` }
-const MODEH = (name,title) => `<div class="modeh" style="--m:var(--${({practice:'accent',challenge:'gold',timeline:'teal',terms:'sage',write:'plum'})[name]})"><span class="k"><svg><use href="#m-${name}"/></svg></span><h2>${title}</h2></div>`;
+const MODEH = (name,title) => `<div class="modeh" style="--m:var(--${({practice:'accent',challenge:'gold',timeline:'teal',terms:'sage',write:'plum',facts:'rose'})[name]})"><span class="k"><svg><use href="#m-${name}"/></svg></span><h2>${title}</h2></div>`;
 const unitCls = u => u==='Medieval Europe'?'eu':u==='Shogunate Japan'?'jp':'sk';
 // timeline events (years hidden until placed)
 const EVENTS=[
@@ -418,9 +419,9 @@ function home(){
       <button class="mode timeline" data-go="timeline"><span class="k"><svg><use href="#m-timeline"/></svg></span><span class="t">Timeline</span><span class="n">Six events, tap them in order. Dates appear as you place them.</span></button>
       <button class="mode terms" data-go="terms"><span class="k"><svg><use href="#m-terms"/></svg></span><span class="t">Key terms</span><span class="n">Flashcards to flip and mark as known, plus a ten-definition sprint against the clock.</span></button>
       <button class="mode write" data-go="write"><span class="k"><svg><use href="#m-write"/></svg></span><span class="t">Paragraph practice</span><span class="n">Exam style prompts with a TEEAL scaffold and marker guidance.</span></button>
+      <button class="mode facts" data-go="facts"><span class="k"><svg><use href="#m-facts"/></svg></span><span class="t">Fun facts</span><span class="n">Did-you-know cards from both units. Read one, then practise the topic it came from.</span></button>
     </div>
   </section>
-  ${factFor(null).replace('class="fact"','class="fact home"')}
   <section class="section">
     <h2>Your progress by topic</h2>
     <p class="muted" style="font-size:14px">Accuracy from questions you've answered on this device. Tap a topic to practise it. Badges at 60, 80 and 95 per cent after eight or more answers.</p>
@@ -430,7 +431,7 @@ function home(){
         const m=mastery(t); return `<button class="topic ${unitCls(u)}" data-topic="${esc(t)}"><span class="name" style="display:flex;align-items:center;gap:8px"><span class="badge ${m||''}" title="${m?m+' mastery':'Answer 8 or more to earn a badge'}"></span>${esc(t)}</span><span class="meta"><span>${n} q</span><span class="bar"><i style="width:${pct}%"></i></span><span>${s.a?pct+'%':'–'}</span></span></button>`}).join('')}</div>`).join('')}
     </div>
   </section>`);
-  app.querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>({setup, challenge, terms, write, daily, timeline})[b.dataset.go]());
+  app.querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>({setup, challenge, terms, write, daily, timeline, facts})[b.dataset.go]());
   app.querySelectorAll('[data-topic]').forEach(b=>b.onclick=()=>startQuiz({mode:'practice', topics:[b.dataset.topic], timed:false}));
   app.querySelectorAll('[data-unit]').forEach(b=>b.onclick=()=>startQuiz({mode:'practice', topics:topicsIn(b.dataset.unit), timed:false, count:15}));
   updateStreak();
@@ -681,6 +682,29 @@ function teacher(){
   app.querySelector('#home').onclick=home;
 }
 
+// ---------- fun facts ----------
+function facts(){
+  const unitOf = t => (Q.find(q=>q.topic===t)||{}).unit || 'Skills and concepts';
+  let filter = 'all'; let order = shuffle(FACTS.map((_,i)=>i)); let i=0; let seen = new Set(store.get('factsSeen',[]));
+  const draw=()=>{
+    const pool = order.filter(k=>filter==='all'||unitOf(FACTS[k][0])===filter); if(!pool.length){ filter='all'; return draw() }
+    if(i>=pool.length) i=0; const k=pool[i], [topic,text]=FACTS[k]; const u=unitOf(topic); seen.add(k); store.set('factsSeen',[...seen]);
+    h(`<section class="section"><div class="row" style="justify-content:space-between">${MODEH('facts','Fun facts')}<span class="pill">Read <b>${seen.size}</b> / ${FACTS.length}</span></div>
+    <div class="row"><button class="btn ${filter==='all'?'primary':''}" data-f="all">Both units</button><button class="btn ${filter==='Medieval Europe'?'primary':''}" data-f="Medieval Europe">Medieval Europe</button><button class="btn ${filter==='Shogunate Japan'?'primary':''}" data-f="Shogunate Japan">Shogunate Japan</button></div>
+    <div class="card ${unitCls(u)}">${art(TOPIC_IMG[topic])}
+      <span class="eyebrow" style="color:var(--${unitCls(u)});display:flex;gap:8px;align-items:center"><svg style="width:16px;height:16px"><use href="#ic-${unitCls(u)}"/></svg>${esc(u)} · ${esc(topic)}</span>
+      <p class="qtext" style="font-weight:400;line-height:1.5">${esc(text)}</p>
+      <div class="actions"><div class="row"><button class="btn" id="prev">Previous</button><button class="btn primary" id="next">Another fact</button></div><div class="row">${Q.some(q=>q.topic===topic&&AUTO.has(q.type))?`<button class="btn accent" id="prac">Practise ${esc(topic)}</button>`:''}<button class="btn quiet" id="home">Home</button></div></div>
+    </div><p class="hint">${i+1} of ${pool.length}. Arrow keys move.</p></section>`);
+    app.querySelectorAll('[data-f]').forEach(b=>b.onclick=()=>{filter=b.dataset.f;i=0;draw()});
+    app.querySelector('#next').onclick=()=>{i++;draw()}; app.querySelector('#prev').onclick=()=>{i=(i-1+pool.length)%pool.length;draw()};
+    const pr=app.querySelector('#prac'); if(pr) pr.onclick=()=>startQuiz({mode:'practice',topics:[topic],timed:false,count:10});
+    app.querySelector('#home').onclick=home;
+    document.onkeydown=e=>{ if(!app.querySelector('#next')){document.onkeydown=null;return} if(e.key==='ArrowRight') app.querySelector('#next').click(); if(e.key==='ArrowLeft') app.querySelector('#prev').click() };
+  };
+  draw();
+}
+
 // ---------- paragraph practice ----------
 function write(){
   const prompts=Q.filter(q=>q.type==='extended');
@@ -712,7 +736,7 @@ function write(){
 }
 
 document.getElementById('homeBtn').onclick=home;
-const ROUTES={practice:setup, challenge, terms, write, daily, timeline, teacher, sprint};
+const ROUTES={practice:setup, challenge, terms, write, daily, timeline, teacher, sprint, facts};
 const r=(location.hash||'').slice(1); (ROUTES[r]||home)();
 })();
 </script>
