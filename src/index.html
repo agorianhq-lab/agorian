@@ -65,8 +65,11 @@ header{display:flex;align-items:center;justify-content:space-between;gap:12px;pa
 @media (max-width:700px){.herogrid{grid-template-columns:1fr}}
 .hero h1{font-size:clamp(36px,5.5vw,60px);color:var(--navy)}
 .hero h1 em{font-style:italic;color:var(--accent)}
-.hero p{max-width:62ch;color:var(--muted);font-size:20px;line-height:1.6}
-.modes{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:16px}
+.hero p{max-width:60ch;color:var(--muted)}
+.herogrid>p{color:var(--ink);font-family:var(--display);font-weight:500;font-size:clamp(21px,2vw,27px);line-height:1.5}
+.modes{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:16px}
+@media (max-width:900px){.modes{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.modes{grid-template-columns:1fr}}
 .mode{text-align:left;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px;cursor:pointer;display:grid;gap:6px;box-shadow:var(--shadow);transition:transform .12s,border-color .12s}
 .mode:hover{transform:translateY(-2px);border-color:var(--navy)}
 .mode:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
