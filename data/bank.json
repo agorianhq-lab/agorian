@@ -2072,7 +2072,7 @@
    "source": "EP",
    "srcId": 87,
    "type": "extended",
-   "question": "Explain why the Black Death weakened the feudal system. Write one paragraph of 6 to 8 sentences. Include a specific cause, at least one piece of evidence and a clear explanation of the link between the plague and the decline of feudalism.",
+   "question": "Analyse the impact of the feudal system on medieval Europe. Write ONE TEEAL paragraph. Choose the area you think it shaped most (power, land, daily life or warfare), give at least two specific pieces of evidence and reach a judgement.",
    "guidance": "Look for the chain. Population loss, labour shortage, peasants demanding wages or moving, lords unable to enforce old obligations, revolts when they tried.",
    "id": 87
   },
@@ -2098,7 +2098,7 @@
    "source": "EP",
    "srcId": 89,
    "type": "extended",
-   "question": "Some historians argue that Commodore Perry's arrival caused the fall of the Tokugawa shogunate. Others argue the shogunate was already failing. Write ONE TEEAL paragraph that takes a position and supports it with evidence from both internal problems and external pressure.",
+   "question": "Analyse the significance of sakoku for Japan. Write ONE TEEAL paragraph. Consider what the policy was meant to achieve, what it changed inside Japan and whether its effects lasted.",
    "guidance": "The best responses weigh both and reach a judgement, for example that Perry was the trigger that exposed existing weaknesses.",
    "id": 89
   },
@@ -2120,16 +2120,16 @@
    "topic": "Feudalism and hierarchy",
    "skill": "",
    "stimulus": null,
-   "explanation": "Feudalism was a system of land for service. Everything else, from castles to knights, grew out of that exchange.",
+   "explanation": "Feudalism was a chain of land-for-service agreements. The king kept the loyalty and military support of his lords by granting them land, and they did the same with their own knights.",
    "source": "Socrative",
    "srcId": "soc_exam",
    "type": "mc",
-   "question": "What was the main purpose of feudalism in medieval Europe?",
+   "question": "A medieval king could not govern or defend his whole kingdom alone. How did feudalism solve this problem?",
    "options": [
-    "To organise society through land, loyalty and service",
-    "To encourage trade with Asia",
-    "To give peasants political power",
-    "To spread Christianity to other countries"
+    "By dividing land among lords who owed him loyalty and soldiers in return",
+    "By paying a standing army from taxes collected by the Church",
+    "By letting towns elect councils to rule each region",
+    "By inviting foreign merchants to manage trade and defence"
    ],
    "answer": [
     0
@@ -2141,19 +2141,19 @@
    "topic": "Feudalism and hierarchy",
    "skill": "",
    "stimulus": null,
-   "explanation": "The lord gave the fief, the vassal gave loyalty and service. Vassals could themselves be lords to knights below them.",
+   "explanation": "A vassal was anyone who received land (a fief) from a lord in return for loyalty and service, usually military service. Knights were vassals of greater lords, who were in turn vassals of the king.",
    "source": "Socrative",
    "srcId": "soc_exam",
    "type": "mc",
-   "question": "Which statement BEST describes the relationship between a lord and a vassal?",
+   "question": "A knight knelt before his lord, swore an oath of fealty and received a fief. Which word best describes the knight's new role?",
    "options": [
-    "The vassal paid the lord a tithe",
-    "The lord granted land to the vassal in return for loyalty and military service",
-    "The vassal gave land to the lord in return for protection",
-    "The lord and vassal were equals who shared land"
+    "Vassal",
+    "Serf",
+    "Bishop",
+    "Bailiff"
    ],
    "answer": [
-    1
+    0
    ],
    "id": 92
   },
@@ -2207,16 +2207,16 @@
    "topic": "Law and order",
    "skill": "",
    "stimulus": null,
-   "explanation": "With no police force, public punishment was the main deterrent.",
+   "explanation": "There was no police force, so medieval justice relied on deterrence. Public punishment shamed the offender and sent a warning to everyone watching.",
    "source": "Socrative",
    "srcId": "soc_exam",
    "type": "mc",
-   "question": "Why were punishments in medieval Europe usually carried out in public?",
+   "question": "A medieval thief is placed in the stocks in the market square for a day. What did the authorities hope the crowd would do?",
    "options": [
-    "To shame the offender and warn others against committing the same crime",
-    "To let the crowd decide if the punishment was fair",
-    "To show the wealth of the offender",
-    "To allow the accused to prove innocence"
+    "Watch and learn the cost of crime, so fear would deter them from offending",
+    "Vote on whether the punishment was fair",
+    "Pay money to see the punishment, raising funds for the town",
+    "Decide whether the thief was guilty"
    ],
    "answer": [
     0
@@ -2293,15 +2293,15 @@
    "unit": "Medieval Europe",
    "topic": "The Crusades",
    "skill": "",
-   "stimulus": "Adapted from Fulcher of Chartres, a chronicler living in the Crusader states, c. 1127.",
-   "explanation": "The source describes contact and trade. Reading the evidence in the source, not just recalling facts, is what the exam rewards.",
+   "stimulus": "Adapted from the travel account of Ibn Jubayr, a Muslim scholar from Spain who passed through the Crusader states in 1184.\n“The Christians make the Muslims pay a tax in their territory, and the Muslim merchants pay a toll on their goods in Christian territory. Yet caravans pass freely between the two, and the soldiers go on fighting while the people remain at peace.”",
+   "explanation": "Even while armies fought, merchants crossed between Crusader and Muslim lands and paid tolls on their goods. The Crusades increased trade and contact between Europe and the Islamic world.",
    "source": "Socrative",
    "srcId": "soc_exam",
    "type": "mc",
-   "question": "Which consequence of the Crusades is shown by this source? 'People from different cultures now speak one another's languages. Merchants frequently arrive by sea, bringing goods from many different places.'",
+   "question": "Which consequence of the Crusades does this source show?",
    "options": [
     "The end of the Catholic Church",
-    "Increased trade and cultural exchange between Europe and the East",
+    "Trade continued and grew between Christians and Muslims despite the fighting",
     "The destruction of Jerusalem",
     "The spread of the Black Death"
    ],
@@ -2315,16 +2315,16 @@
    "topic": "The Black Death",
    "skill": "",
    "stimulus": null,
-   "explanation": "The plague followed trade from the Black Sea to Messina in 1347 and then along roads and rivers.",
+   "explanation": "Plague arrived in Sicily on Genoese ships from the Black Sea and spread port to port along trade routes, with rats and fleas as the carriers.",
    "source": "Socrative",
    "srcId": "soc_exam",
    "type": "mc",
-   "question": "Which factor contributed MOST to the spread of the Black Death through Europe?",
+   "question": "The Black Death reached Europe in 1347 at a port rather than an inland village. What does this tell us about how the disease travelled?",
    "options": [
-    "Trade routes and ships carrying infected rats and fleas between ports",
-    "Crusader armies",
-    "Castles being built too close together",
-    "Peasants refusing to work"
+    "It moved along trade routes, carried by rats and fleas aboard ships",
+    "It was spread deliberately by invading armies",
+    "It spread mainly through contaminated well water",
+    "It was carried by migrating birds from Africa"
    ],
    "answer": [
     0
@@ -2382,7 +2382,7 @@
    "source": "Socrative",
    "srcId": "soc_exam",
    "type": "short",
-   "question": "Identify one crime committed in medieval Europe and describe one likely punishment for it.",
+   "question": "Choose a medieval punishment such as the stocks, a fine, mutilation or execution. Explain which kinds of crime it was used for and what the punishment was meant to achieve.",
    "model": "Model answer. Theft, punished by a fine, time in the stocks, or for repeat offenders cutting off a hand. Or treason, punished by execution and loss of property.",
    "id": 103
   },
@@ -2425,19 +2425,19 @@
    "topic": "Feudalism and samurai",
    "skill": "",
    "stimulus": null,
-   "explanation": "The shogun ruled in the emperor's name. The emperor kept prestige but little power.",
+   "explanation": "The emperor was the ceremonial head of Japan, but the shogun held real political and military power. Tokugawa laws for the military houses required daimyo to seek the shogun's approval for marriages, castle repairs and alliances.",
    "source": "Socrative",
    "srcId": "soc_exam",
    "type": "mc",
-   "question": "Who held the greatest political and military power in shogunate Japan?",
+   "question": "A daimyo wanted to marry his daughter to the son of another domain's lord. In Tokugawa Japan, whose permission did he need, and why?",
    "options": [
-    "The emperor",
-    "The daimyo",
-    "The shogun",
-    "The samurai"
+    "The shogun's, because the shogun held real political power and controlled the daimyo",
+    "The emperor's, because the emperor made all laws",
+    "No one's, because daimyo ruled their domains independently",
+    "The samurai council's, because warriors approved all marriages"
    ],
    "answer": [
-    2
+    0
    ],
    "id": 106
   },
@@ -2446,19 +2446,19 @@
    "topic": "Feudalism and samurai",
    "skill": "",
    "stimulus": null,
-   "explanation": "Similarity, warrior class and bushido. Difference, rank and role. The exam asks for both.",
+   "explanation": "Daimyo and samurai both belonged to the warrior class and followed bushido, but daimyo were lords who governed domains and commanded their own samurai, while samurai served a lord in return for a rice stipend.",
    "source": "Socrative",
    "srcId": "soc_exam",
    "type": "mc",
-   "question": "Compare the daimyo and the samurai. Which statement is correct?",
+   "question": "Which of these could a daimyo do that an ordinary samurai could NOT?",
    "options": [
-    "Both were landholding lords",
-    "Both belonged to the warrior class and followed bushido, but daimyo controlled domains while samurai served them",
-    "Samurai outranked daimyo",
-    "Daimyo were peasants who became warriors"
+    "Rule a domain and command his own samurai",
+    "Carry two swords",
+    "Follow the code of bushido",
+    "Serve a lord in return for an income"
    ],
    "answer": [
-    1
+    0
    ],
    "id": 107
   },
@@ -2491,19 +2491,19 @@
    "topic": "Tokugawa Shogunate",
    "skill": "",
    "stimulus": null,
-   "explanation": "Status was based on usefulness to society, not wealth. Over time rich merchants and poor samurai made this a source of tension.",
+   "explanation": "Farmers ranked second because they produced the rice that fed everyone and paid the taxes. Merchants ranked last because, in Confucian thinking, they produced nothing and profited from the work of others, even though many grew rich.",
    "source": "Socrative",
    "srcId": "soc_exam",
    "type": "mc",
-   "question": "Why did the Tokugawa shogunate rank farmers above merchants?",
+   "question": "Under the Tokugawa four-class system, which of these was the OFFICIAL order from highest to lowest?",
    "options": [
-    "Farmers were wealthier",
-    "Farmers produced food, which was seen as essential, while merchants were seen as profiting from others' work",
-    "Merchants were foreigners",
-    "Farmers were trained as samurai"
+    "Samurai, farmers, artisans, merchants",
+    "Samurai, merchants, artisans, farmers",
+    "Farmers, samurai, merchants, artisans",
+    "Merchants, samurai, farmers, artisans"
    ],
    "answer": [
-    1
+    0
    ],
    "id": 109
   },
@@ -2557,19 +2557,19 @@
    "topic": "Tokugawa Shogunate",
    "skill": "",
    "stimulus": null,
-   "explanation": "Examples include the Laws for Military Houses controlling daimyo, the sakoku edicts and the ban on Christianity.",
+   "explanation": "An edict is an official order from a ruler or government that must be obeyed. The sakoku edicts of the 1630s are the best-known Tokugawa examples.",
    "source": "Socrative",
    "srcId": "soc_exam",
    "type": "mc",
-   "question": "Define the term edict. Which option is correct?",
+   "question": "In the 1630s the shogunate issued orders forbidding Japanese people from travelling overseas. What term describes an official order like this, which people were required to obey?",
    "options": [
-    "A samurai sword",
-    "An official order from the shogun or another authority that people were required to obey",
-    "A tax paid in rice",
-    "A Buddhist temple"
+    "Edict",
+    "Fief",
+    "Treaty",
+    "Tithe"
    ],
    "answer": [
-    1
+    0
    ],
    "id": 112
   },
@@ -3138,11 +3138,11 @@
    "topic": "Comparing the two societies",
    "skill": "",
    "stimulus": null,
-   "explanation": "Model answer. The Genpei War ended with Yoritomo becoming shogun in 1192, shifting real power from the emperor to military rulers for the next 700 years. Or, Hastings in 1066 brought Norman rule and the feudal system to England.",
+   "explanation": "A turning point causes a lasting change of direction. Magna Carta established that even the king was under the law, an idea that outlasted the medieval period. The sakoku edicts cut Japan off from most foreign contact for over two centuries, shaping its whole development until 1853.",
    "source": "Socrative",
    "srcId": "soc_warm",
    "type": "short",
-   "question": "In one sentence, explain why historians call the Battle of Hastings OR the Genpei War a turning point.",
+   "question": "In one sentence, explain why historians call the sealing of Magna Carta in 1215 OR the sakoku edicts of the 1630s a turning point.",
    "model": "Model answer. The Genpei War ended with Yoritomo becoming shogun in 1192, shifting real power from the emperor to military rulers for the next 700 years. Or, Hastings in 1066 brought Norman rule and the feudal system to England.",
    "id": 140
   },
@@ -3234,27 +3234,6 @@
     1
    ],
    "id": 145
-  },
-  {
-   "unit": "Medieval Europe",
-   "topic": "Law and order",
-   "skill": "",
-   "stimulus": null,
-   "explanation": "With no police, fear of public punishment was the main way to keep order.",
-   "source": "Socrative",
-   "srcId": "soc_me",
-   "type": "mc",
-   "question": "Why were medieval punishments usually carried out in public?",
-   "options": [
-    "Prisons were full",
-    "To shame the offender and deter others, since there was no police force",
-    "The king liked to watch",
-    "To raise money from spectators"
-   ],
-   "answer": [
-    1
-   ],
-   "id": 146
   },
   {
    "unit": "Medieval Europe",
@@ -3431,6 +3410,231 @@
    "question": "Give one way the Crusades strengthened the Catholic Church and one way the Black Death weakened it.",
    "model": "Model answer. The Crusades showed the Pope could unite kings and knights behind one cause and brought the Church land and wealth. The Black Death showed the Church could not stop or explain the plague, and many clergy died or fled.",
    "id": 155
+  },
+  {
+   "unit": "Shogunate Japan",
+   "topic": "Tokugawa Shogunate",
+   "skill": "cause and effect",
+   "type": "mc",
+   "question": "Edo grew from a fishing village in 1600 to a city of about a million people by 1700. Which Tokugawa policy did most to cause this growth?",
+   "options": [
+    "Sankin kotai, which forced daimyo and their households to live in Edo every second year",
+    "Sakoku, which brought foreign merchants to Edo",
+    "The four-class system, which moved farmers into the city",
+    "The persecution of Christians, which drove converts to the capital"
+   ],
+   "answer": [
+    0
+   ],
+   "explanation": "Alternate attendance filled Edo with daimyo households, their samurai and the merchants and craftspeople who served them. The constant demand for goods and services made Edo one of the largest cities in the world.",
+   "id": 156,
+   "source": "Agorian",
+   "srcId": null,
+   "stimulus": null
+  },
+  {
+   "unit": "Shogunate Japan",
+   "topic": "Tokugawa Shogunate",
+   "skill": "continuity and change",
+   "type": "mc",
+   "question": "Kabuki theatre, ukiyo-e woodblock prints and popular novels all flourished in Edo in the 1700s. Who was the main audience for this new culture?",
+   "options": [
+    "Townspeople (chonin), especially merchants with money to spend",
+    "The emperor's court in Kyoto",
+    "Farmers in the countryside",
+    "Buddhist monks"
+   ],
+   "answer": [
+    0
+   ],
+   "explanation": "Merchants ranked lowest officially but grew wealthy under two centuries of peace. Their money paid for a lively urban culture of theatres, prints, teahouses and fiction aimed at ordinary townspeople.",
+   "id": 157,
+   "source": "Agorian",
+   "srcId": null,
+   "stimulus": null
+  },
+  {
+   "unit": "Shogunate Japan",
+   "topic": "Tokugawa Shogunate",
+   "skill": "cause and effect",
+   "type": "ms",
+   "question": "Select ALL the ways the long Tokugawa peace changed life in Japan's cities.",
+   "options": [
+    "Merchants grew wealthy and influential despite their low official rank",
+    "Samurai increasingly worked as officials and administrators rather than fighting",
+    "Popular entertainment such as kabuki and woodblock prints developed",
+    "Castles were abandoned and towns had no walls or defences",
+    "Christianity became the main religion of townspeople"
+   ],
+   "answer": [
+    0,
+    1,
+    2
+   ],
+   "explanation": "Peace turned warriors into bureaucrats and let a money economy grow. Castle towns remained the centres of daimyo power, and Christianity was banned, so the last two are wrong.",
+   "id": 158,
+   "source": "Agorian",
+   "srcId": null,
+   "stimulus": null
+  },
+  {
+   "unit": "Shogunate Japan",
+   "topic": "Tokugawa Shogunate",
+   "skill": "cause and effect",
+   "type": "mc",
+   "question": "Travellers on the Tokaido road between Edo and Kyoto often crossed rivers and inlets by ferry or were carried across by porters rather than using bridges. Why?",
+   "options": [
+    "The shogunate limited bridges on major rivers so armies could not move quickly against Edo, and Japan's mountains and rivers made roads hard to build",
+    "Bridges were forbidden by Buddhist teaching",
+    "Japanese builders did not know how to build bridges",
+    "The rivers were too shallow for bridges"
+   ],
+   "answer": [
+    0
+   ],
+   "explanation": "Japan's geography of mountains, fast rivers and coastal inlets made overland travel slow, and the Tokugawa deliberately left some rivers unbridged and set checkpoints to control movement toward Edo.",
+   "id": 159,
+   "source": "Agorian",
+   "srcId": null,
+   "stimulus": null
+  },
+  {
+   "unit": "Shogunate Japan",
+   "topic": "Tokugawa Shogunate",
+   "skill": "cause and effect",
+   "type": "mc",
+   "question": "Post towns with inns, porters and horses grew up along the Tokaido and other highways during the Edo period. What created the demand for them?",
+   "options": [
+    "Daimyo processions under sankin kotai, plus pilgrims, merchants and officials travelling the roads",
+    "Foreign tourists arriving under sakoku",
+    "Farmers moving to Edo to become samurai",
+    "Christian missionaries travelling between churches"
+   ],
+   "answer": [
+    0
+   ],
+   "explanation": "Alternate attendance sent thousands of people up and down the highways every year. Post towns and ferry crossings grew to serve them, and the roads became busy with pilgrims and traders as well.",
+   "id": 160,
+   "source": "Agorian",
+   "srcId": null,
+   "stimulus": null
+  },
+  {
+   "unit": "Skills and concepts",
+   "topic": "Chronology",
+   "skill": "chronology",
+   "type": "mc",
+   "question": "Put these periods of Japanese history in the correct order, earliest first.",
+   "options": [
+    "Heian, Kamakura, Muromachi, Edo",
+    "Kamakura, Heian, Edo, Muromachi",
+    "Muromachi, Kamakura, Heian, Edo",
+    "Heian, Muromachi, Kamakura, Edo"
+   ],
+   "answer": [
+    0
+   ],
+   "explanation": "Heian (794 to 1185) was the age of the imperial court. Kamakura (1185 to 1333) began with the first shogun. Muromachi (1336 to 1573) was the age of the Ashikaga shoguns. Edo (1600 to 1868) was the Tokugawa period.",
+   "id": 161,
+   "source": "Agorian",
+   "srcId": null,
+   "stimulus": null
+  },
+  {
+   "unit": "Skills and concepts",
+   "topic": "Chronology",
+   "skill": "chronology",
+   "type": "mc",
+   "question": "A timeline shows the Onin War in 1467 and the Battle of Sekigahara in 1600. Which century does each belong to?",
+   "options": [
+    "15th century and 17th century",
+    "14th century and 16th century",
+    "15th century and 16th century",
+    "16th century and 17th century"
+   ],
+   "answer": [
+    0
+   ],
+   "explanation": "To find the century, add one to the hundreds digit. 1467 is in the 1400s, so the 15th century. 1600 is the first year of the 17th century, since the 16th century ran from 1501 to 1600.",
+   "id": 162,
+   "source": "Agorian",
+   "srcId": null,
+   "stimulus": null
+  },
+  {
+   "unit": "Skills and concepts",
+   "topic": "Chronology",
+   "skill": "chronology",
+   "type": "mc",
+   "question": "Which of these happened during the Kamakura period (1185 to 1333)?",
+   "options": [
+    "The Mongol invasions of Japan",
+    "Perry's arrival in Edo Bay",
+    "The sakoku edicts",
+    "The Onin War"
+   ],
+   "answer": [
+    0
+   ],
+   "explanation": "The Mongols attacked in 1274 and 1281, under the Kamakura shogunate. The Onin War was 1467 (Muromachi), sakoku the 1630s and Perry 1853 (both Edo).",
+   "id": 163,
+   "source": "Agorian",
+   "srcId": null,
+   "stimulus": null
+  },
+  {
+   "unit": "Skills and concepts",
+   "topic": "Source analysis",
+   "skill": "source analysis",
+   "type": "mc",
+   "question": "A history book shows a colour woodblock print of a crowded theatre, made in Japan in 1765. How should this source be described?",
+   "options": [
+    "A primary source: a visual (artwork) created at the time it depicts",
+    "A secondary source, because it is printed in a book",
+    "A primary source: a written document",
+    "A secondary source, because the artist was not a historian"
+   ],
+   "answer": [
+    0
+   ],
+   "explanation": "Type of source means the form it takes: a print, painting, letter, chronicle, map and so on. Origin means who made it, where and when. A print made in 1765 of Edo-period life is a primary visual source regardless of where it is reproduced today.",
+   "id": 164,
+   "source": "Agorian",
+   "srcId": null,
+   "stimulus": null
+  },
+  {
+   "unit": "Skills and concepts",
+   "topic": "Source analysis",
+   "skill": "source analysis",
+   "type": "mc",
+   "question": "A caption reads: 'Illuminated manuscript produced in Genoa, Italy, c. 1290, artist unknown.' Which of these can you state from the caption alone?",
+   "options": [
+    "Where and roughly when it was made",
+    "Why the artist made it",
+    "Whether the scene really happened",
+    "Who paid for it"
+   ],
+   "answer": [
+    0
+   ],
+   "explanation": "Captions usually give origin: place, date and (if known) creator. Purpose, accuracy and patron have to be inferred from the content and your own knowledge, and you should signal that with words like 'suggests' or 'implies'.",
+   "id": 165,
+   "source": "Agorian",
+   "srcId": null,
+   "stimulus": null
+  },
+  {
+   "unit": "Skills and concepts",
+   "topic": "Source analysis",
+   "skill": "source analysis",
+   "type": "short",
+   "question": "A medieval illumination shows two knights jousting while a crowd watches from castle walls. Write one sentence that INFERS something about knights from the picture, using the word 'suggests'.",
+   "explanation": "A good inference links a detail to a conclusion: 'The watching crowd suggests tournaments were public displays of skill that built a knight's reputation.' Weak answers only describe what is in the picture.",
+   "id": 166,
+   "source": "Agorian",
+   "srcId": null,
+   "stimulus": null
   }
  ],
  "terms": [
