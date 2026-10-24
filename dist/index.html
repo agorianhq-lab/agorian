@@ -48,10 +48,15 @@ p{margin:0}
 /* header */
 header{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;padding:30px 0 14px;text-align:center}
 .hdr-right{position:absolute;right:0;top:30px}
-.qotd{position:absolute;left:0;top:26px;max-width:300px;display:grid;gap:4px;padding:10px 14px 10px 16px;border-left:3px solid var(--gold);background:color-mix(in srgb,var(--gold) 10%,var(--surface));border-radius:0 10px 10px 0;text-align:left}
-.qotd .q{font-family:var(--display);font-size:16px;line-height:1.35;color:var(--ink);font-style:italic}
-.qotd .a{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:700}
-@media (max-width:1000px){.qotd{position:static;max-width:none;margin:10px auto 0;text-align:center;border-left:0;border-top:3px solid var(--gold);border-radius:0 0 10px 10px}}
+.qotd{position:absolute;left:0;top:22px;width:320px;display:grid;gap:6px;padding:14px 18px 14px 20px;border:1px solid color-mix(in srgb,var(--gold) 45%,var(--line));background:linear-gradient(135deg,color-mix(in srgb,var(--gold) 18%,var(--surface)),var(--surface) 70%);border-radius:14px;text-align:left;box-shadow:var(--shadow);overflow:hidden}
+.qotd::before{content:"“";position:absolute;left:10px;top:-14px;font-family:var(--display);font-size:92px;line-height:1;color:var(--gold);opacity:.35;pointer-events:none}
+.qotd::after{content:"";position:absolute;right:-30px;bottom:-30px;width:110px;height:110px;border-radius:50%;background:radial-gradient(circle,color-mix(in srgb,var(--gold) 30%,transparent),transparent 70%);pointer-events:none}
+.qotd .lbl{display:flex;align-items:center;gap:6px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-ink);font-weight:700;position:relative}
+.qotd .lbl::after{content:"";flex:1;height:1px;background:color-mix(in srgb,var(--gold) 50%,transparent)}
+.qotd .q{font-family:var(--display);font-size:17px;line-height:1.4;color:var(--ink);font-style:italic;position:relative;padding-left:8px}
+.qotd .a{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:700;position:relative;padding-left:8px}
+.qotd .a::before{content:"— ";color:var(--gold-ink)}
+@media (max-width:1000px){.qotd{position:static;width:auto;max-width:520px;margin:12px auto 0;text-align:left}}
 .backbtn{position:absolute;left:0;top:34px;display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:8px 14px 8px 10px;font-weight:700;cursor:pointer;color:var(--navy)}
 .backbtn svg{width:18px;height:18px}
 .pager{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:4px}
@@ -469,7 +474,7 @@ const QUOTES=[
  ['We suffer more often in imagination than in reality.','Seneca'],
  ['Rome was not built in a day.','Medieval proverb'],
 ];
-function quoteOfDay(){ const n=Math.floor(Date.now()/36e5); const [q,a]=QUOTES[n%QUOTES.length]; const el=document.getElementById('qotd'); el.innerHTML=`<span class="eyebrow" style="font-size:11px;color:var(--gold-ink)">Quote of the hour</span><span class="q">“${esc(q)}”</span><span class="a">${esc(a)}</span>`; }
+function quoteOfDay(){ const n=Math.floor(Date.now()/36e5); const [q,a]=QUOTES[n%QUOTES.length]; const el=document.getElementById('qotd'); el.innerHTML=`<span class="lbl">Quote of the hour</span><span class="q">${esc(q)}</span><span class="a">${esc(a)}</span>`; }
 const today = () => new Date().toISOString().slice(0,10);
 function mastery(t){ const s=topicStats(t); if(s.a<8) return null; const p=s.c/s.a; return p>=.95?'gold':p>=.8?'silver':p>=.6?'bronze':null }
 const REDUCED = matchMedia('(prefers-reduced-motion: reduce)').matches;
