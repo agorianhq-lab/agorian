@@ -480,6 +480,12 @@ footer{margin-top:40px;font-size:13px;color:var(--muted)}
 .exam .plan{display:grid;grid-template-columns:90px 1fr;gap:6px 14px;align-items:baseline}
 .exam .plan b{font-family:var(--display);font-size:20px;color:var(--navy)}
 @media (max-width:800px){.exam .grid3{grid-template-columns:1fr}}
+.timerrow{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:12px;padding:12px 16px;border:2px solid var(--navy);border-left:8px solid var(--gold);border-radius:12px;background:var(--surface);font-size:15px}
+.timerrow>span:first-child{flex:1 1 320px}
+.tdisp{font-family:var(--display);font-weight:700;font-size:30px;color:var(--navy);font-variant-numeric:tabular-nums;min-width:4ch;text-align:right}
+.tdisp.warn{color:var(--accent)}
+.card.exammode .scaffold,.card.exammode #guide,.card.exammode #g,.card.exammode .wbwrap,.card.exammode .selfcheck{display:none}
+.card.exammode textarea{min-height:360px;border-color:var(--navy);box-shadow:0 0 0 4px color-mix(in srgb,var(--gold) 35%,transparent)}
 </style>
 
 <div class="wrap" id="top">
@@ -1351,6 +1357,8 @@ function write(){
       <div id="pane-write">
       <div class="scaffold"><p class="eyebrow">TEEAL scaffold</p>
         ${TEEAL.map(([a,b,c])=>`<div class="s"><b>${a==='X'?'E':a}</b><span><b style="font-family:var(--body);color:var(--ink)">${b}.</b> ${c}</span></div>`).join('')}</div>
+      <div class="timerrow"><span><b>Exam conditions.</b> Section C is 8 marks in about 15 minutes. Start the clock, the scaffold hides, and write as you would on paper.</span><label class="hint">Minutes <select class="sel" id="tmin"><option>15</option><option>10</option><option>12</option><option>20</option></select></label><button class="btn" id="tstart">Start timer</button><span class="tdisp" id="tdisp" hidden></span></div>
+      <div id="timeup" class="feedback" hidden></div>
       <textarea id="d${q.id}" placeholder="Write your paragraph here. It stays on this device." style="margin-top:12px">${esc(drafts[q.id]||'')}</textarea>
       <div class="row" style="justify-content:space-between;margin-top:8px"><span class="hint" id="wc"></span><button class="btn" id="guide">Show marker guidance</button></div>
       <div id="g" hidden class="feedback info" style="margin-top:8px"><b>What a marker looks for</b><span>${esc(q.guidance)}</span></div>
@@ -1368,6 +1376,16 @@ function write(){
     app.querySelector('#guide').onclick=e=>{ const g=app.querySelector('#g'); g.hidden=!g.hidden; e.target.textContent=g.hidden?'Show marker guidance':'Hide marker guidance' };
     app.querySelector('#save').onclick=e=>{ drafts[q.id]=ta.value; store.set('drafts',drafts); e.target.textContent='Saved'; setTimeout(()=>e.target.textContent='Save draft',1500) };
     app.querySelector('#back').onclick=write; app.querySelector('#back2').onclick=write; app.querySelector('#rub').onclick=()=>success('paragraph');
+    { // exam-conditions timer
+      const card=app.querySelector('.card'), disp=app.querySelector('#tdisp'), tu=app.querySelector('#timeup'), startB=app.querySelector('#tstart'), sel=app.querySelector('#tmin'); let tid=null, endAt=0, total=0;
+      const fmt=ms=>{ const t=Math.max(0,Math.ceil(ms/1000)); return `${Math.floor(t/60)}:${String(t%60).padStart(2,'0')}` };
+      const stop=()=>{ clearInterval(tid); tid=null; card.classList.remove('exammode'); disp.hidden=true; disp.classList.remove('warn'); startB.textContent='Start timer'; sel.disabled=false; ta.readOnly=false };
+      const finish=()=>{ clearInterval(tid); tid=null; ta.readOnly=true; disp.textContent='0:00'; beep('win'); const w=ta.value.trim().split(/\s+/).filter(Boolean).length; drafts[q.id]=ta.value; store.set('drafts',drafts); log({event:'timed', qid:q.id, secs:total, n:w});
+        tu.hidden=false; tu.innerHTML=`<b>Time. Pens down.</b><span>${w} words in ${total/60} minutes. A full 8-mark answer is usually 180 to 250 words. Your draft is saved.</span><div class="row" style="margin-top:8px"><button class="btn primary" id="tmodel">Compare with the model</button><button class="btn" id="tmore">Keep writing</button></div>`;
+        tu.querySelector('#tmodel').onclick=()=>{ stop(); tu.hidden=true; app.querySelector('[data-tab=model]').click() }; tu.querySelector('#tmore').onclick=()=>{ stop(); tu.hidden=true; ta.focus() } };
+      startB.onclick=()=>{ if(tid){ stop(); return } total=+sel.value*60; endAt=Date.now()+total*1000; tu.hidden=true; card.classList.add('exammode'); disp.hidden=false; sel.disabled=true; startB.textContent='Stop'; ta.readOnly=false; ta.focus(); beep('ok'); log({event:'timed-start', qid:q.id, secs:total});
+        const step=()=>{ const left=endAt-Date.now(); disp.textContent=fmt(left); disp.classList.toggle('warn',left<120000); if(left<=0) finish() }; step(); tid=setInterval(step,500) };
+    }
     { const k=prompts.indexOf(q); const pv=app.querySelector('#pg-prev'), nx=app.querySelector('#pg-next'); if(pv) pv.onclick=()=>pick(prompts[k-1].id); if(nx) nx.onclick=()=>pick(prompts[k+1].id); }
     app.querySelectorAll('.tab').forEach(t=>t.onclick=()=>{ app.querySelectorAll('.tab').forEach(x=>x.classList.toggle('on',x===t)); app.querySelector('#pane-write').hidden=t.dataset.tab!=='write'; app.querySelector('#pane-model').hidden=t.dataset.tab!=='model' });
   });
