@@ -870,13 +870,15 @@ function showQ(){
   if(q.type==='mc'||q.type==='ms'){
     body = `<div class="opts" role="group">${q.options.map((o,k)=>`<button class="opt" data-k="${k}"><span class="l">${L[k]}</span><span>${esc(o)}</span></button>`).join('')}</div>
       ${q.type==='ms'?`<p class="hint">Select all that apply, then check.</p>`:''}
-      <div class="conf"><span>How sure are you?</span><button data-c="sure">Sure</button><button data-c="unsure">Not sure</button>${q.options.length>=3?`<button class="hintbtn" id="hintBtn">Remove one wrong answer</button>`:''}</div>`;
+      ${q.options.length>=3?`<div class="conf"><button class="hintbtn" id="hintBtn" style="margin-left:0">Remove one wrong answer</button></div>`:''}`;
   } else if(q.type==='gaps'){
     body = `<div class="gaps">${q.segments.map((s,k)=> esc(s) + (k<q.blanks.length ? `<select data-b="${k}" id="g${q.id}-${k}"><option value="">…</option>${shuffle(q.choices[k]).map(c=>`<option>${esc(c)}</option>`).join('')}</select>` : '')).join('')}</div>`;
   } else if(q.type==='text'){
-    body = `<input class="text" id="tx${q.id}" placeholder="Type your answer" autocomplete="off" autocapitalize="off">`;
+    body = `<input class="text" id="tx${q.id}" placeholder="Type your answer" autocomplete="off" autocapitalize="off">
+      <div class="conf"><span>How sure are you?</span><button data-c="sure">Sure</button><button data-c="unsure">Not sure</button></div>`;
   } else if(q.type==='short'){
-    body = `<textarea id="sh${q.id}" placeholder="Write your answer in a sentence or two"></textarea>`;
+    body = `<textarea id="sh${q.id}" placeholder="Write your answer in a sentence or two"></textarea>
+      <div class="conf"><span>How sure are you?</span><button data-c="sure">Sure</button><button data-c="unsure">Not sure</button></div>`;
   }
   if(music.on && music.mode==='auto' && musicUnit()!==music.current){ clearTimeout(music.timer); phrase() }
   h(`<div class="progress ${state.mode}"><span>${i+1} / ${list.length}</span><span class="track"><i style="width:${100*i/list.length}%"></i></span>${state.timed?`<span class="timer" id="timer">${fmt(state.left)}</span>`:`<button class="btn quiet" id="quit" style="padding:4px 8px">End</button>`}</div>
