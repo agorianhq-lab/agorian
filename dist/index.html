@@ -48,7 +48,13 @@ p{margin:0}
 /* header */
 header{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;padding:30px 0 14px;text-align:center;min-width:0}
 header>*{max-width:100%}
-.hdr-right{position:absolute;right:0;top:30px}
+.hdr-right{position:absolute;right:0;top:22px;display:grid;gap:8px;justify-items:end}
+.clock{display:grid;gap:2px;padding:12px 18px;border:1px solid color-mix(in srgb,var(--navy) 30%,var(--line));border-radius:14px;background:linear-gradient(135deg,color-mix(in srgb,var(--navy) 12%,var(--surface)),var(--surface) 70%);box-shadow:var(--shadow);text-align:right;min-width:170px}
+.clock .lbl{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--navy);font-weight:700}
+.clock .time{font-family:var(--display);font-weight:700;font-size:34px;line-height:1;color:var(--navy);font-variant-numeric:tabular-nums}
+.clock .time small{font-size:.5em;color:var(--muted);font-weight:500;margin-left:4px}
+.clock .date{font-size:13px;color:var(--muted)}
+@media (max-width:1000px){.hdr-right{position:static;margin:10px auto 0;justify-items:center}.clock{text-align:center}}
 .qotd{position:absolute;left:0;top:22px;width:320px;display:grid;gap:6px;padding:14px 18px 14px 20px;border:1px solid color-mix(in srgb,var(--gold) 45%,var(--line));background:linear-gradient(135deg,color-mix(in srgb,var(--gold) 18%,var(--surface)),var(--surface) 70%);border-radius:14px;text-align:left;box-shadow:var(--shadow);overflow:hidden}
 .qotd::before{content:"“";position:absolute;left:10px;top:-14px;font-family:var(--display);font-size:92px;line-height:1;color:var(--gold);opacity:.35;pointer-events:none}
 .qotd::after{content:"";position:absolute;right:-30px;bottom:-30px;width:110px;height:110px;border-radius:50%;background:radial-gradient(circle,color-mix(in srgb,var(--gold) 30%,transparent),transparent 70%);pointer-events:none}
@@ -388,7 +394,7 @@ footer{margin-top:40px;font-size:13px;color:var(--muted)}
   <button class="brand" id="homeBtn" aria-label="Agorian home"><span class="top"><span class="word"><span class="a">A<sup>+</sup></span>gorian</span></span><span class="desc">Year 8 History Revision</span></button>
   <aside class="qotd" id="qotd" hidden></aside>
   <button class="backbtn" id="backBtn" hidden aria-label="Back"><svg><use href="#ar-l"/></svg><span>Back</span></button>
-  <div class="hdr-right"><span class="pill" id="streak" hidden>Streak <b id="streakN">0</b></span></div>
+  <div class="hdr-right"><div class="clock" id="clock" aria-live="off"></div><span class="pill" id="streak" hidden>Streak <b id="streakN">0</b></span></div>
 </header>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="art-jp" viewBox="0 0 200 150">
@@ -1188,6 +1194,7 @@ function write(){
 }
 
 document.getElementById('homeBtn').onclick=home;
+(function tick(){ const d=new Date(); const el=document.getElementById('clock'); if(el){ const hh=d.getHours(), m=String(d.getMinutes()).padStart(2,'0'), ss=String(d.getSeconds()).padStart(2,'0'); const h12=((hh+11)%12)+1; el.innerHTML=`<span class="lbl">Melbourne</span><span class="time">${h12}:${m}<small>${ss} ${hh<12?'am':'pm'}</small></span><span class="date">${d.toLocaleDateString('en-AU',{weekday:'long',day:'numeric',month:'long'})}</span>` } setTimeout(tick, 1000-(Date.now()%1000)) })();
 home=screen(home); setup=screen(setup); challenge=screen(challenge); terms=screen(terms); write=screen(write); daily=screen(daily); timeline=screen(timeline); teacher=screen(teacher); sprint=screen(sprint); facts=screen(facts);
 document.getElementById('backBtn').onclick=goBack;
 const ROUTES={practice:setup, challenge, terms, write, daily, timeline, teacher, sprint, facts, success};
