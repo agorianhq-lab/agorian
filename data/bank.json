@@ -150,13 +150,13 @@
    "topic": "Source analysis",
    "skill": "Draw conclusions using evidence",
    "stimulus": "Adapted from a letter by a European merchant visiting Nagasaki, 1640s.",
-   "explanation": "Sakoku worked in both directions. The source shows restrictions on foreigners (Dutch and Chinese only, one island) and on Japanese (no sailing abroad, no return). The two highlighted phrases are the evidence for the second part.",
+   "explanation": "Sakoku worked in both directions. The source shows restrictions on foreigners (Dutch and Chinese only, one island) and on Japanese people (no sailing abroad, no return). The second sentence is the evidence for the Japanese side.",
    "source": "EP",
    "srcId": 7,
    "type": "mc",
-   "question": "Select the TWO sentences that give evidence that sakoku restricted the movement of Japanese people, not only foreigners.",
+   "question": "Select the sentence that gives evidence that sakoku restricted the movement of Japanese people, not only foreigners.",
    "options": [
-    "Only the Dutch and the Chinese may now trade here, and only on the small island built for them in the harbour.",
+    "Only the Dutch and the Chinese may now trade here, and only on a small island in the harbour.",
     "No Japanese ship may sail abroad and any Japanese who has lived overseas is forbidden to return.",
     "The missionaries have all been expelled and the Christian faith is outlawed on pain of death."
    ],
@@ -170,7 +170,7 @@
    "topic": "Chronology",
    "skill": "Read a timeline and order events",
    "stimulus": null,
-   "explanation": "The two units overlap in time. The first shogun ruled a century after Hastings and the Black Death struck Europe while the Kamakura shogunate was in power in Japan.",
+   "explanation": "The two units overlap in time. The first shogun ruled a century after Hastings and the Black Death struck Europe while the Ashikaga shogunate was in power in Japan.",
    "source": "EP",
    "srcId": 8,
    "type": "gaps",
@@ -187,7 +187,7 @@
    "blanks": [
     "Battle of Hastings, 1066",
     "First Crusade begins, 1096",
-    "Genpei War ends and Minamoto Yoritomo becomes shogun, 1192",
+    "Minamoto Yoritomo becomes the first shogun, 1192",
     "Black Death reaches Europe, 1347",
     "Battle of Sekigahara, 1600",
     "Commodore Perry arrives in Japan, 1853"
@@ -196,7 +196,7 @@
     [
      "Battle of Hastings, 1066",
      "First Crusade begins, 1096",
-     "Genpei War ends and Minamoto Yoritomo becomes shogun, 1192",
+     "Minamoto Yoritomo becomes the first shogun, 1192",
      "Black Death reaches Europe, 1347",
      "Battle of Sekigahara, 1600",
      "Commodore Perry arrives in Japan, 1853"
@@ -204,7 +204,7 @@
     [
      "Battle of Hastings, 1066",
      "First Crusade begins, 1096",
-     "Genpei War ends and Minamoto Yoritomo becomes shogun, 1192",
+     "Minamoto Yoritomo becomes the first shogun, 1192",
      "Black Death reaches Europe, 1347",
      "Battle of Sekigahara, 1600",
      "Commodore Perry arrives in Japan, 1853"
@@ -212,7 +212,7 @@
     [
      "Battle of Hastings, 1066",
      "First Crusade begins, 1096",
-     "Genpei War ends and Minamoto Yoritomo becomes shogun, 1192",
+     "Minamoto Yoritomo becomes the first shogun, 1192",
      "Black Death reaches Europe, 1347",
      "Battle of Sekigahara, 1600",
      "Commodore Perry arrives in Japan, 1853"
@@ -220,7 +220,7 @@
     [
      "Battle of Hastings, 1066",
      "First Crusade begins, 1096",
-     "Genpei War ends and Minamoto Yoritomo becomes shogun, 1192",
+     "Minamoto Yoritomo becomes the first shogun, 1192",
      "Black Death reaches Europe, 1347",
      "Battle of Sekigahara, 1600",
      "Commodore Perry arrives in Japan, 1853"
@@ -228,7 +228,7 @@
     [
      "Battle of Hastings, 1066",
      "First Crusade begins, 1096",
-     "Genpei War ends and Minamoto Yoritomo becomes shogun, 1192",
+     "Minamoto Yoritomo becomes the first shogun, 1192",
      "Black Death reaches Europe, 1347",
      "Battle of Sekigahara, 1600",
      "Commodore Perry arrives in Japan, 1853"
@@ -236,7 +236,7 @@
     [
      "Battle of Hastings, 1066",
      "First Crusade begins, 1096",
-     "Genpei War ends and Minamoto Yoritomo becomes shogun, 1192",
+     "Minamoto Yoritomo becomes the first shogun, 1192",
      "Black Death reaches Europe, 1347",
      "Battle of Sekigahara, 1600",
      "Commodore Perry arrives in Japan, 1853"
@@ -793,44 +793,44 @@
    "segments": [
     "The",
     "in Rome was head of the Church. Below him,",
-    "oversaw large regions called dioceses from their cathedrals. In each village, a",
+    "oversaw large regions called dioceses from their cathedrals. In each village,",
     "conducted mass and heard confession.",
     "lived apart in monasteries and convents, praying, copying books and caring for the sick."
    ],
    "blanks": [
     "Pope",
     "bishops",
-    "priest",
+    "priests",
     "Monks and nuns"
    ],
    "choices": [
     [
      "Pope",
      "bishops",
-     "priest",
+     "priests",
      "Monks and nuns",
-     "cardinals"
+     "nobles"
     ],
     [
      "Pope",
      "bishops",
-     "priest",
+     "priests",
      "Monks and nuns",
-     "cardinals"
+     "nobles"
     ],
     [
      "Pope",
      "bishops",
-     "priest",
+     "priests",
      "Monks and nuns",
-     "cardinals"
+     "nobles"
     ],
     [
      "Pope",
      "bishops",
-     "priest",
+     "priests",
      "Monks and nuns",
-     "cardinals"
+     "nobles"
     ]
    ],
    "id": 32
@@ -1147,7 +1147,7 @@
    "topic": "The Black Death",
    "skill": "Perspectives and beliefs",
    "stimulus": null,
-   "explanation": "Most people believed the plague was divine punishment. Flagellants tried to atone through pain. The Church eventually condemned them, which is why option D is wrong.",
+   "explanation": "Most people believed the plague was divine punishment. Flagellants tried to atone through pain. The Church eventually condemned them, which is why the last option is wrong.",
    "source": "EP",
    "srcId": 48,
    "type": "mc",
@@ -1189,7 +1189,7 @@
    "topic": "The Black Death",
    "skill": "Short-term impacts",
    "stimulus": null,
-   "explanation": "Estimates range from a third to a half, roughly 25 million people. This scale is why the impacts were so deep and long-lasting.",
+   "explanation": "Estimates range from a third to a half, at least 25 million people. This scale is why the impacts were so deep and long-lasting.",
    "source": "EP",
    "srcId": 50,
    "type": "mc",
@@ -1356,7 +1356,7 @@
    "topic": "Feudalism and samurai",
    "skill": "Geography and development",
    "stimulus": null,
-   "explanation": "The sea was both a shield and a source of food and trade. Contact with China and Korea did occur, bringing Buddhism and writing, so option D is wrong.",
+   "explanation": "The sea was both a shield and a source of food and trade. Contact with China and Korea did occur, bringing Buddhism and writing.",
    "source": "EP",
    "srcId": 57,
    "type": "ms",
@@ -1843,7 +1843,7 @@
    "topic": "Meiji Restoration",
    "skill": "Cause and effect",
    "stimulus": null,
-   "explanation": "The shogun's title literally meant barbarian-subduing general. Signing unequal treaties under threat destroyed the shogunate's claim to rule.",
+   "explanation": "The shogun's title literally meant barbarian-subduing general. Signing treaties signed under threat of force under threat destroyed the shogunate's claim to rule.",
    "source": "EP",
    "srcId": 77,
    "type": "mc",
@@ -1892,7 +1892,7 @@
    "question": "What happened in 1868?",
    "options": [
     "Perry arrived in Japan",
-    "The last Tokugawa shogun gave up power and rule was restored to the emperor, who took the name Meiji",
+    "The last Tokugawa shogun gave up power and rule was restored to the emperor, whose reign became known as the Meiji era",
     "Japan defeated Russia",
     "The Battle of Sekigahara"
    ],
@@ -2293,7 +2293,7 @@
    "unit": "Medieval Europe",
    "topic": "The Crusades",
    "skill": "",
-   "stimulus": null,
+   "stimulus": "Adapted from Fulcher of Chartres, a chronicler living in the Crusader states, c. 1127.",
    "explanation": "The source describes contact and trade. Reading the evidence in the source, not just recalling facts, is what the exam rewards.",
    "source": "Socrative",
    "srcId": "soc_exam",
@@ -2617,7 +2617,7 @@
   },
   {
    "unit": "Shogunate Japan",
-   "topic": "Meiji Restoration",
+   "topic": "Tokugawa Shogunate",
    "skill": "",
    "stimulus": null,
    "explanation": "Historians argue Perry was the trigger that exposed existing weaknesses, including poor samurai, peasant unrest and a rigid class system.",
@@ -2680,7 +2680,7 @@
    "srcId": "soc_exam",
    "type": "short",
    "question": "Explain how Commodore Perry's arrival in 1853 contributed to the fall of the Tokugawa shogunate.",
-   "model": "Model answer. Perry's warships forced the shogun to sign unequal treaties and open ports. This showed the shogunate could not protect Japan, so daimyo and samurai lost faith in it and rallied to the emperor, leading to its collapse in 1868.",
+   "model": "Model answer. Perry's warships forced the shogun to sign treaties signed under threat of force and open ports. This showed the shogunate could not protect Japan, so daimyo and samurai lost faith in it and rallied to the emperor, leading to its collapse in 1868.",
    "id": 118
   },
   {
@@ -3161,7 +3161,7 @@
   },
   {
    "unit": "Shogunate Japan",
-   "topic": "Meiji Restoration",
+   "topic": "Tokugawa Shogunate",
    "skill": "",
    "stimulus": null,
    "explanation": "Model answer. Samurai in debt to merchants, peasant uprisings and famines, or daimyo in the south-west (Satsuma, Choshu) resenting Tokugawa control.",
@@ -3421,7 +3421,7 @@
   },
   {
    "unit": "Medieval Europe",
-   "topic": "The Black Death",
+   "topic": "Catholic Church",
    "skill": "",
    "stimulus": null,
    "explanation": "Model answer. The Crusades showed the Pope could unite kings and knights behind one cause and brought the Church land and wealth. The Black Death showed the Church could not stop or explain the plague, and many clergy died or fled.",
