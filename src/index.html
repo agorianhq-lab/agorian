@@ -114,7 +114,11 @@ header{position:relative;display:flex;flex-direction:column;align-items:center;j
 .topic{--u:var(--sk);--us:var(--sk-soft);border-left:4px solid var(--u);background:linear-gradient(90deg,var(--us),var(--surface) 55%)}
 .topic.eu{--u:var(--eu);--us:var(--eu-soft)} .topic.jp{--u:var(--jp);--us:var(--jp-soft)}
 .topic{transition:transform .15s,box-shadow .15s,border-color .15s}
-.topic:hover{border-color:var(--u);transform:translateX(3px);box-shadow:0 0 0 2px color-mix(in srgb,var(--u) 30%,transparent),0 10px 22px -12px color-mix(in srgb,var(--u) 50%,transparent)}
+.topic:hover{border-color:var(--u);background:var(--u);transform:translateX(3px);box-shadow:0 10px 22px -12px color-mix(in srgb,var(--u) 70%,transparent)}
+.topic:hover .name,.topic:hover .meta{color:#fff}
+.topic:hover .bar{background:rgba(255,255,255,.3)} .topic:hover .bar i{background:#fff}
+.topic:hover .badge{box-shadow:0 0 0 2px rgba(255,255,255,.7)}
+.topic .name,.topic .meta,.topic .bar,.topic .bar i{transition:color .15s,background .15s}
 .topic .name{color:var(--u)}
 .topic .uic{width:16px;height:16px;color:var(--u);flex:none}
 .unit .eyebrow{display:flex;align-items:center;gap:6px}
