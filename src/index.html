@@ -56,6 +56,10 @@ header{position:relative;display:flex;flex-direction:column;align-items:center;j
 .qotd .q{font-family:var(--display);font-size:17px;line-height:1.4;color:var(--ink);font-style:italic;position:relative;padding-left:8px}
 .qotd .a{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:700;position:relative;padding-left:8px}
 .qotd .a::before{content:"— ";color:var(--gold-ink)}
+.qotd canvas.scratch{position:absolute;inset:0;width:100%;height:100%;border-radius:14px;cursor:crosshair;touch-action:none;z-index:2;transition:opacity .5s}
+.qotd canvas.scratch.done{opacity:0;pointer-events:none}
+.qotd .revealbtn{position:absolute;right:10px;bottom:8px;z-index:3;font-size:11px;letter-spacing:.06em;text-transform:uppercase;font-weight:700;border:0;background:none;color:var(--gold-ink);cursor:pointer;opacity:.8}
+.qotd .revealbtn.done{display:none}
 @media (max-width:1000px){.qotd{position:static;width:auto;max-width:520px;margin:12px auto 0;text-align:left}}
 .backbtn{position:absolute;left:0;top:34px;display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:8px 14px 8px 10px;font-weight:700;cursor:pointer;color:var(--navy)}
 .backbtn svg{width:18px;height:18px}
@@ -474,7 +478,29 @@ const QUOTES=[
  ['We suffer more often in imagination than in reality.','Seneca'],
  ['Rome was not built in a day.','Medieval proverb'],
 ];
-function quoteOfDay(){ const n=Math.floor(Date.now()/36e5); const [q,a]=QUOTES[n%QUOTES.length]; const el=document.getElementById('qotd'); el.innerHTML=`<span class="lbl">Quote of the hour</span><span class="q">${esc(q)}</span><span class="a">${esc(a)}</span>`; }
+function quoteOfDay(){ const n=Math.floor(Date.now()/36e5); const [q,a]=QUOTES[n%QUOTES.length]; const el=document.getElementById('qotd');
+  el.innerHTML=`<span class="lbl">Quote of the hour</span><span class="q">${esc(q)}</span><span class="a">${esc(a)}</span><canvas class="scratch" aria-hidden="true"></canvas><button class="revealbtn" type="button">Reveal</button>`;
+  if(store.get('qRevealed',-1)===n || REDUCED){ el.querySelector('.scratch').classList.add('done'); el.querySelector('.revealbtn').classList.add('done'); return }
+  requestAnimationFrame(()=>scratchCard(el, ()=>store.set('qRevealed',n)));
+}
+function scratchCard(el, onDone){
+  const c=el.querySelector('.scratch'), btn=el.querySelector('.revealbtn'); const r=el.getBoundingClientRect(); const dpr=Math.min(2,devicePixelRatio||1);
+  c.width=Math.round(r.width*dpr); c.height=Math.round(r.height*dpr); const x=c.getContext('2d'); x.scale(dpr,dpr);
+  // gold foil with a faint meander and a hint
+  const g=x.createLinearGradient(0,0,r.width,r.height); g.addColorStop(0,'#E2B45C'); g.addColorStop(.5,'#CF9A3A'); g.addColorStop(1,'#B9852E'); x.fillStyle=g; x.fillRect(0,0,r.width,r.height);
+  x.strokeStyle='rgba(255,255,255,.22)'; x.lineWidth=2; for(let i=-r.height;i<r.width;i+=14){ x.beginPath(); x.moveTo(i,0); x.lineTo(i+r.height,r.height); x.stroke() }
+  x.fillStyle='rgba(30,36,54,.85)'; x.font='700 12px '+getComputedStyle(document.body).fontFamily; x.textAlign='center'; x.fillText('QUOTE OF THE HOUR',r.width/2,r.height/2-10);
+  x.font='italic 500 16px Fraunces, Georgia, serif'; x.fillText('Scratch to reveal',r.width/2,r.height/2+12);
+  x.globalCompositeOperation='destination-out'; x.strokeStyle='#000'; x.fillStyle='#000'; x.lineCap='round'; x.lineJoin='round'; x.lineWidth=34;
+  let drawing=false, last=null, cleared=0, done=false;
+  const pt=e=>{ const b=c.getBoundingClientRect(); return {x:e.clientX-b.left, y:e.clientY-b.top} };
+  const finish=()=>{ if(done) return; done=true; c.classList.add('done'); btn.classList.add('done'); onDone&&onDone() };
+  const check=()=>{ const d=x.getImageData(0,0,c.width,c.height).data; let t=0; for(let i=3;i<d.length;i+=4*16) if(d[i]===0) t++; cleared=t/(d.length/(4*16)); if(cleared>.45) finish() };
+  c.onpointerdown=e=>{ drawing=true; last=pt(e); c.setPointerCapture(e.pointerId); x.beginPath(); x.arc(last.x,last.y,17,0,7); x.fill() };
+  c.onpointermove=e=>{ if(!drawing) return; const p=pt(e); x.beginPath(); x.moveTo(last.x,last.y); x.lineTo(p.x,p.y); x.stroke(); last=p };
+  c.onpointerup=c.onpointercancel=()=>{ if(!drawing) return; drawing=false; check() };
+  btn.onclick=finish;
+}
 const today = () => new Date().toISOString().slice(0,10);
 function mastery(t){ const s=topicStats(t); if(s.a<8) return null; const p=s.c/s.a; return p>=.95?'gold':p>=.8?'silver':p>=.6?'bronze':null }
 const REDUCED = matchMedia('(prefers-reduced-motion: reduce)').matches;
