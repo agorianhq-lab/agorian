@@ -46,19 +46,22 @@ p{margin:0}
 .sr{position:absolute;left:-9999px}
 
 /* header */
-header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 0 8px}
-.brand .mark{align-self:center;flex:none}
-.brand{display:flex;align-items:baseline;gap:10px;background:none;border:0;padding:0;cursor:pointer}
-.brand .word{font-family:var(--display);font-weight:700;font-size:32px;letter-spacing:-.01em;color:var(--navy)}
+header{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;padding:30px 0 14px;text-align:center}
+.hdr-right{position:absolute;right:0;top:30px}
+.brand .mark{align-self:center;flex:none;width:52px;height:52px}
+.brand{display:flex;flex-direction:column;align-items:center;gap:6px;background:none;border:0;padding:0;cursor:pointer}
+.brand .top{display:flex;align-items:center;gap:14px}
+.brand .word{font-family:var(--display);font-weight:700;font-size:clamp(44px,5vw,64px);letter-spacing:-.01em;color:var(--navy);line-height:1}
 .brand .word span{color:var(--accent)}
-.brand .desc{font-size:14px;color:var(--muted)}
+.brand .desc{font-family:var(--display);font-size:clamp(17px,1.6vw,22px);color:var(--muted);letter-spacing:.02em}
 .hdr-right{display:flex;gap:8px;align-items:center}
 .pill{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);border-radius:999px;padding:4px 10px;font-size:13px;background:var(--surface);color:var(--muted)}
 .pill b{color:var(--ink);font-variant-numeric:tabular-nums}
 
 /* home */
-.hero{padding:28px 0 20px;display:grid;gap:10px}
-.herogrid{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center}
+.hero{padding:18px 0 20px;display:grid;gap:14px}
+.hero h1{text-align:center}
+.herogrid{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start}
 .herogrid .pic{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--line);background:var(--surface)}
 .herogrid .pic img{display:block;width:100%;height:auto}
 .herogrid .pic .cap{font-size:12px;color:var(--muted);padding:8px 12px;line-height:1.45}
@@ -261,12 +264,12 @@ table.tt{width:100%;border-collapse:collapse;font-size:14px}
 canvas#fx{position:fixed;inset:0;pointer-events:none;z-index:50}
 footer{margin-top:40px;font-size:13px;color:var(--muted)}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
-@media (max-width:480px){.brand .desc{display:none}.score{grid-template-columns:1fr}.topic .meta .bar{display:none}}
+@media (max-width:480px){.score{grid-template-columns:1fr}.topic .meta .bar{display:none}}
 </style>
 
 <div class="wrap" id="top">
 <header>
-  <button class="brand" id="homeBtn" aria-label="Agorian home"><svg class="mark" viewBox="0 0 40 40" width="32" height="32" aria-hidden="true"><path d="M4 12 V4 H12 M28 4 H36 V12 M36 28 V36 H28 M12 36 H4 V28" fill="none" stroke="var(--navy)" stroke-width="3.5" stroke-linecap="square"/><path d="M17 10 L26.5 31 H22.3 L20.3 26.4 H13.7 L11.7 31 H7.5 Z M15 22.2 H19 L17 17.3 Z" fill="var(--accent)" fill-rule="evenodd"/><path d="M30.5 12 V20 M26.5 16 H34.5" stroke="var(--accent)" stroke-width="2.6" stroke-linecap="round"/></svg><span class="word">Agor<span>ian</span></span><span class="desc">Year 8 Humanities revision</span></button>
+  <button class="brand" id="homeBtn" aria-label="Agorian home"><span class="top"><svg class="mark" viewBox="0 0 40 40" width="52" height="52" aria-hidden="true"><path d="M4 12 V4 H12 M28 4 H36 V12 M36 28 V36 H28 M12 36 H4 V28" fill="none" stroke="var(--navy)" stroke-width="3.5" stroke-linecap="square"/><path d="M17 10 L26.5 31 H22.3 L20.3 26.4 H13.7 L11.7 31 H7.5 Z M15 22.2 H19 L17 17.3 Z" fill="var(--accent)" fill-rule="evenodd"/><path d="M30.5 12 V20 M26.5 16 H34.5" stroke="var(--accent)" stroke-width="2.6" stroke-linecap="round"/></svg><span class="word">Agor<span>ian</span></span></span><span class="desc">Year 8 History Revision</span></button>
   <div class="hdr-right"><span class="pill" id="streak" hidden>Streak <b id="streakN">0</b></span></div>
 </header>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -418,7 +421,6 @@ function home(){
   const dailyDone = store.get('dailyDate','')===today(), dayStreak=store.get('dayStreak',0), best=store.get('best',0);
   h(`
   <section class="hero">
-    <p class="eyebrow">Semester 2 History exam</p>
     <h1><em>Challenge</em> what you know.</h1>
     <div class="herogrid">
       <p>The agora was the open square of Athens where citizens traded, voted and were questioned by Socrates. This is yours. Quick questions with an explanation after every answer, timed challenges, a timeline game, flashcards for the key terms and exam style paragraph prompts, all across Medieval Europe and Shogunate Japan.</p>
