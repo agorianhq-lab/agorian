@@ -515,7 +515,8 @@ const topicsIn = unit => [...new Set(Q.filter(q=>q.unit===unit && q.type!=='exte
 const L = 'ABCDEFGH';
 function h(html){ app.innerHTML = html; window.scrollTo({top:0}); const qe=document.getElementById('qotd'); if(qe && !html.includes('class="hero"')) qe.hidden=true; }
 const hist=[]; let navLock=false;
-function screen(fn){ return function(...a){ if(!navLock){ const top=hist[hist.length-1]; if(!top||top.fn!==fn||JSON.stringify(top.a)!==JSON.stringify(a)) hist.push({fn,a}); if(hist.length>30) hist.shift(); } const b=document.getElementById('backBtn'); if(b) b.hidden=hist.length<2; return fn.apply(this,a) } }
+function screen(fn){ return function(...a){ if(!navLock){ const top=hist[hist.length-1]; if(!top||top.fn!==fn||JSON.stringify(top.a)!==JSON.stringify(a)) hist.push({fn,a}); if(hist.length>30) hist.shift(); } if(fn===HOME_FN) hist.splice(0, hist.length-1); const b=document.getElementById('backBtn'); if(b) b.hidden=hist.length<2; return fn.apply(this,a) } }
+let HOME_FN=null;
 function goBack(){ if(hist.length<2) return; hist.pop(); const prev=hist[hist.length-1]; navLock=true; try{ prev.fn.apply(null,prev.a) } finally { navLock=false } const b=document.getElementById('backBtn'); if(b) b.hidden=hist.length<2 }
 const pager=(i,n,label)=>`<div class="pager"><button class="arrow" id="pg-prev" ${i<=0?'disabled':''}><svg><use href="#ar-l"/></svg>Previous</button><span class="where">${label}</span><button class="arrow" id="pg-next" ${i>=n-1?'disabled':''}>Next<svg><use href="#ar-r"/></svg></button></div>`;
 
@@ -1278,7 +1279,7 @@ function write(){
   app.querySelector('#home').onclick=home; app.querySelector('#succ').onclick=()=>success();
 }
 
-document.getElementById('homeBtn').onclick=home;
+document.getElementById('homeBtn').onclick=()=>home();
 document.getElementById('sndBtn').onclick=()=>setSound(!soundOn); setSound(soundOn);
 document.getElementById('musBtn').onclick=()=>setMusic(!music.on);
 const ab=document.getElementById('audioBtn'), ap=document.getElementById('audioPop'); ab.onclick=e=>{ e.stopPropagation(); ap.hidden=!ap.hidden; ab.setAttribute('aria-expanded',!ap.hidden) }; ap.onclick=e=>e.stopPropagation(); document.addEventListener('click',()=>{ ap.hidden=true; ab.setAttribute('aria-expanded','false') });
@@ -1286,7 +1287,7 @@ const mm=document.getElementById('musMode'); mm.value=music.mode; mm.onchange=()
 const mv=document.getElementById('musVol'); mv.value=music.vol; mv.oninput=()=>{ music.vol=+mv.value; store.set('musVol',music.vol); if(music.master&&actx) music.master.gain.setTargetAtTime(music.vol/100*.6, actx.currentTime, .1) };
 document.addEventListener('visibilitychange',()=>{ if(document.hidden&&music.on){ clearTimeout(music.timer) } else if(music.on){ phrase() } });
 (function tick(){ const d=new Date(); const el=document.getElementById('clock'); if(el){ const hh=d.getHours(), m=String(d.getMinutes()).padStart(2,'0'), ss=String(d.getSeconds()).padStart(2,'0'); const h12=((hh+11)%12)+1; el.innerHTML=`<span class="lbl">Melbourne</span><span class="time">${h12}:${m}<small>${hh<12?'am':'pm'}</small></span><span class="date">${d.toLocaleDateString('en-AU',{weekday:'long',day:'numeric',month:'long'})}</span>` } setTimeout(tick, 60000-(Date.now()%60000)+50) })();
-home=screen(home); setup=screen(setup); challenge=screen(challenge); terms=screen(terms); write=screen(write); daily=screen(daily); timeline=screen(timeline); teacher=screen(teacher); sprint=screen(sprint); facts=screen(facts);
+HOME_FN=home; home=screen(home); setup=screen(setup); challenge=screen(challenge); terms=screen(terms); write=screen(write); daily=screen(daily); timeline=screen(timeline); teacher=screen(teacher); sprint=screen(sprint); facts=screen(facts);
 document.getElementById('backBtn').onclick=goBack;
 const ROUTES={practice:setup, challenge, terms, write, daily, timeline, teacher, sprint, facts, success};
 const r=(location.hash||'').slice(1); (ROUTES[r]||home)();
