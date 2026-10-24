@@ -424,7 +424,8 @@ footer{margin-top:40px;font-size:13px;color:var(--muted)}
 'use strict';
 const BANK = JSON.parse(document.getElementById('bank').textContent);
 const Q = BANK.questions, TERMS = BANK.terms;
-const LOG_ENDPOINT = null; // set to an Apps Script URL to log anonymous answers
+const LOG_ENDPOINT = null; // Apps Script web app URL (see logging/Code.gs). null = no logging.
+const TEACHER_CSV = null;  // published-to-web CSV link of the 'events' sheet. null = teacher view uses this device only.
 const app = document.getElementById('app');
 const UNITS = ['Medieval Europe','Shogunate Japan','Skills and concepts'];
 const AUTO = new Set(['mc','ms','gaps','text']);
@@ -439,7 +440,7 @@ let sessionId = store.get('sid', null); if(!sessionId){ sessionId = Math.random(
 
 function log(ev){
   if(!LOG_ENDPOINT) return;
-  try{ fetch(LOG_ENDPOINT,{method:'POST',mode:'no-cors',body:JSON.stringify(Object.assign({sid:sessionId,t:Date.now()},ev))}) }catch(e){}
+  try{ fetch(LOG_ENDPOINT,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain'},body:JSON.stringify(Object.assign({sid:sessionId,t:Date.now()},ev)),keepalive:true}) }catch(e){}
 }
 function record(q, correct){
   const s = stats[q.id] || {a:0,c:0}; s.a++; if(correct) s.c++; stats[q.id]=s; store.set('stats', stats);
@@ -984,15 +985,25 @@ function sprint(){
 }
 
 // ---------- teacher view (local data now, class logging later) ----------
-function teacher(){
-  const rows=Q.filter(q=>AUTO.has(q.type)).map(q=>({q,s:stats[q.id]||{a:0,c:0}})).filter(r=>r.s.a).sort((a,b)=>(a.s.c/a.s.a)-(b.s.c/b.s.a));
-  const byT=UNITS.flatMap(u=>topicsIn(u).map(t=>({t,s:topicStats(t)}))).filter(r=>r.s.a).sort((a,b)=>(a.s.c/a.s.a)-(b.s.c/b.s.a));
+function parseCSV(txt){ const out=[]; let row=[],cell='',q=false; for(let i=0;i<txt.length;i++){ const ch=txt[i]; if(q){ if(ch==='"'){ if(txt[i+1]==='"'){cell+='"';i++} else q=false } else cell+=ch } else if(ch==='"') q=true; else if(ch===','){row.push(cell);cell=''} else if(ch==='\n'){row.push(cell);out.push(row);row=[];cell=''} else if(ch!=='\r') cell+=ch } if(cell||row.length){row.push(cell);out.push(row)} return out }
+async function classStats(){
+  const r=await fetch(TEACHER_CSV,{cache:'no-store'}); const rows=parseCSV(await r.text()); const h=rows.shift(); const i=Object.fromEntries(h.map((k,n)=>[k,n]));
+  const st={}; const sids=new Set(); let events=0;
+  rows.forEach(r=>{ if(!r[i.qid]||r[i.event]) return; events++; sids.add(r[i.sid]); const id=+r[i.qid]; st[id]=st[id]||{a:0,c:0}; st[id].a++; if(+r[i.correct]===1) st[id].c++ });
+  return {st, devices:sids.size, events};
+}
+async function teacher(){
+  let src=stats, note='answers recorded on <b>this device</b>', extra='';
+  if(TEACHER_CSV){ try{ const c=await classStats(); src=c.st; note=`<b>${c.events}</b> answers from <b>${c.devices}</b> devices in the class log`; }catch(e){ extra='<p class="hint">Could not reach the class log, showing this device instead.</p>' } }
+  const tstat=t=>{ let a=0,c=0; Q.filter(q=>q.topic===t && AUTO.has(q.type)).forEach(q=>{const s=src[q.id]; if(s){a+=s.a;c+=s.c}}); return {a,c} };
+  const rows=Q.filter(q=>AUTO.has(q.type)).map(q=>({q,s:src[q.id]||{a:0,c:0}})).filter(r=>r.s.a).sort((a,b)=>(a.s.c/a.s.a)-(b.s.c/b.s.a));
+  const byT=UNITS.flatMap(u=>topicsIn(u).map(t=>({t,s:tstat(t)}))).filter(r=>r.s.a).sort((a,b)=>(a.s.c/a.s.a)-(b.s.c/b.s.a));
   const csv='id,unit,topic,type,question,attempts,correct,accuracy\n'+rows.map(r=>[r.q.id,r.q.unit,r.q.topic,r.q.type,JSON.stringify(r.q.question),r.s.a,r.s.c,Math.round(100*r.s.c/r.s.a)].join(',')).join('\n');
   h(`<section class="section"><h2>Teacher view</h2>
-  <p class="muted">Question difficulty from answers recorded on <b>this device</b>. When class logging is connected, this page reads the whole class instead. Hardest first.</p>
+  <p class="muted">Question difficulty from ${note}. Hardest first.</p>${extra}
   ${rows.length?`<div class="card"><div><p class="eyebrow" style="margin-bottom:8px">Topics</p><div class="bytopic">${byT.map(r=>`<div class="bt"><div><div style="margin-bottom:4px">${esc(r.t)}</div><div class="bar"><i style="width:${100*r.s.c/r.s.a}%;background:${r.s.c/r.s.a<.6?'var(--accent)':'var(--sage)'}"></i></div></div><span class="n">${Math.round(100*r.s.c/r.s.a)}% · ${r.s.a}</span></div>`).join('')}</div></div>
     <div><p class="eyebrow" style="margin-bottom:8px">Questions</p><div class="tbl"><table class="tt"><thead><tr><th>Question</th><th>Topic</th><th class="n">Tries</th><th class="n">Correct</th></tr></thead><tbody>${rows.map(r=>`<tr><td>${esc(r.q.question)}</td><td class="muted">${esc(r.q.topic)}</td><td class="n">${r.s.a}</td><td class="n ${r.s.c/r.s.a<.5?'lo':''}">${Math.round(100*r.s.c/r.s.a)}%</td></tr>`).join('')}</tbody></table></div></div>
-    <div class="row"><button class="btn" id="csv">Copy as CSV</button><button class="btn quiet" id="home">Home</button></div></div>`:`<div class="card"><p>No answers recorded on this device yet.</p><div class="row"><button class="btn quiet" id="home">Home</button></div></div>`}
+    <div class="row"><button class="btn" id="csv">Copy as CSV</button><button class="btn quiet" id="home">Home</button></div></div>`:`<div class="card"><p>No answers recorded yet.</p><div class="row"><button class="btn quiet" id="home">Home</button></div></div>`}
   </section>`);
   const c=app.querySelector('#csv'); if(c) c.onclick=async e=>{ try{ await navigator.clipboard.writeText(csv); e.target.textContent='Copied' }catch(err){ e.target.textContent='Copy blocked' } };
   app.querySelector('#home').onclick=home;
