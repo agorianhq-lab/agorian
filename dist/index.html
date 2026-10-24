@@ -100,9 +100,7 @@ header>*{max-width:100%}
 .hero h1{font-size:clamp(36px,5.5vw,60px);color:var(--navy)}
 .hero h1 em{font-style:italic;color:var(--accent)}
 .hero p{max-width:60ch;color:var(--muted)}
-.herotext{display:grid;gap:14px;align-content:start}
-.herotext>p+p{font-size:clamp(18px,1.6vw,22px);color:var(--muted)}
-.herotext>.daily{margin-top:4px}
+.herotext{display:grid;gap:18px;align-content:start}
 .herotext>p{color:var(--ink);font-family:var(--display);font-weight:500;font-size:clamp(21px,2vw,27px);line-height:1.5}
 .modes{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:16px}
 @media (max-width:900px){.modes{grid-template-columns:repeat(2,1fr)}}
@@ -798,7 +796,7 @@ function home(){
       <div class="namerow"><label for="nameIn" class="hint">Your name</label><input class="text" id="nameIn" placeholder="First name and initial" autocomplete="off" value="${esc(studentName)}"><button class="btn primary" id="goWelcome">Let’s go</button><button class="soundbtn ${soundOn?'on':''}" id="snd0">${soundOn?'&#9835; Sound on':'&#9835; Sound off'}</button></div></div>`}
     <h1><em>Challenge</em> what you know.</h1>
     <div class="herogrid">
-      <div class="herotext"><p>The agora was the open square of Athens where citizens traded, voted and were questioned by Socrates. This is yours.</p><p>Quick questions with an explanation after every answer, timed challenges, a timeline game, flashcards for the key terms and exam style paragraph prompts, all across Medieval Europe and Shogunate Japan.</p>
+      <div class="herotext"><p>The agora was the open square of Athens where citizens traded, voted and were questioned by Socrates. This is yours. Quick questions with an explanation after every answer, timed challenges, a timeline game, flashcards for the key terms and exam style paragraph prompts, all across Medieval Europe and Shogunate Japan.</p>
       <div class="daily">
         <div><p class="t">Today’s ten</p><p class="n">${dailyDone?'Done for today. Back tomorrow for the next set.':`Ten questions aimed at what you find hardest.${(()=>{const d=Q.filter(q=>AUTO.has(q.type)&&stats[q.id]&&stats[q.id].due&&stats[q.id].due<=Date.now()).length; return d?` ${d} due for a return visit.`:''})()}`} ${dayStreak>1?`Day streak <b>${dayStreak}</b>.`:''}</p></div>
         <button class="btn ${dailyDone?'done':''}" data-go="daily">${dailyDone?'Do it again':'Start'}</button>
