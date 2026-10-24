@@ -13,13 +13,13 @@
  *  5. In the Sheet: File > Share > Publish to web > sheet "events", format CSV, Publish.
  *     Copy that CSV link into TEACHER_CSV in the site to make the teacher view read the whole class.
  *
- * What is stored: a timestamp, a random per-device session id (no names, no logins),
- * the question id, unit, topic, type, mode, and whether the answer was correct.
- * Nothing identifies a student.
+ * What is stored: a timestamp, a per-device session id, the name the student typed,
+ * the question id, unit, topic, type, mode, whether the answer was correct,
+ * the confidence they chose (sure/unsure) and whether they used a hint.
  */
 
 const SHEET = 'events';
-const HEAD = ['received', 'sid', 't', 'event', 'mode', 'qid', 'unit', 'topic', 'type', 'correct', 'n', 'c', 'miss', 'right', 'secs'];
+const HEAD = ['received', 'sid', 'name', 't', 'event', 'mode', 'qid', 'unit', 'topic', 'type', 'correct', 'conf', 'hint', 'n', 'c', 'miss', 'right', 'secs'];
 
 function doPost(e) {
   try {

@@ -49,11 +49,11 @@ p{margin:0}
 header{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;padding:30px 0 14px;text-align:center;min-width:0}
 header>*{max-width:100%}
 .hdr-right{position:absolute;right:0;top:22px;display:grid;gap:8px;justify-items:end}
-.clock{display:grid;gap:2px;padding:12px 18px;border:1px solid color-mix(in srgb,var(--navy) 30%,var(--line));border-radius:14px;background:linear-gradient(135deg,color-mix(in srgb,var(--navy) 12%,var(--surface)),var(--surface) 70%);box-shadow:var(--shadow);text-align:right;min-width:170px}
+.clock{display:grid;gap:3px;padding:14px 20px;width:220px;border:1px solid color-mix(in srgb,var(--navy) 30%,var(--line));border-radius:14px;background:linear-gradient(135deg,color-mix(in srgb,var(--navy) 12%,var(--surface)),var(--surface) 70%);box-shadow:var(--shadow);text-align:right;min-width:170px}
 .clock .lbl{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--navy);font-weight:700}
-.clock .time{font-family:var(--display);font-weight:700;font-size:34px;line-height:1;color:var(--navy);font-variant-numeric:tabular-nums}
+.clock .time{font-family:var(--display);font-weight:700;font-size:40px;line-height:1;color:var(--navy);font-variant-numeric:tabular-nums}
 .clock .time small{font-size:.5em;color:var(--muted);font-weight:500;margin-left:4px}
-.clock .date{font-size:13px;color:var(--muted)}
+.clock .date{font-size:14px;color:var(--muted)}
 @media (max-width:1000px){.hdr-right{position:static;margin:10px auto 0;justify-items:center}.clock{text-align:center}}
 .qotd{position:absolute;left:0;top:22px;width:320px;display:grid;gap:6px;padding:14px 18px 14px 20px;border:1px solid color-mix(in srgb,var(--gold) 45%,var(--line));background:linear-gradient(135deg,color-mix(in srgb,var(--gold) 18%,var(--surface)),var(--surface) 70%);border-radius:14px;text-align:left;box-shadow:var(--shadow);overflow:hidden}
 .qotd::before{content:"“";position:absolute;left:10px;top:-14px;font-family:var(--display);font-size:92px;line-height:1;color:var(--gold);opacity:.35;pointer-events:none}
@@ -349,6 +349,26 @@ input.text.right{border-color:var(--ok);background:var(--ok-bg)} input.text.wron
 .fact .lamp{width:28px;height:28px;border-radius:50%;background:var(--gold);display:grid;place-items:center;color:#1E2436;font-family:var(--display);font-weight:700;font-size:16px}
 .fact b{display:block;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:2px}
 .fact.home{margin-top:18px}
+/* welcome card */
+.welcome{background:var(--surface);border:1px solid var(--line);border-left:6px solid var(--accent);border-radius:var(--radius);padding:22px 24px;display:grid;gap:14px;box-shadow:var(--shadow);margin-top:6px}
+.welcome h2{font-size:26px;color:var(--navy)}
+.welcome ol{margin:0;padding-left:22px;display:grid;gap:6px;font-size:17px}
+.welcome .namerow{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.welcome input.text{max-width:320px}
+.who{font-size:14px;color:var(--muted);order:3;margin-top:2px} .who b{color:var(--ink)} .who button{border:0;background:none;color:var(--navy);font-weight:700;cursor:pointer;padding:0 4px;font-size:14px;text-decoration:underline}
+/* confidence + hint */
+.conf{display:flex;gap:8px;align-items:center;flex-wrap:wrap;font-size:14px;color:var(--muted)}
+.conf button{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:6px 14px;font-weight:700;cursor:pointer;color:var(--muted)}
+.conf button.on{background:var(--navy);color:var(--navy-ink);border-color:var(--navy)}
+.conf .hintbtn{margin-left:auto;color:var(--gold-ink);border-color:color-mix(in srgb,var(--gold) 50%,var(--line))}
+.conf .hintbtn:disabled{opacity:.45;cursor:default}
+.opt.gone{opacity:.35;text-decoration:line-through;pointer-events:none}
+.tag{display:inline-block;font-size:11px;letter-spacing:.06em;text-transform:uppercase;font-weight:700;border-radius:999px;padding:2px 8px;margin-left:6px;vertical-align:middle}
+.tag.sure{background:var(--bad-bg);color:var(--bad)} .tag.lucky{background:color-mix(in srgb,var(--gold) 25%,var(--surface));color:var(--gold-ink)}
+.due{font-size:12px;color:var(--muted);margin-left:8px}
+/* sound toggle */
+.soundbtn{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:6px 12px;font-size:13px;font-weight:700;cursor:pointer;color:var(--muted);display:inline-flex;align-items:center;gap:6px}
+.soundbtn.on{color:var(--navy);border-color:var(--navy)}
 /* daily banner */
 .daily{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;background:var(--navy);color:var(--navy-ink);border-radius:var(--radius);padding:16px 20px;margin-top:6px}
 .daily p{color:inherit}
@@ -391,10 +411,11 @@ footer{margin-top:40px;font-size:13px;color:var(--muted)}
 
 <div class="wrap" id="top">
 <header>
+  <p class="who" id="who"></p>
   <button class="brand" id="homeBtn" aria-label="Agorian home"><span class="top"><span class="word"><span class="a">A<sup>+</sup></span>gorian</span></span><span class="desc">Year 8 History Revision</span></button>
   <aside class="qotd" id="qotd" hidden></aside>
   <button class="backbtn" id="backBtn" hidden aria-label="Back"><svg><use href="#ar-l"/></svg><span>Back</span></button>
-  <div class="hdr-right"><div class="clock" id="clock" aria-live="off"></div><span class="pill" id="streak" hidden>Streak <b id="streakN">0</b></span></div>
+  <div class="hdr-right"><div class="clock" id="clock" aria-live="off"></div><div class="row"><button class="soundbtn ${''}" id="sndBtn"></button><span class="pill" id="streak" hidden>Streak <b id="streakN">0</b></span></div></div>
 </header>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="art-jp" viewBox="0 0 200 150">
@@ -424,7 +445,7 @@ footer{margin-top:40px;font-size:13px;color:var(--muted)}
   <symbol id="ic-sk" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="6"/><path d="M15.5 15.5 L21 21"/><path d="M8.5 11 h5 M11 8.5 v5"/></g></symbol>
 </svg>
 <main id="app"></main>
-<footer><details class="credits"><summary>Image credits</summary>All artworks are in the public domain and sourced from Wikimedia Commons. Raphael, The School of Athens (1511). Katsushika Hokusai, The Great Wave off Kanagawa and Fine Wind, Clear Morning (c. 1831). Utagawa Hiroshige, Nihonbashi from The Fifty-three Stations of the Tokaido (1833). Photograph of a samurai in armour (1860s). The Bayeux Tapestry, scene 57 (c. 1070s). Limbourg brothers, Très Riches Heures du duc de Berry, September and October (c. 1412 to 1416). Toggenburg Bible (1411). Siege of Jerusalem, 13th-century manuscript, Bibliothèque nationale de France. Issunshi Hanasato, a terakoya school (Edo period). Utagawa Kuniyoshi, warrior print, Takata no baba (19th century). Pictorial map of the Tokaido highroad (Edo period). Laurentius de Voltolina, Henry of Germany lecturing at Bologna (14th century). Jean Miélot at his desk (15th century). Hokusai Manga, volume 6 (1817).</details></footer>
+<footer><p class="hint" style="margin-bottom:8px">What is recorded. Your name as you typed it, which questions you answered and whether you were right, so your teacher can see how the class is going. No email, no login, nothing else.</p><details class="credits"><summary>Image credits</summary>All artworks are in the public domain and sourced from Wikimedia Commons. Raphael, The School of Athens (1511). Katsushika Hokusai, The Great Wave off Kanagawa and Fine Wind, Clear Morning (c. 1831). Utagawa Hiroshige, Nihonbashi from The Fifty-three Stations of the Tokaido (1833). Photograph of a samurai in armour (1860s). The Bayeux Tapestry, scene 57 (c. 1070s). Limbourg brothers, Très Riches Heures du duc de Berry, September and October (c. 1412 to 1416). Toggenburg Bible (1411). Siege of Jerusalem, 13th-century manuscript, Bibliothèque nationale de France. Issunshi Hanasato, a terakoya school (Edo period). Utagawa Kuniyoshi, warrior print, Takata no baba (19th century). Pictorial map of the Tokaido highroad (Edo period). Laurentius de Voltolina, Henry of Germany lecturing at Bologna (14th century). Jean Miélot at his desk (15th century). Hokusai Manga, volume 6 (1817).</details></footer>
 </div>
 
 <script id="bank" type="application/json">__BANK__</script>
@@ -449,11 +470,12 @@ let sessionId = store.get('sid', null); if(!sessionId){ sessionId = Math.random(
 
 function log(ev){
   if(!LOG_ENDPOINT) return;
-  try{ fetch(LOG_ENDPOINT,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain'},body:JSON.stringify(Object.assign({sid:sessionId,t:Date.now()},ev)),keepalive:true}) }catch(e){}
+  try{ fetch(LOG_ENDPOINT,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain'},body:JSON.stringify(Object.assign({sid:sessionId,t:Date.now(),name:studentName},ev)),keepalive:true}) }catch(e){}
 }
-function record(q, correct){
+function record(q, correct, conf, hint){
   const s = stats[q.id] || {a:0,c:0}; s.a++; if(correct) s.c++; stats[q.id]=s; store.set('stats', stats);
-  log({qid:q.id, topic:q.topic, unit:q.unit, type:q.type, correct:correct?1:0, mode:state.mode});
+  schedule(q, correct, conf);
+  log({qid:q.id, topic:q.topic, unit:q.unit, type:q.type, correct:correct?1:0, mode:state.mode, conf:conf||'', hint:hint?1:0, name:studentName});
 }
 function topicStats(topic){
   let a=0,c=0; Q.filter(q=>q.topic===topic && AUTO.has(q.type)).forEach(q=>{const s=stats[q.id]; if(s){a+=s.a;c+=s.c}}); return {a,c};
@@ -717,13 +739,16 @@ function home(){
   const dailyDone = store.get('dailyDate','')===today(), dayStreak=store.get('dayStreak',0), best=store.get('best',0);
   h(`
   <section class="hero">
+    ${store.get('welcomed',false)?'':`<div class="welcome" id="welcome"><h2>Welcome to Agorian</h2>
+      <ol><li>Start with <b>Today’s ten</b>. It aims at what you find hardest.</li><li><b>Practice</b> lets you pick topics. Every answer comes with an explanation.</li><li>Your name and answers are recorded so your teacher can see how the class is going. Nothing else is collected.</li></ol>
+      <div class="namerow"><label for="nameIn" class="hint">Your name</label><input class="text" id="nameIn" placeholder="First name and initial" autocomplete="off" value="${esc(studentName)}"><button class="btn primary" id="goWelcome">Let’s go</button><button class="soundbtn ${soundOn?'on':''}" id="snd0">${soundOn?'&#9835; Sound on':'&#9835; Sound off'}</button></div></div>`}
     <h1><em>Challenge</em> what you know.</h1>
     <div class="herogrid">
       <p>The agora was the open square of Athens where citizens traded, voted and were questioned by Socrates. This is yours. Quick questions with an explanation after every answer, timed challenges, a timeline game, flashcards for the key terms and exam style paragraph prompts, all across Medieval Europe and Shogunate Japan.</p>
       <figure class="pic" style="margin:0"><img src="${IMG['gr-athens']}" alt="Raphael's fresco The School of Athens, philosophers in debate under a great arch"><figcaption class="cap">Raphael, The School of Athens, 1511. Athenian thinkers arguing in a great hall. Socrates is at the left in the olive robe, counting off his points on his fingers.</figcaption></figure>
     </div>
     <div class="daily">
-      <div><p class="t">Today’s ten</p><p class="n">${dailyDone?'Done for today. Back tomorrow for the next set.':'Ten questions aimed at what you find hardest.'} ${dayStreak>1?`Day streak <b>${dayStreak}</b>.`:''}</p></div>
+      <div><p class="t">Today’s ten</p><p class="n">${dailyDone?'Done for today. Back tomorrow for the next set.':`Ten questions aimed at what you find hardest.${(()=>{const d=Q.filter(q=>AUTO.has(q.type)&&stats[q.id]&&stats[q.id].due&&stats[q.id].due<=Date.now()).length; return d?` ${d} due for a return visit.`:''})()}`} ${dayStreak>1?`Day streak <b>${dayStreak}</b>.`:''}</p></div>
       <button class="btn ${dailyDone?'done':''}" data-go="daily">${dailyDone?'Do it again':'Start'}</button>
     </div>
     <div class="units">
@@ -749,6 +774,8 @@ function home(){
     </div>
   </section>`);
   app.querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>({setup, challenge, terms, write, daily, timeline, facts})[b.dataset.go]());
+  const gw=app.querySelector('#goWelcome'); if(gw){ const inp=app.querySelector('#nameIn'); const finishW=()=>{ studentName=inp.value.trim().slice(0,40); store.set('name',studentName); store.set('welcomed',true); log({event:'welcome'}); home() }; gw.onclick=finishW; inp.onkeydown=e=>{ if(e.key==='Enter') finishW() }; app.querySelector('#snd0').onclick=()=>setSound(!soundOn) }
+  const who=document.getElementById('who'); if(who){ who.innerHTML = studentName ? `Revising as <b>${esc(studentName)}</b> <button id="chgName">change</button>` : `<button id="chgName">Add your name</button>`; who.querySelector('#chgName').onclick=()=>{ store.set('welcomed',false); home() } }
   app.querySelectorAll('[data-topic]').forEach(b=>b.onclick=()=>startQuiz({mode:'practice', topics:[b.dataset.topic], timed:false}));
   app.querySelectorAll('[data-unit]').forEach(b=>b.onclick=()=>startQuiz({mode:'practice', topics:topicsIn(b.dataset.unit), timed:false, count:15}));
   updateStreak();
@@ -779,7 +806,7 @@ function setup(){
 }
 
 function daily(){
-  const pool = shuffle(Q.filter(q=>AUTO.has(q.type) && q.unit!=='Skills and concepts')).sort((a,b)=>weight(a)-weight(b)).slice(0,10);
+  const all=Q.filter(q=>AUTO.has(q.type) && q.unit!=='Skills and concepts'); const due=shuffle(all.filter(isDue)); const rest=shuffle(all.filter(q=>!isDue(q))).sort((a,b)=>weight(a)-weight(b)); const pool=due.concat(rest).slice(0,10);
   state={mode:'daily'}; startQuiz({mode:'daily', topics:null, timed:false, count:10, list:shuffle(pool)});
 }
 function challenge(){
@@ -804,7 +831,7 @@ function startQuiz(opts){
   if(opts.timed){ timerId=setInterval(()=>{ state.left--; const el=document.getElementById('timer'); if(el){ el.textContent=fmt(state.left); el.classList.toggle('low', state.left<60) } if(state.left<=0){ clearInterval(timerId); results() } },1000) }
   showQ();
 }
-function weight(q){ const s=stats[q.id]; if(!s) return 0; return s.c/s.a + s.a*0.05 }
+function weight(q){ const s=stats[q.id]; if(!s) return 0.5; const overdue = s.due && s.due<=Date.now() ? 0 : 1; return overdue + s.c/s.a + s.a*0.05 }
 const fmt = s => `${Math.floor(s/60)}:${String(s%60).padStart(2,'0')}`;
 
 function showQ(){
@@ -815,7 +842,8 @@ function showQ(){
   let body='';
   if(q.type==='mc'||q.type==='ms'){
     body = `<div class="opts" role="group">${q.options.map((o,k)=>`<button class="opt" data-k="${k}"><span class="l">${L[k]}</span><span>${esc(o)}</span></button>`).join('')}</div>
-      ${q.type==='ms'?`<p class="hint">Select all that apply, then check.</p>`:''}`;
+      ${q.type==='ms'?`<p class="hint">Select all that apply, then check.</p>`:''}
+      <div class="conf"><span>How sure are you?</span><button data-c="sure">Sure</button><button data-c="unsure">Not sure</button>${q.options.length>=3?`<button class="hintbtn" id="hintBtn">Remove one wrong answer</button>`:''}</div>`;
   } else if(q.type==='gaps'){
     body = `<div class="gaps">${q.segments.map((s,k)=> esc(s) + (k<q.blanks.length ? `<select data-b="${k}" id="g${q.id}-${k}"><option value="">…</option>${shuffle(q.choices[k]).map(c=>`<option>${esc(c)}</option>`).join('')}</select>` : '')).join('')}</div>`;
   } else if(q.type==='text'){
@@ -834,7 +862,9 @@ function showQ(){
     <div class="actions"><span></span><button class="btn primary" id="check">${q.type==='short'?'Show model answer':'Check'}</button></div>
   </div>`);
   const quit=app.querySelector('#quit'); if(quit) quit.onclick=results;
-  const selected=new Set();
+  const selected=new Set(); let conf=null, usedHint=false;
+  app.querySelectorAll('.conf [data-c]').forEach(b=>b.onclick=()=>{ conf=b.dataset.c; app.querySelectorAll('.conf [data-c]').forEach(x=>x.classList.toggle('on',x===b)); beep('tick') });
+  const hb=app.querySelector('#hintBtn'); if(hb) hb.onclick=()=>{ const wrong=[...app.querySelectorAll('.opt:not(.gone):not(:disabled)')].filter(x=>!q.answer.includes(+x.dataset.k)&&!selected.has(+x.dataset.k)); if(!wrong.length) return; const pick=wrong[Math.random()*wrong.length|0]; pick.classList.add('gone'); usedHint=true; hb.disabled=true; beep('tick') };
   app.querySelectorAll('.opt').forEach(b=>b.onclick=()=>{
     const k=+b.dataset.k;
     if(q.type==='mc'){ app.querySelectorAll('.opt').forEach(x=>x.classList.remove('sel')); selected.clear(); selected.add(k); b.classList.add('sel'); check(); }
@@ -875,8 +905,9 @@ function showQ(){
     finish(correct);
   }
   function finish(correct){
-    record(q, correct);
-    state.answers.push({q, correct});
+    record(q, correct, conf, usedHint);
+    state.answers.push({q, correct, conf, hint:usedHint});
+    beep(correct?'ok':'bad');
     const btn=app.querySelector('#check'); btn.hidden=false; btn.disabled=false; btn.textContent = i+1<list.length ? 'Next' : 'See results'; btn.onclick=()=>{ state.i++; showQ() };
     btn.focus();
     updateStreak(correct);
@@ -884,6 +915,16 @@ function showQ(){
 }
 
 let streak = store.get('streak', 0);
+let studentName = store.get('name', '');
+let soundOn = store.get('sound', true);
+// ---- sound (synthesised, no files) ----
+let actx=null;
+function beep(kind){ if(!soundOn) return; try{ actx=actx||new (window.AudioContext||window.webkitAudioContext)(); if(actx.state==='suspended') actx.resume(); const t=actx.currentTime; const tone=(f,start,dur,type='sine',g=.12)=>{ const o=actx.createOscillator(), v=actx.createGain(); o.type=type; o.frequency.setValueAtTime(f,t+start); v.gain.setValueAtTime(0,t+start); v.gain.linearRampToValueAtTime(g,t+start+.01); v.gain.exponentialRampToValueAtTime(.0001,t+start+dur); o.connect(v).connect(actx.destination); o.start(t+start); o.stop(t+start+dur+.02) };
+  if(kind==='ok'){ tone(660,0,.12); tone(990,.1,.18) } else if(kind==='bad'){ tone(220,0,.22,'triangle',.1) } else if(kind==='tick'){ tone(880,0,.05,'square',.04) } else if(kind==='win'){ [523,659,784,1047].forEach((f,i)=>tone(f,i*.09,.25)) } }catch(e){} }
+function setSound(on){ soundOn=on; store.set('sound',on); document.querySelectorAll('.soundbtn').forEach(b=>{ b.classList.toggle('on',on); b.innerHTML=(on?'&#9835; Sound on':'&#9835; Sound off') }) }
+// ---- spaced return: when a question is next due ----
+function schedule(q, correct, conf){ const s=stats[q.id]||{a:0,c:0}; const days = !correct ? 1 : conf==='sure' ? 7 : 3; s.due = Date.now()+days*864e5; if(conf) s.conf=conf; stats[q.id]=s; store.set('stats',stats) }
+const isDue = q => { const s=stats[q.id]; return !s || !s.due || s.due<=Date.now() };
 function updateStreak(correct){
   if(correct===true) streak++; else if(correct===false) streak=0;
   store.set('streak', streak);
@@ -900,6 +941,7 @@ function results(){
   if(state.mode==='daily' && n>=10){ const last=store.get('dailyDate',''); if(last!==today()){ const y=new Date(Date.now()-864e5).toISOString().slice(0,10); store.set('dayStreak', last===y?store.get('dayStreak',0)+1:1); store.set('dailyDate', today()) } }
   let newBest=false; if(state.mode==='challenge'){ const b=store.get('best',0); if(c>b){ store.set('best',c); newBest=true } }
   if(n && pct>=80) setTimeout(confetti,200);
+  if(n && pct>=80) setTimeout(()=>beep('win'),150);
   const date=new Date().toLocaleDateString('en-AU',{day:'numeric',month:'short',year:'numeric'});
   const modeName=({challenge:'Challenge',daily:'Daily ten',practice:'Practice'})[state.mode];
   const rows=Object.entries(byTopic).map(([t,s])=>[t,`${s.c} / ${s.a}`,`${Math.round(100*s.c/s.a)}%`]);
@@ -917,7 +959,9 @@ function results(){
         <div class="sumfoot">${weak.length?`<b>Revisit</b> ${esc(weak.join(', '))}`:'No weak topics this round.'}</div></div>
       <div class="row" style="margin-top:8px"><button class="btn" id="copy">Copy summary</button><span class="hint">Or screenshot this card.</span></div></div>
     ${factFor(weak.length?weak:Object.keys(byTopic))}
-    ${A.some(a=>!a.correct)?`<div><p class="eyebrow" style="margin-bottom:8px">Questions to revisit</p><div class="review">${A.filter(a=>!a.correct).map(a=>`<div class="rv"><span class="q">${esc(a.q.question)}</span><span class="muted">${esc(a.q.explanation||a.q.model||'')}</span></div>`).join('')}</div></div>`:''}
+    ${A.some(a=>!a.correct)?`<div><p class="eyebrow" style="margin-bottom:8px">Questions to revisit</p><div class="review">${A.filter(a=>!a.correct).map(a=>`<div class="rv"><span class="q">${esc(a.q.question)}${a.conf==='sure'?'<span class="tag sure">Sure but wrong</span>':''}</span><span class="muted">${esc(a.q.explanation||a.q.model||'')}</span></div>`).join('')}</div></div>`:''}
+    ${A.some(a=>a.correct&&a.conf==='unsure')?`<p class="hint">${A.filter(a=>a.correct&&a.conf==='unsure').length} right but not sure. Those come back in three days. Sure and right come back in a week, wrong ones tomorrow.</p>`:''}
+    ${A.some(a=>a.hint)?`<p class="hint">Hints used on ${A.filter(a=>a.hint).length}.</p>`:''}
     <div class="row"><button class="btn primary" id="again">${state.mode==='challenge'?'New challenge':'Practise again'}</button><button class="btn" id="succ">What success looks like</button>${weak.length?`<button class="btn accent" id="weak">Practise weak topics</button>`:''}<button class="btn quiet" id="home">Home</button></div>
   </div></section>`);
   app.querySelector('#copy').onclick=async e=>{ try{ await navigator.clipboard.writeText(summary); e.target.textContent='Copied' }catch(err){ const r=document.createRange(); r.selectNodeContents(document.getElementById('sum')); const s=getSelection(); s.removeAllRanges(); s.addRange(r); e.target.textContent='Selected, press copy' } };
@@ -1194,7 +1238,8 @@ function write(){
 }
 
 document.getElementById('homeBtn').onclick=home;
-(function tick(){ const d=new Date(); const el=document.getElementById('clock'); if(el){ const hh=d.getHours(), m=String(d.getMinutes()).padStart(2,'0'), ss=String(d.getSeconds()).padStart(2,'0'); const h12=((hh+11)%12)+1; el.innerHTML=`<span class="lbl">Melbourne</span><span class="time">${h12}:${m}<small>${ss} ${hh<12?'am':'pm'}</small></span><span class="date">${d.toLocaleDateString('en-AU',{weekday:'long',day:'numeric',month:'long'})}</span>` } setTimeout(tick, 1000-(Date.now()%1000)) })();
+document.getElementById('sndBtn').onclick=()=>setSound(!soundOn); setSound(soundOn);
+(function tick(){ const d=new Date(); const el=document.getElementById('clock'); if(el){ const hh=d.getHours(), m=String(d.getMinutes()).padStart(2,'0'), ss=String(d.getSeconds()).padStart(2,'0'); const h12=((hh+11)%12)+1; el.innerHTML=`<span class="lbl">Melbourne</span><span class="time">${h12}:${m}<small>${hh<12?'am':'pm'}</small></span><span class="date">${d.toLocaleDateString('en-AU',{weekday:'long',day:'numeric',month:'long'})}</span>` } setTimeout(tick, 60000-(Date.now()%60000)+50) })();
 home=screen(home); setup=screen(setup); challenge=screen(challenge); terms=screen(terms); write=screen(write); daily=screen(daily); timeline=screen(timeline); teacher=screen(teacher); sprint=screen(sprint); facts=screen(facts);
 document.getElementById('backBtn').onclick=goBack;
 const ROUTES={practice:setup, challenge, terms, write, daily, timeline, teacher, sprint, facts, success};

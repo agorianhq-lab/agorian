@@ -1,6 +1,6 @@
 # Agorian class logging
 
-Anonymous. Each device gets a random id; no names, no logins.
+Each device gets a random id. Students type a name on first visit, which is recorded with their answers. No logins.
 
 1. Create a Google Sheet called "Agorian log".
 2. Extensions > Apps Script. Paste `Code.gs`. Save.
