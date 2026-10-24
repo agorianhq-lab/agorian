@@ -89,6 +89,7 @@ header{position:relative;display:flex;flex-direction:column;align-items:center;j
 .modeh h2{color:var(--m)}
 
 .section{margin-top:28px;display:grid;gap:12px}
+.section:has(.card),.section:has(.flash){max-width:980px;margin-inline:auto;width:100%}
 .section h2{font-size:30px;color:var(--navy)}
 .topics{display:grid;gap:8px}
 @media (min-width:900px){.topics{grid-template-columns:1fr 1fr;gap:12px 20px;align-items:start}.unit:last-child{grid-column:1/-1}.unit:last-child .tlist{display:grid;grid-template-columns:1fr 1fr;gap:8px 20px}}
@@ -111,10 +112,15 @@ header{position:relative;display:flex;flex-direction:column;align-items:center;j
 
 /* setup */
 .card{max-width:980px;margin-inline:auto;width:100%;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:26px;box-shadow:var(--shadow);display:grid;gap:16px}
-.checks{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px}
-.check{display:flex;align-items:center;gap:10px;border:1px solid var(--line);border-radius:10px;padding:9px 12px;cursor:pointer;background:var(--bg)}
-.check input{width:18px;height:18px;accent-color:var(--navy);margin:0}
-.check.on{border-color:var(--navy)}
+.checks{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+@media (max-width:760px){.checks{grid-template-columns:repeat(2,1fr)}} @media (max-width:480px){.checks{grid-template-columns:1fr}}
+.check{--u:var(--sk);--us:var(--sk-soft);display:flex;align-items:center;gap:12px;min-height:76px;border:1px solid var(--line);border-left:4px solid var(--u);border-radius:10px;padding:10px 14px;cursor:pointer;background:linear-gradient(90deg,var(--us),var(--surface) 60%);font-weight:600}
+.check.eu{--u:var(--eu);--us:var(--eu-soft)} .check.jp{--u:var(--jp);--us:var(--jp-soft)}
+.check input{width:20px;height:20px;accent-color:var(--u);margin:0;flex:none}
+.check.on{border-color:var(--u);box-shadow:inset 0 0 0 1px var(--u)}
+.check .cnt{color:var(--muted);font-weight:400;font-size:14px;margin-left:auto;white-space:nowrap}
+.ugroup{display:grid;gap:8px} .ugroup .eyebrow{display:flex;align-items:center;gap:6px} .ugroup .eyebrow svg{width:14px;height:14px}
+.ugroup.eu .eyebrow{color:var(--eu)} .ugroup.jp .eyebrow{color:var(--jp)} .ugroup.sk .eyebrow{color:var(--sk)}
 .row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
 .btn{border:1px solid var(--line);background:var(--surface);border-radius:10px;padding:11px 18px;font-weight:700;cursor:pointer;font-size:16px}
 .btn:hover{border-color:var(--navy)}
@@ -470,9 +476,9 @@ function setup(){
   h(`<section class="section">${MODEH('practice','Practice')}
   <div class="card">
     <div><p class="eyebrow">Choose topics</p><p class="hint">Tick as many as you like. Questions are shuffled.</p></div>
-    ${UNITS.map(u=>`<div><p class="eyebrow" style="margin-bottom:6px">${esc(u)}</p><div class="checks">${topicsIn(u).map(t=>`<label class="check ${sel.has(t)?'on':''}"><input type="checkbox" id="t-${esc(t).replace(/\W+/g,'-')}" value="${esc(t)}" ${sel.has(t)?'checked':''}><span>${esc(t)} <span class="muted">(${Q.filter(q=>q.topic===t&&q.type!=='extended').length})</span></span></label>`).join('')}</div></div>`).join('')}
+    ${UNITS.map(u=>`<div class="ugroup ${unitCls(u)}"><p class="eyebrow"><svg><use href="#ic-${unitCls(u)}"/></svg>${esc(u)}</p><div class="checks">${topicsIn(u).map(t=>`<label class="check ${unitCls(u)} ${sel.has(t)?'on':''}"><input type="checkbox" id="t-${esc(t).replace(/\W+/g,'-')}" value="${esc(t)}" ${sel.has(t)?'checked':''}><span>${esc(t)}</span><span class="cnt">${Q.filter(q=>q.topic===t&&q.type!=='extended').length} q</span></label>`).join('')}</div></div>`).join('')}
     <div class="row"><label class="hint">Number of questions <select class="sel" id="count"><option>10</option><option selected>15</option><option>25</option><option value="all">All</option></select></label>
-      <label class="check" style="background:none;border:0;padding:0"><input type="checkbox" id="incShort"><span class="hint">Include short written answers (self marked)</span></label></div>
+      <label class="row" style="gap:8px;cursor:pointer"><input type="checkbox" id="incShort" style="width:18px;height:18px;accent-color:var(--navy)"><span class="hint">Include short written answers (self marked)</span></label></div>
     <div class="row"><button class="btn primary" id="go">Start practice</button><button class="btn" id="all">Select all</button><button class="btn quiet" id="back">Back</button></div>
   </div></section>`);
   const boxes=[...app.querySelectorAll('.checks input')];
