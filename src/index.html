@@ -490,6 +490,20 @@ footer{margin-top:40px;font-size:13px;color:var(--muted)}
 .tdisp.warn{color:var(--accent)}
 .card.exammode .scaffold,.card.exammode #guide,.card.exammode #g,.card.exammode .wbwrap,.card.exammode .selfcheck{display:none}
 .card.exammode textarea{min-height:360px;border-color:var(--navy);box-shadow:0 0 0 4px color-mix(in srgb,var(--gold) 35%,transparent)}
+.hubs{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media (max-width:800px){.hubs{grid-template-columns:1fr}}
+.sqlist{display:grid;grid-template-columns:1fr 1fr;gap:10px 18px}
+@media (max-width:900px){.sqlist{grid-template-columns:1fr}}
+.sq{display:flex;align-items:center;gap:12px;width:100%;text-align:left;background:var(--surface);border:2px solid var(--navy);border-left:6px solid var(--u);border-radius:12px;padding:14px 16px;cursor:pointer;transition:transform .12s,background .12s}
+.sq:hover{transform:translateX(3px);background:var(--u);color:#fff}
+.sq .m{flex:none;width:44px;height:44px;border-radius:50%;background:var(--u);color:#fff;display:grid;place-items:center;font-family:var(--display);font-weight:700;font-size:18px}
+.sq:hover .m{background:#fff;color:var(--u)}
+.sq .q{font-size:16px;line-height:1.35}
+.sq .done{margin-left:auto;font-size:13px;white-space:nowrap;opacity:.8}
+.sq.eu{--u:var(--eu)} .sq.jp{--u:var(--jp)}
+.marksel{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.marksel button{min-width:44px;height:40px;border-radius:10px;border:2px solid var(--navy);background:var(--surface);font-weight:700;cursor:pointer}
+.marksel button.on{background:var(--navy);color:#fff}
 </style>
 
 <div class="wrap" id="top">
@@ -542,7 +556,7 @@ footer{margin-top:40px;font-size:13px;color:var(--muted)}
 (function(){
 'use strict';
 const BANK = JSON.parse(document.getElementById('bank').textContent);
-const Q = BANK.questions, TERMS = BANK.terms;
+const Q = BANK.questions, TERMS = BANK.terms, SHORTQ = BANK.shortq||[];
 const LOG_ENDPOINT = null; // Apps Script web app URL (see logging/Code.gs). null = no logging.
 const TEACHER_CSV = null;  // published-to-web CSV link of the 'events' sheet. null = teacher view uses this device only.
 const app = document.getElementById('app');
@@ -1231,8 +1245,50 @@ function exam(){
     <div class="box"><h3>Section C marking</h3><ul><li>Structure: TEEAL, a clear contention, a logical order of arguments.</li><li>Historical concepts: significance, cause and effect, perspectives.</li><li>Specific, detailed, accurate knowledge.</li><li>Evidence and examples studied in class.</li><li>Clear expression, spelling and grammar, historical terms.</li></ul><p class="hint">Analyse means weigh, not list. Decide which impact mattered most and say why.</p></div>
     <div class="box"><h3>Marks people lose</h3><ul><li>Answering one point twice when the question says <b>two</b>.</li><li>Describing a source instead of inferring from it.</li><li>Writing "medieval times" for a century.</li><li>Leaving a multiple-choice question blank, or circling two.</li><li>Spending 20 minutes on Section A.</li><li>A Section C answer with no contention in the first sentence.</li></ul></div>
   </div>
-  <div class="actions" style="margin-top:18px"><button class="btn primary" id="toSuccess">See what full marks look like</button><button class="btn" id="toWrite">Paragraph practice</button><button class="btn quiet" id="home">Home</button></div></section>`);
-  app.querySelector('#toSuccess').onclick=()=>success(); app.querySelector('#toWrite').onclick=()=>write(); app.querySelector('#home').onclick=home;
+  <div class="actions" style="margin-top:18px"><button class="btn primary" id="toShort">Practise short answers</button><button class="btn" id="toSuccess">See what full marks look like</button><button class="btn" id="toWrite">Paragraph practice</button><button class="btn quiet" id="home">Home</button></div></section>`);
+  app.querySelector('#toShort').onclick=()=>shortq(); app.querySelector('#toSuccess').onclick=()=>success(); app.querySelector('#toWrite').onclick=()=>write(); app.querySelector('#home').onclick=home;
+}
+
+// ---------- short answers: write, compare with marked exemplars, self-mark ----------
+let sqMarks=store.get('sqMarks',{});
+function shortq(){
+  const drafts=store.get('drafts',{});
+  const list=()=>{
+    h(`<section class="section"><div class="modeh" style="--m:var(--teal)"><span class="k">&#9998;</span><h2>Short answers</h2></div>
+    <p class="muted">Section B is 32 of the 50 marks. Each question here is worth 2, 3 or 4. Write your answer, reveal a full-marks and a part-marks answer, then mark yourself honestly. The number of marks tells you how many things to say.</p>
+    <div class="sqlist">${SHORTQ.map(s=>{ const u=unitCls(s.unit); const m=sqMarks[s.id]; return `<button class="sq ${u}" data-id="${s.id}"><span class="m">${s.marks}</span><span class="q">${esc(s.q)}</span>${m!==undefined?`<span class="done">${m} / ${s.marks}</span>`:''}</button>`}).join('')}</div>
+    <div class="actions" style="margin-top:18px"><span class="hint">${Object.keys(sqMarks).filter(k=>SHORTQ.some(s=>s.id===k)).length} of ${SHORTQ.length} marked. ${(()=>{const d=SHORTQ.filter(s=>sqMarks[s.id]!==undefined); const got=d.reduce((a,s)=>a+sqMarks[s.id],0), of=d.reduce((a,s)=>a+s.marks,0); return of?`${got} of ${of} marks so far.`:''})()}</span><button class="btn" id="toSucc">What success looks like</button><button class="btn quiet" id="home">Home</button></div></section>`);
+    app.querySelectorAll('.sq').forEach(b=>b.onclick=()=>one(b.dataset.id));
+    app.querySelector('#toSucc').onclick=()=>success(); app.querySelector('#home').onclick=home;
+  };
+  const one=screen(function sqView(id){
+    const s=SHORTQ.find(x=>x.id===id); const k=SHORTQ.indexOf(s); const u=unitCls(s.unit);
+    h(`<section class="section"><div class="modeh" style="--m:var(--teal)"><span class="k">&#9998;</span><h2>Short answers</h2></div>
+    <div class="card ${u}">
+      <span class="eyebrow" style="color:var(--${u})">${esc(s.unit)} · ${esc(s.topic)} · ${esc(s.cmd)}</span>
+      <p class="qtext">${esc(s.q)} <span class="muted" style="font-weight:400;white-space:nowrap">(${s.marks} marks)</span></p>
+      <div class="timerrow"><span><b>About ${Math.round(s.marks*0.75*2)/2} minutes</b> in the exam, at 45 seconds a mark.</span><button class="btn" id="tstart">Start timer</button><span class="tdisp" id="tdisp" hidden></span></div>
+      <textarea id="sq-${s.id}" placeholder="Write your answer here. Identify, prove, link." style="margin-top:12px;min-height:150px">${esc(drafts['sq-'+s.id]||'')}</textarea>
+      <div class="row" style="justify-content:space-between;margin-top:8px"><span class="hint" id="wc"></span><button class="btn primary" id="reveal">Reveal marked answers</button></div>
+      <div id="answers" hidden style="margin-top:14px;display:grid;gap:12px">
+        <div class="sample full"><span class="marks full">${s.marks} / ${s.marks}</span>${s.full.text.split('\n').map(t=>`<p>${esc(t)}</p>`).join('')}<p class="why"><b>Why ${s.marks}.</b> ${esc(s.full.why)}</p></div>
+        <div class="sample weak"><span class="marks weak">${s.part.marks} / ${s.marks}</span>${s.part.text.split('\n').map(t=>`<p>${esc(t)}</p>`).join('')}<p class="why"><b>Why ${s.part.marks}.</b> ${esc(s.part.why)}</p></div>
+        <div class="card" style="margin:0"><p class="eyebrow">Mark yourself</p><p class="hint">Compare your answer with the two above. Did you identify each point the question asked for, and did each one have a because sentence?</p>
+          <div class="marksel" id="marksel">${Array.from({length:s.marks+1},(_,i)=>`<button data-m="${i}" class="${sqMarks[s.id]===i?'on':''}">${i}</button>`).join('')}<span class="hint">out of ${s.marks}</span></div></div>
+      </div>
+      ${pager(k,SHORTQ.length,`Question ${k+1} of ${SHORTQ.length}`)}
+      <div class="row" style="margin-top:12px"><button class="btn quiet" id="back">All short answers</button></div>
+    </div></section>`);
+    const ta=app.querySelector('textarea'), wc=app.querySelector('#wc'); const count=()=>{ const w=ta.value.trim().split(/\s+/).filter(Boolean).length; wc.textContent=`${w} words` }; count(); ta.oninput=()=>{ count(); drafts['sq-'+s.id]=ta.value; store.set('drafts',drafts) };
+    const ans=app.querySelector('#answers'); app.querySelector('#reveal').onclick=e=>{ ans.hidden=false; e.target.hidden=true; log({event:'shortq-reveal', qid:s.id, n:ta.value.trim().split(/\s+/).filter(Boolean).length}) };
+    app.querySelectorAll('#marksel button').forEach(b=>b.onclick=()=>{ const m=+b.dataset.m; sqMarks[s.id]=m; store.set('sqMarks',sqMarks); app.querySelectorAll('#marksel button').forEach(x=>x.classList.toggle('on',x===b)); beep(m===s.marks?'win':'ok'); log({event:'shortq', qid:s.id, n:s.marks, c:m, correct:m===s.marks?1:0, unit:s.unit, topic:s.topic, type:'shortq'}) });
+    { const disp=app.querySelector('#tdisp'), startB=app.querySelector('#tstart'); let tid=null; const total=Math.round(s.marks*45); const fmt=ms=>{ const t=Math.max(0,Math.ceil(ms/1000)); return `${Math.floor(t/60)}:${String(t%60).padStart(2,'0')}` };
+      startB.onclick=()=>{ if(tid){ clearInterval(tid); tid=null; disp.hidden=true; startB.textContent='Start timer'; return } const endAt=Date.now()+total*1000; disp.hidden=false; startB.textContent='Stop'; ta.focus(); beep('ok');
+        const step=()=>{ const left=endAt-Date.now(); disp.textContent=fmt(left); disp.classList.toggle('warn',left<20000); if(left<=0){ clearInterval(tid); tid=null; disp.textContent='0:00'; startB.textContent='Start timer'; beep('win') } }; step(); tid=setInterval(step,500) } }
+    const pv=app.querySelector('#pg-prev'), nx=app.querySelector('#pg-next'); if(pv) pv.onclick=()=>one(SHORTQ[k-1].id); if(nx) nx.onclick=()=>one(SHORTQ[k+1].id);
+    app.querySelector('#back').onclick=()=>shortq();
+  });
+  list();
 }
 
 // ---------- what success looks like: models and worked examples ----------
@@ -1393,11 +1449,12 @@ function write(){
     app.querySelectorAll('.tab').forEach(t=>t.onclick=()=>{ app.querySelectorAll('.tab').forEach(x=>x.classList.toggle('on',x===t)); app.querySelector('#pane-write').hidden=t.dataset.tab!=='write'; app.querySelector('#pane-model').hidden=t.dataset.tab!=='model' });
   });
   h(`<section class="section">${MODEH('write','Paragraph practice')}<p class="muted">Five exam style prompts. Each opens with the TEEAL scaffold, a model answer marked 8 out of 8, and the guidance a marker uses.</p>
-  <button class="hubcard" id="succ" style="border-left-color:var(--gold-ink)"><b>What success looks like</b><span>Marked answers for every kind of exam question. Two-mark explains, compares, turning points, captions, impacts and the 8-mark paragraph.</span></button>
+  <div class="hubs"><button class="hubcard" id="succ" style="border-left-color:var(--gold-ink)"><b>What success looks like</b><span>Marked answers for every kind of exam question. Two-mark explains, compares, turning points, captions, impacts and the 8-mark paragraph.</span></button>
+  <button class="hubcard" id="shortq" style="border-left-color:var(--teal)"><b>Short answers</b><span>Fifteen 2, 3 and 4-mark questions. Write yours, then compare it with a full-marks and a part-marks answer and mark yourself.</span></button></div>
   <div class="topics">${prompts.map(p=>`<button class="topic" data-id="${p.id}" style="align-items:flex-start"><span><span class="eyebrow">${esc(p.unit)}</span><br><span class="name" style="font-weight:500">${esc(p.question.split('. ').slice(0,2).join('. '))}.</span></span><span class="meta">${drafts[p.id]?'Draft saved':''}</span></button>`).join('')}</div>
   <div class="row"><button class="btn quiet" id="home">Home</button></div></section>`);
   app.querySelectorAll('[data-id]').forEach(b=>b.onclick=()=>pick(+b.dataset.id));
-  app.querySelector('#home').onclick=home; app.querySelector('#succ').onclick=()=>success();
+  app.querySelector('#home').onclick=home; app.querySelector('#succ').onclick=()=>success(); app.querySelector('#shortq').onclick=()=>shortq();
 }
 
 document.getElementById('homeBtn').onclick=()=>home();
@@ -1408,9 +1465,9 @@ const mm=document.getElementById('musMode'); mm.value=music.mode; mm.onchange=()
 const mv=document.getElementById('musVol'); mv.value=music.vol; mv.oninput=()=>{ music.vol=+mv.value; store.set('musVol',music.vol); if(music.master&&actx) music.master.gain.setTargetAtTime(music.vol/100*.6, actx.currentTime, .1) };
 document.addEventListener('visibilitychange',()=>{ if(document.hidden&&music.on){ clearTimeout(music.timer) } else if(music.on){ phrase() } });
 (function tick(){ const d=new Date(); const el=document.getElementById('clock'); if(el){ const hh=d.getHours(), m=String(d.getMinutes()).padStart(2,'0'), ss=String(d.getSeconds()).padStart(2,'0'); const h12=((hh+11)%12)+1; el.innerHTML=`<span class="lbl">Melbourne</span><span class="time">${h12}:${m}<small>${hh<12?'am':'pm'}</small></span><span class="date">${d.toLocaleDateString('en-AU',{weekday:'long',day:'numeric',month:'long'})}</span>` } setTimeout(tick, 60000-(Date.now()%60000)+50) })();
-HOME_FN=home; home=screen(home); setup=screen(setup); challenge=screen(challenge); terms=screen(terms); write=screen(write); daily=screen(daily); timeline=screen(timeline); teacher=screen(teacher); sprint=screen(sprint); facts=screen(facts); exam=screen(exam);
+HOME_FN=home; home=screen(home); setup=screen(setup); challenge=screen(challenge); terms=screen(terms); write=screen(write); daily=screen(daily); timeline=screen(timeline); teacher=screen(teacher); sprint=screen(sprint); facts=screen(facts); exam=screen(exam); shortq=screen(shortq);
 document.getElementById('backBtn').onclick=goBack;
-const ROUTES={practice:setup, challenge, terms, write, daily, timeline, teacher, sprint, facts, success, exam};
+const ROUTES={practice:setup, challenge, terms, write, daily, timeline, teacher, sprint, facts, success, exam, shortq};
 const r=(location.hash||'').slice(1); (ROUTES[r]||home)();
 })();
 </script>

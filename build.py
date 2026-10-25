@@ -7,6 +7,8 @@ inline='--inline' in sys.argv
 s=open('src/index.html').read()
 b=json.load(open('data/bank.json'))
 for q in b['questions']: q.pop('srcId',None); q.pop('source',None)
+sq=json.load(open('data/shortq.json'))
+b['shortq']=sq
 js=json.dumps(b,ensure_ascii=False,separators=(',',':')).replace('</','<\\/')
 os.makedirs('docs/img',exist_ok=True)
 img={}
