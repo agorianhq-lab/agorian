@@ -469,7 +469,7 @@ footer{margin-top:40px;font-size:13px;color:var(--muted)}
 
 .examband{display:flex;align-items:center;gap:18px;width:100%;text-align:left;margin-top:18px;padding:16px 22px;border-radius:var(--radius);background:var(--surface);border:2px solid var(--navy);border-left:8px solid var(--gold);cursor:pointer;box-shadow:var(--shadow);transition:transform .15s,background .15s}
 .examband:hover{transform:translateY(-2px);background:var(--navy);color:#fff}
-.examband .k{font-size:26px;color:var(--gold);flex:none}
+.examband .k{font-size:26px;color:var(--gold-ink);flex:none}
 .examband .t{display:block;font-family:var(--display);font-size:22px;font-weight:700;color:var(--navy)}
 .examband .n{display:block;font-size:15px;color:var(--muted)}
 .examband .cta{margin-left:auto;font-weight:700;color:var(--navy);white-space:nowrap}
@@ -514,8 +514,8 @@ footer{margin-top:40px;font-size:13px;color:var(--muted)}
   <button class="backbtn" id="backBtn" hidden aria-label="Back"><svg><use href="#ar-l"/></svg><span>Back</span></button>
   <div class="hdr-right"><div class="clocktile"><div class="audiowrap"><button class="audiobtn" id="audioBtn" aria-label="Sound and music" aria-expanded="false"><svg viewBox="0 0 24 24"><path d="M4 9v6h4l5 4V5L8 9H4z" fill="currentColor"/><path d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span class="bars" id="music"><i></i><i></i><i></i></span></button>
     <div class="audiopop" id="audioPop" hidden>
-      <div class="arow"><span>Sound effects</span><button class="switch" id="sndBtn" role="switch" aria-checked="true"><i></i></button></div>
-      <div class="arow"><span>Ambient music</span><button class="switch" id="musBtn" role="switch" aria-checked="false"><i></i></button></div>
+      <div class="arow"><span>Sound effects</span><button class="switch" id="sndBtn" role="switch" aria-checked="true" aria-label="Sound effects"><i></i></button></div>
+      <div class="arow"><span>Ambient music</span><button class="switch" id="musBtn" role="switch" aria-checked="false" aria-label="Ambient music"><i></i></button></div>
       <div class="arow sub"><span>Style</span><select id="musMode" aria-label="Music style"><option value="auto">Match the unit</option><option value="jp">Japan</option><option value="eu">Europe</option></select></div>
       <div class="arow sub"><span>Volume</span><input type="range" id="musVol" min="0" max="100" value="35" aria-label="Music volume"></div>
     </div></div><div class="clock" id="clock" aria-live="off"></div></div><span class="pill" id="streak" hidden>Streak <b id="streakN">0</b></span></div>
@@ -1230,7 +1230,7 @@ function facts(){
 
 // ---------- before the exam: format, timing and where the marks are ----------
 function exam(){
-  h(`<section class="section exam"><div class="modeh" style="--m:var(--gold)"><span class="k">&#9998;</span><h2>Before the exam</h2></div>
+  h(`<section class="section exam"><div class="modeh" style="--m:var(--gold-ink)"><span class="k">&#9998;</span><h2>Before the exam</h2></div>
   <div class="grid3">
     <div class="box"><h3>The paper</h3><span class="big">50</span><p>marks in <b>50 minutes</b>, plus 5 minutes reading time. Blue or black pen. A separate <b>Source Booklet</b> holds the sources; the questions tell you which one to look at.</p></div>
     <div class="box"><h3>Three sections</h3><ul><li><b>A. Multiple choice</b>, 10 marks. Several questions use a source or a timeline from the booklet.</li><li><b>B. Short answer</b>, 32 marks. Identify, describe, explain and compare questions worth 1 to 4 marks each, some using a source.</li><li><b>C. Extended response</b>, 8 marks. Choose <b>one</b> of two questions. TEEAL paragraph(s) with a clear contention.</li></ul></div>
