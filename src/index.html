@@ -1163,24 +1163,38 @@ function sprint(){
 function parseCSV(txt){ const out=[]; let row=[],cell='',q=false; for(let i=0;i<txt.length;i++){ const ch=txt[i]; if(q){ if(ch==='"'){ if(txt[i+1]==='"'){cell+='"';i++} else q=false } else cell+=ch } else if(ch==='"') q=true; else if(ch===','){row.push(cell);cell=''} else if(ch==='\n'){row.push(cell);out.push(row);row=[];cell=''} else if(ch!=='\r') cell+=ch } if(cell||row.length){row.push(cell);out.push(row)} return out }
 async function classStats(){
   const r=await fetch(TEACHER_CSV,{cache:'no-store'}); const rows=parseCSV(await r.text()); const h=rows.shift(); const i=Object.fromEntries(h.map((k,n)=>[k,n]));
-  const st={}; const sids=new Set(); let events=0;
-  rows.forEach(r=>{ if(!r[i.qid]||r[i.event]) return; events++; sids.add(r[i.sid]); const id=+r[i.qid]; st[id]=st[id]||{a:0,c:0}; st[id].a++; if(+r[i.correct]===1) st[id].c++ });
-  return {st, devices:sids.size, events};
+  const st={}; const people={}; let events=0; const timed=[]; const sq={};
+  const who=r=>{ const nm=(r[i.name]||'').trim(); const key=nm?nm.toLowerCase():'device '+String(r[i.sid]||'').slice(0,6); const p=people[key]=people[key]||{name:nm||'(no name)',a:0,c:0,timed:0,sq:0,last:0,sids:new Set()}; p.sids.add(r[i.sid]); const t=+r[i.t]||Date.parse(r[i.received])||0; if(t>p.last) p.last=t; return p };
+  rows.forEach(r=>{ const ev=r[i.event]; const p=who(r);
+    if(!ev && r[i.qid]){ events++; p.a++; const id=+r[i.qid]; st[id]=st[id]||{a:0,c:0}; st[id].a++; if(+r[i.correct]===1){ st[id].c++; p.c++ } }
+    else if(ev==='timed'){ p.timed++; timed.push({name:p.name,secs:+r[i.secs]||0,words:+r[i.n]||0,qid:r[i.qid]}) }
+    else if(ev==='shortq'){ p.sq++; const k=r[i.qid]; sq[k]=sq[k]||{n:0,sum:0,of:+r[i.n]||0}; sq[k].n++; sq[k].sum+=+r[i.c]||0} });
+  return {st, events, people:Object.values(people), timed, sq};
 }
+const ago=t=>{ if(!t) return ''; const m=Math.round((Date.now()-t)/60000); if(m<60) return m+' min ago'; const hh=Math.round(m/60); if(hh<36) return hh+' h ago'; return Math.round(hh/24)+' days ago' };
 async function teacher(){
-  let src=stats, note='answers recorded on <b>this device</b>', extra='';
-  if(TEACHER_CSV){ try{ const c=await classStats(); src=c.st; note=`<b>${c.events}</b> answers from <b>${c.devices}</b> devices in the class log`; }catch(e){ extra='<p class="hint">Could not reach the class log, showing this device instead.</p>' } }
+  let src=stats, note='answers recorded on <b>this device</b>', extra='', c=null;
+  if(TEACHER_CSV){ try{ c=await classStats(); src=c.st; note=`<b>${c.events}</b> answers from <b>${c.people.length}</b> students in the class log`; }catch(e){ extra='<p class="hint">Could not reach the class log, showing this device instead.</p>' } }
   const tstat=t=>{ let a=0,c=0; Q.filter(q=>q.topic===t && AUTO.has(q.type)).forEach(q=>{const s=src[q.id]; if(s){a+=s.a;c+=s.c}}); return {a,c} };
-  const rows=Q.filter(q=>AUTO.has(q.type)).map(q=>({q,s:src[q.id]||{a:0,c:0}})).filter(r=>r.s.a).sort((a,b)=>(a.s.c/a.s.a)-(b.s.c/b.s.a));
+  const minTries=c?3:1; const rows=Q.filter(q=>AUTO.has(q.type)).map(q=>({q,s:src[q.id]||{a:0,c:0}})).filter(r=>r.s.a>=minTries).sort((a,b)=>(a.s.c/a.s.a)-(b.s.c/b.s.a));
   const byT=UNITS.flatMap(u=>topicsIn(u).map(t=>({t,s:tstat(t)}))).filter(r=>r.s.a).sort((a,b)=>(a.s.c/a.s.a)-(b.s.c/b.s.a));
   const csv='id,unit,topic,type,question,attempts,correct,accuracy\n'+rows.map(r=>[r.q.id,r.q.unit,r.q.topic,r.q.type,JSON.stringify(r.q.question),r.s.a,r.s.c,Math.round(100*r.s.c/r.s.a)].join(',')).join('\n');
+  const pct=s=>s.a?Math.round(100*s.c/s.a):0;
+  const studentsHTML=c?(()=>{ const ps=[...c.people].sort((a,b)=>b.last-a.last); const low=ps.filter(p=>p.a<10).length;
+    return `<div><p class="eyebrow" style="margin-bottom:8px">Students</p><p class="hint">${ps.length} seen. ${low?`<b>${low}</b> with fewer than 10 answers.`:''} Sorted by most recent.</p>
+    <div class="tbl"><table class="tt"><thead><tr><th>Name</th><th class="n">Answers</th><th class="n">Accuracy</th><th class="n">Short answers</th><th class="n">Timed paragraphs</th><th>Last seen</th></tr></thead><tbody>${ps.map(p=>`<tr><td>${esc(p.name)}</td><td class="n ${p.a<10?'lo':''}">${p.a}</td><td class="n ${p.a&&p.c/p.a<.5?'lo':''}">${p.a?Math.round(100*p.c/p.a)+'%':''}</td><td class="n">${p.sq||''}</td><td class="n">${p.timed||''}</td><td class="muted">${ago(p.last)}</td></tr>`).join('')}</tbody></table></div></div>` })():'';
+  const sqHTML=c&&Object.keys(c.sq).length?(()=>{ const ks=Object.keys(c.sq).sort((a,b)=>(c.sq[a].sum/c.sq[a].n/c.sq[a].of)-(c.sq[b].sum/c.sq[b].n/c.sq[b].of));
+    return `<div><p class="eyebrow" style="margin-bottom:8px">Short answers, self-marked</p><div class="tbl"><table class="tt"><thead><tr><th>Question</th><th class="n">Marked</th><th class="n">Average</th></tr></thead><tbody>${ks.map(k=>{ const s=c.sq[k], q=SHORTQ.find(x=>x.id===k); return `<tr><td>${esc(q?q.q:k)}</td><td class="n">${s.n}</td><td class="n ${s.sum/s.n/s.of<.5?'lo':''}">${(s.sum/s.n).toFixed(1)} / ${s.of}</td></tr>`}).join('')}</tbody></table></div><p class="hint">Self-marks are what students gave themselves after seeing the exemplars. Treat them as a confidence signal, not a grade.</p></div>` })():'';
+  const timedHTML=c&&c.timed.length?`<div><p class="eyebrow" style="margin-bottom:8px">Timed paragraphs</p><p>${c.timed.length} attempts under exam conditions. Average ${Math.round(c.timed.reduce((a,t)=>a+t.words,0)/c.timed.length)} words in ${Math.round(c.timed.reduce((a,t)=>a+t.secs,0)/c.timed.length/60)} minutes. A full 8-mark answer is usually 180 to 250 words.</p></div>`:'';
   h(`<section class="section"><h2>Teacher view</h2>
   <p class="muted">Question difficulty from ${note}. Hardest first.</p>${extra}
-  ${rows.length?`<div class="card"><div><p class="eyebrow" style="margin-bottom:8px">Topics</p><div class="bytopic">${byT.map(r=>`<div class="bt"><div><div style="margin-bottom:4px">${esc(r.t)}</div><div class="bar"><i style="width:${100*r.s.c/r.s.a}%;background:${r.s.c/r.s.a<.6?'var(--accent)':'var(--sage)'}"></i></div></div><span class="n">${Math.round(100*r.s.c/r.s.a)}% · ${r.s.a}</span></div>`).join('')}</div></div>
-    <div><p class="eyebrow" style="margin-bottom:8px">Questions</p><div class="tbl"><table class="tt"><thead><tr><th>Question</th><th>Topic</th><th class="n">Tries</th><th class="n">Correct</th></tr></thead><tbody>${rows.map(r=>`<tr><td>${esc(r.q.question)}</td><td class="muted">${esc(r.q.topic)}</td><td class="n">${r.s.a}</td><td class="n ${r.s.c/r.s.a<.5?'lo':''}">${Math.round(100*r.s.c/r.s.a)}%</td></tr>`).join('')}</tbody></table></div></div>
-    <div class="row"><button class="btn" id="csv">Copy as CSV</button><button class="btn quiet" id="home">Home</button></div></div>`:`<div class="card"><p>No answers recorded yet.</p><div class="row"><button class="btn quiet" id="home">Home</button></div></div>`}
+  ${rows.length||c?`<div class="card">${studentsHTML}<div><p class="eyebrow" style="margin-bottom:8px">Topics</p><div class="bytopic">${byT.map(r=>`<div class="bt"><div><div style="margin-bottom:4px">${esc(r.t)}</div><div class="bar"><i style="width:${pct(r.s)}%;background:${pct(r.s)<60?'var(--accent)':'var(--sage)'}"></i></div></div><span class="n">${pct(r.s)}% · ${r.s.a}</span></div>`).join('')}</div></div>
+    <div><p class="eyebrow" style="margin-bottom:8px">Hardest questions</p><div class="tbl"><table class="tt"><thead><tr><th>Question</th><th>Topic</th><th class="n">Tries</th><th class="n">Correct</th></tr></thead><tbody>${rows.slice(0,25).map(r=>`<tr><td>${esc(r.q.question)}</td><td class="muted">${esc(r.q.topic)}</td><td class="n">${r.s.a}</td><td class="n ${pct(r.s)<50?'lo':''}">${pct(r.s)}%</td></tr>`).join('')}</tbody></table></div>${rows.length>25?`<p class="hint">Showing the 25 hardest of ${rows.length}${c?' with at least 3 attempts':''}. Copy as CSV for the full list.</p>`:''}</div>
+    ${sqHTML}${timedHTML}
+    <div class="row"><button class="btn" id="csv">Copy questions as CSV</button>${TEACHER_CSV?'<button class="btn" id="refresh">Refresh</button>':''}<button class="btn quiet" id="home">Home</button></div></div>`:`<div class="card"><p>No answers recorded yet.</p><div class="row"><button class="btn quiet" id="home">Home</button></div></div>`}
   </section>`);
-  const c=app.querySelector('#csv'); if(c) c.onclick=async e=>{ try{ await navigator.clipboard.writeText(csv); e.target.textContent='Copied' }catch(err){ e.target.textContent='Copy blocked' } };
+  const cb=app.querySelector('#csv'); if(cb) cb.onclick=async e=>{ try{ await navigator.clipboard.writeText(csv); e.target.textContent='Copied' }catch(err){ e.target.textContent='Copy blocked' } };
+  const rf=app.querySelector('#refresh'); if(rf) rf.onclick=()=>teacher();
   app.querySelector('#home').onclick=home;
 }
 
