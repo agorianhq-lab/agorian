@@ -559,7 +559,7 @@ footer{margin-top:40px;font-size:13px;color:var(--muted)}
 'use strict';
 const BANK = JSON.parse(document.getElementById('bank').textContent);
 const Q = BANK.questions, TERMS = BANK.terms, SHORTQ = BANK.shortq||[];
-const LOG_ENDPOINT = null; // Apps Script web app URL (see logging/Code.gs). null = no logging.
+const LOG_ENDPOINT = 'https://script.google.com/macros/s/AKfycbzlFW4JzyJvrfYTHunPIMbKbl0cSo-AYDnRHhWBWBo_KlUAdZ6NwPPCaKHfAME7Hcfu/exec'; // Apps Script web app URL (see logging/Code.gs). null = no logging.
 const TEACHER_CSV = null;  // published-to-web CSV link of the 'events' sheet. null = teacher view uses this device only.
 const app = document.getElementById('app');
 const UNITS = ['Medieval Europe','Shogunate Japan','Skills and concepts'];
