@@ -312,7 +312,7 @@
    "topic": "Feudalism and hierarchy",
    "skill": "Social hierarchy and roles",
    "stimulus": null,
-   "explanation": "Land flowed downwards and service flowed upwards. The clergy sat alongside this structure rather than inside it, which is why it is the distractor.",
+   "explanation": "Land flowed downwards and service flowed upwards. The clergy sat alongside this structure rather than inside it.",
    "source": "EP",
    "srcId": 12,
    "type": "gaps",
@@ -395,9 +395,9 @@
    "question": "Why did feudalism help a medieval king keep control of a large kingdom without a modern army or police force?",
    "options": [
     "Every subject swore an oath directly to the king",
-    "Nobles who held land from the king were obliged to supply knights and keep order in their own regions",
-    "The Church forced peasants to obey the king",
-    "Kings employed professional soldiers paid from taxes"
+    "Nobles who held land from the king owed him knights and kept order in their regions",
+    "The Church ordered peasants to obey the king in return for land",
+    "Kings employed professional soldiers paid from a national tax"
    ],
    "answer": [
     1
@@ -663,10 +663,10 @@
    "type": "mc",
    "question": "Why were castles significant to power and authority in medieval Europe, beyond their use in battle?",
    "options": [
-    "They were the only buildings that could store grain",
-    "They were a visible symbol of the lord's power, a centre for collecting taxes and administering justice, and a base from which to control the surrounding land",
-    "They were built to house peasants",
-    "They were used mainly as churches"
+    "They stored the grain that fed the whole region",
+    "They were a symbol of the lord's power and the centre for taxes, justice and control of the land around them",
+    "They housed the peasants who worked the lord's fields",
+    "They served as the parish church for the surrounding villages"
    ],
    "answer": [
     1
@@ -846,10 +846,10 @@
    "type": "mc",
    "question": "Which statement best explains why the Catholic Church was so powerful in medieval Europe?",
    "options": [
-    "It had the largest army",
-    "It controlled the path to heaven in a society where almost everyone believed in hell, and it also owned vast lands and collected tithes",
-    "The Pope was also the king of England",
-    "It controlled all trade"
+    "It commanded the largest army in Europe",
+    "It controlled the path to heaven in a society that believed in hell, and it owned vast lands",
+    "The Pope also ruled England and France directly",
+    "It controlled all trade between Europe and Asia"
    ],
    "answer": [
     1
@@ -882,7 +882,7 @@
    "topic": "Catholic Church",
    "skill": "Cultural and economic power",
    "stimulus": null,
-   "explanation": "Political power is about control of rulers, economic power is about land and money, cultural power is about ideas, learning and art. The Church was dominant in all three, and the exam asks students to tell them apart.",
+   "explanation": "Political power is about control of rulers, economic power is about land and money, cultural power is about ideas, learning and art. The Church was dominant in all three.",
    "source": "EP",
    "srcId": 35,
    "type": "mc",
@@ -1616,10 +1616,10 @@
    "type": "mc",
    "question": "The policy of sankin kotai required daimyo to spend alternate years in Edo and leave their families there when they returned home. What was its main purpose?",
    "options": [
-    "To educate the daimyo's children",
-    "To keep daimyo under the shogun's watch, drain their wealth through travel and hold their families as hostages against rebellion",
-    "To improve Japan's roads",
-    "To spread Christianity"
+    "To educate the daimyo's children at the shogun's court",
+    "To keep daimyo watched, drain their wealth and hold their families as hostages",
+    "To improve Japan's roads by forcing regular traffic on them",
+    "To spread the shogun's religion to the provinces"
    ],
    "answer": [
     1
@@ -1843,7 +1843,7 @@
    "topic": "Meiji Restoration",
    "skill": "Cause and effect",
    "stimulus": null,
-   "explanation": "The shogun's title literally meant barbarian-subduing general. Signing treaties signed under threat of force under threat destroyed the shogunate's claim to rule.",
+   "explanation": "The shogun's title literally meant barbarian-subduing general. Signing unequal treaties signed under threat of force destroyed the shogunate's claim to rule.",
    "source": "EP",
    "srcId": 77,
    "type": "mc",
@@ -2040,10 +2040,10 @@
    "type": "mc",
    "question": "Which statement correctly connects feudal Japan, the Tokugawa shogunate and the Meiji Restoration?",
    "options": [
-    "The Meiji Restoration created the samurai",
-    "The Tokugawa used the feudal hierarchy and strict control to keep peace for 250 years, but the same rigidity left Japan unable to respond to Western pressure, and the Meiji government dismantled the feudal system to modernise",
-    "The three periods had nothing to do with each other",
-    "The Tokugawa were overthrown by the Crusaders"
+    "The Meiji Restoration created the samurai class to defend Japan",
+    "Tokugawa control kept the peace but left Japan unable to answer Western pressure, so the Meiji government dismantled feudalism",
+    "The three periods had little to do with one another",
+    "The Tokugawa were overthrown by the daimyo of Kyushu with Dutch help"
    ],
    "answer": [
     1
@@ -2073,7 +2073,7 @@
    "srcId": 87,
    "type": "extended",
    "question": "Analyse the impact of the feudal system on medieval Europe. Write ONE TEEAL paragraph. Choose the area you think it shaped most (power, land, daily life or warfare), give at least two specific pieces of evidence and reach a judgement.",
-   "guidance": "Look for the chain. Population loss, labour shortage, peasants demanding wages or moving, lords unable to enforce old obligations, revolts when they tried.",
+   "guidance": "Credit a contention that names one area and ranks it above the others. Look for specific evidence (1066, fiefs, Domesday, manor duties) each followed by a because or this-meant sentence. The best responses explain how land-for-service bound every level of society and say when or why the system began to weaken.",
    "id": 87
   },
   {
@@ -2099,7 +2099,7 @@
    "srcId": 89,
    "type": "extended",
    "question": "Analyse the significance of sakoku for Japan. Write ONE TEEAL paragraph. Consider what the policy was meant to achieve, what it changed inside Japan and whether its effects lasted.",
-   "guidance": "The best responses weigh both and reach a judgement, for example that Perry was the trigger that exposed existing weaknesses.",
+   "guidance": "Credit a contention that weighs a benefit against a cost. Look for the edicts of the 1630s, Dejima, the long peace and its culture, and the consequence when Perry arrived. The best responses argue significance in both directions and reach a judgement rather than describing the policy.",
    "id": 89
   },
   {
@@ -2680,7 +2680,7 @@
    "srcId": "soc_exam",
    "type": "short",
    "question": "Explain how Commodore Perry's arrival in 1853 contributed to the fall of the Tokugawa shogunate.",
-   "model": "Model answer. Perry's warships forced the shogun to sign treaties signed under threat of force and open ports. This showed the shogunate could not protect Japan, so daimyo and samurai lost faith in it and rallied to the emperor, leading to its collapse in 1868.",
+   "model": "Model answer. Perry's warships forced the shogun to sign unequal treaties and open ports. This showed the shogunate could not protect Japan, so daimyo and samurai lost faith in it and rallied to the emperor, leading to its collapse in 1868.",
    "id": 118
   },
   {
@@ -3143,7 +3143,7 @@
    "srcId": "soc_warm",
    "type": "short",
    "question": "In one sentence, explain why historians call the sealing of Magna Carta in 1215 OR the sakoku edicts of the 1630s a turning point.",
-   "model": "Model answer. The Genpei War ended with Yoritomo becoming shogun in 1192, shifting real power from the emperor to military rulers for the next 700 years. Or, Hastings in 1066 brought Norman rule and the feudal system to England.",
+   "model": "Magna Carta in 1215 was a turning point because it was the first written statement that the king of England was under the law, an idea later kings were held to and that outlasted the medieval period. Or: the sakoku edicts of the 1630s were a turning point because they cut Japan off from most foreign contact for over two centuries, shaping its whole development until Perry's arrival in 1853.",
    "id": 140
   },
   {
@@ -3171,27 +3171,6 @@
    "question": "Give one piece of evidence that the Tokugawa shogunate was already weakening BEFORE Perry arrived.",
    "model": "Model answer. Samurai in debt to merchants, peasant uprisings and famines, or daimyo in the south-west (Satsuma, Choshu) resenting Tokugawa control.",
    "id": 142
-  },
-  {
-   "unit": "Medieval Europe",
-   "topic": "Feudalism and hierarchy",
-   "skill": "",
-   "stimulus": null,
-   "explanation": "Land for service is the core of feudalism. The land was the fief, the person receiving it was the vassal.",
-   "source": "Socrative",
-   "srcId": "soc_me",
-   "type": "mc",
-   "question": "In the feudal system, a lord granted land to a vassal in return for...",
-   "options": [
-    "payment in gold",
-    "loyalty and military service",
-    "religious conversion",
-    "a share of trade profits"
-   ],
-   "answer": [
-    1
-   ],
-   "id": 143
   },
   {
    "unit": "Medieval Europe",
@@ -3416,7 +3395,7 @@
    "topic": "Tokugawa Shogunate",
    "skill": "cause and effect",
    "type": "mc",
-   "question": "Edo grew from a fishing village in 1600 to a city of about a million people by 1700. Which Tokugawa policy did most to cause this growth?",
+   "question": "Edo grew from a small castle town in 1600 to a city of about a million people by 1700. Which Tokugawa policy did most to cause this growth?",
    "options": [
     "Sankin kotai, which forced daimyo and their households to live in Edo every second year",
     "Sakoku, which brought foreign merchants to Edo",
@@ -3534,7 +3513,7 @@
    "answer": [
     0
    ],
-   "explanation": "Heian (794 to 1185) was the age of the imperial court. Kamakura (1185 to 1333) began with the first shogun. Muromachi (1336 to 1573) was the age of the Ashikaga shoguns. Edo (1600 to 1868) was the Tokugawa period.",
+   "explanation": "Heian (794 to 1185) was the age of the imperial court. Kamakura (1185 to 1333) began with the first shogun. Muromachi (1336 to 1573) was the age of the Ashikaga shoguns. Edo (1603 to 1868) was the Tokugawa period, named for the shogun's capital.",
    "id": 161,
    "source": "Agorian",
    "srcId": null,
@@ -3545,7 +3524,7 @@
    "topic": "Chronology",
    "skill": "chronology",
    "type": "mc",
-   "question": "A timeline shows the Onin War in 1467 and the Battle of Sekigahara in 1600. Which century does each belong to?",
+   "question": "A timeline shows the Onin War in 1467 and Tokugawa Ieyasu becoming shogun in 1603. Which century does each belong to?",
    "options": [
     "15th century and 17th century",
     "14th century and 16th century",
@@ -3555,7 +3534,7 @@
    "answer": [
     0
    ],
-   "explanation": "To find the century, add one to the hundreds digit. 1467 is in the 1400s, so the 15th century. 1600 is the first year of the 17th century, since the 16th century ran from 1501 to 1600.",
+   "explanation": "To find the century, add one to the hundreds digit. 1467 is in the 1400s, so the 15th century. 1603 is in the 1600s, so the 17th century. Be careful with round years: 1600 itself is the last year of the 16th century.",
    "id": 162,
    "source": "Agorian",
    "srcId": null,
@@ -3756,7 +3735,7 @@
   },
   {
    "term": "Sakoku",
-   "definition": "Japan's foreign policy of isolation during the Tokugawa shogunate (1633 to 1853) that forbade Japanese people leaving Japan or foreigners entering it. The penalty was death."
+   "definition": "Japan's policy of national seclusion under the Tokugawa (1630s to 1853). Japanese people could not leave and most foreigners could not enter, on pain of death. Limited trade with the Dutch and Chinese continued at Nagasaki."
   },
   {
    "term": "Samurai",
@@ -3788,7 +3767,7 @@
   },
   {
    "term": "Treason",
-   "definition": "Doing or saying something that goes against the laws of the king or is seen as a betrayal of the king."
+   "definition": "The crime of betraying the king, for example plotting against him or helping his enemies. It was punished more severely than any other crime."
   },
   {
    "term": "Turning point",

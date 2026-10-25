@@ -537,6 +537,8 @@ footer{margin-top:40px;font-size:13px;color:var(--muted)}
     <path d="M116 26 l14 -6 l-14 -6 z" fill="var(--accent)"/>
     <g fill="#fff" opacity=".9"><rect x="72" y="66" width="6" height="12"/><rect x="138" y="66" width="6" height="12"/><path d="M101 118 a7 7 0 0 1 14 0 v32 h-14z"/><rect x="92" y="84" width="6" height="12"/><rect x="118" y="84" width="6" height="12"/></g>
   </symbol>
+  <symbol id="ar-l" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="ar-r" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
   <symbol id="m-practice" viewBox="0 0 48 48"><circle cx="22" cy="26" r="17" fill="currentColor" opacity=".25"/><circle cx="22" cy="26" r="17" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="22" cy="26" r="10" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="22" cy="26" r="3.5" fill="currentColor"/><path d="M22 26 L40 8" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/><path d="M40 8 L41 15 M40 8 L33 7" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/></symbol>
   <symbol id="m-challenge" viewBox="0 0 48 48"><path d="M13 6 h22 M13 42 h22" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/><path d="M15 8 C15 18 24 20 24 24 C24 28 15 30 15 40 H33 C33 30 24 28 24 24 C24 20 33 18 33 8 Z" fill="currentColor" opacity=".25"/><path d="M15 8 C15 18 24 20 24 24 C24 28 15 30 15 40 H33 C33 30 24 28 24 24 C24 20 33 18 33 8 Z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><path d="M18 11 h12 L24 18 Z M20 38 h8 L24 31 Z" fill="currentColor"/></symbol>
   <symbol id="m-timeline" viewBox="0 0 48 48"><path d="M6 36 C14 36 14 12 24 12 C34 12 34 36 42 36" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/><circle cx="9" cy="35" r="4.5" fill="currentColor"/><circle cx="24" cy="12" r="4.5" fill="currentColor"/><circle cx="39" cy="35" r="4.5" fill="currentColor"/><circle cx="16.5" cy="20" r="3" fill="currentColor" opacity=".5"/><circle cx="31.5" cy="20" r="3" fill="currentColor" opacity=".5"/></symbol>
@@ -838,7 +840,7 @@ function home(){
       <div class="namerow"><label for="nameIn" class="hint">Your name</label><input class="text" id="nameIn" placeholder="First name and initial" autocomplete="off" value="${esc(studentName)}"><button class="btn primary" id="goWelcome">Let’s go</button><button class="soundbtn ${soundOn?'on':''}" id="snd0">${soundOn?'&#9835; Sound on':'&#9835; Sound off'}</button></div></div>`}
     <h1><em>Challenge</em> what you know.</h1>
     <div class="herogrid">
-      <div class="herotext"><p>The agora was the open square of Athens where citizens traded, voted and were questioned by Socrates. This is yours. Quick questions with an explanation after every answer, timed challenges, a timeline game, flashcards for the key terms and exam style paragraph prompts, all across Medieval Europe and Shogunate Japan.</p>
+      <div class="herotext"><p>The agora was the open square of Athens where citizens traded, voted and were questioned by Socrates. This is yours. Quick questions with an explanation after every answer, timed challenges, a timeline game, flashcards for the key terms and exam-style paragraph prompts, all across Medieval Europe and Shogunate Japan.</p>
       <div class="daily">
         <div><p class="t">Today’s ten</p><p class="n">${dailyDone?'Done for today. Back tomorrow for the next set.':`Ten questions aimed at what you find hardest.${(()=>{const d=Q.filter(q=>AUTO.has(q.type)&&stats[q.id]&&stats[q.id].due&&stats[q.id].due<=Date.now()).length; return d?` ${d} due for a return visit.`:''})()}`} ${dayStreak>1?`Day streak <b>${dayStreak}</b>.`:''}</p></div>
         <button class="btn ${dailyDone?'done':''}" data-go="daily">${dailyDone?'Do it again':'Start'}</button>
@@ -936,11 +938,13 @@ function showQ(){
   const stim = q.stimulus ? `<div class="stim">${si?`<img src="${IMG[si]}" alt="${esc(CAP[si])}">`:''}${esc(q.stimulus).replace(/"([^"]+)"/g,'<p style="margin-top:6px">“$1”</p>')}${si?`<p class="cap" style="font-size:11px;color:var(--muted);margin-top:6px">${esc(CAP[si])}</p>`:''}</div>` : '';
   let body='';
   if(q.type==='mc'||q.type==='ms'){
-    body = `<div class="opts" role="group">${q.options.map((o,k)=>`<button class="opt" data-k="${k}"><span class="l">${L[k]}</span><span>${esc(o)}</span></button>`).join('')}</div>
+    const order=shuffle(q.options.map((_,k)=>k));
+    body = `<div class="opts" role="group">${order.map((k,pos)=>`<button class="opt" data-k="${k}"><span class="l">${L[pos]}</span><span>${esc(q.options[k])}</span></button>`).join('')}</div>
       ${q.type==='ms'?`<p class="hint">Select all that apply, then check.</p>`:''}
       ${q.options.length>=3?`<div class="conf"><button class="hintbtn" id="hintBtn" style="margin-left:0">Remove one wrong answer</button></div>`:''}`;
   } else if(q.type==='gaps'){
-    body = `<div class="gaps">${q.segments.map((s,k)=> esc(s) + (k<q.blanks.length ? `<select data-b="${k}" id="g${q.id}-${k}"><option value="">…</option>${shuffle(q.choices[k]).map(c=>`<option>${esc(c)}</option>`).join('')}</select>` : '')).join('')}</div>`;
+    const stack=q.blanks.length>=4;
+    body = `<div class="gaps ${stack?'stack':''}">${q.segments.map((s,k)=> (stack&&s.trim()==='.')?'':(stack&&k>0?'<br>':'') + esc(s) + (k<q.blanks.length ? `<select data-b="${k}" id="g${q.id}-${k}"><option value="">…</option>${shuffle(q.choices[k]).map(c=>`<option>${esc(c)}</option>`).join('')}</select>` : '')).join('')}</div>${stack?'<p class="hint">Each event can be used once.</p>':''}`;
   } else if(q.type==='text'){
     body = `<input class="text" id="tx${q.id}" placeholder="Type your answer" autocomplete="off" autocapitalize="off">
       <div class="conf"><span>How sure are you?</span><button data-c="sure">Sure</button><button data-c="unsure">Not sure</button></div>`;
@@ -949,7 +953,7 @@ function showQ(){
       <div class="conf"><span>How sure are you?</span><button data-c="sure">Sure</button><button data-c="unsure">Not sure</button></div>`;
   }
   if(music.on && music.mode==='auto' && musicUnit()!==music.current){ clearTimeout(music.timer); phrase() }
-  h(`<div class="progress ${state.mode}"><span>${i+1} / ${list.length}</span><span class="track"><i style="width:${100*i/list.length}%"></i></span>${state.timed?`<span class="timer" id="timer">${fmt(state.left)}</span>`:`<button class="btn quiet" id="quit" style="padding:4px 8px">End</button>`}</div>
+  h(`<div class="progress ${state.mode}"><span>${i+1} / ${list.length}</span><span class="track"><i style="width:${100*i/list.length}%"></i></span>${state.timed?`<span class="row" style="gap:10px"><span class="timer" id="timer">${fmt(state.left)}</span><button class="btn quiet" id="quit" style="padding:4px 8px">Finish</button></span>`:`<button class="btn quiet" id="quit" style="padding:4px 8px">End</button>`}</div>
   <div class="card ${unitCls(q.unit)}">
     ${si?'':art(TOPIC_IMG[q.topic])}
     <div class="qhead"><span class="eyebrow" style="color:var(--${unitCls(q.unit)})"><svg><use href="#ic-${unitCls(q.unit)}"/></svg>${esc(q.unit)} · ${esc(q.topic)}</span>${q.skill?`<span class="hint">${esc(q.skill)}</span>`:''}</div>
@@ -969,6 +973,7 @@ function showQ(){
     else { b.classList.toggle('sel'); selected.has(k)?selected.delete(k):selected.add(k); }
   });
   const tx=app.querySelector('input.text'); if(tx){ tx.focus(); tx.onkeydown=e=>{ if(e.key==='Enter') check() } }
+  { const gs=[...app.querySelectorAll('.gaps.stack select')]; if(gs.length){ const sync=()=>{ const used=gs.map(x=>x.value); gs.forEach(x=>[...x.options].forEach(o=>{ o.disabled=!!o.value&&o.value!==x.value&&used.includes(o.value) })) }; gs.forEach(x=>x.onchange=sync) } }
   document.onkeydown=e=>{ if(!app.querySelector('.card')||e.target.matches('input,textarea,select')) return;
     const opts=app.querySelectorAll('.opt:not(:disabled)'); const k='abcdefgh'.indexOf(e.key.toLowerCase()); const n=parseInt(e.key)-1;
     if(opts.length && (k>=0&&k<opts.length)) opts[k].click(); else if(opts.length && n>=0 && n<opts.length) opts[n].click();
@@ -979,16 +984,16 @@ function showQ(){
     const btn=app.querySelector('#check'); if(btn.disabled) return;
     let correct=false, detail='';
     if(q.type==='mc'||q.type==='ms'){
-      if(!selected.size) return;
+      if(!selected.size){ app.querySelector('#fb').innerHTML='<p class="hint">Choose all that apply first, then check.</p>'; return }
       const ans=new Set(q.answer);
       correct = selected.size===ans.size && [...selected].every(k=>ans.has(k));
       app.querySelectorAll('.opt').forEach(x=>{ const k=+x.dataset.k; x.disabled=true; x.classList.remove('sel');
         if(ans.has(k)&&selected.has(k)) x.classList.add('right'); else if(selected.has(k)) x.classList.add('wrong'); else if(ans.has(k)) x.classList.add('missed'); });
     } else if(q.type==='gaps'){
-      const sels=[...app.querySelectorAll('.gaps select')]; if(sels.some(s=>!s.value)) { sels.find(s=>!s.value).focus(); return }
+      const sels=[...app.querySelectorAll('.gaps select')]; if(sels.some(s=>!s.value)) { sels.find(s=>!s.value).focus(); app.querySelector('#fb').innerHTML='<p class="hint">Fill every blank first.</p>'; return }
       correct=true; sels.forEach((s,k)=>{ const ok=s.value===q.blanks[k]; s.classList.add(ok?'right':'wrong'); s.disabled=true; if(!ok){ correct=false; s.insertAdjacentHTML('afterend',` <span class="fix">→ ${esc(q.blanks[k])}</span>`) } });
     } else if(q.type==='text'){
-      const v=tx.value.trim().toLowerCase(); if(!v) return;
+      const v=tx.value.trim().toLowerCase(); if(!v){ app.querySelector('#fb').innerHTML='<p class="hint">Type an answer first.</p>'; return }
       correct = q.answer.includes(v) || q.answer.some(a=>v.replace(/[^a-z]/g,'')===a.replace(/[^a-z]/g,''));
       tx.disabled=true; tx.classList.add(correct?'right':'wrong'); if(!correct) detail=`Answer: <b>${esc(q.answer[0])}</b>. `;
     } else if(q.type==='short'){
@@ -1003,7 +1008,7 @@ function showQ(){
     finish(correct);
   }
   function finish(correct){
-    record(q, correct, conf, usedHint);
+    if(q.type==='short') log({qid:q.id, unit:q.unit, topic:q.topic, type:q.type, correct:correct?1:0, conf, mode:state.mode, event:'self'}); else record(q, correct, conf, usedHint);
     state.answers.push({q, correct, conf, hint:usedHint});
     beep(correct?'ok':'bad');
     const btn=app.querySelector('#check'); btn.hidden=false; btn.disabled=false; btn.textContent = i+1<list.length ? 'Next' : 'See results'; btn.onclick=()=>{ state.i++; showQ() };
@@ -1065,7 +1070,7 @@ function results(){
   if(n && pct>=80) setTimeout(confetti,200);
   if(n && pct>=80) setTimeout(()=>beep('win'),150);
   const date=new Date().toLocaleDateString('en-AU',{day:'numeric',month:'short',year:'numeric'});
-  const modeName=({challenge:'Challenge',daily:'Daily ten',practice:'Practice'})[state.mode];
+  const modeName=({challenge:'Challenge',daily:'Today’s ten',practice:'Practice'})[state.mode];
   const rows=Object.entries(byTopic).map(([t,s])=>[t,`${s.c} / ${s.a}`,`${Math.round(100*s.c/s.a)}%`]);
   const colw=Math.max(12,...rows.map(r=>r[0].length));
   const summary=[`AGORIAN  ${modeName.toUpperCase()}`,date,'',`Score   ${c} / ${n}   (${pct}%)`,`Time    ${mins}`,'','By topic',...rows.map(r=>`  ${r[0].padEnd(colw)}  ${r[1].padStart(7)}  ${r[2].padStart(4)}`),'',weak.length?`Revisit  ${weak.join(', ')}`:'No weak topics this round.'].join('\n');
@@ -1081,7 +1086,7 @@ function results(){
         <div class="sumfoot">${weak.length?`<b>Revisit</b> ${esc(weak.join(', '))}`:'No weak topics this round.'}</div></div>
       <div class="row" style="margin-top:8px"><button class="btn" id="copy">Copy summary</button><span class="hint">Or screenshot this card.</span></div></div>
     ${factFor(weak.length?weak:Object.keys(byTopic))}
-    ${A.some(a=>!a.correct)?`<div><p class="eyebrow" style="margin-bottom:8px">Questions to revisit</p><div class="review">${A.filter(a=>!a.correct).map(a=>`<div class="rv"><span class="q">${esc(a.q.question)}${a.conf==='sure'?'<span class="tag sure">Sure but wrong</span>':''}</span><span class="muted">${esc(a.q.explanation||a.q.model||'')}</span></div>`).join('')}</div></div>`:''}
+    ${A.some(a=>!a.correct)?`<div><p class="eyebrow" style="margin-bottom:8px">Questions to revisit</p><div class="review">${A.filter(a=>!a.correct).map(a=>`<div class="rv"><span class="q">${esc(a.q.question)}${a.conf==='sure'?'<span class="tag sure">Sure but wrong</span>':''}</span>${(()=>{const q=a.q; let ans=''; if(q.type==='mc'||q.type==='ms') ans=q.answer.map(k=>q.options[k]).join('; '); else if(q.type==='gaps') ans=q.blanks.join(', '); else if(q.type==='text') ans=q.answer[0]; return ans?`<span><b>Answer:</b> ${esc(ans)}</span>`:''})()}<span class="muted">${esc(a.q.explanation||a.q.model||'')}</span></div>`).join('')}</div></div>`:''}
     ${A.some(a=>a.correct&&a.conf==='unsure')?`<p class="hint">${A.filter(a=>a.correct&&a.conf==='unsure').length} right but not sure. Those come back in three days. Sure and right come back in a week, wrong ones tomorrow.</p>`:''}
     ${A.some(a=>a.hint)?`<p class="hint">Hints used on ${A.filter(a=>a.hint).length}.</p>`:''}
     <div class="row"><button class="btn primary" id="again">${state.mode==='challenge'?'New challenge':'Practise again'}</button><button class="btn" id="succ">What success looks like</button>${weak.length?`<button class="btn accent" id="weak">Practise weak topics</button>`:''}<button class="btn quiet" id="home">Home</button></div>
@@ -1281,10 +1286,10 @@ function shortq(){
     <div class="card ${u}">
       <span class="eyebrow" style="color:var(--${u})">${esc(s.unit)} · ${esc(s.topic)} · ${esc(s.cmd)}</span>
       <p class="qtext">${esc(s.q)} <span class="muted" style="font-weight:400;white-space:nowrap">(${s.marks} marks)</span></p>
-      <div class="timerrow"><span><b>About ${Math.round(s.marks*0.75*2)/2} minutes</b> in the exam, at 45 seconds a mark.</span><button class="btn" id="tstart">Start timer</button><span class="tdisp" id="tdisp" hidden></span></div>
+      <div class="timerrow"><span><b>${s.marks*45>=60?Math.floor(s.marks*45/60)+' min '+(s.marks*45%60?s.marks*45%60+' sec':''):s.marks*45+' sec'}</b> in the exam, at 45 seconds a mark.</span><button class="btn" id="tstart">Start timer</button><span class="tdisp" id="tdisp" hidden></span></div>
       <textarea id="sq-${s.id}" placeholder="Write your answer here. Identify, prove, link." style="margin-top:12px;min-height:150px">${esc(drafts['sq-'+s.id]||'')}</textarea>
-      <div class="row" style="justify-content:space-between;margin-top:8px"><span class="hint" id="wc"></span><button class="btn primary" id="reveal">Reveal marked answers</button></div>
-      <div id="answers" hidden style="margin-top:14px;display:grid;gap:12px">
+      <div class="row" style="justify-content:space-between;margin-top:8px"><span class="hint" id="wc"></span><button class="btn primary" id="reveal" ${sqMarks[s.id]!==undefined?'hidden':''}>Reveal marked answers</button></div>
+      <div id="answers" ${sqMarks[s.id]!==undefined?'':'hidden'} style="margin-top:14px;display:grid;gap:12px">
         <div class="sample full"><span class="marks full">${s.marks} / ${s.marks}</span>${s.full.text.split('\n').map(t=>`<p>${esc(t)}</p>`).join('')}<p class="why"><b>Why ${s.marks}.</b> ${esc(s.full.why)}</p></div>
         <div class="sample weak"><span class="marks weak">${s.part.marks} / ${s.marks}</span>${s.part.text.split('\n').map(t=>`<p>${esc(t)}</p>`).join('')}<p class="why"><b>Why ${s.part.marks}.</b> ${esc(s.part.why)}</p></div>
         <div class="card" style="margin:0"><p class="eyebrow">Mark yourself</p><p class="hint">Compare your answer with the two above. Did you identify each point the question asked for, and did each one have a because sentence?</p>
@@ -1308,6 +1313,7 @@ function shortq(){
 // ---------- what success looks like: models and worked examples ----------
 const TEEAL=[['T','Topic sentence','State your argument in answer to the question.'],['X','Explain','Elaborate on the topic sentence. What do you mean?'],['E','Evidence','At least two specific facts. Names, dates, places, a quote from a source.'],['A','Analyse','Why does the evidence matter? What caused it, what did it change, how does it support your argument?'],['L','Link','Return to the question with a judgement.']];
 const TAGNAME={T:'Topic',X:'Explain',E:'Evidence',A:'Analyse',L:'Link',EA:'Evidence + analyse'};
+const RUBRIC_KEY='A analysis, K knowledge, S structure, W writing';
 const RUBRIC=[['3','Analysis','Significance, cause and effect, a judgement'],['2','Knowledge','Specific, accurate, relevant'],['1','Structure','TEEAL with a clear contention'],['2','Writing','Clear expression, terms, spelling']];
 // bank prompt id -> model. Crusades and Meiji paragraphs are from the Moving Marks pack. Feudal system, Church and sakoku are drafted in the same style for teacher checking.
 const SUCCESS={
@@ -1394,8 +1400,8 @@ function wordBank(insertable){ return `<div class="wb">${WORDS.map(([g,ws])=>`<d
   <div class="grp"><p class="eyebrow" style="color:var(--bad)">Words that assert without showing. Replace them.</p><div class="chips">${WEAKWORDS.map(w=>`<span class="chip no">${esc(w)}</span>`).join('')}</div></div>
   <p class="hint">Because and which meant are worth more than any adjective. Mainly and to a large extent are small words that signal a judgement.${insertable?' Tap a word to drop it into your draft.':''}</p></div>` }
 function bindWordBank(ta){ app.querySelectorAll('.chip[data-w]').forEach(c=>c.onclick=()=>{ if(!ta) return; const w=c.dataset.w; const st=ta.selectionStart??ta.value.length, en=ta.selectionEnd??st; const before=ta.value.slice(0,st), after=ta.value.slice(en); const sp=before&&!/\s$/.test(before)?' ':''; ta.value=before+sp+w+(after&&!/^\s/.test(after)?' ':'')+after; const pos=(before+sp+w).length; ta.focus(); ta.setSelectionRange(pos,pos); ta.dispatchEvent(new Event('input')) }) }
-function modelHTML(m){ return `<div class="legend">${TEEAL.map(t=>`<span class="sent ${t[0]}" style="padding:0;border:0;background:none;display:inline">${t[1]}</span>`).join('')}</div><div class="model">${m.model.map(([tag,txt])=>`<div class="sent ${tag[0]}"><b>${tag}</b><span>${esc(txt)}</span></div>`).join('')}</div>
-  <div class="row" style="justify-content:space-between"><span class="marks full">${esc(m.marks)}</span>${m.draft?'<span class="hint">Draft model, written in the style of the marked samples. Check before relying on it.</span>':'<span class="hint">From the marked exam samples.</span>'}</div><div class="feedback info"><b>Why it scores 8</b><span>${esc(m.why)}</span></div>` }
+function modelHTML(m){ const used=new Set(m.model.map(([tag])=>tag[0])); return `<div class="legend">${TEEAL.filter(t=>used.has(t[0])).map(t=>`<span class="sent ${t[0]}" style="padding:0;border:0;background:none;display:inline">${t[1]}</span>`).join('')}${used.has('E')&&m.model.some(([t])=>t==='EA')?'<span class="hint">EA is evidence and analysis in one sentence.</span>':''}</div><div class="model">${m.model.map(([tag,txt])=>`<div class="sent ${tag[0]}"><b>${tag}</b><span>${esc(txt)}</span></div>`).join('')}</div>
+  <div class="row" style="justify-content:space-between"><span class="marks full" title="${RUBRIC_KEY}">${esc(m.marks)}</span><span class="hint">${RUBRIC_KEY}</span>${m.draft?'<span class="hint">Draft model, written in the style of the marked samples. Check before relying on it.</span>':'<span class="hint">From the marked exam samples.</span>'}</div><div class="feedback info"><b>Why it scores 8</b><span>${esc(m.why)}</span></div>` }
 
 function success(open){
   const draw=screen(function successPage(id){
@@ -1430,7 +1436,7 @@ function write(){
       <div id="pane-write">
       <div class="scaffold"><p class="eyebrow">TEEAL scaffold</p>
         ${TEEAL.map(([a,b,c])=>`<div class="s"><b>${a==='X'?'E':a}</b><span><b style="font-family:var(--body);color:var(--ink)">${b}.</b> ${c}</span></div>`).join('')}</div>
-      <div class="timerrow"><span><b>Exam conditions.</b> Section C is 8 marks in about 15 minutes. Start the clock, the scaffold hides, and write as you would on paper.</span><label class="hint">Minutes <select class="sel" id="tmin"><option>15</option><option>10</option><option>12</option><option>20</option></select></label><button class="btn" id="tstart">Start timer</button><span class="tdisp" id="tdisp" hidden></span></div>
+      <div class="timerrow"><span><b>Exam conditions.</b> Section C is 8 marks in about 15 minutes. Start the clock, the scaffold hides, and write as you would on paper.</span><label class="hint">Minutes <select class="sel" id="tmin"><option>10</option><option>12</option><option selected>15</option><option>20</option></select></label><button class="btn" id="tstart">Start timer</button><span class="tdisp" id="tdisp" hidden></span></div>
       <div id="timeup" class="feedback" hidden></div>
       <textarea id="d${q.id}" placeholder="Write your paragraph here. It stays on this device." style="margin-top:12px">${esc(drafts[q.id]||'')}</textarea>
       <div class="row" style="justify-content:space-between;margin-top:8px"><span class="hint" id="wc"></span><button class="btn" id="guide">Show marker guidance</button></div>
@@ -1462,10 +1468,10 @@ function write(){
     { const k=prompts.indexOf(q); const pv=app.querySelector('#pg-prev'), nx=app.querySelector('#pg-next'); if(pv) pv.onclick=()=>pick(prompts[k-1].id); if(nx) nx.onclick=()=>pick(prompts[k+1].id); }
     app.querySelectorAll('.tab').forEach(t=>t.onclick=()=>{ app.querySelectorAll('.tab').forEach(x=>x.classList.toggle('on',x===t)); app.querySelector('#pane-write').hidden=t.dataset.tab!=='write'; app.querySelector('#pane-model').hidden=t.dataset.tab!=='model' });
   });
-  h(`<section class="section">${MODEH('write','Paragraph practice')}<p class="muted">Five exam style prompts. Each opens with the TEEAL scaffold, a model answer marked 8 out of 8, and the guidance a marker uses.</p>
+  h(`<section class="section">${MODEH('write','Paragraph practice')}<p class="muted">Five exam-style prompts. Each opens with the TEEAL scaffold, a model answer marked 8 out of 8, and the guidance a marker uses.</p>
   <div class="hubs"><button class="hubcard" id="succ" style="border-left-color:var(--gold-ink)"><b>What success looks like</b><span>Marked answers for every kind of exam question. Two-mark explains, compares, turning points, captions, impacts and the 8-mark paragraph.</span></button>
   <button class="hubcard" id="shortq" style="border-left-color:var(--teal)"><b>Short answers</b><span>Fifteen 2, 3 and 4-mark questions. Write yours, then compare it with a full-marks and a part-marks answer and mark yourself.</span></button></div>
-  <div class="topics">${prompts.map(p=>`<button class="topic" data-id="${p.id}" style="align-items:flex-start"><span><span class="eyebrow">${esc(p.unit)}</span><br><span class="name" style="font-weight:500">${esc(p.question.split('. ').slice(0,2).join('. '))}.</span></span><span class="meta">${drafts[p.id]?'Draft saved':''}</span></button>`).join('')}</div>
+  <div class="topics">${prompts.map(p=>`<button class="topic" data-id="${p.id}" style="align-items:flex-start"><span><span class="eyebrow">${esc(p.unit)}</span><br><span class="name" style="font-weight:500">${esc(p.question.replace(/^Write ONE TEEAL paragraph in response to the following\. /,'').split('. ').slice(0,2).join('. ').replace(/\.$/,''))}.</span></span><span class="meta">${drafts[p.id]?'Draft saved':''}</span></button>`).join('')}</div>
   <div class="row"><button class="btn quiet" id="home">Home</button></div></section>`);
   app.querySelectorAll('[data-id]').forEach(b=>b.onclick=()=>pick(+b.dataset.id));
   app.querySelector('#home').onclick=home; app.querySelector('#succ').onclick=()=>success(); app.querySelector('#shortq').onclick=()=>shortq();
@@ -1479,7 +1485,7 @@ const mm=document.getElementById('musMode'); mm.value=music.mode; mm.onchange=()
 const mv=document.getElementById('musVol'); mv.value=music.vol; mv.oninput=()=>{ music.vol=+mv.value; store.set('musVol',music.vol); if(music.master&&actx) music.master.gain.setTargetAtTime(music.vol/100*.6, actx.currentTime, .1) };
 document.addEventListener('visibilitychange',()=>{ if(document.hidden&&music.on){ clearTimeout(music.timer) } else if(music.on){ phrase() } });
 (function tick(){ const d=new Date(); const el=document.getElementById('clock'); if(el){ const hh=d.getHours(), m=String(d.getMinutes()).padStart(2,'0'), ss=String(d.getSeconds()).padStart(2,'0'); const h12=((hh+11)%12)+1; el.innerHTML=`<span class="lbl">Melbourne</span><span class="time">${h12}:${m}<small>${hh<12?'am':'pm'}</small></span><span class="date">${d.toLocaleDateString('en-AU',{weekday:'long',day:'numeric',month:'long'})}</span>` } setTimeout(tick, 60000-(Date.now()%60000)+50) })();
-HOME_FN=home; home=screen(home); setup=screen(setup); challenge=screen(challenge); terms=screen(terms); write=screen(write); daily=screen(daily); timeline=screen(timeline); teacher=screen(teacher); sprint=screen(sprint); facts=screen(facts); exam=screen(exam); shortq=screen(shortq);
+HOME_FN=home; home=screen(home); setup=screen(setup); challenge=screen(challenge); terms=screen(terms); write=screen(write); daily=screen(daily); timeline=screen(timeline); teacher=screen(teacher); sprint=screen(sprint); facts=screen(facts); exam=screen(exam); shortq=screen(shortq); startQuiz=screen(startQuiz);
 document.getElementById('backBtn').onclick=goBack;
 const ROUTES={practice:setup, challenge, terms, write, daily, timeline, teacher, sprint, facts, success, exam, shortq};
 const r=(location.hash||'').slice(1); (ROUTES[r]||home)();
