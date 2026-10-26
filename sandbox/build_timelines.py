@@ -59,6 +59,7 @@ def y(yr):
     return out
 H=y(1925)
 MAXB=[0]
+STAR={1066,1086,1095,1215,1347,1351,1381,1185,1192,1600,1603,1615,1635,1639,1853,1868,1873}
 KN={'pol':'Power and rule','war':'War and conquest','faith':'Faith and the Church','life':'Society, culture and economy'}
 def col(evs,side):
     out=[]; last=-99; lasth=0
@@ -68,7 +69,8 @@ def col(evs,side):
         top=y(yr)
         if top-last<lasth+6: top=last+lasth+6
         last=top; lasth=hgt; MAXB[0]=max(MAXB[0],top+hgt)
-        out.append(f'<div class="ev {side} k-{k}" style="top:{top:.0f}px"><span class="yr">{yr}</span><div class="card">{img}<div><b>{t}</b><span>{d}</span></div></div></div><i class="dot {side} k-{k}" style="top:{y(yr):.0f}px"></i>')
+        st=' star' if yr in STAR else ''
+        out.append(f'<div class="ev {side} k-{k}{st}" style="top:{top:.0f}px"><span class="yr">{"&#9733; " if st else ""}{yr}</span><div class="card">{img}<div><b>{t}</b><span>{d}</span></div></div></div><i class="dot {side} k-{k}" style="top:{y(yr):.0f}px"></i>')
     return ''.join(out)
 def bands(ps,side):
     return ''.join(f'<div class="band {side}" style="top:{y(a):.0f}px;height:{y(b)-y(a):.0f}px;{("background-image:url("+B[img]+")") if img else ""}"><span>{n}</span></div>' for a,b,n,img in ps)
@@ -83,6 +85,7 @@ html=f"""<!doctype html><html lang="en-AU"><head><meta charset="utf-8"><meta nam
 <style>{CSS.replace('__H__',f'{H:.0f}')}</style></head><body><div class="wrap">
 <h1>Two worlds, <em>one</em> timeline</h1>
 <p class="sub">Medieval Europe on the left, Japan on the right, on the same scale. Click an event for a line of detail; click again or press Escape to close it. Dotted gold links mark moments when the two units rhyme. The scale is stretched between 1050 and 1500, where most of both units sits.</p>
+<div class="tipbox"><b>Which dates to learn.</b> The starred years (&#9733;) are the ones worth writing in a Section B or C answer, because a date is the quickest way to make a point specific. The rest are here so you can see where things sit. <b>And in the exam itself:</b> the source booklet gives you a timeline. Treat it as a free date bank when you write Section B and C, and check your own dates against it.</div>
 <div class="legend">{legend}<span><i class="sw" style="background:none;border-top:2px dotted var(--gold);height:0"></i>A connection worth knowing</span></div>
 <div class="head"><h2 class="eu">Medieval Europe</h2><div class="mid">CE</div><h2 class="jp">Shogunate Japan</h2></div>
 <div class="tl"><div class="colL">{COLL}</div><div class="spine">{ticks}{links}</div><div class="colR">{COLR}</div></div>
