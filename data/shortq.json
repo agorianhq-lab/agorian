@@ -1,47 +1,308 @@
 [
-{"id":"s1","unit":"Medieval Europe","topic":"Castles and knights","marks":2,"cmd":"Explain one","q":"Explain one reason William the Conqueror built castles across England after 1066.",
- "full":{"text":"One reason was to control a hostile population. William had conquered England with a small Norman army, so he built motte-and-bailey castles in towns such as York and Nottingham. Because a castle let a few dozen soldiers dominate the surrounding countryside and gave them a safe base if the English rebelled, he could hold the kingdom without a large army.","why":"Identifies a reason (control), gives specific evidence (small army, York, Nottingham) and links with a because sentence to how castles solved the problem."},
- "part":{"marks":1,"text":"William built castles to protect himself. Castles were strong and had high walls and a moat, so the Normans were safe inside them.","why":"Identifies protection, which earns 1. The rest describes what a castle was like rather than explaining why building many of them across England helped William rule."}},
-{"id":"s2","unit":"Medieval Europe","topic":"Feudalism and hierarchy","marks":3,"cmd":"Describe three","q":"Describe three obligations a serf owed to the lord of the manor.",
- "full":{"text":"First, serfs had to work the lord’s own land, the demesne, for several days each week before working their own strips. Second, they paid the lord in kind, handing over a share of their harvest and animals, and paid to use the lord’s mill and oven. Third, they could not leave the manor, marry or send a son to the Church without the lord’s permission, usually paid for with a fee.","why":"Three separate obligations, each with a specific detail. Labour, payment and restriction on movement are different kinds of duty, so none repeats another."},
- "part":{"marks":1,"text":"Serfs had to work for the lord. They worked on his land and did farming for him and also did other jobs he told them to do.","why":"Working the lord’s land is one obligation, so 1 mark. The other sentences repeat the same point in different words instead of naming a second and third obligation."}},
-{"id":"s3","unit":"Medieval Europe","topic":"The Crusades","marks":4,"cmd":"Explain two","q":"Explain two reasons why people joined the First Crusade in 1096.",
- "full":{"text":"One reason was religious. At Clermont in 1095 Pope Urban II promised that anyone who died on crusade would have their sins forgiven. Because medieval people feared hell and believed the Pope spoke for God, many saw the journey as a way to secure their place in heaven.\nA second reason was land and wealth. Younger sons of nobles inherited nothing under the rule that the eldest son took the whole estate. Because the East was described as rich and the Pope said conquered land could be kept, crusading offered them a chance to gain property they could never have at home.","why":"Two clearly different reasons, each identified in its first sentence, supported with specific evidence (Clermont 1095, forgiveness of sins, inheritance rules) and linked with a because sentence. Two marks for each."},
- "part":{"marks":2,"text":"People joined the Crusades for religious reasons. The Pope told them to go and fight for Jerusalem and said it was God’s will. They also wanted to get to heaven and be forgiven for their sins. Some people went because they were very religious and wanted to see the Holy Land.","why":"Only one reason, religion, is given, in four different ways. It is identified and explained, so it earns both marks for that reason, but there is no second reason, so the other two marks are lost."}},
-{"id":"s4","unit":"Medieval Europe","topic":"Catholic Church","marks":2,"cmd":"Define and example","q":"Define the term excommunication and give one example of a ruler it was used against.",
- "full":{"text":"Excommunication was a punishment in which the Church expelled a person from the Christian community, cutting them off from the sacraments so that they could not be married, confessed or buried by a priest and were believed to be bound for hell. Pope Innocent III excommunicated King John of England in 1209 during their dispute over the Archbishop of Canterbury.","why":"The definition says what it was and why it mattered. The example is a named ruler with a date and the reason."},
- "part":{"marks":1,"text":"Excommunication is when someone gets kicked out of the Church by the Pope. It was used against kings.","why":"The definition is basically right, so 1 mark. The example is too vague to earn the second mark; it needs a named ruler."}},
-{"id":"s5","unit":"Medieval Europe","topic":"The Black Death","marks":3,"cmd":"Turning point","q":"Explain why the Peasants’ Revolt of 1381 is considered a turning point in medieval England.",
- "full":{"text":"The Peasants’ Revolt is considered a turning point because it showed that the old feudal order could no longer be enforced. In 1381 thousands of peasants marched on London, killed the Archbishop of Canterbury and demanded an end to serfdom. Although the revolt was crushed and its leader Wat Tyler was killed, lords found they could not make the hated poll tax or the old labour services stick, and over the following decades serfdom in England quietly disappeared, so the direction of change ran towards free, waged labour.","why":"Climbs the ladder. What happened, what changed, who was affected and for how long. Admits the short-term failure and still shows the long-term change, with the word because in the first sentence."},
- "part":{"marks":1,"text":"The Peasants’ Revolt was in 1381. The peasants were angry about the poll tax and marched to London. Wat Tyler was the leader and he was killed by the king’s men. It was a very important event.","why":"Accurate description of what happened, so 1 mark. Nothing on what changed afterwards or for how long, which is what the turning-point marks are for."}},
-{"id":"s6","unit":"Medieval Europe","topic":"Law and order","marks":4,"cmd":"Compare","q":"Compare trial by ordeal and trial by jury in medieval England. Include at least one similarity and one difference.",
- "full":{"text":"Both trial by ordeal and trial by jury were ways of deciding guilt when there was no police force and little written evidence, for example both were used for serious crimes such as theft and both were run under the authority of the king’s law. However, trial by ordeal left the verdict to God, through tests such as carrying a hot iron and seeing whether the wound healed, whereas trial by jury left it to twelve local men who judged the accused on what they knew of them, which meant that after the Church banned priests from ordeals in 1215, juries became the normal way of deciding cases in England.","why":"Similarity with evidence, difference with evidence, and a consequence in the which-meant clause. The frame sentence earns all four marks."},
- "part":{"marks":2,"text":"Trial by ordeal was when you had to carry a hot iron or be thrown in water to see if you were guilty. Trial by jury was when people decided if you were guilty. They were both used in medieval times.","why":"A difference is identified with some evidence, so 2 marks. Both being medieval is not a real similarity, and there is no consequence."}},
-{"id":"s7","unit":"Medieval Europe","topic":"Catholic Church","marks":2,"cmd":"Explain one","q":"Explain one way the Catholic Church gained wealth in medieval Europe.",
- "full":{"text":"One way was the tithe. Every villager had to give one tenth of what they produced to the Church each year, stored in the tithe barn. Because almost everyone in Europe was a Christian and the tithe was collected whether the harvest was good or bad, it gave the Church a steady income from the whole population that no king could match.","why":"Identifies the tithe, gives the detail (one tenth, tithe barn) and links to why it made the Church wealthy."},
- "part":{"marks":1,"text":"The Church got money from the tithe, which was a tax people had to pay to the Church.","why":"Identifies the tithe correctly, so 1 mark. No because sentence explaining why it made the Church so wealthy."}},
-{"id":"s8","unit":"Medieval Europe","topic":"Feudalism and hierarchy","marks":3,"cmd":"Explain how","q":"Explain how the Domesday Book helped William the Conqueror control England.",
- "full":{"text":"The Domesday Book was a survey ordered in 1085 that recorded who held every piece of land in England, what it was worth and what it had been worth before 1066. Because William now knew exactly what each lord held, he could tax them accurately and could settle disputes over land in his own favour. It also fixed in writing that all land was ultimately the king’s, which strengthened the feudal chain of loyalty that his rule depended on.","why":"Says what it was, then two because or which links to control: taxation and ownership. Specific date and detail."},
- "part":{"marks":1,"text":"The Domesday Book was a big book that listed everything in England, like how many pigs and cows people had. It took a long time to make and was finished in 1086.","why":"Accurate description, so 1 mark. The question asks how it helped William control England, and there is no link to control."}},
-{"id":"s9","unit":"Shogunate Japan","topic":"Tokugawa Shogunate","marks":2,"cmd":"Explain one","q":"Explain one reason the Tokugawa shoguns introduced sankin kotai.",
- "full":{"text":"One reason was to weaken the daimyo financially. Under sankin kotai every daimyo had to keep a residence in Edo and travel there with a large procession every second year. Because the cost of two households and constant travel ate up much of a domain’s income, daimyo could not afford to build up armies that might challenge the shogun.","why":"Identifies one reason, gives the detail of the policy and links the cost to the shogun’s security with a because sentence."},
- "part":{"marks":1,"text":"The shoguns introduced sankin kotai so they could control the daimyo. The daimyo had to go to Edo every second year and leave their family there.","why":"Identifies control and describes the policy, so 1 mark. It never says how the policy produced control, which is the second mark."}},
-{"id":"s10","unit":"Shogunate Japan","topic":"Feudalism and samurai","marks":3,"cmd":"Describe three","q":"Describe three expectations placed on samurai under the code of bushido.",
- "full":{"text":"First, absolute loyalty to their lord, which was expected to come before loyalty to family or even their own life. Second, courage and skill in combat, including training with the sword and bow from childhood and a willingness to die in battle rather than retreat. Third, honour, so that a samurai who had failed or disgraced his lord was expected to take his own life through seppuku rather than live with the shame.","why":"Three distinct expectations, each with a concrete detail. Loyalty, courage and honour are separate ideas, so none repeats another."},
- "part":{"marks":1,"text":"Samurai had to be loyal to their lord. They had to do everything the lord said and follow him into battle and never betray him.","why":"Loyalty is one expectation, so 1 mark. The other sentences are more loyalty rather than a second and third expectation."}},
-{"id":"s11","unit":"Shogunate Japan","topic":"Meiji Restoration","marks":4,"cmd":"Explain two","q":"Explain two ways the Meiji government changed the position of the samurai after 1868.",
- "full":{"text":"One change was the end of their military role. In 1873 the government introduced conscription, so that ordinary men of all classes were drafted into a Western-style army. Because the state no longer needed a hereditary warrior class, the samurai lost the thing that had defined them for seven centuries.\nA second change was the loss of their privileges. The government stopped paying rice stipends, replacing them with bonds in 1876, and in the same year banned the wearing of swords in public. Because stipends and swords had marked samurai out from everyone else, these laws removed both their income and their visible status, which led some to rebel in the Satsuma Rebellion of 1877.","why":"Two separate changes, each identified, evidenced with a date and explained with a because sentence. The second adds a consequence, which is not required but shows understanding."},
- "part":{"marks":2,"text":"The samurai were not allowed to carry swords any more. They also lost their stipends and had to find other jobs. Many samurai became unhappy and some rebelled against the government in 1877.","why":"Two changes are identified, so 1 mark each, but neither is explained with a because sentence about why the change mattered to the samurai’s position, so the two explanation marks are lost."}},
-{"id":"s12","unit":"Shogunate Japan","topic":"Feudalism and samurai","marks":2,"cmd":"Define and example","q":"Define the term shogun and give one example of a shogun.",
- "full":{"text":"A shogun was the military ruler of Japan, appointed in theory by the emperor but in practice holding real political power while the emperor remained a ceremonial figure. Tokugawa Ieyasu became shogun in 1603 after his victory at Sekigahara and founded a dynasty that ruled until 1868.","why":"The definition covers both the military role and the relationship to the emperor. The example is a named shogun with a date."},
- "part":{"marks":1,"text":"A shogun was the leader of Japan who was like a king. An example is the Tokugawa.","why":"The definition is roughly right but misses that the emperor still existed above the shogun; the Tokugawa were a family, not a shogun. Together worth 1."}},
-{"id":"s13","unit":"Shogunate Japan","topic":"Meiji Restoration","marks":3,"cmd":"Turning point","q":"Explain why the Meiji Restoration of 1868 is considered a turning point in Japanese history.",
- "full":{"text":"The Meiji Restoration is considered a turning point because it ended nearly seven centuries of rule by shoguns and set Japan on a completely different course. In 1868 the last Tokugawa shogun resigned and power was restored to the fifteen-year-old Emperor Meiji, whose government then abolished the domains, ended the samurai class and built railways, factories and a conscript army. Within forty years Japan had become an industrial power able to defeat Russia in 1905, so the direction of its history changed from isolation and feudalism to modernisation and empire.","why":"What happened, what changed, who was affected and for how long, with the word because in the first sentence and a dated consequence at the end."},
- "part":{"marks":1,"text":"The Meiji Restoration happened in 1868. The emperor got his power back from the shogun. Meiji means enlightened rule and the emperor was only fifteen. It changed Japan a lot.","why":"Accurate description, so 1 mark. Changed Japan a lot is a claim, not an explanation of what changed or for how long."}},
-{"id":"s14","unit":"Shogunate Japan","topic":"Meiji Restoration","marks":4,"cmd":"Continuity and change","q":"Identify one thing that changed and one thing that stayed the same in Japan after the Meiji Restoration. Explain each.",
- "full":{"text":"One change was the social hierarchy. The four-class system was abolished in the early 1870s and the samurai lost their stipends and swords, which meant that for the first time a merchant’s son and a samurai’s son were legally equal and could both be conscripted or go to the new state schools.\nOne continuity was rule by a small elite. Although the emperor was restored, real decisions were made by a group of former samurai from Satsuma and Choshu, and the 1889 constitution gave the vote to only about one per cent of the population, which meant that ordinary Japanese people had little more say in government than under the shoguns.","why":"Change and continuity are each identified, evidenced and explained with a which-meant clause. The continuity is a genuine one, not just something that was slow to change."},
- "part":{"marks":2,"text":"A change was that Japan got railways and factories and became modern. Something that stayed the same was that Japan still had an emperor. The emperor had been there before and he was still there after.","why":"A change and a continuity are identified, so 2 marks. Neither is explained; saying the emperor was still there does not explain what that meant for how Japan was governed."}},
-{"id":"s15","unit":"Shogunate Japan","topic":"Tokugawa Shogunate","marks":4,"cmd":"Explain two","q":"Explain two reasons the Tokugawa shogunate was already weakening before Perry arrived in 1853.",
- "full":{"text":"One reason was economic. Under two centuries of peace, merchants grew rich while samurai, paid in fixed rice stipends, fell into debt to them. Because the people at the top of the official hierarchy were now dependent on those at the bottom, the social order the shogunate was built on no longer matched reality.\nA second reason was the shogunate’s failure to deal with hardship. Famines in the 1830s led to peasant uprisings and even a revolt by a former official, Oshio Heihachiro, in Osaka in 1837. Because the shogunate could neither prevent the famines nor stop the unrest, people began to doubt that it was capable of governing, which made it easier to challenge after 1853.","why":"Two distinct reasons, economic and political, each with specific evidence and a because sentence. The second links forward to 1853 without making Perry the subject."},
- "part":{"marks":2,"text":"The shogunate was weakening because the merchants were getting rich and the samurai were poor. Also there were famines in the 1830s and people were unhappy and had riots. So the shogunate was already weak when Perry came.","why":"Two reasons are identified, 1 mark each. Neither is explained; the answer never says why rich merchants or famines weakened the shogunate rather than just happening."}}
+ {
+  "id": "s1",
+  "unit": "Medieval Europe",
+  "topic": "Castles and knights",
+  "marks": 2,
+  "cmd": "Explain one",
+  "q": "Explain one reason William the Conqueror built castles across England after 1066.",
+  "full": {
+   "text": "One reason was to control a hostile population. William had conquered England with a small Norman army, so he built motte-and-bailey castles in towns such as York and Nottingham. Because a castle let a few dozen soldiers dominate the surrounding countryside and gave them a safe base if the English rebelled, he could hold the kingdom without a large army.",
+   "why": "Identifies a reason (control), gives specific evidence (small army, York, Nottingham) and links with a because sentence to how castles solved the problem."
+  },
+  "part": {
+   "marks": 1,
+   "text": "William built castles to protect himself. Castles were strong and had high walls and a moat, so the Normans were safe inside them.",
+   "why": "Identifies protection, which earns 1. The rest describes what a castle was like rather than explaining why building many of them across England helped William rule."
+  }
+ },
+ {
+  "id": "s2",
+  "unit": "Medieval Europe",
+  "topic": "Feudalism and hierarchy",
+  "marks": 3,
+  "cmd": "Describe three",
+  "q": "Describe three obligations a serf owed to the lord of the manor.",
+  "full": {
+   "text": "First, serfs had to work the lord’s own land, the demesne, for several days each week before working their own strips. Second, they paid the lord in kind, handing over a share of their harvest and animals, and paid to use the lord’s mill and oven. Third, they could not leave the manor, marry or send a son to the Church without the lord’s permission, usually paid for with a fee.",
+   "why": "Three separate obligations, each with a specific detail. Labour, payment and restriction on movement are different kinds of duty, so none repeats another."
+  },
+  "part": {
+   "marks": 1,
+   "text": "Serfs had to work for the lord. They worked on his land and did farming for him and also did other jobs he told them to do.",
+   "why": "Working the lord’s land is one obligation, so 1 mark. The other sentences repeat the same point in different words instead of naming a second and third obligation."
+  }
+ },
+ {
+  "id": "s3",
+  "unit": "Medieval Europe",
+  "topic": "The Crusades",
+  "marks": 4,
+  "cmd": "Explain two",
+  "q": "Explain two reasons why people joined the First Crusade in 1096.",
+  "full": {
+   "text": "One reason was religious. At Clermont in 1095 Pope Urban II promised that anyone who died on crusade would have their sins forgiven. Because medieval people feared hell and believed the Pope spoke for God, many saw the journey as a way to secure their place in heaven.\nA second reason was land and wealth. Younger sons of nobles inherited nothing under the rule that the eldest son took the whole estate. Because the East was described as rich and the Pope said conquered land could be kept, crusading offered them a chance to gain property they could never have at home.",
+   "why": "Two clearly different reasons, each identified in its first sentence, supported with specific evidence (Clermont 1095, forgiveness of sins, inheritance rules) and linked with a because sentence. Two marks for each."
+  },
+  "part": {
+   "marks": 2,
+   "text": "People joined the Crusades for religious reasons. The Pope told them to go and fight for Jerusalem and said it was God’s will. They also wanted to get to heaven and be forgiven for their sins. Some people went because they were very religious and wanted to see the Holy Land.",
+   "why": "Only one reason, religion, is given, in four different ways. It is identified and explained, so it earns both marks for that reason, but there is no second reason, so the other two marks are lost."
+  }
+ },
+ {
+  "id": "s4",
+  "unit": "Medieval Europe",
+  "topic": "Catholic Church",
+  "marks": 2,
+  "cmd": "Define and example",
+  "q": "Define the term excommunication and give one example of a ruler it was used against.",
+  "full": {
+   "text": "Excommunication was a punishment in which the Church expelled a person from the Christian community, cutting them off from the sacraments so that they could not be married, confessed or buried by a priest and were believed to be bound for hell. Pope Innocent III excommunicated King John of England in 1209 during their dispute over the Archbishop of Canterbury.",
+   "why": "The definition says what it was and why it mattered. The example is a named ruler with a date and the reason."
+  },
+  "part": {
+   "marks": 1,
+   "text": "Excommunication is when someone gets kicked out of the Church by the Pope. It was used against kings.",
+   "why": "The definition is basically right, so 1 mark. The example is too vague to earn the second mark; it needs a named ruler."
+  }
+ },
+ {
+  "id": "s5",
+  "unit": "Medieval Europe",
+  "topic": "The Black Death",
+  "marks": 3,
+  "cmd": "Turning point",
+  "q": "Explain why the Peasants’ Revolt of 1381 is considered a turning point in medieval England.",
+  "full": {
+   "text": "The Peasants’ Revolt is considered a turning point because it showed that the old feudal order could no longer be enforced. In 1381 thousands of peasants marched on London, killed the Archbishop of Canterbury and demanded an end to serfdom. Although the revolt was crushed and its leader Wat Tyler was killed, lords found they could not make the hated poll tax or the old labour services stick, and over the following decades serfdom in England quietly disappeared, so the direction of change ran towards free, waged labour.",
+   "why": "Climbs the ladder. What happened, what changed, who was affected and for how long. Admits the short-term failure and still shows the long-term change, with the word because in the first sentence."
+  },
+  "part": {
+   "marks": 1,
+   "text": "The Peasants’ Revolt was in 1381. The peasants were angry about the poll tax and marched to London. Wat Tyler was the leader and he was killed by the king’s men. It was a very important event.",
+   "why": "Accurate description of what happened, so 1 mark. Nothing on what changed afterwards or for how long, which is what the turning-point marks are for."
+  }
+ },
+ {
+  "id": "s6",
+  "unit": "Medieval Europe",
+  "topic": "Law and order",
+  "marks": 4,
+  "cmd": "Compare",
+  "q": "Compare trial by ordeal and trial by jury in medieval England. Include at least one similarity and one difference.",
+  "full": {
+   "text": "Both trial by ordeal and trial by jury were ways of deciding guilt when there was no police force and little written evidence, for example both were used for serious crimes such as theft and both were run under the authority of the king’s law. However, trial by ordeal left the verdict to God, through tests such as carrying a hot iron and seeing whether the wound healed, whereas trial by jury left it to twelve local men who judged the accused on what they knew of them, which meant that after the Church banned priests from ordeals in 1215, juries became the normal way of deciding cases in England.",
+   "why": "Similarity with evidence, difference with evidence, and a consequence in the which-meant clause. The frame sentence earns all four marks."
+  },
+  "part": {
+   "marks": 2,
+   "text": "Trial by ordeal was when you had to carry a hot iron or be thrown in water to see if you were guilty. Trial by jury was when people decided if you were guilty. They were both used in medieval times.",
+   "why": "A difference is identified with some evidence, so 2 marks. Both being medieval is not a real similarity, and there is no consequence."
+  }
+ },
+ {
+  "id": "s7",
+  "unit": "Medieval Europe",
+  "topic": "Catholic Church",
+  "marks": 2,
+  "cmd": "Explain one",
+  "q": "Explain one way the Catholic Church gained wealth in medieval Europe.",
+  "full": {
+   "text": "One way was the tithe. Every villager had to give one tenth of what they produced to the Church each year, stored in the tithe barn. Because almost everyone in Europe was a Christian and the tithe was collected whether the harvest was good or bad, it gave the Church a steady income from the whole population that no king could match.",
+   "why": "Identifies the tithe, gives the detail (one tenth, tithe barn) and links to why it made the Church wealthy."
+  },
+  "part": {
+   "marks": 1,
+   "text": "The Church got money from the tithe, which was a tax people had to pay to the Church.",
+   "why": "Identifies the tithe correctly, so 1 mark. No because sentence explaining why it made the Church so wealthy."
+  }
+ },
+ {
+  "id": "s8",
+  "unit": "Medieval Europe",
+  "topic": "Feudalism and hierarchy",
+  "marks": 3,
+  "cmd": "Explain how",
+  "q": "Explain how the Domesday Book helped William the Conqueror control England.",
+  "full": {
+   "text": "The Domesday Book was a survey ordered in 1085 that recorded who held every piece of land in England, what it was worth and what it had been worth before 1066. Because William now knew exactly what each lord held, he could tax them accurately and could settle disputes over land in his own favour. It also fixed in writing that all land was ultimately the king’s, which strengthened the feudal chain of loyalty that his rule depended on.",
+   "why": "Says what it was, then two because or which links to control: taxation and ownership. Specific date and detail."
+  },
+  "part": {
+   "marks": 1,
+   "text": "The Domesday Book was a big book that listed everything in England, like how many pigs and cows people had. It took a long time to make and was finished in 1086.",
+   "why": "Accurate description, so 1 mark. The question asks how it helped William control England, and there is no link to control."
+  }
+ },
+ {
+  "id": "s9",
+  "unit": "Shogunate Japan",
+  "topic": "Tokugawa Shogunate",
+  "marks": 2,
+  "cmd": "Explain one",
+  "q": "Explain one reason the Tokugawa shoguns introduced sankin kotai.",
+  "full": {
+   "text": "One reason was to weaken the daimyo financially. Under sankin kotai every daimyo had to keep a residence in Edo and travel there with a large procession every second year. Because the cost of two households and constant travel ate up much of a domain’s income, daimyo could not afford to build up armies that might challenge the shogun.",
+   "why": "Identifies one reason, gives the detail of the policy and links the cost to the shogun’s security with a because sentence."
+  },
+  "part": {
+   "marks": 1,
+   "text": "The shoguns introduced sankin kotai so they could control the daimyo. The daimyo had to go to Edo every second year and leave their family there.",
+   "why": "Identifies control and describes the policy, so 1 mark. It never says how the policy produced control, which is the second mark."
+  }
+ },
+ {
+  "id": "s10",
+  "unit": "Shogunate Japan",
+  "topic": "Feudalism and samurai",
+  "marks": 3,
+  "cmd": "Describe three",
+  "q": "Describe three expectations placed on samurai under the code of bushido.",
+  "full": {
+   "text": "First, absolute loyalty to their lord, which was expected to come before loyalty to family or even their own life. Second, courage and skill in combat, including training with the sword and bow from childhood and a willingness to die in battle rather than retreat. Third, honour, so that a samurai who had failed or disgraced his lord was expected to take his own life through seppuku rather than live with the shame.",
+   "why": "Three distinct expectations, each with a concrete detail. Loyalty, courage and honour are separate ideas, so none repeats another."
+  },
+  "part": {
+   "marks": 1,
+   "text": "Samurai had to be loyal to their lord. They had to do everything the lord said and follow him into battle and never betray him.",
+   "why": "Loyalty is one expectation, so 1 mark. The other sentences are more loyalty rather than a second and third expectation."
+  }
+ },
+ {
+  "id": "s11",
+  "unit": "Shogunate Japan",
+  "topic": "Meiji Restoration",
+  "marks": 4,
+  "cmd": "Explain two",
+  "q": "Explain two ways the Meiji government changed the position of the samurai after 1868.",
+  "full": {
+   "text": "One change was the end of their military role. In 1873 the government introduced conscription, so that ordinary men of all classes were drafted into a Western-style army. Because the state no longer needed a hereditary warrior class, the samurai lost the thing that had defined them for seven centuries.\nA second change was the loss of their privileges. The government stopped paying rice stipends, replacing them with bonds in 1876, and in the same year banned the wearing of swords in public. Because stipends and swords had marked samurai out from everyone else, these laws removed both their income and their visible status, which led some to rebel in the Satsuma Rebellion of 1877.",
+   "why": "Two separate changes, each identified, evidenced with a date and explained with a because sentence. The second adds a consequence, which is not required but shows understanding."
+  },
+  "part": {
+   "marks": 2,
+   "text": "The samurai were not allowed to carry swords any more. They also lost their stipends and had to find other jobs. Many samurai became unhappy and some rebelled against the government in 1877.",
+   "why": "Two changes are identified, so 1 mark each, but neither is explained with a because sentence about why the change mattered to the samurai’s position, so the two explanation marks are lost."
+  }
+ },
+ {
+  "id": "s12",
+  "unit": "Shogunate Japan",
+  "topic": "Feudalism and samurai",
+  "marks": 2,
+  "cmd": "Define and example",
+  "q": "Define the term shogun and give one example of a shogun.",
+  "full": {
+   "text": "A shogun was the military ruler of Japan, appointed in theory by the emperor but in practice holding real political power while the emperor remained a ceremonial figure. Tokugawa Ieyasu became shogun in 1603 after his victory at Sekigahara and founded a dynasty that ruled until 1868.",
+   "why": "The definition covers both the military role and the relationship to the emperor. The example is a named shogun with a date."
+  },
+  "part": {
+   "marks": 1,
+   "text": "A shogun was the leader of Japan who was like a king. An example is the Tokugawa.",
+   "why": "The definition is roughly right but misses that the emperor still existed above the shogun; the Tokugawa were a family, not a shogun. Together worth 1."
+  }
+ },
+ {
+  "id": "s13",
+  "unit": "Shogunate Japan",
+  "topic": "Meiji Restoration",
+  "marks": 3,
+  "cmd": "Turning point",
+  "q": "Explain why the Meiji Restoration of 1868 is considered a turning point in Japanese history.",
+  "full": {
+   "text": "The Meiji Restoration is considered a turning point because it ended nearly seven centuries of rule by shoguns and set Japan on a completely different course. In 1868 the last Tokugawa shogun resigned and power was restored to the fifteen-year-old Emperor Meiji, whose government then abolished the domains, ended the samurai class and built railways, factories and a conscript army. Within forty years Japan had become an industrial power able to defeat Russia in 1905, so the direction of its history changed from isolation and feudalism to modernisation and empire.",
+   "why": "What happened, what changed, who was affected and for how long, with the word because in the first sentence and a dated consequence at the end."
+  },
+  "part": {
+   "marks": 1,
+   "text": "The Meiji Restoration happened in 1868. The emperor got his power back from the shogun. Meiji means enlightened rule and the emperor was only fifteen. It changed Japan a lot.",
+   "why": "Accurate description, so 1 mark. Changed Japan a lot is a claim, not an explanation of what changed or for how long."
+  }
+ },
+ {
+  "id": "s14",
+  "unit": "Shogunate Japan",
+  "topic": "Meiji Restoration",
+  "marks": 4,
+  "cmd": "Continuity and change",
+  "q": "Identify one thing that changed and one thing that stayed the same in Japan after the Meiji Restoration. Explain each.",
+  "full": {
+   "text": "One change was the social hierarchy. The four-class system was abolished in the early 1870s and the samurai lost their stipends and swords, which meant that for the first time a merchant’s son and a samurai’s son were legally equal and could both be conscripted or go to the new state schools.\nOne continuity was rule by a small elite. Although the emperor was restored, real decisions were made by a group of former samurai from Satsuma and Choshu, and the 1889 constitution gave the vote to only about one per cent of the population, which meant that ordinary Japanese people had little more say in government than under the shoguns.",
+   "why": "Change and continuity are each identified, evidenced and explained with a which-meant clause. The continuity is a genuine one, not just something that was slow to change."
+  },
+  "part": {
+   "marks": 2,
+   "text": "A change was that Japan got railways and factories and became modern. Something that stayed the same was that Japan still had an emperor. The emperor had been there before and he was still there after.",
+   "why": "A change and a continuity are identified, so 2 marks. Neither is explained; saying the emperor was still there does not explain what that meant for how Japan was governed."
+  }
+ },
+ {
+  "id": "s15",
+  "unit": "Shogunate Japan",
+  "topic": "Tokugawa Shogunate",
+  "marks": 4,
+  "cmd": "Explain two",
+  "q": "Explain two reasons the Tokugawa shogunate was already weakening before Perry arrived in 1853.",
+  "full": {
+   "text": "One reason was economic. Under two centuries of peace, merchants grew rich while samurai, paid in fixed rice stipends, fell into debt to them. Because the people at the top of the official hierarchy were now dependent on those at the bottom, the social order the shogunate was built on no longer matched reality.\nA second reason was the shogunate’s failure to deal with hardship. Famines in the 1830s led to peasant uprisings and even a revolt by a former official, Oshio Heihachiro, in Osaka in 1837. Because the shogunate could neither prevent the famines nor stop the unrest, people began to doubt that it was capable of governing, which made it easier to challenge after 1853.",
+   "why": "Two distinct reasons, economic and political, each with specific evidence and a because sentence. The second links forward to 1853 without making Perry the subject."
+  },
+  "part": {
+   "marks": 2,
+   "text": "The shogunate was weakening because the merchants were getting rich and the samurai were poor. Also there were famines in the 1830s and people were unhappy and had riots. So the shogunate was already weak when Perry came.",
+   "why": "Two reasons are identified, 1 mark each. Neither is explained; the answer never says why rich merchants or famines weakened the shogunate rather than just happening."
+  }
+ },
+ {
+  "id": "s16",
+  "unit": "Shogunate Japan",
+  "topic": "Feudalism and samurai",
+  "marks": 3,
+  "cmd": "Explain how (beyond the group named)",
+  "q": "Explain how the code of bushido shaped behaviour in Tokugawa Japan, including for people who were not samurai.",
+  "full": {
+   "text": "Bushido was the samurai code of conduct, built on loyalty, honour, courage and self-discipline. For samurai it meant absolute obedience to their lord and a readiness to die rather than be disgraced, which is why the 47 ronin of 1703 avenged their master knowing it would cost their lives. Beyond the samurai, the same values set the standard for everyone else, because the Tokugawa made samurai the ruling class and their virtues the official ones. Loyalty to superiors, respect for rank and self-control were taught to merchants' and farmers' children in terakoya schools, and obedience to the shogun's officials was expected of every village.",
+   "why": "Three marks, three moves. Identifies and defines the code, names values with a specific example, then explains the effect on people outside the samurai class. The last part is where most answers stop short."
+  },
+  "part": {
+   "marks": 2,
+   "text": "Bushido was the code the samurai lived by. It meant loyalty to your lord, honour, bravery and discipline. A samurai who failed his lord would commit seppuku to restore his honour, and samurai trained from childhood to follow the code in battle.",
+   "why": "Defines the code and names values with an example, so 2 marks. Everything is about samurai. The question asks how the code shaped behaviour in Japan, including beyond the samurai, and that third mark is missed."
+  }
+ },
+ {
+  "id": "s17",
+  "unit": "Medieval Europe",
+  "topic": "The Black Death",
+  "marks": 2,
+  "cmd": "Identify a group and its perspective",
+  "q": "Identify one social group in medieval Europe and describe how that group understood or responded to the Black Death.",
+  "full": {
+   "text": "One group was the clergy. Many priests believed the plague was God's punishment for sin, so they led processions and called people to confess and repent. Some saw the deaths of so many good priests as a test of faith, while others fled their parishes, and ordinary people noticed and lost some respect for the Church as a result.",
+   "why": "Names a group, then gives what that group believed and how it acted, which is perspective. The last sentence adds a consequence, which is not required but shows understanding."
+  },
+  "part": {
+   "marks": 1,
+   "text": "One group was the peasants. Lots of peasants died because they lived close together in dirty villages and could not afford doctors. Whole villages were wiped out and the fields were left empty.",
+   "why": "Names a group, so 1 mark. The rest describes what happened to peasants, not what they thought or how they responded. Perspective means the view from inside the group, for example that many believed the plague was a punishment from God or blamed outsiders."
+  }
+ },
+ {
+  "id": "s18",
+  "unit": "Shogunate Japan",
+  "topic": "Meiji Restoration",
+  "marks": 3,
+  "cmd": "Source + own knowledge",
+  "q": "Source A: a Japanese woodblock print, c. 1874, showing a steam train on the new Tokyo to Yokohama railway, passengers in Western suits and dresses, and telegraph poles beside the track.\nUsing evidence from Source A and your own knowledge, explain one way Westernisation changed Japan.",
+  "full": {
+   "text": "One way Westernisation changed Japan was transport. Source A shows a steam train on the Tokyo to Yokohama line with telegraph poles beside it, which tells us Japan had adopted Western technology within a few years of the Meiji Restoration. From my own knowledge, this first railway opened in 1872, and by the 1890s lines connected the major cities, so goods and people could move across Japan in hours rather than days, which helped Japan industrialise and tied the country together under the new government.",
+   "why": "Identifies the change, names Source A and points to a specific feature in it, then adds a dated fact the source cannot show and explains what the change did. Three marks, three sentences."
+  },
+  "part": {
+   "marks": 1,
+   "text": "Westernisation changed Japan by bringing in new technology like trains. The picture shows a train and people wearing Western clothes, so Japan was becoming more modern and more like Europe and America.",
+   "why": "Identifies a change, so 1 mark. The source detail is used but the source is never named, so the source mark is lost. There is no fact from outside the source, so the own-knowledge mark is lost too."
+  }
+ }
 ]
