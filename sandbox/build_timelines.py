@@ -1,6 +1,5 @@
 import json
 A=json.load(open('assets.json')); T=A['T']; B=A['B']
-for k in ('1635','1639','1889','1086'): T.pop(k,None)
 # kinds: pol (power and rule), war, faith, life (society, culture, economy)
 EU=[(793,"Vikings raid Lindisfarne","Raids on monasteries begin two centuries of Viking pressure on Europe.","war"),
 (800,"Charlemagne crowned emperor","The Pope crowns a Frankish king, tying royal power to the Church.","pol"),
