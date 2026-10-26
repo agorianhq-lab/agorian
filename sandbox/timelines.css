@@ -21,7 +21,8 @@ h1{font-family:var(--display);font-size:34px;color:var(--navy);margin:0}h1 em{co
 .ev .yr{flex:none;font-family:var(--display);font-weight:700;font-size:15px;width:44px;color:var(--eu);padding-top:7px}.ev.jp .yr{color:var(--jp)}
 .ev .card{background:var(--surface);border:2px solid var(--eu);border-radius:10px;padding:7px 11px;max-width:380px;box-shadow:0 1px 2px rgba(0,0,0,.06);transition:transform .12s}.ev.jp .card{border-color:var(--jp)}
 .ev .card b{display:block;font-size:14.5px;color:var(--ink)}.ev .card span{display:none;font-size:12.5px;color:var(--muted);margin-top:2px}
-.ev:hover .card{transform:translateY(-1px)}.ev:hover .card span,.ev.open .card span{display:block}
+.ev.open .card span{display:block}
+.ev{z-index:1}.ev.open{z-index:10}.ev.open .card{box-shadow:0 10px 28px -8px rgba(0,0,0,.35);border-width:2px}.ev .card{cursor:pointer}
 
 .link{position:absolute;left:28px;width:2px;border-left:2px dotted var(--gold);z-index:1}
 .link i{position:absolute;width:10px;height:10px;border-radius:50%;background:var(--gold);transform:translate(-50%,-50%)}

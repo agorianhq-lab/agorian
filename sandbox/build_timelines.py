@@ -82,10 +82,10 @@ html=f"""<!doctype html><html lang="en-AU"><head><meta charset="utf-8"><meta nam
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
 <style>{CSS.replace('__H__',f'{H:.0f}')}</style></head><body><div class="wrap">
 <h1>Two worlds, <em>one</em> timeline</h1>
-<p class="sub">Medieval Europe on the left, Japan on the right, on the same scale. Click an event for a line of detail. Dotted gold links mark moments when the two units rhyme. The scale is stretched between 1050 and 1500, where most of both units sits.</p>
+<p class="sub">Medieval Europe on the left, Japan on the right, on the same scale. Click an event for a line of detail; click again or press Escape to close it. Dotted gold links mark moments when the two units rhyme. The scale is stretched between 1050 and 1500, where most of both units sits.</p>
 <div class="legend">{legend}<span><i class="sw" style="background:none;border-top:2px dotted var(--gold);height:0"></i>A connection worth knowing</span></div>
 <div class="head"><h2 class="eu">Medieval Europe</h2><div class="mid">CE</div><h2 class="jp">Shogunate Japan</h2></div>
 <div class="tl"><div class="colL">{COLL}</div><div class="spine">{ticks}{links}</div><div class="colR">{COLR}</div></div>
 <p class="foot">Dates are the ones used in class. Where historians give a range (the Genpei War, the Mongol invasions, the Black Death), the first year is shown. The Edo period is dated from 1600 (Sekigahara) or 1603 (Ieyasu named shogun); both are used. Artworks are public domain, from Wikimedia Commons.</p>
-</div><script>document.querySelectorAll('.ev').forEach(e=>e.addEventListener('click',()=>e.classList.toggle('open')));</script></body></html>"""
+</div><script>document.querySelectorAll('.ev').forEach(e=>e.addEventListener('click',()=>{{const was=e.classList.contains('open');document.querySelectorAll('.ev.open').forEach(x=>x.classList.remove('open'));if(!was)e.classList.add('open')}}));document.addEventListener('keydown',e=>{{if(e.key==='Escape')document.querySelectorAll('.ev.open').forEach(x=>x.classList.remove('open'))}});</script></body></html>"""
 open('timelines.html','w').write(html); print('built',H, len(html)//1024,'KB')
