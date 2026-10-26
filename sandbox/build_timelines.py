@@ -58,6 +58,7 @@ def y(yr):
     return out
 H=y(1925)
 MAXB=[0]
+YEARS=[]
 STAR={1066,1086,1095,1215,1347,1351,1381,1185,1192,1600,1603,1615,1635,1639,1853,1868,1873}
 KN={'pol':'Power and rule','war':'War and conquest','faith':'Faith and the Church','life':'Society, culture and economy'}
 def col(evs,side):
@@ -69,15 +70,26 @@ def col(evs,side):
         if top-last<lasth+6: top=last+lasth+6
         last=top; lasth=hgt; MAXB[0]=max(MAXB[0],top+hgt)
         st=' star' if yr in STAR else ''
-        out.append(f'<div class="ev {side} k-{k}{st}" style="top:{top:.0f}px"><span class="yr">{"&#9733; " if st else ""}{yr}</span><div class="card">{img}<div><b>{t}</b><span>{d}</span></div></div></div><i class="dot {side} k-{k}" style="top:{y(yr):.0f}px"></i>')
+        out.append(f'<div class="ev {side} k-{k}{st}" style="top:{top:.0f}px"><div class="card">{img}<div><b>{t}</b><span>{d}</span></div></div></div>')
+        YEARS.append((side,yr,top+ (30 if th else 17),bool(st)))
     return ''.join(out)
 def bands(ps,side):
     return ''.join(f'<div class="band {side}" style="top:{y(a):.0f}px;height:{y(b)-y(a):.0f}px;{("background-image:url("+B[img]+")") if img else ""}"><span>{n}</span></div>' for a,b,n,img in ps)
 ticks=''.join(f'<div class="tick" style="top:{y(yr):.0f}px"><span>{yr}</span></div>' for yr in range(800,1901,100))
-links=''.join(f'<div class="link" style="top:{min(y(a),y(b)):.0f}px;height:{abs(y(a)-y(b)):.0f}px"><i style="top:{(y(a)-min(y(a),y(b))):.0f}px"></i><i style="top:{(y(b)-min(y(a),y(b))):.0f}px"></i><em>{d}</em></div>' for a,b,d in LINKS)
+links=''.join(f'<div class="link" title="{d}" style="top:{min(y(a),y(b)):.0f}px;height:{abs(y(a)-y(b)):.0f}px"><i style="top:{(y(a)-min(y(a),y(b))):.0f}px"></i><i style="top:{(y(b)-min(y(a),y(b))):.0f}px"></i><em style="top:{(abs(y(a)-y(b))/2):.0f}px">{n+1}</em></div>' for n,(a,b,d) in enumerate(LINKS))
+linkkey=''.join(f'<li><b>{n+1}</b> {d}</li>' for n,(a,b,d) in enumerate(LINKS))
 CSS=open('timelines.css').read()
 legend=''.join(f'<span><i class="sw k-{k}"></i>{v}</span>' for k,v in KN.items())
 COLL=bands(EUP,'eu')+col(EU,'eu'); COLR=bands(JPP,'jp')+col(JP,'jp')
+# de-collide year labels per side (true position preferred)
+def yrs(side):
+    out=[]; last=-99
+    for sd,yr,yy,st in sorted([v for v in YEARS if v[0]==side],key=lambda v:v[2]):
+        top=yy
+        last=top
+        out.append(f'<span class="ylab {side}{" star" if st else ""}" style="top:{top:.0f}px">{"&#9733;" if st else ""}{yr}</span>')
+    return ''.join(out)
+YL=yrs('eu')+yrs('jp')
 H=max(H,MAXB[0]+10)
 html=f"""<!doctype html><html lang="en-AU"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Two timelines</title>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
@@ -85,9 +97,10 @@ html=f"""<!doctype html><html lang="en-AU"><head><meta charset="utf-8"><meta nam
 <h1>Two worlds, <em>one</em> timeline</h1>
 <p class="sub">Medieval Europe on the left, Japan on the right, on the same scale. Click an event for a line of detail; click again or press Escape to close it. Dotted gold links mark moments when the two units rhyme. The scale is stretched between 1050 and 1500, where most of both units sits.</p>
 <div class="tipbox"><b>Which dates to learn.</b> The starred years (&#9733;) are the ones worth writing in a Section B or C answer, because a date is the quickest way to make a point specific. The rest are here so you can see where things sit. <b>And in any exam:</b> every source comes with dates, in its caption or on the source itself. Use them. A date you can see on the paper is a free piece of evidence for a written answer, and a check on the dates you remember.</div>
-<div class="legend">{legend}<span><i class="sw" style="background:none;border-top:2px dotted var(--gold);height:0"></i>A connection worth knowing</span></div>
+<div class="legend">{legend}<span><i class="sw" style="background:none;border-top:2px dotted var(--gold);height:0"></i>Numbered gold links are connections worth knowing:</span></div>
+<ol class="linkkey">{linkkey}</ol>
 <div class="head"><h2 class="eu">Medieval Europe</h2><div class="mid">CE</div><h2 class="jp">Shogunate Japan</h2></div>
-<div class="tl"><div class="colL">{COLL}</div><div class="spine">{ticks}{links}</div><div class="colR">{COLR}</div></div>
+<div class="tl"><div class="colL">{COLL}</div><div class="spine">{ticks}{links}{YL}</div><div class="colR">{COLR}</div></div>
 <p class="foot">Dates are the ones used in class. Where historians give a range (the Genpei War, the Mongol invasions, the Black Death), the first year is shown. The Edo period is dated from 1600 (Sekigahara) or 1603 (Ieyasu named shogun); both are used. Artworks are public domain, from Wikimedia Commons.</p>
 </div><script>document.querySelectorAll('.ev').forEach(e=>e.addEventListener('click',()=>{{const was=e.classList.contains('open');document.querySelectorAll('.ev.open').forEach(x=>x.classList.remove('open'));if(!was)e.classList.add('open')}}));document.addEventListener('keydown',e=>{{if(e.key==='Escape')document.querySelectorAll('.ev.open').forEach(x=>x.classList.remove('open'))}});</script></body></html>"""
 open('timelines.html','w').write(html); print('built',H, len(html)//1024,'KB')
