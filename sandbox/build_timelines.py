@@ -7,7 +7,7 @@ EU=[(793,"Vikings raid Lindisfarne","Raids on monasteries begin two centuries of
 (1086,"Domesday Book","Every landholding in England recorded for the king.","pol"),
 (1095,"Pope Urban II calls the First Crusade","The speech at Clermont promises forgiveness of sins.","faith"),
 (1099,"Crusaders capture Jerusalem","The First Crusade ends in victory and massacre.","war"),
-(1170,"Thomas Becket murdered","Knights kill the archbishop in Canterbury Cathedral; Church v king.","faith"),
+(1166,"Assize of Clarendon","Henry II orders juries of local men to report crimes: the beginnings of trial by jury.","pol"),
 (1187,"Saladin retakes Jerusalem","Triggers the Third Crusade.","war"),
 (1209,"King John excommunicated","Innocent III cuts the king off from the Church.","faith"),
 (1215,"Magna Carta","The king accepts he is under the law. The Church also bans priests from trials by ordeal.","pol"),

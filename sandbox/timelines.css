@@ -29,7 +29,7 @@ h1{font-family:var(--display);font-size:34px;color:var(--navy);margin:0}h1 em{co
 
 .legend{display:flex;gap:18px;flex-wrap:wrap;font-size:13px;color:var(--muted);margin:10px 0 0}.legend i{display:inline-block;width:14px;height:3px;vertical-align:middle;margin-right:6px}
 .foot{font-size:12px;color:var(--muted);margin-top:16px}
-@media(max-width:800px){.head,.tl{grid-template-columns:1fr 60px 1fr}.ev .card{max-width:none}.band span{display:none}}
+@media(max-width:1000px){.head,.tl{grid-template-columns:1fr 210px 1fr}.ev .card{max-width:none}.band span{display:none}.ev .card b{font-size:13px}.ev .card img{width:36px;height:36px}}
 
 .dot{position:absolute;width:11px;height:11px;border-radius:50%;background:var(--eu);border:2px solid var(--bg);z-index:2;transform:translate(-50%,-50%)}
 .dot.eu{left:calc(100% + 110px)}.dot.jp{left:-110px;background:var(--jp)}
