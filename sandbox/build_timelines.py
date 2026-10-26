@@ -43,7 +43,7 @@ JP=[(794,"Court moves to Heian-kyo","The Heian period begins; Fujiwara nobles do
 (1873,"Conscription","A national army replaces samurai. Swords banned 1876; Satsuma Rebellion 1877.","life"),
 (1889,"Meiji Constitution","Japan becomes a constitutional monarchy; defeats Russia in 1905.","pol"),]
 EUP=[(780,1000,"Early Middle Ages","eu1"),(1000,1300,"High Middle Ages","eu2"),(1300,1500,"Late Middle Ages","eu3"),(1500,1925,"After the unit",None)]
-JPP=[(794,1185,"Heian",None),(1185,1333,"Kamakura","jp2"),(1336,1573,"Muromachi",None),(1573,1600,"Azuchi-Momoyama",None),(1600,1868,"Edo (Tokugawa)","jp3"),(1868,1925,"Meiji","jp4")]
+JPP=[(794,1185,"Heian","jp1"),(1185,1333,"Kamakura","jp2"),(1336,1573,"Muromachi","jp2b"),(1573,1600,"Azuchi-Momoyama","jp2c"),(1600,1868,"Edo (Tokugawa)","jp3"),(1868,1925,"Meiji","jp4")]
 LINKS=[(1066,1185,"Warriors take power. The Normans conquer England; the Minamoto take Japan from the court."),
 (1215,1232,"Written law limits rulers and warriors. Magna Carta; the samurai law code."),
 (1095,1274,"Holy war and foreign invasion. Crusaders go east; the Mongols come to Japan."),
@@ -101,6 +101,6 @@ html=f"""<!doctype html><html lang="en-AU"><head><meta charset="utf-8"><meta nam
 <ol class="linkkey">{linkkey}</ol>
 <div class="head"><h2 class="eu">Medieval Europe</h2><div class="mid">CE</div><h2 class="jp">Shogunate Japan</h2></div>
 <div class="tl"><div class="colL">{COLL}</div><div class="spine">{ticks}{links}{YL}</div><div class="colR">{COLR}</div></div>
-<p class="foot">Dates are the ones used in class. Where historians give a range (the Genpei War, the Mongol invasions, the Black Death), the first year is shown. The Edo period is dated from 1600 (Sekigahara) or 1603 (Ieyasu named shogun); both are used. Artworks are public domain, from Wikimedia Commons.</p>
+<p class="foot">Dates are the ones used in class. Where historians give a range (the Genpei War, the Mongol invasions, the Black Death), the first year is shown. The Edo period is dated from 1600 (Sekigahara) or 1603 (Ieyasu named shogun); both are used. Artworks are public domain, from Wikimedia Commons: Lindisfarne Gospels carpet page (c.700), Bayeux Tapestry (1070s), Toggenburg Bible plague scene (1411), Genji Monogatari Emaki (12th century), Mongol invasion scroll (1293), landscape attributed to Sesshu Toyo (15th century), Himeji Castle (built 1581–1609), Hiroshige's Tokaido (1830s), Perry's Black Ships (1850s).</p>
 </div><script>document.querySelectorAll('.ev').forEach(e=>e.addEventListener('click',()=>{{const was=e.classList.contains('open');document.querySelectorAll('.ev.open').forEach(x=>x.classList.remove('open'));if(!was)e.classList.add('open')}}));document.addEventListener('keydown',e=>{{if(e.key==='Escape')document.querySelectorAll('.ev.open').forEach(x=>x.classList.remove('open'))}});</script></body></html>"""
 open('timelines.html','w').write(html); print('built',H, len(html)//1024,'KB')
