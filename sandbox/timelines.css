@@ -1,0 +1,35 @@
+
+:root{--bg:#F6F2EA;--surface:#FFFDF8;--ink:#1C2333;--muted:#636A7A;--navy:#243A6B;--accent:#C8431F;--gold:#D9A441;--eu:#7A2E2E;--jp:#243A6B;--line:#D9D3C7;--display:"Fraunces",Georgia,serif;--body:"Atkinson Hyperlegible",system-ui,sans-serif}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#171A22;--surface:#1F2430;--ink:#ECE8E0;--muted:#A3A9B6;--line:#343A48;--jp:#8FA7E0;--eu:#D98A7A}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);line-height:1.4}
+.wrap{max-width:1200px;margin:0 auto;padding:28px 16px 60px}
+h1{font-family:var(--display);font-size:34px;color:var(--navy);margin:0}h1 em{color:var(--accent);font-style:italic}
+.sub{color:var(--muted);margin:4px 0 18px;max-width:760px}
+.head{display:grid;grid-template-columns:1fr 190px 1fr;gap:0;align-items:end;position:sticky;top:0;background:var(--bg);z-index:5;padding:10px 0 8px;border-bottom:2px solid var(--navy)}
+.head h2{font-family:var(--display);font-size:22px;margin:0}.head .eu{color:var(--eu);text-align:right;padding-right:14px}.head .jp{color:var(--jp);padding-left:14px}.head .mid{text-align:center;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.tl{position:relative;height:__H__px;display:grid;grid-template-columns:1fr 190px 1fr}
+.colL,.colR,.spine{position:relative}
+.spine::before{content:"";position:absolute;left:28px;top:0;bottom:0;width:2px;background:var(--line);transform:translateX(-50%)}
+.tick{position:absolute;left:0;right:0;height:0}.tick span{position:absolute;z-index:3;left:28px;transform:translate(-50%,-50%);background:var(--bg);padding:2px 6px;font-family:var(--display);font-weight:700;color:var(--navy);font-size:14px;border:1px solid var(--line);border-radius:6px}
+.band{position:absolute;left:0;right:0;border-radius:8px;pointer-events:none}
+.band.eu{background:color-mix(in srgb,var(--eu) 7%,transparent);border-left:4px solid color-mix(in srgb,var(--eu) 40%,transparent)}
+.band.jp{background:color-mix(in srgb,var(--jp) 7%,transparent);border-right:4px solid color-mix(in srgb,var(--jp) 40%,transparent)}
+.band span{position:absolute;top:6px;font-size:10px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--muted);writing-mode:vertical-rl}
+.band.eu span{left:6px;transform:rotate(180deg)}.band.jp span{right:6px}
+.ev{position:absolute;display:flex;align-items:flex-start;gap:10px;width:calc(100% - 70px)}
+.ev.eu{right:0;flex-direction:row-reverse;text-align:right}.ev.jp{left:34px}
+.ev .yr{flex:none;font-family:var(--display);font-weight:700;font-size:15px;width:44px;color:var(--eu);padding-top:7px}.ev.jp .yr{color:var(--jp)}
+.ev .card{background:var(--surface);border:2px solid var(--eu);border-radius:10px;padding:7px 11px;max-width:380px;box-shadow:0 1px 2px rgba(0,0,0,.06);transition:transform .12s}.ev.jp .card{border-color:var(--jp)}
+.ev .card b{display:block;font-size:14.5px;color:var(--ink)}.ev .card span{display:none;font-size:12.5px;color:var(--muted);margin-top:2px}
+.ev:hover .card{transform:translateY(-1px)}.ev:hover .card span,.ev.open .card span{display:block}
+
+.link{position:absolute;left:28px;width:2px;border-left:2px dotted var(--gold);z-index:1}
+.link i{position:absolute;width:10px;height:10px;border-radius:50%;background:var(--gold);transform:translate(-50%,-50%)}
+.link em{position:absolute;left:10px;top:50%;transform:translateY(-50%);width:150px;font-size:10.5px;font-style:normal;color:var(--muted);background:var(--bg);padding:2px 4px;border-radius:4px;line-height:1.25}
+.legend{display:flex;gap:18px;flex-wrap:wrap;font-size:13px;color:var(--muted);margin:10px 0 0}.legend i{display:inline-block;width:14px;height:3px;vertical-align:middle;margin-right:6px}
+.foot{font-size:12px;color:var(--muted);margin-top:16px}
+@media(max-width:800px){.head,.tl{grid-template-columns:1fr 60px 1fr}.ev .card{max-width:none}.link em{display:none}.band span{display:none}}
+
+.dot{position:absolute;width:11px;height:11px;border-radius:50%;background:var(--eu);border:2px solid var(--bg);z-index:2;transform:translate(-50%,-50%)}
+.dot.eu{left:calc(100% + 28px)}.dot.jp{left:-162px;background:var(--jp)}
+.tl{margin-bottom:60px}
