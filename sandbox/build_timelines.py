@@ -43,7 +43,7 @@ JP=[(794,"Court moves to Heian-kyo","The Heian period begins; Fujiwara nobles do
 (1873,"Conscription","A national army replaces samurai. Swords banned 1876; Satsuma Rebellion 1877.","life"),
 (1889,"Meiji Constitution","Japan becomes a constitutional monarchy; defeats Russia in 1905.","pol"),]
 EUP=[(780,1000,"Early Middle Ages","eu1"),(1000,1300,"High Middle Ages","eu2"),(1300,1500,"Late Middle Ages","eu3"),(1500,1925,"After the unit",None)]
-JPP=[(794,1185,"Heian","jp1"),(1185,1333,"Kamakura","jp2"),(1336,1573,"Muromachi","jp2b"),(1573,1600,"Azuchi-Momoyama","jp2c"),(1600,1868,"Edo (Tokugawa)","jp3"),(1868,1925,"Meiji","jp4")]
+JPP=[(794,1185,"Heian","jp1"),(1185,1333,"Kamakura","jp2"),(1336,1573,"Muromachi","jp2b"),(1573,1600,"Momoyama","jp2c"),(1600,1868,"Edo (Tokugawa)","jp3"),(1868,1925,"Meiji","jp4")]
 LINKS=[(1066,1185,"Warriors take power. The Normans conquer England; the Minamoto take Japan from the court."),
 (1215,1232,"Written law limits rulers and warriors. Magna Carta; the samurai law code."),
 (1095,1274,"Holy war and foreign invasion. Crusaders go east; the Mongols come to Japan."),
@@ -73,9 +73,10 @@ def col(evs,side):
         out.append(f'<div class="ev {side} k-{k}{st}" style="top:{top:.0f}px"><div class="card">{img}<div><b>{t}</b><span>{d}</span></div></div></div>')
         YEARS.append((side,yr,top+ (30 if th else 17),bool(st)))
     return ''.join(out)
+NOTE={'After the unit':'<p class="bnote">Europe after 1500 — the Renaissance, the Reformation, the voyages of exploration — is not part of this unit. It is here only so Japan’s dates sit on the same scale. Notice that the Portuguese who reached Japan in 1543 were part of that story.</p>'}
 TALL={'eu1','jp2c','jp2'}
 def bands(ps,side):
-    return ''.join(f'<div class="band {side}{" tall" if img in TALL else ""}{" none" if not img else ""}" style="top:{y(a):.0f}px;height:{(max(MAXB[0],H) if b>=1925 else y(b))-y(a):.0f}px;{("background-image:url("+B[img]+")") if img else ""}"><span>{n}</span></div>' for a,b,n,img in ps)
+    return ''.join(f'<div class="band {side}{" tall" if img in TALL else ""}{" none" if not img else ""}{" short" if y(b)-y(a)<90 else ""}" style="top:{y(a):.0f}px;height:{(max(MAXB[0],H) if b>=1925 else y(b))-y(a):.0f}px;{("background-image:url("+B[img]+")") if img else ""}"><span>{n}</span>{NOTE.get(n,"")}</div>' for a,b,n,img in ps)
 ticks=''.join(f'<div class="tick" style="top:{y(yr):.0f}px"><span>{yr}</span></div>' for yr in range(800,1901,100))
 links=''.join(f'<div class="link" title="{d}" style="top:{min(y(a),y(b)):.0f}px;height:{abs(y(a)-y(b)):.0f}px"><i style="top:{(y(a)-min(y(a),y(b))):.0f}px"></i><i style="top:{(y(b)-min(y(a),y(b))):.0f}px"></i><em style="top:{(abs(y(a)-y(b))/2):.0f}px">{n+1}</em></div>' for n,(a,b,d) in enumerate(LINKS))
 linkkey=''.join(f'<li><b>{n+1}</b> {d}</li>' for n,(a,b,d) in enumerate(LINKS))
