@@ -468,7 +468,7 @@ footer{margin-top:40px;font-size:13px;color:var(--muted)}
 .mode:hover{border-color:var(--m)}
 .topic:hover{border-color:var(--u,var(--navy))}
 
-.examband{display:flex;align-items:center;gap:18px;width:100%;text-align:left;margin-top:18px;padding:16px 22px;border-radius:var(--radius);background:var(--surface);border:2px solid var(--navy);border-left:8px solid var(--gold);cursor:pointer;box-shadow:var(--shadow);transition:transform .15s,background .15s}
+.examband{display:flex;align-items:center;gap:18px;width:100%;text-align:left;margin:18px 0 2px;padding:16px 22px;border-radius:var(--radius);background:var(--surface);border:2px solid var(--navy);border-left:8px solid var(--gold);cursor:pointer;box-shadow:var(--shadow);transition:transform .15s,background .15s}
 .examband:hover{transform:translateY(-2px);background:var(--navy);color:#fff}
 .examband .k{font-size:26px;color:var(--gold-ink);flex:none}
 .examband .t{display:block;font-family:var(--display);font-size:22px;font-weight:700;color:var(--navy)}
@@ -852,6 +852,7 @@ function home(){
       </div></div>
       <figure class="pic" style="margin:0"><img src="${IMG['gr-athens']}" alt="Raphael's fresco The School of Athens, philosophers in debate under a great arch"><figcaption class="cap">Raphael, The School of Athens, 1511. Athenian thinkers arguing in a great hall. Socrates is at the left in the olive robe, counting off his points on his fingers.</figcaption></figure>
     </div>
+    <button class="examband" data-go="exam"><span class="k">&#9998;</span><span><span class="t">Before the exam</span><span class="n">What the paper looks like, how to spend the 50 minutes and where the marks are.</span></span><span class="cta">Open →</span></button>
     <div class="units">
       <button class="upanel eu" data-unit="Medieval Europe"><span class="photo" style="background-image:url(${IMG['eu-bayeux']});background-position:right 40%;background-size:cover"></span><span class="t">Medieval Europe</span><span class="n">Feudalism, castles, the Church, the Crusades and the Black Death.</span><span class="cta">Practise this unit \u2192</span><svg class="art"><use href="#art-eu"/></svg></button>
       <button class="upanel jp" data-unit="Shogunate Japan"><span class="photo" style="background-image:url(${IMG['jp-wave']});background-position:right 55%;background-size:auto 100%"></span><span class="t">Shogunate Japan</span><span class="n">Samurai, the Tokugawa, sakoku and the Meiji Restoration.</span><span class="cta">Practise this unit \u2192</span><svg class="art"><use href="#art-jp"/></svg></button>
@@ -864,7 +865,6 @@ function home(){
       <button class="mode write" data-go="write"><span class="pic" style="background-image:url(${IMG['t-write']})"></span><span class="k"><svg><use href="#m-write"/></svg></span><span class="t">Paragraph practice</span><span class="n">Exam prompts with a TEEAL scaffold, model answers and what success looks like.</span></button>
       <button class="mode facts" data-go="facts"><span class="pic" style="background-image:url(${IMG['t-facts']})"></span><span class="k"><svg><use href="#m-facts"/></svg></span><span class="t">Fun facts</span><span class="n">Did-you-know cards from both units. Read one, then practise the topic it came from.</span></button>
     </div>
-    <button class="examband" data-go="exam"><span class="k">&#9998;</span><span><span class="t">Before the exam</span><span class="n">What the paper looks like, how to spend the 50 minutes and where the marks are.</span></span><span class="cta">Open →</span></button>
   </section>
   <section class="section">
     <h2>Your progress by topic</h2>
