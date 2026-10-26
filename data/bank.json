@@ -2253,7 +2253,7 @@
    "source": "Socrative",
    "srcId": "soc_exam",
    "type": "ms",
-   "question": "Select ALL the ways the Catholic Church influenced everyday life in medieval Europe.",
+   "question": "A medieval villager's year, from birth to burial, ran through the Church. Select ALL the ways this was true.",
    "options": [
     "It collected a tithe of one tenth of what people produced",
     "It marked every stage of life from baptism to burial",
@@ -3780,6 +3780,18 @@
   {
    "term": "Westernisation",
    "definition": "A process whereby societies adopt what is considered to be Western culture in areas such as industry, technology, science, education, politics, law and social norms."
+  },
+  {
+   "term": "Heian period",
+   "definition": "794 to 1185. The age of the imperial court at Heian-kyo (Kyoto), when the emperor and noble families such as the Fujiwara held power and the samurai class first emerged."
+  },
+  {
+   "term": "Kamakura period",
+   "definition": "1185 to 1333. Began when Minamoto Yoritomo became the first shogun after the Genpei War. Japan came under military rule and repelled the Mongol invasions of 1274 and 1281."
+  },
+  {
+   "term": "Edo period",
+   "definition": "1603 to 1868. The rule of the Tokugawa shoguns from Edo (Tokyo). A time of peace, sakoku, strict social order and the growth of cities and merchant culture."
   }
  ]
 }
