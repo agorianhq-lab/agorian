@@ -73,14 +73,15 @@ def col(evs,side):
         out.append(f'<div class="ev {side} k-{k}{st}" style="top:{top:.0f}px"><div class="card">{img}<div><b>{t}</b><span>{d}</span></div></div></div>')
         YEARS.append((side,yr,top+ (30 if th else 17),bool(st)))
     return ''.join(out)
+TALL={'eu1','jp2c','jp2'}
 def bands(ps,side):
-    return ''.join(f'<div class="band {side}" style="top:{y(a):.0f}px;height:{y(b)-y(a):.0f}px;{("background-image:url("+B[img]+")") if img else ""}"><span>{n}</span></div>' for a,b,n,img in ps)
+    return ''.join(f'<div class="band {side}{" tall" if img in TALL else ""}{" none" if not img else ""}" style="top:{y(a):.0f}px;height:{(max(MAXB[0],H) if b>=1925 else y(b))-y(a):.0f}px;{("background-image:url("+B[img]+")") if img else ""}"><span>{n}</span></div>' for a,b,n,img in ps)
 ticks=''.join(f'<div class="tick" style="top:{y(yr):.0f}px"><span>{yr}</span></div>' for yr in range(800,1901,100))
 links=''.join(f'<div class="link" title="{d}" style="top:{min(y(a),y(b)):.0f}px;height:{abs(y(a)-y(b)):.0f}px"><i style="top:{(y(a)-min(y(a),y(b))):.0f}px"></i><i style="top:{(y(b)-min(y(a),y(b))):.0f}px"></i><em style="top:{(abs(y(a)-y(b))/2):.0f}px">{n+1}</em></div>' for n,(a,b,d) in enumerate(LINKS))
 linkkey=''.join(f'<li><b>{n+1}</b> {d}</li>' for n,(a,b,d) in enumerate(LINKS))
 CSS=open('timelines.css').read()
 legend=''.join(f'<span><i class="sw k-{k}"></i>{v}</span>' for k,v in KN.items())
-COLL=bands(EUP,'eu')+col(EU,'eu'); COLR=bands(JPP,'jp')+col(JP,'jp')
+cL=col(EU,'eu'); cR=col(JP,'jp'); COLL=bands(EUP,'eu')+cL; COLR=bands(JPP,'jp')+cR
 # de-collide year labels per side (true position preferred)
 def yrs(side):
     out=[]; last=-99
@@ -101,6 +102,6 @@ html=f"""<!doctype html><html lang="en-AU"><head><meta charset="utf-8"><meta nam
 <ol class="linkkey">{linkkey}</ol>
 <div class="head"><h2 class="eu">Medieval Europe</h2><div class="mid">CE</div><h2 class="jp">Shogunate Japan</h2></div>
 <div class="tl"><div class="colL">{COLL}</div><div class="spine">{ticks}{links}{YL}</div><div class="colR">{COLR}</div></div>
-<p class="foot">Dates are the ones used in class. Where historians give a range (the Genpei War, the Mongol invasions, the Black Death), the first year is shown. The Edo period is dated from 1600 (Sekigahara) or 1603 (Ieyasu named shogun); both are used. Artworks are public domain, from Wikimedia Commons: Lindisfarne Gospels carpet page (c.700), Bayeux Tapestry (1070s), Toggenburg Bible plague scene (1411), Genji Monogatari Emaki (12th century), Mongol invasion scroll (1293), landscape attributed to Sesshu Toyo (15th century), Himeji Castle (built 1581–1609), Hiroshige's Tokaido (1830s), Perry's Black Ships (1850s).</p>
+<p class="foot">Dates are the ones used in class. Where historians give a range (the Genpei War, the Mongol invasions, the Black Death), the first year is shown. The Edo period is dated from 1600 (Sekigahara) or 1603 (Ieyasu named shogun); both are used. Artworks are public domain, from Wikimedia Commons: Lindisfarne Gospels carpet page (c.700), Bayeux Tapestry (1070s), Très Riches Heures du Duc de Berry (1410s), Genji Monogatari Emaki (12th century), Mongol invasion scroll (1293), landscape attributed to Sesshu Toyo (15th century), Himeji Castle (built 1581–1609), Hiroshige's Tokaido (1830s), Perry's Black Ships (1850s).</p>
 </div><script>document.querySelectorAll('.ev').forEach(e=>e.addEventListener('click',()=>{{const was=e.classList.contains('open');document.querySelectorAll('.ev.open').forEach(x=>x.classList.remove('open'));if(!was)e.classList.add('open')}}));document.addEventListener('keydown',e=>{{if(e.key==='Escape')document.querySelectorAll('.ev.open').forEach(x=>x.classList.remove('open'))}});</script></body></html>"""
 open('timelines.html','w').write(html); print('built',H, len(html)//1024,'KB')

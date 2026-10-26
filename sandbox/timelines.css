@@ -43,9 +43,13 @@ h1{font-family:var(--display);font-size:34px;color:var(--navy);margin:0}h1 em{co
 .ev.k-pol .card{border-color:var(--pol)} .ev.k-war .card{border-color:var(--war)} .ev.k-faith .card{border-color:var(--faith)} .ev.k-life .card{border-color:var(--life)}
 .dot.k-pol{background:var(--pol)} .dot.k-war{background:var(--war)} .dot.k-faith{background:var(--faith)} .dot.k-life{background:var(--life)}
 .ev .yr{color:var(--muted)}
-.band{background-size:cover;background-position:center;opacity:1}
-.band::before{content:"";position:absolute;inset:0;border-radius:8px;background:var(--bg);opacity:.86}
-.band.eu::before{background:color-mix(in srgb,var(--eu) 10%,var(--bg))} .band.jp::before{background:color-mix(in srgb,var(--jp) 10%,var(--bg))}
+.band{background-size:100% auto;background-repeat:repeat-y;background-position:center top;opacity:1;overflow:hidden}
+.band.tall{background-size:cover;background-repeat:no-repeat;background-position:center}
+.band::before{content:"";position:absolute;inset:0;border-radius:8px}
+.band.eu::before{background:linear-gradient(90deg,color-mix(in srgb,var(--eu) 8%,var(--bg)) 0%,color-mix(in srgb,var(--eu) 8%,var(--bg)) 100%);opacity:.86;
+ -webkit-mask-image:linear-gradient(90deg,rgba(0,0,0,.72) 0%,rgba(0,0,0,.92) 45%,rgba(0,0,0,1) 100%);mask-image:linear-gradient(90deg,rgba(0,0,0,.72) 0%,rgba(0,0,0,.92) 45%,rgba(0,0,0,1) 100%)}
+.band.jp::before{background:color-mix(in srgb,var(--jp) 8%,var(--bg));opacity:.86;
+ -webkit-mask-image:linear-gradient(270deg,rgba(0,0,0,.72) 0%,rgba(0,0,0,.92) 45%,rgba(0,0,0,1) 100%);mask-image:linear-gradient(270deg,rgba(0,0,0,.72) 0%,rgba(0,0,0,.92) 45%,rgba(0,0,0,1) 100%)}
 .band span{z-index:1}
 .sw{display:inline-block;width:14px;height:14px;border-radius:50%;vertical-align:middle;margin-right:6px}
 .sw.k-pol{background:var(--pol)}.sw.k-war{background:var(--war)}.sw.k-faith{background:var(--faith)}.sw.k-life{background:var(--life)}
@@ -71,3 +75,5 @@ h1{font-family:var(--display);font-size:34px;color:var(--navy);margin:0}h1 em{co
 
 .ylab.eu{right:calc(50% + 28px)}.ylab.jp{left:calc(50% + 28px)}
 .tick span{z-index:1;font-size:12px;padding:1px 5px;opacity:.9}
+
+.band.none{background-image:repeating-linear-gradient(135deg,transparent 0 14px,rgba(0,0,0,.035) 14px 16px)}.band.none::before{display:none}
