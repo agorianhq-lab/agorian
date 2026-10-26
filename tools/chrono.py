@@ -58,7 +58,7 @@ KN={'pol':'Power and rule','war':'War and conquest','faith':'Faith and the Churc
 NOTE={'After the unit':'<p class="bnote">Europe after 1500 — the Renaissance, the Reformation, the voyages of exploration — is not part of this unit. It is here only so Japan’s dates sit on the same scale. Notice that the Portuguese who reached Japan in 1543 were part of that story.</p>'}
 TALL={'eu1','jp2c','jp2'}
 TIP='<div class="tipbox"><b>Which dates to learn.</b> The starred years (&#9733;) are the ones worth writing in a Section B or C answer, because a date is the quickest way to make a point specific. The rest are here so you can see where things sit. <b>And in any exam:</b> every source comes with dates, in its caption or on the source itself. Use them. A date you can see on the paper is a free piece of evidence for a written answer, and a check on the dates you remember.</div>'
-FOOT='<p class="cfoot">Dates are the ones used in class. Where historians give a range (the Genpei War, the Mongol invasions, the Black Death), the first year is shown. The Edo period is dated from 1600 (Sekigahara) or 1603 (Ieyasu named shogun); both are used. Artworks are public domain, from Wikimedia Commons: Lindisfarne Gospels carpet page (c.700), Bayeux Tapestry (1070s), Très Riches Heures du Duc de Berry (1410s), Genji Monogatari Emaki (12th century), Mongol invasion scroll (1293), landscape attributed to Sesshu Toyo (15th century), Himeji Castle (built 1581–1609), Hiroshige\'s Tokaido (1830s), Perry\'s Black Ships (1850s).</p>'
+FOOT='<p class="cfoot">Dates are the ones used in class.</p>'
 
 CSS="""
 .chrono{min-width:0;max-width:100%;--pol:var(--navy);--war:var(--accent);--faith:#B8860B;--life:#3D6B5A;--cbg:var(--bg);margin-top:8px}
@@ -75,7 +75,7 @@ CSS="""
 .chrono .ctl{position:relative;display:grid;grid-template-columns:1fr 220px 1fr;margin-bottom:40px}
 .chrono .colL,.chrono .colR,.chrono .spine{position:relative}
 .chrono .spine::before{content:"";position:absolute;left:50%;top:0;bottom:0;width:2px;background:var(--line);transform:translateX(-50%)}
-.chrono .ctick{position:absolute;left:0;right:0;height:0}.chrono .ctick span{position:absolute;z-index:1;left:50%;transform:translate(-50%,-50%);background:var(--cbg);padding:1px 5px;font-family:var(--display);font-weight:700;color:var(--navy);font-size:12px;border:1px solid var(--line);border-radius:6px;opacity:.9}
+.chrono .ctick{position:absolute;left:0;right:0;height:0}.chrono .ctick span{position:absolute;z-index:1;left:50%;transform:translate(-50%,-50%);background:var(--cbg);padding:1px 5px;font-family:var(--display);font-weight:700;color:var(--navy);font-size:16px;letter-spacing:.02em;color:var(--navy);border:1.5px solid var(--navy);border-radius:7px;opacity:1}
 .chrono .band{position:absolute;left:0;right:0;border-radius:8px;pointer-events:none;background-size:100% auto;background-repeat:repeat-y;background-position:center top;overflow:hidden}
 .chrono .band.tall{background-size:cover;background-repeat:no-repeat;background-position:center}
 .chrono .band.eu{border-left:4px solid color-mix(in srgb,var(--eu) 40%,transparent)}

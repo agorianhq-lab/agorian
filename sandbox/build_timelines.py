@@ -103,6 +103,6 @@ html=f"""<!doctype html><html lang="en-AU"><head><meta charset="utf-8"><meta nam
 <ol class="linkkey">{linkkey}</ol>
 <div class="head"><h2 class="eu">Medieval Europe</h2><div class="mid">CE</div><h2 class="jp">Shogunate Japan</h2></div>
 <div class="tl"><div class="colL">{COLL}</div><div class="spine">{ticks}{links}{YL}</div><div class="colR">{COLR}</div></div>
-<p class="foot">Dates are the ones used in class. Where historians give a range (the Genpei War, the Mongol invasions, the Black Death), the first year is shown. The Edo period is dated from 1600 (Sekigahara) or 1603 (Ieyasu named shogun); both are used. Artworks are public domain, from Wikimedia Commons: Lindisfarne Gospels carpet page (c.700), Bayeux Tapestry (1070s), Très Riches Heures du Duc de Berry (1410s), Genji Monogatari Emaki (12th century), Mongol invasion scroll (1293), landscape attributed to Sesshu Toyo (15th century), Himeji Castle (built 1581–1609), Hiroshige's Tokaido (1830s), Perry's Black Ships (1850s).</p>
+<p class="foot">Dates are the ones used in class.</p>
 </div><script>document.querySelectorAll('.ev').forEach(e=>e.addEventListener('click',()=>{{const was=e.classList.contains('open');document.querySelectorAll('.ev.open').forEach(x=>x.classList.remove('open'));if(!was)e.classList.add('open')}}));document.addEventListener('keydown',e=>{{if(e.key==='Escape')document.querySelectorAll('.ev.open').forEach(x=>x.classList.remove('open'))}});</script></body></html>"""
 open('timelines.html','w').write(html); print('built',H, len(html)//1024,'KB')
