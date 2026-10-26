@@ -8,134 +8,594 @@
  ],
  "sources": [
   {
-   "id": "bayeux", "unit": "Medieval Europe", "img": "eu-bayeux",
+   "id": "bayeux",
+   "unit": "Medieval Europe",
+   "img": "eu-bayeux",
    "caption": "Scene from the Bayeux Tapestry, an embroidery made in England in the 1070s, probably ordered by Bishop Odo of Bayeux, William the Conqueror's half-brother. The Latin caption reads 'Here King Harold is killed'.",
    "qs": [
-    {"q":"What type of source is this?","o":["A primary visual source made within about ten years of the event","A secondary source, because it was made after the battle","A primary written source","A secondary visual source made by a historian"],"a":0,"x":"Made in the 1070s about 1066, by people on the winning side. A decade later is still 'at the time' for a medieval source. Written captions on it do not make it a written source."},
-    {"q":"Who most likely wanted this made, and why?","o":["The Normans, to present the conquest as rightful and Harold's death as deserved","The English, to mourn their king","The Church, to record a miracle","A later historian, to teach schoolchildren"],"a":0,"x":"Odo was William's half-brother and fought at Hastings. The whole work tells the story from the Norman side, including Harold's broken oath. Purpose shapes what a source shows."},
-    {"q":"What does the scene suggest about warfare in 1066?","o":["Mounted knights in mail with kite shields and swords were the striking force","Battles were fought mainly with cannon","Soldiers fought without armour","Only kings took part in battle"],"a":0,"x":"The horses, mail coats, long kite-shaped shields and swords are all visible details. 'Suggests' means you read the detail and draw a conclusion from it."},
-    {"q":"What can this source NOT tell you reliably?","o":["How the English saw the battle and its outcome","Whether Normans used horses","What a Norman knight's shield looked like","That Harold died at Hastings"],"a":0,"x":"Everything shown is from the winners' point of view. For the English experience you would need a different source, such as the Anglo-Saxon Chronicle."}
+    {
+     "q": "What type of source is this?",
+     "o": [
+      "A primary visual source, made within a decade of the battle",
+      "A secondary visual source, made a decade after the battle",
+      "A primary written source, because it has a Latin caption",
+      "A secondary source, because it was made for a bishop"
+     ],
+     "a": 0,
+     "x": "Made in the 1070s about 1066, by people on the winning side. A decade later is still 'at the time' for a medieval source. Written captions on it do not make it a written source."
+    },
+    {
+     "q": "Who most likely wanted this made, and why?",
+     "o": [
+      "The Normans, to show the conquest as rightful and Harold's death as deserved",
+      "The English, to record the loss of their king and the end of their kingdom",
+      "The Church, to show that God had punished Harold for breaking his oath",
+      "The French king, to show his vassal William winning a great victory"
+     ],
+     "a": 0,
+     "x": "Odo was William's half-brother and fought at Hastings. The whole work tells the story from the Norman side, including Harold's broken oath. Purpose shapes what a source shows."
+    },
+    {
+     "q": "What does the scene suggest about warfare in 1066?",
+     "o": [
+      "Mounted knights in mail with kite shields and swords were the striking force",
+      "Foot soldiers with long spears were the striking force on both sides",
+      "Archers decided the battle and knights played only a small part",
+      "Both armies fought mainly on foot with axes and round shields"
+     ],
+     "a": 0,
+     "x": "The horses, mail coats, long kite-shaped shields and swords are all visible details. 'Suggests' means you read the detail and draw a conclusion from it."
+    },
+    {
+     "q": "What can this source NOT tell you reliably?",
+     "o": [
+      "How the English saw the battle and what losing it meant for them",
+      "Whether the Normans used horses in the fighting at Hastings",
+      "What kind of armour and shields a Norman knight carried",
+      "Whether Harold died during the fighting at Hastings"
+     ],
+     "a": 0,
+     "x": "Everything shown is from the winners' point of view. For the English experience you would need a different source, such as the Anglo-Saxon Chronicle."
+    }
    ],
    "write": "Using the source and your own knowledge, explain why the Battle of Hastings was a turning point for England.",
-   "model": "The source shows mounted Norman knights cutting down Harold's army and the caption confirms the king was killed, which suggests the English lost their leader and their chance to resist in one day. Hastings was a turning point because William then replaced almost the entire English ruling class with Normans, recorded every landholding in the Domesday Book of 1086, and imposed feudalism, so ordinary English people now answered to French-speaking lords and castles appeared across the country.",
-   "mark": ["Source detail named (knights, Harold's death) and what it suggests","Own knowledge with a date (Domesday 1086, Norman lords, castles)","Goes beyond the battle to the change for England and its people"]
+   "model": "The source shows mounted Norman knights cutting down Harold's army, and the caption says the king was killed, which suggests the English lost their leader and their chance to resist in a single day. Hastings was a turning point because William then replaced the English lords with Normans, recorded every landholding in the Domesday Book of 1086 and imposed feudalism, so ordinary English people now answered to French-speaking lords.",
+   "mark": [
+    "Source detail named (knights, Harold's death) and what it suggests",
+    "Own knowledge with a date (Domesday 1086, Norman lords, castles)",
+    "Goes beyond the battle to the change for England and its people"
+   ]
   },
   {
-   "id": "harvest", "unit": "Medieval Europe", "img": "f-harvest",
+   "id": "harvest",
+   "unit": "Medieval Europe",
+   "img": "f-harvest",
    "caption": "Peasants reaping under the eye of a reeve, from the Queen Mary Psalter, an illuminated prayer book made in England around 1310 to 1320 for a wealthy owner.",
    "qs": [
-    {"q":"What type of source is this?","o":["A primary visual source: an illustration from a medieval manuscript","A photograph of a medieval harvest","A secondary source, because it is in a prayer book","A map of a manor"],"a":0,"x":"An illumination is a painted picture in a manuscript. It was made in the period it shows, so it is primary and visual."},
-    {"q":"Who made it and for whom, and why does that matter?","o":["An artist for a rich patron; the peasants are shown by someone who did not share their life","Peasants, to record their own work","The king, to count his harvest","A monk, to teach farming"],"a":0,"x":"Psalters were expensive prayer books for the wealthy. The scene is how the landowning class pictured the people who worked their land, which affects what it shows and leaves out."},
-    {"q":"What does the detail of the reeve with a stick suggest?","o":["Peasants' labour on the lord's land was supervised and could be enforced","Peasants worked whenever they chose","The reeve was also harvesting","Reaping was done by machines"],"a":0,"x":"The reeve was the lord's manager. Standing over the workers with a stick suggests obligation and control, not free labour. That is an inference from a detail."},
-    {"q":"Which question can this source NOT answer on its own?","o":["How the peasants felt about this work","That reaping was done by hand with sickles","That women as well as men worked in the fields","That a supervisor was present"],"a":0,"x":"The picture shows bodies, tools and a supervisor. Feelings are not visible; to say peasants resented it you would need a written source or your own knowledge of the 1381 revolt."}
+    {
+     "q": "What type of source is this?",
+     "o": [
+      "A primary visual source: a painting in a manuscript of the time",
+      "A secondary visual source: a later artist's view of the manor",
+      "A primary written source, because it comes from a prayer book",
+      "A secondary source, because the owner was not a peasant"
+     ],
+     "a": 0,
+     "x": "An illumination is a painted picture in a manuscript. It was made in the period it shows, so it is primary and visual."
+    },
+    {
+     "q": "Who made it and for whom, and why does that matter?",
+     "o": [
+      "An artist for a rich patron, who did not share the peasants' life",
+      "Peasants for their own village, so it shows the harvest as they saw it",
+      "A monk for a monastery, so it shows the Church's view of hard work",
+      "The king's clerks for the Domesday survey, so it records the harvest"
+     ],
+     "a": 0,
+     "x": "Psalters were expensive prayer books for the wealthy. The scene is how the landowning class pictured the people who worked their land, which affects what it shows and leaves out."
+    },
+    {
+     "q": "What does the detail of the reeve with a stick suggest?",
+     "o": [
+      "Peasants' labour on the lord's land was supervised and could be enforced",
+      "The reeve was the oldest peasant and led the others by example",
+      "Peasants worked whenever they chose and the reeve kept the time",
+      "The reeve was a soldier guarding the field from thieves"
+     ],
+     "a": 0,
+     "x": "The reeve was the lord's manager. Standing over the workers with a stick suggests obligation and control, not free labour. That is an inference from a detail."
+    },
+    {
+     "q": "Which question can this source NOT answer on its own?",
+     "o": [
+      "How the peasants felt about the work they were doing",
+      "That reaping was done by hand using sickles",
+      "That the workers wore simple tunics and hoods",
+      "That a supervisor stood over the workers"
+     ],
+     "a": 0,
+     "x": "The picture shows bodies, tools and a supervisor. Feelings are not visible; to say peasants resented it you would need a written source or your own knowledge of the 1381 revolt."
+    }
    ],
    "write": "Using the source and your own knowledge, explain what the source suggests about the lives of peasants on a medieval manor.",
-   "model": "The source shows men and women cutting grain with sickles while a reeve stands over them with a stick, which suggests their labour on the lord's land was compulsory and watched. This fits what we know of the manor: serfs owed days of work on the lord's demesne, paid rents in produce and needed permission to marry or leave, so their lives were controlled by the lord's needs. It was only after the Black Death of 1347 cut the workforce that peasants could begin to demand wages instead.",
-   "mark": ["Detail named (reeve, sickles) and what it suggests (supervised, compulsory)","Own knowledge: demesne labour, permissions, a date","Goes beyond the picture to how the system worked and when it changed"]
+   "model": "The source shows peasants cutting grain with sickles while a reeve stands over them with a stick, which suggests their labour on the lord's land was compulsory and watched. Serfs owed days of work on the lord's own fields, paid rents in produce and needed permission to marry or leave, so the lord's needs ruled their lives. Only after the Black Death of 1347 cut the workforce could peasants begin to demand wages instead.",
+   "mark": [
+    "Detail named (reeve, sickles) and what it suggests (supervised, compulsory)",
+    "Own knowledge: work on the lord's fields, permissions, a date",
+    "Goes beyond the picture to how the system worked and when it changed"
+   ]
   },
   {
-   "id": "magna", "unit": "Medieval Europe", "text": "No free man shall be seized or imprisoned, or stripped of his rights or possessions, or outlawed or exiled, or deprived of his standing in any other way, nor will we proceed with force against him, except by the lawful judgement of his equals or by the law of the land.",
+   "id": "magna",
+   "unit": "Medieval Europe",
+   "text": "No free man shall be seized or imprisoned, or stripped of his rights or possessions, or outlawed or exiled, or deprived of his standing in any other way, nor will we proceed with force against him, except by the lawful judgement of his equals or by the law of the land.",
    "caption": "Adapted from clause 39 of Magna Carta, the charter King John was forced to agree to by his barons at Runnymede in June 1215.",
    "qs": [
-    {"q":"What type of source is this?","o":["A primary written source: a legal document from the time","A secondary source written by a historian","A primary visual source","A letter from the king"],"a":0,"x":"A charter is a formal legal document. It was written in 1215 about the rules of 1215, so it is primary and written."},
-    {"q":"Who forced this to be written, and why?","o":["The barons, to stop John ruling by force and taxing without consent","John, to increase his power","The Pope, to punish John","The peasants, to end serfdom"],"a":0,"x":"John had lost Normandy, raised heavy taxes and punished barons without trial. The barons rebelled and made him seal the charter. The purpose tells you whose interests it protects."},
-    {"q":"What does the clause suggest about the king's power?","o":["The king was now expected to act under the law rather than above it","The king could do whatever he wished","The barons had replaced the king","The law did not apply to anyone"],"a":0,"x":"'Lawful judgement' and 'law of the land' put a limit on the king's actions. That is a change from the idea that the king's will was law."},
-    {"q":"Which detail shows the limit of this clause?","o":["'Free man' excluded serfs, who were most of the population","It mentions imprisonment","It mentions the law of the land","It was written in June"],"a":0,"x":"Most English people in 1215 were unfree. The charter protected barons and freemen, not the peasants on the manor. Noticing who is left out is a mark-earning skill."}
+    {
+     "q": "What type of source is this?",
+     "o": [
+      "A primary written source: a legal document of the time",
+      "A secondary written source: a historian's summary of the law",
+      "A primary visual source, because the charter was decorated",
+      "A primary source, but a private letter rather than a law"
+     ],
+     "a": 0,
+     "x": "A charter is a formal legal document. It was written in 1215 about the rules of 1215, so it is primary and written."
+    },
+    {
+     "q": "Who forced this to be written, and why?",
+     "o": [
+      "The barons, to stop John ruling by force and taxing without consent",
+      "King John, to win back the barons' loyalty after losing Normandy",
+      "The Pope, to punish John for refusing the new archbishop",
+      "The free peasants, to win protection from their lords' courts"
+     ],
+     "a": 0,
+     "x": "John had lost Normandy, raised heavy taxes and punished barons without trial. The barons rebelled and made him seal the charter. The purpose tells you whose interests it protects."
+    },
+    {
+     "q": "What does the clause suggest about the king's power?",
+     "o": [
+      "The king was now expected to act under the law rather than above it",
+      "The king could still do as he wished but had to explain why",
+      "The barons had taken over the king's courts and judges",
+      "The law of the land was now written down for the first time"
+     ],
+     "a": 0,
+     "x": "'Lawful judgement' and 'law of the land' put a limit on the king's actions. That is a change from the idea that the king's will was law."
+    },
+    {
+     "q": "Which detail shows the limit of this clause?",
+     "o": [
+      "'Free man' excluded serfs, who were most of the population",
+      "'Lawful judgement' left the king free to decide what was lawful",
+      "It only applied in the parts of England the barons controlled",
+      "It mentions exile, which the king had never used"
+     ],
+     "a": 0,
+     "x": "Most English people in 1215 were unfree. The charter protected barons and freemen, not the peasants on the manor. Noticing who is left out is a mark-earning skill."
+    }
    ],
    "write": "Using the source and your own knowledge, explain how Magna Carta shows a change in the power of the king.",
-   "model": "The clause says no free man can be imprisoned or lose his property 'except by the lawful judgement of his equals or by the law of the land', which suggests the king could no longer act purely on his own will. This was a change because John had taxed heavily and punished barons without trial after losing Normandy in 1204, and in 1215 the barons forced him to seal the charter at Runnymede. However, the protection was for 'free men', so for serfs, the majority, the king's power and their lord's power stayed much the same.",
-   "mark": ["Quotes a phrase and says what it suggests","Own knowledge with a date (Normandy 1204, Runnymede 1215, the barons' revolt)","Goes beyond the barons to note who the clause did not protect"]
+   "model": "The clause says no free man can be punished 'except by the lawful judgement of his equals or by the law of the land', which suggests the king could no longer act on his will alone. This was a change because John had taxed and punished barons without trial after losing Normandy in 1204, so in 1215 they forced him to seal the charter. However, serfs, the majority, were not 'free men' and gained nothing.",
+   "mark": [
+    "Quotes a phrase and says what it suggests",
+    "Own knowledge with a date (Normandy 1204, Runnymede 1215, the barons' revolt)",
+    "Goes beyond the barons to note who the clause did not protect"
+   ]
   },
   {
-   "id": "siena", "unit": "Medieval Europe", "text": "The deaths began in Siena in May. It was a cruel and terrible thing. Fathers abandoned their children, wives their husbands and brothers each other, because people believed the sickness passed through breath and sight. Nobody could be found to bury the dead, for money or for friendship. I buried five of my own children with my own hands.",
+   "id": "siena",
+   "unit": "Medieval Europe",
+   "text": "The deaths began in Siena in May. It was a cruel and terrible thing. Fathers abandoned their children, wives their husbands and brothers each other, because people believed the sickness passed through breath and sight. Nobody could be found to bury the dead, for money or for friendship. I buried five of my own children with my own hands.",
    "caption": "Adapted from the chronicle of Agnolo di Tura, a shoemaker and tax collector in Siena, Italy, writing about the plague of 1348.",
    "qs": [
-    {"q":"What type of source is this?","o":["A primary written source: an eyewitness chronicle","A secondary source written long after","A government record of deaths","A medical textbook"],"a":0,"x":"A chronicle written by a man who lived through the event is primary and written. His job as a tax collector also means he was used to recording things."},
-    {"q":"Why is the writer's own loss important for how you use the source?","o":["It makes him a reliable witness to the suffering but may colour his view of other people's behaviour","It means the source is useless","It shows he was a doctor","It proves the plague started in Siena"],"a":0,"x":"Grief gives the account power and truth about what the plague felt like. It may also make his claims about everyone abandoning everyone sound more total than they were. Say both."},
-    {"q":"What does 'nobody could be found to bury the dead' suggest?","o":["Normal community and religious customs collapsed under the scale of death","Siena had no cemeteries","People did not care about their relatives","Burial was illegal"],"a":0,"x":"In a Catholic society, proper burial mattered enormously. That it could not be bought or asked of friends suggests the number of deaths overwhelmed the normal order."},
-    {"q":"What can this source NOT tell you?","o":["How many people died across Europe","That the writer lost children","That people believed the disease spread through breath","That the plague reached Siena in 1348"],"a":0,"x":"One man in one city cannot give the European figure. For the estimate of around a third of the population you need historians' work, which is your own knowledge."}
+    {
+     "q": "What type of source is this?",
+     "o": [
+      "A primary written source: an eyewitness account from the time",
+      "A secondary written source: a later historian's description",
+      "A primary source, but an official death register not a chronicle",
+      "A secondary source, because it was written in Italian"
+     ],
+     "a": 0,
+     "x": "A chronicle written by a man who lived through the event is primary and written. His job as a tax collector also means he was used to recording things."
+    },
+    {
+     "q": "Why is the writer's own loss important for how you use the source?",
+     "o": [
+      "It makes him a true witness to suffering, but may colour his view of others",
+      "It means the source is unreliable and should not be used at all",
+      "It shows he was a doctor who understood how the plague spread",
+      "It proves that the plague began in Siena before anywhere else"
+     ],
+     "a": 0,
+     "x": "Grief gives the account power and truth about what the plague felt like. It may also make his claims about everyone abandoning everyone sound more total than they were. Say both."
+    },
+    {
+     "q": "What does 'nobody could be found to bury the dead' suggest?",
+     "o": [
+      "Normal community and religious customs collapsed under the scale of death",
+      "The city council had banned burials to stop the sickness spreading",
+      "Siena's cemeteries were full and new ones were not yet built",
+      "People in Siena had stopped believing in the Church"
+     ],
+     "a": 0,
+     "x": "In a Catholic society, proper burial mattered enormously. That it could not be bought or asked of friends suggests the number of deaths overwhelmed the normal order."
+    },
+    {
+     "q": "What can this source NOT tell you?",
+     "o": [
+      "How many people died across Europe as a whole",
+      "That the writer lost five children to the plague",
+      "That people believed the sickness spread by breath and sight",
+      "That the plague reached Siena in the spring of 1348"
+     ],
+     "a": 0,
+     "x": "One man in one city cannot give the European figure. For the estimate of around a third of the population you need historians' work, which is your own knowledge."
+    }
    ],
    "write": "Using the source and your own knowledge, explain the impact of the Black Death on medieval communities.",
-   "model": "Agnolo di Tura writes that families abandoned each other and 'nobody could be found to bury the dead', which suggests that fear of the sickness broke down the normal bonds of family and religion. His account of burying five of his own children shows the scale of death in a single household. Across Europe the plague of 1347 to 1351 killed around a third of the population, and the shortage of workers that followed let surviving labourers demand higher wages, which in England led to the Statute of Labourers in 1351 and helped cause the Peasants' Revolt of 1381.",
-   "mark": ["Quotes the source and infers (bonds broke down, scale of death)","Own knowledge with dates (a third of Europe, 1351, 1381)","Goes beyond Siena to the wider social and economic change"]
+   "model": "Agnolo di Tura writes that families abandoned each other and 'nobody could be found to bury the dead', which suggests fear broke the normal bonds of family and religion; burying five of his own children shows the scale in one household. Across Europe the plague of 1347 to 1351 killed about a third of the population, and the shortage of workers let labourers demand wages, leading to the Statute of Labourers in 1351 and the revolt of 1381.",
+   "mark": [
+    "Quotes the source and infers (bonds broke down, scale of death)",
+    "Own knowledge with dates (a third of Europe, 1351, 1381)",
+    "Goes beyond Siena to the wider social and economic change"
+   ]
   },
   {
-   "id": "mongol", "unit": "Shogunate Japan", "img": "f-mongol",
-   "caption": "The samurai Takezaki Suenaga charging Mongol soldiers, from the Mongol Invasion Scrolls, Japan, around 1293. Suenaga had the scrolls made himself.",
+   "id": "mongol",
+   "unit": "Shogunate Japan",
+   "img": "f-mongol",
+   "caption": "The samurai Takezaki Suenaga on his wounded horse during the first Mongol invasion of 1274, from the Mongol Invasion Scrolls, Japan, around 1293. Suenaga had the scrolls made himself.",
    "qs": [
-    {"q":"What type of source is this?","o":["A primary visual source: a painted scroll made soon after the invasions","A secondary source, because it is a painting","A primary written source","A photograph"],"a":0,"x":"Painted about twelve years after the 1281 invasion, by order of a man who fought in it. Primary and visual."},
-    {"q":"Why did Suenaga have the scrolls made?","o":["To record his own deeds so he could claim a reward from the shogunate","To warn Japan about the Mongols","To teach children about history","To honour the Mongol soldiers"],"a":0,"x":"Suenaga travelled to Kamakura to argue he deserved land for his bravery. The scrolls are his evidence. This is why he is always at the centre of the action."},
-    {"q":"What does the scene suggest about how the two sides fought?","o":["Samurai charged on horseback as individuals, while the Mongols fought in groups with bows and exploding bombs","Both sides used the same tactics","The Mongols had no weapons","The samurai fought on foot"],"a":0,"x":"The horse, the single charging samurai, the grouped archers and the bursting bomb are all details in the picture. Reading them together gives you an inference about tactics."},
-    {"q":"What should make you careful about using this source?","o":["Suenaga paid for it to make himself look brave, so his role may be exaggerated","It was painted in Japan","It shows horses","It is very old"],"a":0,"x":"Purpose shapes content. A source made to win a reward will put its owner in the best light. It is still useful for weapons, armour and tactics."}
+    {
+     "q": "What type of source is this?",
+     "o": [
+      "A primary visual source: a painted scroll made soon after the invasions",
+      "A secondary visual source: a later artist imagining the invasions",
+      "A primary written source, because the scroll has captions",
+      "A secondary source, because Suenaga did not paint it himself"
+     ],
+     "a": 0,
+     "x": "Painted about twelve years after the 1281 invasion, by order of a man who fought in it. Primary and visual."
+    },
+    {
+     "q": "Why did Suenaga have the scrolls made?",
+     "o": [
+      "To record his own deeds so he could claim a reward from the shogunate",
+      "To warn the shogunate that the Mongols would return a third time",
+      "To thank the gods for the storm that wrecked the Mongol fleet",
+      "To teach young samurai in his family how to fight on horseback"
+     ],
+     "a": 0,
+     "x": "Suenaga travelled to Kamakura to argue he deserved land for his bravery. The scrolls are his evidence. This is why he is always at the centre of the action."
+    },
+    {
+     "q": "What does the detail of the wounded, bleeding horse suggest?",
+     "o": [
+      "Suenaga wanted to show he had fought at close range and risked his life",
+      "Suenaga's horse was old and fell during a peaceful parade",
+      "Samurai preferred to fight on foot and used horses only to travel",
+      "Mongol soldiers used horses but the samurai did not"
+     ],
+     "a": 0,
+     "x": "Suenaga is shown alone, under fire, his horse struck by arrows. Every detail says 'I was in the thick of it'. That is the inference, and it is exactly what a man claiming a reward would want painted."
+    },
+    {
+     "q": "What should make you careful about using this source?",
+     "o": [
+      "He paid for it to look brave, so his own role may be exaggerated",
+      "It was painted in Japan, so it cannot show the Mongol side",
+      "It shows horses, which the Mongols did not bring to Japan",
+      "It is very old, so the colours can no longer be trusted"
+     ],
+     "a": 0,
+     "x": "Purpose shapes content. A source made to win a reward will put its owner in the best light. It is still useful for what a samurai wore and rode."
+    }
    ],
    "write": "Using the source and your own knowledge, explain why the Mongol invasions weakened the Kamakura shogunate.",
-   "model": "The scroll shows Suenaga charging alone into Mongol archers, and he had it painted to prove he deserved a reward, which suggests samurai expected land in return for fighting. The invasions of 1274 and 1281 were defeated, with the help of the typhoon the Japanese called the kamikaze, but no enemy land was captured, so the shogunate had nothing to give the thousands of samurai who had fought. Suenaga himself had to travel to Kamakura to get his claim heard. Unpaid and resentful warriors stopped trusting the shogunate, which helped its collapse in 1333.",
-   "mark": ["Detail and purpose of the source used to infer (land for service)","Own knowledge with dates (1274, 1281, kamikaze, 1333)","Goes beyond the battle to the system of reward and its failure"]
+   "model": "The scroll shows Suenaga alone on a wounded horse, and he had it painted to prove he deserved a reward, which suggests samurai expected land in return for fighting. The invasions of 1274 and 1281 were beaten off, partly by the typhoon the Japanese called the kamikaze, but no enemy land was won, so the shogunate had nothing to give the samurai who had fought. Unpaid, resentful warriors stopped trusting it, which helped its collapse in 1333.",
+   "mark": [
+    "Detail and purpose of the source used to infer (land for service)",
+    "Own knowledge with dates (1274, 1281, kamikaze, 1333)",
+    "Goes beyond the battle to the system of reward and its failure"
+   ]
   },
   {
-   "id": "buke", "unit": "Shogunate Japan", "text": "The samurai must devote themselves to study and to the military arts. Even repairs to a castle must be reported to the shogunate; new building is strictly forbidden. Marriages between daimyo families must not be arranged privately. Daimyo must not shelter men who have plotted rebellion or committed crimes in another domain.",
+   "id": "buke",
+   "unit": "Shogunate Japan",
+   "text": "The samurai must devote themselves to study and to the military arts. Even repairs to a castle must be reported to the shogunate; new building is strictly forbidden. Marriages between daimyo families must not be arranged privately. Daimyo must not shelter men who have plotted rebellion or committed crimes in another domain.",
    "caption": "Adapted from the Buke Shohatto (Laws for the Military Houses), issued by the Tokugawa shogunate in 1615, shortly after the fall of Osaka Castle.",
    "qs": [
-    {"q":"What type of source is this?","o":["A primary written source: a law code issued by the government of the time","A secondary source describing the laws","A letter from a daimyo","A primary visual source"],"a":0,"x":"A set of laws issued in 1615 by the shogunate is an official primary written source."},
-    {"q":"Why did the shogunate issue these laws in 1615?","o":["Having just destroyed the last Toyotomi stronghold, Ieyasu wanted to stop daimyo from ever building the strength to challenge the Tokugawa","To make samurai better soldiers for a coming war","To encourage castle building","To promote marriage"],"a":0,"x":"Osaka Castle fell in 1615, ending the last serious rival. The timing shows purpose: lock in Tokugawa control while the daimyo were weak."},
-    {"q":"What does the rule on marriages suggest?","o":["Marriage was a way daimyo built alliances, and the shogunate wanted to control that","The shogunate disapproved of marriage","Daimyo were not allowed to marry","Marriage was unimportant to samurai"],"a":0,"x":"Alliances through marriage had fuelled the civil wars of the 1400s and 1500s. Controlling marriages controlled alliances. That is an inference from a rule."},
-    {"q":"What does this source NOT tell you?","o":["Whether the daimyo obeyed, or how they felt about the laws","That castle building was restricted","That samurai were expected to study","That the laws came from the shogunate"],"a":0,"x":"A law tells you what the government wanted. Whether it worked needs other evidence, such as the 250 years of peace that followed, which is your own knowledge."}
+    {
+     "q": "What type of source is this?",
+     "o": [
+      "A primary written source: a law code issued by the government of the time",
+      "A secondary written source: a description of the laws by a historian",
+      "A primary written source, but a private letter from a daimyo",
+      "A primary visual source showing the shogun's court"
+     ],
+     "a": 0,
+     "x": "A set of laws issued in 1615 by the shogunate is an official primary written source."
+    },
+    {
+     "q": "Why did the shogunate issue these laws in 1615?",
+     "o": [
+      "Ieyasu had just destroyed the last Toyotomi stronghold and wanted no daimyo ever able to challenge the Tokugawa",
+      "The shogunate had just lost Osaka Castle and wanted every daimyo to rebuild his army and castles",
+      "Having just made peace with the Mongols, the shogunate wanted samurai to return to study",
+      "Having just opened trade with the Dutch, the shogunate wanted daimyo to marry foreigners"
+     ],
+     "a": 0,
+     "x": "Osaka Castle fell in 1615, ending the last serious rival. The timing shows purpose: lock in Tokugawa control while the daimyo were weak."
+    },
+    {
+     "q": "What does the rule on marriages suggest?",
+     "o": [
+      "Marriage was a way daimyo built alliances, and the shogunate wanted to control that",
+      "Marriage between daimyo families was rare and the shogunate wished to encourage it",
+      "The shogunate wanted every daimyo to marry into the Tokugawa family",
+      "Marriages were costly and the shogunate wanted daimyo to save money"
+     ],
+     "a": 0,
+     "x": "Alliances through marriage had fuelled the civil wars of the 1400s and 1500s. Controlling marriages controlled alliances. That is an inference from a rule."
+    },
+    {
+     "q": "What does this source NOT tell you?",
+     "o": [
+      "Whether the daimyo obeyed the laws, or how they felt about them",
+      "That building new castles was forbidden by the shogunate",
+      "That samurai were expected to study as well as train",
+      "That the laws were issued by the shogunate, not the emperor"
+     ],
+     "a": 0,
+     "x": "A law tells you what the government wanted. Whether it worked needs other evidence, such as the 250 years of peace that followed, which is your own knowledge."
+    }
    ],
    "write": "Using the source and your own knowledge, explain how the Tokugawa shogunate used laws like this to control the daimyo.",
-   "model": "The law bans new castles and private marriages between daimyo families, which suggests the shogunate feared the alliances and fortresses that had allowed daimyo to fight each other during the Onin War and after. Issued in 1615, just after Osaka Castle fell, it was followed in 1635 by compulsory sankin kotai, which forced daimyo to spend alternate years in Edo and leave their families there as hostages, draining their money on processions. Together these rules meant that for over two centuries no daimyo had the castles, allies or funds to rebel, which is why Japan stayed at peace until Perry's arrival in 1853.",
-   "mark": ["Names a rule from the source and infers its purpose","Own knowledge with dates (1615 Osaka, 1635 sankin kotai)","Goes beyond the law to its effect on daimyo and on Japan"]
+   "model": "The law bans new castles and private marriages between daimyo families, which suggests the shogunate feared the alliances and fortresses that had let daimyo fight each other in the civil wars. Issued in 1615, just after Osaka Castle fell, it was backed in 1635 by sankin kotai, which kept daimyo families in Edo and drained daimyo money, so for over two centuries no daimyo had the castles, allies or funds to rebel.",
+   "mark": [
+    "Names a rule from the source and infers its purpose",
+    "Own knowledge with dates (1615 Osaka, 1635 sankin kotai)",
+    "Goes beyond the law to its effect on daimyo and on Japan"
+   ]
   },
   {
-   "id": "dejima", "unit": "Shogunate Japan", "img": "f-dejima",
+   "id": "dejima",
+   "unit": "Shogunate Japan",
+   "img": "f-dejima",
    "caption": "A Dutch ship arriving at Dejima, painted by Kawahara Keiga, a Japanese artist in Nagasaki who worked for the Dutch traders, around 1811.",
    "qs": [
-    {"q":"What type of source is this?","o":["A primary visual source: a painting made in the period by someone who saw the scene","A secondary source, because the artist was Japanese","A photograph of Nagasaki","A map of Japan"],"a":0,"x":"Keiga lived in Nagasaki and painted what the Dutch asked him to record. A painting from the time, of the time, is primary and visual."},
-    {"q":"Why does it matter that the artist worked for the Dutch?","o":["He had rare access to Dejima and foreign ships, but his paintings were made to please Dutch buyers","It makes the source secondary","It means he was not Japanese","It means the painting is in Dutch"],"a":0,"x":"Few Japanese could see Dejima up close. That makes Keiga valuable. But a painter working for clients shows what the clients want, so purpose still matters."},
-    {"q":"What does the arrival of a single foreign ship, watched by onlookers, suggest about sakoku?","o":["Foreign contact was rare and tightly controlled, so a ship's arrival was an event","Japan traded freely with all nations","The Dutch controlled Nagasaki","Nobody in Japan was interested in foreigners"],"a":0,"x":"Under sakoku only the Dutch and Chinese could trade, and only at Nagasaki. One ship a year or so was worth painting. The crowd suggests curiosity, not hostility."},
-    {"q":"What can the source NOT show you?","o":["What the shogunate thought about foreign ideas, or how goods were used across Japan","That ships came to Nagasaki","That Japanese people watched the arrival","That the Dutch had a trading post"],"a":0,"x":"A harbour scene shows a moment in one place. The policy behind it and the spread of Dutch learning (rangaku) across Japan come from your own knowledge."}
+    {
+     "q": "What type of source is this?",
+     "o": [
+      "A primary visual source: a painting made at the time by someone who saw the scene",
+      "A secondary visual source: a later painting based on written descriptions",
+      "A primary written source, because the painting records a date",
+      "A secondary source, because the artist worked for foreigners"
+     ],
+     "a": 0,
+     "x": "Keiga lived in Nagasaki and painted what the Dutch asked him to record. A painting from the time, of the time, is primary and visual."
+    },
+    {
+     "q": "Why does it matter that the artist worked for the Dutch?",
+     "o": [
+      "He had rare access to Dejima, but painted what his Dutch clients wanted",
+      "He had no access to Dejima, so he painted the ship from imagination",
+      "He was Dutch himself, so he saw Japan as a foreigner would",
+      "He was paid by the shogunate, so he painted what the government wanted"
+     ],
+     "a": 0,
+     "x": "Few Japanese could see Dejima up close. That makes Keiga valuable. But a painter working for clients shows what the clients want, so purpose still matters."
+    },
+    {
+     "q": "What does the arrival of a single foreign ship, watched by onlookers, suggest about sakoku?",
+     "o": [
+      "Foreign contact was rare and controlled, so a ship's arrival was an event",
+      "Japan traded freely with all nations and ships arrived every day",
+      "The Dutch had taken over Nagasaki and the crowd had come to protest",
+      "Japanese people were forbidden to look at foreign ships"
+     ],
+     "a": 0,
+     "x": "Under sakoku only the Dutch and Chinese could trade, and only at Nagasaki. One ship a year or so was worth painting. The crowd suggests curiosity, not hostility."
+    },
+    {
+     "q": "What can the source NOT show you?",
+     "o": [
+      "What the shogunate thought of foreign ideas, or how Dutch goods spread",
+      "That ships from the Netherlands reached Nagasaki harbour each year",
+      "That Japanese people gathered to watch the arrival",
+      "That the Dutch had a trading post in the harbour"
+     ],
+     "a": 0,
+     "x": "A harbour scene shows a moment in one place. The policy behind it and the spread of Dutch learning (rangaku) across Japan come from your own knowledge."
+    }
    ],
    "write": "Using the source and your own knowledge, explain the significance of Dejima for Japan under sakoku.",
-   "model": "The painting shows a single Dutch ship arriving while Japanese onlookers watch, which suggests that foreign contact was rare enough to be an event and that the shogunate kept it confined to one place. Dejima was significant because after the sakoku edicts of the 1630s it was the only point where Western goods and knowledge could enter Japan: Dutch books on medicine and science, called rangaku, reached Japanese scholars through it. So while sakoku kept Christianity and foreign armies out for over 200 years, Dejima meant Japan was never completely closed, which helped it respond quickly to the West after 1853.",
-   "mark": ["Detail named (one ship, onlookers) and what it suggests","Own knowledge with dates (1630s edicts, rangaku, 1853)","Goes beyond the harbour to Japan as a whole"]
+   "model": "The painting shows one Dutch ship arriving while Japanese onlookers watch, which suggests foreign contact was rare enough to be an event and was kept to a single place. After the sakoku edicts of the 1630s Dejima was the only point where Western goods and knowledge, called rangaku, could enter Japan, so while sakoku kept Christianity and foreign armies out, Japan was never completely closed, which helped it respond to the West after 1853.",
+   "mark": [
+    "Detail named (one ship, onlookers) and what it suggests",
+    "Own knowledge with dates (1630s edicts, rangaku, 1853)",
+    "Goes beyond the harbour to Japan as a whole"
+   ]
   },
   {
-   "id": "meiji", "unit": "Shogunate Japan", "img": "f-meiji",
+   "id": "meiji",
+   "unit": "Shogunate Japan",
+   "img": "f-meiji",
    "caption": "Official photograph of Emperor Meiji by Uchida Kuichi, 1873. Copies were sent to government offices and schools across Japan.",
    "qs": [
-    {"q":"What type of source is this?","o":["A primary visual source: an official photograph from the time","A painting of the emperor","A secondary source, because it is a copy","A primary written source"],"a":0,"x":"A photograph taken in 1873 of the ruler of 1873 is a primary visual source, even if you see a reproduction of it."},
-    {"q":"Why did the government distribute this image?","o":["To present a modern, Western-style emperor as the symbol of the new Japan","To sell copies to tourists","To show the emperor's private life","Because photography was cheap"],"a":0,"x":"Until 1868 the emperor had been hidden in Kyoto. Sending a photograph of him in a military uniform to every school was a way of making him the face of modernisation."},
-    {"q":"What do the uniform, short hair and chair suggest?","o":["The Meiji government wanted Japan to look like a modern Western power","The emperor had joined a foreign army","Japan had been conquered","Traditional dress was banned for everyone"],"a":0,"x":"Each detail is a deliberate choice: the Western uniform, the European-style haircut, the posed seat. Read them together and the message is 'modern and equal to the West'."},
-    {"q":"What does the source NOT tell you?","o":["How ordinary Japanese people felt about the changes","That the emperor wore a Western uniform","That the photograph was taken in 1873","That the government used images of the emperor"],"a":0,"x":"A staged official portrait shows the government's message, not the public's reaction. For how samurai or peasants felt you need other sources or your own knowledge of the 1877 rebellion and tax protests."}
+    {
+     "q": "What type of source is this?",
+     "o": [
+      "A primary visual source: an official photograph taken at the time",
+      "A secondary visual source: a later copy of a lost painting",
+      "A primary visual source, but a private family snapshot",
+      "A secondary source, because photographs can be edited"
+     ],
+     "a": 0,
+     "x": "A photograph taken in 1873 of the ruler of 1873 is a primary visual source, even if you see a reproduction of it."
+    },
+    {
+     "q": "Why did the government distribute this image?",
+     "o": [
+      "To present a modern, Western-style emperor as the symbol of the new Japan",
+      "To show foreign governments that the emperor was still a religious figure",
+      "To prove to the samurai that the emperor was a trained soldier",
+      "To raise money for the government by selling copies to the public"
+     ],
+     "a": 0,
+     "x": "Until 1868 the emperor had been hidden in Kyoto. Sending a photograph of him in a military uniform to every school was a way of making him the face of modernisation."
+    },
+    {
+     "q": "What do the uniform, short hair and chair suggest?",
+     "o": [
+      "The Meiji government wanted Japan to look like a modern Western power",
+      "The emperor had been forced to join a foreign army after 1868",
+      "Japan had been conquered and its emperor made to wear foreign dress",
+      "The government had banned traditional dress for all Japanese men"
+     ],
+     "a": 0,
+     "x": "Each detail is a deliberate choice: the Western uniform, the European-style haircut, the posed seat. Read them together and the message is 'modern and equal to the West'."
+    },
+    {
+     "q": "What does the source NOT tell you?",
+     "o": [
+      "How ordinary Japanese people felt about the changes",
+      "That the emperor was photographed in a Western uniform",
+      "That the photograph was taken in the year 1873",
+      "That the government used images of the emperor to spread its message"
+     ],
+     "a": 0,
+     "x": "A staged official portrait shows the government's message, not the public's reaction. For how samurai or peasants felt you need other sources or your own knowledge of the 1877 rebellion and tax protests."
+    }
    ],
    "write": "Using the source and your own knowledge, explain what the photograph suggests about the aims of the Meiji government.",
-   "model": "The emperor is shown in a Western military uniform with short hair, seated on a European chair, which suggests the government wanted Japan to be seen as a modern nation equal to the Western powers. After the Restoration of 1868 the government did exactly that: it introduced conscription in 1873, the same year as this photograph, built railways and telegraphs, and sent the Iwakura Mission abroad to study Western systems. The image was sent to schools because the government also wanted ordinary people to feel loyalty to the emperor rather than to their old daimyo, which shows the aim was to unite the country as well as modernise it.",
-   "mark": ["Details named (uniform, hair, chair) and what they suggest","Own knowledge with dates (1868, 1873 conscription, Iwakura Mission)","Goes beyond the emperor to what the government wanted from ordinary people"]
+   "model": "The emperor wears a Western military uniform with short hair and sits on a European chair, which suggests the government wanted Japan to be seen as a modern nation equal to the West. After 1868 it introduced conscription in 1873, the year of this photograph, and built railways and telegraphs. Sending the image to schools also shows it wanted ordinary people to be loyal to the emperor rather than to their old daimyo.",
+   "mark": [
+    "Details named (uniform, hair, chair) and what they suggest",
+    "Own knowledge with dates (1868, 1873 conscription, Iwakura Mission)",
+    "Goes beyond the emperor to what the government wanted from ordinary people"
+   ]
   },
   {
-   "id": "charter", "unit": "Shogunate Japan", "text": "1. Assemblies shall be set up and all matters decided by open discussion. 2. All classes, high and low, shall unite in carrying out the affairs of the state. 3. The common people, no less than officials and warriors, shall be allowed to follow their own callings so that there is no discontent. 4. Bad customs of the past shall be broken off. 5. Knowledge shall be sought throughout the world to strengthen the rule of the emperor.",
-   "caption": "Adapted from the Charter Oath, sworn by the Meiji Emperor in April 1868 at the start of his reign.",
+   "id": "charter",
+   "unit": "Shogunate Japan",
+   "text": "1. Assemblies shall be set up and all matters decided by open discussion. 2. All classes, high and low, shall unite in carrying out the affairs of the state. 3. The common people, no less than officials and warriors, shall be allowed to follow their own callings so that there is no discontent. 4. Bad customs of the past shall be broken off. 5. Knowledge shall be sought throughout the world to strengthen the rule of the emperor.",
+   "caption": "Adapted from the Charter Oath, sworn by the Meiji Emperor in April 1868 at the start of the new government.",
    "qs": [
-    {"q":"What type of source is this?","o":["A primary written source: an official statement of government aims","A secondary source summarising Meiji policy","A private letter","A primary visual source"],"a":0,"x":"An oath sworn by the emperor in 1868 is an official primary document. It states intentions, which is different from recording what happened."},
-    {"q":"Why was the oath issued at this moment?","o":["The new government had just taken power from the shogun and needed to win support and set a direction","To declare war on the West","To restore the Tokugawa","To end the Meiji period"],"a":0,"x":"The shogun had resigned in late 1867 and fighting continued into 1868. An oath promising discussion, unity and knowledge was a way of reassuring the daimyo, samurai and commoners."},
-    {"q":"What does article 3 suggest about the Tokugawa period?","o":["The old class system had fixed people's occupations by birth and caused resentment","Commoners had always been free to choose work","Warriors were to lose all their rights immediately","Officials were to become farmers"],"a":0,"x":"Saying commoners 'shall be allowed' to follow their own callings implies they were not before. The four-class system had fixed status by birth for over 250 years."},
-    {"q":"What does the oath NOT tell you?","o":["Whether the promises were kept, or how quickly","That the emperor wanted knowledge from abroad","That assemblies were promised","That the oath came in 1868"],"a":0,"x":"Aims are not outcomes. The first elected assembly, the Diet, did not meet until 1890. Checking a promise against what happened is where your own knowledge earns marks."}
+    {
+     "q": "What type of source is this?",
+     "o": [
+      "A primary written source: an official statement of the government's aims",
+      "A secondary written source: a historian's summary of Meiji policy",
+      "A primary written source, but a private diary of the emperor",
+      "A primary visual source showing the oath being sworn"
+     ],
+     "a": 0,
+     "x": "An oath sworn by the emperor in 1868 is an official primary document. It states intentions, which is different from recording what happened."
+    },
+    {
+     "q": "Why was the oath issued at this moment?",
+     "o": [
+      "The new government had just taken power from the shogun and needed support and a direction",
+      "The emperor had just declared war on the Western powers and needed soldiers",
+      "The shogun had just been restored and wanted to reassure the daimyo",
+      "The government had just banned all foreign trade and wanted to explain why"
+     ],
+     "a": 0,
+     "x": "The shogun had resigned in late 1867 and fighting continued into 1868. An oath promising discussion, unity and knowledge was a way of reassuring the daimyo, samurai and commoners."
+    },
+    {
+     "q": "What does article 3 suggest about the Tokugawa period?",
+     "o": [
+      "The class system had fixed people's work by birth and caused resentment",
+      "Commoners had always chosen their own work and the oath confirmed it",
+      "Warriors were to lose all their rights on the day the oath was sworn",
+      "Officials were to be sent to the countryside to become farmers"
+     ],
+     "a": 0,
+     "x": "Saying commoners 'shall be allowed' to follow their own callings implies they were not before. The four-class system had fixed status by birth for over 250 years."
+    },
+    {
+     "q": "What does the oath NOT tell you?",
+     "o": [
+      "Whether the promises were kept, or how quickly",
+      "That the emperor wanted knowledge sought from abroad",
+      "That the oath promised assemblies and open discussion",
+      "That the oath was sworn in April 1868"
+     ],
+     "a": 0,
+     "x": "Aims are not outcomes. The first elected assembly, the Diet, did not meet until 1890. Checking a promise against what happened is where your own knowledge earns marks."
+    }
    ],
    "write": "Using the source and your own knowledge, explain how the Charter Oath marked a break from the Tokugawa period.",
-   "model": "The oath promises that 'all classes, high and low' will share in government and that 'knowledge shall be sought throughout the world', which suggests a deliberate rejection of both the fixed four-class system and the sakoku policy of the Tokugawa. These promises were acted on: the domains were abolished in 1871, commoners were conscripted from 1873 and the Iwakura Mission toured America and Europe from 1871 to 1873. However, article 1's promise of assemblies was slow to arrive, since the Diet did not meet until 1890, so the break was sharper for samurai, who lost their status, than for commoners, who gained a vote only much later.",
-   "mark": ["Quotes the oath and infers what it rejects","Own knowledge with dates (1871, 1873, 1890)","Goes beyond the promise to who gained and lost, and how fast"]
+   "model": "The oath promises that 'all classes, high and low' will share in government and that 'knowledge shall be sought throughout the world', which suggests a rejection of the fixed four-class system and of sakoku. The government acted on this: domains were abolished in 1871 and commoners conscripted from 1873. However, the promised assemblies did not meet until the Diet of 1890, so the break came faster for samurai, who lost status, than for commoners.",
+   "mark": [
+    "Quotes the oath and infers what it rejects",
+    "Own knowledge with dates (1871, 1873, 1890)",
+    "Goes beyond the promise to who gained and lost, and how fast"
+   ]
   },
   {
-   "id": "samurai", "unit": "Shogunate Japan", "img": "jp-samurai",
+   "id": "samurai",
+   "unit": "Shogunate Japan",
+   "img": "jp-samurai",
    "caption": "Studio photograph of a samurai in full armour, Japan, 1860s, photographer unknown. Photographs like this were sold to foreign visitors in Yokohama.",
    "qs": [
-    {"q":"What type of source is this?","o":["A primary visual source: a photograph taken in the period","A painting of a samurai","A secondary source, because the photographer is unknown","A primary written source"],"a":0,"x":"Taken in the 1860s of a man of the 1860s. Not knowing the photographer's name does not make it secondary; it just means you say 'photographer unknown' when you name the origin."},
-    {"q":"Why was it made, and why does that matter?","o":["To sell to foreigners who wanted an 'exotic' samurai, so the pose and armour are staged","To record a battle","As an official government portrait","To train soldiers"],"a":0,"x":"By the 1860s full armour was ceremonial; samurai did not walk about dressed like this. A souvenir photograph shows what the buyer expected, which is a purpose to name."},
-    {"q":"What does the photograph suggest about samurai identity in the 1860s?","o":["Armour and swords still mattered as symbols of status even though samurai rarely fought","Samurai were constantly at war","Samurai had already given up their swords","Samurai wore Western dress"],"a":0,"x":"Two centuries of peace had made samurai officials, but the armour and two swords remained the marks of their class. The photo preserves the symbol, not the daily reality."},
-    {"q":"What can it NOT show you?","o":["What happened to samurai after 1868, or how this man lived day to day","That samurai carried swords","That armour was still owned in the 1860s","That photography existed in Japan by the 1860s"],"a":0,"x":"A single staged moment cannot show the decade that followed: conscription in 1873, the sword ban in 1876 and the loss of stipends. That is your own knowledge to add."}
+    {
+     "q": "What type of source is this?",
+     "o": [
+      "A primary visual source: a photograph taken in the period",
+      "A secondary visual source: a later painting copied from a photograph",
+      "A secondary source, because the photographer is unknown",
+      "A primary written source, because the studio kept records"
+     ],
+     "a": 0,
+     "x": "Taken in the 1860s of a man of the 1860s. Not knowing the photographer's name does not make it secondary; it just means you say 'photographer unknown' when you name the origin."
+    },
+    {
+     "q": "Why was it made, and why does that matter?",
+     "o": [
+      "To sell to foreigners wanting an 'exotic' samurai, so the pose is staged",
+      "To record a samurai before a battle, so the armour is what he fought in",
+      "As an official government portrait, so it shows what the state wanted",
+      "To train new soldiers, so it shows the correct way to hold a sword"
+     ],
+     "a": 0,
+     "x": "By the 1860s full armour was ceremonial; samurai did not walk about dressed like this. A souvenir photograph shows what the buyer expected, which is a purpose to name."
+    },
+    {
+     "q": "What does the photograph suggest about samurai identity in the 1860s?",
+     "o": [
+      "Armour and swords were still symbols of status, though samurai rarely fought",
+      "Samurai were constantly at war in the 1860s and wore armour daily",
+      "Samurai had already given up their swords by the time of the photograph",
+      "Samurai had adopted Western uniforms but kept their helmets"
+     ],
+     "a": 0,
+     "x": "Two centuries of peace had made samurai officials, but the armour and two swords remained the marks of their class. The photo preserves the symbol, not the daily reality."
+    },
+    {
+     "q": "What can it NOT show you?",
+     "o": [
+      "What happened to samurai after 1868, or how this man actually lived",
+      "That samurai carried two swords as a mark of their class",
+      "That full armour was still owned and worn in the 1860s",
+      "That photography had reached Japan by the 1860s"
+     ],
+     "a": 0,
+     "x": "A single staged moment cannot show the decade that followed: conscription in 1873, the sword ban in 1876 and the loss of stipends. That is your own knowledge to add."
+    }
    ],
    "write": "Using the source and your own knowledge, explain how the position of the samurai changed in the years after this photograph was taken.",
-   "model": "The photograph shows a samurai in full armour with his swords, which suggests that in the 1860s these were still the proud symbols of a warrior class, even though after 250 years of Tokugawa peace most samurai worked as officials. Within fifteen years that status was gone: the Meiji government introduced conscription in 1873 so commoners filled the army, banned the wearing of swords in 1876 and replaced samurai rice stipends with bonds. Some samurai rebelled in 1877 and were defeated by the conscript army, which shows the change was permanent, while others became officers, officials and businessmen in the new Japan.",
-   "mark": ["Details named (armour, swords) and what they suggest","Own knowledge with dates (1873, 1876, 1877)","Goes beyond this one man to the whole class and what became of them"]
+   "model": "The photograph shows a samurai in full armour with his swords, which suggests these were still proud symbols of a warrior class, even though after 250 years of peace most samurai worked as officials. Within fifteen years the Meiji government introduced conscription in 1873, banned swords in 1876 and ended samurai stipends. Some rebelled in 1877 and were crushed by the conscript army, which shows the change was permanent.",
+   "mark": [
+    "Details named (armour, swords) and what they suggest",
+    "Own knowledge with dates (1873, 1876, 1877)",
+    "Goes beyond this one man to the whole class and what became of them"
+   ]
   }
  ]
 }
