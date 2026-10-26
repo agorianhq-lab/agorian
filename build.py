@@ -3,6 +3,8 @@
   python3 build.py --inline   -> docs/index.html with images embedded (for the Claude preview)
 """
 import json,base64,glob,os,sys,shutil
+sys.path.insert(0,os.path.join(os.path.dirname(os.path.abspath(__file__)),'tools'))
+import chrono
 inline='--inline' in sys.argv
 s=open('src/index.html').read()
 b=json.load(open('data/bank.json'))
@@ -14,9 +16,11 @@ os.makedirs('docs/img',exist_ok=True)
 img={}
 for f in sorted(glob.glob('img/*.jpg')):
     k=os.path.basename(f)[:-4]
+    if k.startswith('p-'): continue  # raw band sources, used only by the sandbox
     if inline: img[k]='data:image/jpeg;base64,'+base64.b64encode(open(f,'rb').read()).decode()
     else: img[k]='img/'+os.path.basename(f); shutil.copy(f,'docs/img/')
-out=s.replace('__BANK__',js).replace('__IMG__',json.dumps(img))
+ccss,chtml,_=chrono.render(img)
+out=s.replace('__BANK__',js).replace('__IMG__',json.dumps(img)).replace('/*__CHRONO_CSS__*/',ccss).replace('__CHRONO__',json.dumps(chtml,ensure_ascii=False).replace('</','<\\/'))
 if not inline:
     # hosted page needs the document skeleton the preview adds for us
     import re

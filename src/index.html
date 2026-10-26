@@ -505,6 +505,7 @@ footer{margin-top:40px;font-size:13px;color:var(--muted)}
 .marksel{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
 .marksel button{min-width:44px;height:40px;border-radius:10px;border:2px solid var(--navy);background:var(--surface);font-weight:700;cursor:pointer}
 .marksel button.on{background:var(--navy);color:#fff}
+/*__CHRONO_CSS__*/
 </style>
 
 <div class="wrap" id="top">
@@ -768,6 +769,7 @@ function confetti(){
 }
 // artwork (public domain, Wikimedia Commons), embedded at build time
 const IMG = __IMG__;
+const CHRONO = __CHRONO__;
 const CAP = {
   'jp-wave':'Hokusai, The Great Wave off Kanagawa, c. 1831','jp-fuji':'Hokusai, Fine Wind, Clear Morning, c. 1831','jp-tokaido':'Hiroshige, Nihonbashi, Fifty-three Stations of the Tokaido, 1833','jp-samurai':'Samurai in armour, photograph, 1860s',
   'eu-bayeux':'Bayeux Tapestry, the death of Harold, c. 1070s','eu-heures':'Limbourg brothers, Très Riches Heures, October, c. 1412','eu-castle':'Limbourg brothers, Très Riches Heures, September, c. 1412','eu-plague':'Toggenburg Bible, plague victims, 1411','eu-crusade':'Siege of Jerusalem 1099, 13th-century manuscript','f-domesday':'Domesday Book binding, 1086','f-armour':'Gothic armour by Lorenz Helmschmied, 1493','f-motte':'Bayeux Tapestry, the motte at Dinan, c. 1070s','f-ordeal':'Ordeal by cold water, 12th-century manuscript','f-abbey':'Fountains Abbey, Yorkshire','f-alhambra':'Court of the Lions, Alhambra, 1855','f-lazzaretto':'Lazzaretto Vecchio, Venice','f-harvest':'Reeve and serfs, Queen Mary Psalter, c. 1310','f-mongol':'Takezaki Suenaga, Mongol invasion scroll, c. 1293','f-nitobe':'Nitobe Inazo','f-sankin':'Hiroshige, daimyo procession crossing a bridge','f-dejima':'Kawahara Keiga, Dutch ship arriving at Dejima, 1811','f-edo':'Hiroshige, Suruga-cho, One Hundred Famous Views of Edo, 1856','f-ronin':'Hiroshige, Chushingura Act XI, c. 1840','f-perry':'The Perry mission to Japan, Japanese scroll, 1854','f-meiji':'Emperor Meiji, photograph, 1873','f-manesse':'Codex Manesse, Walther von Klingen, c. 1305'};
@@ -1127,6 +1129,14 @@ function terms(){
 
 // ---------- timeline game ----------
 function timeline(){
+  h(`<section class="section"><div class="row" style="justify-content:space-between">${MODEH('timeline','Timeline')}<button class="btn" id="game">Order the events</button></div>${CHRONO}<div class="actions"><button class="btn quiet" id="home">Home</button><button class="btn" id="game2">Order the events</button></div></section>`);
+  app.querySelector('#home').onclick=home;
+  app.querySelector('#game').onclick=timelineGame; app.querySelector('#game2').onclick=timelineGame;
+  const close=()=>app.querySelectorAll('.chrono .cev.open').forEach(x=>{x.classList.remove('open');x.querySelector('.ccard').setAttribute('aria-expanded','false')});
+  app.querySelectorAll('.chrono .ccard').forEach(b=>b.onclick=()=>{ const e=b.parentElement, was=e.classList.contains('open'); close(); if(!was){ e.classList.add('open'); b.setAttribute('aria-expanded','true') } });
+  app.querySelector('.chrono').addEventListener('keydown',e=>{ if(e.key==='Escape') close() });
+}
+function timelineGame(){
   let round=0, total=0, misses=0;
   const play=()=>{
     const unit = round%3===2 ? null : (round%3===0?'Medieval Europe':'Shogunate Japan');
@@ -1502,7 +1512,7 @@ const mm=document.getElementById('musMode'); mm.value=music.mode; mm.onchange=()
 const mv=document.getElementById('musVol'); mv.value=music.vol; mv.oninput=()=>{ music.vol=+mv.value; store.set('musVol',music.vol); if(music.master&&actx) music.master.gain.setTargetAtTime(music.vol/100*.6, actx.currentTime, .1) };
 document.addEventListener('visibilitychange',()=>{ if(document.hidden&&music.on){ clearTimeout(music.timer) } else if(music.on){ phrase() } });
 (function tick(){ const d=new Date(); const el=document.getElementById('clock'); if(el){ const hh=d.getHours(), m=String(d.getMinutes()).padStart(2,'0'), ss=String(d.getSeconds()).padStart(2,'0'); const h12=((hh+11)%12)+1; el.innerHTML=`<span class="lbl">Melbourne</span><span class="time">${h12}:${m}<small>${hh<12?'am':'pm'}</small></span><span class="date">${d.toLocaleDateString('en-AU',{weekday:'long',day:'numeric',month:'long'})}</span>` } setTimeout(tick, 60000-(Date.now()%60000)+50) })();
-HOME_FN=home; home=screen(home); setup=screen(setup); challenge=screen(challenge); terms=screen(terms); write=screen(write); daily=screen(daily); timeline=screen(timeline); teacher=screen(teacher); sprint=screen(sprint); facts=screen(facts); exam=screen(exam); shortq=screen(shortq); startQuiz=screen(startQuiz);
+HOME_FN=home; home=screen(home); setup=screen(setup); challenge=screen(challenge); terms=screen(terms); write=screen(write); daily=screen(daily); timeline=screen(timeline); timelineGame=screen(timelineGame); teacher=screen(teacher); sprint=screen(sprint); facts=screen(facts); exam=screen(exam); shortq=screen(shortq); startQuiz=screen(startQuiz);
 document.getElementById('backBtn').onclick=goBack;
 const ROUTES={practice:setup, challenge, terms, write, daily, timeline, teacher, sprint, facts, success, exam, shortq};
 const r=(location.hash||'').slice(1); (ROUTES[r]||home)();
