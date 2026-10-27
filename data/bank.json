@@ -11,10 +11,10 @@
    "type": "mc",
    "question": "A historian notices that peasants still paid rent to a landowner after the Black Death, but now in money rather than labour. Which historical concept best describes this observation?",
    "options": [
-    "Contestability",
+    "Cause and consequence",
     "Continuity and change",
-    "Empathy",
-    "Perspectives"
+    "Historical empathy",
+    "Historical perspectives"
    ],
    "answer": [
     1
@@ -135,10 +135,10 @@
    "type": "mc",
    "question": "Using COMA, what was the most likely purpose of this painting?",
    "options": [
-    "To decorate the church so that wealthy visitors would donate money",
-    "To record an actual event that the villagers had witnessed",
-    "To teach an audience that could not read what the Church said would happen to sinners",
-    "To criticise the priests who ran the church"
+    "To impress wealthy visitors with fine artwork so that they would give money to the church",
+    "To record a real disaster, such as a fire or famine, that the villagers had lived through",
+    "To show villagers in pictures what the Church taught would happen to sinners",
+    "To warn villagers that the lord of the manor would punish anyone who broke his laws"
    ],
    "answer": [
     2
@@ -249,16 +249,16 @@
    "topic": "Chronology",
    "skill": "Read a timeline and order events",
    "stimulus": null,
-   "explanation": "The Kamakura shogunate ended in 1333 and the Ashikaga (Muromachi) shogunate began in 1336, so this is the period that overlaps with the Black Death. Sakoku and Meiji are centuries later, and the Genpei War was 150 years earlier.",
+   "explanation": "The Kamakura shogunate ended in 1333 and the Ashikaga (Muromachi) shogunate began in 1336, so this is the period that overlaps with the Black Death. Sakoku and Meiji are centuries later, and the Genpei War was about 160 years earlier.",
    "source": "EP",
    "srcId": 9,
    "type": "mc",
    "question": "Which of the following happened in Japan while the Black Death was spreading through Europe in the late 1340s?",
    "options": [
-    "The Tokugawa shogunate was enforcing sakoku",
+    "The Tokugawa shogunate had closed the country under sakoku and limited trade to Nagasaki",
     "The Kamakura shogunate had recently fallen and the Ashikaga shoguns held power",
-    "Emperor Meiji was modernising the army",
-    "The Genpei War was being fought"
+    "Emperor Meiji's new government was building a conscript army and the first railways",
+    "The Minamoto and Taira clans were fighting the Genpei War for control of Japan"
    ],
    "answer": [
     1
@@ -276,10 +276,10 @@
    "type": "mc",
    "question": "Which statement gives the strongest reason for calling the Battle of Sekigahara (1600) a turning point?",
    "options": [
-    "It was the largest battle in Japanese history",
-    "Many samurai died on both sides",
+    "It was one of the largest battles ever fought in Japan, with well over 100,000 samurai fighting on a single day in October 1600",
+    "Thousands of samurai on the losing Western side were killed, and their leader Ishida Mitsunari was captured and executed in Kyoto",
     "It ended more than a century of civil war and allowed Tokugawa Ieyasu to establish a shogunate that ruled for over 250 years",
-    "It was fought near Kyoto, the home of the emperor"
+    "It was fought at a mountain pass in central Japan on the main road linking Kyoto, the emperor's capital, with the eastern provinces"
    ],
    "answer": [
     2
@@ -297,10 +297,10 @@
    "type": "mc",
    "question": "Which exchange best describes the agreement at the heart of European feudalism?",
    "options": [
-    "The Church gave land to kings in return for tithes",
+    "A king granted land to the Church in return for prayers for his soul after death",
     "A lord granted a fief to a vassal in return for loyalty and military service",
-    "Peasants paid money to knights in return for weapons",
-    "Merchants gave goods to nobles in return for titles"
+    "A vassal granted land to his lord in return for protection and a share of the harvest",
+    "A king sold a title to a noble in return for a yearly payment in gold or silver coin"
    ],
    "answer": [
     1
@@ -373,10 +373,10 @@
    "type": "mc",
    "question": "What was the main difference between a serf and a free peasant?",
    "options": [
-    "Serfs were paid in coins while free peasants were paid in food",
+    "Serfs paid rent to the lord in coins, while free peasants paid for their land with labour on the lord's fields",
     "Serfs were bound to their lord's land and could not leave without permission, while free peasants could move",
-    "Serfs lived in towns while free peasants lived on manors",
-    "Serfs could become knights but free peasants could not"
+    "Serfs lived in towns and worked as craftsmen, while free peasants farmed the land on a lord's manor",
+    "Serfs paid the Church a tithe of one tenth of their crops, while free peasants kept everything they grew"
    ],
    "answer": [
     1
@@ -394,10 +394,10 @@
    "type": "mc",
    "question": "Why did feudalism help a medieval king keep control of a large kingdom without a modern army or police force?",
    "options": [
-    "Every subject swore an oath directly to the king",
+    "Every peasant and knight in the kingdom swore an oath of loyalty directly to the king in person",
     "Nobles who held land from the king owed him knights and kept order in their regions",
-    "The Church ordered peasants to obey the king in return for land",
-    "Kings employed professional soldiers paid from a national tax"
+    "Priests told peasants that God wanted them to obey the king, and the Church got land in return",
+    "The king kept all the land himself and travelled the kingdom collecting rent from every village"
    ],
    "answer": [
     1
@@ -471,10 +471,10 @@
    "type": "mc",
    "question": "A European knight and a Japanese samurai were similar in that both...",
    "options": [
-    "were paid a salary by the central government",
+    "were paid a stipend measured in rice and lived in the castle town of their lord",
     "were warriors who served a lord in return for land or income and followed a code of conduct",
-    "were elected by the peasants they protected",
-    "were forbidden to own weapons in peacetime"
+    "held land directly from the king and swore an oath of fealty to him in person",
+    "followed the Christian code of chivalry, which required them to defend the Church and the weak"
    ],
    "answer": [
     1
@@ -492,10 +492,10 @@
    "type": "mc",
    "question": "A peasant and a noble living on the same manor in 1250 would most likely have had different perspectives on feudalism because...",
    "options": [
-    "they spoke different languages",
+    "the noble had sworn an oath of loyalty to the king while the peasant owed no duties to anyone and simply farmed the land",
     "the system gave the noble protection and wealth while it gave the peasant protection but demanded labour and limited freedom",
-    "the noble was not part of the feudal system",
-    "peasants were not religious"
+    "the noble had been born into his position while the peasant had freely chosen to work on the manor in return for wages",
+    "the noble was educated by the Church while the peasant had little to do with religion or the Church in his daily life"
    ],
    "answer": [
     1
@@ -513,10 +513,10 @@
    "type": "mc",
    "question": "Which development did the most to weaken feudalism in the later Middle Ages?",
    "options": [
-    "The invention of the printing press",
+    "The invention of the printing press in the 1450s, which spread new ideas and challenged the Church's teaching",
     "The growth of towns, trade and a money economy alongside the labour shortage after the Black Death",
-    "The First Crusade",
-    "The building of stone castles"
+    "The sealing of Magna Carta in 1215, which forced King John to accept limits on his power over the barons",
+    "The building of stone castles from the 11th century, which let great lords defy the king from behind strong walls"
    ],
    "answer": [
     1
@@ -534,10 +534,10 @@
    "type": "mc",
    "question": "Why were most punishments in medieval Europe carried out in public, in the market square or at the town gate?",
    "options": [
-    "Because prisons were full",
+    "Because towns had no prisons large enough to hold criminals, so sentences had to be carried out quickly",
     "To shame the offender and warn others, since there was no police force and fear was the main deterrent",
-    "So the king could watch personally",
-    "To raise money by selling tickets"
+    "So that the king or his sheriff could watch in person and check that the sentence was carried out",
+    "To give the offender the chance to confess and be forgiven by the priest in front of the whole parish"
    ],
    "answer": [
     1
@@ -606,10 +606,10 @@
    "type": "mc",
    "question": "In a trial by ordeal, an accused person might carry a red-hot iron and have the wound inspected three days later. What belief made this seem a fair way to decide guilt?",
    "options": [
-    "That burns always heal in three days",
+    "That an innocent person would feel no pain, so anyone who cried out must be guilty",
     "That God would protect the innocent and reveal the guilty through the outcome",
-    "That the lord could tell liars by their faces",
-    "That pain made people confess"
+    "That twelve local men who knew the accused were the best judges of whether he was guilty",
+    "That the pain of the burn would force a guilty person to confess within the three days"
    ],
    "answer": [
     1
@@ -627,10 +627,10 @@
    "type": "mc",
    "question": "Which statement best explains the Church's role in medieval law and order?",
    "options": [
-    "The Church had no part in legal matters",
+    "The Church took no part in trying crimes, but its priests blessed the king's judges and prayed for the souls of those who were executed",
     "The Church ran its own courts under canon law, judged crimes such as heresy, and its threat of excommunication and hell shaped how people behaved",
-    "The Church only punished priests",
-    "The Church replaced the king's courts entirely"
+    "The Church tried only priests and monks in its own courts, and left every other crime, including heresy, to the king's judges and sheriffs",
+    "The Church replaced the king's courts entirely, so that by 1200 every crime from theft to treason was judged by bishops under canon law"
    ],
    "answer": [
     1
@@ -663,10 +663,10 @@
    "type": "mc",
    "question": "Why were castles significant to power and authority in medieval Europe, beyond their use in battle?",
    "options": [
-    "They stored the grain that fed the whole region",
+    "They stored the grain and livestock that fed the people of the whole region through each winter",
     "They were a symbol of the lord's power and the centre for taxes, justice and control of the land around them",
-    "They housed the peasants who worked the lord's fields",
-    "They served as the parish church for the surrounding villages"
+    "They housed the peasants who farmed the lord's fields, so that he could protect them from raiders",
+    "They belonged to the king alone, who kept a garrison of royal soldiers in each one to watch the lord"
    ],
    "answer": [
     1
@@ -684,10 +684,10 @@
    "type": "mc",
    "question": "How did castle design change between the 11th and 13th centuries?",
    "options": [
-    "Castles became smaller and made of wood",
+    "Concentric stone castles with multiple walls and towers were replaced by simpler stone keeps and then by wooden motte-and-bailey castles",
     "Simple wooden motte-and-bailey castles were replaced by stone keeps and then concentric stone castles with multiple walls and towers",
-    "Castles were abandoned for cities",
-    "Castles were built underground"
+    "Motte-and-bailey castles stayed the main design, but their wooden fences were replaced by brick walls and their moats were filled in",
+    "Stone castles stopped being built as fortresses and became comfortable manor houses with large glass windows and formal gardens"
    ],
    "answer": [
     1
@@ -727,10 +727,10 @@
    "type": "mc",
    "question": "A chronicle written by a monk praises a knight for his chivalry, while a peasant's village was burned by the same knight during a war. What does this tell a historian?",
    "options": [
-    "The monk was lying",
+    "The monk's chronicle must be unreliable, because monks lived behind monastery walls and knew little about how knights behaved in wartime",
     "Chivalry was an ideal that governed how knights treated other nobles and the Church, and different groups experienced knights very differently",
-    "Peasants did not exist in that region",
-    "The knight was not a real knight"
+    "The two sources cannot both be used, so the historian must work out which writer was lying and set the other account aside completely",
+    "The chronicle proves the village was burned by someone else, since a knight who truly followed chivalry would never have harmed peasants"
    ],
    "answer": [
     1
@@ -748,10 +748,10 @@
    "type": "mc",
    "question": "What purpose did tournaments serve for medieval knights?",
    "options": [
-    "They were a way of farming land",
+    "They were religious festivals organised by the Church to celebrate saints' days and raise money for the Crusades",
     "They provided training for war and a public stage to display skill and win status, reputation and prizes",
-    "They were religious festivals run by the Church",
-    "They decided who would become king"
+    "They were trials by combat used by the king's courts to settle disputes over land between rival nobles",
+    "They were the main way a young man of peasant birth could prove his courage and be made a knight"
    ],
    "answer": [
     1
@@ -846,10 +846,10 @@
    "type": "mc",
    "question": "Which statement best explains why the Catholic Church was so powerful in medieval Europe?",
    "options": [
-    "It commanded the largest army in Europe",
+    "It commanded knightly orders such as the Templars, who answered to the Pope rather than to any king",
     "It controlled the path to heaven in a society that believed in hell, and it owned vast lands",
-    "The Pope also ruled England and France directly",
-    "It controlled all trade between Europe and Asia"
+    "It ran almost all the schools, so nearly everyone in Europe who could read and write was a priest or monk",
+    "It controlled the trade routes between Europe and Asia and taxed the spices and silk that passed along them"
    ],
    "answer": [
     1
@@ -867,10 +867,10 @@
    "type": "mc",
    "question": "How could the Pope put pressure on a king who defied him?",
    "options": [
-    "By sending the Crusaders to attack the king",
+    "By calling the king's knights away on a crusade, which left him with no army to defend his castles against his rivals",
     "By excommunicating the king, which cut him off from the Church and gave his subjects and rivals a reason to disobey him",
-    "By raising the king's taxes",
-    "By cancelling the king's coronation"
+    "By raising the taxes paid on the king's lands, which drained his treasury until he could no longer pay his knights",
+    "By cancelling the king's coronation, which meant he had never truly been crowned and his laws no longer had to be obeyed"
    ],
    "answer": [
     1
@@ -888,10 +888,10 @@
    "type": "mc",
    "question": "Which of these shows the Church's CULTURAL power rather than its political or economic power?",
    "options": [
-    "Owning about one third of the land in Europe",
+    "Owning about one third of all the farmland in Europe and collecting a tithe of one tenth of what every villager produced",
     "Monasteries preserving and copying books, running schools and producing most of the art and architecture of the period",
-    "Excommunicating a king",
-    "Collecting the tithe"
+    "Excommunicating kings who defied the Pope, cutting them off from the sacraments and encouraging their subjects to rebel",
+    "Deciding who was the rightful king by crowning him, and having bishops sit on the royal council as the king's closest advisers"
    ],
    "answer": [
     1
@@ -943,10 +943,10 @@
    "type": "mc",
    "question": "What was the main stated aim of the First Crusade in 1096?",
    "options": [
-    "To conquer Spain for the Pope",
+    "To drive the Muslim rulers out of Spain and return the whole peninsula to Christian kings",
     "To capture Jerusalem and the Holy Land from Muslim rule and protect Christian pilgrims",
-    "To destroy the Byzantine Empire",
-    "To open a trade route to India"
+    "To capture Constantinople and bring the Byzantine Empire back under the Pope's control",
+    "To open a new trade route to India and the East for the merchants of Venice and Genoa"
    ],
    "answer": [
     1
@@ -985,10 +985,10 @@
    "type": "mc",
    "question": "How would a Muslim living in Jerusalem in 1099 most likely have described the arrival of the Crusaders?",
    "options": [
-    "As the return of rightful rulers",
+    "As the rightful return of Christian rulers to a city that Muslims had taken by force centuries before",
     "As a violent foreign invasion of a city that had been under Muslim rule for over 400 years",
-    "As a peaceful religious pilgrimage",
-    "As a trade mission from Italy"
+    "As a peaceful pilgrimage of Christians coming to pray at the Church of the Holy Sepulchre",
+    "As a trade mission from Venice and Genoa seeking spices, silk and sugar to sell back in Europe"
    ],
    "answer": [
     1
@@ -1006,10 +1006,10 @@
    "type": "mc",
    "question": "How did the Crusades strengthen the power of the Catholic Church in the short term?",
    "options": [
-    "The Pope gained direct control of all European armies",
+    "The Pope took direct command of the armies of England, France and the Holy Roman Empire for the rest of the Middle Ages",
     "The Pope showed he could call thousands of knights and kings to war, and the Church gained wealth and land from those who left",
-    "The Church abolished feudalism",
-    "All Muslims converted to Christianity"
+    "After Jerusalem was captured in 1099, the Pope left Rome and ruled the Holy Land himself as king of the Crusader states",
+    "The Crusaders brought back spices, silk and new learning from the Islamic world, which made Italian cities such as Venice rich"
    ],
    "answer": [
     1
@@ -1049,10 +1049,10 @@
    "type": "mc",
    "question": "Italian cities such as Venice and Genoa benefited from the Crusades mainly because they...",
    "options": [
-    "sent the largest armies",
+    "sent the largest armies to the Holy Land and were given castles to guard along the coast",
     "transported and supplied Crusaders by sea and then controlled trade routes to the East",
-    "were given Jerusalem to rule",
-    "converted to Islam"
+    "were given the city of Jerusalem to rule by the Pope after the Crusaders captured it in 1099",
+    "made the swords and armour that knights bought before they set off for the Holy Land"
    ],
    "answer": [
     1
@@ -1110,10 +1110,10 @@
    "type": "mc",
    "question": "Which factor best explains how the Black Death spread from Asia to Europe in 1347?",
    "options": [
-    "Crusader armies returning from Jerusalem",
+    "Crusader armies returning overland from Jerusalem through Constantinople carried the disease into France and Germany",
     "Trade ships travelling along routes from the Black Sea to Italian ports such as Messina carried infected rats and fleas",
-    "Pilgrims walking to Rome",
-    "Viking longships from the north"
+    "Pilgrims walking home from Rome along the roads of France and Germany carried infected fleas in their clothing and bags",
+    "Mongol armies riding west across Russia brought infected rats with them when they invaded Poland and Hungary"
    ],
    "answer": [
     1
@@ -1153,10 +1153,10 @@
    "type": "mc",
    "question": "Why did groups of flagellants whip themselves in public during the Black Death?",
    "options": [
-    "To cure the disease through bleeding",
-    "To entertain townspeople and raise money",
+    "They believed bleeding would release the bad humours that doctors said caused the disease",
+    "They believed bad air caused the plague and that whipping drove the poison out through the skin",
     "They believed the plague was God's punishment and that suffering would earn forgiveness",
-    "The Church ordered them to do it"
+    "They were ordered to do it by the Pope, who declared public penance the only cure for the plague"
    ],
    "answer": [
     2
@@ -1195,10 +1195,10 @@
    "type": "mc",
    "question": "Approximately what proportion of Europe's population died in the Black Death between 1347 and 1351?",
    "options": [
-    "About 5 per cent",
-    "About one tenth",
+    "Between one twentieth and one tenth",
+    "Between one tenth and one fifth",
     "Between one third and one half",
-    "Almost everyone"
+    "Between two thirds and four fifths"
    ],
    "answer": [
     2
@@ -1216,10 +1216,10 @@
    "type": "mc",
    "question": "How did the Black Death change the position of surviving peasants?",
    "options": [
-    "They were forced into stricter serfdom",
+    "Lords forced them back into stricter serfdom and passed new laws that bound them to their manors for life",
     "A shortage of workers allowed them to demand higher wages and better conditions, weakening the feudal system",
-    "They all moved to the Holy Land",
-    "Nothing changed for peasants"
+    "They were given the land of lords who had died and became nobles themselves, ending the feudal hierarchy",
+    "They had to pay higher rents and taxes to make up the income lords had lost, so most fell deeper into poverty"
    ],
    "answer": [
     1
@@ -1237,10 +1237,10 @@
    "type": "mc",
    "question": "Why did the Black Death weaken people's faith in the Catholic Church?",
    "options": [
-    "The Church banned all religious services",
+    "The Pope ordered churches to close and all services to stop, so people had nowhere to turn for comfort",
     "Prayers and processions did not stop the plague and many priests died or fled, so the Church seemed powerless",
-    "The Pope converted to Islam",
-    "The Church invented a cure and charged for it"
+    "Doctors proved that rats and fleas spread the plague, so people stopped believing it was a punishment from God",
+    "The Church charged money for a cure of blessed water and relics, and people felt cheated when it did not work"
    ],
    "answer": [
     1
@@ -1320,10 +1320,10 @@
    "type": "mc",
    "question": "Which statement correctly links the Crusades and the Black Death?",
    "options": [
-    "The Crusades caused the Black Death",
-    "Both increased trade and contact between Europe and the East, and the trade routes that grew after the Crusades were the same routes along which the plague travelled",
-    "The Black Death ended the Crusades",
-    "There is no connection"
+    "Crusaders returning home from the Holy Land brought the plague back with them, and it spread across Europe within a few years",
+    "The trade routes between Europe and the East that grew after the Crusades were the same routes along which the plague travelled",
+    "The Black Death killed so many knights and nobles that Europe could no longer send armies to the Holy Land, so the Crusades ended",
+    "Both were centred on the Holy Land, where the Crusaders captured Jerusalem and where the plague first broke out before spreading to Italy"
    ],
    "answer": [
     1
@@ -1341,10 +1341,10 @@
    "type": "mc",
    "question": "Japan is an archipelago with mountains covering about three quarters of its land. Which consequence followed most directly from this geography?",
    "options": [
-    "Japan became a major horse-breeding nation",
+    "A single emperor united all the islands from the earliest times, because the mountains made his capital easy to defend",
     "Farming was concentrated in narrow coastal plains and valleys, and separate regions developed under local clans",
-    "Japan was invaded frequently by its neighbours",
-    "Rice could not be grown"
+    "Japan was invaded again and again by Korea and China, because the mountains gave invading armies places to hide",
+    "Rice could not be grown in the cool mountain climate, so most Japanese people depended on fishing and hunting for food"
    ],
    "answer": [
     1
@@ -1384,10 +1384,10 @@
    "type": "mc",
    "question": "Why is the Genpei War (1180 to 1185) considered a turning point in Japanese history?",
    "options": [
-    "It unified Japan under the emperor",
+    "It brought Japan under the emperor's direct rule for the first time, ending centuries of fighting between rival clans",
     "The victorious Minamoto clan set up the first shogunate, beginning almost 700 years of rule by military leaders",
-    "It ended the samurai class",
-    "It opened Japan to Western trade"
+    "The samurai drove off two Mongol invasion fleets sent by Kublai Khan, proving that Japan could not be conquered by sea",
+    "It ended more than a century of civil war and allowed the Tokugawa family to rule Japan in peace from Edo for 250 years"
    ],
    "answer": [
     1
@@ -1474,10 +1474,10 @@
    "type": "mc",
    "question": "Which statement best describes the emperor's role during the shogunate period?",
    "options": [
-    "He commanded the samurai armies in battle",
+    "He led the samurai armies in battle as their supreme commander while the shogun handled taxes and the law courts",
     "He was a respected religious and ceremonial figurehead while the shogun held real political and military power",
-    "He was elected by the daimyo every ten years",
-    "He had been abolished by the Minamoto clan"
+    "He was the chief priest of Shinto and could excommunicate any shogun or daimyo who disobeyed his orders",
+    "He ruled directly over the daimyo and collected taxes from their domains, while the shogun served only as his chief general"
    ],
    "answer": [
     1
@@ -1495,10 +1495,10 @@
    "type": "mc",
    "question": "What was the main difference between a daimyo and a samurai?",
    "options": [
-    "Daimyo were religious leaders and samurai were farmers",
+    "Daimyo were religious leaders serving the emperor in Kyoto, while samurai were farmers who fought only when their village was attacked",
     "Daimyo were landholding lords who commanded armies, while samurai were the warriors who served them in return for a stipend",
-    "Samurai outranked daimyo",
-    "Daimyo were foreigners"
+    "Samurai were the higher rank who gave orders to the daimyo, while daimyo were the foot soldiers who did most of the fighting",
+    "Daimyo followed the code of bushido and carried two swords, while samurai followed no code and were forbidden to carry weapons"
    ],
    "answer": [
     1
@@ -1538,10 +1538,10 @@
    "type": "mc",
    "question": "A samurai whose lord was killed through his failure might commit seppuku. What does this reveal about bushido?",
    "options": [
-    "That samurai feared punishment from the emperor",
+    "That samurai feared punishment from the shogun more than death itself",
     "That honour and loyalty were valued above the samurai's own life",
-    "That samurai were poorly trained",
-    "That seppuku was a form of medical treatment"
+    "That a samurai's first loyalty was to the emperor, not to his daimyo",
+    "That a masterless samurai had to become a ronin and find a new lord"
    ],
    "answer": [
     1
@@ -1574,10 +1574,10 @@
    "type": "mc",
    "question": "How did the daimyo contribute to the collapse of the Ashikaga shogunate in the 15th and 16th centuries?",
    "options": [
-    "They supported the shogun loyally",
+    "They left their domains to live permanently at the shogun's court in Kyoto, so no one was left to govern or defend the provinces",
     "They built independent armies and fought each other for land, so the shogun lost control and Japan fell into the Sengoku, or Warring States, period",
-    "They invited Western powers to rule Japan",
-    "They abolished the samurai class"
+    "They had spent all their wealth fighting off the Mongol invasions, so they could no longer afford to supply the armies the shogun needed",
+    "They sided with the emperor in Kyoto and restored direct imperial rule, which brought military government in Japan to an end for good"
    ],
    "answer": [
     1
@@ -1595,10 +1595,10 @@
    "type": "mc",
    "question": "What did Tokugawa Ieyasu do after winning the Battle of Sekigahara in 1600?",
    "options": [
-    "He restored the emperor to full power",
+    "He restored the emperor to full power in Kyoto and served as his chief minister until 1616",
     "He became shogun in 1603 and set up a government at Edo that brought over 250 years of peace",
-    "He opened Japan to American trade",
-    "He abolished the daimyo"
+    "He shared Japan out among the daimyo who had fought for him and left the country without a central government",
+    "He became emperor in 1603 and moved the imperial court from Kyoto to his new castle at Edo"
    ],
    "answer": [
     1
@@ -1616,10 +1616,10 @@
    "type": "mc",
    "question": "The policy of sankin kotai required daimyo to spend alternate years in Edo and leave their families there when they returned home. What was its main purpose?",
    "options": [
-    "To educate the daimyo's children at the shogun's court",
+    "To educate the daimyo's sons at the shogun's court and train them as loyal officials",
     "To keep daimyo watched, drain their wealth and hold their families as hostages",
-    "To improve Japan's roads by forcing regular traffic on them",
-    "To spread the shogun's religion to the provinces"
+    "To improve Japan's highways by forcing daimyo processions to use them every second year",
+    "To make Edo grow into the largest city in Japan by filling it with daimyo households"
    ],
    "answer": [
     1
@@ -1637,10 +1637,10 @@
    "type": "mc",
    "question": "What is an edict?",
    "options": [
-    "A type of samurai sword",
+    "The code of behaviour followed by the samurai that demanded honour, loyalty and skill in the martial arts",
     "An official order issued by the shogun or another authority that people were required to obey",
-    "A Buddhist prayer",
-    "A tax paid in rice"
+    "A tax paid in rice by farmers to their daimyo, which was then used to pay the stipends of his samurai",
+    "The system that required daimyo to spend every second year living at the shogun's court in Edo"
    ],
    "answer": [
     1
@@ -1701,10 +1701,10 @@
    "type": "mc",
    "question": "Why did the Tokugawa shoguns adopt sakoku in the 1630s?",
    "options": [
-    "Japan had run out of goods to trade",
+    "They wanted to prepare for an invasion of China and Korea, and needed to stop foreign spies from learning the size of their armies",
     "They feared that Christianity and foreign influence would undermine their control and that daimyo might gain wealth and weapons through foreign trade",
-    "The emperor demanded it",
-    "To prepare for an invasion of China"
+    "The emperor in Kyoto demanded it, because he believed foreign religions insulted the Shinto gods from whom his family was descended",
+    "Japan had run out of silver and copper to pay for foreign goods, so the shoguns closed the ports to stop money leaving the country"
    ],
    "answer": [
     1
@@ -1722,10 +1722,10 @@
    "type": "mc",
    "question": "Under the Tokugawa four-class system, merchants ranked below farmers and artisans even though many merchants became wealthy. What does this show about the system?",
    "options": [
-    "That wealth was the basis of status",
+    "That wealth decided status in practice, since rich merchants could buy their way into the samurai class",
     "That status was based on perceived usefulness to society, and merchants were seen as profiting from others' work",
-    "That merchants were foreigners",
-    "That farmers were the richest class"
+    "That merchants were mostly foreigners, such as the Dutch and Chinese traders at Nagasaki, who were not trusted",
+    "That farmers were the wealthiest class because they owned the land that produced all of Japan's rice"
    ],
    "answer": [
     1
@@ -1743,10 +1743,10 @@
    "type": "mc",
    "question": "Which development in Edo-period cities shows that the long peace changed Japanese society?",
    "options": [
-    "Constant civil war between daimyo",
-    "A flourishing urban culture including kabuki theatre, woodblock prints and pleasure districts, supported by a growing merchant class",
-    "The abolition of the samurai",
-    "The arrival of American warships"
+    "The growth of samurai training grounds and weapons workshops in every castle town, as daimyo prepared for the next war",
+    "A flourishing urban culture of kabuki theatre, woodblock prints and pleasure districts, supported by a growing merchant class",
+    "The building of Western-style factories, railways and schools in the shogun's old capital after it was renamed Tokyo",
+    "The spread of Christian churches and Portuguese trading posts in the ports of Kyushu, especially around Nagasaki"
    ],
    "answer": [
     1
@@ -1807,10 +1807,10 @@
    "type": "mc",
    "question": "Which problem had weakened the Tokugawa shogunate from within before Perry arrived in 1853?",
    "options": [
-    "Too many foreign wars",
+    "The shogun had let the daimyo build new castles and raise private armies again, so the domains grew stronger than Edo",
     "Samurai stipends paid in rice lost value while merchants grew rich, and peasants suffered famines and rising taxes, causing unrest",
-    "The emperor commanded the army",
-    "There were no roads"
+    "The emperor took command of the army in Kyoto and began replacing the shogun's officials with his own loyal courtiers",
+    "The roads between Edo and the domains fell into ruin, so the shogun could no longer collect taxes or move troops across Japan"
    ],
    "answer": [
     1
@@ -1828,10 +1828,10 @@
    "type": "mc",
    "question": "What did Commodore Matthew Perry demand when he arrived in Edo Bay in 1853?",
    "options": [
-    "That Japan convert to Christianity",
+    "That Japan allow American missionaries to build churches and preach Christianity in Edo and Nagasaki",
     "That Japan open its ports to American ships for trade, supplies and the protection of shipwrecked sailors",
-    "That the emperor abdicate",
-    "That Japan join a war against China"
+    "That the Tokugawa shogun give up power and restore the emperor in Kyoto as Japan's true ruler",
+    "That the shogun travel to Washington to sign a treaty with the American president in person"
    ],
    "answer": [
     1
@@ -1843,16 +1843,16 @@
    "topic": "Meiji Restoration",
    "skill": "Cause and effect",
    "stimulus": null,
-   "explanation": "The shogun's title literally meant barbarian-subduing general. Signing unequal treaties signed under threat of force destroyed the shogunate's claim to rule.",
+   "explanation": "The shogun's title literally meant barbarian-subduing general. Signing unequal treaties under threat of force destroyed the shogunate's claim to rule.",
    "source": "EP",
    "srcId": 77,
    "type": "mc",
    "question": "Why did the shogunate's response to Perry weaken its authority?",
    "options": [
-    "The shogun defeated Perry but lost many ships",
+    "The shogun ordered his forts to fire on Perry's ships and lost most of his navy, leaving Japan with no way to defend its coast from a second attack",
     "The shogunate gave in to foreign demands, which showed it could not fulfil its basic duty of protecting Japan and angered many daimyo and samurai",
-    "The shogun travelled to America",
-    "Perry was made shogun"
+    "The shogun let the Americans take over the port of Nagasaki and run it as a colony, so Japan lost control of its most important harbour",
+    "The shogun agreed to let Christian missionaries preach in Japan again, which broke the sakoku edicts and turned the Buddhist temples against him"
    ],
    "answer": [
     1
@@ -1870,10 +1870,10 @@
    "type": "mc",
    "question": "In the 1860s the slogan 'Revere the emperor, expel the barbarians' was popular among some samurai. Which perspective does this reveal?",
    "options": [
-    "Support for the shogun's treaties",
+    "Support for the shogun's treaties with the Americans, combined with the hope that the emperor would bless the opening of the ports",
     "Anger at foreign intrusion combined with the belief that loyalty should return to the emperor rather than a failed shogun",
-    "A desire to become American citizens",
-    "Support for the merchant class"
+    "A wish to copy Western science and government, combined with the belief that the emperor should lead Japan's modernisation",
+    "Pride in Japan's Buddhist traditions, combined with the belief that the shogun should expel the Dutch traders from Nagasaki"
    ],
    "answer": [
     1
@@ -1891,10 +1891,10 @@
    "type": "mc",
    "question": "What happened in 1868?",
    "options": [
-    "Perry arrived in Japan",
-    "The last Tokugawa shogun gave up power and rule was restored to the emperor, whose reign became known as the Meiji era",
-    "Japan defeated Russia",
-    "The Battle of Sekigahara"
+    "Commodore Perry's warships arrived in Edo Bay and demanded that Japan open its ports to American trade",
+    "The last Tokugawa shogun gave up power and rule was restored to the emperor, beginning the Meiji era",
+    "Japan defeated Russia in war, the first modern victory of an Asian nation over a European power",
+    "Tokugawa Ieyasu won the Battle of Sekigahara and three years later was named shogun by the emperor"
    ],
    "answer": [
     1
@@ -1934,10 +1934,10 @@
    "type": "mc",
    "question": "What happened to the samurai class after the Meiji Restoration?",
    "options": [
-    "They became the new ruling class",
+    "They kept their swords and stipends as the new ruling class, and only samurai were allowed to be officers in the conscript army of 1873",
     "Their privileges were abolished, including the right to carry swords and receive stipends, and the class was officially ended by the 1870s",
-    "They were all sent overseas",
-    "Nothing changed"
+    "They were given land taken from the daimyo and became wealthy farmers, which is why Japan's rice harvests grew so quickly in the 1870s",
+    "They stayed at the top of the four-class system, but their numbers were greatly reduced by the fighting of the Satsuma Rebellion of 1877"
    ],
    "answer": [
     1
@@ -1998,10 +1998,10 @@
    "type": "mc",
    "question": "Japan adopted Western technology, military methods and a constitution but kept the emperor, Shinto and many traditions. Which statement best describes this?",
    "options": [
-    "Japan became a Western country",
+    "Japan became a Western nation in all but name, since adopting a constitution and a modern army meant giving up its own culture",
     "Japan modernised selectively, taking what would make it strong enough to resist the West while keeping its own identity",
-    "Japan rejected all change",
-    "Japan was colonised by the United States"
+    "Japan rejected all real change and used Western machines only for show, while power and daily life stayed as under the shoguns",
+    "Japan was colonised by the United States after 1854, which forced it to adopt American laws, schools and military training"
    ],
    "answer": [
     1
@@ -2019,10 +2019,10 @@
    "type": "mc",
    "question": "Which outcome best shows the significance of the Meiji Restoration?",
    "options": [
-    "Japan remained isolated for another century",
+    "Japan remained closed to the outside world for another century, keeping sakoku in place and refusing all foreign trade until the Americans occupied the country in 1945",
     "Within 40 years Japan had become an industrial and military power able to defeat Russia in 1905, the first modern victory of an Asian nation over a European one",
-    "Japan was divided into two countries",
-    "The samurai regained power"
+    "Japan built its first railway, between Tokyo and Yokohama, in 1872 and opened its first modern factories, although most Japanese people were still farmers in 1900",
+    "Within 40 years the samurai had regained their power, and the daimyo once again ruled their own domains with private armies as they had under the Tokugawa shoguns"
    ],
    "answer": [
     1
@@ -2040,10 +2040,10 @@
    "type": "mc",
    "question": "Which statement correctly connects feudal Japan, the Tokugawa shogunate and the Meiji Restoration?",
    "options": [
-    "The Meiji Restoration created the samurai class to defend Japan",
+    "The Meiji Restoration created the samurai class to defend Japan from the West, and the Tokugawa later turned them into peaceful officials",
     "Tokugawa control kept the peace but left Japan unable to answer Western pressure, so the Meiji government dismantled feudalism",
-    "The three periods had little to do with one another",
-    "The Tokugawa were overthrown by the daimyo of Kyushu with Dutch help"
+    "Feudal loyalty to the daimyo grew stronger under the Tokugawa and stronger again under the Meiji, who rewarded the daimyo with more land",
+    "The daimyo of Satsuma and Choshu overthrew the Tokugawa and then ruled Japan as a council of feudal lords, keeping the samurai as their army"
    ],
    "answer": [
     1
@@ -2127,9 +2127,9 @@
    "question": "A medieval king could not govern or defend his whole kingdom alone. How did feudalism solve this problem?",
    "options": [
     "By dividing land among lords who owed him loyalty and soldiers in return",
-    "By paying a standing army from taxes collected by the Church",
-    "By letting towns elect councils to rule each region",
-    "By inviting foreign merchants to manage trade and defence"
+    "By paying a standing army of knights from taxes that the Church collected for him",
+    "By letting each town elect a council that governed and defended the land around it",
+    "By making every peasant serve in his army for part of each year in return for food"
    ],
    "answer": [
     0
@@ -2168,10 +2168,10 @@
    "type": "mc",
    "question": "What was the role of peasants in the feudal system?",
    "options": [
-    "They fought in the king's army as knights",
+    "They served as the knights' squires and were trained from boyhood to fight on horseback",
     "They worked the land and produced the food that supported everyone above them",
-    "They collected taxes for the king",
-    "They ran the Church courts"
+    "They collected taxes for the king and the tithe for the Church from the villages",
+    "They swore loyalty to the king and supplied him with knights in return for their land"
    ],
    "answer": [
     1
@@ -2214,9 +2214,9 @@
    "question": "A medieval thief is placed in the stocks in the market square for a day. What did the authorities hope the crowd would do?",
    "options": [
     "Watch and learn the cost of crime, so fear would deter them from offending",
-    "Vote on whether the punishment was fair",
-    "Pay money to see the punishment, raising funds for the town",
-    "Decide whether the thief was guilty"
+    "Vote by a show of hands on whether the punishment fitted the crime",
+    "Pay a small fee to watch the punishment, raising money for the town's walls and roads",
+    "Decide whether the thief was guilty, as a jury of twelve local men did in court"
    ],
    "answer": [
     0
@@ -2234,10 +2234,10 @@
    "type": "mc",
    "question": "What was the role of a castle in medieval Europe beyond defence?",
    "options": [
-    "It was a place for peasants to live",
+    "It was a home for the peasants of the manor, who slept inside the walls and farmed the fields outside",
     "It was a symbol of the lord's power and the centre for collecting taxes and giving justice",
-    "It was a church",
-    "It was a market for merchants"
+    "It was the parish church of the manor, where the villagers were baptised, married and buried",
+    "It was the main market of the region, where merchants from the towns came to sell cloth and spices"
    ],
    "answer": [
     1
@@ -2279,10 +2279,10 @@
    "type": "mc",
    "question": "How did the Church keep its power over people who could not read?",
    "options": [
-    "By printing Bibles in English",
+    "By handing every household a written copy of the Ten Commandments to learn by heart",
     "Through paintings of heaven and hell, the threat of excommunication and control of the sacraments",
-    "By paying people to attend church",
-    "By running the king's army"
+    "By running village schools where monks taught every child to read and write Latin",
+    "By keeping a standing army of knights, who punished any village that refused to pay the tithe"
    ],
    "answer": [
     1
@@ -2293,17 +2293,17 @@
    "unit": "Medieval Europe",
    "topic": "The Crusades",
    "skill": "",
-   "stimulus": "Adapted from the travel account of Ibn Jubayr, a Muslim scholar from Spain who passed through the Crusader states in 1184.\n“The Christians make the Muslims pay a tax in their territory, and the Muslim merchants pay a toll on their goods in Christian territory. Yet caravans pass freely between the two, and the soldiers go on fighting while the people remain at peace.”",
+   "stimulus": "Adapted from the travel account of Ibn Jubayr, a Muslim scholar from Spain who passed through the Crusader states in 1184.\n“The Christians make the Muslims pay a tax in their territory, and the Christian merchants pay a toll on their goods in Muslim territory. Yet caravans pass freely between the two, and the soldiers go on fighting while the people remain at peace.”",
    "explanation": "Even while armies fought, merchants crossed between Crusader and Muslim lands and paid tolls on their goods. The Crusades increased trade and contact between Europe and the Islamic world.",
    "source": "Socrative",
    "srcId": "soc_exam",
    "type": "mc",
    "question": "Which consequence of the Crusades does this source show?",
    "options": [
-    "The end of the Catholic Church",
+    "The Pope gained wealth and land from the knights who left Europe to fight",
     "Trade continued and grew between Christians and Muslims despite the fighting",
-    "The destruction of Jerusalem",
-    "The spread of the Black Death"
+    "Jerusalem was captured by the Crusaders in 1099 and its Muslim population was killed",
+    "Christian and Muslim soldiers stopped fighting and agreed to a lasting peace"
    ],
    "answer": [
     1
@@ -2322,9 +2322,9 @@
    "question": "The Black Death reached Europe in 1347 at a port rather than an inland village. What does this tell us about how the disease travelled?",
    "options": [
     "It moved along trade routes, carried by rats and fleas aboard ships",
-    "It was spread deliberately by invading armies",
-    "It spread mainly through contaminated well water",
-    "It was carried by migrating birds from Africa"
+    "It was brought back by Crusader knights returning home from the Holy Land",
+    "It spread mainly through dirty drinking water from town wells and rivers",
+    "It was carried by migrating birds flying north from Africa each spring"
    ],
    "answer": [
     0
@@ -2336,16 +2336,16 @@
    "topic": "The Black Death",
    "skill": "",
    "stimulus": null,
-   "explanation": "The first three happened during the outbreak. The labour shortage reshaped society for a century.",
+   "explanation": "The other three happened during the outbreak itself and ended with it. The labour shortage reshaped society for a century, so it is the long-term consequence.",
    "source": "Socrative",
    "srcId": "soc_exam",
    "type": "mc",
    "question": "Which was a LONG-TERM consequence of the Black Death?",
    "options": [
-    "Plague pits and mass burials",
-    "Flagellants whipping themselves in the streets",
+    "Plague pits and mass burials in towns where there were too many dead to bury one by one",
+    "Flagellants whipping themselves in the streets to beg God's forgiveness for the sins of the world",
     "A labour shortage that gave surviving peasants bargaining power and weakened feudalism",
-    "Churches closing during the outbreak"
+    "Churches closing and priests fleeing during the outbreak because so many clergy caught the plague"
    ],
    "answer": [
     2
@@ -2410,10 +2410,10 @@
    "type": "mc",
    "question": "How did Japan's geography influence its early development?",
    "options": [
-    "Flat plains made it easy to unite the country",
+    "Wide flat plains made travel easy, so one emperor was able to unite the whole country under a single government from early times",
     "Mountains and islands separated regions, so strong local clans developed and farming was limited to coastal plains and valleys",
-    "Deserts prevented farming",
-    "Japan was easily invaded by China"
+    "Rich volcanic soil across the islands gave huge rice harvests, which supported a large population and a strong central government",
+    "Being close to China and Korea meant Japan was invaded many times, so the emperor kept a large national army to defend the coast"
    ],
    "answer": [
     1
@@ -2432,9 +2432,9 @@
    "question": "A daimyo wanted to marry his daughter to the son of another domain's lord. In Tokugawa Japan, whose permission did he need, and why?",
    "options": [
     "The shogun's, because the shogun held real political power and controlled the daimyo",
-    "The emperor's, because the emperor made all laws",
-    "No one's, because daimyo ruled their domains independently",
-    "The samurai council's, because warriors approved all marriages"
+    "The emperor's, because the emperor made the laws and every daimyo had sworn an oath to him",
+    "No one's, because each daimyo ruled his own domain independently and chose his own allies",
+    "The neighbouring daimyo's, because the other lords of the region had to agree to the alliance"
    ],
    "answer": [
     0
@@ -2453,9 +2453,9 @@
    "question": "Which of these could a daimyo do that an ordinary samurai could NOT?",
    "options": [
     "Rule a domain and command his own samurai",
-    "Carry two swords",
-    "Follow the code of bushido",
-    "Serve a lord in return for an income"
+    "Carry two swords as a mark of warrior rank",
+    "Follow the code of bushido and commit seppuku",
+    "Serve a lord in return for an income in rice"
    ],
    "answer": [
     0
@@ -2518,10 +2518,10 @@
    "type": "mc",
    "question": "What was the significance of Tokugawa Ieyasu?",
    "options": [
-    "He restored the emperor to power in 1868",
+    "He led the daimyo of Satsuma and Choshu who restored the emperor to power in 1868 and brought the rule of the shoguns to an end",
     "After winning the Battle of Sekigahara in 1600 he became shogun and founded a dynasty that ruled for over 250 years",
-    "He opened Japan to American trade",
-    "He led the Genpei War"
+    "He signed the Treaty of Kanagawa in 1854, which opened Japanese ports to American ships and ended two centuries of sakoku",
+    "He won the Genpei War at the Battle of Dan-no-ura in 1185 and became Japan's first shogun seven years later in 1192"
    ],
    "answer": [
     1
@@ -2584,10 +2584,10 @@
    "type": "mc",
    "question": "Why did the Tokugawa shoguns ban Christianity?",
    "options": [
-    "It was too expensive",
+    "It was banned as part of the sakoku edicts of the 1630s, along with foreign travel and the Portuguese",
     "It created loyalty to a foreign religion and foreign powers that could challenge the shogun's authority",
-    "It was unpopular with peasants",
-    "The emperor demanded it"
+    "Buddhist monks demanded it, because so many peasants were abandoning the temples for the new faith",
+    "The emperor in Kyoto demanded it, because Christian teaching denied that he was descended from the sun goddess"
    ],
    "answer": [
     1
@@ -2627,9 +2627,9 @@
    "question": "Which internal problem weakened the Tokugawa shogunate BEFORE Commodore Perry arrived in 1853?",
    "options": [
     "Samurai fell into poverty and debt during the long peace while merchants grew rich",
-    "Japan lost a war to China",
-    "The emperor raised an army",
-    "Daimyo were allowed to build castles freely"
+    "Foreign ships from Britain, Russia and America began appearing off the coast asking for trade",
+    "The emperor raised his own army in Kyoto and marched against the shogun's castle at Edo",
+    "Daimyo were free to build castles and arrange marriages without the shogun's permission"
    ],
    "answer": [
     0
@@ -2647,10 +2647,10 @@
    "type": "mc",
    "question": "What were the main consequences of the Meiji Restoration of 1868?",
    "options": [
-    "Japan returned to sakoku",
+    "Japan returned to sakoku, expelled the American and Dutch traders from its ports and rebuilt the samurai armies to guard the coast",
     "Power returned to the emperor, the feudal system was abolished and Japan rapidly modernised its army, industry and education",
-    "The samurai gained more privileges",
-    "Japan was colonised by the United States"
+    "The samurai gained new privileges, the daimyo kept control of their domains and the shogun went on governing in the emperor's name",
+    "Japan became a colony of the United States, which built its railways and factories and controlled its schools and army for 40 years"
    ],
    "answer": [
     1
@@ -2715,10 +2715,10 @@
    "type": "mc",
    "question": "In both medieval Europe and shogunate Japan, land was granted in return for...",
    "options": [
-    "payment in gold",
+    "a yearly payment in gold coin",
     "loyalty and military service",
-    "religious conversion",
-    "a share of trade profits"
+    "conversion to the lord's faith",
+    "a share of the profits of trade"
    ],
    "answer": [
     1
@@ -2779,9 +2779,9 @@
    "question": "Why did a medieval serf find it so hard to improve his position in society?",
    "options": [
     "He was legally bound to the lord's land and owed labour he could not refuse",
-    "He was not allowed to attend church",
-    "He was required to become a knight",
-    "He had to pay the Pope directly"
+    "He had to give the Church a tithe of one tenth of all he grew, which kept him poor",
+    "He had to spend most of each year fighting in his lord's wars instead of farming his land",
+    "He was forbidden to own tools, animals or a house, so he could never farm for himself"
    ],
    "answer": [
     0
@@ -2823,10 +2823,10 @@
    "type": "mc",
    "question": "Which consequence of the Crusades had the longest-lasting effect on Europe?",
    "options": [
-    "Jerusalem stayed in Christian hands permanently",
+    "Jerusalem was ruled by Christian kings for less than a century before Saladin recaptured the city",
     "Trade and contact with the East expanded, bringing goods, knowledge and wealth to Italian cities",
-    "All European kings lost their power",
-    "Castles were no longer built"
+    "Italian cities such as Venice lent money to the Crusaders but lost it all when the Holy Land was finally lost",
+    "The Pope gained the power to command the kings of Europe and kept it for the rest of the medieval period"
    ],
    "answer": [
     1
@@ -2844,10 +2844,10 @@
    "type": "mc",
    "question": "The Black Death arrived in Europe in 1347 through...",
    "options": [
-    "Crusader knights returning from the Holy Land",
+    "Crusader knights returning home from the Holy Land",
     "trade ships docking at Sicilian and Italian ports",
-    "Mongol armies invading from the east",
-    "pilgrims travelling from Spain"
+    "Mongol armies marching west into Poland and Hungary",
+    "Christian pilgrims returning from Santiago in Spain"
    ],
    "answer": [
     1
@@ -2865,10 +2865,10 @@
    "type": "mc",
    "question": "What did flagellants believe?",
    "options": [
-    "That rats carried the plague",
+    "That the plague was carried by rats and fleas and could be stopped by cleaning up the towns",
     "That the plague was God's punishment and self-inflicted pain would earn forgiveness",
-    "That the Pope had caused the plague",
-    "That the plague could be cured with herbs"
+    "That the plague had been caused by the planets Saturn, Jupiter and Mars lining up in the sky",
+    "That the plague was spread by bad air, or miasma, and could be kept away with herbs"
    ],
    "answer": [
     1
@@ -2886,10 +2886,10 @@
    "type": "mc",
    "question": "How did the Black Death affect the Catholic Church?",
    "options": [
-    "It made the Church more powerful than ever",
+    "The Church grew more powerful than ever because frightened people gave it more land and money",
     "Faith was shaken because prayer did not stop the plague and many clergy died or fled",
-    "The Church was abolished",
-    "The Church gained control of all medicine"
+    "The Pope ordered the flagellants to whip themselves in public to win God's forgiveness",
+    "The Church was barely affected because monks behind monastery walls were safe from the plague"
    ],
    "answer": [
     1
@@ -2907,10 +2907,10 @@
    "type": "mc",
    "question": "Japan's mountainous islands led to...",
    "options": [
-    "a single united kingdom from earliest times",
+    "a single united kingdom under one emperor from the earliest times",
     "strong regional clans and farming concentrated on narrow coastal plains",
-    "frequent invasion by Korea and China",
-    "no interest in fishing"
+    "frequent invasions by the armies of Korea and China across the sea",
+    "farming spread across the high mountain slopes rather than the coast"
    ],
    "answer": [
     1
@@ -2949,10 +2949,10 @@
    "type": "mc",
    "question": "Which statement about samurai and daimyo is a SIMILARITY?",
    "options": [
-    "Both owned large domains",
+    "Both ruled large domains and commanded their own armies",
     "Both belonged to the warrior class and followed bushido",
-    "Both were paid by merchants",
-    "Both outranked the shogun"
+    "Both received a yearly stipend of rice from the shogun",
+    "Both swore their loyalty directly to the emperor in Kyoto"
    ],
    "answer": [
     1
@@ -2991,10 +2991,10 @@
    "type": "mc",
    "question": "Tokugawa Ieyasu's victory at Sekigahara in 1600 was significant because it...",
    "options": [
-    "ended the samurai class",
+    "ended the samurai class and replaced it with a modern army of conscripts",
     "allowed him to become shogun and begin 250 years of peace under his family",
-    "opened Japan to American trade",
-    "restored the emperor to power"
+    "opened Japan's ports to American trading ships and brought sakoku to an end",
+    "restored the emperor to full power and moved the capital from Kyoto to Edo"
    ],
    "answer": [
     1
@@ -3036,10 +3036,10 @@
    "type": "mc",
    "question": "Under the Tokugawa, merchants grew rich but ranked at the bottom of the four classes. What problem did this cause over time?",
    "options": [
-    "Merchants left Japan",
+    "Merchants left Japan in large numbers to trade in China and Korea, taking their wealth and skills with them",
     "Samurai with fixed rice stipends fell into debt to the merchants they officially outranked, creating resentment",
-    "Farmers stopped growing rice",
-    "The emperor became wealthy"
+    "Farmers stopped growing rice and became merchants instead, so that by 1800 Japan had to import most of its food",
+    "The emperor in Kyoto became the richest man in Japan by taxing the merchants, and used the money to raise his own army"
    ],
    "answer": [
     1
@@ -3057,10 +3057,10 @@
    "type": "mc",
    "question": "Commodore Perry arrived in Japan in 1853 with...",
    "options": [
-    "missionaries asking to build churches",
+    "missionaries and a request to build Christian churches",
     "warships and a demand that Japan open its ports to trade",
-    "an army to conquer Japan",
-    "an offer to buy Hokkaido"
+    "gifts and a request to buy land for an American settlement",
+    "an army of soldiers and orders to conquer and occupy Edo"
    ],
    "answer": [
     1
@@ -3078,10 +3078,10 @@
    "type": "mc",
    "question": "Why did many samurai turn against the shogun after 1854?",
    "options": [
-    "The shogun banned swords",
+    "The shogun had refused to let the domains buy Western guns and ships to defend themselves",
     "The shogun had given in to foreign demands and seemed unable to protect Japan",
-    "The shogun converted to Christianity",
-    "The shogun moved the capital to Kyoto"
+    "The shogun had ordered all daimyo to live in Edo every second year under sankin kotai",
+    "The shogun had ended the four-class system and made merchants equal to the samurai"
    ],
    "answer": [
     1
@@ -3123,10 +3123,10 @@
    "type": "mc",
    "question": "Japan copied Western technology and government but kept the emperor and Shinto. The best word for this is...",
    "options": [
-    "colonisation",
-    "isolation",
+    "colonisation by the West",
+    "isolation from the West",
     "selective modernisation",
-    "feudalism"
+    "complete westernisation"
    ],
    "answer": [
     2
@@ -3204,10 +3204,10 @@
    "type": "mc",
    "question": "How did feudalism help a king control a large kingdom without a police force or a paid army?",
    "options": [
-    "Every peasant swore an oath to the king personally",
+    "Every peasant swore an oath of loyalty to the king in person and promised to fight for him when called",
     "Nobles who held land from the king had to supply knights and keep order in their own regions",
-    "The Church policed the kingdom",
-    "Kings hired foreign soldiers"
+    "The Church policed the kingdom through its own courts and sent bishops to settle quarrels between nobles",
+    "The king kept all the land himself and sent royal sheriffs to collect rents and taxes from every village"
    ],
    "answer": [
     1
@@ -3267,10 +3267,10 @@
    "type": "mc",
    "question": "Besides defence, why were castles important to a lord's power?",
    "options": [
-    "They stored all the kingdom's grain",
+    "They held the region's grain stores, so a lord could feed every village in his lands during a famine",
     "They were a visible symbol of authority and the centre for collecting taxes and giving justice",
-    "They housed the peasants",
-    "They were used as churches"
+    "They housed the peasants of the manor, who lived inside the walls and farmed the fields outside them",
+    "They were the centre of religious life, where the lord's own priest held mass for the whole village"
    ],
    "answer": [
     1
@@ -3288,10 +3288,10 @@
    "type": "mc",
    "question": "How did castle design change between 1066 and 1300?",
    "options": [
-    "Stone castles were replaced by wooden ones",
+    "Stone keeps were replaced by cheaper wooden motte-and-bailey castles that could be built in a few weeks",
     "Wooden motte-and-bailey castles were replaced by stone keeps and then concentric stone castles",
-    "Castles stopped being built",
-    "Castles moved underground"
+    "Castle building stopped soon after 1100, because kings preferred to live in towns protected by stone walls",
+    "Stone walls were made thinner and lower, because gunpowder cannon could now knock down any high wall"
    ],
    "answer": [
     1
@@ -3333,10 +3333,10 @@
    "type": "mc",
    "question": "What was the most important source of the Church's power in medieval Europe?",
    "options": [
-    "It had the largest army",
+    "It commanded the largest army in Europe, made up of knights from the crusading orders",
     "It controlled the path to heaven in a society where almost everyone feared hell",
-    "The Pope was King of England",
-    "It owned all the ships"
+    "It owned about one third of Europe's farmland and collected a tithe from every villager",
+    "Its archbishops crowned kings, and its bishops sat as advisers on every royal council"
    ],
    "answer": [
     1
@@ -3398,9 +3398,9 @@
    "question": "Edo grew from a small castle town in 1600 to a city of about a million people by 1700. Which Tokugawa policy did most to cause this growth?",
    "options": [
     "Sankin kotai, which forced daimyo and their households to live in Edo every second year",
-    "Sakoku, which brought foreign merchants to Edo",
-    "The four-class system, which moved farmers into the city",
-    "The persecution of Christians, which drove converts to the capital"
+    "Sakoku, which closed Japan's other ports so that all foreign trade had to pass through Nagasaki",
+    "The four-class system, which required all merchants and artisans to live in the shogun's capital",
+    "The ban on Christianity, which drove thousands of converts out of Kyushu to seek safety in Edo"
    ],
    "answer": [
     0
@@ -3419,9 +3419,9 @@
    "question": "Kabuki theatre, ukiyo-e woodblock prints and popular novels all flourished in Edo in the 1700s. Who was the main audience for this new culture?",
    "options": [
     "Townspeople (chonin), especially merchants with money to spend",
-    "The emperor's court in Kyoto",
-    "Farmers in the countryside",
-    "Buddhist monks"
+    "The emperor and his court nobles in the old capital of Kyoto",
+    "Farmers in the villages, who made up most of Japan's people",
+    "Buddhist monks and priests in the great temples of Edo and Kyoto"
    ],
    "answer": [
     0
@@ -3464,9 +3464,9 @@
    "question": "Travellers on the Tokaido road between Edo and Kyoto often crossed rivers and inlets by ferry or were carried across by porters rather than using bridges. Why?",
    "options": [
     "The shogunate limited bridges on major rivers so armies could not move quickly against Edo, and Japan's mountains and rivers made roads hard to build",
-    "Bridges were forbidden by Buddhist teaching",
-    "Japanese builders did not know how to build bridges",
-    "The rivers were too shallow for bridges"
+    "Japanese builders had never learnt to build long bridges, and it was only after Perry arrived in 1853 that Western engineers showed them how to do it",
+    "The rivers of the Kanto plain were too wide and fast for any bridge of the time, so none were built anywhere in Japan until the 1800s",
+    "Ferrymen and porters paid the shogunate for the right to carry travellers across each river, so the government protected their trade by refusing to allow bridges"
    ],
    "answer": [
     0
@@ -3485,9 +3485,9 @@
    "question": "Post towns with inns, porters and horses grew up along the Tokaido and other highways during the Edo period. What created the demand for them?",
    "options": [
     "Daimyo processions under sankin kotai, plus pilgrims, merchants and officials travelling the roads",
-    "Foreign tourists arriving under sakoku",
-    "Farmers moving to Edo to become samurai",
-    "Christian missionaries travelling between churches"
+    "Portuguese and Spanish merchants travelling to Edo to trade before sakoku expelled them in the 1630s",
+    "Samurai armies marching to and from the battles of the Sengoku period, which ended in 1600",
+    "Christian missionaries travelling between the churches they had built in Kyoto, Osaka and Edo"
    ],
    "answer": [
     0
@@ -3549,8 +3549,8 @@
    "options": [
     "The Mongol invasions of Japan",
     "Perry's arrival in Edo Bay",
-    "The sakoku edicts",
-    "The Onin War"
+    "The Tokugawa sakoku edicts",
+    "The outbreak of the Onin War"
    ],
    "answer": [
     0
@@ -3569,9 +3569,9 @@
    "question": "A history book shows a colour woodblock print of a crowded theatre, made in Japan in 1765. How should this source be described?",
    "options": [
     "A primary source: a visual (artwork) created at the time it depicts",
-    "A secondary source, because it is printed in a book",
-    "A primary source: a written document",
-    "A secondary source, because the artist was not a historian"
+    "A secondary source: a picture reproduced in a book published long after 1765",
+    "A primary source: a written document from the Edo period about the theatre",
+    "A secondary source: an artwork made by an artist rather than by a historian"
    ],
    "answer": [
     0
@@ -3590,9 +3590,9 @@
    "question": "A caption reads: 'Illuminated manuscript produced in Genoa, Italy, c. 1290, artist unknown.' Which of these can you state from the caption alone?",
    "options": [
     "Where and roughly when it was made",
-    "Why the artist made it",
+    "The purpose the artist had in mind",
     "Whether the scene really happened",
-    "Who paid for it"
+    "The name of the person who paid for it"
    ],
    "answer": [
     0
