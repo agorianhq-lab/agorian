@@ -22,7 +22,20 @@ for f in sorted(glob.glob('img/*.jpg')):
     if inline: img[k]='data:image/jpeg;base64,'+base64.b64encode(open(f,'rb').read()).decode()
     else: img[k]='img/'+os.path.basename(f); shutil.copy(f,'docs/img/')
 ccss,chtml,_=chrono.render(img)
-out=s.replace('__BANK__',js).replace('__IMG__',json.dumps(img)).replace('/*__CHRONO_CSS__*/',ccss).replace('__CHRONO__',json.dumps(chtml,ensure_ascii=False).replace('</','<\\/'))
+# Fonts are served by the site itself (no Google Fonts dependency). Numerals in the display face come from
+# Atkinson Hyperlegible Next (variable weight): Fraunces draws its 8 with the large bowl on top, which reads as upside down.
+# Every face in the composite family must carry the same weight descriptor (100 900) or Chromium will not fall through between them.
+os.makedirs('docs/fonts',exist_ok=True)
+def fsrc(name):
+    if inline: return 'data:font/woff2;base64,'+base64.b64encode(open('fonts/'+name,'rb').read()).decode()
+    shutil.copy('fonts/'+name,'docs/fonts/'); return 'fonts/'+name
+DIG='U+0030-0039'; NODIG='U+0000-002F,U+003A-FFFF'
+fonts=(f'@font-face{{font-family:"Fraunces";src:url({fsrc("fraunces.woff2")}) format("woff2");font-weight:100 900;font-style:normal;font-display:swap;unicode-range:{NODIG}}}'
+ f'@font-face{{font-family:"Fraunces";src:url({fsrc("atkinson-next-digits.woff2")}) format("woff2");font-weight:100 900;font-style:normal;font-display:swap;unicode-range:{DIG}}}'
+ f'@font-face{{font-family:"Atkinson Hyperlegible";src:url({fsrc("atkinson-400.woff2")}) format("woff2");font-weight:400;font-style:normal;font-display:swap}}'
+ f'@font-face{{font-family:"Atkinson Hyperlegible";src:url({fsrc("atkinson-700.woff2")}) format("woff2");font-weight:700;font-style:normal;font-display:swap}}'
+ f'@font-face{{font-family:"Atkinson Hyperlegible";src:url({fsrc("atkinson-400i.woff2")}) format("woff2");font-weight:400;font-style:italic;font-display:swap}}')
+out=s.replace('/*__FONTS__*/',fonts).replace('__BANK__',js).replace('__IMG__',json.dumps(img)).replace('/*__CHRONO_CSS__*/',ccss).replace('__CHRONO__',json.dumps(chtml,ensure_ascii=False).replace('</','<\\/'))
 if not inline:
     # hosted page needs the document skeleton the preview adds for us
     import re
