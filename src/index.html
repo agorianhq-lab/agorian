@@ -127,7 +127,18 @@ header>*{max-width:100%}
 .mode .k svg{width:34px;height:34px;filter:drop-shadow(0 1px 1px rgba(0,0,0,.2))}
 .mode:hover .k{transform:scale(1.08) rotate(-4deg)}
 .mode .t{color:var(--m)}
-.mode.facts{--m:var(--rose)} .mode.challenge{--m:var(--gold-ink)} .mode.challenge .t,.modeh[style*='--gold'] h2{color:var(--gold-ink)} .mode.timeline{--m:var(--teal)} .mode.terms{--m:var(--sage)} .mode.write{--m:var(--plum)}
+.mode.facts{--m:var(--rose)} .mode.challenge{--m:var(--gold-ink)} .mode.challenge .t,.modeh[style*='--gold'] h2{color:var(--gold-ink)} .mode.timeline{--m:var(--teal)} .mode.terms{--m:var(--sage)} .mode.write{--m:var(--plum)} .mode.marker{--m:var(--plum)} .mode.sources{--m:var(--teal)}
+.mkgrid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px;margin-top:12px;min-width:0}.mk{min-width:0}.xcard{min-width:0}.xrow{flex-wrap:wrap}@media(max-width:800px){.mkgrid{grid-template-columns:1fr}}
+.mk{position:relative}.mk h3{margin:0 0 8px;display:flex;justify-content:space-between;align-items:center;gap:8px}.mk .marks{display:none}.mk p.ans{margin:0;font-size:15px;line-height:1.5}
+.mk mark{background:none;color:inherit}.mk.chosen{outline:3px solid var(--gold);outline-offset:2px}
+.rev .mk .marks{display:inline-block}.rev .mk mark{background:color-mix(in srgb,var(--gold) 28%,transparent);border-bottom:2px solid var(--gold-ink);cursor:help;padding:0 1px}.rev .mk mark::after{content:attr(data-n);font-size:10px;font-weight:800;color:var(--gold-ink);vertical-align:super;margin-left:1px}
+.mknotes{display:none;margin:12px 0 0;padding:0;list-style:none;font-size:13px;color:var(--muted)}.rev .mknotes{display:block}.mknotes li{margin:5px 0;padding-left:24px;position:relative}.mknotes li b{position:absolute;left:0;top:0;width:18px;height:18px;border-radius:50%;background:var(--gold);color:#1C2333;font-size:11px;display:grid;place-items:center}
+.mkwhy{display:none;margin-top:12px;padding:10px 12px;border-radius:10px;font-size:14px;border:2px dashed var(--line)}.rev .mkwhy{display:block}.mkwhy b{display:block;margin-bottom:3px}
+.srcgrid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}@media(max-width:800px){.srcgrid{grid-template-columns:1fr}}.srcgrid img{width:100%;border-radius:8px;border:1px solid var(--line)}
+.srcq{margin:0;font-family:var(--display);font-size:17px;line-height:1.5;padding:12px 16px;border-left:6px solid var(--gold);background:color-mix(in srgb,var(--gold) 10%,transparent);border-radius:0 8px 8px 0}
+.chk{display:grid;gap:4px;margin:8px 0 0;padding:0;list-style:none;font-size:13.5px;color:var(--muted)}.chk li::before{content:'\2610  '}
+.srcx{display:none;margin-top:8px;font-size:13.5px;color:var(--muted);border-top:1px dashed var(--line);padding-top:8px}.srcx.show{display:block}
+.thumbs{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}.thumb{text-align:left;font:inherit;color:var(--ink);background:var(--surface);border-radius:12px;overflow:hidden;cursor:pointer;display:flex;flex-direction:column;padding:0}.thumb .th{height:120px;overflow:hidden;background:var(--line)}.thumb .th img{width:100%;height:100%;object-fit:cover}.thumb .th.txt{font-family:var(--display);font-style:italic;color:var(--muted);padding:12px;display:grid;place-items:center;text-align:center;background:color-mix(in srgb,var(--navy) 8%,var(--bg))}.thumb .body{padding:10px 12px}.thumb b{display:block;font-size:14px;margin-top:2px}.thumb .done{font-size:12px;color:var(--sage);font-weight:700;display:block;margin-top:4px}
 .modeh{display:flex;align-items:center;gap:10px}
 .modeh .k{width:38px;height:38px;border-radius:11px;display:grid;place-items:center;color:#fff;background:linear-gradient(145deg,color-mix(in srgb,var(--m) 88%,#fff),color-mix(in srgb,var(--m) 100%,#000 12%));box-shadow:0 4px 10px -5px color-mix(in srgb,var(--m) 70%,transparent)}
 .modeh .k svg{width:20px;height:20px}
@@ -458,7 +469,7 @@ footer{margin-top:40px;font-size:13px;color:var(--muted)}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}.mode:hover,.upanel:hover,.topic:hover{transform:none}}
 @media (max-width:480px){.score{grid-template-columns:1fr}}
 /* Outlines: every tile gets a firm 2px navy frame (user request). Accent edges stay on top. */
-.mode,.topic,.card,.check,.hubcard,.upanel,.ftile,.flash,.herogrid .pic,.welcome,.tl .ev,.clocktile,.qotd,.opt,.sample,.summary,.rv,.wbwrap,.rubric div,.audiopop{border-width:2px;border-style:solid;border-color:var(--navy)}
+.mode,.topic,.card,.thumb,.check,.hubcard,.upanel,.ftile,.flash,.herogrid .pic,.welcome,.tl .ev,.clocktile,.qotd,.opt,.sample,.summary,.rv,.wbwrap,.rubric div,.audiopop{border-width:2px;border-style:solid;border-color:var(--navy)}
 .qotd{border-color:color-mix(in srgb,var(--gold) 70%,var(--navy))}
 .opt.correct,.opt.wrong,.opt.sel{border-width:2px}
 .mode{border-top:3px solid var(--m)}
@@ -546,6 +557,8 @@ footer{margin-top:40px;font-size:13px;color:var(--muted)}
   <symbol id="m-timeline" viewBox="0 0 48 48"><path d="M6 36 C14 36 14 12 24 12 C34 12 34 36 42 36" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/><circle cx="9" cy="35" r="4.5" fill="currentColor"/><circle cx="24" cy="12" r="4.5" fill="currentColor"/><circle cx="39" cy="35" r="4.5" fill="currentColor"/><circle cx="16.5" cy="20" r="3" fill="currentColor" opacity=".5"/><circle cx="31.5" cy="20" r="3" fill="currentColor" opacity=".5"/></symbol>
   <symbol id="m-terms" viewBox="0 0 48 48"><path d="M6 10 C14 8 20 9 24 13 V40 C20 36 14 35 6 37 Z" fill="currentColor" opacity=".3"/><path d="M42 10 C34 8 28 9 24 13 V40 C28 36 34 35 42 37 Z" fill="currentColor" opacity=".55"/><path d="M6 10 C14 8 20 9 24 13 V40 C20 36 14 35 6 37 Z M42 10 C34 8 28 9 24 13 V40 C28 36 34 35 42 37 Z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><path d="M11 18 h8 M11 24 h8 M29 18 h8 M29 24 h8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></symbol>
   <symbol id="m-write" viewBox="0 0 48 48"><path d="M8 40 C8 34 12 32 18 32 H30 C36 32 40 34 40 40 Z" fill="currentColor" opacity=".3"/><path d="M8 40 H40" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/><path d="M38 6 C30 8 22 16 20 28 L18 34 L24 32 C34 28 40 18 38 6 Z" fill="currentColor" opacity=".55"/><path d="M38 6 C30 8 22 16 20 28 L18 34 L24 32 C34 28 40 18 38 6 Z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><path d="M34 10 L22 26" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></symbol>
+  <symbol id="m-marker" viewBox="0 0 48 48"><path d="M10 6 H30 L38 14 V42 H10 Z" fill="currentColor" opacity=".3"/><path d="M10 6 H30 L38 14 V42 H10 Z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><path d="M16 22 L22 28 L33 16" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 35 H32" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></symbol>
+  <symbol id="m-sources" viewBox="0 0 48 48"><rect x="8" y="6" width="26" height="34" rx="3" fill="currentColor" opacity=".3"/><rect x="8" y="6" width="26" height="34" rx="3" fill="none" stroke="currentColor" stroke-width="3"/><path d="M14 15 H28 M14 22 H28 M14 29 H22" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><circle cx="31" cy="31" r="7" fill="var(--bg,#fff)" stroke="currentColor" stroke-width="3"/><path d="M36 36 L42 42" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/></symbol>
   <symbol id="m-facts" viewBox="0 0 48 48"><path d="M24 4 C15 4 10 11 10 18 C10 25 15 27 16 32 H32 C33 27 38 25 38 18 C38 11 33 4 24 4 Z" fill="currentColor" opacity=".3"/><path d="M24 4 C15 4 10 11 10 18 C10 25 15 27 16 32 H32 C33 27 38 25 38 18 C38 11 33 4 24 4 Z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><path d="M18 37 H30 M20 42 H28" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/><path d="M24 12 V22 M24 26 V27" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/><path d="M5 10 L8 12 M43 10 L40 12 M24 0 V2" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" opacity=".7"/></symbol>
   <symbol id="ic-jp" viewBox="0 0 24 24"><g fill="currentColor"><rect x="5" y="8" width="2.4" height="13"/><rect x="16.6" y="8" width="2.4" height="13"/><rect x="3.5" y="6" width="17" height="2.2" rx=".5"/><rect x="6" y="11" width="12" height="1.8"/><path d="M2 4.5 Q12 2.5 22 4.5 L21.5 6.5 Q12 4.8 2.5 6.5 Z"/></g></symbol>
   <symbol id="ic-eu" viewBox="0 0 24 24"><g fill="currentColor"><path d="M3 21 V8 h3 V6 h2 v2 h2 V6 h2 v2 h2 V6 h2 v2 h2 V6 h2 v2 h1 v13 z M10 21 v-5 a2 2 0 0 1 4 0 v5 z" fill-rule="evenodd"/></g></symbol>
@@ -560,7 +573,7 @@ footer{margin-top:40px;font-size:13px;color:var(--muted)}
 (function(){
 'use strict';
 const BANK = JSON.parse(document.getElementById('bank').textContent);
-const Q = BANK.questions, TERMS = BANK.terms, SHORTQ = BANK.shortq||[];
+const Q = BANK.questions, TERMS = BANK.terms, SHORTQ = BANK.shortq||[], MARKER = BANK.marker||{pairs:[],checklist:[]}, SOURCES = BANK.sources||{sources:[],checklist:[]};
 const LOG_ENDPOINT = 'https://script.google.com/macros/s/AKfycbzlFW4JzyJvrfYTHunPIMbKbl0cSo-AYDnRHhWBWBo_KlUAdZ6NwPPCaKHfAME7Hcfu/exec'; // Apps Script web app URL (see logging/Code.gs). null = no logging.
 const TEACHER_CSV = null;  // published-to-web CSV link of the 'events' sheet. null = teacher view uses this device only.
 const app = document.getElementById('app');
@@ -578,7 +591,7 @@ let sessionId = store.get('sid', null); if(!sessionId){ sessionId = Math.random(
 
 function log(ev){
   if(!LOG_ENDPOINT) return;
-  try{ fetch(LOG_ENDPOINT,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain'},body:JSON.stringify(Object.assign({sid:sessionId,t:Date.now(),name:studentName},ev)),keepalive:true}) }catch(e){}
+  try{ fetch(LOG_ENDPOINT,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain'},body:JSON.stringify(Object.assign({sid:sessionId,t:Date.now(),name:studentName},ev)),keepalive:true}).catch(()=>{}) }catch(e){}
 }
 function record(q, correct, conf, hint){
   const s = stats[q.id] || {a:0,c:0}; s.a++; if(correct) s.c++; stats[q.id]=s; store.set('stats', stats);
@@ -804,7 +817,7 @@ const FACTS=[
 const FACT_IMG=['f-domesday','f-armour','f-motte','f-ordeal','f-abbey','f-alhambra','f-lazzaretto','f-harvest','eu-bayeux','jp-samurai','f-mongol','f-nitobe','f-sankin','f-dejima','f-edo','f-ronin','f-perry','f-meiji','f-manesse'];
 const FACT_TITLES=['The Domesday Book','The weight of armour','A castle in weeks','The end of trial by ordeal','The Church as landlord','Words from Arabic','Where quarantine comes from','Wages after the plague','Not a tapestry at all','To serve','The divine wind','Bushido\u2019s late birth','Processions of thousands','Dejima, the fan-shaped island','A million people in Edo','The 47 ronin','Perry\u2019s toy railway','Enlightened rule','Knights and samurai'];
 function factFor(topics){ const pool=FACTS.filter(f=>!topics||topics.includes(f[0])); const f=(pool.length?pool:FACTS)[Math.random()*(pool.length||FACTS.length)|0]; return `<div class="fact"><span class="lamp">?</span><div><b>Did you know</b>${esc(f[1])}</div></div>` }
-const MODEH = (name,title) => `<div class="modeh" style="--m:var(--${({practice:'accent',challenge:'gold',timeline:'teal',terms:'sage',write:'plum',facts:'rose'})[name]})"><span class="k"><svg><use href="#m-${name}"/></svg></span><h2>${title}</h2></div>`;
+const MODEH = (name,title) => `<div class="modeh" style="--m:var(--${({practice:'accent',challenge:'gold',timeline:'teal',terms:'sage',write:'plum',facts:'rose',marker:'plum',sources:'teal'})[name]})"><span class="k"><svg><use href="#m-${name}"/></svg></span><h2>${title}</h2></div>`;
 const unitCls = u => u==='Medieval Europe'?'eu':u==='Shogunate Japan'?'jp':'sk';
 // timeline events (years hidden until placed)
 const EVENTS=[
@@ -862,10 +875,12 @@ function home(){
     <div class="modes">
       <button class="mode practice" data-go="setup"><span class="pic" style="background-image:url(${IMG['t-practice']})"></span><span class="k"><svg><use href="#m-practice"/></svg></span><span class="t">Practice</span><span class="n">Pick topics, answer at your pace, read the explanation after every question.</span></button>
       <button class="mode challenge" data-go="challenge"><span class="pic" style="background-image:url(${IMG['t-challenge']})"></span><span class="k"><svg><use href="#m-challenge"/></svg></span><span class="t">Challenge</span><span class="n">20 questions from both units against a 10 minute clock.${best?` Personal best ${best}/20.`:''}</span></button>
-      <button class="mode timeline" data-go="timeline"><span class="pic" style="background-image:url(${IMG['t-timeline']})"></span><span class="k"><svg><use href="#m-timeline"/></svg></span><span class="t">Timeline</span><span class="n">Six events, tap them in order. Dates appear as you place them.</span></button>
+      <button class="mode timeline" data-go="timeline"><span class="pic" style="background-image:url(${IMG['t-timeline']})"></span><span class="k"><svg><use href="#m-timeline"/></svg></span><span class="t">Timeline</span><span class="n">Both units side by side, 800 to 1900. Starred years are the ones to learn; tap an event for detail.</span></button>
       <button class="mode terms" data-go="terms"><span class="pic" style="background-image:url(${IMG['t-terms']})"></span><span class="k"><svg><use href="#m-terms"/></svg></span><span class="t">Key terms</span><span class="n">Flashcards to flip, plus a ten-definition sprint against the clock.</span></button>
       <button class="mode write" data-go="write"><span class="pic" style="background-image:url(${IMG['t-write']})"></span><span class="k"><svg><use href="#m-write"/></svg></span><span class="t">Paragraph practice</span><span class="n">Exam prompts with a TEEAL scaffold, model answers and what success looks like.</span></button>
       <button class="mode facts" data-go="facts"><span class="pic" style="background-image:url(${IMG['t-facts']})"></span><span class="k"><svg><use href="#m-facts"/></svg></span><span class="t">Fun facts</span><span class="n">Did-you-know cards from both units. Read one, then practise the topic it came from.</span></button>
+      <button class="mode marker" data-go="marker"><span class="pic" style="background-image:url(${IMG['f-domesday']})"></span><span class="k"><svg><use href="#m-marker"/></svg></span><span class="t">Be the marker</span><span class="n">Two Section C answers, a 4 and a 7. Pick the stronger one, then see where the marks were.</span></button>
+      <button class="mode sources" data-go="sources"><span class="pic" style="background-image:url(${IMG['f-dejima']})"></span><span class="k"><svg><use href="#m-sources"/></svg></span><span class="t">Unseen sources</span><span class="n">Ten sources you have not seen. Four quick questions each, then a timed 3-mark answer.</span></button>
     </div>
   </section>
   <section class="section">
@@ -877,7 +892,7 @@ function home(){
         const m=mastery(t); return `<button class="topic ${unitCls(u)}" data-topic="${esc(t)}" style="--p:${s.a?pct:0}%"><span class="name">${esc(t)}${m?` <span class="badge ${m}" title="${m} mastery" style="margin-left:6px;vertical-align:middle"></span>`:''}</span><span class="pct ${s.a?'':'none'}">${s.a?pct+'%':'Not yet'}${s.a&&pct===100?'<span class="tick" aria-label="complete">&#10003;</span>':''}</span></button>`}).join('')}</div></div>`).join('')}
     </div>
   </section>`);
-  app.querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>({setup, challenge, terms, write, daily, timeline, facts, exam})[b.dataset.go]());
+  app.querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>({setup, challenge, terms, write, daily, timeline, facts, exam, marker, sources})[b.dataset.go]());
   const gw=app.querySelector('#goWelcome'); if(gw){ const inp=app.querySelector('#nameIn'); const finishW=()=>{ studentName=inp.value.trim().slice(0,40); store.set('name',studentName); store.set('welcomed',true); log({event:'welcome'}); home() }; gw.onclick=finishW; inp.onkeydown=e=>{ if(e.key==='Enter') finishW() }; app.querySelector('#snd0').onclick=()=>setSound(!soundOn) }
   const who=document.getElementById('who'); if(who){ who.innerHTML = studentName ? `Revising as <b>${esc(studentName)}</b> <button id="chgName">change</button>` : `<button id="chgName">Add your name</button>`; who.querySelector('#chgName').onclick=()=>{ store.set('welcomed',false); home() } }
   app.querySelectorAll('[data-topic]').forEach(b=>b.onclick=()=>startQuiz({mode:'practice', topics:[b.dataset.topic], timed:false}));
@@ -1181,13 +1196,15 @@ function sprint(){
 function parseCSV(txt){ const out=[]; let row=[],cell='',q=false; for(let i=0;i<txt.length;i++){ const ch=txt[i]; if(q){ if(ch==='"'){ if(txt[i+1]==='"'){cell+='"';i++} else q=false } else cell+=ch } else if(ch==='"') q=true; else if(ch===','){row.push(cell);cell=''} else if(ch==='\n'){row.push(cell);out.push(row);row=[];cell=''} else if(ch!=='\r') cell+=ch } if(cell||row.length){row.push(cell);out.push(row)} return out }
 async function classStats(){
   const r=await fetch(TEACHER_CSV,{cache:'no-store'}); const rows=parseCSV(await r.text()); const h=rows.shift(); const i=Object.fromEntries(h.map((k,n)=>[k,n]));
-  const st={}; const people={}; let events=0; const timed=[]; const sq={};
+  const st={}; const people={}; let events=0; const timed=[]; const sq={}; const mk={n:0,right:0}; const sr={n:0,mc:0,self:0};
   const who=r=>{ const nm=(r[i.name]||'').trim(); const key=nm?nm.toLowerCase():'device '+String(r[i.sid]||'').slice(0,6); const p=people[key]=people[key]||{name:nm||'(no name)',a:0,c:0,timed:0,sq:0,last:0,sids:new Set()}; p.sids.add(r[i.sid]); const t=+r[i.t]||Date.parse(r[i.received])||0; if(t>p.last) p.last=t; return p };
   rows.forEach(r=>{ const ev=r[i.event]; const p=who(r);
     if(!ev && r[i.qid]){ events++; p.a++; const id=+r[i.qid]; st[id]=st[id]||{a:0,c:0}; st[id].a++; if(+r[i.correct]===1){ st[id].c++; p.c++ } }
     else if(ev==='timed'){ p.timed++; timed.push({name:p.name,secs:+r[i.secs]||0,words:+r[i.n]||0,qid:r[i.qid]}) }
-    else if(ev==='shortq'){ p.sq++; const k=r[i.qid]; sq[k]=sq[k]||{n:0,sum:0,of:+r[i.n]||0}; sq[k].n++; sq[k].sum+=+r[i.c]||0} });
-  return {st, events, people:Object.values(people), timed, sq};
+    else if(ev==='shortq'){ p.sq++; const k=r[i.qid]; sq[k]=sq[k]||{n:0,sum:0,of:+r[i.n]||0}; sq[k].n++; sq[k].sum+=+r[i.c]||0}
+    else if(ev==='marker'){ mk.n++; if(+r[i.correct]===1) mk.right++ }
+    else if(ev==='sources'){ sr.n++; sr.mc+=+r[i.n]||0; sr.self+=+r[i.c]||0 } });
+  return {st, events, people:Object.values(people), timed, sq, mk, sr};
 }
 const ago=t=>{ if(!t) return ''; const m=Math.round((Date.now()-t)/60000); if(m<60) return m+' min ago'; const hh=Math.round(m/60); if(hh<36) return hh+' h ago'; return Math.round(hh/24)+' days ago' };
 async function teacher(){
@@ -1208,7 +1225,7 @@ async function teacher(){
   <p class="muted">Question difficulty from ${note}. Hardest first.</p>${extra}
   ${rows.length||c?`<div class="card">${studentsHTML}<div><p class="eyebrow" style="margin-bottom:8px">Topics</p><div class="bytopic">${byT.map(r=>`<div class="bt"><div><div style="margin-bottom:4px">${esc(r.t)}</div><div class="bar"><i style="width:${pct(r.s)}%;background:${pct(r.s)<60?'var(--accent)':'var(--sage)'}"></i></div></div><span class="n">${pct(r.s)}% · ${r.s.a}</span></div>`).join('')}</div></div>
     <div><p class="eyebrow" style="margin-bottom:8px">Hardest questions</p><div class="tbl"><table class="tt"><thead><tr><th>Question</th><th>Topic</th><th class="n">Tries</th><th class="n">Correct</th></tr></thead><tbody>${rows.slice(0,25).map(r=>`<tr><td>${esc(r.q.question)}</td><td class="muted">${esc(r.q.topic)}</td><td class="n">${r.s.a}</td><td class="n ${pct(r.s)<50?'lo':''}">${pct(r.s)}%</td></tr>`).join('')}</tbody></table></div>${rows.length>25?`<p class="hint">Showing the 25 hardest of ${rows.length}${c?' with at least 3 attempts':''}. Copy as CSV for the full list.</p>`:''}</div>
-    ${sqHTML}${timedHTML}
+    ${sqHTML}${timedHTML}${c&&(c.mk.n||c.sr.n)?`<div><p class="eyebrow" style="margin-bottom:8px">Exam skills</p>${c.mk.n?`<p><b>Be the marker.</b> ${c.mk.n} pairs attempted, ${Math.round(100*c.mk.right/c.mk.n)}% picked the 7.</p>`:''}${c.sr.n?`<p><b>Unseen sources.</b> ${c.sr.n} sources attempted, quick questions ${(c.sr.mc/c.sr.n).toFixed(1)} / 4, self-mark ${(c.sr.self/c.sr.n).toFixed(1)} / 3.</p>`:''}</div>`:''}
     <div class="row"><button class="btn" id="csv">Copy questions as CSV</button>${TEACHER_CSV?'<button class="btn" id="refresh">Refresh</button>':''}<button class="btn quiet" id="home">Home</button></div></div>`:`<div class="card"><p>No answers recorded yet.</p><div class="row"><button class="btn quiet" id="home">Home</button></div></div>`}
   </section>`);
   const cb=app.querySelector('#csv'); if(cb) cb.onclick=async e=>{ try{ await navigator.clipboard.writeText(csv); e.target.textContent='Copied' }catch(err){ e.target.textContent='Copy blocked' } };
@@ -1251,7 +1268,7 @@ function exam(){
   h(`<section class="section exam"><div class="modeh" style="--m:var(--gold-ink)"><span class="k">&#9998;</span><h2>Before the exam</h2></div>
   <div class="grid3">
     <div class="box"><h3>The paper</h3><span class="big">50</span><p>marks in <b>50 minutes</b>, plus 5 minutes reading time. Blue or black pen. A separate <b>Source Booklet</b> holds the sources; the questions tell you which one to look at.</p></div>
-    <div class="box"><h3>Three sections</h3><ul><li><b>A. Multiple choice</b>, 10 marks. Several questions use a source or a timeline from the booklet.</li><li><b>B. Short answer</b>, 32 marks. Identify, describe, explain and compare questions worth 1 to 4 marks each, some using a source.</li><li><b>C. Extended response</b>, 8 marks. Choose <b>one</b> of two questions. TEEAL paragraph(s) with a clear contention.</li></ul></div>
+    <div class="box"><h3>Three sections</h3><ul><li><b>A. Multiple choice</b>, 10 marks. Several questions use a source or a timeline from the booklet.</li><li><b>B. Short answer</b>, 32 marks. Identify, describe, explain and compare questions worth 1 to 4 marks each, some using a source. <a href="#sources" data-go="sources">Practise with unseen sources.</a></li><li><b>C. Extended response</b>, 8 marks. Choose <b>one</b> of two questions. TEEAL paragraph(s) with a clear contention. <a href="#marker" data-go="marker">See a 4 and a 7 side by side.</a></li></ul></div>
     <div class="box"><h3>Both units, both skills</h3><p>Questions move between Medieval Europe and Shogunate Japan, and between knowledge questions and source questions. Sources may be artworks, written extracts, maps or timelines, so practise all of them.</p><p>Everything on the <b>I can</b> list in your revision booklet is fair game.</p></div>
   </div>
   <div class="card" style="margin-top:18px"><p class="eyebrow">A plan for the 50 minutes</p>
@@ -1278,7 +1295,7 @@ function exam(){
     <div class="box"><h3>Marks people lose</h3><ul><li>Answering one point twice when the question says <b>two</b>.</li><li>Describing a source instead of inferring from it.</li><li>Writing "medieval times" for a century.</li><li>Leaving a multiple-choice question blank, or circling two.</li><li>Spending 20 minutes on Section A.</li><li>A Section C answer with no contention in the first sentence.</li></ul></div>
   </div>
   <div class="actions" style="margin-top:18px"><button class="btn primary" id="toShort">Practise short answers</button><button class="btn" id="toSuccess">See what full marks look like</button><button class="btn" id="toWrite">Paragraph practice</button><button class="btn quiet" id="home">Home</button></div></section>`);
-  app.querySelector('#toShort').onclick=()=>shortq(); app.querySelector('#toSuccess').onclick=()=>success(); app.querySelector('#toWrite').onclick=()=>write(); app.querySelector('#home').onclick=home;
+  app.querySelectorAll('[data-go]').forEach(a=>a.onclick=e=>{ e.preventDefault(); ({marker,sources})[a.dataset.go]() }); app.querySelector('#toShort').onclick=()=>shortq(); app.querySelector('#toSuccess').onclick=()=>success(); app.querySelector('#toWrite').onclick=()=>write(); app.querySelector('#home').onclick=home;
 }
 
 // ---------- short answers: write, compare with marked exemplars, self-mark ----------
@@ -1319,6 +1336,96 @@ function shortq(){
         const step=()=>{ const left=endAt-Date.now(); disp.textContent=fmt(left); disp.classList.toggle('warn',left<20000); if(left<=0){ clearInterval(tid); tid=null; disp.textContent='0:00'; startB.textContent='Start timer'; beep('win') } }; step(); tid=setInterval(step,500) } }
     const pv=app.querySelector('#pg-prev'), nx=app.querySelector('#pg-next'); if(pv) pv.onclick=()=>one(SHORTQ[k-1].id); if(nx) nx.onclick=()=>one(SHORTQ[k+1].id);
     app.querySelector('#back').onclick=()=>shortq();
+  });
+  list();
+}
+
+// ---------- Be the marker: Section C calibration ----------
+let mkDone=store.get('marker',{});
+function markerRender(t){ let n=0; const notes=[]; const html=t.replace(/\[\[(.+?)\|\|(.+?)\]\]/g,(m,a,b)=>{n++;notes.push(b);return `<mark data-n="${n}" title="${esc(b)}">${esc(a)}</mark>`}); return {html,notes} }
+function marker(){
+  const P=MARKER.pairs;
+  const list=()=>{ const got=P.filter(p=>mkDone[p.id]).length;
+    h(`<section class="section"><div class="row xrow" style="justify-content:space-between">${MODEH('marker','Be the marker')}<span class="pill">${got} of ${P.length} marked</span></div>
+    <p class="muted">${esc(MARKER.intro)}</p>
+    <div class="card"><p class="eyebrow">What a marker looks for in a Section C answer</p><ol style="margin:6px 0 0;padding-left:20px">${MARKER.checklist.map(c=>`<li>${esc(c)}</li>`).join('')}</ol></div>
+    <div class="thumbs" style="margin-top:12px">${P.map(p=>{ const u=unitCls(p.unit); const d=mkDone[p.id]; return `<button class="thumb" data-id="${p.id}" style="border-left:8px solid var(--${u})"><span class="body"><span class="eyebrow" style="color:var(--${u})">${esc(p.unit)} · 8 marks</span><b>${esc(p.q)}</b>${d?`<span class="done">&#10003; Marked${d.right?' correctly':''}</span>`:'<span class="hint">Two answers. Which is the 7?</span>'}</span></button>`}).join('')}</div>
+    <p class="hint" style="margin-top:12px">Answers are written for this activity. Neither is a real student's work.</p>
+    <div class="row" style="margin-top:12px"><button class="btn quiet" id="home">Home</button></div></section>`);
+    app.querySelectorAll('.thumb').forEach(b=>b.onclick=()=>one(b.dataset.id)); app.querySelector('#home').onclick=home };
+  const one=screen(function mkView(id){
+    const p=P.find(x=>x.id===id); const k=P.indexOf(p); const u=unitCls(p.unit);
+    const flip=Math.random()<.5; const A=flip?p.strong:p.weak, B=flip?p.weak:p.strong; const strongIs=flip?'A':'B'; let picked=null;
+    const ra=markerRender(A.text), rb=markerRender(B.text);
+    h(`<section class="section" id="mkroot"><div class="row xrow" style="justify-content:space-between">${MODEH('marker','Be the marker')}<span class="pill">${esc(p.unit)} · Section C</span></div>
+    <div class="card xcard ${u}"><span class="eyebrow" style="color:var(--${u})">${esc(p.unit)} · 8 marks</span><p class="qtext">${esc(p.q)}</p>
+      <p class="muted" style="margin:4px 0 0">Read both. One scored 4, the other 7. Pick the stronger one, then say why before the marks appear.</p>
+      <div class="mkgrid">${[['A',A,ra],['B',B,rb]].map(([kk,x,r])=>`<div class="sample mk" data-k="${kk}"><h3>Answer ${kk} <span class="marks full">${x.marks} / 8</span></h3><p class="ans">${r.html}</p><ol class="mknotes">${r.notes.map((n,i)=>`<li><b>${i+1}</b>${esc(n)}</li>`).join('')}</ol><div class="mkwhy"><b>Why ${x.marks}, not ${x.marks+1}</b>${esc(x.why)}</div><button class="btn pick" data-k="${kk}" style="margin-top:12px;width:100%">Answer ${kk} is stronger</button></div>`).join('')}</div>
+      <div id="reason" hidden style="margin-top:14px"><p class="eyebrow">Why?</p><p class="hint">Name one thing the answer you chose does that the other does not. A few words is enough.</p><textarea id="rt" placeholder="For example: it says which impact mattered most in the first sentence." style="min-height:70px"></textarea><div class="row" style="margin-top:10px"><button class="btn primary" id="reveal" disabled>Reveal the marks</button></div></div>
+      <div id="verdict" style="margin-top:14px"></div>
+      <div id="chk" hidden style="margin-top:14px"><p class="eyebrow">Now check the 7 against the list. Can you find all five?</p><ol style="margin:6px 0 0;padding-left:20px">${MARKER.checklist.map(c=>`<li>${esc(c)}</li>`).join('')}</ol><p class="hint" id="mine" style="font-style:italic"></p></div>
+      ${pager(k,P.length,`Question ${k+1} of ${P.length}`)}
+      <div class="row" style="margin-top:12px"><button class="btn quiet" id="back">All questions</button></div>
+    </div></section>`);
+    const $=q=>app.querySelector(q);
+    app.querySelectorAll('.pick').forEach(b=>b.onclick=()=>{ picked=b.dataset.k; app.querySelectorAll('.mk').forEach(a=>a.classList.toggle('chosen',a.dataset.k===picked)); $('#reason').hidden=false; $('#reveal').disabled=false; $('#rt').focus() });
+    $('#reveal').onclick=()=>{ const right=picked===strongIs; const txt=$('#rt').value.trim().slice(0,200);
+      $('#mkroot').classList.add('rev'); app.querySelectorAll('.pick').forEach(b=>b.disabled=true); $('#reveal').disabled=true;
+      $('#verdict').innerHTML=right?`<div class="feedback ok"><b>Yes. Answer ${strongIs} scored 7.</b><span>Now look at the numbered notes: the gold phrases are where the marks were earned, and the dashed box under each answer says what separates 4 from 5 and 7 from 8.</span></div>`
+        :`<div class="feedback info"><b>Answer ${strongIs} is the 7.</b><span>Answer ${picked} reads well and has plenty of correct knowledge, which is what usually draws people to it. But a marker reads for a contention, dated evidence with a because, who was affected, and a judgement. Look at the numbered notes on both answers to see where the marks were earned and lost.</span></div>`;
+      $('#chk').hidden=false; $('#mine').textContent=txt?`Your reason: "${txt}"`:''; beep(right?'win':'ok');
+      mkDone[p.id]={right,reason:txt}; store.set('marker',mkDone); log({event:'marker', qid:p.id, correct:right?1:0, unit:p.unit, type:'marker'});
+      if(P.every(x=>mkDone[x.id])&&P.every(x=>mkDone[x.id].right)) confetti();
+      $('#verdict').scrollIntoView({behavior:'smooth',block:'center'}) };
+    const pv=app.querySelector('#pg-prev'), nx=app.querySelector('#pg-next'); if(pv) pv.onclick=()=>one(P[k-1].id); if(nx) nx.onclick=()=>one(P[k+1].id);
+    $('#back').onclick=()=>marker();
+  });
+  list();
+}
+
+// ---------- Unseen sources: Section B drill ----------
+let srcDone=store.get('srcdrill',{});
+function sources(){
+  const S=SOURCES.sources;
+  const list=()=>{ const got=S.filter(x=>srcDone[x.id]).length;
+    h(`<section class="section"><div class="row xrow" style="justify-content:space-between">${MODEH('sources','Unseen sources')}<span class="pill">${got} of ${S.length} done</span></div>
+    <p class="muted">${esc(SOURCES.intro)}</p>
+    <div class="card"><p class="eyebrow">The 3-mark checklist</p><ol style="margin:6px 0 0;padding-left:20px">${SOURCES.checklist.map(c=>`<li>${esc(c)}</li>`).join('')}</ol></div>
+    <div class="thumbs" style="margin-top:12px">${S.map(x=>{ const u=unitCls(x.unit); const d=srcDone[x.id]; return `<button class="thumb" data-id="${x.id}"><span class="th ${x.img?'':'txt'}">${x.img?`<img src="${IMG[x.img]}" alt="">`:'&ldquo;'+esc(x.text.slice(0,70))+'&hellip;&rdquo;'}</span><span class="body"><span class="eyebrow" style="color:var(--${u})">${esc(x.unit)} · ${x.img?'visual':'written'}</span><b>${esc(x.caption.split(',')[0])}</b>${d?`<span class="done">&#10003; ${d.mc}/4 quick · self-mark ${d.self??'–'}/3</span>`:''}</span></button>`}).join('')}</div>
+    <p class="hint" style="margin-top:12px">Sources are public domain, from Wikimedia Commons. Written extracts are adapted and shortened, as they would be in an exam.</p>
+    <div class="row" style="margin-top:12px"><button class="btn quiet" id="home">Home</button></div></section>`);
+    app.querySelectorAll('.thumb').forEach(b=>b.onclick=()=>one(b.dataset.id)); app.querySelector('#home').onclick=home };
+  const one=screen(function srcView(id){
+    const x=S.find(y=>y.id===id); const k=S.indexOf(x); const u=unitCls(x.unit); let mc=0, answered=0, startedAt=0, tid=null;
+    h(`<section class="section"><div class="row xrow" style="justify-content:space-between">${MODEH('sources','Unseen sources')}<span class="pill">${esc(x.unit)} · ${x.img?'visual':'written'} source</span></div>
+    <div class="card xcard ${u}"><div class="srcgrid">${x.img?`<div><img src="${IMG[x.img]}" alt=""></div>`:`<blockquote class="srcq">${esc(x.text)}</blockquote>`}<div><p class="hint" style="font-size:14px;color:var(--ink)"><b>Source.</b> ${esc(x.caption)}</p><p class="hint" style="margin-top:10px">Read the caption first. It tells you the type, who made it, where and when. Then answer the four quick questions, then write.</p></div></div></div>
+    ${x.qs.map((q,i)=>`<div class="card" data-i="${i}"><p class="qtext" style="font-size:16px">${i+1}. ${esc(q.q)}</p><div class="opts">${shuffle(q.o.map((o,kk)=>({o,kk}))).map(({o,kk},n)=>`<button class="opt" data-k="${kk}"><span class="l">${'ABCD'[n]}</span><span>${esc(o)}</span></button>`).join('')}</div><div class="srcx">${esc(q.x)}</div></div>`).join('')}
+    <div class="card xcard" id="wr" hidden><span class="eyebrow">Now write</span><p class="qtext">${esc(x.write)} <span class="muted" style="font-weight:400;white-space:nowrap">(3 marks)</span></p>
+      <div class="timerrow"><span><b>2 min 15 sec</b> in the exam, at 45 seconds a mark.</span><button class="btn" id="tstart">Start writing</button><span class="tdisp" id="tdisp" hidden></span></div>
+      <ul class="chk">${SOURCES.checklist.map(c=>`<li>${esc(c)}</li>`).join('')}</ul>
+      <textarea id="ta" placeholder="Start with the source: 'The source shows…' or 'The writer says…', then 'which suggests…'" style="margin-top:12px;min-height:130px" disabled></textarea>
+      <div class="row" style="justify-content:space-between;margin-top:8px"><span class="hint" id="wc"></span><button class="btn primary" id="reveal" disabled>Reveal a full-marks answer</button></div>
+      <div id="answers" hidden style="margin-top:14px;display:grid;gap:12px">
+        <div class="sample full"><span class="marks full">3 / 3</span><p>${esc(x.model)}</p><ol style="margin:4px 0 0;padding-left:20px;font-size:13.5px;color:var(--muted)">${x.mark.map(m=>`<li>${esc(m)}</li>`).join('')}</ol></div>
+        <div class="card" style="margin:0"><p class="eyebrow">Mark yourself</p><p class="hint">One mark for each of the three points above that your answer has.</p><div class="marksel" id="marksel">${[0,1,2,3].map(i=>`<button data-m="${i}">${i}</button>`).join('')}<span class="hint">out of 3</span></div></div>
+      </div>
+      ${pager(k,S.length,`Source ${k+1} of ${S.length}`)}
+      <div class="row" style="margin-top:12px"><button class="btn quiet" id="back">All sources</button></div></div>
+    <div class="row" id="early" style="margin-top:12px"><button class="btn quiet" id="back0">All sources</button></div></section>`);
+    const $=q=>app.querySelector(q);
+    app.querySelectorAll('.card[data-i]').forEach(box=>{ const i=+box.dataset.i; box.querySelectorAll('.opt').forEach(b=>b.onclick=()=>{ const kk=+b.dataset.k, ok=kk===x.qs[i].a; if(ok) mc++; answered++;
+      box.querySelectorAll('.opt').forEach(o=>{ o.disabled=true; if(+o.dataset.k===x.qs[i].a) o.classList.add('right'); else if(o===b) o.classList.add('wrong') }); box.querySelector('.srcx').classList.add('show'); beep(ok?'ok':'bad');
+      if(answered===x.qs.length){ $('#wr').hidden=false; $('#early').hidden=true; $('#wr').scrollIntoView({behavior:'smooth',block:'start'}) } }) });
+    const ta=$('#ta'), wc=$('#wc'); const count=()=>{ wc.textContent=`${ta.value.trim().split(/\s+/).filter(Boolean).length} words` }; ta.oninput=count;
+    const disp=$('#tdisp'), startB=$('#tstart'); const fmt=ms=>{ const t=Math.max(0,Math.ceil(ms/1000)); return `${Math.floor(t/60)}:${String(t%60).padStart(2,'0')}` };
+    startB.onclick=()=>{ if(tid) return; startedAt=Date.now(); const endAt=startedAt+135000; startB.disabled=true; ta.disabled=false; ta.focus(); $('#reveal').disabled=false; disp.hidden=false; beep('ok'); count();
+      const step=()=>{ const left=endAt-Date.now(); disp.textContent=fmt(left); disp.classList.toggle('warn',left<20000); if(left<=0){ clearInterval(tid); disp.textContent='Pens down'; ta.disabled=true; beep('win') } }; step(); tid=setInterval(step,500) };
+    $('#reveal').onclick=e=>{ if(tid) clearInterval(tid); ta.disabled=true; e.target.disabled=true; $('#answers').hidden=false; srcDone[x.id]=Object.assign({mc,self:null},srcDone[x.id]||{},{mc}); store.set('srcdrill',srcDone); $('#answers').scrollIntoView({behavior:'smooth',block:'center'}) };
+    app.querySelectorAll('#marksel button').forEach(b=>b.onclick=()=>{ const m=+b.dataset.m; app.querySelectorAll('#marksel button').forEach(y=>y.classList.toggle('on',y===b)); srcDone[x.id]=Object.assign(srcDone[x.id]||{mc},{self:m}); store.set('srcdrill',srcDone); beep(m===3?'win':'ok');
+      log({event:'sources', qid:x.id, n:mc, c:m, correct:m===3?1:0, secs:startedAt?Math.min(135,Math.round((Date.now()-startedAt)/1000)):0, unit:x.unit, type:'sources'});
+      if(S.every(y=>srcDone[y.id]&&srcDone[y.id].self!==null&&srcDone[y.id].self!==undefined)) confetti() });
+    const pv=app.querySelector('#pg-prev'), nx=app.querySelector('#pg-next'); if(pv) pv.onclick=()=>one(S[k-1].id); if(nx) nx.onclick=()=>one(S[k+1].id);
+    $('#back').onclick=()=>sources(); $('#back0').onclick=()=>sources();
   });
   list();
 }
@@ -1512,9 +1619,9 @@ const mm=document.getElementById('musMode'); mm.value=music.mode; mm.onchange=()
 const mv=document.getElementById('musVol'); mv.value=music.vol; mv.oninput=()=>{ music.vol=+mv.value; store.set('musVol',music.vol); if(music.master&&actx) music.master.gain.setTargetAtTime(music.vol/100*.6, actx.currentTime, .1) };
 document.addEventListener('visibilitychange',()=>{ if(document.hidden&&music.on){ clearTimeout(music.timer) } else if(music.on){ phrase() } });
 (function tick(){ const d=new Date(); const el=document.getElementById('clock'); if(el){ const hh=d.getHours(), m=String(d.getMinutes()).padStart(2,'0'), ss=String(d.getSeconds()).padStart(2,'0'); const h12=((hh+11)%12)+1; el.innerHTML=`<span class="lbl">Melbourne</span><span class="time">${h12}:${m}<small>${hh<12?'am':'pm'}</small></span><span class="date">${d.toLocaleDateString('en-AU',{weekday:'long',day:'numeric',month:'long'})}</span>` } setTimeout(tick, 60000-(Date.now()%60000)+50) })();
-HOME_FN=home; home=screen(home); setup=screen(setup); challenge=screen(challenge); terms=screen(terms); write=screen(write); daily=screen(daily); timeline=screen(timeline); timelineGame=screen(timelineGame); teacher=screen(teacher); sprint=screen(sprint); facts=screen(facts); exam=screen(exam); shortq=screen(shortq); startQuiz=screen(startQuiz);
+HOME_FN=home; home=screen(home); setup=screen(setup); challenge=screen(challenge); terms=screen(terms); write=screen(write); daily=screen(daily); timeline=screen(timeline); timelineGame=screen(timelineGame); teacher=screen(teacher); sprint=screen(sprint); facts=screen(facts); exam=screen(exam); shortq=screen(shortq); marker=screen(marker); sources=screen(sources); startQuiz=screen(startQuiz);
 document.getElementById('backBtn').onclick=goBack;
-const ROUTES={practice:setup, challenge, terms, write, daily, timeline, teacher, sprint, facts, success, exam, shortq};
+const ROUTES={practice:setup, challenge, terms, write, daily, timeline, teacher, sprint, facts, success, exam, shortq, marker, sources};
 const r=(location.hash||'').slice(1); (ROUTES[r]||home)();
 })();
 </script>
