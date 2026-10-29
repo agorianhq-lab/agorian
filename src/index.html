@@ -520,7 +520,6 @@ footer{margin-top:40px;font-size:13px;color:var(--muted)}
 
 <div class="wrap" id="top">
 <header>
-  <p class="who" id="who"></p>
   <button class="brand" id="homeBtn" aria-label="Agorian home"><span class="top"><span class="word"><span class="a">A<sup>+</sup></span>gorian</span></span><span class="desc">Year 8 History Revision</span></button>
   <aside class="qotd" id="qotd" hidden></aside>
   <button class="backbtn" id="backBtn" hidden aria-label="Back"><svg><use href="#ar-l"/></svg><span>Back</span></button>
@@ -564,7 +563,7 @@ footer{margin-top:40px;font-size:13px;color:var(--muted)}
   <symbol id="ic-sk" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="6"/><path d="M15.5 15.5 L21 21"/><path d="M8.5 11 h5 M11 8.5 v5"/></g></symbol>
 </svg>
 <main id="app"></main>
-<footer><p class="hint" style="margin-bottom:8px">What is recorded. Your name as you typed it, which questions you answered and whether you were right, so your teacher can see how the class is going. No email, no login, nothing else.</p><div class="footrow"><span>&copy; Agorian 2026. All rights reserved. Content and design may not be copied or reused without permission.</span><details class="credits"><summary>Image credits</summary>Artworks are sourced from Wikimedia Commons and are in the public domain unless a licence is noted. Raphael, The School of Athens (1511). Katsushika Hokusai, The Great Wave off Kanagawa and Fine Wind, Clear Morning (c. 1831). Utagawa Hiroshige, Nihonbashi from The Fifty-three Stations of the Tokaido (1833). Photograph of a samurai in armour (1860s). The Bayeux Tapestry, scene 57 (c. 1070s). Limbourg brothers, Très Riches Heures du duc de Berry, September and October (c. 1412 to 1416). Toggenburg Bible (1411). Siege of Jerusalem, 13th-century manuscript, Bibliothèque nationale de France. Issunshi Hanasato, a terakoya school (Edo period). Utagawa Kuniyoshi, warrior print, Takata no baba (19th century). Pictorial map of the Tokaido highroad (Edo period). Laurentius de Voltolina, Henry of Germany lecturing at Bologna (14th century). Jean Miélot at his desk (15th century). Hokusai Manga, volume 6 (1817). Fun facts: Domesday Book binding (The National Archives); Gothic armour by Lorenz Helmschmied, 1493, photo Kunsthistorisches Museum Wien (CC BY 4.0); Bayeux Tapestry, Dinan scene; Ordeal by cold water, 12th-century manuscript; Fountains Abbey, photo by Klaus with K (CC BY-SA 3.0); John Gregory Crace, Court of the Lions (1855, Metropolitan Museum of Art, CC0); Lazzaretto Vecchio, Venice, photo by Godromil; Queen Mary Psalter, reeve and serfs (c. 1310); Moko Shurai Ekotoba (c. 1293); portrait of Nitobe Inazo; Utagawa Hiroshige, daimyo procession, Suruga-cho (1856) and Chushingura Act XI (c. 1840); Kawahara Keiga, Dejima (1811); scroll of the Perry mission (1854, British Museum); Uchida Kuichi, Emperor Meiji (1873); Codex Manesse (c. 1305). Timeline: Lindisfarne Gospels carpet page (c. 700); Genji Monogatari Emaki, Azumaya (12th century); landscape attributed to Sesshu Toyo (15th century); Himeji Castle, photo (CC0); Moko Shurai Ekotoba (c. 1293); Hiroshige, Tokaido series; the Perry expedition (1850s); event thumbnails from Wikimedia Commons, public domain.</details></div></footer>
+<footer><div class="footrow"><span>&copy; Agorian 2026. All rights reserved. Content and design may not be copied or reused without permission.</span><details class="credits"><summary>Image credits</summary>Artworks are sourced from Wikimedia Commons and are in the public domain unless a licence is noted. Raphael, The School of Athens (1511). Katsushika Hokusai, The Great Wave off Kanagawa and Fine Wind, Clear Morning (c. 1831). Utagawa Hiroshige, Nihonbashi from The Fifty-three Stations of the Tokaido (1833). Photograph of a samurai in armour (1860s). The Bayeux Tapestry, scene 57 (c. 1070s). Limbourg brothers, Très Riches Heures du duc de Berry, September and October (c. 1412 to 1416). Toggenburg Bible (1411). Siege of Jerusalem, 13th-century manuscript, Bibliothèque nationale de France. Issunshi Hanasato, a terakoya school (Edo period). Utagawa Kuniyoshi, warrior print, Takata no baba (19th century). Pictorial map of the Tokaido highroad (Edo period). Laurentius de Voltolina, Henry of Germany lecturing at Bologna (14th century). Jean Miélot at his desk (15th century). Hokusai Manga, volume 6 (1817). Fun facts: Domesday Book binding (The National Archives); Gothic armour by Lorenz Helmschmied, 1493, photo Kunsthistorisches Museum Wien (CC BY 4.0); Bayeux Tapestry, Dinan scene; Ordeal by cold water, 12th-century manuscript; Fountains Abbey, photo by Klaus with K (CC BY-SA 3.0); John Gregory Crace, Court of the Lions (1855, Metropolitan Museum of Art, CC0); Lazzaretto Vecchio, Venice, photo by Godromil; Queen Mary Psalter, reeve and serfs (c. 1310); Moko Shurai Ekotoba (c. 1293); portrait of Nitobe Inazo; Utagawa Hiroshige, daimyo procession, Suruga-cho (1856) and Chushingura Act XI (c. 1840); Kawahara Keiga, Dejima (1811); scroll of the Perry mission (1854, British Museum); Uchida Kuichi, Emperor Meiji (1873); Codex Manesse (c. 1305). Timeline: Lindisfarne Gospels carpet page (c. 700); Genji Monogatari Emaki, Azumaya (12th century); landscape attributed to Sesshu Toyo (15th century); Himeji Castle, photo (CC0); Moko Shurai Ekotoba (c. 1293); Hiroshige, Tokaido series; the Perry expedition (1850s); event thumbnails from Wikimedia Commons, public domain.</details></div></footer>
 </div>
 
 <script id="bank" type="application/json">__BANK__</script>
@@ -573,8 +572,6 @@ footer{margin-top:40px;font-size:13px;color:var(--muted)}
 'use strict';
 const BANK = JSON.parse(document.getElementById('bank').textContent);
 const Q = BANK.questions, TERMS = BANK.terms, SHORTQ = BANK.shortq||[], MARKER = BANK.marker||{pairs:[],checklist:[]}, SOURCES = BANK.sources||{sources:[],checklist:[]};
-const LOG_ENDPOINT = 'https://script.google.com/macros/s/AKfycbzlFW4JzyJvrfYTHunPIMbKbl0cSo-AYDnRHhWBWBo_KlUAdZ6NwPPCaKHfAME7Hcfu/exec'; // Apps Script web app URL (see logging/Code.gs). null = no logging.
-const TEACHER_CSV = null;  // published-to-web CSV link of the 'events' sheet. null = teacher view uses this device only.
 const app = document.getElementById('app');
 const UNITS = ['Medieval Europe','Shogunate Japan','Skills and concepts'];
 const AUTO = new Set(['mc','ms','gaps','text']);
@@ -586,16 +583,12 @@ const store = {
   set(k,v){ MEM[k]=v; try{ localStorage.setItem('agorian:'+k, JSON.stringify(v)) }catch(e){} }
 };
 let stats = store.get('stats', {}); // qid -> {a:attempts,c:correct}
-let sessionId = store.get('sid', null); if(!sessionId){ sessionId = Math.random().toString(36).slice(2,10); store.set('sid', sessionId) }
 
-function log(ev){
-  if(!LOG_ENDPOINT) return;
-  try{ fetch(LOG_ENDPOINT,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain'},body:JSON.stringify(Object.assign({sid:sessionId,t:Date.now(),name:studentName},ev)),keepalive:true}).catch(()=>{}) }catch(e){}
-}
+function log(){ /* Agorian is static: nothing leaves the device. */ }
 function record(q, correct, conf, hint){
   const s = stats[q.id] || {a:0,c:0}; s.a++; if(correct) s.c++; stats[q.id]=s; store.set('stats', stats);
   schedule(q, correct, conf);
-  log({qid:q.id, topic:q.topic, unit:q.unit, type:q.type, correct:correct?1:0, mode:state.mode, conf:conf||'', hint:hint?1:0, name:studentName});
+  log({qid:q.id, topic:q.topic, unit:q.unit, type:q.type, correct:correct?1:0, mode:state.mode, conf:conf||'', hint:hint?1:0});
 }
 function topicStats(topic){
   let a=0,c=0; Q.filter(q=>q.topic===topic && AUTO.has(q.type)).forEach(q=>{const s=stats[q.id]; if(s){a+=s.a;c+=s.c}}); return {a,c};
@@ -855,8 +848,8 @@ function home(){
   h(`
   <section class="hero">
     ${store.get('welcomed',false)?'':`<div class="welcome" id="welcome"><h2>Welcome to Agorian</h2>
-      <ol><li>Start with <b>Today’s ten</b>. It aims at what you find hardest.</li><li><b>Practice</b> lets you pick topics. Every answer comes with an explanation.</li><li>Your name and answers are recorded so your teacher can see how the class is going. Nothing else is collected.</li></ol>
-      <div class="namerow"><label for="nameIn" class="hint">Your name</label><input class="text" id="nameIn" placeholder="First name and initial" autocomplete="off" value="${esc(studentName)}"><button class="btn primary" id="goWelcome">Let’s go</button><button class="soundbtn ${soundOn?'on':''}" id="snd0">${soundOn?'&#9835; Sound on':'&#9835; Sound off'}</button></div></div>`}
+      <ol><li>Start with <b>Today’s ten</b>. It aims at what you find hardest.</li><li><b>Practice</b> lets you pick topics. Every answer comes with an explanation.</li></ol>
+      <div class="namerow"><button class="btn primary" id="goWelcome">Let’s go</button><button class="soundbtn ${soundOn?'on':''}" id="snd0">${soundOn?'&#9835; Sound on':'&#9835; Sound off'}</button></div></div>`}
     <h1><em>Challenge</em> what you know.</h1>
     <div class="herogrid">
       <div class="herotext"><p>The agora was the open square of Athens where citizens traded, voted and were questioned by Socrates. This is yours. Quick questions with an explanation after every answer, timed challenges, a timeline game, flashcards for the key terms and exam-style paragraph prompts, all across Medieval Europe and Shogunate Japan.</p>
@@ -892,8 +885,7 @@ function home(){
     </div>
   </section>`);
   app.querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>({setup, challenge, terms, write, daily, timeline, facts, exam, marker, sources})[b.dataset.go]());
-  const gw=app.querySelector('#goWelcome'); if(gw){ const inp=app.querySelector('#nameIn'); const finishW=()=>{ studentName=inp.value.trim().slice(0,40); store.set('name',studentName); store.set('welcomed',true); log({event:'welcome'}); home() }; gw.onclick=finishW; inp.onkeydown=e=>{ if(e.key==='Enter') finishW() }; app.querySelector('#snd0').onclick=()=>setSound(!soundOn) }
-  const who=document.getElementById('who'); if(who){ who.innerHTML = studentName ? `Revising as <b>${esc(studentName)}</b> <button id="chgName">change</button>` : `<button id="chgName">Add your name</button>`; who.querySelector('#chgName').onclick=()=>{ store.set('welcomed',false); home() } }
+  const gw=app.querySelector('#goWelcome'); if(gw){ gw.onclick=()=>{ store.set('welcomed',true); home() }; app.querySelector('#snd0').onclick=()=>setSound(!soundOn) }
   app.querySelectorAll('[data-topic]').forEach(b=>b.onclick=()=>startQuiz({mode:'practice', topics:[b.dataset.topic], timed:false}));
   app.querySelectorAll('[data-unit]').forEach(b=>b.onclick=()=>startQuiz({mode:'practice', topics:topicsIn(b.dataset.unit), timed:false, count:15}));
   updateStreak();
@@ -1039,7 +1031,6 @@ function showQ(){
 }
 
 let streak = store.get('streak', 0);
-let studentName = store.get('name', '');
 let soundOn = store.get('sound', true);
 // ---- sound (synthesised, no files) ----
 let actx=null;
@@ -1192,46 +1183,6 @@ function sprint(){
 }
 
 // ---------- teacher view (local data now, class logging later) ----------
-function parseCSV(txt){ const out=[]; let row=[],cell='',q=false; for(let i=0;i<txt.length;i++){ const ch=txt[i]; if(q){ if(ch==='"'){ if(txt[i+1]==='"'){cell+='"';i++} else q=false } else cell+=ch } else if(ch==='"') q=true; else if(ch===','){row.push(cell);cell=''} else if(ch==='\n'){row.push(cell);out.push(row);row=[];cell=''} else if(ch!=='\r') cell+=ch } if(cell||row.length){row.push(cell);out.push(row)} return out }
-async function classStats(){
-  const r=await fetch(TEACHER_CSV,{cache:'no-store'}); const rows=parseCSV(await r.text()); const h=rows.shift(); const i=Object.fromEntries(h.map((k,n)=>[k,n]));
-  const st={}; const people={}; let events=0; const timed=[]; const sq={}; const mk={n:0,right:0}; const sr={n:0,mc:0,self:0};
-  const who=r=>{ const nm=(r[i.name]||'').trim(); const key=nm?nm.toLowerCase():'device '+String(r[i.sid]||'').slice(0,6); const p=people[key]=people[key]||{name:nm||'(no name)',a:0,c:0,timed:0,sq:0,last:0,sids:new Set()}; p.sids.add(r[i.sid]); const t=+r[i.t]||Date.parse(r[i.received])||0; if(t>p.last) p.last=t; return p };
-  rows.forEach(r=>{ const ev=r[i.event]; const p=who(r);
-    if(!ev && r[i.qid]){ events++; p.a++; const id=+r[i.qid]; st[id]=st[id]||{a:0,c:0}; st[id].a++; if(+r[i.correct]===1){ st[id].c++; p.c++ } }
-    else if(ev==='timed'){ p.timed++; timed.push({name:p.name,secs:+r[i.secs]||0,words:+r[i.n]||0,qid:r[i.qid]}) }
-    else if(ev==='shortq'){ p.sq++; const k=r[i.qid]; sq[k]=sq[k]||{n:0,sum:0,of:+r[i.n]||0}; sq[k].n++; sq[k].sum+=+r[i.c]||0}
-    else if(ev==='marker'){ mk.n++; if(+r[i.correct]===1) mk.right++ }
-    else if(ev==='sources'){ sr.n++; sr.mc+=+r[i.n]||0; sr.self+=+r[i.c]||0 } });
-  return {st, events, people:Object.values(people), timed, sq, mk, sr};
-}
-const ago=t=>{ if(!t) return ''; const m=Math.round((Date.now()-t)/60000); if(m<60) return m+' min ago'; const hh=Math.round(m/60); if(hh<36) return hh+' h ago'; return Math.round(hh/24)+' days ago' };
-async function teacher(){
-  let src=stats, note='answers recorded on <b>this device</b>', extra='', c=null;
-  if(TEACHER_CSV){ try{ c=await classStats(); src=c.st; note=`<b>${c.events}</b> answers from <b>${c.people.length}</b> students in the class log`; }catch(e){ extra='<p class="hint">Could not reach the class log, showing this device instead.</p>' } }
-  const tstat=t=>{ let a=0,c=0; Q.filter(q=>q.topic===t && AUTO.has(q.type)).forEach(q=>{const s=src[q.id]; if(s){a+=s.a;c+=s.c}}); return {a,c} };
-  const minTries=c?3:1; const rows=Q.filter(q=>AUTO.has(q.type)).map(q=>({q,s:src[q.id]||{a:0,c:0}})).filter(r=>r.s.a>=minTries).sort((a,b)=>(a.s.c/a.s.a)-(b.s.c/b.s.a));
-  const byT=UNITS.flatMap(u=>topicsIn(u).map(t=>({t,s:tstat(t)}))).filter(r=>r.s.a).sort((a,b)=>(a.s.c/a.s.a)-(b.s.c/b.s.a));
-  const csv='id,unit,topic,type,question,attempts,correct,accuracy\n'+rows.map(r=>[r.q.id,r.q.unit,r.q.topic,r.q.type,JSON.stringify(r.q.question),r.s.a,r.s.c,Math.round(100*r.s.c/r.s.a)].join(',')).join('\n');
-  const pct=s=>s.a?Math.round(100*s.c/s.a):0;
-  const studentsHTML=c?(()=>{ const ps=[...c.people].sort((a,b)=>b.last-a.last); const low=ps.filter(p=>p.a<10).length;
-    return `<div><p class="eyebrow" style="margin-bottom:8px">Students</p><p class="hint">${ps.length} seen. ${low?`<b>${low}</b> with fewer than 10 answers.`:''} Sorted by most recent.</p>
-    <div class="tbl"><table class="tt"><thead><tr><th>Name</th><th class="n">Answers</th><th class="n">Accuracy</th><th class="n">Short answers</th><th class="n">Timed paragraphs</th><th>Last seen</th></tr></thead><tbody>${ps.map(p=>`<tr><td>${esc(p.name)}</td><td class="n ${p.a<10?'lo':''}">${p.a}</td><td class="n ${p.a&&p.c/p.a<.5?'lo':''}">${p.a?Math.round(100*p.c/p.a)+'%':''}</td><td class="n">${p.sq||''}</td><td class="n">${p.timed||''}</td><td class="muted">${ago(p.last)}</td></tr>`).join('')}</tbody></table></div></div>` })():'';
-  const sqHTML=c&&Object.keys(c.sq).length?(()=>{ const ks=Object.keys(c.sq).sort((a,b)=>(c.sq[a].sum/c.sq[a].n/c.sq[a].of)-(c.sq[b].sum/c.sq[b].n/c.sq[b].of));
-    return `<div><p class="eyebrow" style="margin-bottom:8px">Short answers, self-marked</p><div class="tbl"><table class="tt"><thead><tr><th>Question</th><th class="n">Marked</th><th class="n">Average</th></tr></thead><tbody>${ks.map(k=>{ const s=c.sq[k], q=SHORTQ.find(x=>x.id===k); return `<tr><td>${esc(q?q.q:k)}</td><td class="n">${s.n}</td><td class="n ${s.sum/s.n/s.of<.5?'lo':''}">${(s.sum/s.n).toFixed(1)} / ${s.of}</td></tr>`}).join('')}</tbody></table></div><p class="hint">Self-marks are what students gave themselves after seeing the exemplars. Treat them as a confidence signal, not a grade.</p></div>` })():'';
-  const timedHTML=c&&c.timed.length?`<div><p class="eyebrow" style="margin-bottom:8px">Timed paragraphs</p><p>${c.timed.length} attempts under exam conditions. Average ${Math.round(c.timed.reduce((a,t)=>a+t.words,0)/c.timed.length)} words in ${Math.round(c.timed.reduce((a,t)=>a+t.secs,0)/c.timed.length/60)} minutes. A full 8-mark answer is usually 180 to 250 words.</p></div>`:'';
-  h(`<section class="section"><h2>Teacher view</h2>
-  <p class="muted">Question difficulty from ${note}. Hardest first.</p>${extra}
-  ${rows.length||c?`<div class="card">${studentsHTML}<div><p class="eyebrow" style="margin-bottom:8px">Topics</p><div class="bytopic">${byT.map(r=>`<div class="bt"><div><div style="margin-bottom:4px">${esc(r.t)}</div><div class="bar"><i style="width:${pct(r.s)}%;background:${pct(r.s)<60?'var(--accent)':'var(--sage)'}"></i></div></div><span class="n">${pct(r.s)}% · ${r.s.a}</span></div>`).join('')}</div></div>
-    <div><p class="eyebrow" style="margin-bottom:8px">Hardest questions</p><div class="tbl"><table class="tt"><thead><tr><th>Question</th><th>Topic</th><th class="n">Tries</th><th class="n">Correct</th></tr></thead><tbody>${rows.slice(0,25).map(r=>`<tr><td>${esc(r.q.question)}</td><td class="muted">${esc(r.q.topic)}</td><td class="n">${r.s.a}</td><td class="n ${pct(r.s)<50?'lo':''}">${pct(r.s)}%</td></tr>`).join('')}</tbody></table></div>${rows.length>25?`<p class="hint">Showing the 25 hardest of ${rows.length}${c?' with at least 3 attempts':''}. Copy as CSV for the full list.</p>`:''}</div>
-    ${sqHTML}${timedHTML}${c&&(c.mk.n||c.sr.n)?`<div><p class="eyebrow" style="margin-bottom:8px">Exam skills</p>${c.mk.n?`<p><b>Be the marker.</b> ${c.mk.n} pairs attempted, ${Math.round(100*c.mk.right/c.mk.n)}% picked the 7.</p>`:''}${c.sr.n?`<p><b>Unseen sources.</b> ${c.sr.n} sources attempted, quick questions ${(c.sr.mc/c.sr.n).toFixed(1)} / 4, self-mark ${(c.sr.self/c.sr.n).toFixed(1)} / 3.</p>`:''}</div>`:''}
-    <div class="row"><button class="btn" id="csv">Copy questions as CSV</button>${TEACHER_CSV?'<button class="btn" id="refresh">Refresh</button>':''}<button class="btn quiet" id="home">Home</button></div></div>`:`<div class="card"><p>No answers recorded yet.</p><div class="row"><button class="btn quiet" id="home">Home</button></div></div>`}
-  </section>`);
-  const cb=app.querySelector('#csv'); if(cb) cb.onclick=async e=>{ try{ await navigator.clipboard.writeText(csv); e.target.textContent='Copied' }catch(err){ e.target.textContent='Copy blocked' } };
-  const rf=app.querySelector('#refresh'); if(rf) rf.onclick=()=>teacher();
-  app.querySelector('#home').onclick=home;
-}
-
 // ---------- fun facts ----------
 function facts(){
   const unitOf = t => (Q.find(q=>q.topic===t)||{}).unit || 'Skills and concepts';
@@ -1618,9 +1569,9 @@ const mm=document.getElementById('musMode'); mm.value=music.mode; mm.onchange=()
 const mv=document.getElementById('musVol'); mv.value=music.vol; mv.oninput=()=>{ music.vol=+mv.value; store.set('musVol',music.vol); if(music.master&&actx) music.master.gain.setTargetAtTime(music.vol/100*.6, actx.currentTime, .1) };
 document.addEventListener('visibilitychange',()=>{ if(document.hidden&&music.on){ clearTimeout(music.timer) } else if(music.on){ phrase() } });
 (function tick(){ const d=new Date(); const el=document.getElementById('clock'); if(el){ const hh=d.getHours(), m=String(d.getMinutes()).padStart(2,'0'), ss=String(d.getSeconds()).padStart(2,'0'); const h12=((hh+11)%12)+1; el.innerHTML=`<span class="lbl">Melbourne</span><span class="time">${h12}:${m}<small>${hh<12?'am':'pm'}</small></span><span class="date">${d.toLocaleDateString('en-AU',{weekday:'long',day:'numeric',month:'long'})}</span>` } setTimeout(tick, 60000-(Date.now()%60000)+50) })();
-HOME_FN=home; home=screen(home); setup=screen(setup); challenge=screen(challenge); terms=screen(terms); write=screen(write); daily=screen(daily); timeline=screen(timeline); timelineGame=screen(timelineGame); teacher=screen(teacher); sprint=screen(sprint); facts=screen(facts); exam=screen(exam); shortq=screen(shortq); marker=screen(marker); sources=screen(sources); startQuiz=screen(startQuiz);
+HOME_FN=home; home=screen(home); setup=screen(setup); challenge=screen(challenge); terms=screen(terms); write=screen(write); daily=screen(daily); timeline=screen(timeline); timelineGame=screen(timelineGame); sprint=screen(sprint); facts=screen(facts); exam=screen(exam); shortq=screen(shortq); marker=screen(marker); sources=screen(sources); startQuiz=screen(startQuiz);
 document.getElementById('backBtn').onclick=goBack;
-const ROUTES={practice:setup, challenge, terms, write, daily, timeline, teacher, sprint, facts, success, exam, shortq, marker, sources};
+const ROUTES={practice:setup, challenge, terms, write, daily, timeline, sprint, facts, success, exam, shortq, marker, sources};
 const r=(location.hash||'').slice(1); (ROUTES[r]||home)();
 })();
 </script>
