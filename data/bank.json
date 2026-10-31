@@ -2357,16 +2357,16 @@
    "topic": "Source analysis",
    "skill": "",
    "stimulus": null,
-   "explanation": "1290 is in the 1200s, the 13th century. A manuscript made at the time is a primary source.",
+   "explanation": "1480 is in the 1400s, so the 15th century: add one to the first two digits. A tapestry made at the time it shows is a primary visual source.",
    "source": "Socrative",
    "srcId": "soc_exam",
    "type": "mc",
-   "question": "A source is captioned 'Illuminated manuscript produced in Italy, c. 1290'. In which century was it created and what type of source is it?",
+   "question": "A source is captioned 'Tapestry woven in Flanders, c. 1480, showing a noble hunting party.' In which century was it made and what type of source is it?",
    "options": [
-    "12th century, secondary source",
-    "13th century, primary source",
-    "13th century, secondary source",
-    "14th century, primary source"
+    "14th century, primary source",
+    "15th century, primary source",
+    "15th century, secondary source",
+    "16th century, secondary source"
    ],
    "answer": [
     1
@@ -3461,17 +3461,17 @@
    "topic": "Tokugawa Shogunate",
    "skill": "cause and effect",
    "type": "mc",
-   "question": "Travellers on the Tokaido road between Edo and Kyoto often crossed rivers and inlets by ferry or were carried across by porters rather than using bridges. Why?",
+   "question": "Travellers on the Tokaido had to stop at checkpoints such as Hakone, where officials searched for weapons being carried towards Edo and for women leaving it. What was the shogunate trying to prevent?",
    "options": [
-    "The shogunate limited bridges on major rivers so armies could not move quickly against Edo, and Japan's mountains and rivers made roads hard to build",
-    "Japanese builders had never learnt to build long bridges, and it was only after Perry arrived in 1853 that Western engineers showed them how to do it",
-    "The rivers of the Kanto plain were too wide and fast for any bridge of the time, so none were built anywhere in Japan until the 1800s",
-    "Ferrymen and porters paid the shogunate for the right to carry travellers across each river, so the government protected their trade by refusing to allow bridges"
+    "Daimyo smuggling guns into Edo, or their hostage families slipping out, which sankin kotai depended on",
+    "Merchants moving rice between domains without paying the shogun's tax on goods carried by road",
+    "Christian missionaries travelling in disguise from Nagasaki to preach in the shogun's capital",
+    "Peasants leaving their villages to look for paid work in the towns along the highway"
    ],
    "answer": [
     0
    ],
-   "explanation": "Japan's geography of mountains, fast rivers and coastal inlets made overland travel slow, and the Tokugawa deliberately left some rivers unbridged and set checkpoints to control movement toward Edo.",
+   "explanation": "The checkpoints enforced sankin kotai. Guns entering Edo could arm a rebellion, and a daimyo's wife leaving Edo meant the hostage system was being evaded. The saying was 'incoming guns, outgoing women'.",
    "id": 159,
    "source": "Agorian",
    "srcId": null,
@@ -3566,17 +3566,17 @@
    "topic": "Source analysis",
    "skill": "source analysis",
    "type": "mc",
-   "question": "A history book shows a colour woodblock print of a crowded theatre, made in Japan in 1765. How should this source be described?",
+   "question": "A history book shows a painted folding screen of Portuguese traders arriving at Nagasaki, made in Japan around 1600. How should this source be described?",
    "options": [
     "A primary source: a visual (artwork) created at the time it depicts",
-    "A secondary source: a picture reproduced in a book published long after 1765",
-    "A primary source: a written document from the Edo period about the theatre",
-    "A secondary source: an artwork made by an artist rather than by a historian"
+    "A secondary source: a picture reproduced in a book published long after 1600",
+    "A primary source: a written document from the period about foreign trade",
+    "A secondary source: an artwork made by someone who was not a historian"
    ],
    "answer": [
     0
    ],
-   "explanation": "Type of source means the form it takes: a print, painting, letter, chronicle, map and so on. Origin means who made it, where and when. A print made in 1765 of Edo-period life is a primary visual source regardless of where it is reproduced today.",
+   "explanation": "Type of source means the form it takes: a screen, print, letter, chronicle, map and so on. Origin means who made it, where and when. A screen painted around 1600 showing the traders of its own day is a primary visual source regardless of where it is reproduced today.",
    "id": 164,
    "source": "Agorian",
    "srcId": null,
@@ -3587,7 +3587,7 @@
    "topic": "Source analysis",
    "skill": "source analysis",
    "type": "mc",
-   "question": "A caption reads: 'Illuminated manuscript produced in Genoa, Italy, c. 1290, artist unknown.' Which of these can you state from the caption alone?",
+   "question": "A caption reads: 'Stained-glass window made in Canterbury, England, c. 1180, maker unknown.' Which of these can you state from the caption alone?",
    "options": [
     "Where and roughly when it was made",
     "The purpose the artist had in mind",
@@ -3608,8 +3608,8 @@
    "topic": "Source analysis",
    "skill": "source analysis",
    "type": "short",
-   "question": "A medieval illumination shows two knights jousting while a crowd watches from castle walls. Write one sentence that INFERS something about knights from the picture, using the word 'suggests'.",
-   "explanation": "A good inference links a detail to a conclusion: 'The watching crowd suggests tournaments were public displays of skill that built a knight's reputation.' Weak answers only describe what is in the picture.",
+   "question": "A medieval illumination shows a king on his throne while a noble kneels and places his hands between the king's. Write one sentence that INFERS something about power from the picture, using the word 'suggests'.",
+   "explanation": "A good inference links a detail to a conclusion: 'The noble kneeling with his hands in the king's suggests that loyalty was a personal promise made in public, which bound the vassal to his lord.' Weak answers only describe what is in the picture.",
    "id": 166,
    "source": "Agorian",
    "srcId": null,
