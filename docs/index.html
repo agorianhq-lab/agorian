@@ -1436,7 +1436,7 @@ function success(open){
   const draw=screen(function successPage(id){
     const sk=SHORT.find(x=>x.id===id);
     h(`<section class="section">${MODEH('write','What success looks like')}
-    <p class="muted">How the marks are won and lost. The marks shown are what a marker would most likely give against the exam criteria; marking is a judgement within bands, so two markers can differ by a mark on the same answer. There is no formula.</p>
+    <p class="muted">How the marks are won and lost. The marks shown are what a marker would most likely give against the exam criteria.</p>
     ${sk?`<div class="card"><div class="row" style="justify-content:space-between"><h3 style="font-size:24px;color:var(--plum)">${esc(sk.title)}</h3><button class="btn quiet" id="back">All question types</button></div>${sk.body()}${pager(SHORT.indexOf(sk),SHORT.length,`${SHORT.indexOf(sk)+1} of ${SHORT.length}`)}</div>`:
     `<div class="hub">${SHORT.map(x=>`<button class="hubcard" data-id="${x.id}"><b>${esc(x.title)}</b><span>${esc(x.sub)}</span></button>`).join('')}
       </div>
