@@ -571,7 +571,7 @@ footer{margin-top:40px;font-size:13px;color:var(--muted)}
 (function(){
 'use strict';
 const BANK = JSON.parse(document.getElementById('bank').textContent);
-const Q = BANK.questions, TERMS = BANK.terms, SHORTQ = BANK.shortq||[], MARKER = BANK.marker||{pairs:[],checklist:[]}, SOURCES = BANK.sources||{sources:[],checklist:[]};
+const Q = BANK.questions, TERMS = BANK.terms, SHORTQ = BANK.shortq||[], SOURCES = BANK.sources||{sources:[],checklist:[]};
 const app = document.getElementById('app');
 const UNITS = ['Medieval Europe','Shogunate Japan','Skills and concepts'];
 const AUTO = new Set(['mc','ms','gaps','text']);
@@ -809,7 +809,7 @@ const FACTS=[
 const FACT_IMG=['f-domesday','f-armour','f-motte','f-ordeal','f-abbey','f-alhambra','f-lazzaretto','f-harvest','eu-bayeux','jp-samurai','f-mongol','f-nitobe','f-sankin','f-dejima','f-edo','f-ronin','f-perry','f-meiji','f-manesse'];
 const FACT_TITLES=['The Domesday Book','The weight of armour','A castle in weeks','The end of trial by ordeal','The Church as landlord','Words from Arabic','Where quarantine comes from','Wages after the plague','Not a tapestry at all','To serve','The divine wind','Bushido\u2019s late birth','Processions of thousands','Dejima, the fan-shaped island','A million people in Edo','The 47 ronin','Perry\u2019s toy railway','Enlightened rule','Knights and samurai'];
 function factFor(topics){ const pool=FACTS.filter(f=>!topics||topics.includes(f[0])); const f=(pool.length?pool:FACTS)[Math.random()*(pool.length||FACTS.length)|0]; return `<div class="fact"><span class="lamp">?</span><div><b>Did you know</b>${esc(f[1])}</div></div>` }
-const MODEH = (name,title) => `<div class="modeh" style="--m:var(--${({practice:'accent',challenge:'gold',timeline:'teal',terms:'sage',write:'plum',facts:'rose',marker:'plum',sources:'teal'})[name]})"><span class="k"><svg><use href="#m-${name}"/></svg></span><h2>${title}</h2></div>`;
+const MODEH = (name,title) => `<div class="modeh" style="--m:var(--${({practice:'accent',challenge:'gold',timeline:'teal',terms:'sage',write:'plum',facts:'rose',sources:'teal'})[name]})"><span class="k"><svg><use href="#m-${name}"/></svg></span><h2>${title}</h2></div>`;
 const unitCls = u => u==='Medieval Europe'?'eu':u==='Shogunate Japan'?'jp':'sk';
 // timeline events (years hidden until placed)
 const EVENTS=[
@@ -870,7 +870,7 @@ function home(){
       <button class="mode terms" data-go="terms"><span class="pic" style="background-image:url(${IMG['t-terms']})"></span><span class="k"><svg><use href="#m-terms"/></svg></span><span class="t">Key terms</span><span class="n">Flashcards to flip, plus a ten-definition sprint against the clock.</span></button>
       <button class="mode write" data-go="write"><span class="pic" style="background-image:url(${IMG['t-write']})"></span><span class="k"><svg><use href="#m-write"/></svg></span><span class="t">Paragraph practice</span><span class="n">Exam prompts with a TEEAL scaffold, model answers and what success looks like.</span></button>
       <button class="mode facts" data-go="facts"><span class="pic" style="background-image:url(${IMG['t-facts']})"></span><span class="k"><svg><use href="#m-facts"/></svg></span><span class="t">Fun facts</span><span class="n">Did-you-know cards from both units. Read one, then practise the topic it came from.</span></button>
-      <button class="mode marker" data-go="marker"><span class="pic" style="background-image:url(${IMG['f-domesday']})"></span><span class="k"><svg><use href="#m-marker"/></svg></span><span class="t">Be the marker</span><span class="n">Two Section C answers, a 4 and a 7. Pick the stronger one, then see where the marks were.</span></button>
+      
       <button class="mode sources" data-go="sources"><span class="pic" style="background-image:url(${IMG['f-dejima']})"></span><span class="k"><svg><use href="#m-sources"/></svg></span><span class="t">Unseen sources</span><span class="n">Ten sources you have not seen. Four quick questions each, then a timed 3-mark answer.</span></button>
     </div>
   </section>
@@ -883,7 +883,7 @@ function home(){
         const m=mastery(t); return `<button class="topic ${unitCls(u)}" data-topic="${esc(t)}" style="--p:${s.a?pct:0}%"><span class="name">${esc(t)}${m?` <span class="badge ${m}" title="${m} mastery" style="margin-left:6px;vertical-align:middle"></span>`:''}</span><span class="pct ${s.a?'':'none'}">${s.a?pct+'%':'Not yet'}${s.a&&pct===100?'<span class="tick" aria-label="complete">&#10003;</span>':''}</span></button>`}).join('')}</div></div>`).join('')}
     </div>
   </section>`);
-  app.querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>({setup, challenge, terms, write, daily, timeline, facts, exam, marker, sources})[b.dataset.go]());
+  app.querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>({setup, challenge, terms, write, daily, timeline, facts, exam, sources})[b.dataset.go]());
   const gw=app.querySelector('#goWelcome'); if(gw){ gw.onclick=()=>{ store.set('welcomed',true); home() }; app.querySelector('#snd0').onclick=()=>setSound(!soundOn) }
   app.querySelectorAll('[data-topic]').forEach(b=>b.onclick=()=>startQuiz({mode:'practice', topics:[b.dataset.topic], timed:false}));
   app.querySelectorAll('[data-unit]').forEach(b=>b.onclick=()=>startQuiz({mode:'practice', topics:topicsIn(b.dataset.unit), timed:false, count:15}));
@@ -1217,7 +1217,7 @@ function exam(){
   h(`<section class="section exam"><div class="modeh" style="--m:var(--gold-ink)"><span class="k">&#9998;</span><h2>Before the exam</h2></div>
   <div class="grid3">
     <div class="box"><h3>The paper</h3><span class="big">50</span><p>marks in <b>50 minutes</b>, plus 5 minutes reading time. Blue or black pen. A separate <b>Source Booklet</b> holds the sources; the questions tell you which one to look at.</p></div>
-    <div class="box"><h3>Three sections</h3><ul><li><b>A. Multiple choice</b>, 10 marks. Several questions use a source from the booklet.</li><li><b>B. Short answer</b>, 32 marks. Identify, describe, explain and compare questions worth 1 to 4 marks each, some using a source. <a href="#sources" data-go="sources">Practise with unseen sources.</a></li><li><b>C. Extended response</b>, 8 marks. Choose <b>one</b> of two questions. TEEAL paragraph(s) with a clear contention. <a href="#marker" data-go="marker">See a 4 and a 7 side by side.</a></li></ul></div>
+    <div class="box"><h3>Three sections</h3><ul><li><b>A. Multiple choice</b>, 10 marks. Several questions use a source from the booklet.</li><li><b>B. Short answer</b>, 32 marks. Identify, describe, explain and compare questions worth 1 to 4 marks each, some using a source. <a href="#sources" data-go="sources">Practise with unseen sources.</a></li><li><b>C. Extended response</b>, 8 marks. Choose <b>one</b> of two questions. TEEAL paragraph(s) with a clear contention.</li></ul></div>
     <div class="box"><h3>Both units, both skills</h3><p>Questions move between Medieval Europe and Shogunate Japan, and between knowledge questions and source questions. Sources may be artworks, written extracts, maps or timelines, so practise all of them.</p><p>Everything on the <b>I can</b> list in your revision booklet is fair game.</p></div>
   </div>
   <div class="card" style="margin-top:18px"><p class="eyebrow">A plan for the 50 minutes</p>
@@ -1236,15 +1236,15 @@ function exam(){
       <tr><td>Compare</td><td>4</td><td>Describe each of the two things in its own right (1 + 1), then one similarity (1) and one difference (1). Use <b>both</b>, <b>however</b> and <b>whereas</b>.</td></tr>
       <tr><td>Using evidence from the source</td><td>+1</td><td>Quote or point to a detail in the source and say what it shows. No source detail, no source mark. When a question says <b>and your own knowledge</b>, at least one of your points must still use a specific detail from the source.</td></tr>
       <tr><td>Explain why it is a turning point</td><td>3</td><td>Name the event (1), say what its outcome was (1), then explain why that outcome changed things for a long time (1).</td></tr>
-      <tr><td>Analyse (Section C)</td><td>8</td><td>A TEEAL structure with a contention that answers the question, accurate evidence from class, an explanation of how the impacts connect to each other, the concept of <b>significance</b> named and used, and a final sentence that judges. Marked analysis 3, knowledge 2, structure 1, writing 2.</td></tr>
+      <tr><td>Analyse (Section C)</td><td>8</td><td>Graded out of 8 on the criteria printed on the paper: structure (TEEAL, clear contention, logical order), historical concepts (significance, cause and effect, perspectives), specific accurate knowledge, examples and evidence studied in class, and clear written expression.</td></tr>
     </tbody></table></div></div>
   <div class="grid3" style="margin-top:18px">
     <div class="box"><h3>Reading a source</h3><ul><li><b>Type</b>: manuscript, print, chronicle, letter, map, photograph.</li><li><b>Origin</b>: who, where, when. Give the century or the date from the caption.</li><li><b>Infer</b>: say what the details <i>suggest</i>, then back it with your own knowledge.</li><li>Know which period each event sits in, and count centuries carefully (1215 is the 13th century).</li></ul></div>
-    <div class="box"><h3>Section C marking</h3><ul><li>Structure (1): a TEEAL structure with a clear contention, topic and linking sentences, a logical order.</li><li>Analysis (3): explain how factors and impacts connect to one another, and refer to <b>historical significance</b> by name. Cause and effect and perspectives help here too.</li><li>Knowledge (2): specific, accurate facts and examples studied in class that support the points you make. Booklet-level knowledge is enough for full marks here.</li><li>Writing (2): clear expression, spelling and grammar, historical terms.</li></ul><p class="hint">Analyse means explain how things connect, not list them. The top band goes to answers that show how one impact led to another and say why that matters. Weighing which impact mattered most is one good way to do that, not the only way.</p></div>
+    <div class="box"><h3>Section C: what you are marked on</h3><ul><li>The structure of your response. You are encouraged to use a TEEAL structure with a clear contention and a logical order of arguments.</li><li>Your ability to write a clear and meaningful discussion that demonstrates relevant historical concepts, particularly significance, cause and effect, and perspectives.</li><li>The use of specific, detailed and accurate historical knowledge relevant to your chosen question.</li><li>The use of relevant examples and evidence studied in class.</li><li>Clear written expression and accurate spelling, grammar and sentence structure.</li></ul></div>
     <div class="box"><h3>Marks people lose</h3><ul><li>Answering one point twice when the question says <b>two</b>.</li><li>Describing a source instead of inferring from it.</li><li>Writing "medieval times" for a century.</li><li>Leaving a multiple-choice question blank, or circling two.</li><li>Spending 20 minutes on Section A.</li><li>A Section C answer with no contention in the first sentence.</li></ul></div>
   </div>
   <div class="actions" style="margin-top:18px"><button class="btn primary" id="toShort">Practise short answers</button><button class="btn" id="toSuccess">See what full marks look like</button><button class="btn" id="toWrite">Paragraph practice</button><button class="btn quiet" id="home">Home</button></div></section>`);
-  app.querySelectorAll('[data-go]').forEach(a=>a.onclick=e=>{ e.preventDefault(); ({marker,sources})[a.dataset.go]() }); app.querySelector('#toShort').onclick=()=>shortq(); app.querySelector('#toSuccess').onclick=()=>success(); app.querySelector('#toWrite').onclick=()=>write(); app.querySelector('#home').onclick=home;
+  app.querySelectorAll('[data-go]').forEach(a=>a.onclick=e=>{ e.preventDefault(); ({sources})[a.dataset.go]() }); app.querySelector('#toShort').onclick=()=>shortq(); app.querySelector('#toSuccess').onclick=()=>success(); app.querySelector('#toWrite').onclick=()=>write(); app.querySelector('#home').onclick=home;
 }
 
 // ---------- short answers: write, compare with marked exemplars, self-mark ----------
@@ -1285,49 +1285,6 @@ function shortq(){
         const step=()=>{ const left=endAt-Date.now(); disp.textContent=fmt(left); disp.classList.toggle('warn',left<20000); if(left<=0){ clearInterval(tid); tid=null; disp.textContent='0:00'; startB.textContent='Start timer'; beep('win') } }; step(); tid=setInterval(step,500) } }
     const pv=app.querySelector('#pg-prev'), nx=app.querySelector('#pg-next'); if(pv) pv.onclick=()=>one(SHORTQ[k-1].id); if(nx) nx.onclick=()=>one(SHORTQ[k+1].id);
     app.querySelector('#back').onclick=()=>shortq();
-  });
-  list();
-}
-
-// ---------- Be the marker: Section C calibration ----------
-let mkDone=store.get('marker',{});
-function markerRender(t){ let n=0; const notes=[]; const html=t.replace(/\[\[(.+?)\|\|(.+?)\]\]/g,(m,a,b)=>{n++;notes.push(b);return `<mark data-n="${n}" title="${esc(b)}">${esc(a)}</mark>`}); return {html,notes} }
-function marker(){
-  const P=MARKER.pairs;
-  const list=()=>{ const got=P.filter(p=>mkDone[p.id]).length;
-    h(`<section class="section"><div class="row xrow" style="justify-content:space-between">${MODEH('marker','Be the marker')}<span class="pill">${got} of ${P.length} marked</span></div>
-    <p class="muted">${esc(MARKER.intro)}</p>
-    <div class="card"><p class="eyebrow">What a marker looks for in a Section C answer</p><ol style="margin:6px 0 0;padding-left:20px">${MARKER.checklist.map(c=>`<li>${esc(c)}</li>`).join('')}</ol></div>
-    <div class="thumbs" style="margin-top:12px">${P.map(p=>{ const u=unitCls(p.unit); const d=mkDone[p.id]; return `<button class="thumb" data-id="${p.id}" style="border-left:8px solid var(--${u})"><span class="body"><span class="eyebrow" style="color:var(--${u})">${esc(p.unit)} · 8 marks</span><b>${esc(p.q)}</b>${d?`<span class="done">&#10003; Marked${d.right?' correctly':''}</span>`:'<span class="hint">Two answers. Which is the 7?</span>'}</span></button>`}).join('')}</div>
-    <p class="hint" style="margin-top:12px">Answers are written for this activity. Neither is a real student's work.</p>
-    <div class="row" style="margin-top:12px"><button class="btn quiet" id="home">Home</button></div></section>`);
-    app.querySelectorAll('.thumb').forEach(b=>b.onclick=()=>one(b.dataset.id)); app.querySelector('#home').onclick=home };
-  const one=screen(function mkView(id){
-    const p=P.find(x=>x.id===id); const k=P.indexOf(p); const u=unitCls(p.unit);
-    const flip=Math.random()<.5; const A=flip?p.strong:p.weak, B=flip?p.weak:p.strong; const strongIs=flip?'A':'B'; let picked=null;
-    const ra=markerRender(A.text), rb=markerRender(B.text);
-    h(`<section class="section" id="mkroot"><div class="row xrow" style="justify-content:space-between">${MODEH('marker','Be the marker')}<span class="pill">${esc(p.unit)} · Section C</span></div>
-    <div class="card xcard ${u}"><span class="eyebrow" style="color:var(--${u})">${esc(p.unit)} · 8 marks</span><p class="qtext">${esc(p.q)}</p>
-      <p class="muted" style="margin:4px 0 0">Read both. One scored 4, the other 7. Pick the stronger one, then say why before the marks appear. ${esc(MARKER.caveat||"")}</p>
-      <div class="mkgrid">${[['A',A,ra],['B',B,rb]].map(([kk,x,r])=>`<div class="sample mk" data-k="${kk}"><h3>Answer ${kk} <span class="marks full">${x.split?x.split+" = ":""}${x.marks} / 8</span></h3><p class="ans">${r.html}</p><ol class="mknotes">${r.notes.map((n,i)=>`<li><b>${i+1}</b>${esc(n)}</li>`).join('')}</ol><div class="mkwhy"><b>Why ${x.marks}, not ${x.marks+1}</b>${esc(x.why)}</div><button class="btn pick" data-k="${kk}" style="margin-top:12px;width:100%">Answer ${kk} is stronger</button></div>`).join('')}</div>
-      <div id="reason" hidden style="margin-top:14px"><p class="eyebrow">Why?</p><p class="hint">Name one thing the answer you chose does that the other does not. A few words is enough.</p><textarea id="rt" placeholder="For example: it explains how one impact led to the next, and says why that was significant." style="min-height:70px"></textarea><div class="row" style="margin-top:10px"><button class="btn primary" id="reveal" disabled>Reveal the marks</button></div></div>
-      <div id="verdict" style="margin-top:14px"></div>
-      <div id="chk" hidden style="margin-top:14px"><p class="eyebrow">Now check the 7 against the list. Can you find all five?</p><ol style="margin:6px 0 0;padding-left:20px">${MARKER.checklist.map(c=>`<li>${esc(c)}</li>`).join('')}</ol><p class="hint" id="mine" style="font-style:italic"></p></div>
-      ${pager(k,P.length,`Question ${k+1} of ${P.length}`)}
-      <div class="row" style="margin-top:12px"><button class="btn quiet" id="back">All questions</button></div>
-    </div></section>`);
-    const $=q=>app.querySelector(q);
-    app.querySelectorAll('.pick').forEach(b=>b.onclick=()=>{ picked=b.dataset.k; app.querySelectorAll('.mk').forEach(a=>a.classList.toggle('chosen',a.dataset.k===picked)); $('#reason').hidden=false; $('#reveal').disabled=false; $('#rt').focus() });
-    $('#reveal').onclick=()=>{ const right=picked===strongIs; const txt=$('#rt').value.trim().slice(0,200);
-      $('#mkroot').classList.add('rev'); app.querySelectorAll('.pick').forEach(b=>b.disabled=true); $('#reveal').disabled=true;
-      $('#verdict').innerHTML=right?`<div class="feedback ok"><b>Yes. Answer ${strongIs} scored 7.</b><span>Now look at the numbered notes: the gold phrases are where the marks were earned, and the dashed box under each answer says what separates 4 from 5 and 7 from 8.</span></div>`
-        :`<div class="feedback info"><b>Answer ${strongIs} is the 7.</b><span>Answer ${picked} reads well and has plenty of correct knowledge, which is what usually draws people to it. But a marker reads for a contention, dated evidence with a because, who was affected, and a judgement. Look at the numbered notes on both answers to see where the marks were earned and lost.</span></div>`;
-      $('#chk').hidden=false; $('#mine').textContent=txt?`Your reason: "${txt}"`:''; beep(right?'win':'ok');
-      mkDone[p.id]={right,reason:txt}; store.set('marker',mkDone); log({event:'marker', qid:p.id, correct:right?1:0, unit:p.unit, type:'marker'});
-      if(P.every(x=>mkDone[x.id])&&P.every(x=>mkDone[x.id].right)) confetti();
-      $('#verdict').scrollIntoView({behavior:'smooth',block:'center'}) };
-    const pv=app.querySelector('#pg-prev'), nx=app.querySelector('#pg-next'); if(pv) pv.onclick=()=>one(P[k-1].id); if(nx) nx.onclick=()=>one(P[k+1].id);
-    $('#back').onclick=()=>marker();
   });
   list();
 }
@@ -1382,24 +1339,6 @@ function sources(){
 // ---------- what success looks like: models and worked examples ----------
 const TEEAL=[['T','Topic sentence','State your argument in answer to the question.'],['X','Explain','Elaborate on the topic sentence. What do you mean?'],['E','Evidence','At least two specific facts. Names, dates, places, a quote from a source.'],['A','Analyse','Why does the evidence matter? What caused it, what did it change, how does it support your argument?'],['L','Link','Return to the question with a judgement.']];
 const TAGNAME={T:'Topic',X:'Explain',E:'Evidence',A:'Analyse',L:'Link',EA:'Evidence + analyse'};
-const RUBRIC_KEY='A analysis, K knowledge, S structure, W writing';
-const RUBRIC=[['3','Analysis','Significance, cause and effect, a judgement'],['2','Knowledge','Specific, accurate, relevant'],['1','Structure','TEEAL with a clear contention'],['2','Writing','Clear expression, terms, spelling']];
-// bank prompt id -> model. Crusades and Meiji paragraphs are from the Moving Marks pack. Feudal system, Church and sakoku are drafted in the same style for teacher checking.
-const SUCCESS={
- 86:{model:[['T','The Crusades were significant for medieval Europe mainly because they opened Europe to the wider world, which changed its economy and ideas far more than they changed the Holy Land.'],['E','Between 1096 and 1291 Crusaders travelled through Constantinople and the eastern Mediterranean, and Italian cities such as Venice and Genoa transported and supplied them.'],['EA','These cities gained trading posts in the East and control of the routes that brought spices, silk and sugar to Europe, and their new wealth later helped fund the Renaissance.'],['E','Contact with the Islamic world also brought knowledge in medicine, mathematics and astronomy that European scholars had lost.'],['L','Although the Crusaders failed to hold Jerusalem, the trade and learning they brought back lasted for centuries, which is why the Crusades are a turning point for Europe rather than a military success.']],
-   marks:'A 3  K 2  S 1  W 2  =  8 / 8', why:'The contention makes a judgement (economy and ideas mattered more than the Holy Land) rather than listing. Evidence is specific and dated. Each piece of evidence is explained. The last sentence weighs the failure against the long-term effect, which is significance.'},
- 87:{draft:true,model:[['T','The feudal system shaped medieval Europe most deeply through power, because it decided who could command whom and turned land into the source of all authority.'],['E','After 1066 William the Conqueror claimed all of England as his own and granted it in fiefs to about 180 barons, who in turn granted land to knights, so that by the Domesday survey of 1086 every acre could be traced back to the king.'],['A','Because each grant came with an oath of loyalty and a duty to supply soldiers, the king could raise an army without paying one, and a lord’s wealth, status and ability to fight all came from the land he held rather than from money or office.'],['E','The same system reached down to the manor, where peasants farmed strips of the lord’s land and owed him labour, rents and a share of their harvest, and could not leave without permission.'],['A','This meant the great majority of people lived under the direct authority of a local lord rather than a distant king, and their daily lives, from the court they were judged in to the mill they used, were controlled by him.'],['L','Although feudalism also shaped warfare and the economy, its deepest impact was on power, because it bound every level of society into a chain of obligation that lasted until the Black Death loosened it in the fourteenth century.']],
-   marks:'A 3  K 2  S 1  W 2  =  8 / 8', why:'The question asks for an analysis, and the contention chooses one area (power) and says why it matters most. Evidence is specific and dated (1066, 180 barons, 1086). Each piece of evidence is followed by a because or this meant sentence. The link names the other areas, ranks them beneath the chosen one and marks where the system began to change.'},
- 88:{draft:true,model:[['T','The Catholic Church maintained its influence over medieval society mainly through social power, because it was present at every stage of ordinary life in a way no king could match.'],['E','Every person was baptised, married and buried by the Church, and the year itself was organised around holy days and festivals, so religion shaped time as well as belief.'],['EA','Because most people could not read, the Church taught through what they could see, such as doom paintings of heaven and hell on church walls, which made the threat of damnation vivid and kept people obedient to its rules.'],['E','The Church also held economic and political power. The tithe took one tenth of every harvest, and the Pope could excommunicate a king, as Innocent III did to King John in 1209.'],['A','However, these powers depended on the social hold underneath them, since a tithe is only paid and excommunication is only feared by people who already believe the Church controls their path to heaven.'],['L','This is why social power mattered most, and why Church authority only weakened when the Black Death shook that everyday belief.']],
-   marks:'A 3  K 2  S 1  W 2  =  8 / 8', why:'The question asks for a choice, and the paragraph makes one in the first sentence. The other forms of power are named but then ranked beneath the chosen one, which is evaluation rather than a list. Evidence is specific (tithe, King John, doom paintings).'},
- 89:{draft:true,model:[['T','Sakoku was significant for Japan mainly because it bought the Tokugawa two centuries of stability at the price of falling behind the rest of the world.'],['E','Between 1633 and 1639 the shogunate issued edicts that banned Christianity, forbade Japanese people from leaving the country and expelled the Portuguese, leaving only the Dutch and Chinese to trade through the small island of Dejima at Nagasaki.'],['A','Because foreign ideas, weapons and religion could no longer reach the daimyo, the shoguns removed the outside support a rebel lord might have used, and Japan avoided the colonisation that European powers imposed elsewhere in Asia.'],['E','Inside the country, peace allowed Edo to grow to around a million people by 1700 and a rich merchant culture of theatre and woodblock prints to develop.'],['A','However, because Japan did not share in the industrial and military changes happening in Europe, when Commodore Perry’s steamships arrived in 1853 the shogunate had no way to resist and was forced to sign unequal treaties.'],['L','Sakoku was therefore significant in two directions: it was the foundation of the long Tokugawa peace, and the reason that peace ended so suddenly when the policy could no longer be enforced.']],
-   marks:'A 3  K 2  S 1  W 2  =  8 / 8', why:'Significance is argued, not asserted: the contention weighs a benefit against a cost. Evidence is dated and specific (1633 to 1639, Dejima, a million people, 1853). The paragraph covers cause and effect in both directions and the link reaches a judgement that answers the question rather than restating it.'},
- 90:{model:[['T','The Meiji Restoration transformed Japan to a large extent, although it kept the emperor and rule by a small elite.'],['E','After 1868 the new government abolished the feudal domains and replaced them with prefectures run from Tokyo, ended the samurai class by introducing a conscript army in 1873, and made education compulsory.'],['E','Railways, factories and a Western-style constitution in 1889 followed.'],['A','These changes meant that within forty years Japan had moved from a feudal society to an industrial power that defeated Russia in 1905.'],['A','However, the emperor remained the symbolic head of the nation and real power still sat with a small group of former samurai leaders, so the way Japan was governed changed more than who governed it.'],['L','Overall, the Restoration transformed Japan’s economy, army and society, while continuity remained at the very top.']],
-   marks:'A 3  K 2  S 1  W 2  =  8 / 8', why:'To what extent is answered directly in the first sentence and returned to at the end. The paragraph names both change and continuity, which is what the question invites. Dates and reforms are specific.'}
-};
-const CALIB={q:'Analyse how the Tokugawa shogunate kept control of Japan.',
- full:{marks:'8 / 8',text:'The Tokugawa shogunate kept control of Japan for over 250 years mainly by controlling the daimyo, who were the only group able to challenge it. The policy of sankin kotai forced daimyo to spend alternate years in Edo and leave their families there, which drained their wealth through constant travel and made rebellion risky because their families were in the shogun’s hands. The Laws for the Military Houses of 1615 stopped daimyo from repairing castles or arranging marriages without permission, which prevented them from building military strength or alliances. The shoguns also closed Japan under sakoku and banned Christianity, so no daimyo could gain foreign weapons or a foreign religion as a rival loyalty. Together these edicts meant the daimyo stayed loyal not out of choice but because the cost of disloyalty was too high, which is why Japan stayed at peace until Western pressure arrived in 1853.',why:'Analysis 3. Every policy is followed by a which or because sentence that explains how it produced control. Knowledge 2. Structure 1. Writing 2.'},
- weak:{marks:'5 / 8',text:'The Tokugawa shogunate kept control in many ways. They used sankin kotai which made daimyo go to Edo. They also banned Christianity because they did not like it. They closed the country with sakoku so no foreigners could come in. They had a strict social hierarchy with samurai at the top and merchants at the bottom. The samurai followed bushido. All of these things helped the Tokugawa stay in power for a long time. In conclusion the Tokugawa kept control through laws and the hierarchy.',why:'Knowledge is accurate and covers several policies, so 2. Structure has a contention and a conclusion, so 1. Analysis is 1 because the paragraph lists what the shoguns did without explaining how each policy produced control, and the contention (many ways) makes no judgement. Writing is 1 for short repetitive sentences. Find the three places where a because sentence would lift the analysis mark.'}};
 const SHORT=[
  {id:'explain',title:'Explain one factor (2 marks)',sub:'Identify it. Prove it. Link it.',body:()=>`
   <div class="skill"><p>Two-mark questions pay for the identify and the link. The evidence in between is what makes the link convincing. Four-mark questions want this twice.</p>
@@ -1448,27 +1387,7 @@ const SHORT=[
    <tr><td>The last shogun resigns in 1868</td><td>Short</td><td>The event of the Restoration itself</td></tr>
    <tr><td>Japan defeats Russia in 1905</td><td>Long</td><td>Nearly 40 years after, the result of modernisation</td></tr>
    <tr><td>A national conscript army built by 1873</td><td>Short or long</td><td>Five years on. The point is your reasoning</td></tr></tbody></table></div></div>`},
- {id:'people',title:'So what? Connect the mechanism to its effects',sub:'Explaining how something worked earns the middle band. The top band explains what followed from it, and for whom.',body:()=>`
-  <div class="skill"><p>Most paragraphs explain how a policy worked and stop. The rubric's top band is for analysis that shows relationships between factors: what the policy led to, and what it meant for a peasant, a merchant, a samurai, a believer, a lord. After every piece of evidence, write one sentence that says what followed, and one that starts with a person or a group.</p>
-  <div class="two">
-   <div class="sample weak"><span class="marks weak">Mechanism only</span><p>Sankin kotai forced the daimyo to live in Edo every second year and leave their families there when they returned to their domains. This drained their money and stopped them rebelling.</p><p class="why"><b>Why it stalls.</b> Accurate, and it explains control. It stops at the first link in the chain and says nothing about what followed for anyone, which is the middle band of the analysis criterion.</p></div>
-   <div class="sample full"><span class="marks full">Mechanism + people</span><p>Sankin kotai forced the daimyo to live in Edo every second year and leave their families there. For a daimyo it meant two households and ruinous processions; for the farmers in his domain it meant heavier rice taxes to pay for them; for the merchants and innkeepers of Edo and the Tokaido it meant a living, which is why Edo grew to a million people.</p><p class="why"><b>Why it climbs.</b> One policy, three groups, three different effects, each connected to the policy. That is the relationship between factors the top band asks for, and it shows perspectives as well.</p></div>
-  </div>
-  <p class="eyebrow">Add the people sentence yourself</p>
-  <div class="two">
-   <div class="sample"><p><b>Mechanism.</b> The sakoku edicts of the 1630s banned Japanese people from leaving and expelled the Portuguese, leaving only Dutch and Chinese traders at Nagasaki. <i>For ...</i></p><p class="why"><b>One that works.</b> For a Christian convert in Kyushu it meant hiding or death; for a Nagasaki merchant it meant a monopoly on the only foreign goods in Japan; for a fisherman blown off course it meant he could never come home.</p></div>
-   <div class="sample"><p><b>Mechanism.</b> The Church collected a tithe of one tenth of everything a village produced and stored it in the tithe barn. <i>For ...</i></p><p class="why"><b>One that works.</b> For a peasant family in a bad harvest year it meant going hungry so the Church did not; for the parish priest it meant an income and a position above the people he served; for a bishop it meant wealth that rivalled a lord's.</p></div>
-   <div class="sample"><p><b>Mechanism.</b> The Black Death killed between a third and a half of Europe's population between 1347 and 1351. <i>For ...</i></p><p class="why"><b>One that works.</b> For a surviving peasant it meant he could demand wages or walk to a lord who would pay them; for a lord it meant empty fields and the 1351 Statute of Labourers to try to stop him leaving; for a priest it meant explaining why God had done this.</p></div>
-   <div class="sample"><p><b>Mechanism.</b> The Meiji government abolished the domains in 1871 and introduced conscription in 1873. <i>For ...</i></p><p class="why"><b>One that works.</b> For a samurai it meant the loss of his stipend, his sword and his reason to exist, which is why some followed Saigo Takamori into rebellion in 1877; for a farmer's son it meant being drafted into an army that had once been closed to him.</p></div>
-  </div>
-  <p class="hint">Test for your own paragraph: underline every sentence that names a person or group and says what happened to them. Fewer than two, and you are describing a system, not analysing life.</p></div>`},
- {id:'words',title:'Words that analyse',sub:'The vocabulary that earns analysis marks, grouped by the job it does.',body:()=>wordBank(false)},
- {id:'paragraph',title:'The extended response (8 marks)',sub:'An 8 beside a 5. Find the three missing because sentences.',body:()=>`
-  <div class="skill"><div class="rubric">${RUBRIC.map(r=>`<div><b>${r[0]}</b>${r[1]}<small>${r[2]}</small></div>`).join('')}</div>
-  <p class="qtext" style="font-size:19px">${esc(CALIB.q)}</p>
-  <div class="two"><div class="sample full"><span class="marks full">${CALIB.full.marks}</span><p>${esc(CALIB.full.text)}</p><p class="why"><b>Why 8.</b> ${esc(CALIB.full.why)}</p></div>
-  <div class="sample weak"><span class="marks weak">${CALIB.weak.marks}</span><p>${esc(CALIB.weak.text)}</p><p class="why"><b>Why 5.</b> ${esc(CALIB.weak.why)}</p></div></div>
-  <p>The three habits that cost the most marks. Describing an event instead of explaining why it mattered. Answering a source question without quoting or pointing to the source. Giving two factors when the question asked for one, or a list when it asked for a link.</p></div>`}
+ {id:'words',title:'Words that analyse',sub:'The vocabulary that earns analysis marks, grouped by the job it does.',body:()=>wordBank(false)}
 ];
 const WORDS=[
  ['Cause and effect (the because sentence)',['because','led to','resulted in','triggered','contributed to','enabled','forced','meant that','as a consequence','in turn']],
@@ -1483,24 +1402,21 @@ function wordBank(insertable){ return `<div class="wb">${WORDS.map(([g,ws])=>`<d
   <div class="grp"><p class="eyebrow" style="color:var(--bad)">Words that assert without showing. Replace them.</p><div class="chips">${WEAKWORDS.map(w=>`<span class="chip no">${esc(w)}</span>`).join('')}</div></div>
   <p class="hint">Because and which meant are worth more than any adjective. Mainly and to a large extent are small words that signal a judgement.${insertable?' Tap a word to drop it into your draft.':''}</p></div>` }
 function bindWordBank(ta){ app.querySelectorAll('.chip[data-w]').forEach(c=>c.onclick=()=>{ if(!ta) return; const w=c.dataset.w; const st=ta.selectionStart??ta.value.length, en=ta.selectionEnd??st; const before=ta.value.slice(0,st), after=ta.value.slice(en); const sp=before&&!/\s$/.test(before)?' ':''; ta.value=before+sp+w+(after&&!/^\s/.test(after)?' ':'')+after; const pos=(before+sp+w).length; ta.focus(); ta.setSelectionRange(pos,pos); ta.dispatchEvent(new Event('input')) }) }
-function modelHTML(m){ const used=new Set(m.model.map(([tag])=>tag[0])); return `<div class="legend">${TEEAL.filter(t=>used.has(t[0])).map(t=>`<span class="sent ${t[0]}" style="padding:0;border:0;background:none;display:inline">${t[1]}</span>`).join('')}${used.has('E')&&m.model.some(([t])=>t==='EA')?'<span class="hint">EA is evidence and analysis in one sentence.</span>':''}</div><div class="model">${m.model.map(([tag,txt])=>`<div class="sent ${tag[0]}"><b>${tag}</b><span>${esc(txt)}</span></div>`).join('')}</div>
-  <div class="row" style="justify-content:space-between"><span class="marks full" title="${RUBRIC_KEY}">${esc(m.marks)}</span><span class="hint">${RUBRIC_KEY}</span>${m.draft?'<span class="hint">Draft model, written in the style of the marked samples. Check before relying on it.</span>':'<span class="hint">From the marked exam samples.</span>'}</div><div class="feedback info"><b>Why it scores 8</b><span>${esc(m.why)}</span></div>` }
-
 function success(open){
   const draw=screen(function successPage(id){
     const sk=SHORT.find(x=>x.id===id);
     h(`<section class="section">${MODEH('write','What success looks like')}
-    <p class="muted">Marked answers for every kind of exam question, with the reasons marks are won and lost. The marks shown are what a marker would most likely give against the exam criteria; marking is a judgement within bands, so two markers can differ by a mark on the same answer. There is no formula.</p>
+    <p class="muted">How the marks are won and lost. The marks shown are what a marker would most likely give against the exam criteria; marking is a judgement within bands, so two markers can differ by a mark on the same answer. There is no formula.</p>
     ${sk?`<div class="card"><div class="row" style="justify-content:space-between"><h3 style="font-size:24px;color:var(--plum)">${esc(sk.title)}</h3><button class="btn quiet" id="back">All question types</button></div>${sk.body()}${pager(SHORT.indexOf(sk),SHORT.length,`${SHORT.indexOf(sk)+1} of ${SHORT.length}`)}</div>`:
     `<div class="hub">${SHORT.map(x=>`<button class="hubcard" data-id="${x.id}"><b>${esc(x.title)}</b><span>${esc(x.sub)}</span></button>`).join('')}
-      <button class="hubcard" data-go="write" style="border-left-color:var(--gold-ink)"><b>Model paragraphs</b><span>A full TEEAL answer for each of the five paragraph prompts, sentence by sentence.</span></button></div>
+      </div>
      <div class="row"><button class="btn quiet" id="home">Home</button></div>`}
     </section>`);
     app.querySelectorAll('[data-id]').forEach(b=>b.onclick=()=>draw(b.dataset.id));
     const bk=app.querySelector('#back'); if(bk) bk.onclick=()=>draw(null);
     if(sk){ const k=SHORT.indexOf(sk); const pv=app.querySelector('#pg-prev'), nx=app.querySelector('#pg-next'); if(pv) pv.onclick=()=>draw(SHORT[k-1].id); if(nx) nx.onclick=()=>draw(SHORT[k+1].id); }
     const hm=app.querySelector('#home'); if(hm) hm.onclick=home;
-    const w=app.querySelector('[data-go=write]'); if(w) w.onclick=write;
+    
   });
   draw(open||null);
 }
@@ -1515,29 +1431,25 @@ function write(){
     <div class="card">
       <span class="eyebrow">${esc(q.unit)}</span>
       <p class="qtext">${esc(q.question)}</p>
-      <div class="tabs"><button class="tab on" data-tab="write">Write</button><button class="tab" data-tab="model">What success looks like</button></div>
       <div id="pane-write">
       <div class="scaffold"><p class="eyebrow">TEEAL scaffold</p>
         ${TEEAL.map(([a,b,c])=>`<div class="s"><b>${a==='X'?'E':a}</b><span><b style="font-family:var(--body);color:var(--ink)">${b}.</b> ${c}</span></div>`).join('')}</div>
       <div class="timerrow"><span><b>Exam conditions.</b> Section C is 8 marks in about 15 minutes. Start the clock, the scaffold hides, and write as you would on paper.</span><label class="hint">Minutes <select class="sel" id="tmin"><option>10</option><option>12</option><option selected>15</option><option>20</option></select></label><button class="btn" id="tstart">Start timer</button><span class="tdisp" id="tdisp" hidden></span></div>
       <div id="timeup" class="feedback" hidden></div>
       <textarea id="d${q.id}" placeholder="Write your paragraph here. It stays on this device." style="margin-top:12px">${esc(drafts[q.id]||'')}</textarea>
-      <div class="row" style="justify-content:space-between;margin-top:8px"><span class="hint" id="wc"></span><button class="btn" id="guide">Show marker guidance</button></div>
-      <div id="g" hidden class="feedback info" style="margin-top:8px"><b>What a marker looks for</b><span>${esc(q.guidance)}</span></div>
+      <div class="row" style="justify-content:space-between;margin-top:8px"><span class="hint" id="wc"></span></div>
       <details class="wbwrap" style="margin-top:12px"><summary>Words that analyse</summary><div style="margin-top:10px">${wordBank(true)}</div></details>
       <div class="selfcheck" style="margin-top:12px"><p class="eyebrow">Check your draft</p>
         ${[['t','My first sentence makes an argument, not a description.'],['e','I have at least two specific pieces of evidence with a name, date or place.'],['a','Every piece of evidence is followed by a because or this meant sentence.'],['j','My last sentence returns to the question with a judgement.'],['w','I have used the key terms and checked spelling.']].map(([k,t])=>`<label><input type="checkbox" id="sc-${q.id}-${k}"><span>${t}</span></label>`).join('')}</div>
       <div class="row" style="margin-top:12px"><button class="btn primary" id="save">Save draft</button><button class="btn quiet" id="back">All prompts</button></div>
       </div>
       ${pager(prompts.indexOf(q),prompts.length,`Prompt ${prompts.indexOf(q)+1} of ${prompts.length}`)}
-      <div id="pane-model" hidden>${SUCCESS[q.id]?modelHTML(SUCCESS[q.id]):'<p class="muted">No model paragraph for this prompt yet.</p>'}
-        <div class="row" style="margin-top:12px"><button class="btn" id="rub">Rubric and short-answer examples</button><button class="btn quiet" id="back2">All prompts</button></div></div>
+      
     </div></section>`);
     const ta=app.querySelector('textarea'), wc=app.querySelector('#wc'); bindWordBank(ta);
     const count=()=>{ const w=ta.value.trim().split(/\s+/).filter(Boolean).length, s=ta.value.split(/[.!?]+/).filter(x=>x.trim()).length; wc.textContent=`${w} words · ${s} sentences` }; count(); ta.oninput=count;
-    app.querySelector('#guide').onclick=e=>{ const g=app.querySelector('#g'); g.hidden=!g.hidden; e.target.textContent=g.hidden?'Show marker guidance':'Hide marker guidance' };
     app.querySelector('#save').onclick=e=>{ drafts[q.id]=ta.value; store.set('drafts',drafts); e.target.textContent='Saved'; setTimeout(()=>e.target.textContent='Save draft',1500) };
-    app.querySelector('#back').onclick=write; app.querySelector('#back2').onclick=write; app.querySelector('#rub').onclick=()=>success('paragraph');
+    app.querySelector('#back').onclick=write;
     { // exam-conditions timer
       const card=app.querySelector('.card'), disp=app.querySelector('#tdisp'), tu=app.querySelector('#timeup'), startB=app.querySelector('#tstart'), sel=app.querySelector('#tmin'); let tid=null, endAt=0, total=0;
       const fmt=ms=>{ const t=Math.max(0,Math.ceil(ms/1000)); return `${Math.floor(t/60)}:${String(t%60).padStart(2,'0')}` };
@@ -1549,10 +1461,9 @@ function write(){
         const step=()=>{ const left=endAt-Date.now(); disp.textContent=fmt(left); disp.classList.toggle('warn',left<120000); if(left<=0) finish() }; step(); tid=setInterval(step,500) };
     }
     { const k=prompts.indexOf(q); const pv=app.querySelector('#pg-prev'), nx=app.querySelector('#pg-next'); if(pv) pv.onclick=()=>pick(prompts[k-1].id); if(nx) nx.onclick=()=>pick(prompts[k+1].id); }
-    app.querySelectorAll('.tab').forEach(t=>t.onclick=()=>{ app.querySelectorAll('.tab').forEach(x=>x.classList.toggle('on',x===t)); app.querySelector('#pane-write').hidden=t.dataset.tab!=='write'; app.querySelector('#pane-model').hidden=t.dataset.tab!=='model' });
-  });
-  h(`<section class="section">${MODEH('write','Paragraph practice')}<p class="muted">Five exam-style prompts. Each opens with the TEEAL scaffold, a model answer marked 8 out of 8, and the guidance a marker uses.</p>
-  <div class="hubs"><button class="hubcard" id="succ" style="border-left-color:var(--gold-ink)"><b>What success looks like</b><span>Marked answers for every kind of exam question. Two-mark explains, compares, turning points, captions, impacts and the 8-mark paragraph.</span></button>
+    });
+  h(`<section class="section">${MODEH('write','Paragraph practice')}<p class="muted">Six Section C practice prompts, three on each unit. Each opens with the TEEAL scaffold and a timer for exam conditions. Your draft stays on this device.</p><div class="feedback info" style="margin-top:12px"><b>Your extended response will be graded out of 8 marks. You will be marked on:</b><span><ul style="margin:6px 0 0;padding-left:20px"><li>The structure of your response. You are encouraged to use a TEEAL structure with a clear contention and a logical order of arguments.</li><li>Your ability to write a clear and meaningful discussion that demonstrates relevant historical concepts, particularly significance, cause and effect, and perspectives.</li><li>The use of specific, detailed and accurate historical knowledge relevant to your chosen question.</li><li>The use of relevant examples and evidence studied in class.</li><li>Clear written expression and accurate spelling, grammar and sentence structure.</li></ul></span></div>
+  <div class="hubs"><button class="hubcard" id="succ" style="border-left-color:var(--gold-ink)"><b>What success looks like</b><span>How the marks are won and lost in Section B. Explains, compares, turning points, captions and impacts.</span></button>
   <button class="hubcard" id="shortq" style="border-left-color:var(--teal)"><b>Short answers</b><span>Eighteen 2, 3 and 4-mark questions. Write yours, then compare it with a full-marks and a part-marks answer and mark yourself.</span></button></div>
   <div class="topics">${prompts.map(p=>`<button class="topic" data-id="${p.id}" style="align-items:flex-start"><span><span class="eyebrow">${esc(p.unit)}</span><br><span class="name" style="font-weight:500">${esc(p.question.replace(/^Write ONE TEEAL paragraph in response to the following\. /,'').split('. ').slice(0,2).join('. ').replace(/\.$/,''))}.</span></span><span class="meta">${drafts[p.id]?'Draft saved':''}</span></button>`).join('')}</div>
   <div class="row"><button class="btn quiet" id="home">Home</button></div></section>`);
@@ -1568,9 +1479,9 @@ const mm=document.getElementById('musMode'); mm.value=music.mode; mm.onchange=()
 const mv=document.getElementById('musVol'); mv.value=music.vol; mv.oninput=()=>{ music.vol=+mv.value; store.set('musVol',music.vol); if(music.master&&actx) music.master.gain.setTargetAtTime(music.vol/100*.6, actx.currentTime, .1) };
 document.addEventListener('visibilitychange',()=>{ if(document.hidden&&music.on){ clearTimeout(music.timer) } else if(music.on){ phrase() } });
 (function tick(){ const d=new Date(); const el=document.getElementById('clock'); if(el){ const hh=d.getHours(), m=String(d.getMinutes()).padStart(2,'0'), ss=String(d.getSeconds()).padStart(2,'0'); const h12=((hh+11)%12)+1; el.innerHTML=`<span class="lbl">Melbourne</span><span class="time">${h12}:${m}<small>${hh<12?'am':'pm'}</small></span><span class="date">${d.toLocaleDateString('en-AU',{weekday:'long',day:'numeric',month:'long'})}</span>` } setTimeout(tick, 60000-(Date.now()%60000)+50) })();
-HOME_FN=home; home=screen(home); setup=screen(setup); challenge=screen(challenge); terms=screen(terms); write=screen(write); daily=screen(daily); timeline=screen(timeline); timelineGame=screen(timelineGame); sprint=screen(sprint); facts=screen(facts); exam=screen(exam); shortq=screen(shortq); marker=screen(marker); sources=screen(sources); startQuiz=screen(startQuiz);
+HOME_FN=home; home=screen(home); setup=screen(setup); challenge=screen(challenge); terms=screen(terms); write=screen(write); daily=screen(daily); timeline=screen(timeline); timelineGame=screen(timelineGame); sprint=screen(sprint); facts=screen(facts); exam=screen(exam); shortq=screen(shortq); sources=screen(sources); startQuiz=screen(startQuiz);
 document.getElementById('backBtn').onclick=goBack;
-const ROUTES={practice:setup, challenge, terms, write, daily, timeline, sprint, facts, success, exam, shortq, marker, sources};
+const ROUTES={practice:setup, challenge, terms, write, daily, timeline, sprint, facts, success, exam, shortq, sources};
 const r=(location.hash||'').slice(1); (ROUTES[r]||home)();
 })();
 </script>
