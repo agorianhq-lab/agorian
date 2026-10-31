@@ -1,10 +1,10 @@
 {
- "intro": "In the exam, every source comes with a caption and a question you have not seen before. The skill is the same each time: work out what the source is, who made it and why, what it suggests, and what it cannot tell you. Then write a short answer that names the source, adds your own dated knowledge, and goes beyond the obvious. Ten sources here. Four quick questions each, then a timed 3-mark answer.",
+ "intro": "In the exam, every source comes with a caption and a question you have not seen before. The skill is the same each time: work out what the source is, who made it and why, what it suggests, and what it cannot tell you. Then write a short answer that points to a detail in the source, adds your own knowledge, and explains how the detail shows your point. Ten sources here. Four quick questions each, then a timed 3-mark answer.",
  "checklist": [
-  "Name the source and point to one detail in it",
-  "Add one fact of your own, with a date",
-  "Say what the detail suggests, not just what it shows",
-  "Go beyond the group or person named in the question"
+  "Point to one specific detail in the source (quote it or describe it)",
+  "Add one accurate fact of your own, with a date or a name",
+  "Explain how the detail shows your point, not just what the detail is",
+  "Make each mark a separate point: identify it, then explain it"
  ],
  "sources": [
   {
@@ -63,7 +63,7 @@
    "mark": [
     "Source detail named (knights, Harold's death) and what it suggests",
     "Own knowledge with a date (Domesday 1086, Norman lords, castles)",
-    "Goes beyond the battle to the change for England and its people"
+    "Explains how the outcome changed England and for whom"
    ]
   },
   {
@@ -122,7 +122,7 @@
    "mark": [
     "Detail named (reeve, sickles) and what it suggests (supervised, compulsory)",
     "Own knowledge: work on the lord's fields, permissions, a date",
-    "Goes beyond the picture to how the system worked and when it changed"
+    "Explains the picture to how the system worked and when it changed"
    ]
   },
   {
@@ -181,7 +181,7 @@
    "mark": [
     "Quotes a phrase and says what it suggests",
     "Own knowledge with a date (Normandy 1204, Runnymede 1215, the barons' revolt)",
-    "Goes beyond the barons to note who the clause did not protect"
+    "Explains the barons to note who the clause did not protect"
    ]
   },
   {
@@ -240,7 +240,7 @@
    "mark": [
     "Quotes the source and infers (bonds broke down, scale of death)",
     "Own knowledge with dates (a third of Europe, 1351, 1381)",
-    "Goes beyond Siena to the wider social and economic change"
+    "Explains Siena to the wider social and economic change"
    ]
   },
   {
@@ -299,7 +299,7 @@
    "mark": [
     "Detail and purpose of the source used to infer (land for service)",
     "Own knowledge with dates (1274, 1281, kamikaze, 1333)",
-    "Goes beyond the battle to the system of reward and its failure"
+    "Explains the battle to the system of reward and its failure"
    ]
   },
   {
@@ -358,7 +358,7 @@
    "mark": [
     "Names a rule from the source and infers its purpose",
     "Own knowledge with dates (1615 Osaka, 1635 sankin kotai)",
-    "Goes beyond the law to its effect on daimyo and on Japan"
+    "Explains the law to its effect on daimyo and on Japan"
    ]
   },
   {
@@ -417,7 +417,7 @@
    "mark": [
     "Detail named (one ship, onlookers) and what it suggests",
     "Own knowledge with dates (1630s edicts, rangaku, 1853)",
-    "Goes beyond the harbour to Japan as a whole"
+    "Explains the harbour to Japan as a whole"
    ]
   },
   {
@@ -476,7 +476,7 @@
    "mark": [
     "Details named (uniform, hair, chair) and what they suggest",
     "Own knowledge with dates (1868, 1873 conscription, Iwakura Mission)",
-    "Goes beyond the emperor to what the government wanted from ordinary people"
+    "Explains the emperor to what the government wanted from ordinary people"
    ]
   },
   {
@@ -535,7 +535,7 @@
    "mark": [
     "Quotes the oath and infers what it rejects",
     "Own knowledge with dates (1871, 1873, 1890)",
-    "Goes beyond the promise to who gained and lost, and how fast"
+    "Explains the promise to who gained and lost, and how fast"
    ]
   },
   {
@@ -594,7 +594,7 @@
    "mark": [
     "Details named (armour, swords) and what they suggest",
     "Own knowledge with dates (1873, 1876, 1877)",
-    "Goes beyond this one man to the whole class and what became of them"
+    "Explains this one man to the whole class and what became of them"
    ]
   }
  ]

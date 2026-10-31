@@ -59,12 +59,12 @@
   "q": "Define the term excommunication and give one example of a ruler it was used against.",
   "full": {
    "text": "Excommunication was a punishment in which the Church expelled a person from the Christian community, cutting them off from the sacraments so that they could not be married, confessed or buried by a priest and were believed to be bound for hell. Pope Innocent III excommunicated King John of England in 1209 during their dispute over the Archbishop of Canterbury.",
-   "why": "The definition says what it was and why it mattered. The example is a named ruler with a date and the reason."
+   "why": "One mark for the definition, one for the example. The example is named and described (a ruler and what happened), which is what the second mark needs."
   },
   "part": {
    "marks": 1,
    "text": "Excommunication is when someone gets kicked out of the Church by the Pope. It was used against kings.",
-   "why": "The definition is basically right, so 1 mark. The example is too vague to earn the second mark; it needs a named ruler."
+   "why": "The definition is right, so 1 mark. The example is too vague to earn the second mark. Naming the term or saying 'a king' is not an example; the ruler has to be named or clearly described."
   }
  },
  {
@@ -76,12 +76,12 @@
   "q": "Explain why the Peasants’ Revolt of 1381 is considered a turning point in medieval England.",
   "full": {
    "text": "The Peasants’ Revolt is considered a turning point because it showed that the old feudal order could no longer be enforced. In 1381 thousands of peasants marched on London, killed the Archbishop of Canterbury and demanded an end to serfdom. Although the revolt was crushed and its leader Wat Tyler was killed, lords found they could not make the hated poll tax or the old labour services stick, and over the following decades serfdom in England quietly disappeared, so the direction of change ran towards free, waged labour.",
-   "why": "Climbs the ladder. What happened, what changed, who was affected and for how long. Admits the short-term failure and still shows the long-term change, with the word because in the first sentence."
+   "why": "Three marks, three parts. Names the event, describes its outcome, then explains why that outcome changed things for a long time. Admits the short-term failure and still shows the lasting change."
   },
   "part": {
    "marks": 1,
    "text": "The Peasants’ Revolt was in 1381. The peasants were angry about the poll tax and marched to London. Wat Tyler was the leader and he was killed by the king’s men. It was a very important event.",
-   "why": "Accurate description of what happened, so 1 mark. Nothing on what changed afterwards or for how long, which is what the turning-point marks are for."
+   "why": "Names the event and describes what happened, so the first two marks. Nothing on why the outcome produced a lasting change, which is the third mark."
   }
  },
  {
@@ -93,12 +93,12 @@
   "q": "Compare trial by ordeal and trial by jury in medieval England. Include at least one similarity and one difference.",
   "full": {
    "text": "Both trial by ordeal and trial by jury were ways of deciding guilt when there was no police force and little written evidence, for example both were used for serious crimes such as theft and both were run under the authority of the king’s law. However, trial by ordeal left the verdict to God, through tests such as carrying a hot iron and seeing whether the wound healed, whereas trial by jury left it to twelve local men who judged the accused on what they knew of them, which meant that after the Church banned priests from ordeals in 1215, juries became the normal way of deciding cases in England.",
-   "why": "Similarity with evidence, difference with evidence, and a consequence in the which-meant clause. The frame sentence earns all four marks."
+   "why": "Four marks, four parts. Each trial method is described in its own right, then one similarity and one difference. The which-meant clause is the explanation that makes the difference a mark rather than a mention."
   },
   "part": {
    "marks": 2,
    "text": "Trial by ordeal was when you had to carry a hot iron or be thrown in water to see if you were guilty. Trial by jury was when people decided if you were guilty. They were both used in medieval times.",
-   "why": "A difference is identified with some evidence, so 2 marks. Both being medieval is not a real similarity, and there is no consequence."
+   "why": "One method is described and a difference is given, so 2 marks. Trial by jury is never described on its own, and both being medieval is not a real similarity."
   }
  },
  {
@@ -195,12 +195,12 @@
   "q": "Define the term shogun and give one example of a shogun.",
   "full": {
    "text": "A shogun was the military ruler of Japan, appointed in theory by the emperor but in practice holding real political power while the emperor remained a ceremonial figure. Tokugawa Ieyasu became shogun in 1603 after his victory at Sekigahara and founded a dynasty that ruled until 1868.",
-   "why": "The definition covers both the military role and the relationship to the emperor. The example is a named shogun with a date."
+   "why": "One mark for a definition that covers the military role and the relationship to the emperor, one for a named shogun with what he did."
   },
   "part": {
    "marks": 1,
    "text": "A shogun was the leader of Japan who was like a king. An example is the Tokugawa.",
-   "why": "The definition is roughly right but misses that the emperor still existed above the shogun; the Tokugawa were a family, not a shogun. Together worth 1."
+   "why": "The definition misses that the emperor still existed above the shogun, and the Tokugawa were a family rather than a shogun, so the example is not specific enough. Together worth 1."
   }
  },
  {
@@ -212,12 +212,12 @@
   "q": "Explain why the Meiji Restoration of 1868 is considered a turning point in Japanese history.",
   "full": {
    "text": "The Meiji Restoration is considered a turning point because it ended nearly seven centuries of rule by shoguns and set Japan on a completely different course. In 1868 the last Tokugawa shogun resigned and power was restored to the fifteen-year-old Emperor Meiji, whose government then abolished the domains, ended the samurai class and built railways, factories and a conscript army. Within forty years Japan had become an industrial power able to defeat Russia in 1905, so the direction of its history changed from isolation and feudalism to modernisation and empire.",
-   "why": "What happened, what changed, who was affected and for how long, with the word because in the first sentence and a dated consequence at the end."
+   "why": "Three marks, three parts. Names the event, describes the outcome (the shogun resigned, power returned to the emperor), then explains why that changed Japan for the long term with a dated consequence."
   },
   "part": {
    "marks": 1,
    "text": "The Meiji Restoration happened in 1868. The emperor got his power back from the shogun. Meiji means enlightened rule and the emperor was only fifteen. It changed Japan a lot.",
-   "why": "Accurate description, so 1 mark. Changed Japan a lot is a claim, not an explanation of what changed or for how long."
+   "why": "Names the event and describes what happened, so 2 marks. 'Changed Japan a lot' is a claim, not an explanation of what the outcome led to."
   }
  },
  {
@@ -297,7 +297,7 @@
   "q": "Source A: a Japanese woodblock print, c. 1874, showing a steam train on the new Tokyo to Yokohama railway, passengers in Western suits and dresses, and telegraph poles beside the track.\nUsing evidence from Source A and your own knowledge, explain one way Westernisation changed Japan.",
   "full": {
    "text": "One way Westernisation changed Japan was transport. Source A shows a steam train on the Tokyo to Yokohama line with telegraph poles beside it, which tells us Japan had adopted Western technology within a few years of the Meiji Restoration. From my own knowledge, this first railway opened in 1872, and by the 1890s lines connected the major cities, so goods and people could move across Japan in hours rather than days, which helped Japan industrialise and tied the country together under the new government.",
-   "why": "Identifies the change, names Source A and points to a specific feature in it, then adds a dated fact the source cannot show and explains what the change did. Three marks, three sentences."
+   "why": "Identifies the change, points to a specific feature of Source A, then adds a dated fact the source cannot show and explains what the change did. When a question says 'and your own knowledge', the source mark still has to be earned with a specific detail."
   },
   "part": {
    "marks": 1,
