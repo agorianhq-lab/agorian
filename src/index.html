@@ -479,13 +479,11 @@ footer{margin-top:40px;font-size:13px;color:var(--muted)}
 .mode:hover{border-color:var(--m)}
 .topic:hover{border-color:var(--u,var(--navy))}
 
-.examband{display:flex;align-items:center;gap:18px;width:100%;text-align:left;margin:18px 0 2px;padding:16px 22px;border-radius:var(--radius);background:var(--surface);border:2px solid var(--navy);border-left:8px solid var(--gold);cursor:pointer;box-shadow:var(--shadow);transition:transform .15s,background .15s}
-.examband:hover{transform:translateY(-2px);background:var(--navy);color:#fff}
+.examband{display:flex;align-items:flex-start;gap:18px;width:100%;text-align:left;margin:18px 0 2px;padding:16px 22px;border-radius:var(--radius);background:var(--surface);border:2px solid var(--navy);border-left:8px solid var(--gold)}
+.examband .ex{display:grid;gap:6px}.examband .exlinks{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px}.examband .exlinks .btn{padding:7px 12px;font-size:14px}
 .examband .k{font-size:26px;color:var(--gold-ink);flex:none}
 .examband .t{display:block;font-family:var(--display);font-size:22px;font-weight:700;color:var(--navy)}
 .examband .n{display:block;font-size:15px;color:var(--muted)}
-.examband .cta{margin-left:auto;font-weight:700;color:var(--navy);white-space:nowrap}
-.examband:hover .t,.examband:hover .n,.examband:hover .cta{color:#fff}
 .exam .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .exam .box{background:var(--surface);border:2px solid var(--navy);border-radius:var(--radius);padding:18px 20px;display:grid;gap:8px;align-content:start}
 .exam .box h3{font-family:var(--display);font-size:22px;color:var(--navy);margin:0}
@@ -859,7 +857,13 @@ function home(){
       </div></div>
       <figure class="pic" style="margin:0"><img src="${IMG['gr-athens']}" alt="Raphael's fresco The School of Athens, philosophers in debate under a great arch"><figcaption class="cap">Raphael, The School of Athens, 1511. Athenian thinkers arguing in a great hall. Socrates is at the left in the olive robe, counting off his points on his fingers.</figcaption></figure>
     </div>
-    <button class="examband" data-go="exam"><span class="k">&#9998;</span><span><span class="t">Before the exam</span><span class="n">What the paper looks like, how to spend the 50 minutes and where the marks are.</span></span><span class="cta">Open →</span></button>
+    <div class="examband"><span class="k">&#9998;</span><div class="ex">
+      <span class="t">Before the exam</span>
+      <span class="n"><b>50 marks in 50 minutes</b>, plus 5 minutes reading. Blue or black pen. Sources are in a separate booklet.</span>
+      <span class="n"><b>A</b> Multiple choice, 10 marks. <b>B</b> Short answers, 32 marks: identify, describe, explain and compare questions, some using a source. <b>C</b> Extended response, 8 marks: choose one of two questions and use a TEEAL structure with a clear contention.</span>
+      <span class="n">About a minute a question in A, about 45 seconds a mark in B, about 15 minutes for C. Attempt every question.</span>
+      <span class="exlinks"><button class="btn" data-go="shortq">Short answers</button><button class="btn" data-go="sources">Unseen sources</button><button class="btn quiet" data-go="write">Paragraph practice</button></span>
+    </div></div>
     <div class="units">
       <button class="upanel eu" data-unit="Medieval Europe"><span class="photo" style="background-image:url(${IMG['eu-bayeux']});background-position:right 40%;background-size:cover"></span><span class="t">Medieval Europe</span><span class="n">Feudalism, castles, the Church, the Crusades and the Black Death.</span><span class="cta">Practise this unit \u2192</span><svg class="art"><use href="#art-eu"/></svg></button>
       <button class="upanel jp" data-unit="Shogunate Japan"><span class="photo" style="background-image:url(${IMG['jp-wave']});background-position:right 55%;background-size:auto 100%"></span><span class="t">Shogunate Japan</span><span class="n">Samurai, the Tokugawa, sakoku and the Meiji Restoration.</span><span class="cta">Practise this unit \u2192</span><svg class="art"><use href="#art-jp"/></svg></button>
@@ -884,7 +888,7 @@ function home(){
         const m=mastery(t); return `<button class="topic ${unitCls(u)}" data-topic="${esc(t)}" style="--p:${s.a?pct:0}%"><span class="name">${esc(t)}${m?` <span class="badge ${m}" title="${m} mastery" style="margin-left:6px;vertical-align:middle"></span>`:''}</span><span class="pct ${s.a?'':'none'}">${s.a?pct+'%':'Not yet'}${s.a&&pct===100?'<span class="tick" aria-label="complete">&#10003;</span>':''}</span></button>`}).join('')}</div></div>`).join('')}
     </div>
   </section>`);
-  app.querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>({setup, challenge, terms, write, daily, timeline, facts, exam, sources})[b.dataset.go]());
+  app.querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>({setup, challenge, terms, write, daily, timeline, facts, sources, shortq})[b.dataset.go]());
   const gw=app.querySelector('#goWelcome'); if(gw){ gw.onclick=()=>{ store.set('welcomed',true); home() }; app.querySelector('#snd0').onclick=()=>setSound(!soundOn) }
   app.querySelectorAll('[data-topic]').forEach(b=>b.onclick=()=>startQuiz({mode:'practice', topics:[b.dataset.topic], timed:false}));
   app.querySelectorAll('[data-unit]').forEach(b=>b.onclick=()=>startQuiz({mode:'practice', topics:topicsIn(b.dataset.unit), timed:false, count:15}));
@@ -1214,40 +1218,6 @@ function facts(){
 }
 
 // ---------- before the exam: format, timing and where the marks are ----------
-function exam(){
-  h(`<section class="section exam"><div class="modeh" style="--m:var(--gold-ink)"><span class="k">&#9998;</span><h2>Before the exam</h2></div>
-  <div class="grid3">
-    <div class="box"><h3>The paper</h3><span class="big">50</span><p>marks in <b>50 minutes</b>, plus 5 minutes reading time. Blue or black pen. A separate <b>Source Booklet</b> holds the sources; the questions tell you which one to look at.</p></div>
-    <div class="box"><h3>Three sections</h3><ul><li><b>A. Multiple choice</b>, 10 marks. Several questions use a source from the booklet.</li><li><b>B. Short answer</b>, 32 marks. Identify, describe, explain and compare questions worth 1 to 4 marks each, some using a source. <a href="#sources" data-go="sources">Practise with unseen sources.</a></li><li><b>C. Extended response</b>, 8 marks. Choose <b>one</b> of two questions. TEEAL paragraph(s) with a clear contention.</li></ul></div>
-    <div class="box"><h3>Both units, both skills</h3><p>Questions move between Medieval Europe and Shogunate Japan, and between knowledge questions and source questions. Sources may be artworks, written extracts, maps or timelines, so practise all of them.</p><p>Everything on the <b>I can</b> list in your revision booklet is fair game.</p></div>
-  </div>
-  <div class="card" style="margin-top:18px"><p class="eyebrow">A plan for the 50 minutes</p>
-    <div class="plan"><b>Reading</b><span>Five minutes before writing starts. Read Section C first and choose your question, then skim the sources. Decide your contention while you read.</span>
-    <b>0 to 8</b><span>Section A. One minute a question. Eliminate wrong options. If a question uses a source, find it in the booklet before you read the options. Never leave one blank.</span>
-    <b>8 to 32</b><span>Section B. About 45 seconds per mark: a 2-mark question gets 90 seconds, a 4-mark question three minutes. Write to the marks (see below) and move on.</span>
-    <b>32 to 47</b><span>Section C. Two minutes planning in the notes space: contention, two or three connected points, the evidence for each. Then write.</span>
-    <b>47 to 50</b><span>Go back to anything you skipped. Check every Section A question has exactly one circle.</span></div></div>
-  <div class="card" style="margin-top:18px"><p class="eyebrow">Write to the marks</p><p class="hint">The number of marks tells you how many things to say. Each mark is usually one identified point or one explained link.</p>
-    <div class="tbl"><table class="tt"><thead><tr><th>Question says</th><th>Marks</th><th>What usually earns them</th></tr></thead><tbody>
-      <tr><td>Identify</td><td>1</td><td>Name it. One phrase is enough: a century, a place, a name, a term.</td></tr>
-      <tr><td>Describe</td><td>1 each</td><td>Say what it was like or what it involved. Three marks means three separate points.</td></tr>
-      <tr><td>Define and give an example</td><td>2</td><td>One mark for an accurate definition, one for an example you name or describe. The bare term on its own is not an example.</td></tr>
-      <tr><td>Explain one</td><td>2 or 3</td><td>Identify it, then a <b>because</b> sentence that links evidence to the question. Three marks wants specific evidence as well.</td></tr>
-      <tr><td>Explain two</td><td>4</td><td>Two separate points, each with its own because. Two sentences about the same point score 2, not 4.</td></tr>
-      <tr><td>Compare</td><td>4</td><td>Describe each of the two things in its own right (1 + 1), then one similarity (1) and one difference (1). Use <b>both</b>, <b>however</b> and <b>whereas</b>.</td></tr>
-      <tr><td>Using evidence from the source</td><td>+1</td><td>Quote or point to a detail in the source and say what it shows. No source detail, no source mark. When a question says <b>and your own knowledge</b>, at least one of your points must still use a specific detail from the source.</td></tr>
-      <tr><td>Explain why it is a turning point</td><td>3</td><td>Name the event (1), say what its outcome was (1), then explain why that outcome changed things for a long time (1).</td></tr>
-      <tr><td>Analyse (Section C)</td><td>8</td><td>Graded out of 8 on the criteria printed on the paper: structure (TEEAL, clear contention, logical order), historical concepts (significance, cause and effect, perspectives), specific accurate knowledge, examples and evidence studied in class, and clear written expression.</td></tr>
-    </tbody></table></div></div>
-  <div class="grid3" style="margin-top:18px">
-    <div class="box"><h3>Reading a source</h3><ul><li><b>Type</b>: manuscript, print, chronicle, letter, map, photograph.</li><li><b>Origin</b>: who, where, when. Give the century or the date from the caption.</li><li><b>Infer</b>: say what the details <i>suggest</i>, then back it with your own knowledge.</li><li>Know which period each event sits in, and count centuries carefully (1215 is the 13th century).</li></ul></div>
-    <div class="box"><h3>Section C: what you are marked on</h3><ul><li>The structure of your response. You are encouraged to use a TEEAL structure with a clear contention and a logical order of arguments.</li><li>Your ability to write a clear and meaningful discussion that demonstrates relevant historical concepts, particularly significance, cause and effect, and perspectives.</li><li>The use of specific, detailed and accurate historical knowledge relevant to your chosen question.</li><li>The use of relevant examples and evidence studied in class.</li><li>Clear written expression and accurate spelling, grammar and sentence structure.</li></ul></div>
-    <div class="box"><h3>Marks people often lose</h3><ul><li>Answering one point twice when the question says <b>two</b>.</li><li>Describing a source instead of inferring from it.</li><li>Writing "medieval times" for a century.</li><li>Leaving a multiple-choice question blank, or circling two.</li><li>Spending 20 minutes on Section A.</li><li>A Section C answer with no contention in the first sentence.</li></ul></div>
-  </div>
-  <div class="actions" style="margin-top:18px"><button class="btn primary" id="toShort">Practise short answers</button><button class="btn" id="toSuccess">See what full marks look like</button><button class="btn" id="toWrite">Paragraph practice</button><button class="btn quiet" id="home">Home</button></div></section>`);
-  app.querySelectorAll('[data-go]').forEach(a=>a.onclick=e=>{ e.preventDefault(); ({sources})[a.dataset.go]() }); app.querySelector('#toShort').onclick=()=>shortq(); app.querySelector('#toSuccess').onclick=()=>success(); app.querySelector('#toWrite').onclick=()=>write(); app.querySelector('#home').onclick=home;
-}
-
 // ---------- short answers: write, compare with marked exemplars, self-mark ----------
 let sqMarks=store.get('sqMarks',{});
 function shortq(){
@@ -1482,9 +1452,9 @@ document.addEventListener('visibilitychange',()=>{ if(document.hidden&&music.on)
 const EXAM_AT=new Date('2026-11-06T10:45:00+11:00'); // Friday 6 November, 10:45 Melbourne time
 function examLine(now){ const ms=EXAM_AT-now; if(ms<=0){ return now-EXAM_AT<55*60000?'Exam under way. Good luck.':'Exam done.' } const mins=Math.floor(ms/60000), days=Math.floor(mins/1440), hrs=Math.floor((mins%1440)/60), mn=mins%60; if(days>=1) return `Exam in <b>${days} day${days>1?'s':''}</b> ${hrs} h`; if(hrs>=1) return `Exam in <b>${hrs} h</b> ${mn} min`; return `Exam in <b>${mn} min</b>` }
 (function tick(){ const d=new Date(); const el=document.getElementById('clock'); if(el){ const hh=d.getHours(), m=String(d.getMinutes()).padStart(2,'0'); const h12=((hh+11)%12)+1; el.innerHTML=`<span class="lbl">Melbourne</span><span class="time">${h12}:${m}<small>${hh<12?'am':'pm'}</small></span><span class="date">${d.toLocaleDateString('en-AU',{weekday:'long',day:'numeric',month:'long'})}</span><span class="exam">${examLine(d)}</span>` } setTimeout(tick, 60000-(Date.now()%60000)+50) })();
-HOME_FN=home; home=screen(home); setup=screen(setup); challenge=screen(challenge); terms=screen(terms); write=screen(write); daily=screen(daily); timeline=screen(timeline); timelineGame=screen(timelineGame); sprint=screen(sprint); facts=screen(facts); exam=screen(exam); shortq=screen(shortq); sources=screen(sources); startQuiz=screen(startQuiz);
+HOME_FN=home; home=screen(home); setup=screen(setup); challenge=screen(challenge); terms=screen(terms); write=screen(write); daily=screen(daily); timeline=screen(timeline); timelineGame=screen(timelineGame); sprint=screen(sprint); facts=screen(facts); shortq=screen(shortq); sources=screen(sources); startQuiz=screen(startQuiz);
 document.getElementById('backBtn').onclick=goBack;
-const ROUTES={practice:setup, challenge, terms, write, daily, timeline, sprint, facts, success, exam, shortq, sources};
+const ROUTES={practice:setup, challenge, terms, write, daily, timeline, sprint, facts, success, shortq, sources};
 const r=(location.hash||'').slice(1); (ROUTES[r]||home)();
 })();
 </script>
