@@ -528,16 +528,16 @@
    "topic": "Law and order",
    "skill": "Crimes and punishments",
    "stimulus": null,
-   "explanation": "With no police, order depended on deterrence. Stocks, pillories and executions were public so that the whole community saw the consequences of breaking the law.",
+   "explanation": "Prisons existed mainly to hold people until trial. Keeping a prisoner for years cost money nobody wanted to spend, so sentences were carried out at once: a fine, the stocks, a lost hand or death.",
    "source": "EP",
    "srcId": 21,
    "type": "mc",
-   "question": "Why were most punishments in medieval Europe carried out in public, in the market square or at the town gate?",
+   "question": "Fines, the stocks, mutilation and execution were common medieval punishments, but long prison sentences were rare. Why?",
    "options": [
-    "Because towns had no prisons large enough to hold criminals, so sentences had to be carried out quickly",
-    "To shame the offender and warn others, since there was no police force and fear was the main deterrent",
-    "So that the king or his sheriff could watch in person and check that the sentence was carried out",
-    "To give the offender the chance to confess and be forgiven by the priest in front of the whole parish"
+    "Prisons were kept mainly for nobles who could pay for their own keep, while commoners were punished in other ways",
+    "Towns and lords had no money to build, guard and feed prisoners for years, so punishments had to be quick and cheap",
+    "Magna Carta in 1215 was read as banning imprisonment, so judges after that date avoided prison sentences altogether",
+    "Most crimes went to the Church courts, which could only order penance and fines and had no power to imprison anyone"
    ],
    "answer": [
     1
