@@ -20,9 +20,7 @@ EU=[(793,"Vikings raid Lindisfarne","Raids on monasteries begin two centuries of
 (1381,"Peasants' Revolt","Wat Tyler's rebels march on London.","life"),
 (1453,"Fall of Constantinople","Often taken as the end of the Middle Ages. Gutenberg's press is printing in the same decade.","war"),
 (1485,"Battle of Bosworth","The Tudors take the English throne; medieval England ends.","pol"),]
-JP=[(794,"Court moves to Heian-kyo","The Heian period begins; Fujiwara nobles dominate the emperor.","pol"),
-(798,"Kiyomizu-dera founded","The Pure Water Temple in Kyoto, still standing.","faith"),
-(1008,"The Tale of Genji","Murasaki Shikibu's novel of court life, often called the world's first.","life"),
+JP=[(1160,"Taira clan dominates the court","After defeating the Minamoto in Kyoto, Taira no Kiyomori rules through the emperor. The Genpei War follows.","pol"),
 (1180,"Genpei War begins","Minamoto and Taira clans fight for control; samurai rise.","war"),
 (1185,"Minamoto victory at Dan-no-ura","The Genpei War ends. Kamakura period begins.","war"),
 (1192,"Yoritomo becomes shogun","The first shogunate. Emperor stays as figurehead.","pol"),
