@@ -484,6 +484,7 @@ footer{margin-top:40px;font-size:13px;color:var(--muted)}
 .examband .k{font-size:26px;color:var(--gold-ink);flex:none}
 .examband .t{display:block;font-family:var(--display);font-size:22px;font-weight:700;color:var(--navy)}
 .examband .n{display:block;font-size:15px;color:var(--muted)}
+.examband .exlist{margin:0;padding-left:20px;display:grid;gap:5px;font-size:15px;color:var(--muted);line-height:1.4}.examband .exlist li::marker{color:var(--gold-ink)}.examband .exlist b{color:var(--ink)}
 .exam .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .exam .box{background:var(--surface);border:2px solid var(--navy);border-radius:var(--radius);padding:18px 20px;display:grid;gap:8px;align-content:start}
 .exam .box h3{font-family:var(--display);font-size:22px;color:var(--navy);margin:0}
@@ -509,8 +510,11 @@ footer{margin-top:40px;font-size:13px;color:var(--muted)}
 .sq .m{flex:none;width:44px;height:44px;border-radius:50%;background:var(--u);color:#fff;display:grid;place-items:center;font-family:var(--display);font-weight:700;font-size:18px}
 .sq:hover .m{background:#fff;color:var(--u)}
 .sq .q{font-size:16px;line-height:1.35}
-.sq .done{margin-left:auto;font-size:13px;white-space:nowrap;opacity:.8}
-.sq.eu{--u:var(--eu)} .sq.jp{--u:var(--jp)}
+.sq .tail{margin-left:auto;display:flex;flex-direction:column;align-items:flex-end;gap:4px;flex:none}
+.sq .yr{font-size:12px;color:var(--muted);white-space:nowrap;border:1px solid var(--line);border-radius:999px;padding:2px 8px}
+.sq .done{font-size:13px;white-space:nowrap;opacity:.8}
+.critlist{margin:6px 0 0;padding-left:20px;display:grid;gap:5px;font-size:15px;line-height:1.45}.critlist li::marker{color:var(--teal)}
+.sq.eu{--u:var(--eu)} .sq.jp{--u:var(--jp)} .sq.sk{--u:var(--sk)}
 .marksel{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
 .marksel button{min-width:44px;height:40px;border-radius:10px;border:2px solid var(--navy);background:var(--surface);font-weight:700;cursor:pointer}
 .marksel button.on{background:var(--navy);color:#fff}
@@ -562,7 +566,7 @@ footer{margin-top:40px;font-size:13px;color:var(--muted)}
   <symbol id="ic-sk" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="6"/><path d="M15.5 15.5 L21 21"/><path d="M8.5 11 h5 M11 8.5 v5"/></g></symbol>
 </svg>
 <main id="app"></main>
-<footer><div class="footrow"><span>&copy; Agorian 2026. All rights reserved. Content and design may not be copied or reused without permission.</span><details class="credits"><summary>Image credits</summary>Artworks are sourced from Wikimedia Commons and are in the public domain unless a licence is noted. Raphael, The School of Athens (1511). Katsushika Hokusai, The Great Wave off Kanagawa and Fine Wind, Clear Morning (c. 1831). Utagawa Hiroshige, Nihonbashi from The Fifty-three Stations of the Tokaido (1833). Photograph of a samurai in armour (1860s). The Bayeux Tapestry, scene 57 (c. 1070s). Limbourg brothers, Très Riches Heures du duc de Berry, September and October (c. 1412 to 1416). Toggenburg Bible (1411). Siege of Jerusalem, 13th-century manuscript, Bibliothèque nationale de France. Issunshi Hanasato, a terakoya school (Edo period). Utagawa Kuniyoshi, warrior print, Takata no baba (19th century). Pictorial map of the Tokaido highroad (Edo period). Laurentius de Voltolina, Henry of Germany lecturing at Bologna (14th century). Jean Miélot at his desk (15th century). Hokusai Manga, volume 6 (1817). Fun facts: Domesday Book binding (The National Archives); Gothic armour by Lorenz Helmschmied, 1493, photo Kunsthistorisches Museum Wien (CC BY 4.0); Bayeux Tapestry, Dinan scene; Ordeal by cold water, 12th-century manuscript; Fountains Abbey, photo by Klaus with K (CC BY-SA 3.0); John Gregory Crace, Court of the Lions (1855, Metropolitan Museum of Art, CC0); Lazzaretto Vecchio, Venice, photo by Godromil; Queen Mary Psalter, reeve and serfs (c. 1310); Moko Shurai Ekotoba (c. 1293); portrait of Nitobe Inazo; Utagawa Hiroshige, daimyo procession, Suruga-cho (1856) and Chushingura Act XI (c. 1840); Kawahara Keiga, Dejima (1811); scroll of the Perry mission (1854, British Museum); Uchida Kuichi, Emperor Meiji (1873); Codex Manesse (c. 1305). Timeline: Lindisfarne Gospels carpet page (c. 700); Genji Monogatari Emaki, Azumaya (12th century); landscape attributed to Sesshu Toyo (15th century); Himeji Castle, photo (CC0); Moko Shurai Ekotoba (c. 1293); Hiroshige, Tokaido series; the Perry expedition (1850s); event thumbnails from Wikimedia Commons, public domain.</details></div></footer>
+<footer><div class="footrow"><span>&copy; Agorian 2026. All rights reserved. Content and design may not be copied or reused without permission.</span><details class="credits"><summary>Image credits</summary>Artworks are sourced from Wikimedia Commons and are in the public domain unless a licence is noted. Raphael, The School of Athens (1511). Katsushika Hokusai, The Great Wave off Kanagawa and Fine Wind, Clear Morning (c. 1831). Utagawa Hiroshige, Nihonbashi from The Fifty-three Stations of the Tokaido (1833). Photograph of a samurai in armour (1860s). The Bayeux Tapestry, scene 57 (c. 1070s). Limbourg brothers, Très Riches Heures du duc de Berry, September and October (c. 1412 to 1416). Toggenburg Bible (1411). Siege of Jerusalem, 13th-century manuscript, Bibliothèque nationale de France. Issunshi Hanasato, a terakoya school (Edo period). Utagawa Kuniyoshi, warrior print, Takata no baba (19th century). Pictorial map of the Tokaido highroad (Edo period). Laurentius de Voltolina, Henry of Germany lecturing at Bologna (14th century). Jean Miélot at his desk (15th century). Hokusai Manga, volume 6 (1817). Fun facts: Domesday Book binding (The National Archives); Gothic armour by Lorenz Helmschmied, 1493, photo Kunsthistorisches Museum Wien (CC BY 4.0); Bayeux Tapestry, Dinan scene; Ordeal by cold water, 12th-century manuscript; Fountains Abbey, photo by Klaus with K (CC BY-SA 3.0); John Gregory Crace, Court of the Lions (1855, Metropolitan Museum of Art, CC0); Lazzaretto Vecchio, Venice, photo by Godromil; Queen Mary Psalter, reeve and serfs (c. 1310); Moko Shurai Ekotoba (c. 1293); portrait of Nitobe Inazo; Utagawa Hiroshige, daimyo procession, Suruga-cho (1856) and Chushingura Act XI (c. 1840); Kawahara Keiga, Dejima (1811); scroll of the Perry mission (1854, British Museum); Uchida Kuichi, Emperor Meiji (1873); Codex Manesse (c. 1305). Short answers: Giotto di Bondone, Last Judgment, detail (1306), Cappella Scrovegni, Padua, via Web Gallery of Art. Timeline: Lindisfarne Gospels carpet page (c. 700); Genji Monogatari Emaki, Azumaya (12th century); landscape attributed to Sesshu Toyo (15th century); Himeji Castle, photo (CC0); Moko Shurai Ekotoba (c. 1293); Hiroshige, Tokaido series; the Perry expedition (1850s); event thumbnails from Wikimedia Commons, public domain.</details></div></footer>
 </div>
 
 <script id="bank" type="application/json">__BANK__</script>
@@ -858,10 +862,14 @@ function home(){
       <figure class="pic" style="margin:0"><img src="${IMG['gr-athens']}" alt="Raphael's fresco The School of Athens, philosophers in debate under a great arch"><figcaption class="cap">Raphael, The School of Athens, 1511. Athenian thinkers arguing in a great hall. Socrates is at the left in the olive robe, counting off his points on his fingers.</figcaption></figure>
     </div>
     <div class="examband"><span class="k">&#9998;</span><div class="ex">
-      <span class="t">Before the exam</span>
-      <span class="n"><b>50 marks in 50 minutes</b>, plus 5 minutes reading. Blue or black pen. Sources are in a separate booklet.</span>
-      <span class="n"><b>A</b> Multiple choice, 10 marks. <b>B</b> Short answers, 32 marks: identify, describe, explain and compare questions, some using a source. <b>C</b> Extended response, 8 marks: choose one of two questions and use a TEEAL structure with a clear contention.</span>
-      <span class="n">About a minute a question in A, about 45 seconds a mark in B, about 15 minutes for C. Attempt every question.</span>
+      <span class="t">Exam breakdown</span>
+      <ul class="exlist">
+        <li><b>50 marks in 50 minutes</b>, plus 5 minutes reading time.</li>
+        <li><b>Section A:</b> multiple choice, 10 marks. About a minute a question.</li>
+        <li><b>Section B:</b> short answers, 32 marks. Identify, describe, explain and compare questions, some using a source. About 45 seconds a mark.</li>
+        <li><b>Section C:</b> extended response, 8 marks. Choose one of two questions and use a TEEAL structure with a clear contention. About 15 minutes.</li>
+        <li>Blue or black pen. Sources are in a separate booklet. Attempt every question.</li>
+      </ul>
       <span class="exlinks"><button class="btn" data-go="shortq">Short answers</button><button class="btn" data-go="sources">Unseen sources</button><button class="btn quiet" data-go="write">Paragraph practice</button></span>
     </div></div>
     <div class="units">
@@ -1224,8 +1232,8 @@ function shortq(){
   const drafts=store.get('drafts',{});
   const list=()=>{
     h(`<section class="section"><div class="modeh" style="--m:var(--teal)"><span class="k">&#9998;</span><h2>Short answers</h2></div>
-    <p class="muted">Section B is 32 of the 50 marks. Each question here is worth 2, 3 or 4. Write your answer, reveal an answer likely to get full marks and one likely to get part marks, then mark yourself honestly. The number of marks tells you how many things to say.</p>
-    <div class="sqlist">${SHORTQ.map(s=>{ const u=unitCls(s.unit); const m=sqMarks[s.id]; return `<button class="sq ${u}" data-id="${s.id}"><span class="m">${s.marks}</span><span class="q">${esc(s.q)}</span>${m!==undefined?`<span class="done">${m} / ${s.marks}</span>`:''}</button>`}).join('')}</div>
+    <p class="muted">Section B is 32 of the 50 marks. These questions come from the 2023 and 2024 Year 8 papers, with the notes their markers used. Write your answer, then reveal the marking notes, an answer likely to get full marks and one likely to get part marks, and mark yourself honestly. The number of marks tells you how many things to say.</p>
+    <div class="sqlist">${SHORTQ.map(s=>{ const u=unitCls(s.unit); const m=sqMarks[s.id]; return `<button class="sq ${u}" data-id="${s.id}"><span class="m">${s.marks}</span><span class="q">${esc(s.q)}</span><span class="tail"><span class="yr">${esc((s.year||'').slice(0,4))}</span>${m!==undefined?`<span class="done">${m} / ${s.marks}</span>`:''}</span></button>`}).join('')}</div>
     <div class="actions" style="margin-top:18px"><span class="hint">${Object.keys(sqMarks).filter(k=>SHORTQ.some(s=>s.id===k)).length} of ${SHORTQ.length} marked. ${(()=>{const d=SHORTQ.filter(s=>sqMarks[s.id]!==undefined); const got=d.reduce((a,s)=>a+sqMarks[s.id],0), of=d.reduce((a,s)=>a+s.marks,0); return of?`${got} of ${of} marks so far.`:''})()}</span><button class="btn" id="toSucc">What success looks like</button><button class="btn quiet" id="home">Home</button></div></section>`);
     app.querySelectorAll('.sq').forEach(b=>b.onclick=()=>one(b.dataset.id));
     app.querySelector('#toSucc').onclick=()=>success(); app.querySelector('#home').onclick=home;
@@ -1234,15 +1242,17 @@ function shortq(){
     const s=SHORTQ.find(x=>x.id===id); const k=SHORTQ.indexOf(s); const u=unitCls(s.unit);
     h(`<section class="section"><div class="modeh" style="--m:var(--teal)"><span class="k">&#9998;</span><h2>Short answers</h2></div>
     <div class="card ${u}">
-      <span class="eyebrow" style="color:var(--${u})">${esc(s.unit)} · ${esc(s.topic)} · ${esc(s.cmd)}</span>
+      <span class="eyebrow" style="color:var(--${u})">${esc(s.unit)} · ${esc(s.topic)} · ${esc(s.cmd)}${s.year?` · ${esc(s.year)}`:''}</span>
+      ${s.source?`<div class="srcgrid" style="margin:10px 0 14px">${s.source.img?`<div><img src="${IMG[s.source.img]}" alt="${esc(s.source.alt||'')}"></div>`:`<blockquote class="srcq">${esc(s.source.text)}</blockquote>`}<div><p class="hint" style="font-size:14px;color:var(--ink)"><b>${esc(s.source.label||'Source')}.</b> ${esc(s.source.caption)}</p><p class="hint" style="margin-top:10px">Read the caption first: it gives you the who, when and where. Answer using the source and your own knowledge.</p></div></div>`:''}
       <p class="qtext">${esc(s.q)} <span class="muted" style="font-weight:400;white-space:nowrap">(${s.marks} marks)</span></p>
       <div class="timerrow"><span><b>${s.marks*45>=60?Math.floor(s.marks*45/60)+' min '+(s.marks*45%60?s.marks*45%60+' sec':''):s.marks*45+' sec'}</b> in the exam, at 45 seconds a mark.</span><button class="btn" id="tstart">Start timer</button><span class="tdisp" id="tdisp" hidden></span></div>
       <textarea id="sq-${s.id}" placeholder="Write your answer here. Identify, prove, link." style="margin-top:12px;min-height:150px">${esc(drafts['sq-'+s.id]||'')}</textarea>
       <div class="row" style="justify-content:space-between;margin-top:8px"><span class="hint" id="wc"></span><button class="btn primary" id="reveal" ${sqMarks[s.id]!==undefined?'hidden':''}>Reveal marked answers</button></div>
       <div id="answers" ${sqMarks[s.id]!==undefined?'':'hidden'} style="margin-top:14px;display:grid;gap:12px">
+        ${s.criteria?`<div class="card" style="margin:0;border-left:6px solid var(--teal)"><p class="eyebrow">Marking notes from the ${esc(s.year||'paper')}</p><ul class="critlist">${s.criteria.map(c=>`<li>${esc(c)}</li>`).join('')}</ul></div>`:''}
         <div class="sample full"><span class="marks full">likely ${s.marks} / ${s.marks}</span>${s.full.text.split('\n').map(t=>`<p>${esc(t)}</p>`).join('')}<p class="why"><b>Why likely ${s.marks}.</b> ${esc(s.full.why)}</p></div>
         <div class="sample weak"><span class="marks weak">likely ${s.part.marks} / ${s.marks}</span>${s.part.text.split('\n').map(t=>`<p>${esc(t)}</p>`).join('')}<p class="why"><b>Why likely ${s.part.marks}.</b> ${esc(s.part.why)}</p></div>
-        <div class="card" style="margin:0"><p class="eyebrow">Mark yourself</p><p class="hint">Compare your answer with the two above. Did you identify each point the question asked for, and did each one have a because sentence?</p>
+        <div class="card" style="margin:0"><p class="eyebrow">Mark yourself</p><p class="hint">Check your answer against the marking notes. Give yourself a mark for each point in the notes that your answer makes clearly, and compare it with the two answers above.</p>
           <div class="marksel" id="marksel">${Array.from({length:s.marks+1},(_,i)=>`<button data-m="${i}" class="${sqMarks[s.id]===i?'on':''}">${i}</button>`).join('')}<span class="hint">out of ${s.marks}</span></div></div>
       </div>
       ${pager(k,SHORTQ.length,`Question ${k+1} of ${SHORTQ.length}`)}
@@ -1435,7 +1445,7 @@ function write(){
     });
   h(`<section class="section">${MODEH('write','Paragraph practice')}<p class="muted">Six Section C practice prompts, three on each unit. Each opens with the TEEAL scaffold and a timer for exam conditions. Your draft stays on this device.</p><div class="feedback info" style="margin-top:12px"><b>Your extended response will be graded out of 8 marks. You will be marked on:</b><span><ul style="margin:6px 0 0;padding-left:20px"><li>The structure of your response. You are encouraged to use a TEEAL structure with a clear contention and a logical order of arguments.</li><li>Your ability to write a clear and meaningful discussion that demonstrates relevant historical concepts, particularly significance, cause and effect, and perspectives.</li><li>The use of specific, detailed and accurate historical knowledge relevant to your chosen question.</li><li>The use of relevant examples and evidence studied in class.</li><li>Clear written expression and accurate spelling, grammar and sentence structure.</li></ul></span></div>
   <div class="hubs"><button class="hubcard" id="succ" style="border-left-color:var(--gold-ink)"><b>What success looks like</b><span>How the marks are won and lost in Section B. Explains, compares, turning points, captions and impacts.</span></button>
-  <button class="hubcard" id="shortq" style="border-left-color:var(--teal)"><b>Short answers</b><span>Eighteen 2, 3 and 4-mark questions. Write yours, then compare it with an answer likely to get full marks and one likely to get part marks, and mark yourself.</span></button></div>
+  <button class="hubcard" id="shortq" style="border-left-color:var(--teal)"><b>Short answers</b><span>Fifteen questions from the 2023 and 2024 papers, with the notes their markers used. Write yours, then compare it with an answer likely to get full marks and one likely to get part marks, and mark yourself.</span></button></div>
   <div class="topics">${prompts.map(p=>`<button class="topic" data-id="${p.id}" style="align-items:flex-start"><span><span class="eyebrow">${esc(p.unit)}</span><br><span class="name" style="font-weight:500">${esc(p.question.replace(/^Write ONE TEEAL paragraph in response to the following\. /,'').split('. ').slice(0,2).join('. ').replace(/\.$/,''))}.</span></span><span class="meta">${drafts[p.id]?'Draft saved':''}</span></button>`).join('')}</div>
   <div class="row"><button class="btn quiet" id="home">Home</button></div></section>`);
   app.querySelectorAll('[data-id]').forEach(b=>b.onclick=()=>pick(+b.dataset.id));
