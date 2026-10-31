@@ -55,6 +55,7 @@ header>*{max-width:100%}
 .clock .time{font-family:var(--display);font-weight:700;font-size:40px;line-height:1;color:var(--navy);font-variant-numeric:tabular-nums}
 .clock .time small{font-size:.5em;color:var(--muted);font-weight:500;margin-left:4px}
 .clock .date{font-size:14px;color:var(--muted)}
+.clock .exam{font-size:12.5px;color:var(--gold-ink);font-weight:600;margin-top:2px}.clock .exam b{color:var(--gold-ink)}
 @media (max-width:1000px){.hdr-right{position:static;margin:10px auto 0;justify-items:center}}
 .qotd{position:absolute;left:0;top:22px;width:200px;display:grid;gap:3px;padding:8px 11px 8px 13px;border:1px solid color-mix(in srgb,var(--gold) 45%,var(--line));background:linear-gradient(135deg,color-mix(in srgb,var(--gold) 18%,var(--surface)),var(--surface) 70%);border-radius:14px;text-align:left;box-shadow:var(--shadow);overflow:hidden}
 .qotd::before{content:"“";position:absolute;left:8px;top:-10px;font-family:var(--display);font-size:48px;line-height:1;color:var(--gold);opacity:.3;pointer-events:none}
@@ -1527,7 +1528,9 @@ const ab=document.getElementById('audioBtn'), ap=document.getElementById('audioP
 const mm=document.getElementById('musMode'); mm.value=music.mode; mm.onchange=()=>{ music.mode=mm.value; store.set('musMode',mm.value); music.current=null; if(music.on){ clearTimeout(music.timer); phrase() } };
 const mv=document.getElementById('musVol'); mv.value=music.vol; mv.oninput=()=>{ music.vol=+mv.value; store.set('musVol',music.vol); if(music.master&&actx) music.master.gain.setTargetAtTime(music.vol/100*.6, actx.currentTime, .1) };
 document.addEventListener('visibilitychange',()=>{ if(document.hidden&&music.on){ clearTimeout(music.timer) } else if(music.on){ phrase() } });
-(function tick(){ const d=new Date(); const el=document.getElementById('clock'); if(el){ const hh=d.getHours(), m=String(d.getMinutes()).padStart(2,'0'), ss=String(d.getSeconds()).padStart(2,'0'); const h12=((hh+11)%12)+1; el.innerHTML=`<span class="lbl">Melbourne</span><span class="time">${h12}:${m}<small>${hh<12?'am':'pm'}</small></span><span class="date">${d.toLocaleDateString('en-AU',{weekday:'long',day:'numeric',month:'long'})}</span>` } setTimeout(tick, 60000-(Date.now()%60000)+50) })();
+const EXAM_AT=new Date('2026-11-06T10:45:00+11:00'); // Friday 6 November, 10:45 Melbourne time
+function examLine(now){ const ms=EXAM_AT-now; if(ms<=0){ return now-EXAM_AT<55*60000?'Exam under way. Good luck.':'Exam done.' } const mins=Math.floor(ms/60000), days=Math.floor(mins/1440), hrs=Math.floor((mins%1440)/60), mn=mins%60; if(days>=1) return `Exam in <b>${days} day${days>1?'s':''}</b> ${hrs} h`; if(hrs>=1) return `Exam in <b>${hrs} h</b> ${mn} min`; return `Exam in <b>${mn} min</b>` }
+(function tick(){ const d=new Date(); const el=document.getElementById('clock'); if(el){ const hh=d.getHours(), m=String(d.getMinutes()).padStart(2,'0'); const h12=((hh+11)%12)+1; el.innerHTML=`<span class="lbl">Melbourne</span><span class="time">${h12}:${m}<small>${hh<12?'am':'pm'}</small></span><span class="date">${d.toLocaleDateString('en-AU',{weekday:'long',day:'numeric',month:'long'})}</span><span class="exam">${examLine(d)}</span>` } setTimeout(tick, 60000-(Date.now()%60000)+50) })();
 HOME_FN=home; home=screen(home); setup=screen(setup); challenge=screen(challenge); terms=screen(terms); write=screen(write); daily=screen(daily); timeline=screen(timeline); timelineGame=screen(timelineGame); sprint=screen(sprint); facts=screen(facts); exam=screen(exam); shortq=screen(shortq); sources=screen(sources); startQuiz=screen(startQuiz);
 document.getElementById('backBtn').onclick=goBack;
 const ROUTES={practice:setup, challenge, terms, write, daily, timeline, sprint, facts, success, exam, shortq, sources};
