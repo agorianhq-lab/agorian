@@ -1,0 +1,1495 @@
+<title>Agorian</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<script>window.goatcounter={no_onload:true};window.__gcq=[];</script>
+<script data-goatcounter="https://agorian.goatcounter.com/count" async src="https://gc.zgo.at/count.js" onload="(window.__gcq||[]).forEach(function(p){window.goatcounter.count(p)});window.__gcq=null"></script>
+<style>/*__FONTS__*/</style>
+<style>
+/* Layout: one centred column (max 760px) on a quiet ground; the mode cards and the question card are the only raised objects. */
+:root{
+  --bg:#F1EEE7; --surface:#FBFAF7; --ink:#1E2436; --muted:#636A7A; --line:#DAD5CB;
+  --navy:#243A6B; --navy-ink:#FFFFFF; --accent:#C7431F; --gold:#CF9A3A; --sage:#4F7F6B; --blush:#F3E7DC;
+  --eu:#7A2E2B; --eu-soft:#F0E3DE; --jp:#1F3A5F; --jp-soft:#E2E8F1; --sk:#4F7F6B; --sk-soft:#E4EEE8; --teal:#2A7A86; --plum:#6B3F7A; --gold-ink:#9A6616; --rose:#B8356A;
+  --pattern:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Cpath d='M4 60V4h56v56H12V12h40v40H20V20h24v24H28V28h8v8' fill='none' stroke='%23243A6B' stroke-width='3' opacity='.032'/%3E%3C/svg%3E");
+  --ok:#3E7F5F; --ok-bg:#E3F1E8; --bad:#B23A24; --bad-bg:#F8E4DE;
+  --display:"Fraunces",Georgia,"Times New Roman",serif;
+  --body:"Atkinson Hyperlegible",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --radius:14px; --shadow:0 1px 2px rgba(28,35,51,.06),0 8px 24px -12px rgba(28,35,51,.18);
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#151A26; --surface:#1E2434; --ink:#EDEAE3; --muted:#A4A9B6; --line:#343B4E;
+  --navy:#4A5F9E; --navy-ink:#FFFFFF; --accent:#E8694A; --gold:#E2B45C; --sage:#6FA58D; --blush:#3A2F2B;
+  --eu:#C9736C; --eu-soft:#3A2826; --jp:#7FA0D1; --jp-soft:#232E44; --sk:#6FA58D; --sk-soft:#1F3029; --teal:#5FB3BF; --plum:#B58AC4; --gold-ink:#E2B45C; --rose:#E27AA6;
+  --pattern:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Cpath d='M4 60V4h56v56H12V12h40v40H20V20h24v24H28V28h8v8' fill='none' stroke='%23E2B45C' stroke-width='3' opacity='.045'/%3E%3C/svg%3E");
+  --ok:#6FBF95; --ok-bg:#1E3A2E; --bad:#F08A72; --bad-bg:#45251F;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px -12px rgba(0,0,0,.5); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#151A26; --surface:#1E2434; --ink:#EDEAE3; --muted:#A4A9B6; --line:#343B4E;
+  --navy:#4A5F9E; --navy-ink:#FFFFFF; --accent:#E8694A; --gold:#E2B45C; --sage:#6FA58D; --blush:#3A2F2B;
+  --eu:#C9736C; --eu-soft:#3A2826; --jp:#7FA0D1; --jp-soft:#232E44; --sk:#6FA58D; --sk-soft:#1F3029; --teal:#5FB3BF; --plum:#B58AC4; --gold-ink:#E2B45C; --rose:#E27AA6;
+  --pattern:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Cpath d='M4 60V4h56v56H12V12h40v40H20V20h24v24H28V28h8v8' fill='none' stroke='%23E2B45C' stroke-width='3' opacity='.045'/%3E%3C/svg%3E");
+  --ok:#6FBF95; --ok-bg:#1E3A2E; --bad:#F08A72; --bad-bg:#45251F;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px -12px rgba(0,0,0,.5); color-scheme:dark}
+
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html,body{height:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:18px/1.55 var(--body);
+  background-image:radial-gradient(900px 420px at 15% -10%,color-mix(in srgb,var(--accent) 10%,transparent),transparent 70%),radial-gradient(700px 380px at 95% 0%,color-mix(in srgb,var(--navy) 14%,transparent),transparent 70%),var(--pattern),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .5 0 0 0 0 .45 0 0 0 0 .4 0 0 0 .07 0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-attachment:fixed,fixed,scroll,scroll;background-size:auto,auto,64px 64px,160px 160px;
+  padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px));padding-block:0 56px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+button{font:inherit;color:inherit}
+.wrap{max-width:1200px;margin:0 auto}
+h1,h2,h3{font-family:var(--display);font-weight:700;line-height:1.15;margin:0;text-wrap:balance}
+p{margin:0}
+.muted{color:var(--muted)}
+.eyebrow{font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:600;color:var(--muted)}
+.sr{position:absolute;left:-9999px}
+
+/* header */
+header{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;padding:30px 0 14px;text-align:center;min-width:0}
+header>*{max-width:100%}
+.hdr-right{position:absolute;right:0;top:22px;display:grid;gap:8px;justify-items:end}
+.clocktile{position:relative;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:14px;padding:14px 20px 14px 16px;width:420px;max-width:100%;border:2px solid var(--navy);border-radius:14px;background:linear-gradient(135deg,color-mix(in srgb,var(--navy) 12%,var(--surface)),var(--surface) 70%);box-shadow:var(--shadow)}
+.audiowrap{position:relative}
+.clocktile .ring{position:absolute;inset:-2px;width:calc(100% + 4px);height:calc(100% + 4px);pointer-events:none;overflow:visible}
+.clocktile .ring rect{fill:none;stroke:var(--gold);stroke-width:5;stroke-linecap:round;filter:drop-shadow(0 0 3px color-mix(in srgb,var(--gold) 70%,transparent));transition:stroke-dasharray .8s ease}
+.clock{display:grid;gap:3px;text-align:right;min-width:0}
+.cdown{display:grid;gap:4px;justify-items:end;text-align:right}
+@media (max-width:480px){.clocktile{width:100%;grid-template-columns:auto 1fr}.cdown{grid-column:1/-1}}
+.clock .lbl{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--navy);font-weight:700}
+.clock .time{font-family:var(--display);font-weight:700;font-size:40px;line-height:1;color:var(--navy);font-variant-numeric:tabular-nums}
+.clock .time small{font-size:.5em;color:var(--muted);font-weight:500;margin-left:4px}
+.clock .date{font-size:14px;color:var(--muted)}
+.clocktile .exam{font-size:12.5px;color:var(--gold-ink);font-weight:600;margin-top:2px;max-width:150px}.clocktile .exam b{color:var(--gold-ink)}
+.clocktile .cd{display:flex;gap:6px;justify-content:flex-end}
+.clocktile .cdb{display:grid;justify-items:center;min-width:46px;padding:4px 6px 3px;border-radius:9px;background:color-mix(in srgb,var(--gold) 16%,var(--surface));border:1px solid color-mix(in srgb,var(--gold) 55%,transparent)}
+.clocktile .cdb b{font-family:var(--display);font-weight:700;font-size:21px;line-height:1;color:var(--gold-ink);font-variant-numeric:tabular-nums}
+.clocktile .cdb i{font-style:normal;font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:2px}
+.clocktile .when{font-size:11.5px;color:var(--muted)}.clocktile .when b{color:var(--gold-ink);font-weight:700}
+.clocktile .ring circle{fill:var(--gold);stroke:var(--surface);stroke-width:2;filter:drop-shadow(0 0 4px var(--gold));animation:ringpulse 2.4s ease-in-out infinite}
+@keyframes ringpulse{0%,100%{r:4.5}50%{r:6}}@media (prefers-reduced-motion:reduce){.clocktile .ring circle{animation:none}}
+@media (max-width:1180px){.hdr-right{position:static;margin:10px auto 0;justify-items:center}}
+.qotd{position:absolute;left:0;top:20px;width:240px;display:grid;gap:4px;padding:10px 13px 10px 15px;border:1px solid color-mix(in srgb,var(--gold) 45%,var(--line));background:linear-gradient(135deg,color-mix(in srgb,var(--gold) 18%,var(--surface)),var(--surface) 70%);border-radius:14px;text-align:left;box-shadow:var(--shadow);overflow:hidden}
+.qotd::before{content:"“";position:absolute;left:8px;top:-10px;font-family:var(--display);font-size:48px;line-height:1;color:var(--gold);opacity:.3;pointer-events:none}
+.qotd::after{content:"";position:absolute;right:-30px;bottom:-30px;width:110px;height:110px;border-radius:50%;background:radial-gradient(circle,color-mix(in srgb,var(--gold) 30%,transparent),transparent 70%);pointer-events:none}
+.qotd .lbl{display:flex;align-items:center;gap:6px;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-ink);font-weight:700;position:relative}
+.qotd .lbl::after{content:"";flex:1;height:1px;background:color-mix(in srgb,var(--gold) 50%,transparent)}
+.qotd .q{font-family:var(--display);font-size:14px;line-height:1.3;color:var(--ink);font-style:italic;position:relative;padding-left:8px}
+.qotd .a{font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:700;position:relative;padding-left:8px}
+.qotd .a::before{content:"— ";color:var(--gold-ink)}
+.qotd.long{width:280px} .qotd.long .q{font-size:12.5px;line-height:1.25} .qotd.long .a{font-size:10px}
+.qotd canvas.scratch{position:absolute;inset:0;width:100%;height:100%;border-radius:14px;cursor:crosshair;touch-action:none;z-index:2;transition:opacity .5s}
+.qotd canvas.scratch.done{opacity:0;pointer-events:none}
+.qotd .revealbtn{position:absolute;right:8px;bottom:6px;z-index:3;font-size:10px;letter-spacing:.06em;text-transform:uppercase;font-weight:700;border:0;background:none;color:var(--gold-ink);cursor:pointer;opacity:.8}
+.qotd .revealbtn.done{display:none}
+@media (max-width:1000px){.qotd{position:relative;left:auto;top:auto;width:100%;max-width:520px;margin:12px auto 0;text-align:left;box-sizing:border-box}}
+.backbtn{position:absolute;left:0;top:34px;display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:8px 14px 8px 10px;font-weight:700;cursor:pointer;color:var(--navy)}
+.backbtn svg{width:18px;height:18px}
+.pager{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:4px}
+.pager .arrow{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:10px 16px;font-weight:700;cursor:pointer;color:var(--navy)}
+.pager .arrow:hover{border-color:var(--navy)} .pager .arrow:disabled{opacity:.35;cursor:default}
+.pager .arrow svg{width:18px;height:18px}
+.pager .where{font-size:14px;color:var(--muted);text-align:center}
+@media (max-width:700px){.backbtn span{display:none}.backbtn{padding:8px 10px}}
+.brand .mark{align-self:center;flex:none;width:52px;height:52px}
+.brand{display:flex;flex-direction:column;align-items:center;gap:6px;background:none;border:0;padding:0;cursor:pointer}
+.brand .top{display:flex;align-items:center;gap:14px}
+.brand .word{font-family:var(--display);font-weight:700;font-size:clamp(44px,5vw,64px);letter-spacing:-.01em;color:var(--navy);line-height:1}
+.brand .word .a{position:relative;display:inline-block}
+.brand .word sup{position:absolute;left:100%;top:-.04em;font-size:.5em;line-height:1;color:var(--accent);font-weight:700;margin-left:-.1em}
+.brand .word{letter-spacing:-.01em}
+.brand .word .a{margin-right:.12em}
+.brand .desc{font-family:var(--display);font-size:clamp(18px,1.7vw,23px);font-weight:700;color:var(--navy);letter-spacing:.03em}
+.hdr-right{display:grid;gap:8px;justify-items:end}
+.pill{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);border-radius:999px;padding:4px 10px;font-size:13px;background:var(--surface);color:var(--muted)}
+.pill b{color:var(--ink);font-variant-numeric:tabular-nums}
+
+/* home */
+.hero{padding:18px 0 20px;display:grid;gap:14px}
+.hero h1{text-align:center}
+.herogrid{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start}
+.herogrid .pic{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--line);background:var(--surface)}
+.herogrid .pic img{display:block;width:100%;height:auto}
+.herogrid .pic .cap{font-size:12px;color:var(--muted);padding:8px 12px;line-height:1.45}
+@media (max-width:700px){.herogrid{grid-template-columns:1fr}}
+.hero h1{font-size:clamp(36px,5.5vw,60px);color:var(--navy)}
+.hero h1 em{font-style:italic;color:var(--accent)}
+.hero p{max-width:60ch;color:var(--muted)}
+.herotext{display:grid;gap:18px;align-content:start}
+.herotext>p{color:var(--ink);font-family:var(--display);font-weight:500;font-size:clamp(21px,2vw,27px);line-height:1.5}
+.modes{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:16px}
+@media (max-width:900px){.modes{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.modes{grid-template-columns:1fr}}
+.mode{text-align:left;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px;cursor:pointer;display:grid;gap:6px;box-shadow:var(--shadow);transition:transform .12s,border-color .12s}
+.mode:hover{transform:translateY(-2px);border-color:var(--navy)}
+.mode:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.mode .t{font-family:var(--display);font-size:26px;font-weight:700;color:var(--navy)}
+.mode .n{font-size:16px;color:var(--muted);transition:color .18s}
+.mode .t{transition:color .18s}
+.mode{--m:var(--accent);border-top:3px solid var(--m);position:relative;overflow:hidden;transition:transform .18s,box-shadow .18s,border-color .18s,background .18s}
+.mode::after{content:"";position:absolute;inset:0;background:radial-gradient(420px 160px at 20% 0%,color-mix(in srgb,var(--m) 18%,transparent),transparent 70%);opacity:0;transition:opacity .25s;pointer-events:none}
+.mode:hover{transform:translateY(-4px);border-color:var(--m);background:var(--m);box-shadow:0 18px 36px -14px color-mix(in srgb,var(--m) 70%,transparent)}
+.mode .pic{position:absolute;inset:0;background-size:cover;background-position:center 30%;opacity:0;transition:opacity .3s,transform .6s;transform:scale(1.06);pointer-events:none}
+.mode:hover .pic{opacity:1;transform:scale(1)}
+.mode:hover::after{opacity:1;background:linear-gradient(180deg,color-mix(in srgb,var(--m) 82%,transparent) 0%,color-mix(in srgb,var(--m) 62%,transparent) 55%,color-mix(in srgb,var(--m) 88%,transparent) 100%)}
+.mode .k,.mode .t,.mode .n{position:relative;z-index:1}
+.mode:hover .t,.mode:hover .n{color:#fff}
+.mode:hover .k{background:rgba(255,255,255,.18);box-shadow:inset 0 0 0 2px rgba(255,255,255,.5);color:#fff}
+.mode .k{width:58px;height:58px;border-radius:16px;background:linear-gradient(145deg,color-mix(in srgb,var(--m) 88%,#fff),color-mix(in srgb,var(--m) 100%,#000 12%));color:#fff;display:grid;place-items:center;box-shadow:0 6px 14px -6px color-mix(in srgb,var(--m) 70%,transparent),inset 0 1px 0 rgba(255,255,255,.35);transition:transform .18s}
+.mode .k svg{width:34px;height:34px;filter:drop-shadow(0 1px 1px rgba(0,0,0,.2))}
+.mode:hover .k{transform:scale(1.08) rotate(-4deg)}
+.mode .t{color:var(--m)}
+.mode.facts{--m:var(--rose)} .mode.challenge{--m:var(--gold-ink)} .mode.challenge .t,.modeh[style*='--gold'] h2{color:var(--gold-ink)} .mode.timeline{--m:var(--teal)} .mode.terms{--m:var(--sage)} .mode.write{--m:var(--plum)} .mode.shortq{--m:var(--teal)} .mode.shortq .k{font-size:22px;line-height:1} .mode.marker{--m:var(--plum)} .mode.sources{--m:var(--teal)}
+.mkgrid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px;margin-top:12px;min-width:0}.mk{min-width:0}.xcard{min-width:0}.xrow{flex-wrap:wrap}@media(max-width:800px){.mkgrid{grid-template-columns:1fr}}
+.mk{position:relative}.mk h3{margin:0 0 8px;display:flex;justify-content:space-between;align-items:center;gap:8px}.mk .marks{display:none}.mk p.ans{margin:0;font-size:15px;line-height:1.5}
+.mk mark{background:none;color:inherit}.mk.chosen{outline:3px solid var(--gold);outline-offset:2px}
+.rev .mk .marks{display:inline-block}.rev .mk mark{background:color-mix(in srgb,var(--gold) 28%,transparent);border-bottom:2px solid var(--gold-ink);cursor:help;padding:0 1px}.rev .mk mark::after{content:attr(data-n);font-size:10px;font-weight:800;color:var(--gold-ink);vertical-align:super;margin-left:1px}
+.mknotes{display:none;margin:12px 0 0;padding:0;list-style:none;font-size:13px;color:var(--muted)}.rev .mknotes{display:block}.mknotes li{margin:5px 0;padding-left:24px;position:relative}.mknotes li b{position:absolute;left:0;top:0;width:18px;height:18px;border-radius:50%;background:var(--gold);color:#1C2333;font-size:11px;display:grid;place-items:center}
+.mkwhy{display:none;margin-top:12px;padding:10px 12px;border-radius:10px;font-size:14px;border:2px dashed var(--line)}.rev .mkwhy{display:block}.mkwhy b{display:block;margin-bottom:3px}
+.srcgrid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}@media(max-width:800px){.srcgrid{grid-template-columns:1fr}}.srcgrid img{width:100%;border-radius:8px;border:1px solid var(--line)}
+.srcq{margin:0;font-family:var(--display);font-size:17px;line-height:1.5;padding:12px 16px;border-left:6px solid var(--gold);background:color-mix(in srgb,var(--gold) 10%,transparent);border-radius:0 8px 8px 0}
+.chk{display:grid;gap:4px;margin:8px 0 0;padding:0;list-style:none;font-size:13.5px;color:var(--muted)}.chk li::before{content:'\2610  '}
+.srcx{display:none;margin-top:8px;font-size:13.5px;color:var(--muted);border-top:1px dashed var(--line);padding-top:8px}.srcx.show{display:block}
+.thumbs{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}.thumb{text-align:left;font:inherit;color:var(--ink);background:var(--surface);border-radius:12px;overflow:hidden;cursor:pointer;display:flex;flex-direction:column;padding:0}.thumb .th{height:120px;overflow:hidden;background:var(--line)}.thumb .th img{width:100%;height:100%;object-fit:cover}.thumb .th.txt{font-family:var(--display);font-style:italic;color:var(--muted);padding:12px;display:grid;place-items:center;text-align:center;background:color-mix(in srgb,var(--navy) 8%,var(--bg))}.thumb .body{padding:10px 12px}.thumb b{display:block;font-size:14px;margin-top:2px}.thumb .done{font-size:12px;color:var(--sage);font-weight:700;display:block;margin-top:4px}
+.modeh{display:flex;align-items:center;gap:10px}
+.modeh .k{width:38px;height:38px;border-radius:11px;display:grid;place-items:center;color:#fff;background:linear-gradient(145deg,color-mix(in srgb,var(--m) 88%,#fff),color-mix(in srgb,var(--m) 100%,#000 12%));box-shadow:0 4px 10px -5px color-mix(in srgb,var(--m) 70%,transparent)}
+.modeh .k svg{width:20px;height:20px}
+.modeh h2{color:var(--m)}
+
+.section{margin-top:28px;display:grid;gap:12px}
+.section:has(.card),.section:has(.flash){max-width:980px;margin-inline:auto;width:100%}
+.section h2{font-size:30px;color:var(--navy)}
+.topics{display:grid;gap:8px}
+@media (min-width:900px){.topics{grid-template-columns:1fr 1fr;gap:12px 20px;align-items:start}.unit:last-child{grid-column:1/-1}.unit:last-child .tlist{display:grid;grid-template-columns:1fr 1fr;gap:8px 20px}}
+.unit{display:grid;gap:6px}
+.unit .eyebrow{margin-top:6px}
+.topic{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;text-align:left;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px 20px;min-height:68px;cursor:pointer}
+.topic{--u:var(--sk);--us:var(--sk-soft);--p:0%;border-left:4px solid var(--u);background:linear-gradient(90deg,color-mix(in srgb,var(--u) 28%,var(--surface)) var(--p),var(--surface) var(--p));position:relative;overflow:hidden}
+.topic::before{content:"";position:absolute;left:0;top:0;bottom:0;width:var(--p);background:linear-gradient(90deg,color-mix(in srgb,var(--u) 22%,transparent),color-mix(in srgb,var(--u) 38%,transparent));transition:width .6s ease}
+.topic>*{position:relative}
+.topic .pct{font-family:var(--display);font-weight:700;font-size:24px;color:var(--u);font-variant-numeric:tabular-nums;min-width:3.2ch;text-align:right;display:inline-flex;align-items:center;justify-content:flex-end}
+.topic .pct.none{color:var(--muted);font-family:var(--body);font-weight:400;font-size:15px}
+.topic.eu{--u:var(--eu);--us:var(--eu-soft)} .topic.jp{--u:var(--jp);--us:var(--jp-soft)}
+.topic{transition:transform .15s,box-shadow .15s,border-color .15s}
+.topic:hover{border-color:var(--u);background:var(--u);transform:translateX(3px);box-shadow:0 10px 22px -12px color-mix(in srgb,var(--u) 70%,transparent)}
+.topic:hover .name,.topic:hover .meta{color:#fff}
+.topic:hover .pct{color:#fff} .topic:hover::before{background:rgba(255,255,255,.18)}
+.topic:hover .badge{box-shadow:0 0 0 2px rgba(255,255,255,.7)}
+.topic .name,.topic .meta,.topic .bar,.topic .bar i{transition:color .15s,background .15s}
+.topic .name{color:var(--u)}
+.topic .uic{width:16px;height:16px;color:var(--u);flex:none}
+.unit .eyebrow{display:flex;align-items:center;gap:8px;font-size:15px}
+.unit .eyebrow svg{width:18px;height:18px}
+.unit.eu .eyebrow{color:var(--eu)} .unit.jp .eyebrow{color:var(--jp)} .unit.sk .eyebrow{color:var(--sk)}
+.topic .name{font-weight:700;font-size:22px}
+.topic .tick{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--u);color:#fff;margin-left:8px;vertical-align:middle;font-size:16px;font-weight:700;line-height:1}
+.topic:hover .tick{background:#fff;color:var(--u)}
+.topic .meta{display:flex;gap:10px;align-items:center;font-size:14px;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
+.bar{width:72px;height:6px;border-radius:3px;background:var(--line);overflow:hidden}
+.bar i{display:block;height:100%;background:var(--sage)}
+.topic .bar i{background:var(--u)}
+
+/* setup */
+.card{max-width:980px;margin-inline:auto;width:100%;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:26px;box-shadow:var(--shadow);display:grid;gap:16px}
+.checks{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+@media (max-width:760px){.checks{grid-template-columns:repeat(2,1fr)}} @media (max-width:480px){.checks{grid-template-columns:1fr}}
+.check{--u:var(--sk);--us:var(--sk-soft);display:flex;align-items:center;gap:12px;min-height:76px;border:1px solid var(--line);border-left:4px solid var(--u);border-radius:10px;padding:10px 14px;cursor:pointer;background:linear-gradient(90deg,var(--us),var(--surface) 60%);font-weight:600}
+.check.eu{--u:var(--eu);--us:var(--eu-soft)} .check.jp{--u:var(--jp);--us:var(--jp-soft)}
+.check input{width:20px;height:20px;accent-color:var(--u);margin:0;flex:none}
+.check.on{border-color:var(--u);box-shadow:inset 0 0 0 1px var(--u)}
+.check .cnt{color:var(--muted);font-weight:400;font-size:14px;margin-left:auto;white-space:nowrap}
+.ugroup{display:grid;gap:8px} .ugroup .eyebrow{display:flex;align-items:center;gap:6px} .ugroup .eyebrow svg{width:14px;height:14px}
+.ugroup.eu .eyebrow{color:var(--eu)} .ugroup.jp .eyebrow{color:var(--jp)} .ugroup.sk .eyebrow{color:var(--sk)}
+.row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.btn{border:1px solid var(--line);background:var(--surface);border-radius:10px;padding:11px 18px;font-weight:700;cursor:pointer;font-size:16px}
+.btn:hover{border-color:var(--navy)}
+.btn.primary{background:var(--navy);color:var(--navy-ink);border-color:var(--navy)}
+.btn.primary:hover{filter:brightness(1.08)}
+.btn.accent{background:var(--accent);color:#fff;border-color:var(--accent)}
+.btn.quiet{border-color:transparent;background:transparent;color:var(--muted)}
+.btn:disabled{opacity:.5;cursor:default}
+select.sel{font:inherit;border:1px solid var(--line);border-radius:8px;padding:6px 8px;background:var(--surface);color:var(--ink)}
+
+/* quiz */
+.progress{display:flex;align-items:center;gap:12px;margin:14px auto 10px;max-width:980px;font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+.progress .track{flex:1;height:6px;border-radius:3px;background:var(--line);overflow:hidden}
+.progress .track i{display:block;height:100%;background:var(--navy);transition:width .25s}
+.progress.challenge .track i{background:var(--gold)} .progress.practice .track i,.progress.daily .track i{background:var(--accent)}
+.timer{font-weight:700;color:var(--ink)}
+.timer.low{color:var(--accent)}
+.qhead{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.stim{background:var(--blush);border-left:4px solid var(--gold);border-radius:8px;padding:12px 14px;font-size:16px}
+.stim .cap{font-size:12px;color:var(--muted);margin-top:6px}
+.qtext{font-size:24px;font-weight:700;line-height:1.4}
+.opts{display:grid;gap:10px}
+.opt{display:flex;gap:12px;align-items:flex-start;width:100%;text-align:left;border:1px solid var(--line);border-radius:10px;padding:13px 15px;background:var(--bg);cursor:pointer;line-height:1.4;font-size:18px}
+.opt:hover:not(:disabled){border-color:var(--navy)}
+.opt .l{flex:none;width:28px;height:28px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;font-size:13px;font-weight:700;background:var(--surface)}
+.opt.sel{border-color:var(--navy);box-shadow:inset 0 0 0 1px var(--navy)}
+.opt.sel .l{background:var(--navy);color:var(--navy-ink);border-color:var(--navy)}
+.opt.right{border-color:var(--ok);background:var(--ok-bg)} .opt.right .l{background:var(--ok);border-color:var(--ok);color:#fff}
+.opt.wrong{border-color:var(--bad);background:var(--bad-bg)} .opt.wrong .l{background:var(--bad);border-color:var(--bad);color:#fff}
+.opt.missed{border-color:var(--ok);border-style:dashed}
+.opt:disabled{cursor:default}
+.gaps{font-size:18px;line-height:2.1}
+.gaps select{font:inherit;font-size:16px;border:1px solid var(--navy);border-radius:8px;padding:2px 6px;background:var(--surface);color:var(--ink);margin:0 2px}
+.gaps select.right{border-color:var(--ok);background:var(--ok-bg)} .gaps select.wrong{border-color:var(--bad);background:var(--bad-bg)}
+.gaps .fix{font-size:13px;color:var(--ok);font-weight:600}
+input.text,textarea{font:inherit;width:100%;border:1px solid var(--line);border-radius:10px;padding:12px 14px;background:var(--bg);color:var(--ink)}
+textarea{min-height:140px;resize:vertical;line-height:1.5}
+input.text.right{border-color:var(--ok);background:var(--ok-bg)} input.text.wrong{border-color:var(--bad);background:var(--bad-bg)}
+.feedback{border-radius:10px;padding:14px 16px;display:grid;gap:4px;font-size:17px}
+.feedback.ok{background:var(--ok-bg);border-left:4px solid var(--ok)}
+.feedback.bad{background:var(--bad-bg);border-left:4px solid var(--bad)}
+.feedback.info{background:var(--bg);border-left:4px solid var(--navy)}
+.feedback b{font-weight:700}
+.actions{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.hint{font-size:15px;color:var(--muted)}
+
+/* results */
+.score{display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:center}
+.ring{width:96px;height:96px;border-radius:50%;display:grid;place-items:center;background:conic-gradient(var(--sage) calc(var(--p)*1%),var(--line) 0);position:relative}
+.ring::after{content:"";position:absolute;inset:8px;border-radius:50%;background:var(--surface)}
+.ring b{position:relative;font-family:var(--display);font-size:26px;font-variant-numeric:tabular-nums}
+.bytopic{display:grid;gap:6px}
+.bt{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;font-size:15px}
+.bt .bar{width:100%}
+.bt .n{font-variant-numeric:tabular-nums;color:var(--muted);white-space:nowrap}
+.review{display:grid;gap:8px}
+.rv{border:1px solid var(--line);border-radius:10px;padding:11px 13px;font-size:15px;display:grid;gap:4px}
+.rv .q{font-weight:600}
+.summary{background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:14px 16px;display:grid;gap:10px;font-size:15px;font-variant-numeric:tabular-nums}
+.sumhead{display:flex;justify-content:space-between;gap:10px;font-family:var(--display);font-weight:700;color:var(--navy);font-size:17px;border-bottom:1px solid var(--line);padding-bottom:8px}
+.sumgrid{display:grid;grid-template-columns:auto 1fr;gap:4px 16px}
+.sumgrid .k,.sumtopics .t{color:var(--muted)} .sumgrid .v{font-weight:700} .sumgrid small{font-weight:400;color:var(--muted)}
+.sumtopics{display:grid;grid-template-columns:1fr auto auto;gap:4px 16px;border-top:1px solid var(--line);padding-top:8px}
+.sumtopics .v,.sumtopics .p{text-align:right} .sumtopics .p{color:var(--muted);min-width:3.5ch}
+.sumfoot{border-top:1px solid var(--line);padding-top:8px} .sumfoot b{color:var(--accent);margin-right:6px}
+
+/* flashcards */
+.flash{--u:var(--sk);--us:var(--sk-soft);max-width:980px;width:100%;margin-inline:auto;height:340px;display:grid;place-items:center;text-align:center;padding:32px;cursor:pointer;border:1px solid var(--line);border-radius:var(--radius);background:var(--u);color:#fff;box-shadow:var(--shadow);position:relative;overflow:hidden;transition:background .2s}
+.flash.eu{--u:var(--eu);--us:var(--eu-soft)} .flash.jp{--u:var(--jp);--us:var(--jp-soft)}
+.flash::before{content:"";position:absolute;inset:0;background:var(--pattern);opacity:.9;pointer-events:none}
+.flash.back{background:var(--us);color:var(--ink);border-color:var(--u);border-left:8px solid var(--u)}
+.flash>div{position:relative}
+.flash .unit{font-size:13px;letter-spacing:.08em;text-transform:uppercase;opacity:.85;margin-bottom:14px;font-weight:700}
+.flash.back .unit{color:var(--u);opacity:1}
+.flash .term{font-family:var(--display);font-size:clamp(40px,5vw,56px);line-height:1.1}
+.flash.back .term{font-size:22px;color:var(--u)}
+.flash .def{font-size:clamp(20px,2vw,24px);max-width:56ch;line-height:1.45}
+.flash .tap{font-size:13px;opacity:.8;margin-top:16px}
+@media (max-width:600px){.flash{height:300px;padding:22px}}
+
+/* what success looks like */
+.tabs{display:flex;gap:6px;border-bottom:1px solid var(--line);margin-bottom:4px}
+.tab{border:0;background:none;padding:10px 14px;font-weight:700;color:var(--muted);cursor:pointer;border-bottom:3px solid transparent;margin-bottom:-1px}
+.tab.on{color:var(--plum);border-bottom-color:var(--plum)}
+.model{display:grid;gap:6px;font-size:18px;line-height:1.55}
+.model .sent{padding:8px 12px 8px 14px;border-left:5px solid var(--c);background:color-mix(in srgb,var(--c) 10%,var(--surface));border-radius:0 8px 8px 0;display:grid;grid-template-columns:40px 1fr;gap:10px;align-items:start}
+.model .sent b{font-family:var(--display);color:var(--c);font-size:18px}
+.sent.T{--c:var(--navy)} .sent.X{--c:var(--teal)} .sent.E{--c:var(--gold-ink)} .sent.A{--c:var(--accent)} .sent.L{--c:var(--sage)}
+.legend{display:flex;flex-wrap:wrap;gap:8px 16px;font-size:14px;color:var(--muted)}
+.legend span::before{content:"";display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px;background:var(--c)}
+.rubric{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.rubric div{border:1px solid var(--line);border-radius:10px;padding:10px 12px;text-align:center;background:var(--bg)}
+.rubric b{display:block;font-family:var(--display);font-size:26px;color:var(--plum)}
+.rubric small{color:var(--muted);display:block;font-size:13px;line-height:1.3}
+@media (max-width:600px){.rubric{grid-template-columns:repeat(2,1fr)}}
+.marks{display:inline-block;font-family:var(--display);font-weight:700;padding:2px 10px;border-radius:999px;font-size:15px}
+.marks.full{background:var(--ok-bg);color:var(--ok)} .marks.weak{background:var(--bad-bg);color:var(--bad)}
+.sample{border:1px solid var(--line);border-radius:10px;padding:14px 16px;display:grid;gap:8px;background:var(--bg)}
+.sample.weak{border-color:var(--bad);border-left-width:5px}
+.sample.full{border-color:var(--ok);border-left-width:5px}
+.sample .marks{justify-self:start}
+.sample .why{font-size:15px;color:var(--muted)}
+.sample .why b{color:var(--ink)}
+.skill{display:grid;gap:12px}
+.skill h3{font-size:22px;color:var(--plum)}
+.frame{font-family:var(--display);font-size:19px;background:var(--plum);color:#fff;padding:12px 16px;border-radius:10px;line-height:1.5}
+.frame i{color:var(--gold);font-style:normal}
+.ladder{display:grid;gap:4px}
+.ladder div{display:grid;grid-template-columns:150px 1fr;gap:10px;padding:8px 12px;border-left:4px solid var(--sage);background:color-mix(in srgb,var(--sage) 10%,var(--surface));border-radius:0 8px 8px 0;font-size:16px}
+.ladder div b{color:var(--sage)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:700px){.two{grid-template-columns:1fr}.ladder div{grid-template-columns:1fr}}
+.selfcheck{display:grid;gap:6px}
+.selfcheck label{display:flex;gap:10px;align-items:flex-start;font-size:16px;cursor:pointer}
+.selfcheck input{width:20px;height:20px;accent-color:var(--plum);margin-top:2px;flex:none}
+.hub{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+.hubcard{text-align:left;border:1px solid var(--line);border-left:5px solid var(--plum);border-radius:10px;padding:14px 16px;background:var(--surface);cursor:pointer;display:grid;gap:4px}
+.hubcard:hover{border-color:var(--plum)}
+.hubcard b{font-family:var(--display);font-size:20px;color:var(--plum)}
+.hubcard span{font-size:15px;color:var(--muted)}
+/* word bank */
+.wb{display:grid;gap:12px}
+.wb .grp{display:grid;gap:6px}
+.wb .grp .eyebrow{color:var(--plum)}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:5px 12px;font-size:15px;cursor:pointer;font-family:var(--body)}
+.chip:hover{border-color:var(--plum);color:var(--plum)}
+.chip.no{text-decoration:line-through;color:var(--bad);cursor:default;border-color:var(--bad-bg);background:var(--bad-bg)}
+.wbwrap{border:1px solid var(--line);border-radius:10px;padding:12px 14px;background:var(--bg)}
+.wbwrap summary{cursor:pointer;font-weight:700;color:var(--plum)}
+/* write */
+.scaffold{display:grid;gap:8px;font-size:15px}
+.scaffold .s{display:grid;grid-template-columns:52px 1fr;gap:10px;align-items:baseline}
+.scaffold .s b{font-family:var(--display);font-size:18px;color:var(--accent)}
+
+
+/* unit panels with illustrations */
+.units{display:grid;grid-template-columns:1fr;gap:16px;margin-top:20px}
+@media (min-width:1000px){.units{grid-template-columns:1fr 1fr}.upanel{min-height:280px}}
+.upanel{position:relative;overflow:hidden;text-align:left;border:1px solid var(--line);border-radius:var(--radius);padding:18px 18px 16px;cursor:pointer;display:grid;gap:6px;min-height:150px;box-shadow:var(--shadow);background:var(--surface)}
+.upanel.eu{background:linear-gradient(135deg,var(--eu-soft),var(--surface) 70%)} .upanel.jp{background:linear-gradient(135deg,var(--jp-soft),var(--surface) 70%)}
+.upanel{transition:transform .18s,box-shadow .18s,border-color .18s}
+.upanel.eu:hover{border-color:var(--eu);box-shadow:0 0 0 2px color-mix(in srgb,var(--eu) 35%,transparent),0 18px 36px -14px color-mix(in srgb,var(--eu) 55%,transparent);transform:translateY(-3px)}
+.upanel.jp:hover{border-color:var(--jp);box-shadow:0 0 0 2px color-mix(in srgb,var(--jp) 35%,transparent),0 18px 36px -14px color-mix(in srgb,var(--jp) 55%,transparent);transform:translateY(-3px)}
+.upanel .t{font-family:var(--display);font-size:30px;font-weight:700;position:relative;max-width:60%}
+.upanel.eu .t{color:var(--eu)} .upanel.jp .t{color:var(--jp)}
+.upanel .n{font-size:17px;color:var(--muted);max-width:56%;position:relative}
+.upanel .art{position:absolute;right:-4px;bottom:-8px;width:40%;max-width:170px;height:auto;opacity:.95;pointer-events:none}
+.upanel .cta{position:relative;font-size:14px;font-weight:600;margin-top:auto}
+.upanel.eu .cta{color:var(--eu)} .upanel.jp .cta{color:var(--jp)}
+/* artwork */
+.upanel{min-height:240px;padding-right:56%}
+.upanel .art{display:none}
+.upanel .photo{position:absolute;inset:0;background-size:cover;background-position:center;z-index:0}
+.upanel .photo::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--surface) 38%,color-mix(in srgb,var(--surface) 55%,transparent) 62%,transparent 100%)}
+.upanel.eu .photo::after{background:linear-gradient(90deg,var(--eu-soft) 40%,color-mix(in srgb,var(--eu-soft) 60%,transparent) 46%,transparent 52%)}
+.upanel.jp .photo::after{background:linear-gradient(90deg,var(--jp-soft) 40%,color-mix(in srgb,var(--jp-soft) 60%,transparent) 46%,transparent 52%)}
+.upanel .photo{background-position:right center;background-repeat:no-repeat}
+.upanel .t{max-width:none} .upanel .n{max-width:none}
+@media (max-width:640px){.upanel{min-height:300px;padding-right:18px;padding-top:150px}.upanel .photo::after{background:linear-gradient(180deg,transparent 35%,var(--surface) 55%)}.upanel.eu .photo::after{background:linear-gradient(180deg,transparent 35%,var(--eu-soft) 55%)}.upanel.jp .photo::after{background:linear-gradient(180deg,transparent 35%,var(--jp-soft) 55%)}.upanel .photo{background-position:center top}}
+.upanel>span{position:relative;z-index:1}
+.qart{margin:-26px -26px 0;height:240px;background-size:cover;background-position:center 35%;border-radius:var(--radius) var(--radius) 0 0;position:relative}
+.qart::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 70%,var(--surface) 100%)}
+.qart.contain{background-size:contain;background-repeat:no-repeat;background-color:var(--blush)}
+.qart .cap{position:absolute;right:10px;bottom:6px;font-size:12px;color:var(--ink);background:color-mix(in srgb,var(--surface) 80%,transparent);padding:2px 6px;border-radius:4px;z-index:1;text-align:right;max-width:70%}
+.stim img{display:block;max-width:100%;max-height:420px;margin:0 auto 10px;border-radius:6px;box-shadow:0 2px 8px rgba(0,0,0,.15)}
+.footrow{display:flex;gap:18px;align-items:baseline;flex-wrap:wrap;font-size:12px;color:var(--muted);border-top:1px solid var(--line);padding-top:10px;margin-top:10px}
+.footrow>span{flex:1 1 auto}
+.credits{font-size:11px;color:var(--muted);line-height:1.5;margin-left:auto;max-width:620px;text-align:right}
+.credits[open]{flex-basis:100%;text-align:left;margin-left:0}
+.credits summary{white-space:nowrap}
+.credits summary{cursor:pointer}
+@media (max-width:480px){.qart{height:160px}}
+/* unit band on quiz card */
+.card.eu{border-top:4px solid var(--eu)} .card.jp{border-top:4px solid var(--jp)} .card.sk{border-top:4px solid var(--sk)}
+.qhead .eyebrow{display:flex;align-items:center;gap:8px}
+.qhead svg{width:18px;height:18px;flex:none}
+/* fact */
+.fact{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start;border:1px dashed var(--line);border-radius:10px;padding:13px 15px;background:color-mix(in srgb,var(--gold) 12%,var(--surface));font-size:15px}
+.fact .lamp{width:28px;height:28px;border-radius:50%;background:var(--gold);display:grid;place-items:center;color:#1E2436;font-family:var(--display);font-weight:700;font-size:16px}
+.fact b{display:block;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:2px}
+.fact.home{margin-top:18px}
+.factgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:14px}
+.ftile{--u:var(--accent);position:relative;min-height:250px;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);border-top:4px solid var(--u);background:var(--surface);box-shadow:var(--shadow);cursor:default;transition:transform .18s,box-shadow .18s;outline:none}
+.ftile .bg{position:absolute;inset:0;background-size:cover;background-position:center 30%;opacity:.85;transition:opacity .3s,transform .6s;transform:scale(1.02)}
+.ftile .front{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:18px 20px;background:linear-gradient(180deg,transparent 30%,color-mix(in srgb,var(--navy) 82%,transparent));color:#fff;transition:opacity .25s}
+.ftile .front .eyebrow{color:#fff;opacity:.85;display:flex;gap:8px;align-items:center;font-size:12px}
+.ftile .front .tt{font-family:var(--display);font-size:24px;font-weight:700;line-height:1.15;margin-top:4px}
+.ftile .front .peek{font-size:13px;opacity:.8;margin-top:6px}
+.ftile .back{position:absolute;inset:0;padding:20px 22px;background:var(--u);color:#fff;display:flex;flex-direction:column;gap:10px;opacity:0;transform:translateY(12px);transition:opacity .25s,transform .25s;overflow:auto}
+.ftile .back .eyebrow{color:#fff;opacity:.9;font-size:12px;padding-right:64px}
+.ftile .back p{font-size:15.5px;line-height:1.5;margin:0}
+.ftile .back .row{margin-top:auto}
+.ftile .back .btn{background:#fff;color:var(--u);border-color:#fff;font-size:14px;padding:7px 12px}
+.ftile:hover,.ftile:focus-within,.ftile.open{transform:translateY(-4px);box-shadow:0 18px 36px -14px color-mix(in srgb,var(--u) 70%,transparent)}
+.ftile:hover .back,.ftile:focus-within .back,.ftile.open .back{opacity:1;transform:none}
+.ftile:hover .front,.ftile:focus-within .front,.ftile.open .front{opacity:0}
+.ftile.read::after{content:"Read";position:absolute;top:10px;right:12px;font-size:11px;letter-spacing:.06em;text-transform:uppercase;background:#fff;color:var(--u);border-radius:999px;padding:2px 8px;font-weight:700;z-index:2}
+.ftile:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+@media (max-width:900px){.factgrid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:600px){.factgrid{grid-template-columns:1fr}.ftile{min-height:220px}}
+/* welcome card */
+.welcome{background:var(--surface);border:2px solid var(--navy);outline:4px solid color-mix(in srgb,var(--navy) 14%,transparent);outline-offset:0;border-radius:var(--radius);padding:22px 24px;display:grid;gap:14px;box-shadow:var(--shadow);margin-top:6px}
+.welcome h2{font-size:26px;color:var(--navy)}
+.linkbtn{background:none;border:0;padding:0;font:inherit;font-size:15px;color:var(--navy);text-decoration:underline;cursor:pointer}
+body.closed{display:grid;place-items:center;min-height:100vh}.closedbox{text-align:center;padding:40px 24px}.closedbox .word{font-family:var(--display);font-size:56px;font-weight:700;color:var(--navy);letter-spacing:-.02em;margin:0}.closedbox .word sup{color:var(--accent);font-size:.45em;vertical-align:top}.closedbox h1{font-family:var(--display);font-size:26px;font-weight:400;margin:18px 0 6px;color:var(--ink)}.closedbox p{font-size:18px;color:var(--muted);margin:0}
+.welcome ol{margin:0;padding-left:22px;display:grid;gap:6px;font-size:17px}
+.welcome .namerow{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.welcome input.text{max-width:320px}
+.who{font-size:14px;color:var(--muted);order:3;margin-top:2px} .who b{color:var(--ink)} .who button{border:0;background:none;color:var(--navy);font-weight:700;cursor:pointer;padding:0 4px;font-size:14px;text-decoration:underline}
+/* confidence + hint */
+.conf{display:flex;gap:8px;align-items:center;flex-wrap:wrap;font-size:14px;color:var(--muted)}
+.conf button{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:6px 14px;font-weight:700;cursor:pointer;color:var(--muted)}
+.conf button.on{background:var(--navy);color:var(--navy-ink);border-color:var(--navy)}
+.conf .hintbtn{margin-left:auto;color:var(--gold-ink);border-color:color-mix(in srgb,var(--gold) 50%,var(--line))}
+.conf .hintbtn:disabled{opacity:.45;cursor:default}
+.opt.gone{opacity:.35;text-decoration:line-through;pointer-events:none}
+.tag{display:inline-block;font-size:11px;letter-spacing:.06em;text-transform:uppercase;font-weight:700;border-radius:999px;padding:2px 8px;margin-left:6px;vertical-align:middle}
+.tag.sure{background:var(--bad-bg);color:var(--bad)} .tag.lucky{background:color-mix(in srgb,var(--gold) 25%,var(--surface));color:var(--gold-ink)}
+.due{font-size:12px;color:var(--muted);margin-left:8px}
+/* sound toggle */
+.soundbtn{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:6px 12px;font-size:13px;font-weight:700;cursor:pointer;color:var(--muted);display:inline-flex;align-items:center;gap:6px}
+.soundbtn.on{color:var(--navy);border-color:var(--navy)}
+/* audio button and popover */
+.audiobtn{width:44px;height:44px;border-radius:50%;border:2px solid var(--navy);background:var(--surface);color:var(--navy);display:grid;place-items:center;cursor:pointer;box-shadow:var(--shadow);position:relative}
+.audiobtn:hover{border-color:var(--navy)}
+.audiobtn svg{width:22px;height:22px}
+.audiobtn.muted{color:var(--muted)}
+.audiobtn .bars{position:absolute;right:-2px;bottom:-2px;display:none;gap:2px;align-items:flex-end;height:12px;width:14px;background:var(--surface);border-radius:4px;padding:1px 2px}
+.audiobtn .bars i{width:3px;background:var(--accent);border-radius:1px;height:4px}
+.audiobtn .bars.on{display:inline-flex}
+.audiobtn .bars.on i{animation:eq 1.1s ease-in-out infinite}
+.audiobtn .bars.on i:nth-child(2){animation-delay:.2s} .audiobtn .bars.on i:nth-child(3){animation-delay:.4s}
+@keyframes eq{0%,100%{height:3px}50%{height:11px}}
+.audiopop{position:absolute;left:0;top:56px;width:260px;background:var(--surface);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);padding:10px 14px;display:grid;gap:6px;z-index:20;text-align:left}
+.arow{display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:15px;font-weight:700;padding:6px 0}
+.arow.sub{font-weight:400;color:var(--muted);font-size:14px;padding-left:12px}
+.arow select{font:inherit;font-size:14px;border:1px solid var(--line);border-radius:8px;padding:4px 8px;background:var(--surface);color:var(--ink)}
+.arow input[type=range]{width:120px;accent-color:var(--navy)}
+.switch{width:44px;height:26px;border-radius:13px;border:0;background:var(--line);position:relative;cursor:pointer;flex:none;transition:background .2s}
+.switch i{position:absolute;top:3px;left:3px;width:20px;height:20px;border-radius:50%;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.3);transition:left .2s}
+.switch.on{background:var(--navy)} .switch.on i{left:21px}
+@media (prefers-reduced-motion:reduce){.audiobtn .bars.on i{animation:none;height:8px}}
+/* daily banner */
+.daily{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;background:var(--navy);color:var(--navy-ink);border-radius:var(--radius);padding:14px 18px;margin-top:0;border:2px solid var(--gold)}
+.daily p{color:inherit}
+.daily .t{font-family:var(--display);font-size:21px;font-weight:700}
+.daily .n{font-size:14px;opacity:.9}
+.daily .btn{padding:9px 16px}
+.daily .btn{background:var(--gold);border-color:var(--gold);color:#1C2333}
+.daily .btn.done{background:transparent;color:var(--navy-ink);border-color:rgba(255,255,255,.4)}
+/* mastery */
+.badge{display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--line);flex:none}
+.badge.bronze{background:#B5713C}.badge.silver{background:#9AA3B2}.badge.gold{background:var(--gold)}
+/* timeline game */
+.tl{display:grid;gap:8px}
+.tl .ev{display:flex;align-items:center;gap:12px;width:100%;text-align:left;border:1px solid var(--line);border-radius:10px;padding:13px 15px;background:var(--bg);cursor:pointer;line-height:1.35;font-size:17px}
+.tl .ev:hover:not(:disabled){border-color:var(--navy)}
+.tl .ev .yr{flex:none;min-width:58px;font-family:var(--display);font-weight:700;font-size:18px;color:var(--navy);font-variant-numeric:tabular-nums;text-align:right}
+.tl .ev.placed{background:var(--ok-bg);border-color:var(--ok);order:-1;cursor:default}
+.tl .ev.shake{animation:shake .3s}
+@keyframes shake{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.tl .ev .u{margin-left:auto;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+.rail{display:flex;gap:6px;align-items:center;font-size:13px;color:var(--muted)}
+.rail i{width:12px;height:12px;border-radius:50%;background:var(--line);display:inline-block}
+.rail i.on{background:var(--ok)} .rail i.miss{background:var(--bad)}
+/* term sprint */
+.sprint .def{font-size:24px;font-weight:700;line-height:1.4}
+.sprint .opts{grid-template-columns:repeat(auto-fit,minmax(180px,1fr))}
+.sprint .opt{justify-content:center;font-weight:600}
+/* teacher */
+table.tt{width:100%;border-collapse:collapse;font-size:14px}
+.tt th,.tt td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+.tt th{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.tt td.n{font-variant-numeric:tabular-nums;white-space:nowrap;text-align:right}
+.tt th.n{text-align:right}
+.tt .lo{color:var(--bad);font-weight:700}
+.tbl{overflow-x:auto}
+canvas#fx{position:fixed;inset:0;pointer-events:none;z-index:50}
+footer{margin-top:40px;font-size:13px;color:var(--muted)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}.mode:hover,.upanel:hover,.topic:hover{transform:none}}
+@media (max-width:480px){.score{grid-template-columns:1fr}}
+/* Outlines: every tile gets a firm 2px navy frame (user request). Accent edges stay on top. */
+.mode,.topic,.card,.thumb,.check,.hubcard,.upanel,.ftile,.flash,.herogrid .pic,.welcome,.tl .ev,.clocktile,.qotd,.opt,.sample,.summary,.rv,.wbwrap,.rubric div,.audiopop{border-width:2px;border-style:solid;border-color:var(--navy)}
+.qotd{border-color:color-mix(in srgb,var(--gold) 70%,var(--navy))}
+.opt.correct,.opt.wrong,.opt.sel{border-width:2px}
+.mode{border-top:3px solid var(--m)}
+.ftile{border-top:4px solid var(--u)}
+.check{border-left:4px solid var(--u)}
+.hubcard{border-left:5px solid var(--plum)}
+.mode:hover{border-color:var(--m)}
+.topic:hover{border-color:var(--u,var(--navy))}
+
+.examband{display:flex;align-items:flex-start;gap:18px;width:100%;text-align:left;margin:18px 0 2px;padding:16px 22px;border-radius:var(--radius);background:var(--surface);border:2px solid var(--navy);border-left:8px solid var(--gold)}
+.examband .ex{display:grid;gap:6px}.examband .exlinks{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px}.examband .exlinks .btn{padding:7px 12px;font-size:14px}
+.examband .k{font-size:26px;color:var(--gold-ink);flex:none}
+.examband .t{display:block;font-family:var(--display);font-size:22px;font-weight:700;color:var(--navy)}
+.examband .n{display:block;font-size:15px;color:var(--muted)}
+.examband .exlist{margin:0;padding-left:20px;display:grid;gap:5px;font-size:15px;color:var(--muted);line-height:1.4}.examband .exlist li::marker{color:var(--gold-ink)}.examband .exlist b{color:var(--ink)}
+.exam .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.exam .box{background:var(--surface);border:2px solid var(--navy);border-radius:var(--radius);padding:18px 20px;display:grid;gap:8px;align-content:start}
+.exam .box h3{font-family:var(--display);font-size:22px;color:var(--navy);margin:0}
+.exam .box .big{font-family:var(--display);font-size:40px;font-weight:700;color:var(--accent);line-height:1}
+.exam .box ul{margin:0;padding-left:18px;display:grid;gap:4px}
+.exam .box li{font-size:15px}
+.exam table.tt td:first-child{font-weight:700;white-space:nowrap}
+.exam .plan{display:grid;grid-template-columns:90px 1fr;gap:6px 14px;align-items:baseline}
+.exam .plan b{font-family:var(--display);font-size:20px;color:var(--navy)}
+@media (max-width:800px){.exam .grid3{grid-template-columns:1fr}}
+.timerrow{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:12px;padding:12px 16px;border:2px solid var(--navy);border-left:8px solid var(--gold);border-radius:12px;background:var(--surface);font-size:15px}
+.timerrow>span:first-child{flex:1 1 320px}
+.tdisp{font-family:var(--display);font-weight:700;font-size:30px;color:var(--navy);font-variant-numeric:tabular-nums;min-width:4ch;text-align:right}
+.tdisp.warn{color:var(--accent)}
+.card.exammode .scaffold,.card.exammode #guide,.card.exammode #g,.card.exammode .wbwrap,.card.exammode .selfcheck{display:none}
+.card.exammode textarea{min-height:360px;border-color:var(--navy);box-shadow:0 0 0 4px color-mix(in srgb,var(--gold) 35%,transparent)}
+.hubs{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media (max-width:800px){.hubs{grid-template-columns:1fr}}
+.sqlist{display:grid;grid-template-columns:1fr 1fr;gap:10px 18px}
+@media (max-width:900px){.sqlist{grid-template-columns:1fr}}
+.sq{display:flex;align-items:center;gap:12px;width:100%;text-align:left;background:var(--surface);border:2px solid var(--navy);border-left:6px solid var(--u);border-radius:12px;padding:14px 16px;cursor:pointer;transition:transform .12s,background .12s}
+.sq:hover{transform:translateX(3px);background:var(--u);color:#fff}
+.sq .m{flex:none;width:44px;height:44px;border-radius:50%;background:var(--u);color:#fff;display:grid;place-items:center;font-family:var(--display);font-weight:700;font-size:18px}
+.sq:hover .m{background:#fff;color:var(--u)}
+.sq .q{font-size:16px;line-height:1.35}
+.sq .tail{margin-left:auto;display:flex;flex-direction:column;align-items:flex-end;gap:4px;flex:none}
+.sq .done{font-size:13px;white-space:nowrap;opacity:.8}
+.critlist{margin:6px 0 0;padding-left:20px;display:grid;gap:5px;font-size:15px;line-height:1.45}.critlist li::marker{color:var(--teal)}
+.sq.eu{--u:var(--eu)} .sq.jp{--u:var(--jp)} .sq.sk{--u:var(--sk)}
+.marksel{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.marksel button{min-width:44px;height:40px;border-radius:10px;border:2px solid var(--navy);background:var(--surface);font-weight:700;cursor:pointer}
+.marksel button.on{background:var(--navy);color:#fff}
+/*__CHRONO_CSS__*/
+</style>
+
+<div class="wrap" id="top">
+<header>
+  <button class="brand" id="homeBtn" aria-label="Agorian home"><span class="top"><span class="word"><span class="a">A<sup>+</sup></span>gorian</span></span><span class="desc">Year 8 History Revision</span></button>
+  <aside class="qotd" id="qotd" hidden></aside>
+  <button class="backbtn" id="backBtn" hidden aria-label="Back"><svg><use href="#ar-l"/></svg><span>Back</span></button>
+  <div class="hdr-right"><div class="clocktile"><svg class="ring" aria-hidden="true"><rect id="ringRect" pathLength="100" stroke-dasharray="0 100"/><circle id="ringDot" r="4.5" style="display:none"/></svg><div class="audiowrap"><button class="audiobtn" id="audioBtn" aria-label="Sound and music" aria-expanded="false"><svg viewBox="0 0 24 24"><path d="M4 9v6h4l5 4V5L8 9H4z" fill="currentColor"/><path d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span class="bars" id="music"><i></i><i></i><i></i></span></button>
+    <div class="audiopop" id="audioPop" hidden>
+      <div class="arow"><span>Sound effects</span><button class="switch" id="sndBtn" role="switch" aria-checked="true" aria-label="Sound effects"><i></i></button></div>
+      <div class="arow"><span>Ambient music</span><button class="switch" id="musBtn" role="switch" aria-checked="false" aria-label="Ambient music"><i></i></button></div>
+      <div class="arow sub"><span>Style</span><select id="musMode" aria-label="Music style"><option value="auto">Match the unit</option><option value="jp">Japan</option><option value="eu">Europe</option></select></div>
+      <div class="arow sub"><span>Volume</span><input type="range" id="musVol" min="0" max="100" value="35" aria-label="Music volume"></div>
+    </div></div><div class="clock" id="clock" aria-live="off"></div><div class="cdown" id="cdown"></div></div><span class="pill" id="streak" hidden>Streak <b id="streakN">0</b></span></div>
+</header>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="art-jp" viewBox="0 0 200 150">
+    <circle cx="140" cy="48" r="26" fill="var(--accent)" opacity=".9"/>
+    <path d="M0 150 L70 62 L100 92 L120 70 L200 150 Z" fill="var(--jp)" opacity=".85"/>
+    <path d="M58 76 L70 62 L82 76 Q70 70 58 76 Z" fill="#fff" opacity=".9"/>
+    <path d="M112 78 L120 70 L128 78 Q120 74 112 78 Z" fill="#fff" opacity=".9"/>
+    <g fill="var(--accent)"><rect x="24" y="78" width="7" height="72"/><rect x="69" y="78" width="7" height="72"/><rect x="14" y="70" width="72" height="7" rx="1"/><rect x="20" y="88" width="60" height="5"/><path d="M8 66 Q50 58 92 66 L90 72 Q50 64 10 72 Z"/></g>
+  </symbol>
+  <symbol id="art-eu" viewBox="0 0 200 150">
+    <circle cx="44" cy="40" r="20" fill="var(--gold)" opacity=".85"/>
+    <path d="M0 150 L0 118 L30 110 L60 122 L100 112 L140 124 L200 112 L200 150 Z" fill="var(--sage)" opacity=".55"/>
+    <g fill="var(--eu)"><rect x="78" y="70" width="60" height="80"/><rect x="66" y="56" width="18" height="94"/><rect x="132" y="56" width="18" height="94"/>
+      <path d="M66 56 h18 v-10 h-6 v6 h-6 v-6 h-6z M132 56 h18 v-10 h-6 v6 h-6 v-6 h-6z M84 70 h54 v-9 h-6 v5 h-6 v-5 h-6 v5 h-6 v-5 h-6 v5 h-6 v-5 h-6 v5 h-6z"/>
+      <rect x="100" y="34" width="16" height="36"/><path d="M100 34 h16 v-8 h-5 v4 h-6 v-4 h-5z"/></g>
+    <path d="M116 26 l14 -6 l-14 -6 z" fill="var(--accent)"/>
+    <g fill="#fff" opacity=".9"><rect x="72" y="66" width="6" height="12"/><rect x="138" y="66" width="6" height="12"/><path d="M101 118 a7 7 0 0 1 14 0 v32 h-14z"/><rect x="92" y="84" width="6" height="12"/><rect x="118" y="84" width="6" height="12"/></g>
+  </symbol>
+  <symbol id="ar-l" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="ar-r" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="m-practice" viewBox="0 0 48 48"><circle cx="22" cy="26" r="17" fill="currentColor" opacity=".25"/><circle cx="22" cy="26" r="17" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="22" cy="26" r="10" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="22" cy="26" r="3.5" fill="currentColor"/><path d="M22 26 L40 8" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/><path d="M40 8 L41 15 M40 8 L33 7" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/></symbol>
+  <symbol id="m-challenge" viewBox="0 0 48 48"><path d="M13 6 h22 M13 42 h22" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/><path d="M15 8 C15 18 24 20 24 24 C24 28 15 30 15 40 H33 C33 30 24 28 24 24 C24 20 33 18 33 8 Z" fill="currentColor" opacity=".25"/><path d="M15 8 C15 18 24 20 24 24 C24 28 15 30 15 40 H33 C33 30 24 28 24 24 C24 20 33 18 33 8 Z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><path d="M18 11 h12 L24 18 Z M20 38 h8 L24 31 Z" fill="currentColor"/></symbol>
+  <symbol id="m-timeline" viewBox="0 0 48 48"><path d="M24 4 V44" stroke="currentColor" stroke-width="4" stroke-linecap="round"/><path d="M5 12 H16 M32 24 H43 M5 36 H16" stroke="currentColor" stroke-width="4" stroke-linecap="round"/><circle cx="24" cy="12" r="5.5" fill="currentColor"/><circle cx="24" cy="24" r="5.5" fill="currentColor"/><circle cx="24" cy="36" r="5.5" fill="currentColor"/></symbol>
+  <symbol id="m-terms" viewBox="0 0 48 48"><path d="M6 10 C14 8 20 9 24 13 V40 C20 36 14 35 6 37 Z" fill="currentColor" opacity=".3"/><path d="M42 10 C34 8 28 9 24 13 V40 C28 36 34 35 42 37 Z" fill="currentColor" opacity=".55"/><path d="M6 10 C14 8 20 9 24 13 V40 C20 36 14 35 6 37 Z M42 10 C34 8 28 9 24 13 V40 C28 36 34 35 42 37 Z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><path d="M11 18 h8 M11 24 h8 M29 18 h8 M29 24 h8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></symbol>
+  <symbol id="m-write" viewBox="0 0 48 48"><path d="M8 40 C8 34 12 32 18 32 H30 C36 32 40 34 40 40 Z" fill="currentColor" opacity=".3"/><path d="M8 40 H40" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/><path d="M38 6 C30 8 22 16 20 28 L18 34 L24 32 C34 28 40 18 38 6 Z" fill="currentColor" opacity=".55"/><path d="M38 6 C30 8 22 16 20 28 L18 34 L24 32 C34 28 40 18 38 6 Z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><path d="M34 10 L22 26" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></symbol>
+  <symbol id="m-marker" viewBox="0 0 48 48"><path d="M10 6 H30 L38 14 V42 H10 Z" fill="currentColor" opacity=".3"/><path d="M10 6 H30 L38 14 V42 H10 Z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><path d="M16 22 L22 28 L33 16" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 35 H32" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></symbol>
+  <symbol id="m-sources" viewBox="0 0 48 48"><rect x="8" y="6" width="26" height="34" rx="3" fill="currentColor" opacity=".3"/><rect x="8" y="6" width="26" height="34" rx="3" fill="none" stroke="currentColor" stroke-width="3"/><path d="M14 15 H28 M14 22 H28 M14 29 H22" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><circle cx="31" cy="31" r="7" fill="var(--bg,#fff)" stroke="currentColor" stroke-width="3"/><path d="M36 36 L42 42" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/></symbol>
+  <symbol id="m-facts" viewBox="0 0 48 48"><path d="M24 4 C15 4 10 11 10 18 C10 25 15 27 16 32 H32 C33 27 38 25 38 18 C38 11 33 4 24 4 Z" fill="currentColor" opacity=".3"/><path d="M24 4 C15 4 10 11 10 18 C10 25 15 27 16 32 H32 C33 27 38 25 38 18 C38 11 33 4 24 4 Z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><path d="M18 37 H30 M20 42 H28" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/><path d="M24 12 V22 M24 26 V27" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/><path d="M5 10 L8 12 M43 10 L40 12 M24 0 V2" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" opacity=".7"/></symbol>
+  <symbol id="ic-jp" viewBox="0 0 24 24"><g fill="currentColor"><rect x="5" y="8" width="2.4" height="13"/><rect x="16.6" y="8" width="2.4" height="13"/><rect x="3.5" y="6" width="17" height="2.2" rx=".5"/><rect x="6" y="11" width="12" height="1.8"/><path d="M2 4.5 Q12 2.5 22 4.5 L21.5 6.5 Q12 4.8 2.5 6.5 Z"/></g></symbol>
+  <symbol id="ic-eu" viewBox="0 0 24 24"><g fill="currentColor"><path d="M3 21 V8 h3 V6 h2 v2 h2 V6 h2 v2 h2 V6 h2 v2 h2 V6 h2 v2 h1 v13 z M10 21 v-5 a2 2 0 0 1 4 0 v5 z" fill-rule="evenodd"/></g></symbol>
+  <symbol id="ic-sk" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="6"/><path d="M15.5 15.5 L21 21"/><path d="M8.5 11 h5 M11 8.5 v5"/></g></symbol>
+</svg>
+<main id="app"></main>
+<footer><div class="footrow"><span>&copy; Agorian 2026. All rights reserved. Content and design may not be copied or reused without permission.</span><details class="credits"><summary>Privacy</summary>No personal information is collected. Agorian never asks for a name, an email address or a password. Your scores and drafts are stored only in your own browser. The site only counts page visits (which page, when) through GoatCounter, a cookie-free counter. Nothing you type is sent anywhere.</details><details class="credits"><summary>Image credits</summary>Artworks are sourced from Wikimedia Commons and are in the public domain unless a licence is noted. Raphael, The School of Athens (1511). Katsushika Hokusai, The Great Wave off Kanagawa and Fine Wind, Clear Morning (c. 1831). Utagawa Hiroshige, Nihonbashi (1833). Photograph of a samurai in armour (1860s). The Bayeux Tapestry, scene 57 (c. 1070s). Limbourg brothers, Très Riches Heures du duc de Berry, September and October (c. 1412 to 1416). Toggenburg Bible (1411). Siege of Jerusalem, 13th-century manuscript, Bibliothèque nationale de France. Issunshi Hanasato, a terakoya school (Edo period). Utagawa Kuniyoshi, warrior print, Takata no baba (19th century). Pictorial map of the Tokaido highroad (Edo period). Laurentius de Voltolina, Henry of Germany lecturing at Bologna (14th century). Jean Miélot at his desk (15th century). Hokusai Manga, volume 6 (1817). Fun facts: Domesday Book binding (The National Archives); Gothic armour by Lorenz Helmschmied, 1493, photo Kunsthistorisches Museum Wien (CC BY 4.0); Bayeux Tapestry, Dinan scene; Ordeal by cold water, 12th-century manuscript; Fountains Abbey, photo by Klaus with K (CC BY-SA 3.0); John Gregory Crace, Court of the Lions (1855, Metropolitan Museum of Art, CC0); Lazzaretto Vecchio, Venice, photo by Godromil; Queen Mary Psalter, reeve and serfs (c. 1310); Moko Shurai Ekotoba (c. 1293); portrait of Nitobe Inazo; Utagawa Hiroshige, daimyo procession, Suruga-cho (1856) and Chushingura Act XI (c. 1840); Kawahara Keiga, Dejima (1811); scroll of the Perry mission (1854, British Museum); Uchida Kuichi, Emperor Meiji (1873); Codex Manesse (c. 1305). Short answers: Giotto di Bondone, Last Judgment, detail (1306), Cappella Scrovegni, Padua, via Web Gallery of Art. Timeline: Lindisfarne Gospels carpet page (c. 700); Genji Monogatari Emaki, Azumaya (12th century); landscape attributed to Sesshu Toyo (15th century); Himeji Castle, photo (CC0); Moko Shurai Ekotoba (c. 1293); Hiroshige, Tokaido series; the Perry expedition (1850s); event thumbnails from Wikimedia Commons, public domain.</details></div></footer>
+</div>
+
+<script id="bank" type="application/json">__BANK__</script>
+<script>
+(function(){
+'use strict';
+const BANK = JSON.parse(document.getElementById('bank').textContent);
+const Q = BANK.questions, TERMS = BANK.terms, SHORTQ = BANK.shortq||[], SOURCES = BANK.sources||{sources:[],checklist:[]};
+const app = document.getElementById('app');
+const UNITS = ['Medieval Europe','Shogunate Japan','Skills and concepts'];
+const AUTO = new Set(['mc','ms','gaps','text']);
+
+// ---------- storage (per viewer, best effort) ----------
+const MEM = {};
+const store = {
+  get(k,d){ if(k in MEM) return MEM[k]; try{ const v=localStorage.getItem('agorian:'+k); return v?JSON.parse(v):d }catch(e){ return d } },
+  set(k,v){ MEM[k]=v; try{ localStorage.setItem('agorian:'+k, JSON.stringify(v)) }catch(e){} }
+};
+let stats = store.get('stats', {}); // qid -> {a:attempts,c:correct}
+
+function log(){ /* No answer data leaves the device. The only thing sent anywhere is an anonymous page-visit count, see track(). */ }
+const GC_PATHS={home:'/',setup:'/practice',startQuiz:'/practice/quiz',challenge:'/challenge',terms:'/terms',write:'/write',daily:'/daily',timeline:'/timeline',timelineGame:'/timeline/order',sprint:'/sprint',facts:'/facts',successPage:'/success',shortq:'/shortq',sqView:'/shortq',sources:'/sources',srcView:'/sources'};
+let gcLast='';
+function track(fn,a){ if(location.hostname!=='agorian.au') return; let path=GC_PATHS[fn.name]||('/'+fn.name); const id=a&&a[0]; if(typeof id==='string'&&/^[\w-]{1,24}$/.test(id)&&['successPage','sqView','srcView'].includes(fn.name)) path+='/'+id; if(path===gcLast) return; gcLast=path; const ev={path, title:'Agorian '+path}; try{ if(window.goatcounter&&typeof window.goatcounter.count==='function') window.goatcounter.count(ev); else if(window.__gcq) window.__gcq.push(ev) }catch(e){} }
+function record(q, correct, conf, hint){
+  const s = stats[q.id] || {a:0,c:0}; s.a++; if(correct) s.c++; stats[q.id]=s; store.set('stats', stats);
+  schedule(q, correct, conf);
+  log({qid:q.id, topic:q.topic, unit:q.unit, type:q.type, correct:correct?1:0, mode:state.mode, conf:conf||'', hint:hint?1:0});
+}
+function topicStats(topic){
+  let a=0,c=0; Q.filter(q=>q.topic===topic && AUTO.has(q.type)).forEach(q=>{const s=stats[q.id]; if(s){a+=s.a;c+=s.c}}); return {a,c};
+}
+
+// ---------- helpers ----------
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const shuffle = a => { a=a.slice(); for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]} return a };
+const topicsIn = unit => [...new Set(Q.filter(q=>q.unit===unit && q.type!=='extended').map(q=>q.topic))];
+const L = 'ABCDEFGH';
+function h(html){ app.innerHTML = html; window.scrollTo({top:0}); const qe=document.getElementById('qotd'); if(qe && !html.includes('class="hero"')) qe.hidden=true; }
+const hist=[]; let navLock=false;
+function screen(fn){ return function(...a){ if(!navLock){ const top=hist[hist.length-1]; if(!top||top.fn!==fn||JSON.stringify(top.a)!==JSON.stringify(a)) hist.push({fn,a}); if(hist.length>30) hist.shift(); } if(fn===HOME_FN) hist.splice(0, hist.length-1); const b=document.getElementById('backBtn'); if(b) b.hidden=hist.length<2; track(fn,a); return fn.apply(this,a) } }
+let HOME_FN=null;
+function goBack(){ if(hist.length<2) return; hist.pop(); const prev=hist[hist.length-1]; navLock=true; try{ prev.fn.apply(null,prev.a) } finally { navLock=false } const b=document.getElementById('backBtn'); if(b) b.hidden=hist.length<2 }
+const pager=(i,n,label)=>`<div class="pager"><button class="arrow" id="pg-prev" ${i<=0?'disabled':''}><svg><use href="#ar-l"/></svg>Previous</button><span class="where">${label}</span><button class="arrow" id="pg-next" ${i>=n-1?'disabled':''}>Next<svg><use href="#ar-r"/></svg></button></div>`;
+
+let state = { mode:null };
+const QUOTES=[
+ ["The mind is its own place, and in itself can make a heaven of hell, a hell of heaven.","John Milton, Paradise Lost"],
+ ["Character is destiny.","Heraclitus"],
+ ["It does not matter how slowly you go so long as you do not stop.","Attributed to Confucius"],
+ ["It is not because things are difficult that we do not dare. It is because we do not dare that things are difficult.","Seneca, Letters"],
+ ["The secret of happiness is freedom, and the secret of freedom is courage.","Pericles, in Thucydides"],
+ ["I am still learning.","Attributed to Michelangelo"],
+ ["The tree that fills your arms grew from a tender shoot.","Laozi, Tao Te Ching"],
+ ["Difficulties strengthen the mind, as labour does the body.","Seneca, On Providence"],
+ ["Hope is the thing with feathers that perches in the soul.","Emily Dickinson"],
+ ["If you want to improve, be content to be thought foolish and stupid.","Epictetus, Enchiridion"],
+ ["Go as far as you can see. When you get there, you will be able to see further.","Attributed to Thomas Carlyle"],
+ ["Fall seven times, stand up eight.","Japanese proverb"],
+ ["The best time to plant a tree was twenty years ago. The second best time is now.","Chinese proverb"],
+ ["Do what you can, with what you have, where you are.","Theodore Roosevelt, quoting Squire Bill Widener"],
+ ["Whether you think you can, or you think you can't, you're right.","Attributed to Henry Ford"],
+ ["If you do not enter the tiger's cave, you will not catch its cub.","Japanese proverb"],
+ ["Do the difficult things while they are easy and the great things while they are small.","Laozi, Tao Te Ching"],
+ ["He who learns the new by reviewing the old may serve as a teacher.","Confucius, Analects"],
+ ["By three methods we may learn wisdom. By reflection, which is noblest. By imitation, which is easiest. By experience, which is the bitterest.","Attributed to Confucius"],
+ ["Dust piled up becomes a mountain.","Japanese proverb"],
+ ["It is not what happens to you, but how you react to it that matters.","Epictetus, Enchiridion"],
+ ["The unexamined life is not worth living.","Socrates, in Plato's Apology"],
+ ["Knowledge is power.","Francis Bacon, Meditationes Sacrae"],
+ ["As long as you live, keep learning how to live.","Seneca, Letters"],
+ ["Yesterday I was clever, so I wanted to change the world. Today I am wise, so I am changing myself.","Attributed to Rumi"],
+ ["May you live every day of your life.","Jonathan Swift"],
+ ["Before the gates of excellence the high gods have placed sweat.","Hesiod, Works and Days"],
+ ["An investment in knowledge pays the best interest.","Attributed to Benjamin Franklin"],
+ ["Nothing in the world can take the place of persistence.","Attributed to Calvin Coolidge"],
+ ["Confine yourself to the present.","Marcus Aurelius, Meditations"],
+ ["Great deeds are usually wrought at great risks.","Herodotus, Histories"],
+ ["No man was ever wise by chance.","Seneca, Letters"],
+ ["Even monkeys fall from trees.","Japanese proverb"],
+ ["Learning never exhausts the mind.","Attributed to Leonardo da Vinci"],
+ ["Practice is the best of all instructors.","Publilius Syrus"],
+ ["Reading without reflecting is like eating without digesting.","Edmund Burke"],
+ ["A journey of a thousand miles begins with a single step.","Laozi, Tao Te Ching"],
+ ["The mind is not a vessel to be filled but a fire to be kindled.","Plutarch, On Listening to Lectures"],
+ ["Wonder is the beginning of wisdom.","Socrates, in Plato's Theaetetus"],
+ ["I attribute my success to this. I never gave or took any excuse.","Attributed to Florence Nightingale"],
+ ["Experience is the teacher of all things.","Julius Caesar, The Civil War"],
+ ["Be not afraid of growing slowly; be afraid only of standing still.","Chinese proverb"],
+ ["Our doubts are traitors, and make us lose the good we oft might win, by fearing to attempt.","William Shakespeare, Measure for Measure"],
+ ["Nothing in life is to be feared. It is only to be understood.","Attributed to Marie Curie"],
+ ["There is nothing impossible to him who will try.","Attributed to Alexander the Great"],
+ ["The secret of getting ahead is getting started.","Attributed to Mark Twain"],
+ ["Hang on to your youthful enthusiasms. You will be able to use them better when you are older.","Seneca, Letters"],
+ ["Obstacles cannot crush me. Every obstacle yields to stern resolve.","Attributed to Leonardo da Vinci"],
+ ["Know yourself and you will win all battles.","Sun Tzu, The Art of War"],
+ ["Per aspera ad astra. Through hardships to the stars.","Latin motto"],
+ ["Procrastination is the thief of time. Collar him.","Charles Dickens, David Copperfield"],
+ ["There is nothing either good or bad, but thinking makes it so.","William Shakespeare, Hamlet"],
+ ["I am not afraid of storms, for I am learning how to sail my ship.","Louisa May Alcott, Little Women"],
+ ["The life so short, the craft so long to learn.","Geoffrey Chaucer, The Parliament of Fowls"],
+ ["While I breathe, I hope.","Latin motto, after Cicero"],
+ ["Knowing others is intelligence. Knowing yourself is true wisdom.","Laozi, Tao Te Ching"],
+ ["Learning is a treasure that will follow its owner everywhere.","Chinese proverb"],
+ ["Real knowledge is to know the extent of one's ignorance.","Confucius, Analects"],
+ ["Reading is to the mind what exercise is to the body.","Joseph Addison, The Tatler"],
+ ["Begin at once to live, and count each separate day as a separate life.","Seneca, Letters"],
+ ["One must learn by doing the thing. Though you think you know it, you have no certainty until you try.","Sophocles, Women of Trachis"],
+ ["Adversity reveals genius, prosperity conceals it.","Horace, Satires"],
+ ["Nulla dies sine linea. No day without a line.","Pliny the Elder, on the painter Apelles"],
+ ["Today is victory over yourself of yesterday.","Miyamoto Musashi, The Book of Five Rings"],
+ ["To be ignorant of what happened before you were born is to remain always a child.","Cicero, Orator"],
+ ["History is the witness of the times, the light of truth, the life of memory, the teacher of life.","Cicero, On the Orator"],
+ ["One kind word can warm three winter months.","Japanese proverb"],
+ ["How much time he gains who does not look to see what his neighbour says or does.","Marcus Aurelius, Meditations"],
+ ["Things won are done. Joy's soul lies in the doing.","William Shakespeare, Troilus and Cressida"],
+ ["Consider your origin. You were not made to live like brutes, but to follow virtue and knowledge.","Dante, Inferno"],
+ ["Never let the future disturb you. You will meet it, if you have to, with the same reason you use against the present.","Marcus Aurelius, Meditations"],
+ ["Dig within. Within is the wellspring of good, and it is always ready to bubble up if you just dig.","Marcus Aurelius, Meditations"],
+ ["Carpe diem. Seize the day.","Horace, Odes"],
+ ["Well begun is half done.","Aristotle, Politics, quoting a proverb"],
+ ["Practise yourself, for heaven's sake, in little things, and thence proceed to greater.","Epictetus, Discourses"],
+ ["Is it not a pleasure, having learned something, to try it out at due intervals?","Confucius, Analects"],
+ ["You have power over your mind, not outside events. Realise this, and you will find strength.","Marcus Aurelius, Meditations"],
+ ["Every battle is won before it is fought.","Sun Tzu, The Art of War"],
+ ["Waste no more time arguing about what a good man should be. Be one.","Marcus Aurelius, Meditations"],
+ ["Energy and persistence conquer all things.","Attributed to Benjamin Franklin"],
+ ["After the rain, the ground hardens.","Japanese proverb"],
+ ["I know that I know nothing.","Socrates, after Plato's Apology"],
+ ["There is surely nothing other than the single purpose of the present moment.","Yamamoto Tsunetomo, Hagakure"],
+ ["If it is not right, do not do it. If it is not true, do not say it.","Marcus Aurelius, Meditations"],
+ ["A prudent question is one half of wisdom.","Francis Bacon"],
+ ["The foundation of every state is the education of its youth.","Diogenes of Sinope, reported by Diogenes Laertius"],
+ ["Patience is the companion of wisdom.","Augustine of Hippo"],
+ ["The day you decide to do it is your lucky day.","Japanese proverb"],
+ ["A smooth sea never made a skilled sailor.","Proverb"],
+ ["The man who moves a mountain begins by carrying away small stones.","Attributed to Confucius"],
+ ["Learning is a great ornament and a tool of marvellous use.","Michel de Montaigne, Essays"],
+ ["Great works are performed not by strength but by perseverance.","Samuel Johnson, Rasselas"],
+ ["Do nothing which is of no use.","Miyamoto Musashi, Dokkodo"],
+ ["Practice makes perfect.","English proverb"],
+ ["When you see a worthy person, think of becoming like them.","Confucius, Analects"],
+ ["First say to yourself what you would be, and then do what you have to do.","Epictetus, Discourses"],
+ ["Fortune favours the bold.","Virgil, Aeneid"],
+ ["Vision without action is a daydream. Action without vision is a nightmare.","Japanese proverb"],
+ ["What we hope ever to do with ease, we must first learn to do with diligence.","Samuel Johnson"],
+ ["Perceive that which cannot be seen with the eye.","Miyamoto Musashi, The Book of Five Rings"],
+ ["No one knows what he can do till he tries.","Publilius Syrus"],
+ ["We suffer more often in imagination than in reality.","Seneca, Letters"],
+ ["I will either find a way or make one.","Attributed to Hannibal"],
+ ["Study the past if you would define the future.","Attributed to Confucius"],
+ ["Act as if what you do makes a difference. It does.","Attributed to William James"],
+ ["Only the educated are free.","Epictetus, Discourses"],
+ ["Sapere aude. Dare to know.","Horace, Epistles"],
+ ["Begin at the beginning, and go on till you come to the end. Then stop.","Lewis Carroll, Alice's Adventures in Wonderland"],
+ ["Make the best use of what is in your power, and take the rest as it happens.","Epictetus, Enchiridion"],
+ ["Slow and steady wins the race.","Aesop, The Tortoise and the Hare"],
+ ["The roots of education are bitter, but the fruit is sweet.","Aristotle, reported by Diogenes Laertius"],
+ ["While we teach, we learn.","Seneca, Letters"],
+ ["The heights by great men reached and kept were not attained by sudden flight, but they, while their companions slept, were toiling upward in the night.","Henry Wadsworth Longfellow, The Ladder of St Augustine"],
+ ["Dripping water hollows out stone, not through force but through persistence.","Ovid, Letters from Pontus"],
+ ["Very little is needed to make a happy life. It is all within yourself, in your way of thinking.","Marcus Aurelius, Meditations"],
+ ["Wonder is the desire for knowledge.","Thomas Aquinas, Summa Theologica"],
+ ["Go confidently in the direction of your dreams. Live the life you have imagined.","Henry David Thoreau, Walden"],
+ ["Rome was not built in a day.","Medieval proverb"],
+ ["They can because they think they can.","Virgil, Aeneid"],
+ ["Learning without thought is labour lost. Thought without learning is perilous.","Confucius, Analects"],
+ ["Genius is one per cent inspiration and ninety-nine per cent perspiration.","Thomas Edison"],
+ ["A mind, once stretched by a new idea, never returns to its original dimensions.","After Oliver Wendell Holmes Sr"],
+ ["The beginning is the most important part of the work.","Plato, Republic"],
+ ["No great thing is created suddenly.","Epictetus, Discourses"],
+ ["Little by little, one travels far.","Spanish proverb"],
+ ["Begin, be bold, and venture to be wise.","Horace, Epistles"],
+ ["Knowledge which is acquired under compulsion obtains no hold on the mind.","Plato, Republic"],
+ ["Festina lente. Make haste slowly.","Augustus, reported by Suetonius"],
+ ["It is easy to be brave from a safe distance.","Aesop"]
+];
+function quoteOfDay(){ const n=Math.floor(Date.now()/36e5); const [q,a]=QUOTES[n%QUOTES.length]; const el=document.getElementById('qotd'); el.classList.toggle("long",q.length+a.length/2>120);
+  el.innerHTML=`<span class="lbl">Quote of the hour</span><span class="q">${esc(q)}</span><span class="a">${esc(a)}</span><canvas class="scratch" aria-hidden="true"></canvas><button class="revealbtn" type="button">Reveal</button>`;
+  if(store.get('qRevealed',-1)===n || REDUCED){ el.querySelector('.scratch').classList.add('done'); el.querySelector('.revealbtn').classList.add('done'); return }
+  requestAnimationFrame(()=>scratchCard(el, ()=>store.set('qRevealed',n)));
+}
+function scratchCard(el, onDone){
+  const c=el.querySelector('.scratch'), btn=el.querySelector('.revealbtn'); const r=el.getBoundingClientRect(); const dpr=Math.min(2,devicePixelRatio||1);
+  c.width=Math.round(r.width*dpr); c.height=Math.round(r.height*dpr); const x=c.getContext('2d'); x.scale(dpr,dpr);
+  // gold foil with a faint meander and a hint
+  const g=x.createLinearGradient(0,0,r.width,r.height); g.addColorStop(0,'#E2B45C'); g.addColorStop(.5,'#CF9A3A'); g.addColorStop(1,'#B9852E'); x.fillStyle=g; x.fillRect(0,0,r.width,r.height);
+  x.strokeStyle='rgba(255,255,255,.22)'; x.lineWidth=2; for(let i=-r.height;i<r.width;i+=14){ x.beginPath(); x.moveTo(i,0); x.lineTo(i+r.height,r.height); x.stroke() }
+  x.fillStyle='rgba(30,36,54,.85)'; x.font='700 12px '+getComputedStyle(document.body).fontFamily; x.textAlign='center'; x.fillText('QUOTE OF THE HOUR',r.width/2,r.height/2-10);
+  x.font='italic 500 16px Fraunces, Georgia, serif'; x.fillText('Scratch to reveal',r.width/2,r.height/2+12);
+  x.globalCompositeOperation='destination-out'; x.strokeStyle='#000'; x.fillStyle='#000'; x.lineCap='round'; x.lineJoin='round'; x.lineWidth=34;
+  let drawing=false, last=null, cleared=0, done=false;
+  const pt=e=>{ const b=c.getBoundingClientRect(); return {x:e.clientX-b.left, y:e.clientY-b.top} };
+  const finish=()=>{ if(done) return; done=true; c.classList.add('done'); btn.classList.add('done'); onDone&&onDone() };
+  const check=()=>{ const d=x.getImageData(0,0,c.width,c.height).data; let t=0; for(let i=3;i<d.length;i+=4*16) if(d[i]===0) t++; cleared=t/(d.length/(4*16)); if(cleared>.45) finish() };
+  c.onpointerdown=e=>{ drawing=true; last=pt(e); c.setPointerCapture(e.pointerId); x.beginPath(); x.arc(last.x,last.y,17,0,7); x.fill() };
+  c.onpointermove=e=>{ if(!drawing) return; const p=pt(e); x.beginPath(); x.moveTo(last.x,last.y); x.lineTo(p.x,p.y); x.stroke(); last=p };
+  c.onpointerup=c.onpointercancel=()=>{ if(!drawing) return; drawing=false; check() };
+  btn.onclick=finish;
+}
+const today = () => new Date().toISOString().slice(0,10);
+function mastery(t){ const s=topicStats(t); if(s.a<8) return null; const p=s.c/s.a; return p>=.95?'gold':p>=.8?'silver':p>=.6?'bronze':null }
+const REDUCED = matchMedia('(prefers-reduced-motion: reduce)').matches;
+function confetti(){
+  if(REDUCED) return;
+  const c=document.createElement('canvas'); c.id='fx'; document.body.appendChild(c);
+  const x=c.getContext('2d'); c.width=innerWidth; c.height=innerHeight;
+  const cols=['#C8431F','#D9A441','#4F7F6B','#2B3A67'];
+  const ps=Array.from({length:120},()=>({x:Math.random()*c.width,y:-20-Math.random()*c.height*.5,v:2+Math.random()*3,r:4+Math.random()*5,a:Math.random()*6,s:(Math.random()-.5)*.2,col:cols[Math.random()*4|0]}));
+  let t=0; (function f(){ x.clearRect(0,0,c.width,c.height); ps.forEach(p=>{ p.y+=p.v; p.a+=p.s; x.save(); x.translate(p.x,p.y); x.rotate(p.a); x.fillStyle=p.col; x.fillRect(-p.r/2,-p.r/4,p.r,p.r/2); x.restore() }); if(++t<160) requestAnimationFrame(f); else c.remove() })();
+}
+// artwork (public domain, Wikimedia Commons), embedded at build time
+const IMG = __IMG__;
+const CHRONO = __CHRONO__;
+const CAP = {
+  'jp-wave':'Hokusai, The Great Wave off Kanagawa, c. 1831','jp-fuji':'Hokusai, Fine Wind, Clear Morning, c. 1831','jp-tokaido':'Hiroshige, Nihonbashi, colour woodblock print, 1833','jp-samurai':'Samurai in armour, photograph, 1860s',
+  'eu-bayeux':'Bayeux Tapestry, the death of Harold, c. 1070s','eu-heures':'Limbourg brothers, Très Riches Heures, October, c. 1412','eu-castle':'Limbourg brothers, Très Riches Heures, September, c. 1412','eu-plague':'Toggenburg Bible, plague victims, 1411','eu-crusade':'Siege of Jerusalem 1099, 13th-century manuscript','f-domesday':'Domesday Book binding, 1086','f-armour':'Gothic armour by Lorenz Helmschmied, 1493','f-motte':'Bayeux Tapestry, the motte at Dinan, c. 1070s','f-ordeal':'Ordeal by cold water, 12th-century manuscript','f-abbey':'Fountains Abbey, Yorkshire','f-alhambra':'Court of the Lions, Alhambra, 1855','f-lazzaretto':'Lazzaretto Vecchio, Venice','f-harvest':'Reeve and serfs, Queen Mary Psalter, c. 1310','f-mongol':'Takezaki Suenaga, Mongol invasion scroll, c. 1293','f-nitobe':'Nitobe Inazo','f-sankin':'Hiroshige, daimyo procession crossing a bridge','f-dejima':'Kawahara Keiga, Dutch ship arriving at Dejima, 1811','f-edo':'Hiroshige, Suruga-cho, One Hundred Famous Views of Edo, 1856','f-ronin':'Hiroshige, Chushingura Act XI, c. 1840','f-perry':'The Perry mission to Japan, Japanese scroll, 1854','f-meiji':'Emperor Meiji, photograph, 1873','f-manesse':'Codex Manesse, Walther von Klingen, c. 1305'};
+const TOPIC_IMG = {'Feudalism and hierarchy':'eu-heures','Law and order':'eu-heures','Castles and knights':'eu-castle','Catholic Church':'eu-castle','The Crusades':'eu-crusade','The Black Death':'eu-plague',
+  'Feudalism and samurai':'jp-samurai','Tokugawa Shogunate':'jp-tokaido','Meiji Restoration':'jp-wave','Source analysis':'eu-bayeux','Chronology':'eu-heures','Comparing the two societies':'jp-fuji','Historical concepts':'eu-castle','Turning points':'eu-bayeux'};
+function stimImg(q){ const t=(q.stimulus||'').toLowerCase(); if(t.includes('decameron')) return 'eu-plague'; if(t.includes('hokusai')) return 'jp-fuji'; if(t.includes('military houses')) return 'jp-samurai'; if(t.includes('clermont')) return 'eu-crusade'; if(t.includes('nagasaki')) return 'jp-tokaido'; return null }
+const FOCUS = {'jp-wave':'center 40%','jp-fuji':'center 45%','jp-tokaido':'center 60%','jp-samurai':'center 22%','eu-bayeux':'center 45%','eu-heures':'center 62%','eu-castle':'center 45%','eu-plague':'center 15%','eu-crusade':'center 40%','f-armour':'center 20%','f-nitobe':'center 15%','f-meiji':'center 12%','f-manesse':'center 70%','f-edo':'center 30%','f-abbey':'center','f-domesday':'center 30%','f-mongol':'center 35%'};
+const SMALL = new Set(['eu-crusade']);
+const art = (k,extra='') => k&&IMG[k] ? `<div class="qart ${SMALL.has(k)?'contain':''}" style="background-image:url(${IMG[k]});background-position:${FOCUS[k]||'center'}${extra}"><span class="cap">${esc(CAP[k])}</span></div>` : '';
+// did-you-know facts, keyed loosely to topics
+const FACTS=[
+ ['Feudalism and hierarchy','The Domesday Book of 1086 recorded over 13,000 places in England. People called it Domesday because its judgements were as final as the Day of Judgement.'],
+ ['Castles and knights','A full suit of plate armour weighed about 20 to 25 kilograms, spread over the whole body. A trained knight could run, climb and mount a horse without help.'],
+ ['Castles and knights','After 1066 the Normans threw up hundreds of motte-and-bailey castles across England. A simple one could be built in a few weeks using forced local labour.'],
+ ['Law and order','In 1215 the Church banned priests from taking part in trials by ordeal. Without God\u2019s judgement, England leaned harder on juries instead.'],
+ ['Catholic Church','The Church was the largest landowner in medieval Europe. In England it held roughly a quarter of all land, which made bishops as powerful as earls.'],
+ ['The Crusades','Everyday English words came from Arabic through contact with the Islamic world in Spain, Sicily and the Crusader states, including sugar, cotton, algebra and alcohol.'],
+ ['The Black Death','The word quarantine comes from the Venetian quaranta giorni, forty days, the time ships had to wait offshore before anyone could land.'],
+ ['The Black Death','After the plague, wages for farm workers in England roughly doubled. The 1351 Statute of Labourers tried to freeze them at old levels and largely failed.'],
+ ['Source analysis','The Bayeux Tapestry is not a tapestry at all. It is embroidery, nearly 70 metres long, and was probably stitched in England, not Normandy.'],
+ ['Feudalism and samurai','The word samurai comes from saburau, meaning to serve. A samurai was defined by whom he served long before he was defined by his sword.'],
+ ['Feudalism and samurai','The typhoon that wrecked the Mongol fleet in 1281 was later named kamikaze, the divine wind. The name was revived for pilots in 1944.'],
+ ['Feudalism and samurai','The term bushido was rarely used before the Meiji period. Nitobe Inazo\u2019s 1900 book, written in English for Western readers, made it famous.'],
+ ['Tokugawa Shogunate','A daimyo\u2019s sankin kotai procession could number thousands of people. The constant travel kept the Tokaido road, its post towns and inns busy, and drained daimyo treasuries.'],
+ ['Tokugawa Shogunate','Dejima, where the Dutch were confined at Nagasaki, was an artificial fan-shaped island only about 120 metres long. For two centuries it was Japan\u2019s only window on Europe.'],
+ ['Tokugawa Shogunate','By about 1700 Edo had around a million people, making it probably the largest city in the world, bigger than London or Paris.'],
+ ['Tokugawa Shogunate','In 1703 the 47 ronin avenged their lord. Forty-six of them were then ordered to commit seppuku, and their story became Japan\u2019s most retold tale of loyalty.'],
+ ['Meiji Restoration','When Perry returned in 1854 his gifts included a working quarter-size steam railway and a telegraph line. Officials rode the train for fun.'],
+ ['Meiji Restoration','Meiji means enlightened rule. The emperor who gave the era its name, Mutsuhito, was 15 years old when power was restored to him in 1868.'],
+ ['Comparing the two societies','Both knights and samurai served lords in return for land, but samurai were also expected to be literate officials. By 1700 most samurai had never fought a battle.'],
+];
+const FACT_IMG=['f-domesday','f-armour','f-motte','f-ordeal','f-abbey','f-alhambra','f-lazzaretto','f-harvest','eu-bayeux','jp-samurai','f-mongol','f-nitobe','f-sankin','f-dejima','f-edo','f-ronin','f-perry','f-meiji','f-manesse'];
+const FACT_TITLES=['The Domesday Book','The weight of armour','A castle in weeks','The end of trial by ordeal','The Church as landlord','Words from Arabic','Where quarantine comes from','Wages after the plague','Not a tapestry at all','To serve','The divine wind','Bushido\u2019s late birth','Processions of thousands','Dejima, the fan-shaped island','A million people in Edo','The 47 ronin','Perry\u2019s toy railway','Enlightened rule','Knights and samurai'];
+function factFor(topics){ const pool=FACTS.filter(f=>!topics||topics.includes(f[0])); const f=(pool.length?pool:FACTS)[Math.random()*(pool.length||FACTS.length)|0]; return `<div class="fact"><span class="lamp">?</span><div><b>Did you know</b>${esc(f[1])}</div></div>` }
+const MODEH = (name,title) => `<div class="modeh" style="--m:var(--${({practice:'accent',challenge:'gold',timeline:'teal',terms:'sage',write:'plum',facts:'rose',sources:'teal'})[name]})"><span class="k"><svg><use href="#m-${name}"/></svg></span><h2>${title}</h2></div>`;
+const unitCls = u => u==='Medieval Europe'?'eu':u==='Shogunate Japan'?'jp':'sk';
+// timeline events (years hidden until placed)
+const EVENTS=[
+ ['Medieval Europe',1066,'Battle of Hastings. William of Normandy defeats Harold'],
+ ['Medieval Europe',1086,'Domesday Book records every landholding in England'],
+ ['Medieval Europe',1095,'Pope Urban II calls the First Crusade at Clermont'],
+ ['Medieval Europe',1099,'Crusaders capture Jerusalem'],
+ ['Medieval Europe',1215,'King John seals Magna Carta'],
+ ['Medieval Europe',1291,'Fall of Acre ends the Crusader states'],
+ ['Medieval Europe',1347,'The Black Death reaches Europe'],
+ ['Medieval Europe',1381,'Peasants’ Revolt in England'],
+ ['Shogunate Japan',1185,'Genpei War ends with Minamoto victory'],
+ ['Shogunate Japan',1192,'Minamoto Yoritomo becomes the first shogun'],
+ ['Shogunate Japan',1274,'First Mongol invasion of Japan fails'],
+ ['Shogunate Japan',1467,'Onin War begins a century of civil war between daimyo'],
+ ['Shogunate Japan',1543,'Portuguese traders arrive in Japan with firearms'],
+ ['Shogunate Japan',1549,'Francis Xavier brings Christianity to Japan'],
+ ['Shogunate Japan',1614,'The shogunate bans Christianity and begins persecuting converts'],
+ ['Shogunate Japan',1600,'Battle of Sekigahara'],
+ ['Shogunate Japan',1603,'Tokugawa Ieyasu is named shogun'],
+ ['Shogunate Japan',1615,'Laws for the Military Houses control the daimyo'],
+ ['Shogunate Japan',1639,'Sakoku edicts close Japan to most foreigners'],
+ ['Shogunate Japan',1853,'Commodore Perry arrives at Edo Bay'],
+ ['Shogunate Japan',1854,'Treaty of Kanagawa opens two ports'],
+ ['Shogunate Japan',1868,'Meiji Restoration returns power to the emperor'],
+ ['Shogunate Japan',1873,'Conscription law replaces samurai armies'],
+ ['Shogunate Japan',1889,'Meiji Constitution is proclaimed'],
+].map(([unit,year,text])=>({unit,year,text}));
+
+// ---------- home ----------
+function home(){
+  state = {mode:null}; quoteOfDay(); document.getElementById('qotd').hidden=false;
+  const totalAuto = Q.filter(q=>AUTO.has(q.type)).length;
+  const dailyDone = store.get('dailyDate','')===today(), dayStreak=store.get('dayStreak',0), best=store.get('best',0);
+  h(`
+  <section class="hero">
+    ${store.get('welcomed',false)?`<p class="hint" style="margin:0 0 6px"><button class="linkbtn" id="howto">How to use Agorian</button></p>`:`<div class="welcome" id="welcome"><h2>How to use Agorian</h2>
+      <p style="margin:0;font-size:17px">An additional revision tool. Finish the revision booklet first, then test yourself here.</p>
+      <ol>
+        <li><b>Three times</b>, write one <b>Short answer practice</b> question and mark it honestly against the model response.</li>
+        <li><b>Twice</b>, do one <b>Source analysis practice</b> and one <b>Paragraph practice</b>, timed.</li>
+        <li><b>Once</b>, try <b>Challenge</b>, then <b>Key terms</b> for anything you blanked on.</li>
+      </ol>
+      <p class="hint" style="font-size:14px;margin:0">Practice questions only. Scores stay in this browser, so use the same device. The site only counts page visits.</p>
+      <div class="namerow"><button class="btn primary" id="goWelcome">Let’s go</button><button class="soundbtn ${soundOn?'on':''}" id="snd0">${soundOn?'&#9835; Sound on':'&#9835; Sound off'}</button></div></div>`}
+    <h1><em>Challenge</em> what you know.</h1>
+    <div class="herogrid">
+      <div class="herotext"><p>The agora was the open square of Athens where citizens traded, voted and were questioned by Socrates. This is yours. Quick questions with an explanation after every answer, timed challenges, a timeline game, flashcards for the key terms and exam-style paragraph prompts, all across Medieval Europe and Shogunate Japan.</p>
+      <div class="daily">
+        <div><p class="t">Ten quick revision questions</p><p class="n">${dailyDone?'Done for today. Back tomorrow for the next set.':'Ten questions aimed at what you find hardest.'} ${dayStreak>1?`Day streak <b>${dayStreak}</b>.`:''}</p></div>
+        <button class="btn ${dailyDone?'done':''}" data-go="daily">${dailyDone?'Do it again':'Start'}</button>
+      </div></div>
+      <figure class="pic" style="margin:0"><img src="${IMG['gr-athens']}" alt="Raphael's fresco The School of Athens, philosophers in debate under a great arch"><figcaption class="cap">Raphael, The School of Athens, 1511. Athenian thinkers arguing in a great hall. Socrates is at the left in the olive robe, counting off his points on his fingers.</figcaption></figure>
+    </div>
+    <div class="examband"><span class="k">&#9998;</span><div class="ex">
+      <span class="t">Exam breakdown</span>
+      <ul class="exlist">
+        <li><b>50 marks in 50 minutes</b>, plus 5 minutes reading time.</li>
+        <li><b>Section A:</b> multiple choice, 10 marks. About a minute a question.</li>
+        <li><b>Section B:</b> short answers, 32 marks. Identify, describe, explain and compare questions, some using a source. About 45 seconds a mark.</li>
+        <li><b>Section C:</b> extended response, 8 marks. Choose one of two questions and use a TEEAL structure with a clear contention. About 15 minutes.</li>
+        <li>Blue or black pen. Sources are in a separate booklet. Attempt every question.</li>
+      </ul>
+      <span class="exlinks"><button class="btn" data-go="shortq">Short answer practice</button><button class="btn" data-go="sources">Source analysis practice</button><button class="btn quiet" data-go="write">Paragraph practice</button></span>
+    </div></div>
+    <div class="units">
+      <button class="upanel eu" data-unit="Medieval Europe"><span class="photo" style="background-image:url(${IMG['eu-bayeux']});background-position:right 40%;background-size:cover"></span><span class="t">Medieval Europe</span><span class="n">Feudalism, castles, the Church, the Crusades and the Black Death.</span><span class="cta">Practise this unit \u2192</span><svg class="art"><use href="#art-eu"/></svg></button>
+      <button class="upanel jp" data-unit="Shogunate Japan"><span class="photo" style="background-image:url(${IMG['jp-wave']});background-position:right 55%;background-size:auto 100%"></span><span class="t">Shogunate Japan</span><span class="n">Samurai, the Tokugawa, sakoku and the Meiji Restoration.</span><span class="cta">Practise this unit \u2192</span><svg class="art"><use href="#art-jp"/></svg></button>
+    </div>
+    <div class="modes">
+      <button class="mode practice" data-go="setup"><span class="pic" style="background-image:url(${IMG['t-practice']})"></span><span class="k"><svg><use href="#m-practice"/></svg></span><span class="t">Multiple-choice practice</span><span class="n">Pick topics, answer at your pace, read the explanation after every question.</span></button>
+      <button class="mode shortq" data-go="shortq"><span class="pic" style="background-image:url(${IMG['f-domesday']})"></span><span class="k">&#9998;</span><span class="t">Short answer practice</span><span class="n">Section B questions. Write yours and then check with a model response.</span></button>
+      <button class="mode write" data-go="write"><span class="pic" style="background-image:url(${IMG['t-write']})"></span><span class="k"><svg><use href="#m-write"/></svg></span><span class="t">Paragraph practice</span><span class="n">Six Section C practice prompts with a TEEAL scaffold and a timer.</span></button>
+      <button class="mode sources" data-go="sources"><span class="pic" style="background-image:url(${IMG['f-dejima']})"></span><span class="k"><svg><use href="#m-sources"/></svg></span><span class="t">Source analysis practice</span><span class="n">Ten sources you have not seen. Four quick questions each, then a timed 3-mark answer.</span></button>
+      <button class="mode challenge" data-go="challenge"><span class="pic" style="background-image:url(${IMG['t-challenge']})"></span><span class="k"><svg><use href="#m-challenge"/></svg></span><span class="t">Challenge</span><span class="n">20 questions from both units against a 10 minute clock.${best?` Personal best ${best}/20.`:''}</span></button>
+      <button class="mode timeline" data-go="timeline"><span class="pic" style="background-image:url(${IMG['t-timeline']})"></span><span class="k"><svg><use href="#m-timeline"/></svg></span><span class="t">Timeline</span><span class="n">Both units side by side, 800 to 1900. Starred years are the ones to learn; tap an event for detail.</span></button>
+      <button class="mode terms" data-go="terms"><span class="pic" style="background-image:url(${IMG['t-terms']})"></span><span class="k"><svg><use href="#m-terms"/></svg></span><span class="t">Key terms</span><span class="n">Flashcards to flip, plus a ten-definition sprint against the clock.</span></button>
+      <button class="mode facts" data-go="facts"><span class="pic" style="background-image:url(${IMG['t-facts']})"></span><span class="k"><svg><use href="#m-facts"/></svg></span><span class="t">Fun facts</span><span class="n">Did-you-know cards from both units. Read one, then practise the topic it came from.</span></button>
+    </div>
+  </section>
+  <section class="section">
+    <h2>Your progress by topic</h2>
+    <p class="muted" style="font-size:14px">Accuracy from questions you've answered on this device. Tap a topic to practise it.</p>
+    <div class="topics">${UNITS.map(u=>`
+      <div class="unit ${unitCls(u)}"><p class="eyebrow"><svg><use href="#ic-${unitCls(u)}"/></svg>${esc(u)}</p><div class="tlist" style="display:grid;gap:8px">${topicsIn(u).map(t=>{
+        const s=topicStats(t), n=Q.filter(q=>q.topic===t&&AUTO.has(q.type)).length, pct=s.a?Math.round(100*s.c/s.a):0;
+        const m=mastery(t); return `<button class="topic ${unitCls(u)}" data-topic="${esc(t)}" style="--p:${s.a?pct:0}%"><span class="name">${esc(t)}${m?` <span class="badge ${m}" title="${m} mastery" style="margin-left:6px;vertical-align:middle"></span>`:''}</span><span class="pct ${s.a?'':'none'}">${s.a?pct+'%':'Not yet'}${s.a&&pct===100?'<span class="tick" aria-label="complete">&#10003;</span>':''}</span></button>`}).join('')}</div></div>`).join('')}
+    </div>
+  </section>`);
+  app.querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>({setup, challenge, terms, write, daily, timeline, facts, sources, shortq})[b.dataset.go]());
+  const gw=app.querySelector('#goWelcome'); if(gw){ gw.onclick=()=>{ store.set('welcomed',true); home() }; app.querySelector('#snd0').onclick=()=>setSound(!soundOn) }
+  const ht=app.querySelector('#howto'); if(ht) ht.onclick=()=>{ store.set('welcomed',false); home() };
+  app.querySelectorAll('[data-topic]').forEach(b=>b.onclick=()=>startQuiz({mode:'practice', topics:[b.dataset.topic], timed:false}));
+  app.querySelectorAll('[data-unit]').forEach(b=>b.onclick=()=>startQuiz({mode:'practice', topics:topicsIn(b.dataset.unit), timed:false, count:15}));
+  updateStreak();
+}
+
+// ---------- practice setup ----------
+function setup(){
+  const sel = new Set(store.get('lastTopics', []));
+  h(`<section class="section">${MODEH('practice','Multiple-choice practice')}
+  <div class="card">
+    <div><p class="eyebrow">Choose topics</p><p class="hint">Tick as many as you like. Questions are shuffled.</p></div>
+    ${UNITS.map(u=>`<div class="ugroup ${unitCls(u)}"><p class="eyebrow"><svg><use href="#ic-${unitCls(u)}"/></svg>${esc(u)}</p><div class="checks">${topicsIn(u).map(t=>`<label class="check ${unitCls(u)} ${sel.has(t)?'on':''}"><input type="checkbox" id="t-${esc(t).replace(/\W+/g,'-')}" value="${esc(t)}" ${sel.has(t)?'checked':''}><span>${esc(t)}</span><span class="cnt">${Q.filter(q=>q.topic===t&&q.type!=='extended').length} q</span></label>`).join('')}</div></div>`).join('')}
+    <div class="row"><label class="hint">Number of questions <select class="sel" id="count"><option>10</option><option selected>15</option><option>25</option><option value="all">All</option></select></label>
+      <label class="row" style="gap:8px;cursor:pointer"><input type="checkbox" id="incShort" style="width:18px;height:18px;accent-color:var(--navy)"><span class="hint">Include short written answers (self marked)</span></label></div>
+    <div class="row"><button class="btn primary" id="go">Start practice</button><button class="btn" id="all">Select all</button><button class="btn quiet" id="back">Back</button></div>
+  </div></section>`);
+  const boxes=[...app.querySelectorAll('.checks input')];
+  boxes.forEach(b=>b.onchange=()=>b.closest('.check').classList.toggle('on',b.checked));
+  app.querySelector('#all').onclick=()=>boxes.forEach(b=>{b.checked=true;b.closest('.check').classList.add('on')});
+  app.querySelector('#back').onclick=home;
+  app.querySelector('#go').onclick=()=>{
+    const topics=boxes.filter(b=>b.checked).map(b=>b.value);
+    if(!topics.length){ boxes[0].focus(); return }
+    store.set('lastTopics', topics);
+    const c=app.querySelector('#count').value;
+    startQuiz({mode:'practice', topics, timed:false, count:c==='all'?Infinity:+c, incShort:app.querySelector('#incShort').checked});
+  };
+}
+
+function daily(){
+  const all=Q.filter(q=>AUTO.has(q.type) && q.unit!=='Skills and concepts'); const due=shuffle(all.filter(isDue)); const rest=shuffle(all.filter(q=>!isDue(q))).sort((a,b)=>weight(a)-weight(b)); const pool=due.concat(rest).slice(0,10);
+  state={mode:'daily'}; startQuiz({mode:'daily', topics:null, timed:false, count:10, list:shuffle(pool)});
+}
+function challenge(){
+  startQuiz({mode:'challenge', topics:null, timed:600, count:20});
+}
+
+// ---------- quiz engine ----------
+let timerId=null;
+function startQuiz(opts){
+  let pool = Q.filter(q => (opts.topics ? opts.topics.includes(q.topic) : q.unit!=='Skills and concepts' || Math.random()<0.5) && (AUTO.has(q.type) || (opts.incShort && q.type==='short')));
+  if(opts.mode==='challenge'){
+    // balance across the two units
+    const me=shuffle(pool.filter(q=>q.unit==='Medieval Europe')).slice(0,9), sj=shuffle(pool.filter(q=>q.unit==='Shogunate Japan')).slice(0,9), sk=shuffle(pool.filter(q=>q.unit==='Skills and concepts')).slice(0,2);
+    pool=shuffle(me.concat(sj,sk));
+  } else {
+    // weight towards questions this viewer has got wrong or never seen
+    pool = shuffle(pool).sort((a,b)=>weight(a)-weight(b));
+  }
+  const list = opts.list || pool.slice(0, Math.min(opts.count||Infinity, pool.length));
+  state = {mode:opts.mode, list, i:0, answers:[], timed:opts.timed, left:opts.timed, start:Date.now(), topics:opts.topics};
+  clearInterval(timerId);
+  if(opts.timed){ timerId=setInterval(()=>{ state.left--; const el=document.getElementById('timer'); if(el){ el.textContent=fmt(state.left); el.classList.toggle('low', state.left<60) } if(state.left<=0){ clearInterval(timerId); results() } },1000) }
+  showQ();
+}
+function weight(q){ const s=stats[q.id]; if(!s) return 0.5; const overdue = s.due && s.due<=Date.now() ? 0 : 1; return overdue + s.c/s.a + s.a*0.05 }
+const fmt = s => `${Math.floor(s/60)}:${String(s%60).padStart(2,'0')}`;
+
+function showQ(){
+  const {list,i} = state; if(i>=list.length) return results();
+  const q=list[i];
+  const si = stimImg(q);
+  const stim = q.stimulus ? `<div class="stim">${si?`<img src="${IMG[si]}" alt="${esc(CAP[si])}">`:''}${esc(q.stimulus).replace(/"([^"]+)"/g,'<p style="margin-top:6px">“$1”</p>')}${si?`<p class="cap" style="font-size:11px;color:var(--muted);margin-top:6px">${esc(CAP[si])}</p>`:''}</div>` : '';
+  let body='';
+  if(q.type==='mc'||q.type==='ms'){
+    const order=shuffle(q.options.map((_,k)=>k));
+    body = `<div class="opts" role="group">${order.map((k,pos)=>`<button class="opt" data-k="${k}"><span class="l">${L[pos]}</span><span>${esc(q.options[k])}</span></button>`).join('')}</div>
+      ${q.type==='ms'?`<p class="hint">Select all that apply, then check.</p>`:''}
+      ${q.options.length>=3?`<div class="conf"><button class="hintbtn" id="hintBtn" style="margin-left:0">Remove one wrong answer</button></div>`:''}`;
+  } else if(q.type==='gaps'){
+    const stack=q.blanks.length>=4; const excl=stack && q.choices.every(c=>JSON.stringify(c)===JSON.stringify(q.choices[0])) && new Set(q.blanks).size===q.blanks.length;
+    body = `<div class="gaps ${stack?'stack':''} ${excl?'excl':''}">${q.segments.map((s,k)=> (stack&&s.trim()==='.')?'':(stack&&k>0?'<br>':'') + esc(s) + (k<q.blanks.length ? `<select data-b="${k}" id="g${q.id}-${k}"><option value="">…</option>${shuffle(q.choices[k]).map(c=>`<option>${esc(c)}</option>`).join('')}</select>` : '')).join('')}</div>${excl?'<p class="hint">Each option can be used once.</p>':''}`;
+  } else if(q.type==='text'){
+    body = `<input class="text" id="tx${q.id}" placeholder="Type your answer" autocomplete="off" autocapitalize="off">
+      <div class="conf"><span>How sure are you?</span><button data-c="sure">Sure</button><button data-c="unsure">Not sure</button></div>`;
+  } else if(q.type==='short'){
+    body = `<textarea id="sh${q.id}" placeholder="Write your answer in a sentence or two"></textarea>
+      <div class="conf"><span>How sure are you?</span><button data-c="sure">Sure</button><button data-c="unsure">Not sure</button></div>`;
+  }
+  if(music.on && music.mode==='auto' && musicUnit()!==music.current){ clearTimeout(music.timer); phrase() }
+  h(`<div class="progress ${state.mode}"><span>${i+1} / ${list.length}</span><span class="track"><i style="width:${100*i/list.length}%"></i></span>${state.timed?`<span class="row" style="gap:10px"><span class="timer" id="timer">${fmt(state.left)}</span><button class="btn quiet" id="quit" style="padding:4px 8px">Finish</button></span>`:`<button class="btn quiet" id="quit" style="padding:4px 8px">End</button>`}</div>
+  <div class="card ${unitCls(q.unit)}">
+    ${si?'':art(TOPIC_IMG[q.topic])}
+    <div class="qhead"><span class="eyebrow" style="color:var(--${unitCls(q.unit)})"><svg><use href="#ic-${unitCls(q.unit)}"/></svg>${esc(q.unit)} · ${esc(q.topic)}</span>${q.skill?`<span class="hint">${esc(q.skill)}</span>`:''}</div>
+    ${stim}
+    <p class="qtext">${esc(q.question)}</p>
+    ${body}
+    <div id="fb"></div>
+    <div class="actions"><span></span><button class="btn primary" id="check">${q.type==='short'?'Show model answer':'Check'}</button></div>
+  </div>`);
+  const quit=app.querySelector('#quit'); if(quit) quit.onclick=results;
+  const selected=new Set(); let conf=null, usedHint=false;
+  app.querySelectorAll('.conf [data-c]').forEach(b=>b.onclick=()=>{ conf=b.dataset.c; app.querySelectorAll('.conf [data-c]').forEach(x=>x.classList.toggle('on',x===b)); beep('tick') });
+  const hb=app.querySelector('#hintBtn'); if(hb) hb.onclick=()=>{ const wrong=[...app.querySelectorAll('.opt:not(.gone):not(:disabled)')].filter(x=>!q.answer.includes(+x.dataset.k)&&!selected.has(+x.dataset.k)); if(!wrong.length) return; const pick=wrong[Math.random()*wrong.length|0]; pick.classList.add('gone'); usedHint=true; hb.disabled=true; beep('tick') };
+  app.querySelectorAll('.opt').forEach(b=>b.onclick=()=>{
+    const k=+b.dataset.k;
+    if(q.type==='mc'){ app.querySelectorAll('.opt').forEach(x=>x.classList.remove('sel')); selected.clear(); selected.add(k); b.classList.add('sel'); check(); }
+    else { b.classList.toggle('sel'); selected.has(k)?selected.delete(k):selected.add(k); }
+  });
+  const tx=app.querySelector('input.text'); if(tx){ tx.focus(); tx.onkeydown=e=>{ if(e.key==='Enter') check() } }
+  { const gs=[...app.querySelectorAll('.gaps.excl select')]; if(gs.length){ const sync=()=>{ const used=gs.map(x=>x.value); gs.forEach(x=>[...x.options].forEach(o=>{ o.disabled=!!o.value&&o.value!==x.value&&used.includes(o.value) })) }; gs.forEach(x=>x.onchange=sync) } }
+  document.onkeydown=e=>{ if(!app.querySelector('.card')||e.target.matches('input,textarea,select')) return;
+    const opts=app.querySelectorAll('.opt:not(:disabled)'); const k='abcdefgh'.indexOf(e.key.toLowerCase()); const n=parseInt(e.key)-1;
+    if(opts.length && (k>=0&&k<opts.length)) opts[k].click(); else if(opts.length && n>=0 && n<opts.length) opts[n].click();
+    else if(e.key==='Enter'){ const b=app.querySelector('#check'); if(b && !b.hidden) b.click() } };
+  app.querySelector('#check').onclick=check;
+
+  function check(){
+    const btn=app.querySelector('#check'); if(btn.disabled) return;
+    let correct=false, detail='';
+    if(q.type==='mc'||q.type==='ms'){
+      if(!selected.size){ app.querySelector('#fb').innerHTML='<p class="hint">Choose all that apply first, then check.</p>'; return }
+      const ans=new Set(q.answer);
+      correct = selected.size===ans.size && [...selected].every(k=>ans.has(k));
+      app.querySelectorAll('.opt').forEach(x=>{ const k=+x.dataset.k; x.disabled=true; x.classList.remove('sel');
+        if(ans.has(k)&&selected.has(k)) x.classList.add('right'); else if(selected.has(k)) x.classList.add('wrong'); else if(ans.has(k)) x.classList.add('missed'); });
+    } else if(q.type==='gaps'){
+      const sels=[...app.querySelectorAll('.gaps select')]; if(sels.some(s=>!s.value)) { sels.find(s=>!s.value).focus(); app.querySelector('#fb').innerHTML='<p class="hint">Fill every blank first.</p>'; return }
+      correct=true; sels.forEach((s,k)=>{ const ok=s.value===q.blanks[k]; s.classList.add(ok?'right':'wrong'); s.disabled=true; if(!ok){ correct=false; s.insertAdjacentHTML('afterend',` <span class="fix">→ ${esc(q.blanks[k])}</span>`) } });
+    } else if(q.type==='text'){
+      const v=tx.value.trim().toLowerCase(); if(!v){ app.querySelector('#fb').innerHTML='<p class="hint">Type an answer first.</p>'; return }
+      correct = q.answer.includes(v) || q.answer.some(a=>v.replace(/[^a-z]/g,'')===a.replace(/[^a-z]/g,''));
+      tx.disabled=true; tx.classList.add(correct?'right':'wrong'); if(!correct) detail=`Answer: <b>${esc(q.answer[0])}</b>. `;
+    } else if(q.type==='short'){
+      const ta=app.querySelector('textarea'); ta.disabled=true;
+      app.querySelector('#fb').innerHTML=`<div class="feedback info"><b>Model answer</b><span>${esc(q.model)}</span></div>
+        <div class="row" style="margin-top:8px"><span class="hint">How did yours compare?</span><button class="btn" id="selfY">Got it</button><button class="btn" id="selfN">Not yet</button></div>`;
+      btn.hidden=true;
+      app.querySelector('#selfY').onclick=()=>finish(true); app.querySelector('#selfN').onclick=()=>finish(false);
+      return;
+    }
+    app.querySelector('#fb').innerHTML=`<div class="feedback ${correct?'ok':'bad'}"><b>${correct?'Correct.':'Not quite.'}</b><span>${detail}${esc(q.explanation||'')}</span></div>`+(i%4===3?`<div style="margin-top:10px">${factFor([q.topic])}</div>`:'');
+    finish(correct);
+  }
+  function finish(correct){
+    if(q.type==='short') log({qid:q.id, unit:q.unit, topic:q.topic, type:q.type, correct:correct?1:0, conf, mode:state.mode, event:'self'}); else record(q, correct, conf, usedHint);
+    state.answers.push({q, correct, conf, hint:usedHint});
+    beep(correct?'ok':'bad');
+    const btn=app.querySelector('#check'); btn.hidden=false; btn.disabled=false; btn.textContent = i+1<list.length ? 'Next' : 'See results'; btn.onclick=()=>{ state.i++; showQ() };
+    btn.focus();
+    updateStreak(correct);
+  }
+}
+
+let streak = store.get('streak', 0);
+let soundOn = store.get('sound', true);
+// ---- sound (synthesised, no files) ----
+let actx=null;
+function beep(kind){ if(!soundOn) return; try{ actx=actx||new (window.AudioContext||window.webkitAudioContext)(); if(actx.state==='suspended') actx.resume(); const t=actx.currentTime; const tone=(f,start,dur,type='sine',g=.12)=>{ const o=actx.createOscillator(), v=actx.createGain(); o.type=type; o.frequency.setValueAtTime(f,t+start); v.gain.setValueAtTime(0,t+start); v.gain.linearRampToValueAtTime(g,t+start+.01); v.gain.exponentialRampToValueAtTime(.0001,t+start+dur); o.connect(v).connect(actx.destination); o.start(t+start); o.stop(t+start+dur+.02) };
+  if(kind==='ok'){ tone(660,0,.12); tone(990,.1,.18) } else if(kind==='bad'){ tone(220,0,.22,'triangle',.1) } else if(kind==='tick'){ tone(880,0,.05,'square',.04) } else if(kind==='win'){ [523,659,784,1047].forEach((f,i)=>tone(f,i*.09,.25)) } }catch(e){} }
+// ---- generated ambient music ----
+const music={on:false, mode:store.get('musMode','auto'), vol:store.get('musVol',35), timer:null, master:null, nodes:[], current:null};
+const SCALES={ jp:[0,2,3,7,8,12,14,15,19], eu:[0,2,3,5,7,9,10,12,14,15,17] }; // in-sen style pentatonic; dorian
+const ROOTS={jp:220, eu:196};
+function ensureCtx(){ actx=actx||new (window.AudioContext||window.webkitAudioContext)(); if(actx.state==='suspended') actx.resume(); return actx }
+function musicUnit(){ if(music.mode!=='auto') return music.mode; const q=state.list&&state.list[state.i]; return q&&q.unit==='Shogunate Japan'?'jp':'eu' }
+function pluck(freq, when, dur, gain, bright){ const c=ensureCtx(); const o=c.createOscillator(); o.type=bright?'triangle':'sine'; o.frequency.value=freq;
+  const o2=c.createOscillator(); o2.type='sine'; o2.frequency.value=freq*2.01; const g2=c.createGain(); g2.gain.value=bright?.25:.12;
+  const f=c.createBiquadFilter(); f.type='lowpass'; f.frequency.setValueAtTime(freq*6,when); f.frequency.exponentialRampToValueAtTime(freq*1.5,when+dur);
+  const v=c.createGain(); v.gain.setValueAtTime(0,when); v.gain.linearRampToValueAtTime(gain,when+.012); v.gain.exponentialRampToValueAtTime(.0001,when+dur);
+  o.connect(f); o2.connect(g2).connect(f); f.connect(v).connect(music.master); o.start(when); o2.start(when); o.stop(when+dur+.05); o2.stop(when+dur+.05); }
+function drone(root){ const c=ensureCtx(); const g=c.createGain(); g.gain.value=0; g.connect(music.master);
+  [root/2, root/2*1.5, root].forEach((f,i)=>{ const o=c.createOscillator(); o.type=i===2?'sine':'triangle'; o.frequency.value=f; const lfo=c.createOscillator(); lfo.frequency.value=.07+i*.03; const lg=c.createGain(); lg.gain.value=f*.004; lfo.connect(lg).connect(o.frequency); lfo.start(); const og=c.createGain(); og.gain.value=i===2?.5:.3; o.connect(og).connect(g); o.start(); music.nodes.push(o,lfo) });
+  g.gain.linearRampToValueAtTime(.09,c.currentTime+4); music.nodes.push(g); return g }
+function phrase(){ if(!music.on) return; const c=ensureCtx(); const u=musicUnit(); if(u!==music.current){ music.current=u; stopNodes(); drone(ROOTS[u]) }
+  const sc=SCALES[u], root=ROOTS[u]; const t=c.currentTime+.05; const n=3+Math.floor(Math.random()*4); let when=t; const bright=u==='jp';
+  for(let i=0;i<n;i++){ const deg=sc[Math.floor(Math.random()*sc.length)]; const f=root*Math.pow(2,deg/12)*(Math.random()<.3?2:1); const dur=1.6+Math.random()*2.4; pluck(f, when, dur, .07+Math.random()*.05, bright); when+=0.35+Math.random()*1.3 }
+  if(Math.random()<.5){ const deg=sc[Math.floor(Math.random()*4)]; pluck(root/2*Math.pow(2,deg/12), t+.2, 3.5, .05, false) }
+  music.timer=setTimeout(phrase, (when-c.currentTime)*1000 + 1500 + Math.random()*2500) }
+function stopNodes(){ music.nodes.forEach(n=>{ try{ n.stop? n.stop(): n.disconnect() }catch(e){} }); music.nodes=[] }
+function setMusic(on){ music.on=on; store.set('music',on); const el=document.getElementById('music'); el.classList.toggle('on',on); const b=document.getElementById('musBtn'); b.classList.toggle('on',on); b.setAttribute('aria-checked',on); updateAudioBtn();
+  if(on){ const c=ensureCtx(); if(!music.master){ music.master=c.createGain(); music.master.connect(c.destination) } music.master.gain.setTargetAtTime(music.vol/100*.6, c.currentTime, .3); music.current=null; clearTimeout(music.timer); phrase() }
+  else { clearTimeout(music.timer); if(music.master&&actx){ music.master.gain.setTargetAtTime(0, actx.currentTime, .4) } setTimeout(stopNodes, 1200); music.current=null } }
+function setSound(on){ soundOn=on; store.set('sound',on); const b=document.getElementById('sndBtn'); if(b){ b.classList.toggle('on',on); b.setAttribute('aria-checked',on) } document.querySelectorAll('.soundbtn').forEach(x=>{ x.classList.toggle('on',on); x.innerHTML=(on?'&#9835; Sound on':'&#9835; Sound off') }); updateAudioBtn() }
+function updateAudioBtn(){ const a=document.getElementById('audioBtn'); if(a) a.classList.toggle('muted',!soundOn&&!music.on) }
+// ---- spaced return: when a question is next due ----
+function schedule(q, correct, conf){ const s=stats[q.id]||{a:0,c:0}; const days = !correct ? 1 : conf==='sure' ? 7 : 3; s.due = Date.now()+days*864e5; if(conf) s.conf=conf; stats[q.id]=s; store.set('stats',stats) }
+const isDue = q => { const s=stats[q.id]; return !s || !s.due || s.due<=Date.now() };
+function updateStreak(correct){
+  if(correct===true) streak++; else if(correct===false) streak=0;
+  store.set('streak', streak);
+  const el=document.getElementById('streak'); el.hidden = streak<3; document.getElementById('streakN').textContent=streak;
+}
+
+// ---------- results ----------
+function results(){
+  clearInterval(timerId);
+  const A=state.answers, n=A.length, c=A.filter(a=>a.correct).length, pct=n?Math.round(100*c/n):0;
+  const byTopic={}; A.forEach(a=>{ const t=a.q.topic; byTopic[t]=byTopic[t]||{a:0,c:0}; byTopic[t].a++; if(a.correct) byTopic[t].c++ });
+  const weak=Object.entries(byTopic).filter(([t,s])=>s.c/s.a<0.6).map(([t])=>t);
+  const secs=Math.round((Date.now()-state.start)/1000), mins=secs<60?`${secs} sec`:`${Math.round(secs/60)} min`;
+  if(state.mode==='daily' && n>=10){ const last=store.get('dailyDate',''); if(last!==today()){ const y=new Date(Date.now()-864e5).toISOString().slice(0,10); store.set('dayStreak', last===y?store.get('dayStreak',0)+1:1); store.set('dailyDate', today()) } }
+  let newBest=false; if(state.mode==='challenge'){ const b=store.get('best',0); if(c>b){ store.set('best',c); newBest=true } }
+  if(n && pct>=80) setTimeout(confetti,200);
+  if(n && pct>=80) setTimeout(()=>beep('win'),150);
+  const date=new Date().toLocaleDateString('en-AU',{day:'numeric',month:'short',year:'numeric'});
+  const modeName=({challenge:'Challenge',daily:'Ten quick revision questions',practice:'Multiple-choice practice'})[state.mode];
+  const rows=Object.entries(byTopic).map(([t,s])=>[t,`${s.c} / ${s.a}`,`${Math.round(100*s.c/s.a)}%`]);
+  const colw=Math.max(12,...rows.map(r=>r[0].length));
+  const summary=[`AGORIAN  ${modeName.toUpperCase()}`,date,'',`Score   ${c} / ${n}   (${pct}%)`,`Time    ${mins}`,'','By topic',...rows.map(r=>`  ${r[0].padEnd(colw)}  ${r[1].padStart(7)}  ${r[2].padStart(4)}`),'',weak.length?`Revisit  ${weak.join(', ')}`:'No weak topics this round.'].join('\n');
+  h(`<section class="section">${MODEH(state.mode==='challenge'?'challenge':'practice',({challenge:'Challenge complete',daily:'Ten quick revision questions complete',practice:'Multiple-choice practice complete'})[state.mode])}
+  <div class="card">
+    ${art(state.mode==='challenge'?'jp-fuji':(TOPIC_IMG[Object.keys(byTopic)[0]]||'eu-bayeux'))}
+    <div class="score"><div class="ring" style="--p:${pct}"><b>${pct}%</b></div>
+      <div><p style="font-size:18px;font-weight:600">${c} of ${n} correct</p><p class="muted">${n?verdict(pct):'No questions answered.'}${newBest?' <b style="color:var(--accent)">New personal best.</b>':''}</p></div></div>
+    <div><p class="eyebrow" style="margin-bottom:8px">By topic</p><div class="bytopic">${Object.entries(byTopic).map(([t,s])=>`<div class="bt"><div><div style="margin-bottom:4px">${esc(t)}</div><div class="bar"><i style="width:${100*s.c/s.a}%;background:${s.c/s.a<0.6?'var(--accent)':'var(--sage)'}"></i></div></div><span class="n">${s.c}/${s.a}</span></div>`).join('')}</div></div>
+    <div><p class="eyebrow" style="margin-bottom:8px">Summary for your teacher</p><div class="summary" id="sum"><div class="sumhead"><span>Agorian · ${modeName}</span><span>${date}</span></div>
+        <div class="sumgrid"><span class="k">Score</span><span class="v">${c} / ${n} <small>(${pct}%)</small></span><span class="k">Time</span><span class="v">${mins}</span></div>
+        <div class="sumtopics">${rows.map(r=>`<span class="t">${esc(r[0])}</span><span class="v">${r[1]}</span><span class="p">${r[2]}</span>`).join('')}</div>
+        <div class="sumfoot">${weak.length?`<b>Revisit</b> ${esc(weak.join(', '))}`:'No weak topics this round.'}</div></div>
+      <div class="row" style="margin-top:8px"><button class="btn" id="copy">Copy summary</button><span class="hint">Or screenshot this card.</span></div></div>
+    ${factFor(weak.length?weak:Object.keys(byTopic))}
+    ${A.some(a=>!a.correct)?`<div><p class="eyebrow" style="margin-bottom:8px">Questions to revisit</p><div class="review">${A.filter(a=>!a.correct).map(a=>`<div class="rv"><span class="q">${esc(a.q.question)}${a.conf==='sure'?'<span class="tag sure">Sure but wrong</span>':''}</span>${(()=>{const q=a.q; let ans=''; if(q.type==='mc'||q.type==='ms') ans=q.answer.map(k=>q.options[k]).join('; '); else if(q.type==='gaps') ans=q.blanks.join(', '); else if(q.type==='text') ans=q.answer[0]; return ans?`<span><b>Answer:</b> ${esc(ans)}</span>`:''})()}<span class="muted">${esc(a.q.explanation||a.q.model||'')}</span></div>`).join('')}</div></div>`:''}
+    ${A.some(a=>a.correct&&a.conf==='unsure')?`<p class="hint">${A.filter(a=>a.correct&&a.conf==='unsure').length} right but not sure. Those come back in three days. Sure and right come back in a week, wrong ones tomorrow.</p>`:''}
+    ${A.some(a=>a.hint)?`<p class="hint">Hints used on ${A.filter(a=>a.hint).length}.</p>`:''}
+    <div class="row"><button class="btn primary" id="again">${state.mode==='challenge'?'New challenge':'Practise again'}</button><button class="btn" id="succ">What success looks like</button>${weak.length?`<button class="btn accent" id="weak">Practise weak topics</button>`:''}<button class="btn quiet" id="home">Home</button></div>
+  </div></section>`);
+  app.querySelector('#copy').onclick=async e=>{ try{ await navigator.clipboard.writeText(summary); e.target.textContent='Copied' }catch(err){ const r=document.createRange(); r.selectNodeContents(document.getElementById('sum')); const s=getSelection(); s.removeAllRanges(); s.addRange(r); e.target.textContent='Selected, press copy' } };
+  app.querySelector('#again').onclick=()=> state.mode==='challenge'?challenge():state.mode==='daily'?daily():startQuiz({mode:'practice',topics:state.topics,timed:false,count:n||15});
+  const w=app.querySelector('#weak'); if(w) w.onclick=()=>startQuiz({mode:'practice',topics:weak,timed:false,count:15});
+  app.querySelector('#home').onclick=home; app.querySelector('#succ').onclick=()=>success();
+  log({event:'session_end', mode:state.mode, n, c});
+}
+function verdict(p){ return p>=85?'Exam ready on these topics. Try the paragraph prompts next.':p>=65?'Solid. Read the explanations on the ones you missed and go again.':p>=40?'Getting there. Practise the weak topics below before the next challenge.':'Early days. Pick one topic at a time in Practice and build it up.' }
+
+// ---------- key terms ----------
+const JP_TERMS=new Set(['Archipelago','Bakufu','Bushido','Daimyo','Edict','Emperor','Outcast','Ronin','Sakoku','Samurai','Sankin Kotai','Seppuku','Shogun','Westernisation','Heian period','Kamakura period','Edo period','Treaty of Kanagawa','Meiji Restoration','Conscription','Kabuki','Ukiyo-e']);
+const SK_TERMS=new Set(['Cause and effect','Contestability','Continuity and change','Empathy','Evidence','Perspectives','Significance','Turning point']);
+const termUnit = t => JP_TERMS.has(t) ? 'Shogunate Japan' : SK_TERMS.has(t) ? 'Skills and concepts' : 'Medieval Europe';
+function terms(){
+  let order = shuffle(TERMS.map((_,i)=>i)); let i=0, flipped=false;
+  const draw=()=>{ const t=TERMS[order[i]];
+    h(`<section class="section"><div class="row" style="justify-content:space-between">${MODEH('terms','Key terms')}<span class="pill">${TERMS.length} terms</span></div>
+    <div class="flash ${unitCls(termUnit(t.term))} ${flipped?'back':''}" id="flash" role="button" tabindex="0" aria-label="Flashcard, tap to flip">${flipped?`<div><p class="unit">${esc(termUnit(t.term))}</p><p class="term">${esc(t.term)}</p><p class="def" style="margin-top:10px">${esc(t.definition)}</p></div>`:`<div><p class="unit">${esc(termUnit(t.term))}</p><p class="term">${esc(t.term)}</p><p class="tap">Tap to see the definition</p></div>`}</div>
+    <div class="actions"><div class="row"><button class="btn" id="prev" style="display:inline-flex;align-items:center;gap:6px"><svg style="width:18px;height:18px"><use href="#ar-l"/></svg>Previous</button><button class="btn" id="next" style="display:inline-flex;align-items:center;gap:6px">Next<svg style="width:18px;height:18px"><use href="#ar-r"/></svg></button></div>
+      <div class="row"><button class="btn accent" id="sprint">Term sprint</button><button class="btn quiet" id="home">Home</button></div></div>
+    <p class="hint">${i+1} of ${order.length}. Space flips, arrow keys move.</p></section>`);
+    const f=app.querySelector('#flash'); f.onclick=()=>{flipped=!flipped;draw()}; f.onkeydown=e=>{ if(e.key===' '||e.key==='Enter'){e.preventDefault();flipped=!flipped;draw()} };
+    app.querySelector('#next').onclick=()=>{i=(i+1)%order.length;flipped=false;draw()};
+    app.querySelector('#prev').onclick=()=>{i=(i-1+order.length)%order.length;flipped=false;draw()};
+    app.querySelector('#home').onclick=home; app.querySelector('#sprint').onclick=sprint;
+  };
+  document.onkeydown=e=>{ if(!app.querySelector('#flash')) { document.onkeydown=null; return } if(e.key==='ArrowRight') app.querySelector('#next').click(); if(e.key==='ArrowLeft') app.querySelector('#prev').click(); };
+  draw();
+}
+
+// ---------- timeline game ----------
+function timeline(){
+  h(`<section class="section"><div class="row" style="justify-content:space-between">${MODEH('timeline','Timeline')}<button class="btn" id="game">Order the events</button></div>${CHRONO}<div class="actions"><button class="btn quiet" id="home">Home</button><button class="btn" id="game2">Order the events</button></div></section>`);
+  app.querySelector('#home').onclick=home;
+  app.querySelector('#game').onclick=timelineGame; app.querySelector('#game2').onclick=timelineGame;
+  const close=()=>app.querySelectorAll('.chrono .cev.open').forEach(x=>{x.classList.remove('open');x.querySelector('.ccard').setAttribute('aria-expanded','false')});
+  app.querySelectorAll('.chrono .ccard').forEach(b=>b.onclick=()=>{ const e=b.parentElement, was=e.classList.contains('open'); close(); if(!was){ e.classList.add('open'); b.setAttribute('aria-expanded','true') } });
+  app.querySelector('.chrono').addEventListener('keydown',e=>{ if(e.key==='Escape') close() });
+}
+function timelineGame(){
+  let round=0, total=0, misses=0;
+  const play=()=>{
+    const unit = round%3===2 ? null : (round%3===0?'Medieval Europe':'Shogunate Japan');
+    const pick = shuffle(unit?EVENTS.filter(e=>e.unit===unit):EVENTS).slice(0,6);
+    const order = pick.slice().sort((a,b)=>a.year-b.year); let next=0, miss=0;
+    h(`<section class="section"><div class="row" style="justify-content:space-between">${MODEH('timeline','Timeline')}<span class="pill">Round <b>${round+1}</b></span></div>
+    <div class="card"><div><span class="eyebrow">${unit?esc(unit):'Both units'}</span><p class="qtext" style="margin-top:4px">Tap the events in order, earliest first.</p></div>
+      <div class="rail" id="rail">${order.map(()=>'<i></i>').join('')}</div>
+      <div class="tl" id="tl">${pick.map((e,k)=>`<button class="ev" data-k="${k}"><span class="yr">?</span><span>${esc(e.text)}</span>${unit?'':`<span class="u">${e.unit==='Medieval Europe'?'Europe':'Japan'}</span>`}</button>`).join('')}</div>
+      <div id="fb"></div><div class="actions"><button class="btn quiet" id="home">Home</button><span></span></div></div></section>`);
+    app.querySelector('#home').onclick=home;
+    app.querySelectorAll('.ev').forEach(b=>b.onclick=()=>{
+      const e=pick[+b.dataset.k];
+      if(e===order[next]){ b.classList.add('placed'); b.disabled=true; b.querySelector('.yr').textContent=e.year; b.style.order=next-10; app.querySelectorAll('#rail i')[next].classList.add('on'); next++;
+        if(next===order.length){ total+=6-miss; misses+=miss; log({event:'timeline', miss, unit}); app.querySelector('#fb').innerHTML=`<div class="feedback ${miss?'info':'ok'}"><b>${miss?`Done with ${miss} slip${miss>1?'s':''}.`:'Perfect order.'}</b><span>${esc(order[0].text)} came first. ${order[order.length-1].year-order[0].year} years separate the first and last events here.</span></div>`;
+          app.querySelector('.actions span').innerHTML=`<button class="btn primary" id="nx">Next round</button>`; app.querySelector('#nx').onclick=()=>{round++;play()}; app.querySelector('#nx').focus(); if(!miss&&round>=2) confetti() } }
+      else { miss++; b.classList.remove('shake'); void b.offsetWidth; b.classList.add('shake'); const r=app.querySelectorAll('#rail i')[next]; r.classList.add('miss'); setTimeout(()=>r.classList.remove('miss'),500) }
+    });
+  };
+  play();
+}
+
+// ---------- term sprint ----------
+function sprint(){
+  const set=shuffle(TERMS).slice(0,10); let i=0, right=0, start=Date.now();
+  const ask=()=>{
+    if(i>=set.length){ const secs=Math.round((Date.now()-start)/1000); const b=store.get('sprintBest',null); const nb=right>(b?b.r:-1)||(b&&right===b.r&&secs<b.s); if(nb) store.set('sprintBest',{r:right,s:secs}); log({event:'sprint',right,secs});
+      h(`<section class="section">${MODEH('terms','Term sprint')}<div class="card"><div class="score"><div class="ring" style="--p:${right*10}"><b>${right}/10</b></div><div><p style="font-size:18px;font-weight:600">${secs} seconds</p><p class="muted">${nb?'New best.':b?`Best ${b.r}/10 in ${b.s} s.`:''} ${right>=9?'You know your vocabulary.':'Flip through the cards for the ones you missed.'}</p></div></div>
+      <div class="row"><button class="btn primary" id="again">Sprint again</button><button class="btn" id="cards">Flashcards</button><button class="btn quiet" id="home">Home</button></div></div></section>`);
+      app.querySelector('#again').onclick=sprint; app.querySelector('#cards').onclick=terms; app.querySelector('#home').onclick=home; if(right>=9) confetti(); return }
+    const t=set[i]; const opts=shuffle([t].concat(shuffle(TERMS.filter(x=>x!==t)).slice(0,3)));
+    h(`<section class="section sprint"><div class="progress"><span>${i+1} / 10</span><span class="track"><i style="width:${i*10}%"></i></span><span class="timer">${Math.round((Date.now()-start)/1000)} s</span></div>
+    <div class="card"><span class="eyebrow">Which term?</span><p class="def">${esc(t.definition)}</p>
+    <div class="opts">${opts.map((o,k)=>`<button class="opt" data-k="${k}"><span class="l">${L[k]}</span><span>${esc(o.term)}</span></button>`).join('')}</div><div id="fb"></div></div></section>`);
+    app.querySelectorAll('.opt').forEach(b=>b.onclick=()=>{ const o=opts[+b.dataset.k]; const ok=o===t; if(ok) right++; app.querySelectorAll('.opt').forEach(x=>{x.disabled=true; if(opts[+x.dataset.k]===t) x.classList.add('right'); else if(x===b) x.classList.add('wrong')}); i++; setTimeout(ask, ok?350:1100) });
+    document.onkeydown=e=>{ const k='abcd'.indexOf(e.key.toLowerCase()); const n=parseInt(e.key)-1; const o=app.querySelectorAll('.opt:not(:disabled)'); if(o.length&&k>=0&&k<4) o[k].click(); else if(o.length&&n>=0&&n<4) o[n].click() };
+  };
+  ask();
+}
+
+// ---------- teacher view (local data now, class logging later) ----------
+// ---------- fun facts ----------
+function facts(){
+  const unitOf = t => (Q.find(q=>q.topic===t)||{}).unit || 'Skills and concepts';
+  let filter = 'all'; let seen = new Set(store.get('factsSeen',[]));
+  const draw=()=>{
+    const pool = FACTS.map((_,k)=>k).filter(k=>filter==='all'||unitOf(FACTS[k][0])===filter);
+    h(`<section class="section"><div class="row" style="justify-content:space-between">${MODEH('facts','Fun facts')}<span class="pill">Read <b id="seenN">${seen.size}</b> / ${FACTS.length}</span></div>
+    <p class="hint" style="margin:6px 0 0">Hover over a tile to read the fact. Tab and Enter work too.</p>
+    <div class="row"><button class="btn ${filter==='all'?'primary':''}" data-f="all">Both units</button><button class="btn ${filter==='Medieval Europe'?'primary':''}" data-f="Medieval Europe">Medieval Europe</button><button class="btn ${filter==='Shogunate Japan'?'primary':''}" data-f="Shogunate Japan">Shogunate Japan</button></div>
+    <div class="factgrid">${pool.map(k=>{ const [topic,text]=FACTS[k]; const u=unitOf(topic); const c=unitCls(u); const img=FACT_IMG[k]||TOPIC_IMG[topic]; const canP=Q.some(q=>q.topic===topic&&AUTO.has(q.type));
+      return `<div class="ftile ${seen.has(k)?'read':''}" tabindex="0" data-k="${k}" data-topic="${esc(topic)}" style="--u:var(--${c})">
+        ${img&&IMG[img]?`<div class="bg" style="background-image:url(${IMG[img]});background-position:${FOCUS[img]||'center'}"></div>`:''}
+        <div class="front"><span class="eyebrow"><svg style="width:14px;height:14px"><use href="#ic-${c}"/></svg>${esc(topic)}</span><div class="tt">${esc(FACT_TITLES[k]||'Did you know?')}</div><div class="peek">Hover to reveal</div></div>
+        <div class="back"><span class="eyebrow">${esc(u)} · ${esc(topic)}</span><p>${esc(text)}</p>${canP?`<div class="row"><button class="btn prac" data-t="${esc(topic)}">Practise ${esc(topic)}</button></div>`:''}</div>
+      </div>`}).join('')}</div>
+    <div class="actions" style="margin-top:18px"><span class="hint">${pool.length} facts${filter==='all'?' across both units':''}.</span><button class="btn quiet" id="home">Home</button></div></section>`);
+    app.querySelectorAll('[data-f]').forEach(b=>b.onclick=()=>{filter=b.dataset.f;draw()});
+    const mark=t=>{ const k=+t.dataset.k; if(!seen.has(k)){ seen.add(k); store.set('factsSeen',[...seen]); t.classList.add('read'); const n=app.querySelector('#seenN'); if(n) n.textContent=seen.size } };
+    app.querySelectorAll('.ftile').forEach(t=>{
+      t.addEventListener('mouseenter',()=>mark(t)); t.addEventListener('focus',()=>mark(t));
+      t.onclick=e=>{ if(e.target.closest('.prac')) return; t.classList.toggle('open'); mark(t) };
+      t.onkeydown=e=>{ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); t.classList.toggle('open'); mark(t) } };
+    });
+    app.querySelectorAll('.prac').forEach(b=>b.onclick=()=>startQuiz({mode:'practice',topics:[b.dataset.t],timed:false,count:10}));
+    app.querySelector('#home').onclick=home;
+    document.onkeydown=null;
+  };
+  draw();
+}
+
+// ---------- before the exam: format, timing and where the marks are ----------
+// ---------- short answers: write, compare with marked exemplars, self-mark ----------
+let sqMarks=store.get('sqMarks',{});
+function shortq(){
+  const drafts=store.get('drafts',{});
+  const list=()=>{
+    h(`<section class="section"><div class="modeh" style="--m:var(--teal)"><span class="k">&#9998;</span><h2>Short answer practice</h2></div>
+    <p class="muted">Section B is 32 of the 50 marks. 0 marks are given for inaccurate answers.</p>
+    <div class="sqlist">${SHORTQ.map(s=>{ const u=unitCls(s.unit); const m=sqMarks[s.id]; return `<button class="sq ${u}" data-id="${s.id}"><span class="m">${s.marks}</span><span class="q">${esc(s.q)}</span>${m!==undefined?`<span class="tail"><span class="done">${m} / ${s.marks}</span></span>`:''}</button>`}).join('')}</div>
+    <div class="actions" style="margin-top:18px"><span class="hint">${Object.keys(sqMarks).filter(k=>SHORTQ.some(s=>s.id===k)).length} of ${SHORTQ.length} marked. ${(()=>{const d=SHORTQ.filter(s=>sqMarks[s.id]!==undefined); const got=d.reduce((a,s)=>a+sqMarks[s.id],0), of=d.reduce((a,s)=>a+s.marks,0); return of?`${got} of ${of} marks so far.`:''})()}</span><button class="btn" id="toSucc">What success looks like</button><button class="btn quiet" id="home">Home</button></div></section>`);
+    app.querySelectorAll('.sq').forEach(b=>b.onclick=()=>one(b.dataset.id));
+    app.querySelector('#toSucc').onclick=()=>success(); app.querySelector('#home').onclick=home;
+  };
+  const one=screen(function sqView(id){
+    const s=SHORTQ.find(x=>x.id===id); const k=SHORTQ.indexOf(s); const u=unitCls(s.unit);
+    h(`<section class="section"><div class="modeh" style="--m:var(--teal)"><span class="k">&#9998;</span><h2>Short answer practice</h2></div>
+    <div class="card ${u}">
+      <span class="eyebrow" style="color:var(--${u})">${esc(s.unit)} · ${esc(s.topic)} · ${esc(s.cmd)}</span>
+      ${s.source?`<div class="srcgrid" style="margin:10px 0 14px">${s.source.img?`<div><img src="${IMG[s.source.img]}" alt="${esc(s.source.alt||'')}"></div>`:`<blockquote class="srcq">${esc(s.source.text)}</blockquote>`}<div><p class="hint" style="font-size:14px;color:var(--ink)"><b>${esc(s.source.label||'Source')}.</b> ${esc(s.source.caption)}</p><p class="hint" style="margin-top:10px">Read the caption first: it gives you the who, when and where. Answer using the source and your own knowledge.</p></div></div>`:''}
+      <p class="qtext">${esc(s.q)} <span class="muted" style="font-weight:400;white-space:nowrap">(${s.marks} marks)</span></p>
+      <div class="timerrow"><span><b>${s.marks*45>=60?Math.floor(s.marks*45/60)+' min '+(s.marks*45%60?s.marks*45%60+' sec':''):s.marks*45+' sec'}</b> at 45 seconds a mark.</span><button class="btn" id="tstart">Start timer</button><span class="tdisp" id="tdisp" hidden></span></div>
+      <textarea id="sq-${s.id}" placeholder="Write your answer here. Identify, prove, link." style="margin-top:12px;min-height:150px">${esc(drafts['sq-'+s.id]||'')}</textarea>
+      <div class="row" style="justify-content:space-between;margin-top:8px"><span class="hint" id="wc"></span><button class="btn primary" id="reveal" ${sqMarks[s.id]!==undefined?'hidden':''}>Reveal marked answers</button></div>
+      <div id="answers" ${sqMarks[s.id]!==undefined?'':'hidden'} style="margin-top:14px;display:grid;gap:12px">
+        <div class="sample full"><span class="marks full">likely ${s.marks} / ${s.marks}</span>${s.full.text.split('\n').map(t=>`<p>${esc(t)}</p>`).join('')}<p class="why"><b>Why likely ${s.marks}.</b> ${esc(s.full.why)}</p></div>
+        <div class="card" style="margin:0"><p class="eyebrow">Mark yourself</p><p class="hint">Compare your answer with the model response. Give yourself a mark for each point it makes that your answer also makes clearly.</p>
+          <div class="marksel" id="marksel">${Array.from({length:s.marks+1},(_,i)=>`<button data-m="${i}" class="${sqMarks[s.id]===i?'on':''}">${i}</button>`).join('')}<span class="hint">out of ${s.marks}</span></div></div>
+      </div>
+      ${pager(k,SHORTQ.length,`Question ${k+1} of ${SHORTQ.length}`)}
+      <div class="row" style="margin-top:12px"><button class="btn quiet" id="back">All short answer questions</button></div>
+    </div></section>`);
+    const ta=app.querySelector('textarea'), wc=app.querySelector('#wc'); const count=()=>{ const w=ta.value.trim().split(/\s+/).filter(Boolean).length; wc.textContent=`${w} words` }; count(); ta.oninput=()=>{ count(); drafts['sq-'+s.id]=ta.value; store.set('drafts',drafts) };
+    const ans=app.querySelector('#answers'); app.querySelector('#reveal').onclick=e=>{ ans.hidden=false; e.target.hidden=true; log({event:'shortq-reveal', qid:s.id, n:ta.value.trim().split(/\s+/).filter(Boolean).length}) };
+    app.querySelectorAll('#marksel button').forEach(b=>b.onclick=()=>{ const m=+b.dataset.m; sqMarks[s.id]=m; store.set('sqMarks',sqMarks); app.querySelectorAll('#marksel button').forEach(x=>x.classList.toggle('on',x===b)); beep(m===s.marks?'win':'ok'); log({event:'shortq', qid:s.id, n:s.marks, c:m, correct:m===s.marks?1:0, unit:s.unit, topic:s.topic, type:'shortq'}) });
+    { const disp=app.querySelector('#tdisp'), startB=app.querySelector('#tstart'); let tid=null; const total=Math.round(s.marks*45); const fmt=ms=>{ const t=Math.max(0,Math.ceil(ms/1000)); return `${Math.floor(t/60)}:${String(t%60).padStart(2,'0')}` };
+      startB.onclick=()=>{ if(tid){ clearInterval(tid); tid=null; disp.hidden=true; startB.textContent='Start timer'; return } const endAt=Date.now()+total*1000; disp.hidden=false; startB.textContent='Stop'; ta.focus(); beep('ok');
+        const step=()=>{ const left=endAt-Date.now(); disp.textContent=fmt(left); disp.classList.toggle('warn',left<20000); if(left<=0){ clearInterval(tid); tid=null; disp.textContent='0:00'; startB.textContent='Start timer'; beep('win') } }; step(); tid=setInterval(step,500) } }
+    const pv=app.querySelector('#pg-prev'), nx=app.querySelector('#pg-next'); if(pv) pv.onclick=()=>one(SHORTQ[k-1].id); if(nx) nx.onclick=()=>one(SHORTQ[k+1].id);
+    app.querySelector('#back').onclick=()=>shortq();
+  });
+  list();
+}
+
+// ---------- Unseen sources: Section B drill ----------
+let srcDone=store.get('srcdrill',{});
+function sources(){
+  const S=SOURCES.sources;
+  const list=()=>{ const got=S.filter(x=>srcDone[x.id]).length;
+    h(`<section class="section"><div class="row xrow" style="justify-content:space-between">${MODEH('sources','Source analysis practice')}<span class="pill">${got} of ${S.length} done</span></div>
+    <p class="muted">${esc(SOURCES.intro)}</p>
+    <div class="card"><p class="eyebrow">The 3-mark checklist</p><ol style="margin:6px 0 0;padding-left:20px">${SOURCES.checklist.map(c=>`<li>${esc(c)}</li>`).join('')}</ol></div>
+    <div class="thumbs" style="margin-top:12px">${S.map(x=>{ const u=unitCls(x.unit); const d=srcDone[x.id]; return `<button class="thumb" data-id="${x.id}"><span class="th ${x.img?'':'txt'}">${x.img?`<img src="${IMG[x.img]}" alt="">`:'&ldquo;'+esc(x.text.slice(0,70))+'&hellip;&rdquo;'}</span><span class="body"><span class="eyebrow" style="color:var(--${u})">${esc(x.unit)} · ${x.img?'visual':'written'}</span><b>${esc(x.caption.split(',')[0])}</b>${d?`<span class="done">&#10003; ${d.mc}/4 quick · self-mark ${d.self??'–'}/3</span>`:''}</span></button>`}).join('')}</div>
+    <p class="hint" style="margin-top:12px">Sources are public domain, from Wikimedia Commons. Written extracts are adapted and shortened, as they would be in an exam.</p>
+    <div class="row" style="margin-top:12px"><button class="btn quiet" id="home">Home</button></div></section>`);
+    app.querySelectorAll('.thumb').forEach(b=>b.onclick=()=>one(b.dataset.id)); app.querySelector('#home').onclick=home };
+  const one=screen(function srcView(id){
+    const x=S.find(y=>y.id===id); const k=S.indexOf(x); const u=unitCls(x.unit); let mc=0, answered=0, startedAt=0, tid=null;
+    h(`<section class="section"><div class="row xrow" style="justify-content:space-between">${MODEH('sources','Source analysis practice')}<span class="pill">${esc(x.unit)} · ${x.img?'visual':'written'} source</span></div>
+    <div class="card xcard ${u}"><div class="srcgrid">${x.img?`<div><img src="${IMG[x.img]}" alt="${esc(x.caption)}"></div>`:`<blockquote class="srcq">${esc(x.text)}</blockquote>`}<div><p class="hint" style="font-size:14px;color:var(--ink)"><b>Source.</b> ${esc(x.caption)}</p><p class="hint" style="margin-top:10px">Read the caption first. It tells you the type, who made it, where and when. Then answer the four quick questions, then write.</p></div></div></div>
+    ${x.qs.map((q,i)=>`<div class="card" data-i="${i}"><p class="qtext" style="font-size:16px">${i+1}. ${esc(q.q)}</p><div class="opts">${shuffle(q.o.map((o,kk)=>({o,kk}))).map(({o,kk},n)=>`<button class="opt" data-k="${kk}"><span class="l">${'ABCD'[n]}</span><span>${esc(o)}</span></button>`).join('')}</div><div class="srcx">${esc(q.x)}</div></div>`).join('')}
+    <div class="card xcard" id="wr" hidden><span class="eyebrow">Now write</span><p class="qtext">${esc(x.write)} <span class="muted" style="font-weight:400;white-space:nowrap">(3 marks)</span></p>
+      <div class="timerrow"><span><b>2 min 15 sec</b> at 45 seconds a mark.</span><button class="btn" id="tstart">Start writing</button><span class="tdisp" id="tdisp" hidden></span></div>
+      <ul class="chk">${SOURCES.checklist.map(c=>`<li>${esc(c)}</li>`).join('')}</ul>
+      <textarea id="ta" placeholder="Start with the source: 'The source shows…' or 'The writer says…', then 'which suggests…'" style="margin-top:12px;min-height:130px" disabled></textarea>
+      <div class="row" style="justify-content:space-between;margin-top:8px"><span class="hint" id="wc"></span><button class="btn primary" id="reveal" disabled>Reveal an answer likely to get full marks</button></div>
+      <div id="answers" hidden style="margin-top:14px;display:grid;gap:12px">
+        <div class="sample full"><span class="marks full">likely 3 / 3</span><p>${esc(x.model)}</p><ol style="margin:4px 0 0;padding-left:20px;font-size:13.5px;color:var(--muted)">${x.mark.map(m=>`<li>${esc(m)}</li>`).join('')}</ol></div>
+        <div class="card" style="margin:0"><p class="eyebrow">Mark yourself</p><p class="hint">One mark for each of the three points above that your answer has.</p><div class="marksel" id="marksel">${[0,1,2,3].map(i=>`<button data-m="${i}">${i}</button>`).join('')}<span class="hint">out of 3</span></div></div>
+      </div>
+      ${pager(k,S.length,`Source ${k+1} of ${S.length}`)}
+      <div class="row" style="margin-top:12px"><button class="btn quiet" id="back">All sources</button></div></div>
+    <div class="row" id="early" style="margin-top:12px"><button class="btn quiet" id="back0">All sources</button></div></section>`);
+    const $=q=>app.querySelector(q);
+    app.querySelectorAll('.card[data-i]').forEach(box=>{ const i=+box.dataset.i; box.querySelectorAll('.opt').forEach(b=>b.onclick=()=>{ const kk=+b.dataset.k, ok=kk===x.qs[i].a; if(ok) mc++; answered++;
+      box.querySelectorAll('.opt').forEach(o=>{ o.disabled=true; if(+o.dataset.k===x.qs[i].a) o.classList.add('right'); else if(o===b) o.classList.add('wrong') }); box.querySelector('.srcx').classList.add('show'); beep(ok?'ok':'bad');
+      if(answered===x.qs.length){ $('#wr').hidden=false; $('#early').hidden=true; $('#wr').scrollIntoView({behavior:'smooth',block:'start'}) } }) });
+    const ta=$('#ta'), wc=$('#wc'); const count=()=>{ wc.textContent=`${ta.value.trim().split(/\s+/).filter(Boolean).length} words` }; ta.oninput=count;
+    const disp=$('#tdisp'), startB=$('#tstart'); const fmt=ms=>{ const t=Math.max(0,Math.ceil(ms/1000)); return `${Math.floor(t/60)}:${String(t%60).padStart(2,'0')}` };
+    startB.onclick=()=>{ if(tid) return; startedAt=Date.now(); const endAt=startedAt+135000; startB.disabled=true; ta.disabled=false; ta.focus(); $('#reveal').disabled=false; disp.hidden=false; beep('ok'); count();
+      const step=()=>{ const left=endAt-Date.now(); disp.textContent=fmt(left); disp.classList.toggle('warn',left<20000); if(left<=0){ clearInterval(tid); disp.textContent='Pens down'; ta.disabled=true; beep('win') } }; step(); tid=setInterval(step,500) };
+    $('#reveal').onclick=e=>{ if(tid) clearInterval(tid); ta.disabled=true; e.target.disabled=true; $('#answers').hidden=false; srcDone[x.id]=Object.assign({mc,self:null},srcDone[x.id]||{},{mc}); store.set('srcdrill',srcDone); $('#answers').scrollIntoView({behavior:'smooth',block:'center'}) };
+    app.querySelectorAll('#marksel button').forEach(b=>b.onclick=()=>{ const m=+b.dataset.m; app.querySelectorAll('#marksel button').forEach(y=>y.classList.toggle('on',y===b)); srcDone[x.id]=Object.assign(srcDone[x.id]||{mc},{self:m}); store.set('srcdrill',srcDone); beep(m===3?'win':'ok');
+      log({event:'sources', qid:x.id, n:mc, c:m, correct:m===3?1:0, secs:startedAt?Math.min(135,Math.round((Date.now()-startedAt)/1000)):0, unit:x.unit, type:'sources'});
+      if(S.every(y=>srcDone[y.id]&&srcDone[y.id].self!==null&&srcDone[y.id].self!==undefined)) confetti() });
+    const pv=app.querySelector('#pg-prev'), nx=app.querySelector('#pg-next'); if(pv) pv.onclick=()=>one(S[k-1].id); if(nx) nx.onclick=()=>one(S[k+1].id);
+    $('#back').onclick=()=>sources(); $('#back0').onclick=()=>sources();
+  });
+  list();
+}
+
+// ---------- what success looks like: models and worked examples ----------
+const TEEAL=[['T','Topic sentence','State your argument in answer to the question.'],['X','Explain','Elaborate on the topic sentence. What do you mean?'],['E','Evidence','At least two specific facts. Names, dates, places, a quote from a source.'],['A','Analyse','Why does the evidence matter? What caused it, what did it change, how does it support your argument?'],['L','Link','Return to the question with a judgement.']];
+const TAGNAME={T:'Topic',X:'Explain',E:'Evidence',A:'Analyse',L:'Link',EA:'Evidence + analyse'};
+const SHORT=[
+ {id:'explain',title:'Explain one factor (2 marks)',sub:'Identify it. Prove it. Link it.',body:()=>`
+  <div class="skill"><p>Two-mark questions usually pay for the identify and the link. The evidence in between is what makes the link convincing. Four-mark questions usually want this twice.</p>
+  <div class="ladder"><div><b>1 Identify</b><span>Name the one factor, cause, impact or feature the question asks for. <i>One reason was fear of Christianity.</i></span></div><div><b>2 Prove</b><span>Give specific evidence. A date, a place, a name, a number, a quote from the source. <i>Missionaries had converted several daimyo in Kyushu by the 1580s.</i></span></div><div><b>3 Link</b><span>Write a because or this meant sentence that connects the evidence to the question. <i>Because converted daimyo might put a foreign religion above the shogun, the shoguns saw it as a threat to their control.</i></span></div></div>
+  <p class="qtext" style="font-size:19px">Explain one reason the Tokugawa shoguns introduced the policy of sakoku. (2 marks)</p>
+  <div class="one">
+   <div class="sample full"><span class="marks full">likely 2 / 2</span><p>One reason was fear of Christianity. Missionaries had converted several daimyo in Kyushu by the 1580s, and the Shimabara rebellion of 1637 was led by Christian peasants. Because the shoguns believed converts might put loyalty to a foreign religion above loyalty to the shogunate, they banned Christianity and expelled the Portuguese in 1639 to remove the threat.</p><p class="why"><b>Why likely 2.</b> Identifies one reason, proves it with specific evidence and then links with a because sentence that connects the evidence to the policy.</p></div>
+  </div>
+  </div></div>`},
+ {id:'origin',title:'Identify the origin (1 mark)',sub:'Century, place, who. Primary or secondary.',body:()=>`
+  <div class="skill"><p>Markers usually want the century or the date, and the place. Medieval times is not a century. Unknown artist is still worth writing, it shows you read the caption. To find the century, add one to the hundreds digit. 1340 is in the 1300s, so the 14th century.</p>
+  <p class="qtext" style="font-size:19px">Plague victims being buried, from a chronicle written in Tournai, in present-day Belgium, by the abbot Gilles li Muisis, c. 1350. Identify the origin of this source.</p>
+  <div class="one"><div class="sample full"><span class="marks full">likely 1 / 1</span><p>It was created in the 14th century (c. 1350) in Tournai, in present-day Belgium, by the abbot Gilles li Muisis.</p></div></div>
+  <div class="tbl"><table class="tt"><thead><tr><th>Caption</th><th>Century</th><th>Where</th><th>Primary or secondary</th></tr></thead><tbody>
+   <tr><td>Colour woodblock print by Katsushika Hokusai, Edo, c. 1831.</td><td>19th</td><td>Edo (Tokyo), Japan</td><td>Primary. Made during the Tokugawa period by a Japanese artist.</td></tr>
+   <tr><td>Travel account by Ibn Jubayr, a Muslim scholar from Spain who visited the Crusader states in 1184.</td><td>12th</td><td>The Crusader states</td><td>Primary. An eyewitness account from the period.</td></tr>
+   <tr><td>Chapter on the Black Death in a Year 8 history textbook, Melbourne, 2021.</td><td>21st</td><td>Melbourne, Australia</td><td>Secondary. Written long after the event by someone who was not there.</td></tr></tbody></table></div>
+  <p class="eyebrow">Type of source is a different question</p><p>Type means the form: an illuminated manuscript, a woodblock print, a chronicle, a letter, a map, a photograph. If a question asks for the type, name the form. If it asks for the origin, give who, where and when. Reading the caption carefully would likely earn both marks.</p></div>`},
+ {id:'compare',title:'Compare: one similarity, one difference (4 marks)',sub:'Describe each one (1 + 1), then a similarity (1) and a difference (1).',body:()=>`
+  <p>Four marks, four parts. Describe the role of each thing being compared (1 mark each), then explain one similarity (1) and one difference (1). The frame below is likely to do all four in two sentences, as long as both halves of the <b>However</b> sentence actually describe each role.</p><div class="skill"><p class="frame">Both A and B <i>[shared feature]</i>, for example <i>[evidence for A]</i> and <i>[evidence for B]</i>. However, A <i>[feature]</i> whereas B <i>[feature]</i>, which meant <i>[consequence]</i>.</p>
+  <p class="qtext" style="font-size:19px">Compare the roles of knights in medieval Europe and samurai in shogunate Japan.</p>
+  <div class="one">
+   <div class="sample full"><span class="marks full">likely 4 / 4</span><p>Both knights and samurai were warriors who served a lord in return for land or an income and followed a code of conduct, for example chivalry in Europe and bushido in Japan. However, a knight’s code was tied to the Catholic Church and defending the Christian faith, whereas bushido was tied to loyalty to the daimyo and the honour of the samurai’s family, which meant a samurai who failed his lord might take his own life while a knight sought forgiveness from the Church.</p></div>
+  </div>
+  <div class="sample full" style="margin-top:12px"><span class="marks full">likely 4 / 4</span><p><b>The king and the emperor.</b> Both the medieval king and the Japanese emperor sat at the top of the social hierarchy and were seen as ruling with divine approval, for example kings were anointed by the Church and the emperor was believed to descend from the sun goddess. However, the king actually governed, raising armies and granting land to his lords, whereas after 1192 the emperor was a figurehead while the shogun held real power, which meant that in Japan the person at the top of the hierarchy and the person in control were not the same.</p></div></div>`},
+ {id:'turning',title:'Why is it a turning point? (3 marks)',sub:'Name it (1), its outcome (1), why that changed things for a long time (1).',body:()=>`
+  <div class="skill"><div class="ladder"><div><b>What happened</b><span>In 1215 the English barons forced King John to seal Magna Carta at Runnymede.</span></div><div><b>So what changed</b><span>For the first time a written document said the king himself had to obey the law and could not tax or imprison freely.</span></div><div><b>Who was affected</b><span>At first only the barons, but later kings were held to it and it became a model for limiting royal power.</span></div><div><b>For how long</b><span>Its ideas about the rule of law were still being quoted centuries later, which is why 1215 is a turning point.</span></div></div>
+  <div class="one">
+   <div class="sample full"><span class="marks full">likely 3 / 3</span><p>Magna Carta in 1215 was a turning point because it was the first time the king of England was made to accept, in writing, that he was under the law. Although John ignored it almost at once, later kings were held to its promises, and the idea that rulers could not tax or imprison without lawful judgement outlasted the medieval period, so the direction of English government changed from the king’s will towards the rule of law.</p><p class="why"><b>Why likely 3.</b> Names the event, states the outcome (the king made to accept he was under the law) and explains why that produced a lasting change. It admits the short-term failure and still shows the long-term change.</p></div>
+  </div>
+  <p class="hint">Try the ladder yourself for the sakoku edicts of the 1630s, the Peasants’ Revolt of 1381 or the arrival of Portuguese firearms in 1543.</p></div>`},
+ {id:'impacts',title:'Short-term and long-term impacts (4 marks)',sub:'Usually two marks per impact. One to identify, one for the because.',body:()=>`
+  <div class="skill"><p>Short-term happens during or just after the event. Long-term unfolds over decades. Both paragraphs below name the impact in the first sentence and explain it in the second.</p>
+  <p class="qtext" style="font-size:19px">Discuss one short-term and one long-term impact of the Meiji Restoration.</p>
+  <div class="sample full"><span class="marks full">likely 4 / 4</span><p>One short-term impact was the end of the feudal domains. In 1871 the new government abolished the domains and replaced them with prefectures governed from Tokyo, which stripped the daimyo of their power within three years of the Restoration.</p><p>One long-term impact was Japan’s rise as an industrial and military power. Because the government built railways, factories and a conscript army through the 1870s and 1880s, Japan was able to defeat Russia in 1905, something no Asian country had done to a European power in modern times.</p></div>
+  <div class="tbl"><table class="tt"><thead><tr><th>Impact</th><th>Short or long</th><th>Why</th></tr></thead><tbody>
+   <tr><td>Flagellants whipping themselves in towns</td><td>Short</td><td>A panic response during the outbreak</td></tr>
+   <tr><td>Faith in the Church weakened over decades</td><td>Long</td><td>A slow change in attitudes, not an event</td></tr>
+   <tr><td>The last shogun resigns in 1868</td><td>Short</td><td>The event of the Restoration itself</td></tr>
+   <tr><td>Japan defeats Russia in 1905</td><td>Long</td><td>Nearly 40 years after, the result of modernisation</td></tr>
+   <tr><td>A national conscript army built by 1873</td><td>Short or long</td><td>Five years on. The point is your reasoning</td></tr></tbody></table></div></div>`},
+ {id:'words',title:'Words that analyse',sub:'The vocabulary that tends to earn analysis marks, grouped by the job it does.',body:()=>wordBank(false)}
+];
+const WORDS=[
+ ['Cause and effect (the because sentence)',['because','led to','resulted in','triggered','contributed to','enabled','forced','meant that','as a consequence','in turn']],
+ ['Significance (the so what)',['significant because','turning point','lasting','far-reaching','reshaped','transformed','undermined','strengthened','marked the beginning of','the direction changed from']],
+ ['Continuity and change',['remained','continued','persisted','unchanged','whereas','however','shifted','replaced','declined','accelerated']],
+ ['Comparing and weighing',['similarly','both','whereas','in contrast','more than','rather than','mainly','to a large extent','to some extent','outweighed','the deeper cause','the trigger']],
+ ['Perspective and sources',['suggests','reveals','implies','portrays','from the perspective of','intended to','reliable because','limited because','exaggerates','omits']],
+ ['Judgement (the link sentence)',['therefore','this is why','overall','the strongest argument is','the most important factor was','historians treat this as']],
+];
+const WEAKWORDS=['very','important','a lot','many ways','good','bad','big','things'];
+function wordBank(insertable){ return `<div class="wb">${WORDS.map(([g,ws])=>`<div class="grp"><p class="eyebrow">${esc(g)}</p><div class="chips">${ws.map(w=>`<button class="chip" data-w="${esc(w)}" type="button">${esc(w)}</button>`).join('')}</div></div>`).join('')}
+  <div class="grp"><p class="eyebrow" style="color:var(--bad)">Words that assert without showing. Replace them.</p><div class="chips">${WEAKWORDS.map(w=>`<span class="chip no">${esc(w)}</span>`).join('')}</div></div>
+  <p class="hint">Because and which meant are worth more than any adjective. Mainly and to a large extent are small words that signal a judgement.${insertable?' Tap a word to drop it into your draft.':''}</p></div>` }
+function bindWordBank(ta){ app.querySelectorAll('.chip[data-w]').forEach(c=>c.onclick=()=>{ if(!ta) return; const w=c.dataset.w; const st=ta.selectionStart??ta.value.length, en=ta.selectionEnd??st; const before=ta.value.slice(0,st), after=ta.value.slice(en); const sp=before&&!/\s$/.test(before)?' ':''; ta.value=before+sp+w+(after&&!/^\s/.test(after)?' ':'')+after; const pos=(before+sp+w).length; ta.focus(); ta.setSelectionRange(pos,pos); ta.dispatchEvent(new Event('input')) }) }
+function success(open){
+  const draw=screen(function successPage(id){
+    const sk=SHORT.find(x=>x.id===id);
+    h(`<section class="section">${MODEH('write','What success looks like')}
+    <p class="muted">How the marks are won and lost. The marks shown are what a marker would most likely give against the exam criteria.</p>
+    ${sk?`<div class="card"><div class="row" style="justify-content:space-between"><h3 style="font-size:24px;color:var(--plum)">${esc(sk.title)}</h3><button class="btn quiet" id="back">All question types</button></div>${sk.body()}${pager(SHORT.indexOf(sk),SHORT.length,`${SHORT.indexOf(sk)+1} of ${SHORT.length}`)}</div>`:
+    `<div class="hub">${SHORT.map(x=>`<button class="hubcard" data-id="${x.id}"><b>${esc(x.title)}</b><span>${esc(x.sub)}</span></button>`).join('')}
+      </div>
+     <div class="row"><button class="btn quiet" id="home">Home</button></div>`}
+    </section>`);
+    app.querySelectorAll('[data-id]').forEach(b=>b.onclick=()=>draw(b.dataset.id));
+    const bk=app.querySelector('#back'); if(bk) bk.onclick=()=>draw(null);
+    if(sk){ const k=SHORT.indexOf(sk); const pv=app.querySelector('#pg-prev'), nx=app.querySelector('#pg-next'); if(pv) pv.onclick=()=>draw(SHORT[k-1].id); if(nx) nx.onclick=()=>draw(SHORT[k+1].id); }
+    const hm=app.querySelector('#home'); if(hm) hm.onclick=home;
+    
+  });
+  draw(open||null);
+}
+
+// ---------- paragraph practice ----------
+function write(){
+  const prompts=Q.filter(q=>q.type==='extended');
+  const drafts=store.get('drafts',{});
+  const pick=screen(function pickView(id){
+    const q=prompts.find(p=>p.id===id);
+    h(`<section class="section">${MODEH('write','Paragraph practice')}
+    <div class="card">
+      <span class="eyebrow">${esc(q.unit)}</span>
+      <p class="qtext">${esc(q.question)}</p>
+      <div id="pane-write">
+      <div class="scaffold"><p class="eyebrow">TEEAL scaffold</p>
+        ${TEEAL.map(([a,b,c])=>`<div class="s"><b>${a==='X'?'E':a}</b><span><b style="font-family:var(--body);color:var(--ink)">${b}.</b> ${c}</span></div>`).join('')}</div>
+      <div class="timerrow"><span><b>Exam conditions.</b> Section C is 8 marks in about 15 minutes. Start the clock, the scaffold hides, and write as you would on paper.</span><label class="hint">Minutes <select class="sel" id="tmin"><option>10</option><option>12</option><option selected>15</option><option>20</option></select></label><button class="btn" id="tstart">Start timer</button><span class="tdisp" id="tdisp" hidden></span></div>
+      <div id="timeup" class="feedback" hidden></div>
+      <textarea id="d${q.id}" placeholder="Write your paragraph here. It stays on this device." style="margin-top:12px">${esc(drafts[q.id]||'')}</textarea>
+      <div class="row" style="justify-content:space-between;margin-top:8px"><span class="hint" id="wc"></span></div>
+      <details class="wbwrap" style="margin-top:12px"><summary>Words that analyse</summary><div style="margin-top:10px">${wordBank(true)}</div></details>
+      <div class="selfcheck" style="margin-top:12px"><p class="eyebrow">Check your draft</p>
+        ${[['t','My first sentence makes an argument, not a description.'],['e','I have at least two specific pieces of evidence with a name, date or place.'],['a','Every piece of evidence is followed by a because or this meant sentence.'],['j','My last sentence returns to the question with a judgement.'],['w','I have used the key terms and checked spelling.']].map(([k,t])=>`<label><input type="checkbox" id="sc-${q.id}-${k}"><span>${t}</span></label>`).join('')}</div>
+      <div class="row" style="margin-top:12px"><button class="btn primary" id="save">Save draft</button><button class="btn quiet" id="back">All prompts</button></div>
+      </div>
+      ${pager(prompts.indexOf(q),prompts.length,`Prompt ${prompts.indexOf(q)+1} of ${prompts.length}`)}
+      
+    </div></section>`);
+    const ta=app.querySelector('textarea'), wc=app.querySelector('#wc'); bindWordBank(ta);
+    const count=()=>{ const w=ta.value.trim().split(/\s+/).filter(Boolean).length, s=ta.value.split(/[.!?]+/).filter(x=>x.trim()).length; wc.textContent=`${w} words · ${s} sentences` }; count(); ta.oninput=count;
+    app.querySelector('#save').onclick=e=>{ drafts[q.id]=ta.value; store.set('drafts',drafts); e.target.textContent='Saved'; setTimeout(()=>e.target.textContent='Save draft',1500) };
+    app.querySelector('#back').onclick=write;
+    { // exam-conditions timer
+      const card=app.querySelector('.card'), disp=app.querySelector('#tdisp'), tu=app.querySelector('#timeup'), startB=app.querySelector('#tstart'), sel=app.querySelector('#tmin'); let tid=null, endAt=0, total=0;
+      const fmt=ms=>{ const t=Math.max(0,Math.ceil(ms/1000)); return `${Math.floor(t/60)}:${String(t%60).padStart(2,'0')}` };
+      const stop=()=>{ clearInterval(tid); tid=null; card.classList.remove('exammode'); disp.hidden=true; disp.classList.remove('warn'); startB.textContent='Start timer'; sel.disabled=false; ta.readOnly=false };
+      const finish=()=>{ clearInterval(tid); tid=null; ta.readOnly=true; disp.textContent='0:00'; beep('win'); const w=ta.value.trim().split(/\s+/).filter(Boolean).length; drafts[q.id]=ta.value; store.set('drafts',drafts); log({event:'timed', qid:q.id, secs:total, n:w});
+        tu.hidden=false; tu.innerHTML=`<b>Time. Pens down.</b><span>${w} words in ${total/60} minutes. A full 8-mark answer is usually 180 to 250 words. Your draft is saved.</span><div class="row" style="margin-top:8px"><button class="btn primary" id="tmodel">Compare with the model</button><button class="btn" id="tmore">Keep writing</button></div>`;
+        tu.querySelector('#tmodel').onclick=()=>{ stop(); tu.hidden=true; app.querySelector('[data-tab=model]').click() }; tu.querySelector('#tmore').onclick=()=>{ stop(); tu.hidden=true; ta.focus() } };
+      startB.onclick=()=>{ if(tid){ stop(); return } total=+sel.value*60; endAt=Date.now()+total*1000; tu.hidden=true; card.classList.add('exammode'); disp.hidden=false; sel.disabled=true; startB.textContent='Stop'; ta.readOnly=false; ta.focus(); beep('ok'); log({event:'timed-start', qid:q.id, secs:total});
+        const step=()=>{ const left=endAt-Date.now(); disp.textContent=fmt(left); disp.classList.toggle('warn',left<120000); if(left<=0) finish() }; step(); tid=setInterval(step,500) };
+    }
+    { const k=prompts.indexOf(q); const pv=app.querySelector('#pg-prev'), nx=app.querySelector('#pg-next'); if(pv) pv.onclick=()=>pick(prompts[k-1].id); if(nx) nx.onclick=()=>pick(prompts[k+1].id); }
+    });
+  h(`<section class="section">${MODEH('write','Paragraph practice')}<p class="muted">Six Section C practice prompts, three on each unit. Each opens with the TEEAL scaffold and a timer for exam conditions. Your draft stays on this device.</p><div class="feedback info" style="margin-top:12px"><b>Your extended response will be graded out of 8 marks. You will be marked on:</b><span><ul style="margin:6px 0 0;padding-left:20px"><li>The structure of your response. You are encouraged to use a TEEAL structure with a clear contention and a logical order of arguments.</li><li>Your ability to write a clear and meaningful discussion that demonstrates relevant historical concepts, particularly significance, cause and effect, and perspectives.</li><li>The use of specific, detailed and accurate historical knowledge relevant to your chosen question.</li><li>The use of relevant examples and evidence studied in class.</li><li>Clear written expression and accurate spelling, grammar and sentence structure.</li></ul></span></div>
+  <div class="hubs"><button class="hubcard" id="succ" style="border-left-color:var(--gold-ink)"><b>What success looks like</b><span>How the marks are won and lost in Section B. Explains, compares, turning points, captions and impacts.</span></button>
+  <button class="hubcard" id="shortq" style="border-left-color:var(--teal)"><b>Short answer practice</b><span>Fifteen 1 to 4-mark questions. Write yours and then check with a model response.</span></button></div>
+  <div class="topics">${prompts.map(p=>`<button class="topic" data-id="${p.id}" style="align-items:flex-start"><span><span class="eyebrow">${esc(p.unit)}</span><br><span class="name" style="font-weight:500">${esc(p.question.replace(/^Write ONE TEEAL paragraph in response to the following\. /,'').split('. ').slice(0,2).join('. ').replace(/\.$/,''))}.</span></span><span class="meta">${drafts[p.id]?'Draft saved':''}</span></button>`).join('')}</div>
+  <div class="row"><button class="btn quiet" id="home">Home</button></div></section>`);
+  app.querySelectorAll('[data-id]').forEach(b=>b.onclick=()=>pick(+b.dataset.id));
+  app.querySelector('#home').onclick=home; app.querySelector('#succ').onclick=()=>success(); app.querySelector('#shortq').onclick=()=>shortq();
+}
+
+document.getElementById('homeBtn').onclick=()=>home();
+document.getElementById('sndBtn').onclick=()=>setSound(!soundOn); setSound(soundOn);
+document.getElementById('musBtn').onclick=()=>setMusic(!music.on);
+const ab=document.getElementById('audioBtn'), ap=document.getElementById('audioPop'); ab.onclick=e=>{ e.stopPropagation(); ap.hidden=!ap.hidden; ab.setAttribute('aria-expanded',!ap.hidden) }; ap.onclick=e=>e.stopPropagation(); document.addEventListener('click',()=>{ ap.hidden=true; ab.setAttribute('aria-expanded','false') });
+const mm=document.getElementById('musMode'); mm.value=music.mode; mm.onchange=()=>{ music.mode=mm.value; store.set('musMode',mm.value); music.current=null; if(music.on){ clearTimeout(music.timer); phrase() } };
+const mv=document.getElementById('musVol'); mv.value=music.vol; mv.oninput=()=>{ music.vol=+mv.value; store.set('musVol',music.vol); if(music.master&&actx) music.master.gain.setTargetAtTime(music.vol/100*.6, actx.currentTime, .1) };
+document.addEventListener('visibilitychange',()=>{ if(document.hidden&&music.on){ clearTimeout(music.timer) } else if(music.on){ phrase() } });
+const EXAM_AT=new Date('2026-11-06T10:45:00+11:00'); // Friday 6 November, 10:45 Melbourne time
+const CLOSED_UNTIL=new Date('2026-11-06T12:00:00+11:00'); // the page hides itself from 10:45 until midday on exam day; the holding page on the server does the rest
+function closedNow(d){ return d>=EXAM_AT && d<CLOSED_UNTIL }
+function showClosed(){ if(document.body.classList.contains('closed')) return; document.body.className='closed'; [...document.body.children].forEach(e=>{ if(!/^(STYLE|SCRIPT|SVG)$/.test(e.tagName)) e.hidden=true }); const m=document.createElement('main'); m.className='closedbox'; m.innerHTML='<p class="word">A<sup>+</sup>gorian</p><h1>Closed for the exam.</h1><p>Good luck.</p>'; document.body.appendChild(m) }
+function examBlocks(now){ const ms=EXAM_AT-now; if(ms<=0){ return now-EXAM_AT<55*60000?'<span class="exam">Exam under way. Good luck.</span>':'<span class="exam">Exam done.</span>' }
+  const tot=Math.floor(ms/1000), days=Math.floor(tot/86400), hrs=Math.floor((tot%86400)/3600), mn=Math.floor((tot%3600)/60), sc=tot%60;
+  const blk=(n,l)=>`<span class="cdb"><b>${n}</b><i>${l}</i></span>`;
+  const row=days>=1?blk(days,days===1?'day':'days')+blk(hrs,'hrs')+blk(mn,'min'):blk(hrs,'hrs')+blk(mn,'min')+blk(String(sc).padStart(2,'0'),'sec');
+  return `<span class="cd" aria-label="Time until the exam">${row}</span><span class="when">Exam <b>Fri 6 Nov, 10:45 am</b></span>` }
+function ring(d){ const rr=document.getElementById('ringRect'); if(!rr) return; const t=rr.closest('.clocktile'); const W=t.offsetWidth, H=t.offsetHeight; rr.setAttribute('x',0.5); rr.setAttribute('y',0.5); rr.setAttribute('width',Math.max(0,W-1)); rr.setAttribute('height',Math.max(0,H-1)); rr.setAttribute('rx',13.5); rr.setAttribute('ry',13.5); const start=EXAM_AT-7*86400000; const pct=Math.max(0,Math.min(100,(d-start)/(EXAM_AT-start)*100)); rr.setAttribute('stroke-dasharray',`${pct.toFixed(2)} 100`);
+  const dot=document.getElementById('ringDot'); if(dot){ if(pct<=0||pct>=100||!rr.getPointAtLength){ dot.style.display='none' } else { try{ const pt=rr.getPointAtLength(rr.getTotalLength()*pct/100); dot.setAttribute('cx',pt.x); dot.setAttribute('cy',pt.y); dot.style.display='' }catch(e){ dot.style.display='none' } } } }
+window.addEventListener('resize',()=>ring(new Date()));
+(function tick(){ const d=new Date(); if(closedNow(d)){ if(window.__booted) showClosed(); setTimeout(tick,30000); return } const el=document.getElementById('clock'); if(el){ const hh=d.getHours(), m=String(d.getMinutes()).padStart(2,'0'); const h12=((hh+11)%12)+1; el.innerHTML=`<span class="lbl">Melbourne</span><span class="time">${h12}:${m}<small>${hh<12?'am':'pm'}</small></span><span class="date">${d.toLocaleDateString('en-AU',{weekday:'long',day:'numeric',month:'long'})}</span>`; const cd=document.getElementById('cdown'); if(cd) cd.innerHTML=examBlocks(d) } ring(d); const left=EXAM_AT-d; const fast=left>0&&left<86400000; setTimeout(tick, fast?1000-(Date.now()%1000)+20:60000-(Date.now()%60000)+50) })();
+HOME_FN=home; home=screen(home); setup=screen(setup); challenge=screen(challenge); terms=screen(terms); write=screen(write); daily=screen(daily); timeline=screen(timeline); timelineGame=screen(timelineGame); sprint=screen(sprint); facts=screen(facts); shortq=screen(shortq); sources=screen(sources); startQuiz=screen(startQuiz);
+document.getElementById('backBtn').onclick=goBack;
+const ROUTES={practice:setup, challenge, terms, write, daily, timeline, sprint, facts, success, shortq, sources};
+const r=(location.hash||'').slice(1); window.__booted=true; if(closedNow(new Date())) showClosed(); else (ROUTES[r]||home)();
+})();
+</script>

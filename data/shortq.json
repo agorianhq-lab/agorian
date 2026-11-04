@@ -1,0 +1,352 @@
+[
+ {
+  "id": "s24a",
+  "unit": "Medieval Europe",
+  "topic": "Catholic Church",
+  "marks": 2,
+  "cmd": "Identify",
+  "source": {
+   "img": "src-giotto",
+   "alt": "Detail of a fresco: a huge blue-grey horned devil sits in darkness devouring a sinner, while serpents and demons seize naked figures around him.",
+   "caption": "Last Judgment (detail) by Giotto di Bondone, 1306, fresco, Cappella Scrovegni (Arena Chapel), Padua, Italy.",
+   "label": "Source A"
+  },
+  "q": "When and where was Source A created?",
+  "criteria": [
+   "1 mark for correctly identifying the when: 14th century or 1306.",
+   "1 mark for correctly identifying the where: Cappella Scrovegni (Arena Chapel) in Padua."
+  ],
+  "full": {
+   "text": "Source A was created in 1306, in the 14th century, in the Cappella Scrovegni (the Arena Chapel) in Padua, Italy.",
+   "why": "Both parts the question asks for are there: the date with its century, and the chapel and city. Everything came from the caption."
+  },
+  "part": {
+   "marks": 1,
+   "text": "It was painted in medieval times in a chapel in Padua.",
+   "why": "Padua is likely to earn the where mark. 'Medieval times' is not a date or a century, so the when mark is likely lost. The caption gave the year; copy it."
+  }
+ },
+ {
+  "id": "s24b",
+  "unit": "Medieval Europe",
+  "topic": "Catholic Church",
+  "marks": 1,
+  "cmd": "Identify",
+  "source": {
+   "img": "src-giotto",
+   "alt": "Detail of a fresco: a huge blue-grey horned devil sits in darkness devouring a sinner, while serpents and demons seize naked figures around him.",
+   "caption": "Last Judgment (detail) by Giotto di Bondone, 1306, fresco, Cappella Scrovegni (Arena Chapel), Padua, Italy.",
+   "label": "Source A"
+  },
+  "q": "Who completed Source A?",
+  "criteria": [
+   "1 mark for correctly identifying the author: Giotto di Bondone."
+  ],
+  "full": {
+   "text": "Giotto di Bondone.",
+   "why": "The name from the caption. One mark, one name."
+  },
+  "part": {
+   "marks": 0,
+   "text": "An Italian artist.",
+   "why": "The marking guide gives the mark for naming Giotto. A description of the artist is not a name, so this is likely 0, even though it is true."
+  }
+ },
+ {
+  "id": "s24c",
+  "unit": "Medieval Europe",
+  "topic": "Catholic Church",
+  "marks": 2,
+  "cmd": "Identify",
+  "source": {
+   "img": "src-giotto",
+   "alt": "Detail of a fresco: a huge blue-grey horned devil sits in darkness devouring a sinner, while serpents and demons seize naked figures around him.",
+   "caption": "Last Judgment (detail) by Giotto di Bondone, 1306, fresco, Cappella Scrovegni (Arena Chapel), Padua, Italy.",
+   "label": "Source A"
+  },
+  "q": "Identify two ways in which hell is represented in Source A.",
+  "criteria": [
+   "1 mark for each correct answer, such as: the devil devouring the damned; serpents or monsters eating people; people burning in fire; dark red colours; people chained and tortured; demons dragging people to hell."
+  ],
+  "full": {
+   "text": "Hell is shown by a huge devil in the centre devouring the damned, and by serpents and monsters eating people while demons seize and torment the naked sinners around him, all set in darkness.",
+   "why": "Two clear ways, each pointing to something that can be seen in the source."
+  },
+  "part": {
+   "marks": 1,
+   "text": "There is a huge devil in the middle eating people, and it looks really scary.",
+   "why": "The devil devouring the damned is on the marking guide's list, so likely 1. 'Scary' is a reaction, not a way hell is represented; the second mark needs a second visible detail, such as the serpents eating people or the demons seizing sinners."
+  }
+ },
+ {
+  "id": "s24d",
+  "unit": "Medieval Europe",
+  "topic": "Catholic Church",
+  "marks": 2,
+  "cmd": "Explain",
+  "source": {
+   "img": "src-giotto",
+   "alt": "Detail of a fresco: a huge blue-grey horned devil sits in darkness devouring a sinner, while serpents and demons seize naked figures around him.",
+   "caption": "Last Judgment (detail) by Giotto di Bondone, 1306, fresco, Cappella Scrovegni (Arena Chapel), Padua, Italy.",
+   "label": "Source A"
+  },
+  "q": "Explain the main purpose of Source A.",
+  "criteria": [
+   "1 mark for accurately identifying the purpose, such as: instilling fear of hell among ordinary worshippers; a means of control by the Church; religious education; a moral reminder.",
+   "1 mark for explaining it, such as: those who disobeyed the Church's teaching were told they would be sent to hell; it reinforced the Church's authority by showing its teachings visually; most people could not read, so a painting taught them; it reminded people of the consequences of their actions and encouraged moral behaviour."
+  ],
+  "full": {
+   "text": "The main purpose was to instil fear of hell in ordinary worshippers so that they followed the Church's teaching. Most people could not read, so a painting on the chapel wall showed them, every time they attended, what the Church said would happen to those who disobeyed it, which reinforced the Church's authority and encouraged moral behaviour.",
+   "why": "A purpose, then an explanation of how the painting achieved it, with the illiteracy point as well."
+  },
+  "part": {
+   "marks": 1,
+   "text": "Its purpose was to scare people about hell.",
+   "why": "Instilling fear of hell is a purpose on the marking guide's list, so likely 1. There is no explanation of why the Church wanted people frightened or what that achieved, which is the second mark."
+  }
+ },
+ {
+  "id": "s24e",
+  "unit": "Shogunate Japan",
+  "topic": "Feudalism and samurai",
+  "marks": 1,
+  "cmd": "Identify",
+  "source": {
+   "text": "Bushido is nothing but 'charging forward, without hesitation, unto death'. A warrior in this frame of mind is hard to kill even if twenty or thirty men attack him. In an ordinary frame of mind you cannot achieve anything great; you must 'throw yourself into it' as if there were no turning back.",
+   "caption": "Adapted from Hagakure (The Book of the Samurai) by Yamamoto Tsunetomo, a former samurai, written c. 1709–1716.",
+   "label": "Source B"
+  },
+  "q": "Who is Source B written for?",
+  "criteria": [
+   "1 mark for correctly identifying samurai, or the warrior class."
+  ],
+  "full": {
+   "text": "Samurai, the warrior class.",
+   "why": "The audience the question is looking for. The clue is in the caption and in the language about death and charging forward."
+  },
+  "part": {
+   "marks": 0,
+   "text": "Japanese people.",
+   "why": "Too broad. The guide gives the mark for samurai or the warrior class, so a whole nation is likely 0."
+  }
+ },
+ {
+  "id": "s24f",
+  "unit": "Shogunate Japan",
+  "topic": "Feudalism and samurai",
+  "marks": 3,
+  "cmd": "Explain",
+  "source": {
+   "text": "Bushido is nothing but 'charging forward, without hesitation, unto death'. A warrior in this frame of mind is hard to kill even if twenty or thirty men attack him. In an ordinary frame of mind you cannot achieve anything great; you must 'throw yourself into it' as if there were no turning back.",
+   "caption": "Adapted from Hagakure (The Book of the Samurai) by Yamamoto Tsunetomo, a former samurai, written c. 1709–1716.",
+   "label": "Source B"
+  },
+  "q": "Using evidence from Source B and your own knowledge, explain what 'Bushido' is.",
+  "criteria": [
+   "1 mark for identifying it as a strict code of conduct under which the samurai lived.",
+   "1 mark for explaining that the code was based on honour, loyalty, respect and discipline.",
+   "1 mark for incorporating evidence from the source, such as 'charging forward, without hesitation, unto death' or 'throw yourself into it'."
+  ],
+  "full": {
+   "text": "Bushido was the strict code of conduct that samurai lived by. It was based on honour, loyalty to one's lord, respect and discipline, and it demanded courage even at the cost of life. Source B shows this when it tells the warrior to be 'charging forward, without hesitation, unto death', which captures the loyalty and acceptance of death the code expected.",
+   "why": "Three marks, three parts of the answer: the code identified, its values explained, and a quotation from the source tied to those values."
+  },
+  "part": {
+   "marks": 2,
+   "text": "Bushido was the code of the samurai. It was about honour and loyalty and being brave.",
+   "why": "Identifies the code and names its values, so likely 2. Nothing from Source B is used, so the evidence mark is likely lost. The question said 'using evidence from Source B'; a quotation was required."
+  }
+ },
+ {
+  "id": "s24g",
+  "unit": "Shogunate Japan",
+  "topic": "Geography and development",
+  "marks": 4,
+  "cmd": "Explain",
+  "q": "Explain two ways the geographical features of Japan influenced its development.",
+  "criteria": [
+   "1 mark each for identifying two geographical features, such as high mountains, narrow valleys, limited agricultural land mainly along the coast, or the many islands of the archipelago.",
+   "1 mark each for explaining two corresponding impacts, such as difficult travel, or the development of many local clans with distinct languages, traditions and cultures."
+  ],
+  "full": {
+   "text": "One feature was Japan's high mountains and narrow valleys, which cover most of the land. Because travel between regions was so difficult, communities grew up cut off from one another and many local clans developed, each with its own dialect, traditions and loyalties.\nA second feature was that Japan is an archipelago of islands, separated from the Asian mainland by sea. Because the sea kept outsiders at a distance, Japan was rarely invaded and developed a distinct culture of its own, even though it borrowed ideas such as Buddhism and writing from China.",
+   "why": "Two features, each followed by a because sentence giving a specific impact. Two marks for each."
+  },
+  "part": {
+   "marks": 2,
+   "text": "Japan has lots of mountains and is made up of many islands. This affected how Japan developed.",
+   "why": "Two features identified, so likely 2. 'This affected how Japan developed' explains nothing, so the two impact marks are likely lost."
+  }
+ },
+ {
+  "id": "s24h",
+  "unit": "Shogunate Japan",
+  "topic": "Feudalism and samurai",
+  "marks": 2,
+  "cmd": "Describe",
+  "q": "Describe how the role of the emperor changed under Shogun rule.",
+  "criteria": [
+   "1 mark for describing the emperor's role before shogun rule.",
+   "1 mark for describing what it was during shogun rule. For full marks the answer should show the change."
+  ],
+  "full": {
+   "text": "Before shogun rule the emperor was the ruler of Japan, head of the imperial court with political as well as religious authority. Under the shoguns, from 1192, the emperor kept his title and religious importance but became a figurehead in Kyoto, while the shogun held the real political and military power.",
+   "why": "Before and during, in that order, so the change is visible. Both halves the question asks for."
+  },
+  "part": {
+   "marks": 1,
+   "text": "Under the shoguns the emperor had no real power.",
+   "why": "Describes the role during shogun rule, so likely 1. Nothing about the role before, so the change the question asks about is never shown."
+  }
+ },
+ {
+  "id": "s24i",
+  "unit": "Shogunate Japan",
+  "topic": "Tokugawa Shogunate",
+  "marks": 4,
+  "cmd": "Identify and explain",
+  "q": "Identify two restrictions placed on the warrior class during the Tokugawa Shogunate. Explain one perspective members of the warrior class had in response to this.",
+  "criteria": [
+   "1 mark each for identifying two specific restrictions: sankin kotai, which required daimyo to spend alternate years in Edo; the ban on private wars between daimyo; being forbidden from commerce or manual labour; restrictions on when and where swords could be carried openly; regulations on marriage and personal behaviour.",
+   "1 mark for identifying one perspective, and 1 mark for explaining it. For example: the restrictions eroded their traditional status and autonomy; they felt their role as warriors was being constrained and their prestige declining; they felt their lives were increasingly controlled by the state."
+  ],
+  "full": {
+   "text": "One restriction was sankin kotai, which required daimyo to spend alternate years in Edo and leave their families there. Another was that samurai were forbidden from engaging in commerce or manual labour.\nMany samurai felt that these restrictions eroded their traditional status and independence. They had been warriors with a role of their own; now their lives were controlled by the state and their prestige declined, so they resented the shogunate's control even while they obeyed it.",
+   "why": "Two specific restrictions, then a perspective named and explained in terms of how the warrior class saw its own position."
+  },
+  "part": {
+   "marks": 2,
+   "text": "One restriction was sankin kotai, where daimyo had to spend every second year in Edo. Another was that samurai were not allowed to be merchants.",
+   "why": "Two specific restrictions identified, so likely 2. The second half of the question, the perspective, is not attempted at all, so those 2 marks are lost. A question with two parts needs both."
+  }
+ },
+ {
+  "id": "s24j",
+  "unit": "Medieval Europe",
+  "topic": "Feudalism and hierarchy",
+  "marks": 3,
+  "cmd": "Discuss",
+  "q": "Discuss one way the feudal system maintained order in medieval Europe.",
+  "criteria": [
+   "1 mark for identifying a method of order or control.",
+   "1 mark for details describing the selected method.",
+   "1 mark for conveying how this maintained order."
+  ],
+  "full": {
+   "text": "One way was the oath of loyalty between lord and vassal. A vassal knelt and swore fealty, promising loyalty and military service in return for a fief of land, and breaking the oath meant losing the land. This maintained order because everyone from knight to king was bound into the same chain of promises, so a lord had both the loyalty and the soldiers to keep the peace on his lands and to answer the king's call.",
+   "why": "Method, details, and how it kept order, in three sentences that match the three marks."
+  },
+  "part": {
+   "marks": 1,
+   "text": "One way was the oath of loyalty that vassals swore to their lords.",
+   "why": "Names a method, so likely 1. There are no details of what the oath involved (land in return for loyalty and military service) and nothing on how it kept order, so the other two marks are likely lost."
+  }
+ },
+ {
+  "id": "s23a",
+  "unit": "Medieval Europe",
+  "topic": "Feudalism and hierarchy",
+  "marks": 2,
+  "cmd": "Define",
+  "q": "Define the term feudalism.",
+  "criteria": [
+   "2 marks for a full definition: a social system based on rights and obligations relating to land ownership, or any other acceptable definition.",
+   "1 mark or no marks if the definition is vague, incomplete or inaccurate."
+  ],
+  "full": {
+   "text": "Feudalism was the social and political system of medieval Europe (and Japan) in which land was held in return for service. A lord granted land to a vassal, who owed loyalty and military service, while peasants worked the land in return for protection, so rights and obligations were tied to land.",
+   "why": "Names the exchange at the heart of the system, land for service, and the obligations that went with it. That is a full definition."
+  },
+  "part": {
+   "marks": 1,
+   "text": "Feudalism was the system where the king was at the top and peasants at the bottom.",
+   "why": "Describes the hierarchy but not the system, so likely 1 under the guide's 'vague or incomplete' line. Nothing about land, loyalty or service."
+  }
+ },
+ {
+  "id": "s23b",
+  "unit": "Both units",
+  "topic": "Feudalism and hierarchy",
+  "marks": 4,
+  "cmd": "Explain",
+  "q": "Explain one advantage and one disadvantage of the feudal system in Europe and/or Japan.",
+  "criteria": [
+   "2 marks for one identified and explained advantage, such as: maintained control and social stability; people knew what was expected of them; the wealthy or warrior classes offered land and protection in return for labour.",
+   "2 marks for one identified and explained disadvantage, such as: political and military fragmentation as local lords gained military power; lack of social mobility; lack of freedoms and poor living conditions for those lower in the hierarchy.",
+   "1 mark or no marks for an answer that is vague, incomplete or inaccurate."
+  ],
+  "full": {
+   "text": "One advantage was stability. Each person knew their obligations and received protection in return for service, so a lord's knights defended the peasants who fed them, which kept local order without a paid army.\nOne disadvantage was the lack of freedom and social mobility. A serf was bound to the lord's land, owed labour and could not leave or marry without permission, so most people lived poor lives with no way to improve their position.",
+   "why": "An advantage and a disadvantage, each identified in the first sentence and explained in the second. Two marks each."
+  },
+  "part": {
+   "marks": 2,
+   "text": "An advantage was that it kept order. A disadvantage was that peasants had hard lives.",
+   "why": "Both are identified but neither is explained. Under the guide's 'vague or incomplete' line each is likely to get 1 at most, so likely 2 in total and possibly less."
+  }
+ },
+ {
+  "id": "s23c",
+  "unit": "Skills and concepts",
+  "topic": "Historical concepts",
+  "marks": 2,
+  "cmd": "Define",
+  "q": "Define the key historical term perspectives.",
+  "criteria": [
+   "2 marks for a full definition: the position from which people see and understand events in history; people have different views about an event depending on their age, gender, social position and beliefs.",
+   "1 mark or no marks for an incomplete, vague or inaccurate answer."
+  ],
+  "full": {
+   "text": "Perspectives are the different points of view from which people saw and understood events in the past. People's views depended on their position, such as their age, gender, social class, religion and beliefs, so a lord and a peasant could see the same event very differently.",
+   "why": "Both halves of the definition: the point of view, and what shaped it."
+  },
+  "part": {
+   "marks": 1,
+   "text": "Perspectives means people's opinions.",
+   "why": "Roughly right but vague, so likely 1 at most. It does not say that perspectives depend on a person's position in society."
+  }
+ },
+ {
+  "id": "s23d",
+  "unit": "Shogunate Japan",
+  "topic": "Meiji Restoration",
+  "marks": 4,
+  "cmd": "Outline",
+  "q": "Using an example that you studied this semester, outline two different perspectives people had about a specific event from either medieval Europe or Shogun Japan.",
+  "criteria": [
+   "2 marks for identifying one perspective on one particular event and explaining it.",
+   "2 marks for identifying another perspective and explaining it.",
+   "Examples students might use include reactions to the Black Death, peasants' demands for wages against lords' demands for labour, Japanese and American views of Japan's isolation, or views of the reforms after the Meiji Restoration."
+  ],
+  "full": {
+   "text": "Event: the Meiji reforms of the 1870s. From the perspective of many samurai, the reforms were a loss. Conscription in 1873 and the sword ban of 1876 took away the role and status that defined them, so some saw the new government as a betrayal and rebelled in 1877.\nFrom the perspective of many commoners, the same reforms opened doors. The end of the class system and compulsory schooling meant a farmer's son could become a soldier, a teacher or a businessman, so they saw the reforms as opportunity.",
+   "why": "One event, two groups, and for each group what they believed and why. That is a perspective identified and explained, twice, as the question asks."
+  },
+  "part": {
+   "marks": 2,
+   "text": "Samurai didn't like the Meiji reforms. Peasants did like them.",
+   "why": "Two perspectives on one event are identified, so likely 1 each. Neither says what the group believed or why, so the two explanation marks are likely lost."
+  }
+ },
+ {
+  "id": "s23e",
+  "unit": "Shogunate Japan",
+  "topic": "Meiji Restoration",
+  "marks": 4,
+  "cmd": "Describe",
+  "q": "Describe two changes implemented in Japan following the Meiji Restoration.",
+  "criteria": [
+   "2 marks for each correctly identified and described change, such as: political change, with power transferred from the shoguns to the emperor and a new constitution and elections; military change, with conscription for all men and Western weapons and technology; rapid industrialisation, with shipyards, coal mines and railways.",
+   "1 mark only if a change is identified and no further details are provided."
+  ],
+  "full": {
+   "text": "One change was political. Power was transferred from the shogun to the emperor, the old domains were abolished, and a constitution in 1889 created an elected assembly.\nA second change was military. From 1873 conscription meant all men could be called up, replacing the samurai, and the army and navy were rebuilt with Western weapons and training.",
+   "why": "Two changes, each identified and then described with specific details. Two marks each."
+  },
+  "part": {
+   "marks": 2,
+   "text": "Japan got a new government and a new army.",
+   "why": "Two changes are identified, so likely 1 each. The guide gives 1 mark only when a change is identified with no further details, and there are none here."
+  }
+ }
+]

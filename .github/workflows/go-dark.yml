@@ -1,0 +1,40 @@
+name: go dark for the exam
+on:
+  schedule:
+    - cron: '45 23 5 11 *'      # Friday 6 November 2026, 10:45 Melbourne time (23:45 UTC Thursday)
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'dark = replace the site with the holding page; reopen = rebuild and restore the site'
+        required: true
+        default: 'dark'
+        type: choice
+        options: [dark, reopen]
+permissions:
+  contents: write
+jobs:
+  switch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Apply
+        run: |
+          MODE="${{ github.event.inputs.mode || 'dark' }}"
+          if [ "$MODE" = "dark" ]; then
+            cp tools/closed.html docs/index.html
+            MSG="Closed for the exam"
+          else
+            python3 build.py
+            MSG="Reopened after the exam"
+          fi
+          git config user.name "Agorian"
+          git config user.email "agorian@example.invalid"
+          git add docs
+          git diff --cached --quiet && echo "nothing to change" && exit 0
+          git commit -m "$MSG"
+          git push
