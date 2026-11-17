@@ -8,7 +8,9 @@
   "bank": "data/civics/bank.json",
   "sources": "data/civics/scenarios.json",
   "mythfact": "data/civics/mythfact.json",
-  "play": "data/civics/play.json"
+  "play": "data/civics/play.json",
+  "errors": "data/civics/errors.json",
+  "explain": "data/civics/explain.json"
  },
  "units": [
   {
@@ -131,7 +133,7 @@
    "id": "challenge",
    "go": "challenge",
    "title": "Challenge",
-   "blurb": "20 questions from the whole unit against a 10 minute clock.",
+   "blurb": "20 questions from the whole unit against a 10 minute clock. On your own, or with a class code so everyone gets the same 20.",
    "img": "ph-challenge",
    "imgPos": "center 55%"
   },
@@ -139,7 +141,7 @@
    "id": "terms",
    "go": "terms",
    "title": "Key terms",
-   "blurb": "Flashcards to flip, plus a ten-definition sprint against the clock.",
+   "blurb": "Flashcards to flip, a ten-definition sprint against the clock, and Explain it in 25 words.",
    "img": "ph-terms",
    "imgPos": "center top"
   },
@@ -148,13 +150,14 @@
    "go": "play",
    "title": "Interactives",
    "img": "ph-play",
-   "blurb": "Sort real responsibilities, pass a referendum, form a government, fix a law. Six things to try.",
+   "blurb": "Sort real responsibilities, pass a referendum, form a government, fix a law, spot the errors. Seven things to try.",
    "imgPos": "center 50%"
   }
  ],
  "challenge": {
   "count": 20,
-  "secs": 600
+  "secs": 600,
+  "classCode": true
  },
  "tile": "mythfact",
  "clock": false,
@@ -169,5 +172,23 @@
  ],
  "resultsImg": {},
  "credits": "Raphael, The School of Athens (1511), Wikimedia Commons, public domain. Tile photographs via Wikimedia Commons: Parliament House, Canberra, by Kgbo (CC BY-SA 4.0); polling place at Mullumbimby Public School, 2025, by Aliceinthealice (CC0); High Court of Australia by Nick-D (CC BY-SA 4.0); ballot paper for the 2016 ACT election by Nick-D (CC BY-SA 3.0); Swanston Street, Melbourne, by Philip Mallis (CC BY-SA 2.0); House of Representatives chamber by JJ Harrison (CC BY-SA 3.0); Commonwealth of Australia Constitution Act, National Archives of Australia (public domain); election-day barbecue, Australian Electoral Commission (CC BY 3.0 AU).",
- "tiles": "photo"
+ "tiles": "photo",
+ "badges": true,
+ "links": {
+  "title": "Trusted sites",
+  "intro": "Official and well-established sources on how Australia's democracy works. Use them to check a fact or read further. They open in a new tab.",
+  "items": [
+   {"name": "Parliamentary Education Office", "url": "https://peo.gov.au", "by": "Parliament of Australia", "blurb": "How Parliament, elections and the Constitution work, explained for students. The best first stop."},
+   {"name": "AEC for schools", "url": "https://education.aec.gov.au", "by": "Australian Electoral Commission", "blurb": "How voting and elections work in Australia, from the people who run them."},
+   {"name": "Museum of Australian Democracy", "url": "https://www.moadoph.gov.au", "by": "Old Parliament House, Canberra", "blurb": "Stories, objects and timelines from Australia's democratic history."},
+   {"name": "Parliament of Australia: education", "url": "https://www.aph.gov.au/About_Parliament/Education_Resources", "by": "Parliament of Australia", "blurb": "Fact sheets on the House, the Senate and how a bill becomes law."},
+   {"name": "Parliament of Victoria: teach and learn", "url": "https://www.parliament.vic.gov.au/teach-and-learn", "by": "Parliament of Victoria", "blurb": "How the Victorian Parliament works, with resources written for students."},
+   {"name": "Passport to Democracy", "url": "https://passport.vec.vic.gov.au", "by": "Victorian Electoral Commission", "blurb": "Taking action on an issue you care about: a step-by-step program for young people."},
+   {"name": "High Court of Australia", "url": "https://www.hcourt.gov.au", "by": "High Court of Australia", "blurb": "Australia's highest court: its role, its judges and how cases reach it."},
+   {"name": "National Archives: civics and citizenship", "url": "https://www.naa.gov.au/students-and-teachers/classroom-resources/civics-and-citizenship", "by": "National Archives of Australia", "blurb": "Original documents, including the Constitution, with classroom resources."},
+   {"name": "Rule of Law Education Centre", "url": "https://www.ruleoflaw.org.au/education", "by": "Rule of Law Education Centre", "blurb": "Plain-language explanations of the rule of law, the courts and the separation of powers."},
+   {"name": "Australian Human Rights Commission", "url": "https://humanrights.gov.au", "by": "Australian Human Rights Commission", "blurb": "Australia's national human rights body. Rights, responsibilities and fairness explained."},
+   {"name": "Youth Law Australia", "url": "https://yla.org.au", "by": "Youth Law Australia", "blurb": "Free, plain-English legal information for people under 25."}
+  ]
+ }
 }

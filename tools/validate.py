@@ -3,9 +3,9 @@
 
     python3 tools/validate.py          # exit 1 and list every problem if anything is wrong
 
-Checks every course in courses/: its bank (questions and terms), short answers, sources or scenarios and
-Myth or fact statements, and that every image key referenced by the data, the page or the timeline exists
-in img/. build.py runs this first and refuses to build on errors, and the GitHub workflow runs it on every push.
+Checks every course in courses/: its bank (questions and terms), short answers, sources or scenarios,
+Myth or fact statements, interactives, Spot the error passages, Explain it prompts and trusted links, and
+that every image key referenced by the data, the page or the timeline exists in img/. build.py runs this first and refuses to build on errors, and the GitHub workflow runs it on every push.
 """
 import json, os, re, sys, glob
 
@@ -174,8 +174,67 @@ def check_play(rel):
                 if not nonempty(col.get('label')) or not isinstance(col.get('options'), list) or len(col['options']) < 2: err(w, f"column {col.get('id')!r} needs a label and at least two options")
                 for o in col.get('options', []):
                     if not nonempty(o.get('t')) or not nonempty(o.get('why')): err(w, f"option {o.get('t')!r} needs t and why")
-        elif k not in ('referendum', 'government'): err(w, f'unknown kind {k!r}')
+        elif k not in ('referendum', 'government', 'spot'): err(w, f'unknown kind {k!r}')
     print(f'{rel}: {len(items)} interactives')
+
+def check_errors(rel):
+    # Spot the error: passages with two or three planted mistakes, each carrying its correction and the reason
+    d = load(rel)
+    if d is None: return
+    items = d.get('items')
+    if not nonempty(d.get('intro')) or not isinstance(items, list) or not items: err(rel, 'needs an "intro" and a non-empty "items" list'); return
+    ids = [p.get('id') for p in items]
+    for i in {x for x in ids if ids.count(x) > 1}: err(rel, f'duplicate id {i}')
+    for p in items:
+        w = f"{rel} {p.get('id', '?')}"
+        if not re.fullmatch(r'[a-z0-9-]+', str(p.get('id'))): err(w, 'id must be lower-case letters, digits and hyphens')
+        if p.get('unit') not in UNITS: err(w, f"unit {p.get('unit')!r} not in {sorted(UNITS)}")
+        for k in ('topic', 'title'):
+            if not nonempty(p.get(k)): err(w, f'{k} is blank')
+        if p.get('setup') is not None and not nonempty(p.get('setup')): err(w, 'setup must be text or left out')
+        segs = p.get('segments')
+        if not isinstance(segs, list) or len(segs) < 4: err(w, 'needs at least four segments'); continue
+        planted = 0
+        for i, s in enumerate(segs):
+            if not nonempty(s.get('t')): err(w, f'segment {i}: t is blank')
+            if 'fix' in s or 'why' in s:
+                planted += 1
+                if not nonempty(s.get('fix')) or not nonempty(s.get('why')): err(w, f'segment {i}: a planted error needs both fix and why')
+        if not 2 <= planted <= 3: err(w, f'{planted} planted errors; the intro promises two or three')
+    print(f'{rel}: {len(items)} passages, {sum(1 for p in items for s in p.get("segments", []) if "fix" in s)} planted errors')
+
+def check_explain(rel):
+    # Explain it in 25 words: a prompt, the three ideas a complete answer needs, and a model of about 25 words
+    d = load(rel)
+    if d is None: return
+    items = d.get('items')
+    if not nonempty(d.get('intro')) or not isinstance(items, list) or not items: err(rel, 'needs an "intro" and a non-empty "items" list'); return
+    ids = [p.get('id') for p in items]
+    for i in {x for x in ids if ids.count(x) > 1}: err(rel, f'duplicate id {i}')
+    for p in items:
+        w = f"{rel} {p.get('id', '?')}"
+        if not re.fullmatch(r'[a-z0-9-]+', str(p.get('id'))): err(w, 'id must be lower-case letters, digits and hyphens')
+        if p.get('unit') not in UNITS: err(w, f"unit {p.get('unit')!r} not in {sorted(UNITS)}")
+        for k in ('topic', 'q', 'model'):
+            if not nonempty(p.get(k)): err(w, f'{k} is blank')
+        must = p.get('must')
+        if not isinstance(must, list) or len(must) != 3 or not all(nonempty(m) for m in must): err(w, 'must needs exactly three non-empty ideas')
+        n = len(str(p.get('model', '')).split())
+        if n > 30: err(w, f'model is {n} words; keep it to about 25')
+    print(f'{rel}: {len(items)} prompts')
+
+def check_links(c, rel):
+    L = c.get('links')
+    if L is None: return
+    items = L.get('items')
+    if not nonempty(L.get('title')) or not isinstance(items, list) or not items: err(rel, 'links needs a title and a non-empty items list'); return
+    urls = [x.get('url') for x in items]
+    for u in {x for x in urls if urls.count(x) > 1}: err(rel, f'links: duplicate url {u}')
+    for x in items:
+        w = f"{rel} link {x.get('name', '?')!r}"
+        for k in ('name', 'by', 'blurb'):
+            if not nonempty(x.get(k)): err(w, f'{k} is blank')
+        if not re.fullmatch(r'https://[a-z0-9.-]+(/[^\s"<>]*)?', str(x.get('url'))): err(w, 'url must be https and contain no spaces or quotes')
 
 def check_course(path, imgs):
     global UNITS
@@ -199,7 +258,16 @@ def check_course(path, imgs):
     if d.get('sources'): check_sources(imgs, d['sources'])
     if d.get('mythfact'): check_mythfact(d['mythfact'])
     if d.get('play'): check_play(d['play'])
+    if d.get('errors'): check_errors(d['errors'])
+    if d.get('explain'): check_explain(d['explain'])
+    check_links(c, rel)
+    for k in ('badges', 'board'):
+        if k in c and not isinstance(c[k], bool): err(rel, f'{k} must be true or false')
+    if 'classCode' in (c.get('challenge') or {}) and not isinstance(c['challenge']['classCode'], bool): err(rel, 'challenge.classCode must be true or false')
     if c.get('tile') == 'mythfact' and not d.get('mythfact'): err(rel, 'tile is mythfact but data.mythfact is not set')
+    if d.get('play'):
+        p = load(d['play']) or {}
+        if any(x.get('kind') == 'spot' for x in p.get('items', [])) and not d.get('errors'): err(rel, 'play.json has a spot interactive but data.errors is not set')
 
 def check_images(imgs):
     page = open(os.path.join(ROOT, 'src', 'index.html'), encoding='utf-8').read()

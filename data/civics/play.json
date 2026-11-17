@@ -1,5 +1,5 @@
 {
- "intro": "Six things to try. None of them is a test question; they are the ideas behind the questions, made so you can push on them.",
+ "intro": "Seven things to try. None of them is a test question; they are the ideas behind the questions, made so you can push on them.",
  "items": [
   {
    "id": "level",
@@ -594,6 +594,7 @@
      ]
     }
    ]
-  }
- ]
+  },
+  {"id": "spot", "kind": "spot", "title": "Spot the error", "blurb": "Thirteen short answers written by an imaginary student, each with two or three mistakes planted in it. Read like a marker and find them all."}
+]
 }

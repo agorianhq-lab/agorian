@@ -16,6 +16,9 @@ One static page, no framework, no backend, no accounts. Everything a student doe
 | `data/civics/bank.json` | **Canonical** Civics question bank (multiple choice and word-bank gaps) and glossary terms, each term tagged with its unit. |
 | `data/civics/scenarios.json` | Civics scenario practice: seven fictional scenarios with four quick questions each. Same shape as `sources.json` without the timed write. |
 | `data/civics/mythfact.json` | The Myth or fact header tile: `[statement, true or false, why]`, one an hour. |
+| `data/civics/play.json` | The interactives: sorts, the referendum and government simulators, the law builder, and the `spot` entry that opens Spot the error. |
+| `data/civics/errors.json` | Spot the error: thirteen passages written as a student's answer, each segment either correct or a planted mistake with its `fix` and `why`. |
+| `data/civics/explain.json` | Explain it in 25 words: a prompt, the three ideas (`must`) a complete answer needs, and a model of about 25 words. Opened from the Key terms page. |
 | `tools/chrono.py` | Timeline events, periods and links, and the generator that renders them. |
 | `tools/validate.py` | Content checks (see below). |
 | `build.py` | Validates, then assembles `docs/` from the files above. |
@@ -37,6 +40,8 @@ python3 build.py --inline [--course X] # one self-contained file (images and fon
 
 Adding a course: write `courses/<id>.json` (copy `civics.json`), point it at its data files, and build with `--course <id>`. Units take one of three colour slots (`eu`, `jp`, `sk`); a course can recolour the slots under `colours`.
 
+Per-course switches in the course file: `badges` (the badge row on the home page and the badge toasts), `board` (the Clear your mistakes board: a question a viewer gets wrong stays on it until answered correctly twice in a row), `challenge.classCode` (the Challenge opens with a lobby where a class code typed from the board gives everyone the same 20 questions in the same order; results carry the code and the attempt number), and `links` (the Trusted sites section, each entry `name`, `url`, `by`, `blurb`). History has all four off so its page is unchanged.
+
 Branches. Work on `staging`. **Anything pushed to `main` goes live within about two minutes**, including after the site has been unpublished in the Pages settings, because a commit to the publishing source republishes it. Push to `main` only to publish.
 
 A GitHub workflow (`.github/workflows/validate.yml`) runs the validator and the build on every push and fails if `docs/` is stale, so always build before committing.
@@ -49,6 +54,10 @@ A GitHub workflow (`.github/workflows/validate.yml`) runs the validator and the 
 - `bank.json` terms: term and definition present, terms unique.
 - `shortq.json` and `sources.json` (and `scenarios.json`): ids unique, required fields present, answer indices in range, marks in range, criteria and mark points non-empty. The timed write is optional; if a source has one it must be complete.
 - `mythfact.json`: a list of `[statement, true or false, why]`, statements unique and under 120 characters.
+- `play.json`: known kinds only (`sort`, `referendum`, `government`, `law`, `spot`); a `spot` entry needs `data.errors`.
+- `errors.json`: ids unique, unit known, at least four segments, every planted error has a `fix` and a `why`, two or three planted errors per passage.
+- `explain.json`: ids unique, unit known, exactly three `must` ideas, model at most 30 words.
+- Course `links`: title, non-empty items with name, by and blurb, https urls, no duplicates. `badges`, `board` and `challenge.classCode` must be booleans if present.
 - Each course file names its units; every question, source and tagged term must use one of them.
 - Images: every key the page, the timeline bands or the data refer to exists as `img/<key>.jpg` or `img/<course>/<key>.jpg`. Unused files are listed, not failed.
 

@@ -32,6 +32,8 @@ b['shortq']=json.load(open(C['data']['shortq'],encoding='utf-8')) if C['data'].g
 b['sources']=json.load(open(C['data']['sources'],encoding='utf-8')) if C['data'].get('sources') else {'sources':[],'checklist':[]}
 b['mythfact']=json.load(open(C['data']['mythfact'],encoding='utf-8')) if C['data'].get('mythfact') else []
 b['play']=json.load(open(C['data']['play'],encoding='utf-8')) if C['data'].get('play') else {'items':[]}
+b['errors']=json.load(open(C['data']['errors'],encoding='utf-8')) if C['data'].get('errors') else {'items':[]}
+b['explain']=json.load(open(C['data']['explain'],encoding='utf-8')) if C['data'].get('explain') else {'items':[]}
 esc=lambda j: json.dumps(j,ensure_ascii=False,separators=(',',':')).replace('</','<\\/')
 js=esc(b)
 out_dir='preview' if inline else C['out']
