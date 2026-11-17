@@ -1,0 +1,380 @@
+{
+ "intro": "Seven scenarios you have not seen, each with four quick questions. Read the scenario twice, answer, then read every explanation.",
+ "checklistTitle": "Before you answer",
+ "checklist": [
+  "Read the scenario twice. Note who is deciding and who is affected.",
+  "Decide which level of government, branch or principle is involved before you look at the options.",
+  "Match a detail in the scenario to the idea it shows. Every correct answer points to a specific detail.",
+  "Rule out options that are true in general but not shown in this scenario."
+ ],
+ "readHint": "Read the scenario twice before you answer. The explanation appears after each question.",
+ "sourceLabel": "",
+ "kind": "scenario",
+ "footnote": "",
+ "sources": [
+  {
+   "id": "tarvin",
+   "unit": "Democracy and government",
+   "caption": "Scenario 1. Is Tarvin a democracy?",
+   "text": "Tarvin holds an election every three years. At the last election eight parties stood, and an independent electoral commission counted the votes. Newspapers often criticise the government, and last year a court ruled against the government over a new mining law; the government accepted the ruling and rewrote the law. In March, however, Tarvin passed a law requiring a permit for any public protest. Since then, permits have been refused to every group that opposes the government, while groups that support it have been approved.",
+   "qs": [
+    {
+     "q": "Which detail is the strongest evidence that the rule of law operates in Tarvin?",
+     "o": [
+      "The government accepted a court ruling against it and rewrote the law",
+      "Eight parties stood at the last election",
+      "Newspapers often criticise the government",
+      "Elections are held every three years"
+     ],
+     "a": 0,
+     "x": "The rule of law means everyone, including the government, must follow the law. Accepting a court's ruling against itself is the clearest sign of that. The other details show other democratic features."
+    },
+    {
+     "q": "Which feature of democracy is most directly limited by the way protest permits are being decided?",
+     "o": [
+      "Citizens' freedom to participate and express disagreement",
+      "Regular elections",
+      "An independent electoral commission",
+      "The separation of powers"
+     ],
+     "a": 0,
+     "x": "Protest is a form of participation and expression. Refusing permits only to opponents limits that freedom for one side of politics."
+    },
+    {
+     "q": "Which conclusion about Tarvin is best supported by the whole scenario?",
+     "o": [
+      "Tarvin has many democratic features, but its treatment of protests is undermining one of them",
+      "Tarvin is not a democracy because it has passed a law about protests",
+      "Tarvin is a complete democracy because it holds regular elections",
+      "Tarvin is not a democracy because a court ruled against the government"
+     ],
+     "a": 0,
+     "x": "Good conclusions weigh all the evidence. Most details show a working democracy. The permit refusals are a specific threat to one freedom, not proof that the whole system has failed."
+    },
+    {
+     "q": "A newspaper wants to test whether the permit law is being applied unfairly. Which evidence would be most useful?",
+     "o": [
+      "A list of every permit application, showing which were approved or refused and the reasons given",
+      "A speech by an opposition leader saying the law is unfair",
+      "An online poll of the newspaper's readers",
+      "A photograph of one large protest from several years ago"
+     ],
+     "a": 0,
+     "x": "Checkable records of every decision would show a pattern if there is one. Speeches, polls and old photographs show opinions or single moments, not how the law is being applied."
+    }
+   ]
+  },
+  {
+   "id": "canberra",
+   "unit": "Democracy and government",
+   "caption": "Scenario 2. One week in Canberra",
+   "text": "Monday: the House of Representatives passes a bill to raise the fine for littering on Commonwealth land. Tuesday: the Senate passes the same bill and the Governor-General gives it royal assent. Wednesday: the Department of the Environment puts up new signs and begins issuing fines. Thursday: a person who was fined argues in court that the sign was unreadable, and the magistrate decides the fine does not stand. Friday: a minister says publicly that the magistrate got it wrong, but accepts the decision.",
+   "qs": [
+    {
+     "q": "Which branch of government was at work on Monday and Tuesday?",
+     "o": [
+      "The legislature",
+      "The executive",
+      "The judiciary",
+      "The electoral commission"
+     ],
+     "a": 0,
+     "x": "Parliament, meaning the House of Representatives and the Senate, makes and changes laws. That is the legislature. Royal assent is the final step of making a law."
+    },
+    {
+     "q": "The department putting up signs and issuing fines is an example of which branch?",
+     "o": [
+      "The executive, putting the law into action",
+      "The legislature, making the law",
+      "The judiciary, interpreting the law",
+      "The Opposition, scrutinising the law"
+     ],
+     "a": 0,
+     "x": "Government departments carry out and enforce laws under the direction of ministers. That is the executive."
+    },
+    {
+     "q": "Why does Thursday's decision matter for the separation of powers?",
+     "o": [
+      "It shows the courts decide independently how a law applies, even against the government",
+      "It shows judges can change the wording of laws passed by Parliament",
+      "It shows departments must ask a court before issuing any fine",
+      "It shows the Senate can overturn court decisions"
+     ],
+     "a": 0,
+     "x": "The judiciary interprets and applies laws independently. A court can rule that a fine was wrongly issued. It does not rewrite the law, and no other branch can direct its decision."
+    },
+    {
+     "q": "What does the minister's response on Friday show?",
+     "o": [
+      "Members of the executive can disagree with a court but must accept its decision",
+      "Ministers can overrule a magistrate if they disagree strongly",
+      "The judiciary must apologise when a minister disagrees",
+      "Court decisions apply only to ordinary citizens"
+     ],
+     "a": 0,
+     "x": "Disagreeing publicly is allowed. Refusing to obey is not. Accepting the decision shows the rule of law and an independent judiciary working together."
+    }
+   ]
+  },
+  {
+   "id": "skatepark",
+   "unit": "Citizens and participation",
+   "caption": "Scenario 3. The Wattle Street skate park",
+   "text": "A group of Year 8 students wants a skate park built on unused council land in Wattle Street. The council's draft budget for next year is open for public comment for four weeks. Residents can lodge a written submission, speak for three minutes at the next council meeting, or sign a petition at the local library. One student suggests spray-painting SKATE PARK NOW on the council office wall. Another has found a social-media post claiming the council secretly plans to sell the land, but the post gives no source.",
+   "qs": [
+    {
+     "q": "Why is the local council the right body to approach?",
+     "o": [
+      "Local parks and recreation facilities on council land are council responsibilities",
+      "Parks everywhere in Australia are run from Canberra",
+      "Only state MPs can approve new buildings",
+      "Councils decide where schools are built"
+     ],
+     "a": 0,
+     "x": "Councils look after local land, parks and community facilities. Schools are a state responsibility, and the federal government does not run local parks."
+    },
+    {
+     "q": "Which proposed action would be unlawful and likely to harm the campaign?",
+     "o": [
+      "Spray-painting the council office wall",
+      "Speaking for three minutes at the council meeting",
+      "Lodging a written submission on the draft budget",
+      "Collecting signatures at the library"
+     ],
+     "a": 0,
+     "x": "Damaging property is a crime, not civic action. Lawful participation such as submissions, speaking at meetings and petitions is how citizens influence decisions in a democracy."
+    },
+    {
+     "q": "What should the students do about the social-media post before using it?",
+     "o": [
+      "Check it against a reliable source, such as council meeting minutes, before repeating it",
+      "Share it widely because it supports their cause",
+      "Quote it in their submission as proof the council cannot be trusted",
+      "Give up on the budget process because the land is already sold"
+     ],
+     "a": 0,
+     "x": "Civic action works best when it is accurate. An unsourced post could be wrong. Council minutes and reports can be checked."
+    },
+    {
+     "q": "Which detail would make the students' submission most convincing to councillors?",
+     "o": [
+      "Evidence such as the number of young people living nearby and the lack of other facilities in the area",
+      "A statement that everyone at their school loves skating",
+      "A promise to protest every week until the park is built",
+      "A list of the councillors they plan to vote against in future"
+     ],
+     "a": 0,
+     "x": "Decision-makers respond to evidence about need and community benefit. Threats and vague claims are easy to dismiss."
+    }
+   ]
+  },
+  {
+   "id": "phonerule",
+   "unit": "Laws and justice",
+   "caption": "Scenario 4. The new phone rule",
+   "text": "A school introduces a rule: phones must be switched off and in lockers from 8:30 am until 3:15 pm, and a phone seen or heard in that time will be held at the office until the end of the day. The rule is emailed to every family, printed in the student planner and explained at assembly. It has not changed in two years. Some students argue the rule is unfair because they catch two buses to school and want to tell their parents when they are running late.",
+   "qs": [
+    {
+     "q": "Which characteristic of an effective law does the rule show most clearly?",
+     "o": [
+      "It is clear and understood: it states exactly what is banned, when, and what happens",
+      "It reflects every student's values",
+      "It changes whenever students complain",
+      "It is enforced only when a teacher chooses to"
+     ],
+     "a": 0,
+     "x": "Precise times and a stated consequence leave no room for argument about what the rule means. Clarity makes a rule easier to follow and to enforce."
+    },
+    {
+     "q": "Emailing families, printing the rule in the planner and explaining it at assembly make the rule...",
+     "o": [
+      "known",
+      "stable",
+      "enforceable",
+      "popular"
+     ],
+     "a": 0,
+     "x": "A rule only works if the people it applies to know about it. The school has communicated it in three ways."
+    },
+    {
+     "q": "The students who catch two buses are questioning which characteristic?",
+     "o": [
+      "Whether the rule reflects the values and needs of the people it applies to",
+      "Whether the rule is stable",
+      "Whether the rule is clear",
+      "Whether the rule is known"
+     ],
+     "a": 0,
+     "x": "An effective law needs to reflect society's values and circumstances. The students are not confused about the rule. They argue it does not fit their needs."
+    },
+    {
+     "q": "How is this school rule different from a law?",
+     "o": [
+      "A law is made and enforced by legal authorities and breaking it has legal consequences; a school rule applies only within the school",
+      "A law is always written down and a rule never is",
+      "A rule applies to adults and a law applies to children",
+      "There is no difference, because all rules are laws"
+     ],
+     "a": 0,
+     "x": "Laws are formal rules made by Parliament or councils and enforced by police and courts. School rules apply only to that community and carry school consequences."
+    }
+   ]
+  },
+  {
+   "id": "westhaven",
+   "unit": "Democracy and government",
+   "caption": "Scenario 5. Election night in Westhaven",
+   "text": "Westhaven is a fictional state. Its lower house has 88 seats. The results are in. Harbour Party 42 seats. Plains Party 38 seats. Rivers Alliance 5 seats. Independents 3 seats. Total 88.",
+   "qs": [
+    {
+     "q": "How many seats are needed for a majority government in Westhaven?",
+     "o": [
+      "45",
+      "44",
+      "42",
+      "88"
+     ],
+     "a": 0,
+     "x": "A majority is more than half. Half of 88 is 44, so 45 seats are needed. Winning the most seats is not the same as winning a majority."
+    },
+    {
+     "q": "Can the Harbour Party govern alone?",
+     "o": [
+      "No. 42 seats is the most of any party but fewer than a majority",
+      "Yes. It won more seats than any other party",
+      "Yes. 42 seats is a majority of 88",
+      "No. Only the Plains Party can form government"
+     ],
+     "a": 0,
+     "x": "42 is three short of 45. Harbour has the most seats but not majority support, so it cannot govern alone."
+    },
+    {
+     "q": "Which arrangement would give the Plains Party majority support?",
+     "o": [
+      "An agreement with the Rivers Alliance and at least two independents",
+      "A coalition with the Rivers Alliance alone",
+      "An agreement with one independent",
+      "None is needed, because 38 seats is already a majority"
+     ],
+     "a": 0,
+     "x": "38 plus 5 is 43, still short. Adding two independents makes 45. Plains would need the Rivers Alliance and at least two of the three independents."
+    },
+    {
+     "q": "The Harbour Party reaches an agreement with the three independents and forms government. Who forms the Opposition?",
+     "o": [
+      "The Plains Party, the largest group not in government",
+      "The Rivers Alliance, because it is on the crossbench",
+      "The three independents, because they are not in a party",
+      "Nobody, because the Harbour Party now has majority support"
+     ],
+     "a": 0,
+     "x": "The Opposition is the largest party or coalition not in government. The Rivers Alliance sits on the crossbench, and so do the independents even though they support the government."
+    }
+   ]
+  },
+  {
+   "id": "magistrates",
+   "unit": "Laws and justice",
+   "caption": "Scenario 6. A morning at the Magistrates' Court",
+   "text": "Situation A. The court puts its forms and a plain-English guide to the hearing process online, so a person representing themselves can follow each step. Situation B. A magistrate realises she coached the accused's football team for three years and asks another magistrate to hear the case. Situation C. A well-known footballer and a shop assistant are each fined the same amount for the same parking offence. Situation D. The court in a regional town closes, so residents must now travel 300 kilometres to attend a hearing.",
+   "qs": [
+    {
+     "q": "Which principle of justice is strengthened in Situation A?",
+     "o": [
+      "Access",
+      "Equality",
+      "Stability",
+      "Separation of powers"
+     ],
+     "a": 0,
+     "x": "Access means people can understand and use the legal system whatever their circumstances. Plain-English information removes a barrier for someone who is representing themselves."
+    },
+    {
+     "q": "In Situation B, the magistrate is protecting which principle?",
+     "o": [
+      "Fairness, because a decision-maker must be impartial",
+      "Equality, because both people are treated the same",
+      "Access, because the case will be heard faster",
+      "Stability, because the law has not changed"
+     ],
+     "a": 0,
+     "x": "A personal connection could bias the decision, or make it look biased. Stepping aside keeps the process impartial, which is fairness."
+    },
+    {
+     "q": "What does Situation C show?",
+     "o": [
+      "Equality before the law: the law applied in the same way regardless of fame",
+      "Equity: each person received support according to need",
+      "Access: both people could reach the court",
+      "Fairness: both people were allowed to speak"
+     ],
+     "a": 0,
+     "x": "Equality means the law treats everyone the same whatever their position or status."
+    },
+    {
+     "q": "Which principle is weakened in Situation D?",
+     "o": [
+      "Access, because distance makes the court harder to use",
+      "Equality, because the law has changed for the town",
+      "Fairness, because the magistrate is biased",
+      "Stability, because court dates keep changing"
+     ],
+     "a": 0,
+     "x": "Having to travel 300 kilometres is a barrier to using the legal system, especially for people without transport or money. That is a loss of access."
+    }
+   ]
+  },
+  {
+   "id": "priya",
+   "unit": "Citizens and participation",
+   "caption": "Scenario 7. Becoming Australian",
+   "text": "Priya moved to Australia from India eight years ago. Last Saturday she made the citizenship pledge at a council ceremony. Her brother Dev was born in Australia and turned 19 last year, but he has never enrolled to vote. Their neighbour Tom says a person is not really Australian unless they were born here. Priya still celebrates Diwali with her family every year.",
+   "qs": [
+    {
+     "q": "What changed for Priya legally when she became a citizen?",
+     "o": [
+      "She gained rights such as voting and an Australian passport, and responsibilities such as enrolling to vote",
+      "She must stop celebrating traditions from her country of birth",
+      "She automatically became a member of Parliament",
+      "Nothing changed, because she already lived in Australia"
+     ],
+     "a": 0,
+     "x": "Citizenship is formal legal membership. It brings rights, like voting and a passport, and responsibilities, like enrolling and voting. It does not change a person's culture."
+    },
+    {
+     "q": "Is Dev meeting his responsibilities as a citizen?",
+     "o": [
+      "No. Eligible citizens aged 18 and over must enrol and vote",
+      "Yes. Voting is optional for citizens born in Australia",
+      "Yes. Only new citizens have to enrol",
+      "No. He should have enrolled at 16, which is compulsory"
+     ],
+     "a": 0,
+     "x": "Enrolling and voting are compulsory for citizens aged 18 and over. Enrolment is possible from 16 but not compulsory until 18."
+    },
+    {
+     "q": "Which statement best responds to Tom's claim?",
+     "o": [
+      "National identity is shaped by many things, such as values, culture and experience, not only place of birth",
+      "Tom is right: citizenship is only possible for people born in Australia",
+      "Only people who vote can call themselves Australian",
+      "National identity and citizenship are the same thing"
+     ],
+     "a": 0,
+     "x": "Citizenship is a legal status that people gain by birth or by applying. National identity is a sense of belonging shaped by many factors."
+    },
+    {
+     "q": "Which of these can Priya do as a citizen that a permanent resident cannot?",
+     "o": [
+      "Vote in federal elections",
+      "Work in Australia",
+      "Attend an Australian school",
+      "Hold a Victorian driver licence"
+     ],
+     "a": 0,
+     "x": "Permanent residents can work, study and drive. Voting in federal elections, holding an Australian passport and standing for Parliament are for citizens."
+    }
+   ]
+  }
+ ]
+}

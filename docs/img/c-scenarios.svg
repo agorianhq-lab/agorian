@@ -1,0 +1,11 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'>
+<circle cx='70' cy='60' r='30' fill='#D9A441' opacity='.5'/>
+<rect x='-10' y='230' width='420' height='70' fill='#2F5D4B' opacity='.25'/>
+<rect x='-10' y='250' width='420' height='22' fill='#1B2420' opacity='.8'/><g stroke='#FFFFFF' stroke-width='4' stroke-dasharray='18 14'><path d='M0 261 H400'/></g>
+<g><rect x='120' y='120' width='160' height='130' fill='#F2F5F1' stroke='#1B2420' stroke-width='7'/><path d='M110 122 L200 70 L290 122 Z' fill='#2C4F7C' stroke='#1B2420' stroke-width='7' stroke-linejoin='round'/>
+ <g fill='#1B2420'><rect x='140' y='150' width='12' height='60'/><rect x='170' y='150' width='12' height='60'/><rect x='218' y='150' width='12' height='60'/><rect x='248' y='150' width='12' height='60'/></g>
+ <rect x='188' y='196' width='24' height='54' fill='#1B2420'/>
+ <rect x='196' y='40' width='6' height='36' fill='#1B2420'/><path d='M202 42 L236 42 L228 54 L236 66 L202 66 Z' fill='#B9472E'/></g>
+<g><rect x='300' y='176' width='84' height='60' rx='10' fill='#B9472E' stroke='#1B2420' stroke-width='6'/><rect x='312' y='188' width='24' height='20' rx='3' fill='#F2F5F1'/><rect x='346' y='188' width='24' height='20' rx='3' fill='#F2F5F1'/><circle cx='320' cy='240' r='10' fill='#1B2420'/><circle cx='364' cy='240' r='10' fill='#1B2420'/></g>
+<g><rect x='52' y='150' width='10' height='100' fill='#1B2420'/><circle cx='57' cy='130' r='40' fill='#2F5D4B'/><circle cx='36' cy='146' r='26' fill='#2F5D4B'/><circle cx='80' cy='146' r='26' fill='#2F5D4B'/></g>
+</svg>

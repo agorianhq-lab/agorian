@@ -1,0 +1,84 @@
+{
+ "parchment": {
+  "label": "Parchment (current)"
+ },
+ "chambers": {
+  "label": "Chambers",
+  "light": {
+   "bg": "#F2F5F1",
+   "surface": "#FFFFFF",
+   "ink": "#1B2420",
+   "muted": "#5C6660",
+   "line": "#D3DAD2",
+   "navy": "#2F5D4B",
+   "navy-ink": "#FFFFFF",
+   "accent": "#B9472E",
+   "gold": "#D9A441",
+   "gold-ink": "#8A6012",
+   "sage": "#3E7A62",
+   "blush": "#EEE6D8",
+   "teal": "#1F6F7B",
+   "plum": "#5B3F7A",
+   "rose": "#B8356A",
+   "jp": "#2F5D4B",
+   "jp-soft": "#E3ECE6",
+   "eu": "#B9472E",
+   "eu-soft": "#F5E3DC",
+   "sk": "#2C4F7C",
+   "sk-soft": "#E1E8F2",
+   "pattern": "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Cg fill='%232F5D4B' opacity='.11'%3E%3Ccircle cx='8' cy='8' r='1.5'/%3E%3Ccircle cx='8' cy='24' r='1.5'/%3E%3Ccircle cx='8' cy='40' r='1.5'/%3E%3Ccircle cx='8' cy='56' r='1.5'/%3E%3Ccircle cx='24' cy='8' r='1.5'/%3E%3Ccircle cx='24' cy='24' r='1.5'/%3E%3Ccircle cx='24' cy='40' r='1.5'/%3E%3Ccircle cx='24' cy='56' r='1.5'/%3E%3Ccircle cx='40' cy='8' r='1.5'/%3E%3Ccircle cx='40' cy='24' r='1.5'/%3E%3Ccircle cx='40' cy='40' r='1.5'/%3E%3Ccircle cx='40' cy='56' r='1.5'/%3E%3Ccircle cx='56' cy='8' r='1.5'/%3E%3Ccircle cx='56' cy='24' r='1.5'/%3E%3Ccircle cx='56' cy='40' r='1.5'/%3E%3Ccircle cx='56' cy='56' r='1.5'/%3E%3C/g%3E%3C/svg%3E\")"
+  },
+  "dark": {
+   "bg": "#131A16",
+   "surface": "#1B2420",
+   "ink": "#E9EDE8",
+   "muted": "#A3ADA7",
+   "line": "#2E3A34",
+   "navy": "#6FA58D",
+   "navy-ink": "#0F1A15",
+   "accent": "#E8795A",
+   "gold": "#E2B45C",
+   "gold-ink": "#E2B45C",
+   "sage": "#7FB89E",
+   "blush": "#2E2A22",
+   "teal": "#5FB3BF",
+   "plum": "#B58AC4",
+   "rose": "#E27AA6",
+   "jp": "#7FBFA3",
+   "jp-soft": "#1E2F27",
+   "eu": "#E08A6E",
+   "eu-soft": "#3A2620",
+   "sk": "#7FA0D1",
+   "sk-soft": "#1F2A3A",
+   "pattern": "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Cg fill='%23E2B45C' opacity='.09'%3E%3Ccircle cx='8' cy='8' r='1.5'/%3E%3Ccircle cx='8' cy='24' r='1.5'/%3E%3Ccircle cx='8' cy='40' r='1.5'/%3E%3Ccircle cx='8' cy='56' r='1.5'/%3E%3Ccircle cx='24' cy='8' r='1.5'/%3E%3Ccircle cx='24' cy='24' r='1.5'/%3E%3Ccircle cx='24' cy='40' r='1.5'/%3E%3Ccircle cx='24' cy='56' r='1.5'/%3E%3Ccircle cx='40' cy='8' r='1.5'/%3E%3Ccircle cx='40' cy='24' r='1.5'/%3E%3Ccircle cx='40' cy='40' r='1.5'/%3E%3Ccircle cx='40' cy='56' r='1.5'/%3E%3Ccircle cx='56' cy='8' r='1.5'/%3E%3Ccircle cx='56' cy='24' r='1.5'/%3E%3Ccircle cx='56' cy='40' r='1.5'/%3E%3Ccircle cx='56' cy='56' r='1.5'/%3E%3C/g%3E%3C/svg%3E\")"
+  }
+ },
+ "chambers-sans": {
+  "label": "Chambers, Public Sans headings",
+  "inherits": "chambers",
+  "light": {
+   "display": "\"Public Sans\",\"Atkinson Hyperlegible\",system-ui,sans-serif"
+  },
+  "dark": {
+   "display": "\"Public Sans\",\"Atkinson Hyperlegible\",system-ui,sans-serif"
+  },
+  "fonts": [
+   {
+    "family": "Public Sans",
+    "file": "public-sans-400.woff2",
+    "weight": "400"
+   },
+   {
+    "family": "Public Sans",
+    "file": "public-sans-700.woff2",
+    "weight": "700"
+   },
+   {
+    "family": "Public Sans",
+    "file": "public-sans-800.woff2",
+    "weight": "800"
+   }
+  ],
+  "css": ".brand .word{font-family:\"Fraunces\",Georgia,serif}h1,h2,h3,.mode .t,.upanel .t,.daily .t,.examband .t,.welcome h2,.flash .term,.sq .m,.clock .time,.mf .s,.score .ring b{letter-spacing:-.01em}h1,h2,h3{font-weight:800}.hero h1{letter-spacing:-.02em}"
+ }
+}

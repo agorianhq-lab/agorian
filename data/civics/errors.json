@@ -1,0 +1,180 @@
+{
+ "intro": "Each passage is a student's answer with two or three mistakes planted in it. Tap every part you think is wrong, then check. Reading like a marker is a quick way to find out what you really know.",
+ "items": [
+  {
+   "id": "athens",
+   "unit": "Democracy and government",
+   "topic": "Democracy in Action",
+   "title": "Where democracy began",
+   "segments": [
+    {"t": "The word democracy comes from Greek words meaning rule by the people."},
+    {"t": "In ancient Athens every adult who lived in the city could speak and vote in the assembly,", "fix": "Only free adult men who were citizens of Athens could take part. Women, enslaved people and people born elsewhere were shut out.", "why": "Athens introduced the idea that citizens should have a say, but it gave that say to a small group."},
+    {"t": "which made Athens a direct democracy."},
+    {"t": "Australia is a direct democracy too, because Australians make the laws themselves.", "fix": "Australia is a representative democracy. Australians choose members of Parliament, who make the laws for them.", "why": "The only time Australians vote directly on a question is a referendum, and that is about changing the Constitution, not ordinary laws."},
+    {"t": "Power changes hands peacefully when voters choose a different party at the next election."}
+   ]
+  },
+  {
+   "id": "features",
+   "unit": "Democracy and government",
+   "topic": "Democracy in Action",
+   "title": "More than a vote",
+   "segments": [
+    {"t": "In a democracy power comes from the people, who choose their government in free and fair elections."},
+    {"t": "Once a party wins, it can stay in power for as long as it likes without facing the voters again.", "fix": "Elections must be held regularly, and the losing side hands over power peacefully.", "why": "A government that never has to face voters again cannot be removed by them, so the people no longer rule."},
+    {"t": "People are free to express their opinions, including disagreement with the government, without being punished."},
+    {"t": "The rule of law means ordinary people must follow the law, while the people who make the laws do not have to.", "fix": "The rule of law means everyone must follow the law, including the people who make it.", "why": "If law-makers were above the law, they could use their power however they liked. Courts can rule against a government, and the government must obey."},
+    {"t": "Citizens can take part between elections by joining campaigns and contacting their representatives."}
+   ]
+  },
+  {
+   "id": "levels",
+   "unit": "Democracy and government",
+   "topic": "Power in Australia",
+   "title": "Three levels of government",
+   "segments": [
+    {"t": "The Constitution came into effect on 1 January 1901, when the six colonies joined to form the Commonwealth of Australia."},
+    {"t": "Australia has a federal system, so law-making power is divided between the federal government and the states and territories."},
+    {"t": "The federal government runs government schools and the police,", "fix": "State and territory governments run government schools and the police.", "why": "The federal government looks after matters that affect the whole country. Schools and policing are organised state by state."},
+    {"t": "while the states look after defence and immigration.", "fix": "Defence and immigration are federal responsibilities.", "why": "A country needs one defence force and one set of rules about who may enter it, so these belong to the national government."},
+    {"t": "Local councils are set up by state and territory governments and provide services for their local area."},
+    {"t": "If a state law clashes with a federal law in an area where both can make laws, the state law wins.", "fix": "The federal law wins.", "why": "The Constitution gives federal law priority where the two conflict in a shared area."}
+   ]
+  },
+  {
+   "id": "branches",
+   "unit": "Democracy and government",
+   "topic": "Power in Australia",
+   "title": "Three branches of government",
+   "segments": [
+    {"t": "The separation of powers divides government power between three branches so that no single group controls everything."},
+    {"t": "The legislature is Parliament, which makes and changes laws."},
+    {"t": "The executive includes the Prime Minister, the ministers and the government departments,"},
+    {"t": "and its main job is to decide court cases.", "fix": "The executive puts laws into action and runs the day-to-day work of government. Deciding cases is the judiciary's job.", "why": "Each branch has a different role. Swapping the roles of the executive and the judiciary is the most common slip on this topic."},
+    {"t": "If Parliament dislikes a court's decision, it can order the judge to change it.", "fix": "Judges decide cases independently. Parliament can change the law for the future, but it cannot direct a judge's decision.", "why": "An independent judiciary is what allows courts to rule against the government when it breaks the law."},
+    {"t": "In Australia the branches overlap a little, because ministers sit in Parliament as well as running departments. Only the courts stand fully apart."}
+   ]
+  },
+  {
+   "id": "parliament",
+   "unit": "Democracy and government",
+   "topic": "Power in Australia",
+   "title": "How Parliament works",
+   "segments": [
+    {"t": "The federal Parliament is made up of the House of Representatives, the Senate and the King, represented by the Governor-General."},
+    {"t": "A bill becomes law as soon as the House of Representatives has voted for it.", "fix": "A bill must pass both the House of Representatives and the Senate, then receive royal assent from the Governor-General, before it becomes law.", "why": "Both houses must agree. The Senate can amend or reject a bill the House has passed."},
+    {"t": "Parliamentary committees can examine a proposed law and recommend changes."},
+    {"t": "Government is formed in the Senate by the party with the most senators.", "fix": "Government is formed in the House of Representatives, by the party or coalition with the support of more than half its members.", "why": "The Senate reviews laws. It does not decide who governs."},
+    {"t": "The leader of the governing party usually becomes Prime Minister."}
+   ]
+  },
+  {
+   "id": "citizenship",
+   "unit": "Citizens and participation",
+   "topic": "Many Stories, One Australia",
+   "title": "Being a citizen",
+   "segments": [
+    {"t": "Citizenship is a person's formal legal membership of Australia."},
+    {"t": "National identity is just another word for citizenship.", "fix": "National identity is a person's sense of connection and belonging. Citizenship is legal membership. A person can have one without the other.", "why": "Someone can feel strongly Australian before they become a citizen, and citizens express what being Australian means in many different ways."},
+    {"t": "Citizens have rights, such as voting and holding an Australian passport, and responsibilities, such as obeying the law and serving on a jury if called."},
+    {"t": "Voting is optional for citizens once they turn 18.", "fix": "Australian citizens aged 18 and over must enrol and vote. Voting is a responsibility, not only a right.", "why": "Australia is one of the few countries where voting is compulsory for citizens."},
+    {"t": "People who migrate here can apply to become citizens, usually sit a citizenship test and make a pledge at a ceremony."},
+    {"t": "First Nations peoples have lived on and cared for Country for at least 65,000 years."}
+   ]
+  },
+  {
+   "id": "identity",
+   "unit": "Citizens and participation",
+   "topic": "Many Stories, One Australia",
+   "title": "One nation, many stories",
+   "segments": [
+    {"t": "Australia's national identity is shaped by shared values and history and by many cultures and traditions."},
+    {"t": "National identity is fixed: it has stayed the same since 1901 and is the same for everyone.", "fix": "National identity changes over time and is experienced differently by different people.", "why": "Family, culture, religion, connection to Country and personal experience all shape how people feel they belong, and those have changed a great deal since 1901."},
+    {"t": "British colonisation began in 1788 and introduced British political and legal traditions that still influence Australia."},
+    {"t": "To be truly Australian a person has to speak only English at home.", "fix": "People can keep their languages, cultures and religions while sharing Australia's democratic values.", "why": "Shared values such as freedom, respect, fairness and a fair go are what hold a multicultural society together, not a single language or tradition."},
+    {"t": "Migration has made Australia a multicultural society with many languages and religions."}
+   ]
+  },
+  {
+   "id": "action",
+   "unit": "Citizens and participation",
+   "topic": "Have Your Say!",
+   "title": "Taking action",
+   "segments": [
+    {"t": "Civic action is something an individual or group does to influence an issue or improve the community."},
+    {"t": "A petition with enough signatures forces the government to change its decision.", "fix": "A petition is a request. It shows decision-makers how many people care about an issue, but they can still say no.", "why": "A petition's power is persuasion. It is not a vote and it is not binding."},
+    {"t": "Writing to the Member of Parliament who represents your area is one way to have your say."},
+    {"t": "Peaceful protest is against the law in Australia.", "fix": "Peaceful protest is a lawful way for citizens to express their views.", "why": "Freedom of expression and the freedom to gather peacefully are features of a democracy."},
+    {"t": "Civic action works best when it is lawful, well informed and aimed at the level of government that actually makes the decision."},
+    {"t": "Only adults who can vote are able to take civic action.", "fix": "Anyone can take civic action, including young people, by writing to representatives, starting petitions and running campaigns.", "why": "Voting is one form of participation. It is not the only one."}
+   ]
+  },
+  {
+   "id": "lawtraits",
+   "unit": "Laws and justice",
+   "topic": "Effective Laws",
+   "title": "What makes a law work",
+   "segments": [
+    {"t": "Laws are formal rules made and enforced by legal authorities, unlike the rules of a school or a club."},
+    {"t": "An effective law is known, clear, enforceable, stable and reflects society's values."},
+    {"t": "Once a law is made it must never be changed, however much society's views shift.", "fix": "Laws should be stable, so people know where they stand, but they must be able to change when society's values change.", "why": "Stable does not mean frozen. A law that no longer matches what the community believes stops being respected."},
+    {"t": "People cannot be expected to follow a law they do not know exists."},
+    {"t": "A law written in complicated legal language is fine, because only lawyers need to understand it.", "fix": "A law needs to be clear to the people who have to follow it, not only to lawyers.", "why": "If ordinary people cannot work out what is allowed, they cannot obey the law, and it will be applied unevenly."}
+   ]
+  },
+  {
+   "id": "seatbelts",
+   "unit": "Laws and justice",
+   "topic": "Effective Laws",
+   "title": "The seatbelt law",
+   "segments": [
+    {"t": "In 1970 Victoria became the first place in the world to make wearing a seatbelt compulsory."},
+    {"t": "The road toll rose sharply in the year after the law came in.", "fix": "The road toll fell, from 1,061 deaths in 1970 to 923 in 1971.", "why": "Wearing a seatbelt roughly halves the risk of death or serious injury in a crash."},
+    {"t": "Some people opposed the law because they believed the government should not tell them what to do inside their own cars."},
+    {"t": "Today wearing a seatbelt is widely accepted, so the law reflects society's values."},
+    {"t": "The law is unenforceable, because police have no way of telling who is wearing a seatbelt.", "fix": "The law is enforceable. Police can see whether a seatbelt is worn and issue a fine.", "why": "Enforceable means the authorities can tell when the law is broken and apply a consequence."}
+   ]
+  },
+  {
+   "id": "justice",
+   "unit": "Laws and justice",
+   "topic": "Justice for All",
+   "title": "Principles of justice",
+   "segments": [
+    {"t": "The three principles of justice are fairness, equality and access."},
+    {"t": "Fairness means the judge should decide quickly, based on which side has the better lawyer.", "fix": "Fairness means impartial processes: the decision-maker has no bias, and each side gets a fair chance to put its case.", "why": "A quick decision that favours the stronger lawyer is not a fair process."},
+    {"t": "Equality means the same laws apply to everyone, whoever they are."},
+    {"t": "Access means people can reach and make sense of the legal system, whatever their money, language or location."},
+    {"t": "Equity and equality mean the same thing.", "fix": "Equality is treating everyone the same. Equity is giving extra support to those who need it, so that everyone has a fair chance.", "why": "The two are easy to confuse. Treating everyone identically can still leave some people unable to take part."}
+   ]
+  },
+  {
+   "id": "government",
+   "unit": "Democracy and government",
+   "topic": "Parties, Policies and Power",
+   "title": "Forming government",
+   "segments": [
+    {"t": "A political party is an organised group of people who share similar ideas about how Australia should be governed."},
+    {"t": "A policy is a party's plan for dealing with an issue, such as the cost of childcare."},
+    {"t": "A party needs the support of more than half the House of Representatives to form government."},
+    {"t": "If no party wins a majority, a new election must be held straight away.", "fix": "A party can form a minority government with the support of crossbench members, or parties can agree to a coalition.", "why": "A hung parliament is resolved by negotiation, not by another election."},
+    {"t": "The Opposition is made up of the independents and the minor parties.", "fix": "The Opposition is the largest party or coalition outside government. Minor-party members and independents usually sit on the crossbench.", "why": "The crossbench sits outside both the government and the Opposition."},
+    {"t": "Parties in a coalition work together while keeping their separate identities."}
+   ]
+  },
+  {
+   "id": "election",
+   "unit": "Democracy and government",
+   "topic": "Parties, Policies and Power",
+   "title": "After the count",
+   "setup": "The House has 150 seats. The Harbour Party wins 70, the Plains Party 62, the Coastal Alliance 11 and independents 7. No parties have agreed to a coalition.",
+   "segments": [
+    {"t": "With the most seats, Harbour has a majority and will govern on its own.", "fix": "Seventy seats is fewer than the 76 needed for a majority. Harbour could form a minority government if enough crossbench members agree to support it.", "why": "Winning the most seats is not the same as winning more than half of them."},
+    {"t": "If Harbour forms government, the Plains Party becomes the Opposition."},
+    {"t": "The Coastal Alliance members and the independents sit on the crossbench."},
+    {"t": "The Harbour leader becomes Prime Minister automatically once the count is finished.", "fix": "A leader becomes Prime Minister once their party can show it has the support of a majority in the House. In a hung parliament that takes negotiation with the crossbench.", "why": "Nothing happens automatically. The Governor-General commissions the person who can command the House's support."},
+    {"t": "Crossbench members can promise to back the government in Parliament without becoming part of it."}
+   ]
+  }
+ ]
+}

@@ -1,0 +1,600 @@
+{
+ "intro": "Seven things to try. None of them is a test question; they are the ideas behind the questions, made so you can push on them.",
+ "items": [
+  {
+   "id": "level",
+   "kind": "sort",
+   "title": "Which level?",
+   "blurb": "Real responsibilities, one at a time. Sort them into federal, state or local council. Sixty seconds, or take your time.",
+   "bins": [
+    "Federal",
+    "State",
+    "Local council"
+   ],
+   "keys": [
+    "F",
+    "S",
+    "L"
+   ],
+   "items": [
+    [
+     "Issuing Australian passports",
+     0,
+     "Passports, like borders and citizenship, are national matters."
+    ],
+    [
+     "Running the Australian Defence Force",
+     0,
+     "Defence is a federal responsibility under the Constitution."
+    ],
+    [
+     "Deciding who can migrate to Australia",
+     0,
+     "Immigration and visas are federal."
+    ],
+    [
+     "Printing banknotes and minting coins",
+     0,
+     "Currency is federal; one dollar works in every state."
+    ],
+    [
+     "Collecting income tax",
+     0,
+     "The Australian Taxation Office is a federal agency."
+    ],
+    [
+     "Paying the age pension",
+     0,
+     "Pensions and other Centrelink payments are federal."
+    ],
+    [
+     "Medicare rebates for a doctor's visit",
+     0,
+     "Medicare is a federal scheme."
+    ],
+    [
+     "Running embassies overseas",
+     0,
+     "Foreign affairs is federal; the states do not have embassies."
+    ],
+    [
+     "Checking goods at the border for customs",
+     0,
+     "Customs and Border Force are federal."
+    ],
+    [
+     "Setting the rules for marriage",
+     0,
+     "Marriage law is a federal power listed in the Constitution."
+    ],
+    [
+     "Delivering the mail through Australia Post",
+     0,
+     "Postal services are federal."
+    ],
+    [
+     "Licensing radio and television broadcasters",
+     0,
+     "Communications are a federal responsibility."
+    ],
+    [
+     "Running government primary and secondary schools",
+     1,
+     "State governments run public schools and employ their teachers."
+    ],
+    [
+     "Victoria Police",
+     1,
+     "Each state and territory has its own police force."
+    ],
+    [
+     "Trains, trams and buses in Melbourne",
+     1,
+     "Public transport is run or contracted by the state government."
+    ],
+    [
+     "Issuing driver licences",
+     1,
+     "Licences and car registration are state matters."
+    ],
+    [
+     "Building and maintaining freeways",
+     1,
+     "Major roads are state responsibilities; councils handle local streets."
+    ],
+    [
+     "Fire and emergency services",
+     1,
+     "Fire brigades, the SES and ambulances are organised by the states."
+    ],
+    [
+     "Running prisons",
+     1,
+     "Prisons and most criminal law are state responsibilities."
+    ],
+    [
+     "TAFE colleges",
+     1,
+     "Vocational training is mostly run by the states."
+    ],
+    [
+     "Electricity and water supply rules",
+     1,
+     "Utilities are regulated at state level."
+    ],
+    [
+     "Deciding school term dates",
+     1,
+     "Each state sets its own term dates."
+    ],
+    [
+     "Setting the speed limit on a highway",
+     1,
+     "Road rules and highway limits are state matters."
+    ],
+    [
+     "Fishing licences",
+     1,
+     "Recreational fishing is regulated by the state."
+    ],
+    [
+     "Mowing and maintaining the local park",
+     2,
+     "Parks, playgrounds and sports ovals are council work."
+    ],
+    [
+     "Fixing a cracked footpath",
+     2,
+     "Footpaths and local streets belong to the council."
+    ],
+    [
+     "Registering your dog or cat",
+     2,
+     "Pet registration is a council service."
+    ],
+    [
+     "Running the public library",
+     2,
+     "Local libraries are funded and run by councils."
+    ],
+    [
+     "Approving a permit to build a house extension",
+     2,
+     "Planning and building permits for homes go through the council."
+    ],
+    [
+     "Parking rules on local streets",
+     2,
+     "Councils set and enforce local parking."
+    ],
+    [
+     "Street lighting in your street",
+     2,
+     "Councils arrange lighting on local roads."
+    ],
+    [
+     "Inspecting a cafe's kitchen for food safety",
+     2,
+     "Councils carry out food-safety inspections of local businesses."
+    ],
+    [
+     "Running the community swimming pool",
+     2,
+     "Leisure centres and pools are usually council facilities."
+    ],
+    [
+     "Organising the local festival",
+     2,
+     "Community events are a council role."
+    ],
+    [
+     "Maternal and child health nurse visits for new babies",
+     2,
+     "In Victoria, councils run the maternal and child health service."
+    ],
+    [
+     "Deciding where a new kindergarten goes",
+     2,
+     "Councils plan and often run local kindergartens."
+    ]
+   ]
+  },
+  {
+   "id": "branch",
+   "kind": "sort",
+   "title": "Which branch?",
+   "blurb": "Something happens in government. Is it the legislature, the executive or the judiciary at work?",
+   "bins": [
+    "Legislature",
+    "Executive",
+    "Judiciary"
+   ],
+   "keys": [
+    "L",
+    "E",
+    "J"
+   ],
+   "items": [
+    [
+     "The House of Representatives debates a bill",
+     0,
+     "Parliament, both houses, is the legislature: it makes and changes laws."
+    ],
+    [
+     "The Senate votes to pass a bill",
+     0,
+     "Voting on bills is law-making, the legislature's job."
+    ],
+    [
+     "A parliamentary committee reviews a proposed law",
+     0,
+     "Committees are part of Parliament's work on laws."
+    ],
+    [
+     "Parliament repeals a law from the 1950s",
+     0,
+     "Only the legislature can make or unmake a law."
+    ],
+    [
+     "MPs vote on the budget",
+     0,
+     "The budget is passed as bills through Parliament."
+    ],
+    [
+     "A new law receives royal assent",
+     0,
+     "Royal assent is the final step of the legislative process."
+    ],
+    [
+     "Parliament changes the voting age",
+     0,
+     "Changing a law is the legislature's role."
+    ],
+    [
+     "The Passport Office processes an application",
+     1,
+     "Government departments carry out laws: the executive."
+    ],
+    [
+     "A minister announces funding for a new program",
+     1,
+     "Ministers lead the executive and direct departments."
+    ],
+    [
+     "Centrelink pays a student allowance",
+     1,
+     "Departments put laws into action by delivering services."
+    ],
+    [
+     "The Australian Federal Police investigate a fraud",
+     1,
+     "Police enforce the law; they are part of the executive."
+    ],
+    [
+     "Cabinet decides government policy on energy",
+     1,
+     "Cabinet is the senior ministers, the heart of the executive."
+    ],
+    [
+     "The Prime Minister appoints a new minister",
+     1,
+     "The Prime Minister leads the executive government."
+    ],
+    [
+     "The Tax Office sends out a tax bill",
+     1,
+     "Collecting tax under the law is executive work."
+    ],
+    [
+     "Border Force searches a container at the port",
+     1,
+     "Enforcing customs law is executive work."
+    ],
+    [
+     "A magistrate decides whether a driver broke the law",
+     2,
+     "Courts apply the law to cases: the judiciary."
+    ],
+    [
+     "The High Court rules that a law goes against the Constitution",
+     2,
+     "Interpreting the Constitution is the High Court's job."
+    ],
+    [
+     "A judge sentences an offender to community service",
+     2,
+     "Sentencing happens in court, in the judiciary."
+    ],
+    [
+     "A court decides what a word in a law means",
+     2,
+     "Interpreting laws is the judiciary's role."
+    ],
+    [
+     "A jury finds the accused not guilty",
+     2,
+     "Juries are part of the court process."
+    ],
+    [
+     "A court settles a dispute between two businesses",
+     2,
+     "Resolving disputes under the law is judicial work."
+    ],
+    [
+     "An appeal court overturns an earlier decision",
+     2,
+     "Appeals are heard by higher courts in the judiciary."
+    ],
+    [
+     "A judge orders the release of a person wrongly held",
+     2,
+     "Courts check that the executive acts within the law."
+    ]
+   ]
+  },
+  {
+   "id": "principle",
+   "kind": "sort",
+   "title": "Which principle?",
+   "blurb": "Something happens in the justice system. Which principle is at work: fairness, equality or access?",
+   "bins": [
+    "Fairness",
+    "Equality",
+    "Access"
+   ],
+   "keys": [
+    "F",
+    "E",
+    "A"
+   ],
+   "items": [
+    [
+     "Both sides get to present their evidence",
+     0,
+     "Fairness means impartial processes where each side can be heard."
+    ],
+    [
+     "A judge steps aside because the accused is a neighbour",
+     0,
+     "Removing a possible bias protects fairness."
+    ],
+    [
+     "The accused is shown the evidence against them before the trial",
+     0,
+     "You cannot answer a case you have not seen: fairness."
+    ],
+    [
+     "A jury is chosen at random from the community",
+     0,
+     "A random jury guards against bias, which is fairness."
+    ],
+    [
+     "A decision-maker ignores who the people are and looks only at the evidence",
+     0,
+     "Impartiality is the core of fairness."
+    ],
+    [
+     "A witness is given time to answer and is not shouted down",
+     0,
+     "A fair hearing means each person can put their case."
+    ],
+    [
+     "A footballer and a shop assistant get the same fine for the same offence",
+     1,
+     "Equality: the law applies the same way whatever your status."
+    ],
+    [
+     "A minister is charged like anyone else after breaking the law",
+     1,
+     "Nobody is above the law: equality."
+    ],
+    [
+     "The same speed limit applies to every driver on the road",
+     1,
+     "Laws apply to everyone in the same way."
+    ],
+    [
+     "Two people who commit the same crime in the same circumstances get the same penalty",
+     1,
+     "Treating like cases alike is equality before the law."
+    ],
+    [
+     "A court refuses to give a celebrity a quieter, private hearing",
+     1,
+     "Equality means no special treatment because of fame."
+    ],
+    [
+     "A free duty lawyer helps someone who cannot afford one",
+     2,
+     "Access: people can understand and use the legal system."
+    ],
+    [
+     "Court forms are rewritten in plain English",
+     2,
+     "Making the system understandable improves access."
+    ],
+    [
+     "A regional court holds hearings by video link",
+     2,
+     "Reducing distance barriers improves access."
+    ],
+    [
+     "Legal aid covers the costs of a person on a low income",
+     2,
+     "Cost is a barrier to justice; legal aid lowers it."
+    ],
+    [
+     "Information about court processes is published in ten community languages",
+     2,
+     "Language is a barrier; translation improves access."
+    ],
+    [
+     "A court building is made wheelchair accessible",
+     2,
+     "Physical access to the court is part of access to justice."
+    ],
+    [
+     "Court opens on Saturday mornings for people who work all week",
+     2,
+     "Opening hours that suit people improve access."
+    ]
+   ]
+  },
+  {
+   "id": "referendum",
+   "kind": "referendum",
+   "title": "The double majority",
+   "blurb": "Move the Yes vote in each state and watch a referendum pass or fail. Then try the 1977 trap: a national Yes that still failed."
+  },
+  {
+   "id": "government",
+   "kind": "government",
+   "title": "Form a government",
+   "blurb": "Deal out 150 seats and see who can govern. Majority, minority, coalition or hung parliament, with the 76 line drawn."
+  },
+  {
+   "id": "law",
+   "kind": "law",
+   "title": "Fix this law",
+   "blurb": "A council wants a law about e-scooters near the beach. Build it clause by clause and check it against the five characteristics of an effective law.",
+   "intro": "A council wants to stop dangerous e-scooter riding on the beach path. Choose one clause from each row. The law assembles itself at the top, and the five checks update as you go.",
+   "columns": [
+    {
+     "id": "what",
+     "label": "What is banned",
+     "options": [
+      {
+       "t": "ride an e-scooter dangerously",
+       "clear": false,
+       "measurable": false,
+       "why": "Dangerously is a judgement. Riders and officers will disagree about what it means."
+      },
+      {
+       "t": "ride an e-scooter faster than 10 km/h",
+       "clear": true,
+       "measurable": true,
+       "why": "A number can be measured and understood by everyone."
+      },
+      {
+       "t": "ride an e-scooter in a way that annoys people",
+       "clear": false,
+       "measurable": false,
+       "why": "What annoys one person does not annoy another. Not clear, not enforceable."
+      }
+     ]
+    },
+    {
+     "id": "where",
+     "label": "Where it applies",
+     "options": [
+      {
+       "t": "near the beach",
+       "clear": false,
+       "why": "How near is near? A boundary nobody can see cannot be followed."
+      },
+      {
+       "t": "on the shared path between the pier and the surf club",
+       "clear": true,
+       "why": "A named stretch with two landmarks. Anyone can tell if they are on it."
+      },
+      {
+       "t": "anywhere in the council area",
+       "clear": true,
+       "values": false,
+       "why": "Clear, but it bans scooters everywhere, which goes far beyond the problem and most residents would not support it."
+      }
+     ]
+    },
+    {
+     "id": "when",
+     "label": "When it applies",
+     "options": [
+      {
+       "t": "at busy times",
+       "clear": false,
+       "why": "Busy is not a time. Riders cannot plan around it."
+      },
+      {
+       "t": "between 10 am and 6 pm from December to February",
+       "clear": true,
+       "why": "Exact hours and months are easy to know and to check."
+      },
+      {
+       "t": "at all times",
+       "clear": true,
+       "values": false,
+       "why": "Clear, but a year-round ban when the path is empty in winter is more than the community asked for."
+      }
+     ]
+    },
+    {
+     "id": "penalty",
+     "label": "What happens if you break it",
+     "options": [
+      {
+       "t": "nothing is written down",
+       "enforceable": false,
+       "why": "A law with no consequence cannot be enforced."
+      },
+      {
+       "t": "a $100 fine issued by a council officer",
+       "enforceable": true,
+       "why": "A set consequence and a named enforcer make the law enforceable."
+      },
+      {
+       "t": "the rider may be banned from the beach for life",
+       "enforceable": true,
+       "values": false,
+       "why": "Enforceable, but a lifetime ban for a speeding scooter does not match what the community thinks is fair."
+      }
+     ]
+    },
+    {
+     "id": "known",
+     "label": "How people find out",
+     "options": [
+      {
+       "t": "it is filed at the council office",
+       "known": false,
+       "why": "A law nobody sees cannot be followed. It must be communicated."
+      },
+      {
+       "t": "signs at every path entrance and a notice on the council website",
+       "known": true,
+       "why": "Signs where the law applies, plus a public notice, make it known."
+      },
+      {
+       "t": "it is mentioned once in a council newsletter",
+       "known": false,
+       "why": "One mention most people will miss is not enough for a law to be known."
+      }
+     ]
+    },
+    {
+     "id": "stable",
+     "label": "How often it changes",
+     "options": [
+      {
+       "t": "whenever a councillor wants to change it",
+       "stable": false,
+       "why": "A rule that shifts without warning cannot be relied on."
+      },
+      {
+       "t": "reviewed every two years after a public survey",
+       "stable": true,
+       "values": true,
+       "why": "Regular, predictable review keeps the law stable but still able to change, and asking residents keeps it in step with their values."
+      },
+      {
+       "t": "never, it is permanent",
+       "stable": true,
+       "values": false,
+       "why": "Stable, but a law that can never respond to change will eventually stop reflecting society's values."
+      }
+     ]
+    }
+   ]
+  },
+  {"id": "spot", "kind": "spot", "title": "Spot the error", "blurb": "Thirteen short answers written by an imaginary student, each with two or three mistakes planted in it. Read like a marker and find them all."}
+]
+}

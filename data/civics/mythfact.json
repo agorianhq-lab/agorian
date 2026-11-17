@@ -1,0 +1,262 @@
+[
+ [
+  "Australians vote directly for the Prime Minister.",
+  false,
+  "Voters elect their local member. The Prime Minister is the leader of the party or coalition that has the support of most members in the House of Representatives."
+ ],
+ [
+  "Voting in federal elections is optional once you turn 18.",
+  false,
+  "Enrolling and voting are compulsory for eligible citizens aged 18 and over. Not voting without a valid reason brings a fine."
+ ],
+ [
+  "The Governor-General is elected by the Australian people.",
+  false,
+  "The Governor-General is appointed by the King on the advice of the Prime Minister."
+ ],
+ [
+  "The Prime Minister can sack a judge whose decisions the government dislikes.",
+  false,
+  "Federal judges can only be removed by both houses of Parliament for proved misbehaviour or incapacity. That protects the independence of the courts."
+ ],
+ [
+  "A referendum passes if more than half of all Australian voters say Yes.",
+  false,
+  "It needs a double majority: a national majority of voters and a majority of voters in at least four of the six states."
+ ],
+ [
+  "Local councils can make any law they like for their area.",
+  false,
+  "Councils only have the powers their state government gives them. States create councils and can dismiss one that is failing."
+ ],
+ [
+  "Australia has two levels of government, federal and state.",
+  false,
+  "There are three. Local councils are the third level, even though the Constitution does not mention them."
+ ],
+ [
+  "Parliament can change the Australian Constitution by passing a law.",
+  false,
+  "Only the people can change it, at a referendum. Parliament proposes the change; voters decide."
+ ],
+ [
+  "A person accused of a crime has to prove they are innocent.",
+  false,
+  "The prosecution must prove guilt. Everyone is presumed innocent until proven guilty."
+ ],
+ [
+  "Judges in Australia are elected.",
+  false,
+  "Judges are appointed by the executive government, not elected. That is one reason they are not swayed by popularity."
+ ],
+ [
+  "If you believe a law is unfair, you are allowed to break it.",
+  false,
+  "The rule of law means every person must follow the law. You can campaign to change a law, but not ignore it."
+ ],
+ [
+  "Only people born in Australia can be Australian citizens.",
+  false,
+  "People become citizens by birth, by descent from an Australian parent, or by applying after migrating here."
+ ],
+ [
+  "A party needs more than half of all votes in Australia to form government.",
+  false,
+  "Government is formed by winning seats, not the national vote. A party or coalition needs at least 76 of the 150 seats in the House of Representatives."
+ ],
+ [
+  "Independents cannot be elected because they do not belong to a party.",
+  false,
+  "Anyone eligible can stand. Several independents sit in the current federal Parliament."
+ ],
+ [
+  "The Opposition has no job to do until the next election.",
+  false,
+  "The Opposition questions ministers, scrutinises bills and offers an alternative government. That is part of keeping government accountable."
+ ],
+ [
+  "Australia became a nation on 26 January 1788.",
+  false,
+  "Federation was 1 January 1901, when the six colonies joined under the Constitution. 1788 was the arrival of the First Fleet at Sydney Cove."
+ ],
+ [
+  "You have to be 21 to vote in Australia.",
+  false,
+  "The voting age has been 18 since 1973. You can enrol at 16 or 17 so you are ready."
+ ],
+ [
+  "A Member of Parliament only has to listen to people who voted for them.",
+  false,
+  "An MP represents everyone in their electorate, whoever they voted for. Anyone can contact them."
+ ],
+ [
+  "Freedom of speech means you can say anything without legal consequences.",
+  false,
+  "Australians can criticise the government freely, but laws still cover threats, defamation and racial vilification."
+ ],
+ [
+  "Equity means treating everyone exactly the same.",
+  false,
+  "That is equality. Equity gives people different help depending on what they need, so everyone gets a fair chance to take part."
+ ],
+ [
+  "The Prime Minister is described in the Australian Constitution.",
+  false,
+  "The Constitution never mentions the Prime Minister. The role comes from tradition and convention."
+ ],
+ [
+  "Once Parliament passes a law, it can never be changed.",
+  false,
+  "Parliament can amend or repeal any law it has made. Laws change as society changes."
+ ],
+ [
+  "Police decide whether a person is guilty.",
+  false,
+  "Police investigate and charge. Courts decide guilt. That is the separation of powers at work."
+ ],
+ [
+  "The King personally approves every Australian law.",
+  false,
+  "Royal assent is given by the Governor-General, or a state Governor, and it is a formality once Parliament has passed the bill."
+ ],
+ [
+  "The 1967 referendum gave Aboriginal and Torres Strait Islander people the right to vote.",
+  false,
+  "The right to enrol and vote federally came in 1962. The 1967 referendum changed how First Nations people were counted and let the federal Parliament make laws for them."
+ ],
+ [
+  "Only citizens can take part in civic action like petitions or community meetings.",
+  false,
+  "Anyone can sign a petition, attend a meeting or contact an MP. Voting is the one that is reserved for citizens."
+ ],
+ [
+  "Local councils collect income tax.",
+  false,
+  "Councils raise money mainly from rates on property, plus fees and grants. Income tax is collected by the federal government."
+ ],
+ [
+  "Everyone in Australia gets a free lawyer for any court case.",
+  false,
+  "Legal aid is available for some people and some cases, mostly based on income and the seriousness of the matter. Access to justice is still a work in progress."
+ ],
+ [
+  "Being popular with everyone is one of the five characteristics of an effective law.",
+  false,
+  "The five are: reflects society's values, enforceable, known, clear and understood, and stable. No law is popular with everyone."
+ ],
+ [
+  "The Australian Constitution came into effect on 1 January 1901.",
+  true,
+  "That is Federation, when six separate colonies became one nation with one federal Parliament."
+ ],
+ [
+  "Only 8 of the 45 proposed changes to the Constitution have ever been approved.",
+  true,
+  "The double majority is hard to achieve. The most recent referendum, in 2023, was the 45th proposal."
+ ],
+ [
+  "The 1967 referendum recorded the highest Yes vote in Australian history, over 90 per cent.",
+  true,
+  "Nearly 91 per cent of voters said Yes, and it passed in every state."
+ ],
+ [
+  "A party or coalition needs at least 76 of the 150 seats to govern in its own right.",
+  true,
+  "76 is the first number past half. A party with 75 would need support from the crossbench."
+ ],
+ [
+  "If a state law and a federal law clash in an area both can make laws about, the federal law wins.",
+  true,
+  "Section 109 of the Constitution says so. The state law is invalid to the extent of the clash."
+ ],
+ [
+  "First Nations peoples have lived on and cared for Country for at least 65,000 years.",
+  true,
+  "Archaeological evidence from sites such as Madjedbebe in the Northern Territory supports this."
+ ],
+ [
+  "Australians aged 18 and over can be called to serve on a jury.",
+  true,
+  "Juries are drawn from the electoral roll. Serving if selected is a responsibility of citizenship."
+ ],
+ [
+  "Victoria was the first place in the world to make wearing seatbelts compulsory.",
+  true,
+  "The law came in in 1970 and road deaths fell. Other states and countries copied it."
+ ],
+ [
+  "You can be an Australian citizen and a citizen of another country at the same time.",
+  true,
+  "Dual citizenship has been allowed since 2002. Many Australians hold two passports."
+ ],
+ [
+  "Federal elections for the House of Representatives must be held at least every three years.",
+  true,
+  "Three years is the maximum term. A government can call an election earlier."
+ ],
+ [
+  "The Australian Electoral Commission runs federal elections and is independent of the government of the day.",
+  true,
+  "Independence matters so that the people in power cannot run the election in their own favour."
+ ],
+ [
+  "The High Court can declare a law invalid if it goes against the Constitution.",
+  true,
+  "That is the judiciary checking the legislature, part of the separation of powers."
+ ],
+ [
+  "Anyone can sit in the public gallery at Parliament House and watch a debate.",
+  true,
+  "Parliament is open to the public, including Question Time, when ministers must answer questions about their decisions."
+ ],
+ [
+  "Most Australians are represented by three levels of government at once.",
+  true,
+  "You live in a federal electorate, a state electorate and, almost everywhere, a local council area."
+ ],
+ [
+  "Local councils are not mentioned in the Australian Constitution.",
+  true,
+  "Councils exist under state laws. Proposals to add them to the Constitution failed at referendums in 1974 and 1988."
+ ],
+ [
+  "A bill must pass both houses of federal Parliament before it can become law.",
+  true,
+  "After the House of Representatives and the Senate agree, the Governor-General gives royal assent."
+ ],
+ [
+  "A government with fewer than half the seats can still govern.",
+  true,
+  "A minority government relies on crossbench members agreeing to support it on key votes."
+ ],
+ [
+  "In a House of Representatives election you number every box on the ballot paper.",
+  true,
+  "This is preferential voting. If your first choice is knocked out, your vote moves to your next preference."
+ ],
+ [
+  "Australia is both a democracy and a monarchy.",
+  true,
+  "It is a constitutional monarchy: the King is head of state, but the people elect the Parliament that governs."
+ ],
+ [
+  "Courts are usually open to the public.",
+  true,
+  "Open justice lets people see that trials are fair. There are exceptions, such as cases involving children."
+ ],
+ [
+  "A judge must step aside from a case involving a relative.",
+  true,
+  "A judge with a personal connection cannot be seen as impartial, so another judge hears the case. This protects fairness."
+ ],
+ [
+  "A law can be fair and clear but still fail if people do not know it exists.",
+  true,
+  "Being known is one of the five characteristics of an effective law. Nobody can follow a rule they have never heard of."
+ ],
+ [
+  "Ministers must answer questions from other MPs in Parliament every sitting day.",
+  true,
+  "Question Time is one way Parliament holds the government accountable for its decisions."
+ ]
+]

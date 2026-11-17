@@ -3,17 +3,18 @@
 
     python3 tools/validate.py          # exit 1 and list every problem if anything is wrong
 
-Checks data/bank.json (questions and terms), data/shortq.json, data/sources.json, and that every
-image key referenced by the data, the page or the timeline exists in img/. build.py runs this first
-and refuses to build on errors, and the GitHub workflow runs it on every push.
+Checks every course in courses/: its bank (questions and terms), short answers, sources or scenarios,
+Myth or fact statements, interactives, Spot the error passages, Explain it prompts and trusted links, and
+that every image key referenced by the data, the page or the timeline exists in img/. build.py runs this first and refuses to build on errors, and the GitHub workflow runs it on every push.
 """
-import json, os, re, sys
+import json, os, re, sys, glob
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-UNITS = {'Medieval Europe', 'Shogunate Japan', 'Skills and concepts'}
+UNITS = set()
+TOPICS = set()
 TYPES = {'mc', 'ms', 'gaps', 'text', 'short', 'extended'}
 errors = []
-SOURCE_IMGS = set()
+SOURCE_IMGS = set()  # images named by course files and data; counted as used
 
 def err(where, msg): errors.append(f'{where}: {msg}')
 def nonempty(s): return isinstance(s, str) and s.strip() != ''
@@ -25,7 +26,11 @@ def load(rel):
         err(rel, f'cannot parse: {e}'); return None
 
 def images():
-    return {f[:-4] for f in os.listdir(os.path.join(ROOT, 'img')) if f.endswith('.jpg')}
+    # shared artwork in img/ plus each course's own folder, img/<course>/
+    out = set()
+    for d, _, files in os.walk(os.path.join(ROOT, 'img')):
+        out |= {f.rsplit('.', 1)[0] for f in files if f.endswith(('.jpg', '.svg'))}
+    return out
 
 def check_question(q, imgs):
     w = f"bank.json question {q.get('id', '?')}"
@@ -62,8 +67,8 @@ def check_question(q, imgs):
     elif t == 'extended':
         if q.get('answer') is not None: err(w, 'extended prompts carry no answer')
 
-def check_bank(imgs):
-    b = load('data/bank.json')
+def check_bank(imgs, rel):
+    b = load(rel)
     if b is None: return
     qs, terms = b.get('questions'), b.get('terms')
     if not isinstance(qs, list) or not isinstance(terms, list): err('bank.json', 'needs "questions" and "terms" lists'); return
@@ -78,10 +83,11 @@ def check_bank(imgs):
     for n in {x for x in names if names.count(x) > 1}: err('bank.json', f'duplicate term {n!r}')
     for t in terms:
         if not nonempty(t.get('term')) or not nonempty(t.get('definition')): err(f"bank.json term {t.get('term', '?')!r}", 'term and definition must be non-empty')
-    print(f'bank.json: {len(qs)} questions, {len(terms)} terms')
+        if t.get('unit') is not None and t['unit'] not in UNITS: err(f"bank.json term {t.get('term')!r}", f"unit {t['unit']!r} not in {sorted(UNITS)}")
+    print(f'{rel}: {len(qs)} questions, {len(terms)} terms')
 
-def check_shortq(imgs):
-    d = load('data/shortq.json')
+def check_shortq(imgs, rel):
+    d = load(rel)
     if d is None: return
     if not isinstance(d, list): err('shortq.json', 'must be a list'); return
     ids = [s.get('id') for s in d]
@@ -102,10 +108,10 @@ def check_shortq(imgs):
                 SOURCE_IMGS.add(src['img'])
                 if src['img'] not in imgs: err(w, f"source image {src['img']!r} missing from img/")
             elif not nonempty(src.get('text')): err(w, 'source needs img or text')
-    print(f'shortq.json: {len(d)} questions')
+    print(f'{rel}: {len(d)} questions')
 
-def check_sources(imgs):
-    d = load('data/sources.json')
+def check_sources(imgs, rel):
+    d = load(rel)
     if d is None: return
     srcs = d.get('sources'); chk = d.get('checklist')
     if not isinstance(srcs, list) or not isinstance(chk, list) or not chk: err('sources.json', 'needs "sources" and a non-empty "checklist"'); return
@@ -127,10 +133,172 @@ def check_sources(imgs):
                 if not nonempty(q.get('q')) or not nonempty(q.get('x')): err(w, f'quick question {i}: q and x must be non-empty')
                 if not isinstance(o, list) or not 2 <= len(o) <= 6 or not all(nonempty(x) for x in o): err(w, f'quick question {i}: 2 to 6 non-empty options')
                 elif not isinstance(a, int) or not 0 <= a < len(o): err(w, f'quick question {i}: answer index out of range')
-        for k in ('write', 'model'):
-            if not nonempty(s.get(k)): err(w, f'{k} is blank')
-        if not isinstance(s.get('mark'), list) or not s['mark']: err(w, 'mark points must be a non-empty list')
-    print(f'sources.json: {len(srcs)} sources')
+        if any(k in s for k in ('write', 'model', 'mark')):  # a timed write is optional; if present it must be complete
+            for k in ('write', 'model'):
+                if not nonempty(s.get(k)): err(w, f'{k} is blank')
+            if not isinstance(s.get('mark'), list) or not s['mark']: err(w, 'mark points must be a non-empty list')
+    print(f'{rel}: {len(srcs)} sources')
+
+def check_mythfact(rel):
+    d = load(rel)
+    if d is None: return
+    if not isinstance(d, list) or not d: err(rel, 'must be a non-empty list'); return
+    seen = set()
+    for i, x in enumerate(d):
+        w = f'{rel} item {i + 1}'
+        if not (isinstance(x, list) and len(x) == 3 and nonempty(x[0]) and isinstance(x[1], bool) and nonempty(x[2])): err(w, 'must be [statement, true/false, why]'); continue
+        if x[0] in seen: err(w, 'duplicate statement')
+        seen.add(x[0])
+        if len(x[0]) > 120: err(w, f'statement is {len(x[0])} characters; keep it under 120 so it fits the tile')
+    myths = sum(1 for x in d if isinstance(x, list) and len(x) == 3 and x[1] is False)
+    print(f'{rel}: {len(d)} statements, {myths} myths')
+
+def check_play(rel):
+    d = load(rel)
+    if d is None: return
+    items = d.get('items')
+    if not isinstance(items, list) or not items: err(rel, 'needs a non-empty "items" list'); return
+    ids = [p.get('id') for p in items]
+    for i in {x for x in ids if ids.count(x) > 1}: err(rel, f'duplicate id {i}')
+    for p in items:
+        w = f"{rel} {p.get('id', '?')}"
+        if not nonempty(p.get('title')) or not nonempty(p.get('blurb')): err(w, 'title and blurb must be non-empty')
+        k = p.get('kind')
+        if k == 'sort':
+            bins = p.get('bins')
+            if not isinstance(bins, list) or len(bins) != 3: err(w, 'sort needs three bins'); continue
+            for it in p.get('items', []):
+                if not (isinstance(it, list) and len(it) == 3 and nonempty(it[0]) and isinstance(it[1], int) and 0 <= it[1] < 3 and nonempty(it[2])): err(w, f'bad sort item {it!r}')
+            if len(p.get('items', [])) < 12: err(w, 'sort needs at least 12 items')
+        elif k == 'law':
+            for col in p.get('columns', []):
+                if not nonempty(col.get('label')) or not isinstance(col.get('options'), list) or len(col['options']) < 2: err(w, f"column {col.get('id')!r} needs a label and at least two options")
+                for o in col.get('options', []):
+                    if not nonempty(o.get('t')) or not nonempty(o.get('why')): err(w, f"option {o.get('t')!r} needs t and why")
+        elif k not in ('referendum', 'government', 'spot'): err(w, f'unknown kind {k!r}')
+    print(f'{rel}: {len(items)} interactives')
+
+def check_errors(rel):
+    # Spot the error: passages with two or three planted mistakes, each carrying its correction and the reason
+    d = load(rel)
+    if d is None: return
+    items = d.get('items')
+    if not nonempty(d.get('intro')) or not isinstance(items, list) or not items: err(rel, 'needs an "intro" and a non-empty "items" list'); return
+    ids = [p.get('id') for p in items]
+    for i in {x for x in ids if ids.count(x) > 1}: err(rel, f'duplicate id {i}')
+    for p in items:
+        w = f"{rel} {p.get('id', '?')}"
+        if not re.fullmatch(r'[a-z0-9-]+', str(p.get('id'))): err(w, 'id must be lower-case letters, digits and hyphens')
+        if p.get('unit') not in UNITS: err(w, f"unit {p.get('unit')!r} not in {sorted(UNITS)}")
+        for k in ('topic', 'title'):
+            if not nonempty(p.get(k)): err(w, f'{k} is blank')
+        if p.get('setup') is not None and not nonempty(p.get('setup')): err(w, 'setup must be text or left out')
+        segs = p.get('segments')
+        if not isinstance(segs, list) or len(segs) < 4: err(w, 'needs at least four segments'); continue
+        planted = 0
+        for i, s in enumerate(segs):
+            if not nonempty(s.get('t')): err(w, f'segment {i}: t is blank')
+            if 'fix' in s or 'why' in s:
+                planted += 1
+                if not nonempty(s.get('fix')) or not nonempty(s.get('why')): err(w, f'segment {i}: a planted error needs both fix and why')
+        if not 2 <= planted <= 3: err(w, f'{planted} planted errors; the intro promises two or three')
+    print(f'{rel}: {len(items)} passages, {sum(1 for p in items for s in p.get("segments", []) if "fix" in s)} planted errors')
+
+def check_explain(rel):
+    # Explain it in 25 words: a prompt, the three ideas a complete answer needs, and a model of about 25 words
+    d = load(rel)
+    if d is None: return
+    items = d.get('items')
+    if not nonempty(d.get('intro')) or not isinstance(items, list) or not items: err(rel, 'needs an "intro" and a non-empty "items" list'); return
+    ids = [p.get('id') for p in items]
+    for i in {x for x in ids if ids.count(x) > 1}: err(rel, f'duplicate id {i}')
+    for p in items:
+        w = f"{rel} {p.get('id', '?')}"
+        if not re.fullmatch(r'[a-z0-9-]+', str(p.get('id'))): err(w, 'id must be lower-case letters, digits and hyphens')
+        if p.get('unit') not in UNITS: err(w, f"unit {p.get('unit')!r} not in {sorted(UNITS)}")
+        for k in ('topic', 'q', 'model'):
+            if not nonempty(p.get(k)): err(w, f'{k} is blank')
+        must = p.get('must')
+        if not isinstance(must, list) or len(must) != 3 or not all(nonempty(m) for m in must): err(w, 'must needs exactly three non-empty ideas')
+        n = len(str(p.get('model', '')).split())
+        if n > 30: err(w, f'model is {n} words; keep it to about 25')
+    print(f'{rel}: {len(items)} prompts')
+
+def check_links(c, rel, imgs):
+    L = c.get('links')
+    if L is None: return
+    items = L.get('items')
+    if not nonempty(L.get('title')) or not isinstance(items, list) or not items: err(rel, 'links needs a title and a non-empty items list'); return
+    urls = [x.get('url') for x in items]
+    for u in {x for x in urls if urls.count(x) > 1}: err(rel, f'links: duplicate url {u}')
+    for x in items:
+        w = f"{rel} link {x.get('name', '?')!r}"
+        for k in ('name', 'by'):
+            if not nonempty(x.get(k)): err(w, f'{k} is blank')
+        if not nonempty(x.get('use')) and not nonempty(x.get('blurb')): err(w, 'needs a one-sentence "use" (what it is best for)')
+        tp = x.get('topics')
+        if tp is not None:
+            if not isinstance(tp, list) or not tp or not all(nonempty(t) for t in tp): err(w, 'topics must be a non-empty list')
+            else:
+                for t in tp:
+                    if t not in TOPICS: err(w, f'topic {t!r} is not in the bank')
+        if not re.fullmatch(r'https://[a-z0-9.-]+(/[^\s"<>]*)?', str(x.get('url'))): err(w, 'url must be https and contain no spaces or quotes')
+        if x.get('icon') is not None and not re.fullmatch(r'[a-z0-9-]+', str(x['icon'])): err(w, 'icon must be a symbol id (letters, digits, hyphens)')
+        if x.get('col') is not None and not re.fullmatch(r'var\(--[a-z-]+\)|#[0-9A-Fa-f]{3,8}', str(x['col'])): err(w, 'col must be a var(--token) or a hex colour')
+        if x.get('img'):
+            SOURCE_IMGS.add(x['img'])
+            if x['img'] not in imgs: err(w, f"logo image {x['img']!r} missing from img/")
+
+def check_course(path, imgs):
+    global UNITS
+    c = load(os.path.relpath(path, ROOT))
+    if c is None: return
+    rel = os.path.relpath(path, ROOT)
+    for k in ('id', 'out', 'subtitle', 'description', 'data', 'units', 'hero', 'welcome', 'breakdown', 'modes', 'verdicts'):
+        if k not in c: err(rel, f'missing {k!r}')
+    UNITS = {u.get('name') for u in c.get('units', [])}
+    named = [u.get('img') for u in c.get('units', [])] + [m.get('img') for m in c.get('modes', [])] + [c.get('hero', {}).get('img')] + list((c.get('resultsImg') or {}).values())
+    for u in c.get('units', []):
+        if u.get('cls') not in ('eu', 'jp', 'sk'): err(rel, f"unit {u.get('name')!r}: cls must be eu, jp or sk (the three colour slots)")
+    for k in named:
+        if k: SOURCE_IMGS.add(k)
+        if k and k not in imgs: err(rel, f"image {k!r} missing from img/")
+    if not isinstance(c.get('verdicts'), list) or len(c.get('verdicts', [])) != 4: err(rel, 'verdicts must be four strings')
+    d = c.get('data', {})
+    global TOPICS
+    TOPICS = {q.get('topic') for q in (load(d['bank']) or {}).get('questions', [])} if d.get('bank') else set()
+    if d.get('bank'): check_bank(imgs, d['bank'])
+    else: err(rel, 'data.bank is required')
+    if d.get('shortq'): check_shortq(imgs, d['shortq'])
+    if d.get('sources'): check_sources(imgs, d['sources'])
+    if d.get('mythfact'): check_mythfact(d['mythfact'])
+    if d.get('play'): check_play(d['play'])
+    if d.get('errors'): check_errors(d['errors'])
+    if d.get('explain'): check_explain(d['explain'])
+    check_links(c, rel, imgs)
+    if c.get('tilePos') not in (None, 'header', 'hero'): err(rel, 'tilePos must be header or hero')
+    if c.get('termImg') is not None:
+        terms = {t.get('term') for t in (load(d['bank']) or {}).get('terms', [])} if d.get('bank') else set()
+        seen = set()
+        for g in c['termImg']:
+            w = f"{rel} termImg {g.get('img', '?')!r}"
+            if not g.get('img'): err(w, 'needs an img')
+            else:
+                SOURCE_IMGS.add(g['img'])
+                if g['img'] not in imgs: err(w, f"image {g['img']!r} missing from img/")
+            if not isinstance(g.get('terms'), list) or not g['terms']: err(w, 'needs a non-empty terms list'); continue
+            for t in g['terms']:
+                if t not in terms: err(w, f'term {t!r} is not in the bank')
+                if t in seen: err(w, f'term {t!r} mapped twice')
+                seen.add(t)
+    if 'inline' in (c.get('welcome') or {}) and not isinstance(c['welcome']['inline'], bool): err(rel, 'welcome.inline must be true or false')
+    for k in ('badges', 'board'):
+        if k in c and not isinstance(c[k], bool): err(rel, f'{k} must be true or false')
+    if 'classCode' in (c.get('challenge') or {}) and not isinstance(c['challenge']['classCode'], bool): err(rel, 'challenge.classCode must be true or false')
+    if c.get('tile') == 'mythfact' and not d.get('mythfact'): err(rel, 'tile is mythfact but data.mythfact is not set')
+    if d.get('play'):
+        p = load(d['play']) or {}
+        if any(x.get('kind') == 'spot' for x in p.get('items', [])) and not d.get('errors'): err(rel, 'play.json has a spot interactive but data.errors is not set')
 
 def check_images(imgs):
     page = open(os.path.join(ROOT, 'src', 'index.html'), encoding='utf-8').read()
@@ -150,7 +318,9 @@ def check_images(imgs):
 
 def main():
     imgs = images()
-    check_bank(imgs); check_shortq(imgs); check_sources(imgs); check_images(imgs)
+    for path in sorted(glob.glob(os.path.join(ROOT, 'courses', '*.json'))):
+        if not path.endswith('.variants.json'): check_course(path, imgs)
+    check_images(imgs)
     if errors:
         print(f'\n{len(errors)} problem(s):'); [print(' -', e) for e in errors]; return 1
     print('all checks passed'); return 0
