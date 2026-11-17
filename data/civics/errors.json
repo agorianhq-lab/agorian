@@ -172,7 +172,7 @@
     {"t": "With the most seats, Harbour has a majority and will govern on its own.", "fix": "Seventy seats is fewer than the 76 needed for a majority. Harbour could form a minority government if enough crossbench members agree to support it.", "why": "Winning the most seats is not the same as winning more than half of them."},
     {"t": "If Harbour forms government, the Plains Party becomes the Opposition."},
     {"t": "The Coastal Alliance members and the independents sit on the crossbench."},
-    {"t": "The Harbour leader becomes Prime Minister automatically on election night.", "fix": "A leader becomes Prime Minister once their party can show it has the support of a majority in the House. In a hung parliament that takes negotiation with the crossbench.", "why": "Nothing happens automatically. The Governor-General commissions the person who can command the House's support."},
+    {"t": "The Harbour leader becomes Prime Minister automatically once the count is finished.", "fix": "A leader becomes Prime Minister once their party can show it has the support of a majority in the House. In a hung parliament that takes negotiation with the crossbench.", "why": "Nothing happens automatically. The Governor-General commissions the person who can command the House's support."},
     {"t": "Crossbench members can promise to back the government in Parliament without becoming part of it."}
    ]
   }

@@ -40,6 +40,8 @@ python3 build.py --inline [--course X] # one self-contained file (images and fon
 
 Adding a course: write `courses/<id>.json` (copy `civics.json`), point it at its data files, and build with `--course <id>`. Units take one of three colour slots (`eu`, `jp`, `sk`); a course can recolour the slots under `colours`.
 
+Scores and settings live in the browser's localStorage. History uses the original `agorian:` keys; every other course gets its own namespace (`agorian:<id>:`), because all courses share the agorian.au origin and question ids overlap.
+
 Per-course switches in the course file: `badges` (the badge row on the home page and the badge toasts), `board` (the Clear your mistakes board: a question a viewer gets wrong stays on it until answered correctly twice in a row), `challenge.classCode` (the Challenge opens with a lobby where a class code typed from the board gives everyone the same 20 questions in the same order; results carry the code and the attempt number), and `links` (the Trusted sites section, each entry `name`, `url`, `by`, `icon` and `col` for the badge, `topics` from the bank, and a one-sentence `use` that completes "Best for …"; an `img` key shows a supplied logo instead of the drawn icon). History has all four off so its page is unchanged.
 
 Branches. Work on `staging`. **Anything pushed to `main` goes live within about two minutes**, including after the site has been unpublished in the Pages settings, because a commit to the publishing source republishes it. Push to `main` only to publish.

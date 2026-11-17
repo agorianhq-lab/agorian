@@ -909,10 +909,10 @@
    "explanation": "Rights include voting, standing for election, a passport and help overseas. Responsibilities include obeying laws, enrolling and voting, and jury service.",
    "stimulus": null,
    "options": [
-    "Applying for an Australian passport",
+    "Holding an Australian passport",
     "Obeying Australian laws",
     "Serving on a jury if selected",
-    "Enrolling to vote when eligible"
+    "Enrolling and voting once you turn 18"
    ],
    "answer": [
     0
@@ -950,7 +950,7 @@
    "stimulus": null,
    "options": [
     "Eligible citizens must enrol and vote",
-    "Citizens vote directly on every law",
+    "Every citizen gets a vote on each new law",
     "Only members of political parties may vote",
     "Voting is optional for citizens over 18"
    ],
@@ -1466,7 +1466,7 @@
    "skill": "Recall",
    "type": "mc",
    "question": "What is the difference between equality and equity?",
-   "explanation": "Equity can be needed to make equality real, for example an interpreter for someone who cannot follow proceedings in English.",
+   "explanation": "Equity can be needed to make equality real, for example large-print documents or a hearing loop for someone who needs them.",
    "stimulus": null,
    "options": [
     "Equality applies in courts; equity applies in Parliament",
@@ -1686,7 +1686,7 @@
    "skill": "Recall",
    "type": "mc",
    "question": "Who usually becomes Prime Minister?",
-   "explanation": "Voters do not elect the Prime Minister directly.",
+   "explanation": "There is no separate national vote for Prime Minister.",
    "stimulus": null,
    "options": [
     "The leader of the Opposition",
@@ -1771,7 +1771,7 @@
    "options": [
     "A party must win every seat to form government",
     "Only the Senate can choose the Prime Minister",
-    "Voters elect the Prime Minister directly",
+    "The Prime Minister is chosen by a separate national vote",
     "Winning the most seats is not the same as having majority support in the House of Representatives"
    ],
    "answer": [

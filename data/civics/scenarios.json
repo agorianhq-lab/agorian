@@ -126,7 +126,7 @@
      "q": "Why is the local council the right body to approach?",
      "o": [
       "Local parks and recreation facilities on council land are council responsibilities",
-      "The federal government manages every park in Australia",
+      "Parks everywhere in Australia are run from Canberra",
       "Only state MPs can approve new buildings",
       "Councils decide where schools are built"
      ],
@@ -276,7 +276,7 @@
    "id": "magistrates",
    "unit": "Laws and justice",
    "caption": "Scenario 6. A morning at the Magistrates' Court",
-   "text": "Situation A. A duty lawyer gives free advice to a person who cannot afford a lawyer, so they understand the charge before their hearing. Situation B. A magistrate realises she coached the accused's football team for three years and asks another magistrate to hear the case. Situation C. A well-known footballer and a shop assistant are each fined the same amount for the same parking offence. Situation D. The court in a regional town closes, so residents must now travel 300 kilometres to attend a hearing.",
+   "text": "Situation A. The court puts its forms and a plain-English guide to the hearing process online, so a person representing themselves can follow each step. Situation B. A magistrate realises she coached the accused's football team for three years and asks another magistrate to hear the case. Situation C. A well-known footballer and a shop assistant are each fined the same amount for the same parking offence. Situation D. The court in a regional town closes, so residents must now travel 300 kilometres to attend a hearing.",
    "qs": [
     {
      "q": "Which principle of justice is strengthened in Situation A?",
@@ -287,7 +287,7 @@
       "Separation of powers"
      ],
      "a": 0,
-     "x": "Access means people can understand and use the legal system whatever their circumstances. Free advice removes a barrier for someone who cannot pay."
+     "x": "Access means people can understand and use the legal system whatever their circumstances. Plain-English information removes a barrier for someone who is representing themselves."
     },
     {
      "q": "In Situation B, the magistrate is protecting which principle?",

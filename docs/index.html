@@ -306,7 +306,7 @@ input.text.right{border-color:var(--ok);background:var(--ok-bg)} input.text.wron
 .rubric small{color:var(--muted);display:block;font-size:13px;line-height:1.3}
 @media (max-width:600px){.rubric{grid-template-columns:repeat(2,1fr)}}
 .marks{display:inline-block;font-family:var(--display);font-weight:700;padding:2px 10px;border-radius:999px;font-size:15px}
-.marks.full{background:var(--ok-bg);color:var(--ok)} .marks.weak{background:var(--bad-bg);color:var(--bad)}
+.marks.full{background:var(--ok-bg);color:color-mix(in srgb,var(--ok) 72%,#000)} .marks.weak{background:var(--bad-bg);color:var(--bad)}
 .sample{border:1px solid var(--line);border-radius:10px;padding:14px 16px;display:grid;gap:8px;background:var(--bg)}
 .sample.weak{border-color:var(--bad);border-left-width:5px}
 .sample.full{border-color:var(--ok);border-left-width:5px}
@@ -630,7 +630,7 @@ footer{margin-top:40px;font-size:13px;color:var(--muted)}
 .bins{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:8px}.bins button{padding:16px 10px;border-radius:12px;border:2px solid var(--navy);background:var(--surface);font-weight:700;font-size:17px;cursor:pointer;display:grid;gap:4px;transition:transform .12s,background .12s}.bins button:hover{transform:translateY(-2px);background:color-mix(in srgb,var(--navy) 8%,var(--surface))}.bins button small{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}.bins button.right{background:var(--ok-bg);border-color:var(--ok);color:var(--ok)}.bins button.wrong{background:var(--bad-bg);border-color:var(--bad);color:var(--bad)}.bins button:disabled{cursor:default}@media (max-width:560px){.bins{grid-template-columns:1fr}}
 .sortfb{min-height:3.2em;font-size:15px;line-height:1.45;margin-top:10px;color:var(--ink)}.sortfb b{color:var(--navy)}
 .simgrid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:20px;align-items:start}@media (max-width:800px){.simgrid{grid-template-columns:1fr}}
-.tilemap{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(4,78px);gap:8px}.tile{border-radius:12px;display:grid;place-items:center;text-align:center;color:#fff;font-weight:700;transition:background .25s;position:relative;border:2px solid transparent}.tile.yes{background:var(--ok)}.tile.no{background:var(--bad)}.tile .pc{font-family:var(--display);font-size:22px;line-height:1}.tile .nm{font-size:11px;letter-spacing:.06em;text-transform:uppercase;opacity:.9}.tile.terr{opacity:.85;border-style:dashed;border-color:rgba(255,255,255,.6)}
+.tilemap{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(4,78px);gap:8px}.tile{border-radius:12px;display:grid;place-items:center;text-align:center;color:#fff;font-weight:700;transition:background .25s;position:relative;border:2px solid transparent}.tile.yes{background:var(--ok)}.tile.no{background:var(--bad)}.tile .pc{font-family:var(--display);font-size:22px;line-height:1}.tile .nm{font-size:12px;letter-spacing:.06em;text-transform:uppercase}.tile.yes{background:color-mix(in srgb,var(--ok) 86%,#000)}@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .tile{color:#10211A}:root:not([data-theme="light"]) .btn.accent{color:#141A17}:root:not([data-theme="light"]) .tile.yes{background:var(--ok)}:root:not([data-theme="light"]) .tile.terr{border-color:rgba(0,0,0,.45)}:root:not([data-theme="light"]) .marks.full{color:var(--ok)}}:root[data-theme="dark"] .tile{color:#10211A}:root[data-theme="dark"] .btn.accent{color:#141A17}:root[data-theme="dark"] .tile.yes{background:var(--ok)}:root[data-theme="dark"] .tile.terr{border-color:rgba(0,0,0,.45)}:root[data-theme="dark"] .marks.full{color:var(--ok)}.tile.terr{border-style:dashed;border-color:rgba(255,255,255,.6);background-image:repeating-linear-gradient(45deg,rgba(0,0,0,.14) 0 6px,transparent 6px 12px)}
 .sliders{display:grid;gap:8px}.sliders label{display:grid;grid-template-columns:52px 1fr 48px;gap:10px;align-items:center;font-size:14px}.sliders input[type=range]{width:100%;accent-color:var(--navy)}.sliders .v{font-variant-numeric:tabular-nums;text-align:right;font-weight:700}
 .verdict{border-radius:12px;padding:14px 16px;border:2px solid var(--navy);background:var(--surface);display:grid;gap:6px}.verdict.ok{border-color:var(--ok);background:var(--ok-bg)}.verdict.bad{border-color:var(--bad);background:var(--bad-bg)}.verdict b.big{font-family:var(--display);font-size:24px}
 .presets{display:flex;gap:8px;flex-wrap:wrap}.presets .btn{padding:6px 10px;font-size:13px}
@@ -833,9 +833,12 @@ const AUTO = new Set(['mc','ms','gaps','text']);
 
 // ---------- storage (per viewer, best effort) ----------
 const MEM = {};
+// Every course on agorian.au shares one origin, so each course other than History keeps its own namespace: a History
+// student's scores must not show up as Civics scores (question ids overlap). History keeps the original keys.
+const NS = 'agorian:'+(COURSE.id==='history'?'':COURSE.id+':');
 const store = {
-  get(k,d){ if(k in MEM) return MEM[k]; try{ const v=localStorage.getItem('agorian:'+k); return v?JSON.parse(v):d }catch(e){ return d } },
-  set(k,v){ MEM[k]=v; try{ localStorage.setItem('agorian:'+k, JSON.stringify(v)) }catch(e){} }
+  get(k,d){ if(k in MEM) return MEM[k]; try{ const v=localStorage.getItem(NS+k); return v?JSON.parse(v):d }catch(e){ return d } },
+  set(k,v){ MEM[k]=v; try{ localStorage.setItem(NS+k, JSON.stringify(v)) }catch(e){} }
 };
 let stats = store.get('stats', {}); // qid -> {a:attempts,c:correct}
 
