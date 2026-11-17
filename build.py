@@ -31,6 +31,7 @@ for q in b['questions']: q.pop('srcId',None); q.pop('source',None)
 b['shortq']=json.load(open(C['data']['shortq'],encoding='utf-8')) if C['data'].get('shortq') else []
 b['sources']=json.load(open(C['data']['sources'],encoding='utf-8')) if C['data'].get('sources') else {'sources':[],'checklist':[]}
 b['mythfact']=json.load(open(C['data']['mythfact'],encoding='utf-8')) if C['data'].get('mythfact') else []
+b['play']=json.load(open(C['data']['play'],encoding='utf-8')) if C['data'].get('play') else {'items':[]}
 esc=lambda j: json.dumps(j,ensure_ascii=False,separators=(',',':')).replace('</','<\\/')
 js=esc(b)
 out_dir='preview' if inline else C['out']
@@ -38,11 +39,12 @@ os.makedirs(out_dir,exist_ok=True)
 # images: the History page refers to its artwork by name throughout, so it takes every file; other courses take only what they name
 want=None if course_id=='history' else json.dumps(C)+json.dumps(b)
 img={}
-for f in sorted(glob.glob('img/*.jpg')):
-    k=os.path.basename(f)[:-4]
+for f in sorted(glob.glob('img/*.jpg')+glob.glob('img/*.svg')):
+    k=os.path.basename(f).rsplit('.',1)[0]
     if k.startswith('p-'): continue  # raw band sources, used only by the sandbox
     if want is not None and f'"{k}"' not in want: continue
-    if inline: img[k]='data:image/jpeg;base64,'+base64.b64encode(open(f,'rb').read()).decode()
+    mime='image/svg+xml' if f.endswith('.svg') else 'image/jpeg'
+    if inline: img[k]=f'data:{mime};base64,'+base64.b64encode(open(f,'rb').read()).decode()
     else: os.makedirs(f'{out_dir}/img',exist_ok=True); img[k]='img/'+os.path.basename(f); shutil.copy(f,f'{out_dir}/img/')
 has_timeline=any(m['id']=='timeline' for m in C['modes'])
 if has_timeline:

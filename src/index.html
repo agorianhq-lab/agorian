@@ -534,6 +534,31 @@ footer{margin-top:40px;font-size:13px;color:var(--muted)}
 .marksel button.on{background:var(--navy);color:#fff}
 /*__CHRONO_CSS__*/
 /*__COURSE_CSS__*/
+/* illustrated tiles that light up on hover (courses with tiles: glow) */
+[data-tiles="glow"] .mode{min-height:230px;padding-right:36%}[data-tiles="glow"] .mode .pic{inset:auto 10px 10px auto;width:38%;height:64%;background-size:contain;background-position:right bottom;background-repeat:no-repeat;opacity:.6;filter:saturate(.5);transform:scale(.96) rotate(0);transition:opacity .3s,transform .5s,filter .3s;pointer-events:none}
+[data-tiles="glow"] .mode:hover .pic{opacity:1;filter:none;transform:scale(1.06) rotate(-2deg)}
+[data-tiles="glow"] .mode:hover::after{background:linear-gradient(90deg,color-mix(in srgb,var(--m) 90%,transparent) 0%,color-mix(in srgb,var(--m) 78%,transparent) 48%,color-mix(in srgb,var(--m) 22%,transparent) 100%)}
+[data-tiles="glow"] .mode:hover{box-shadow:0 0 0 3px color-mix(in srgb,var(--m) 45%,transparent),0 22px 44px -16px color-mix(in srgb,var(--m) 75%,transparent)}
+[data-tiles="glow"] .mode .t,[data-tiles="glow"] .mode .n{max-width:none}
+[data-tiles="glow"] .upanel .photo{left:auto;width:42%;inset-block:10px 8px;right:10px;background-repeat:no-repeat;background-size:contain;background-position:right bottom;transition:transform .5s,filter .3s;filter:saturate(.6);transform-origin:right bottom}[data-tiles="glow"] .upanel:hover .photo{transform:scale(1.05);filter:none}[data-tiles="glow"] .upanel .photo::after{display:none}[data-tiles="glow"] .upanel{padding-right:46%}[data-tiles="glow"] .units.n3 .upanel .t{font-size:25px}
+@media (max-width:640px){[data-tiles="glow"] .mode{padding-right:30%;min-height:0}[data-tiles="glow"] .mode .pic{width:30%;height:50%;opacity:.45}[data-tiles="glow"] .upanel{padding-right:42%}}
+.mode.play{--m:var(--rose)}
+/* interactives */
+.playgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:14px}@media (max-width:900px){.playgrid{grid-template-columns:repeat(2,1fr)}}@media (max-width:560px){.playgrid{grid-template-columns:1fr}}
+.pcard{text-align:left;background:var(--surface);border:2px solid var(--navy);border-radius:var(--radius);padding:18px 18px 16px;cursor:pointer;display:grid;gap:8px;align-content:start;box-shadow:var(--shadow);transition:transform .15s,box-shadow .15s;--m:var(--navy)}.pcard:hover{transform:translateY(-3px);box-shadow:0 0 0 3px color-mix(in srgb,var(--m) 40%,transparent),var(--shadow)}
+.pcard .k{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;color:#fff;background:var(--m)}.pcard .k svg{width:26px;height:26px}.pcard b{font-family:var(--display);font-size:22px;color:var(--m)}.pcard span.n{font-size:15px;color:var(--muted)}.pcard .best{font-size:12px;color:var(--gold-ink);font-weight:700}
+.pcard.sort{--m:var(--teal)}.pcard.referendum{--m:var(--gold-ink)}.pcard.government{--m:var(--navy)}.pcard.law{--m:var(--plum)}
+.sortcard{text-align:center;padding:30px 20px}.sortcard .item{font-family:var(--display);font-size:clamp(22px,3vw,30px);line-height:1.25;min-height:2.6em;display:grid;place-items:center}
+.bins{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:8px}.bins button{padding:16px 10px;border-radius:12px;border:2px solid var(--navy);background:var(--surface);font-weight:700;font-size:17px;cursor:pointer;display:grid;gap:4px;transition:transform .12s,background .12s}.bins button:hover{transform:translateY(-2px);background:color-mix(in srgb,var(--navy) 8%,var(--surface))}.bins button small{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}.bins button.right{background:var(--ok-bg);border-color:var(--ok);color:var(--ok)}.bins button.wrong{background:var(--bad-bg);border-color:var(--bad);color:var(--bad)}.bins button:disabled{cursor:default}@media (max-width:560px){.bins{grid-template-columns:1fr}}
+.sortfb{min-height:3.2em;font-size:15px;line-height:1.45;margin-top:10px;color:var(--ink)}.sortfb b{color:var(--navy)}
+.simgrid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:20px;align-items:start}@media (max-width:800px){.simgrid{grid-template-columns:1fr}}
+.tilemap{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(4,78px);gap:8px}.tile{border-radius:12px;display:grid;place-items:center;text-align:center;color:#fff;font-weight:700;transition:background .25s;position:relative;border:2px solid transparent}.tile.yes{background:var(--ok)}.tile.no{background:var(--bad)}.tile .pc{font-family:var(--display);font-size:22px;line-height:1}.tile .nm{font-size:11px;letter-spacing:.06em;text-transform:uppercase;opacity:.9}.tile.terr{opacity:.85;border-style:dashed;border-color:rgba(255,255,255,.6)}
+.sliders{display:grid;gap:8px}.sliders label{display:grid;grid-template-columns:52px 1fr 48px;gap:10px;align-items:center;font-size:14px}.sliders input[type=range]{width:100%;accent-color:var(--navy)}.sliders .v{font-variant-numeric:tabular-nums;text-align:right;font-weight:700}
+.verdict{border-radius:12px;padding:14px 16px;border:2px solid var(--navy);background:var(--surface);display:grid;gap:6px}.verdict.ok{border-color:var(--ok);background:var(--ok-bg)}.verdict.bad{border-color:var(--bad);background:var(--bad-bg)}.verdict b.big{font-family:var(--display);font-size:24px}
+.presets{display:flex;gap:8px;flex-wrap:wrap}.presets .btn{padding:6px 10px;font-size:13px}
+.hemi{width:100%;height:auto;display:block}.seatrows{display:grid;gap:8px}.seatrow{display:grid;grid-template-columns:16px 1fr auto;gap:10px;align-items:center}.seatrow .sw{width:16px;height:16px;border-radius:4px}.seatrow .ctl{display:flex;gap:6px;align-items:center}.seatrow .ctl button{width:34px;height:34px;border-radius:9px;border:2px solid var(--navy);background:var(--surface);font-weight:700;cursor:pointer}.seatrow .ctl b{min-width:34px;text-align:center;font-variant-numeric:tabular-nums}
+.lawtext{font-family:var(--display);font-size:19px;line-height:1.45;padding:16px 18px;border-left:6px solid var(--gold);background:color-mix(in srgb,var(--gold) 10%,transparent);border-radius:0 10px 10px 0}.lawrows{display:grid;gap:12px;margin-top:12px}.lawrow{display:grid;gap:6px}.lawrow .eyebrow{margin:0}.lawrow .opts{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.lawrow .opts button{text-align:left;padding:10px 12px;border-radius:10px;border:2px solid var(--line);background:var(--surface);font-size:14px;line-height:1.35;cursor:pointer}.lawrow .opts button.on{border-color:var(--navy);box-shadow:inset 0 0 0 1px var(--navy);background:color-mix(in srgb,var(--navy) 7%,var(--surface))}@media (max-width:700px){.lawrow .opts{grid-template-columns:1fr}}
+.checks5{display:grid;gap:8px}.chk5{display:grid;grid-template-columns:28px 1fr;gap:10px;align-items:start;padding:10px 12px;border-radius:10px;background:var(--surface);border:1px solid var(--line)}.chk5 .ic{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;font-weight:700;color:#fff;background:var(--bad)}.chk5.ok .ic{background:var(--ok)}.chk5 b{display:block}.chk5 span{font-size:13.5px;color:var(--muted)}
 .mf{position:relative;width:420px;max-width:100%;display:grid;gap:8px;padding:14px 18px 12px;border:2px solid var(--navy);border-radius:14px;text-align:left;background:linear-gradient(135deg,color-mix(in srgb,var(--gold) 16%,var(--surface)),var(--surface) 70%);box-shadow:var(--shadow);overflow:hidden}
 .mf .lbl{display:flex;align-items:center;gap:8px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-ink);font-weight:700}.mf .lbl::after{content:"";flex:1;height:1px;background:color-mix(in srgb,var(--gold) 50%,transparent)}.mf .lbl .st{font-size:10.5px;color:var(--muted);letter-spacing:.04em;text-transform:none}
 .mf .s{font-family:var(--display);font-size:18px;line-height:1.3;color:var(--ink);font-weight:600}
@@ -592,6 +617,11 @@ footer{margin-top:40px;font-size:13px;color:var(--muted)}
   <symbol id="m-facts" viewBox="0 0 48 48"><path d="M24 4 C15 4 10 11 10 18 C10 25 15 27 16 32 H32 C33 27 38 25 38 18 C38 11 33 4 24 4 Z" fill="currentColor" opacity=".3"/><path d="M24 4 C15 4 10 11 10 18 C10 25 15 27 16 32 H32 C33 27 38 25 38 18 C38 11 33 4 24 4 Z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><path d="M18 37 H30 M20 42 H28" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/><path d="M24 12 V22 M24 26 V27" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/><path d="M5 10 L8 12 M43 10 L40 12 M24 0 V2" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" opacity=".7"/></symbol>
   <symbol id="ic-jp" viewBox="0 0 24 24"><g fill="currentColor"><rect x="5" y="8" width="2.4" height="13"/><rect x="16.6" y="8" width="2.4" height="13"/><rect x="3.5" y="6" width="17" height="2.2" rx=".5"/><rect x="6" y="11" width="12" height="1.8"/><path d="M2 4.5 Q12 2.5 22 4.5 L21.5 6.5 Q12 4.8 2.5 6.5 Z"/></g></symbol>
   <symbol id="ic-eu" viewBox="0 0 24 24"><g fill="currentColor"><path d="M3 21 V8 h3 V6 h2 v2 h2 V6 h2 v2 h2 V6 h2 v2 h2 V6 h2 v2 h1 v13 z M10 21 v-5 a2 2 0 0 1 4 0 v5 z" fill-rule="evenodd"/></g></symbol>
+  <symbol id="m-play" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"><path d="M8 14 H40 M8 24 H40 M8 34 H40"/></g><g fill="currentColor"><circle cx="18" cy="14" r="5"/><circle cx="30" cy="24" r="5"/><circle cx="22" cy="34" r="5"/></g></symbol>
+  <symbol id="p-sort" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M3 10 h5 v10 H3z M9.5 10 h5 v10 h-5z M16 10 h5 v10 h-5z"/><path d="M12 3 v5 M9 6 l3 3 3-3" stroke-linecap="round"/></g></symbol>
+  <symbol id="p-referendum" viewBox="0 0 24 24"><g fill="currentColor"><rect x="3" y="4" width="7" height="7" rx="1.5"/><rect x="11" y="4" width="5" height="7" rx="1.5" opacity=".6"/><rect x="17" y="4" width="4" height="7" rx="1.5"/><rect x="3" y="12" width="7" height="8" rx="1.5" opacity=".6"/><rect x="11" y="12" width="5" height="8" rx="1.5"/><rect x="17" y="12" width="4" height="4" rx="1.5" opacity=".6"/></g></symbol>
+  <symbol id="p-government" viewBox="0 0 24 24"><path d="M3 18 A9 9 0 0 1 21 18" fill="none" stroke="currentColor" stroke-width="3"/><path d="M7 18 A5 5 0 0 1 17 18" fill="none" stroke="currentColor" stroke-width="3" opacity=".5"/><path d="M12 9 V18" stroke="currentColor" stroke-width="2" stroke-dasharray="2 2"/></symbol>
+  <symbol id="p-law" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3 h9 l4 4 v14 H6z M9 9 h6 M9 13 h6"/><path d="M8 18 l2 2 4-4"/></g></symbol>
   <symbol id="ic-gov" viewBox="0 0 24 24"><g fill="currentColor"><path d="M12 2 L21 7 H3 Z"/><rect x="4" y="8" width="16" height="2"/><rect x="5" y="11" width="2.4" height="7"/><rect x="9" y="11" width="2.4" height="7"/><rect x="12.6" y="11" width="2.4" height="7"/><rect x="16.6" y="11" width="2.4" height="7"/><rect x="3" y="19" width="18" height="2.5"/></g></symbol>
   <symbol id="ic-cit" viewBox="0 0 24 24"><g fill="currentColor"><circle cx="8" cy="7" r="3"/><circle cx="16.5" cy="8" r="2.5"/><path d="M2 20 C2 14 5 12 8 12 C11 12 14 14 14 20 Z"/><path d="M13.5 20 C13.5 15.5 15 13.5 16.5 13.5 C19 13.5 22 15.5 22 20 Z"/></g></symbol>
   <symbol id="ic-law" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 V21 M7 21 H17 M4 7 H20 M6 7 L3 14 H9 Z M18 7 L15 14 H21 Z"/></g></symbol>
@@ -610,7 +640,8 @@ footer{margin-top:40px;font-size:13px;color:var(--muted)}
 'use strict';
 const BANK = JSON.parse(document.getElementById('bank').textContent);
 const COURSE = __COURSE__;
-const Q = BANK.questions, TERMS = BANK.terms, SHORTQ = BANK.shortq||[], SOURCES = BANK.sources||{sources:[],checklist:[]}, MYTH = BANK.mythfact||[];
+const Q = BANK.questions, TERMS = BANK.terms, SHORTQ = BANK.shortq||[], SOURCES = BANK.sources||{sources:[],checklist:[]}, MYTH = BANK.mythfact||[], PLAY = BANK.play||{items:[]};
+document.documentElement.dataset.course=COURSE.id; if(COURSE.tiles) document.documentElement.dataset.tiles=COURSE.tiles;
 const app = document.getElementById('app');
 const UNITS = COURSE.units.map(u=>u.name), UNIT_BY = Object.fromEntries(COURSE.units.map(u=>[u.name,u])), MINOR = new Set(COURSE.units.filter(u=>u.minor).map(u=>u.name));
 const HAS = new Set(COURSE.modes.map(m=>m.id)); const SUCCESS_OK = HAS.has('write')||HAS.has('shortq');
@@ -626,9 +657,9 @@ const store = {
 let stats = store.get('stats', {}); // qid -> {a:attempts,c:correct}
 
 function log(){ /* No answer data leaves the device. The only thing sent anywhere is an anonymous page-visit count, see track(). */ }
-const GC_PATHS={home:'/',setup:'/practice',startQuiz:'/practice/quiz',challenge:'/challenge',terms:'/terms',write:'/write',daily:'/daily',timeline:'/timeline',timelineGame:'/timeline/order',sprint:'/sprint',facts:'/facts',successPage:'/success',shortq:'/shortq',sqView:'/shortq',sources:'/sources',srcView:'/sources'};
+const GC_PATHS={home:'/',setup:'/practice',startQuiz:'/practice/quiz',challenge:'/challenge',terms:'/terms',write:'/write',daily:'/daily',timeline:'/timeline',timelineGame:'/timeline/order',sprint:'/sprint',facts:'/facts',successPage:'/success',shortq:'/shortq',sqView:'/shortq',sources:'/sources',srcView:'/sources',play:'/play',playOne:'/play'};
 let gcLast='';
-function track(fn,a){ if(location.hostname!=='agorian.au') return; let path=(COURSE.id==='history'?'':'/'+COURSE.id)+(GC_PATHS[fn.name]||('/'+fn.name)); const id=a&&a[0]; if(typeof id==='string'&&/^[\w-]{1,24}$/.test(id)&&['successPage','sqView','srcView'].includes(fn.name)) path+='/'+id; if(path===gcLast) return; gcLast=path; const ev={path, title:'Agorian '+path}; try{ if(window.goatcounter&&typeof window.goatcounter.count==='function') window.goatcounter.count(ev); else if(window.__gcq) window.__gcq.push(ev) }catch(e){} }
+function track(fn,a){ if(location.hostname!=='agorian.au') return; let path=(COURSE.id==='history'?'':'/'+COURSE.id)+(GC_PATHS[fn.name]||('/'+fn.name)); const id=a&&a[0]; if(typeof id==='string'&&/^[\w-]{1,24}$/.test(id)&&['successPage','sqView','srcView','playOne'].includes(fn.name)) path+='/'+id; if(path===gcLast) return; gcLast=path; const ev={path, title:'Agorian '+path}; try{ if(window.goatcounter&&typeof window.goatcounter.count==='function') window.goatcounter.count(ev); else if(window.__gcq) window.__gcq.push(ev) }catch(e){} }
 function record(q, correct, conf, hint){
   const s = stats[q.id] || {a:0,c:0}; s.a++; if(correct) s.c++; stats[q.id]=s; store.set('stats', stats);
   schedule(q, correct, conf);
@@ -873,7 +904,7 @@ const FACTS=[
 const FACT_IMG=['f-domesday','f-armour','f-motte','f-ordeal','f-abbey','f-alhambra','f-lazzaretto','f-harvest','eu-bayeux','jp-samurai','f-mongol','f-nitobe','f-sankin','f-dejima','f-edo','f-ronin','f-perry','f-meiji','f-manesse'];
 const FACT_TITLES=['The Domesday Book','The weight of armour','A castle in weeks','The end of trial by ordeal','The Church as landlord','Words from Arabic','Where quarantine comes from','Wages after the plague','Not a tapestry at all','To serve','The divine wind','Bushido\u2019s late birth','Processions of thousands','Dejima, the fan-shaped island','A million people in Edo','The 47 ronin','Perry\u2019s toy railway','Enlightened rule','Knights and samurai'];
 function factFor(topics){ if(!COURSE.facts) return ''; const pool=FACTS.filter(f=>!topics||topics.includes(f[0])); const f=(pool.length?pool:FACTS)[Math.random()*(pool.length||FACTS.length)|0]; return `<div class="fact"><span class="lamp">?</span><div><b>Did you know</b>${esc(f[1])}</div></div>` }
-const MODEH = (name,title) => `<div class="modeh" style="--m:var(--${({practice:'accent',challenge:'gold',timeline:'teal',terms:'sage',write:'plum',facts:'rose',sources:'teal'})[name]})"><span class="k"><svg><use href="#m-${name}"/></svg></span><h2>${title}</h2></div>`;
+const MODEH = (name,title) => `<div class="modeh" style="--m:var(--${({practice:'accent',challenge:'gold',timeline:'teal',terms:'sage',write:'plum',facts:'rose',sources:'teal',play:'rose'})[name]})"><span class="k"><svg><use href="#m-${name}"/></svg></span><h2>${title}</h2></div>`;
 const unitCls = u => (UNIT_BY[u]||{}).cls||'sk';
 const unitIcon = u => (UNIT_BY[u]||{}).icon||('ic-'+unitCls(u));
 // timeline events (years hidden until placed)
@@ -934,7 +965,7 @@ function home(){
       ${COURSE.units.filter(u=>u.panel!==false).map(u=>`<button class="upanel ${u.cls} ${u.img?'':'noimg'}" data-unit="${esc(u.name)}">${u.img?`<span class="photo" style="background-image:url(${IMG[u.img]});background-position:${u.imgPos||'center'};background-size:${u.imgSize||'cover'}"></span>`:''}<span class="t">${esc(u.name)}</span><span class="n">${esc(u.blurb||'')}</span><span class="cta">Practise this unit \u2192</span><svg class="art"><use href="#${u.art||'art-eu'}"/></svg></button>`).join('')}
     </div>
     <div class="modes ${COURSE.modes.length===4?'n4':''}">
-      ${COURSE.modes.map(m=>`<button class="mode ${m.id}" data-go="${m.go}">${m.img&&IMG[m.img]?`<span class="pic" style="background-image:url(${IMG[m.img]})"></span>`:''}<span class="k">${m.id==='shortq'?'&#9998;':`<svg><use href="#m-${({practice:'practice',challenge:'challenge',timeline:'timeline',terms:'terms',write:'write',facts:'facts',sources:'sources'})[m.id]||'practice'}"/></svg>`}</span><span class="t">${esc(m.title)}</span><span class="n">${esc(m.blurb)}${m.id==='challenge'&&best?` Personal best ${best}/${(COURSE.challenge||{}).count||20}.`:''}</span></button>`).join('')}
+      ${COURSE.modes.map(m=>`<button class="mode ${m.id}" data-go="${m.go}">${m.img&&IMG[m.img]?`<span class="pic" style="background-image:url(${IMG[m.img]})"></span>`:''}<span class="k">${m.id==='shortq'?'&#9998;':`<svg><use href="#m-${({practice:'practice',challenge:'challenge',timeline:'timeline',terms:'terms',write:'write',facts:'facts',sources:'sources',play:'play'})[m.id]||'practice'}"/></svg>`}</span><span class="t">${esc(m.title)}</span><span class="n">${esc(m.blurb)}${m.id==='challenge'&&best?` Personal best ${best}/${(COURSE.challenge||{}).count||20}.`:''}</span></button>`).join('')}
     </div>
   </section>
   <section class="section">
@@ -946,7 +977,7 @@ function home(){
         const m=mastery(t); return `<button class="topic ${unitCls(u)}" data-topic="${esc(t)}" style="--p:${s.a?pct:0}%"><span class="name">${esc(t)}${m?` <span class="badge ${m}" title="${m} mastery" style="margin-left:6px;vertical-align:middle"></span>`:''}</span><span class="pct ${s.a?'':'none'}">${s.a?pct+'%':'Not yet'}${s.a&&pct===100?'<span class="tick" aria-label="complete">&#10003;</span>':''}</span></button>`}).join('')}</div></div>`).join('')}
     </div>
   </section>`);
-  app.querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>({setup, challenge, terms, write, daily, timeline, facts, sources, shortq})[b.dataset.go]());
+  app.querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>({setup, challenge, terms, write, daily, timeline, facts, sources, shortq, play})[b.dataset.go]());
   const gw=app.querySelector('#goWelcome'); if(gw){ gw.onclick=()=>{ store.set('welcomed',true); home() }; app.querySelector('#snd0').onclick=()=>setSound(!soundOn) }
   const ht=app.querySelector('#howto'); if(ht) ht.onclick=()=>{ store.set('welcomed',false); home() };
   app.querySelectorAll('[data-topic]').forEach(b=>b.onclick=()=>startQuiz({mode:'practice', topics:[b.dataset.topic], timed:false}));
@@ -1500,6 +1531,114 @@ function write(){
   app.querySelector('#home').onclick=home; app.querySelector('#succ').onclick=()=>success(); app.querySelector('#shortq').onclick=()=>shortq();
 }
 
+// ---------- interactives: sort, referendum, government, law builder ----------
+let playBest=store.get('playBest',{});
+function play(){
+  h(`<section class="section">${MODEH('play',modeTitle('play'))}<p class="muted">${esc(PLAY.intro||'')}</p>
+  <div class="playgrid">${PLAY.items.map(p=>{ const b=playBest[p.id]; return `<button class="pcard ${p.kind}" data-id="${p.id}"><span class="k"><svg><use href="#p-${p.kind}"/></svg></span><b>${esc(p.title)}</b><span class="n">${esc(p.blurb)}</span>${b!==undefined?`<span class="best">${p.kind==='sort'?`Best ${b} in 60 seconds`:p.kind==='law'?`Best ${b} of 5`:'Done'}</span>`:''}</button>`}).join('')}</div>
+  <div class="row" style="margin-top:14px"><button class="btn quiet" id="home">Home</button></div></section>`);
+  app.querySelectorAll('.pcard').forEach(b=>b.onclick=()=>playOne(b.dataset.id)); app.querySelector('#home').onclick=home;
+}
+function playOne(id){ const p=PLAY.items.find(x=>x.id===id); if(!p) return play(); ({sort:sorter, referendum, government, law:lawBuilder})[p.kind](p) }
+const playHead=(p)=>`<div class="row xrow" style="justify-content:space-between">${MODEH('play',p.title)}<button class="btn quiet" id="allPlay">All interactives</button></div>`;
+function sorter(p){
+  let timed=true, order=[], i=0, right=0, done=0, left=60, tid=null, started=false;
+  const begin=()=>{ order=shuffle(p.items.map((_,k)=>k)); i=0; right=0; done=0; left=60; started=false; clearInterval(tid); draw() };
+  const finish=()=>{ clearInterval(tid); tid=null; const score=timed?right:Math.round(100*right/Math.max(1,done)); const prev=playBest[p.id]; const nb=timed && (prev===undefined||right>prev); if(nb){ playBest[p.id]=right; store.set('playBest',playBest) }
+    h(`<section class="section">${playHead(p)}<div class="card"><div class="score"><div class="ring" style="--p:${Math.round(100*right/Math.max(1,done))}"><b>${right}</b></div><div><p style="font-size:18px;font-weight:600">${right} right out of ${done}${timed?' in 60 seconds':''}</p><p class="muted">${nb?'New best.':prev!==undefined&&timed?`Best so far ${prev}.`:''} ${right>=done*.9&&done>=10?'You know who does what.':'Read the reasons you missed, then go again.'}</p></div></div>
+      <div class="row"><button class="btn primary" id="again">Again</button><button class="btn" id="mode">${timed?'Untimed':'60-second sprint'}</button><button class="btn quiet" id="allPlay">All interactives</button></div></div></section>`);
+    if(right>=10&&nb) confetti(); app.querySelector('#again').onclick=begin; app.querySelector('#mode').onclick=()=>{ timed=!timed; begin() }; app.querySelector('#allPlay').onclick=play };
+  const draw=()=>{ if(i>=order.length) return finish(); const [text,ans,why]=p.items[order[i]];
+    h(`<section class="section">${playHead(p)}
+    <div class="progress"><span>${done} sorted · ${right} right</span><span class="track"><i style="width:${100*i/order.length}%"></i></span>${timed?`<span class="timer" id="timer">${left}s</span>`:`<button class="btn quiet" id="stop" style="padding:4px 8px">Finish</button>`}</div>
+    <div class="card sortcard"><span class="eyebrow">${esc(p.title)} · ${timed?'60-second sprint':'untimed'}</span><p class="item">${esc(text)}</p>
+      <div class="bins">${p.bins.map((b,k)=>`<button data-k="${k}"><span>${esc(b)}</span><small>key ${p.keys[k]}</small></button>`).join('')}</div>
+      <div class="sortfb" id="sfb">${started||!timed?'':'The clock starts on your first tap.'}</div></div></section>`);
+    const stop=app.querySelector('#stop'); if(stop) stop.onclick=finish; app.querySelector('#allPlay').onclick=()=>{ clearInterval(tid); play() };
+    const bins=[...app.querySelectorAll('.bins button')];
+    const pick=k=>{ if(bins[0].disabled) return; if(timed&&!started){ started=true; tid=setInterval(()=>{ left--; const t=document.getElementById('timer'); if(t){ t.textContent=left+'s'; t.classList.toggle('low',left<10) } if(left<=0) finish() },1000) }
+      const ok=k===ans; done++; if(ok) right++; bins.forEach(b=>{ b.disabled=true; if(+b.dataset.k===ans) b.classList.add('right'); else if(+b.dataset.k===k) b.classList.add('wrong') }); beep(ok?'ok':'bad');
+      app.querySelector('#sfb').innerHTML=`<b>${ok?'Right.':'Not quite: '+esc(p.bins[ans])+'.'}</b> ${esc(why)}`; i++; setTimeout(draw, ok?700:1600) };
+    bins.forEach(b=>b.onclick=()=>pick(+b.dataset.k));
+    document.onkeydown=e=>{ if(!app.querySelector('.bins')) { document.onkeydown=null; return } const k=p.keys.findIndex(x=>x.toLowerCase()===e.key.toLowerCase()); const n=parseInt(e.key)-1; if(k>=0) pick(k); else if(n>=0&&n<3) pick(n) };
+  };
+  begin();
+}
+const STATES=[['NSW',.315],['VIC',.255],['QLD',.205],['WA',.105],['SA',.072],['TAS',.023]], TERR=[['ACT',.018],['NT',.008]];
+const REF_PRESETS=[
+ ['1967: counting First Nations people',[91,95,89,81,86,90],[91,91],'Nearly 91 per cent of voters said Yes and every state carried it. The highest Yes vote in Australian history. Territories did not vote in referendums until 1977, so they are set to match.'],
+ ['1977: simultaneous elections',[72,70,46,42,62,48],[62,62],'A national Yes of about 62 per cent, but only three states voted Yes. It failed. A national majority is not enough on its own.'],
+ ['1999: a republic',[46,50,37,42,44,40],[63,49],'No state voted Yes and the national vote was 45 per cent. It failed on both counts.'],
+ ['2023: the Voice',[41,46,32,37,36,41],[61,40],'The ACT voted Yes, but territory votes count only towards the national total, not towards the majority of states.']];
+function referendum(p){
+  let v=[55,55,45,45,55,55], t=[55,45];
+  h(`<section class="section">${playHead(p)}<p class="muted">A referendum changes the Constitution only with a <b>double majority</b>: more than half of all voters nationally, and a majority of voters in at least four of the six states. Territory votes count towards the national total only. Figures in the presets are approximate.</p>
+  <div class="card"><div class="simgrid"><div><div class="tilemap" id="tm"></div><p class="hint" style="margin-top:8px">A tile map, not a real map. Each tile is a state; ACT and NT are dashed because they count nationally only.</p></div>
+  <div><div class="sliders" id="sl">${STATES.map(([n],k)=>`<label><span>${n}</span><input type="range" min="0" max="100" value="${v[k]}" data-k="${k}" aria-label="${n} Yes vote"><span class="v" id="v${k}">${v[k]}%</span></label>`).join('')}${TERR.map(([n],k)=>`<label><span>${n}</span><input type="range" min="0" max="100" value="${t[k]}" data-t="${k}" aria-label="${n} Yes vote"><span class="v" id="t${k}">${t[k]}%</span></label>`).join('')}</div>
+  <div class="verdict" id="vd" style="margin-top:12px"></div>
+  <p class="eyebrow" style="margin-top:12px">Try a real one</p><div class="presets">${REF_PRESETS.map((r,k)=>`<button class="btn" data-p="${k}">${esc(r[0])}</button>`).join('')}</div><p class="hint" id="pnote" style="margin-top:6px"></p></div></div>
+  <div class="row" style="margin-top:12px"><span class="hint">Challenge: make it pass with the <b>smallest</b> national Yes you can. Then make it fail with a national Yes above 60.</span></div></div></section>`);
+  const render=()=>{ const nat=STATES.reduce((a,[,w],k)=>a+w*v[k],0)+TERR.reduce((a,[,w],k)=>a+w*t[k],0); const yesStates=v.filter(x=>x>50).length; const pass=nat>50&&yesStates>=4;
+    document.getElementById('tm').innerHTML=[['WA',3,'1/3'],['NT',6,'1/2'],['QLD',2,'1/1'],['SA',4,'2/3'],['NSW',0,'2/2'],['VIC',1,'3/3'],['TAS',5,'4/3'],['ACT',7,'3/2']].map(([n,k,pos])=>{ const terr=k>=6; const val=terr?t[k-6]:v[k]; const [r,c]=pos.split('/'); const style=n==='WA'?`grid-column:1;grid-row:1/3`:n==='NT'?`grid-column:2;grid-row:1`:n==='SA'?`grid-column:2;grid-row:2/4`:n==='QLD'?`grid-column:3;grid-row:1`:n==='NSW'?`grid-column:3;grid-row:2`:n==='VIC'?`grid-column:3;grid-row:3`:n==='TAS'?`grid-column:3;grid-row:4`:`grid-column:2;grid-row:4`; return `<div class="tile ${val>50?'yes':'no'} ${terr?'terr':''}" style="${style}"><div><div class="pc">${val}%</div><div class="nm">${n}</div></div></div>` }).join('');
+    document.getElementById('vd').className='verdict '+(pass?'ok':'bad'); document.getElementById('vd').innerHTML=`<b class="big">${pass?'Carried.':'Fails.'}</b><span>National Yes <b>${nat.toFixed(1)}%</b> ${nat>50?'(a national majority)':'(no national majority)'}. States voting Yes: <b>${yesStates} of 6</b> ${yesStates>=4?'(a majority of states)':'(not a majority of states)'}.</span><span class="hint">${pass?'Both majorities achieved.':nat>50&&yesStates<4?'This is the trap: most Australians said Yes, but not in enough states.':yesStates>=4&&nat<=50?'Enough states, but the big states dragged the national total under half.':'Neither majority.'}</span>`;
+  };
+  app.querySelectorAll('#sl input').forEach(inp=>inp.oninput=()=>{ const k=inp.dataset.k, tk=inp.dataset.t; if(k!==undefined){ v[+k]=+inp.value; document.getElementById('v'+k).textContent=inp.value+'%' } else { t[+tk]=+inp.value; document.getElementById('t'+tk).textContent=inp.value+'%' } document.getElementById('pnote').textContent=''; render() });
+  app.querySelectorAll('[data-p]').forEach(b=>b.onclick=()=>{ const r=REF_PRESETS[+b.dataset.p]; v=r[1].slice(); t=r[2].slice(); app.querySelectorAll('#sl input').forEach(inp=>{ const k=inp.dataset.k, tk=inp.dataset.t; inp.value=k!==undefined?v[+k]:t[+tk]; (k!==undefined?document.getElementById('v'+k):document.getElementById('t'+tk)).textContent=inp.value+'%' }); document.getElementById('pnote').textContent=r[3]; playBest[p.id]=1; store.set('playBest',playBest); render(); beep('tick') });
+  app.querySelector('#allPlay').onclick=play; render();
+}
+function government(p){
+  const parties=[['Harbour Party','var(--jp)'],['Plains Party','var(--sk)'],['Rivers Alliance','var(--sage)'],['Country Voice','var(--gold)']]; let seats=[66,62,12,6]; const ind=()=>150-seats.reduce((a,b)=>a+b,0);
+  h(`<section class="section">${playHead(p)}<p class="muted">The House of Representatives has <b>150 seats</b>. A party or coalition needs <b>76</b>, more than half, to govern in its own right. Deal out the seats and read the result. Independents hold whatever is left; when they run out, seats come from the other parties.</p>
+  <div class="card"><div class="simgrid"><div><svg class="hemi" id="hemi" viewBox="0 0 400 230" aria-label="Seats in the House"></svg><div class="verdict" id="gv" style="margin-top:10px"></div></div>
+  <div><div class="seatrows" id="rows"></div>
+  <p class="eyebrow" style="margin-top:14px">Challenges</p><ul class="critlist" id="chal"><li data-c="hung">Make a hung parliament: nobody has 76.</li><li data-c="majority">Give one party a majority in its own right.</li><li data-c="minority">Form a minority government: the largest party short of 76, with enough crossbench support to reach it.</li><li data-c="coalition">Give the Plains Party and Rivers Alliance a coalition majority.</li><li data-c="most">Make the party with the most seats unable to govern, even with the crossbench.</li></ul></div></div></div></section>`);
+  const rows=()=>{ document.getElementById('rows').innerHTML=parties.map(([n,c],k)=>`<div class="seatrow"><span class="sw" style="background:${c}"></span><span>${n}</span><span class="ctl"><button data-k="${k}" data-d="-5">−5</button><button data-k="${k}" data-d="-1">−</button><b>${seats[k]}</b><button data-k="${k}" data-d="1">+</button><button data-k="${k}" data-d="5">+5</button></span></div>`).join('')+`<div class="seatrow"><span class="sw" style="background:var(--muted)"></span><span>Independents</span><span class="ctl"><b>${ind()}</b></span></div>`;
+    document.querySelectorAll('#rows button').forEach(b=>b.onclick=()=>{ const k=+b.dataset.k, d=+b.dataset.d; const nv=seats[k]+d; if(nv<0) return;
+      if(d>0){ let short=d-ind(); seats[k]=nv; if(short>0){ const order=seats.map((v,i)=>i).filter(i=>i!==k).sort((a,b)=>seats[b]-seats[a]); for(const i of order){ if(short<=0) break; const take=Math.min(short,seats[i]); seats[i]-=take; short-=take } } }
+      else seats[k]=nv;
+      beep('tick'); rows(); draw() }) };
+  const draw=()=>{ const all=parties.map(([n,c],k)=>({n,c,s:seats[k]})).concat([{n:'Independents',c:'var(--muted)',s:ind()}]); let dots=[]; all.forEach(g=>{ for(let i=0;i<g.s;i++) dots.push(g.c) });
+    const rowsN=[24,27,30,33,36]; const pts=[]; rowsN.forEach((n,r)=>{ const R=70+r*30; for(let i=0;i<n;i++){ const a=Math.PI-Math.PI*i/(n-1); pts.push({a,x:200+R*Math.cos(a),y:215-R*Math.sin(a)}) } });
+    pts.sort((p1,p2)=>p2.a-p1.a); let out=''; pts.forEach((pt,i)=>{ out+=`<circle cx="${pt.x.toFixed(1)}" cy="${pt.y.toFixed(1)}" r="7" fill="${dots[i]||'var(--line)'}"/>` });
+    out+=`<line x1="200" y1="20" x2="200" y2="215" stroke="var(--ink)" stroke-width="2" stroke-dasharray="4 4"/><text x="200" y="14" text-anchor="middle" font-size="12" fill="var(--ink)" font-weight="700">76 to govern</text>`;
+    document.getElementById('hemi').innerHTML=out;
+    const sorted=all.slice().sort((a,b)=>b.s-a.s); const top=sorted[0], second=sorted[1]; let html='', cls='';
+    const majors=all.filter(g=>g.n!=='Independents').sort((a,b)=>b.s-a.s).slice(0,2);
+    const paths=lead=>{ const otherMajor=majors.find(g=>g!==lead); const others=all.filter(g=>g!==lead&&g!==otherMajor).sort((a,b)=>b.s-a.s).filter(g=>g.s>0); const need=76-lead.s; let acc=0, used=[]; for(const g of others){ if(acc>=need) break; acc+=g.s; used.push(g) } return acc>=need?{need,used}:null };
+    if(top.s>=76){ cls='ok'; html=`<b class="big">${top.n}: majority government.</b><span>${top.s} seats is more than half, so it governs alone. The Opposition is ${second.n} with ${second.s} seats. Everyone else sits on the crossbench.</span>` }
+    else { cls='bad'; const a=paths(top), b=paths(second); html=`<b class="big">Hung parliament.</b><span>Nobody has 76. ${top.n} has the most seats (${top.s}) but needs ${76-top.s} more.</span>`;
+      if(a) html+=`<span>${top.n} could govern with ${a.used.map(g=>g.n+' ('+g.s+')').join(' and ')}: as a coalition, or as a <b>minority government</b> if they only promise support on key votes.</span>`; else html+=`<span>Even with every crossbencher, ${top.n} cannot reach 76 without the other major party.</span>`;
+      if(b&&second.n!=='Independents') html+=`<span>${second.n} (${second.s}) could also reach 76 with ${b.used.map(g=>g.n+' ('+g.s+')').join(' and ')}. Most seats is not the same as majority support.</span>`; }
+    const gv=document.getElementById('gv'); gv.className='verdict '+cls; gv.innerHTML=html;
+    const doneC={hung:top.s<76, majority:top.s>=76&&top.n!=='Independents', minority:top.s<76&&!!paths(top), coalition:seats[1]+seats[2]>=76&&seats[1]<76, most:top.s<76&&!paths(top)};
+    document.querySelectorAll('#chal li').forEach(li=>{ if(doneC[li.dataset.c]){ li.style.color='var(--ok)'; li.style.fontWeight='700'; if(!li.dataset.done){ li.dataset.done=1; beep('ok'); playBest[p.id]=1; store.set('playBest',playBest) } } });
+  };
+  app.querySelector('#allPlay').onclick=play; rows(); draw();
+}
+function lawBuilder(p){
+  const sel=p.columns.map(()=>null);
+  h(`<section class="section">${playHead(p)}<p class="muted">${esc(p.intro||'')}</p>
+  <div class="card"><div class="lawtext" id="lt"></div><div class="lawrows">${p.columns.map((c,ci)=>`<div class="lawrow"><p class="eyebrow">${esc(c.label)}</p><div class="opts">${c.options.map((o,oi)=>`<button data-c="${ci}" data-o="${oi}">${esc(o.t)}</button>`).join('')}</div></div>`).join('')}</div></div>
+  <div class="card"><p class="eyebrow">The five checks</p><div class="checks5" id="c5"></div><div class="row" style="margin-top:6px"><button class="btn" id="reset">Start again</button><button class="btn quiet" id="allPlay">All interactives</button></div></div></section>`);
+  const get=id=>{ const ci=p.columns.findIndex(c=>c.id===id); return sel[ci]===null?null:p.columns[ci].options[sel[ci]] };
+  const render=()=>{ const o=Object.fromEntries(p.columns.map(c=>[c.id,get(c.id)])); const chosen=Object.values(o).filter(Boolean);
+    const sentence=`No person may ${o.what?o.what.t:'[what]'} ${o.where?o.where.t:'[where]'} ${o.when?o.when.t:'[when]'}. Penalty: ${o.penalty?o.penalty.t:'[what happens]'}. The law is made known: ${o.known?o.known.t:'[how]'}. It changes: ${o.stable?o.stable.t:'[how often]'}.`;
+    document.getElementById('lt').textContent=sentence;
+    const all=p.columns.every((c,ci)=>sel[ci]!==null);
+    const checks=[
+      ['Clear and understood', !!(o.what&&o.where&&o.when) && o.what.clear&&o.where.clear&&o.when.clear, [o.what,o.where,o.when].filter(x=>x&&x.clear===false).map(x=>x.why)[0]||'What, where and when are all precise.'],
+      ['Enforceable', !!(o.what&&o.penalty) && o.what.measurable&&o.penalty.enforceable, (o.what&&o.what.measurable===false?o.what.why:o.penalty&&o.penalty.enforceable===false?o.penalty.why:'Officers can measure a breach and apply a set consequence.')],
+      ['Known', !!o.known && o.known.known, o.known?o.known.why:'Choose how people find out.'],
+      ['Stable', !!o.stable && o.stable.stable, o.stable?o.stable.why:'Choose how often it changes.'],
+      ['Reflects society’s values', all && chosen.every(x=>x.values!==false), chosen.find(x=>x.values===false)?chosen.find(x=>x.values===false).why:(all?'Proportionate, limited to the problem, and reviewed with the community.':'Finish the law to check this.')]];
+    document.getElementById('c5').innerHTML=checks.map(([n,ok,why])=>`<div class="chk5 ${ok?'ok':''}"><span class="ic">${ok?'✓':'✗'}</span><div><b>${n}</b><span>${esc(why)}</span></div></div>`).join('');
+    const score=checks.filter(c=>c[1]).length; if(all){ const prev=playBest[p.id]||0; if(score>prev){ playBest[p.id]=score; store.set('playBest',playBest) } if(score===5){ beep('win'); confetti() } }
+    app.querySelectorAll('.lawrow .opts button').forEach(b=>b.classList.toggle('on', sel[+b.dataset.c]===+b.dataset.o));
+  };
+  app.querySelectorAll('.lawrow .opts button').forEach(b=>b.onclick=()=>{ sel[+b.dataset.c]=+b.dataset.o; beep('tick'); render() });
+  app.querySelector('#reset').onclick=()=>lawBuilder(p); app.querySelector('#allPlay').onclick=play; render();
+}
+
 document.getElementById('homeBtn').onclick=()=>home();
 document.querySelector('.brand .desc').textContent=COURSE.subtitle;
 { const cr=[...document.querySelectorAll('footer details')].find(d=>d.querySelector('summary').textContent==='Image credits'); if(cr&&COURSE.credits!=null) cr.innerHTML='<summary>Image credits</summary>'+esc(COURSE.credits) }
@@ -1526,9 +1665,9 @@ function ring(d){ const rr=document.getElementById('ringRect'); if(!rr||!EXAM_AT
   const dot=document.getElementById('ringDot'); if(dot){ if(pct<=0||pct>=100||!rr.getPointAtLength){ dot.style.display='none' } else { try{ const pt=rr.getPointAtLength(rr.getTotalLength()*pct/100); dot.setAttribute('cx',pt.x); dot.setAttribute('cy',pt.y); dot.style.display='' }catch(e){ dot.style.display='none' } } } }
 window.addEventListener('resize',()=>ring(new Date()));
 (function tick(){ const d=new Date(); if(closedNow(d)){ if(window.__booted) showClosed(); setTimeout(tick,30000); return } const el=document.getElementById('clock'); if(el){ const hh=d.getHours(), m=String(d.getMinutes()).padStart(2,'0'); const h12=((hh+11)%12)+1; el.innerHTML=`<span class="lbl">Melbourne</span><span class="time">${h12}:${m}<small>${hh<12?'am':'pm'}</small></span><span class="date">${d.toLocaleDateString('en-AU',{weekday:'long',day:'numeric',month:'long'})}</span>`; const cd=document.getElementById('cdown'); if(cd) cd.innerHTML=examBlocks(d) } ring(d); const left=EXAM_AT-d; const fast=left>0&&left<86400000; setTimeout(tick, fast?1000-(Date.now()%1000)+20:60000-(Date.now()%60000)+50) })();
-HOME_FN=home; home=screen(home); setup=screen(setup); challenge=screen(challenge); terms=screen(terms); write=screen(write); daily=screen(daily); timeline=screen(timeline); timelineGame=screen(timelineGame); sprint=screen(sprint); facts=screen(facts); shortq=screen(shortq); sources=screen(sources); startQuiz=screen(startQuiz);
+HOME_FN=home; home=screen(home); setup=screen(setup); challenge=screen(challenge); terms=screen(terms); write=screen(write); daily=screen(daily); timeline=screen(timeline); timelineGame=screen(timelineGame); sprint=screen(sprint); facts=screen(facts); shortq=screen(shortq); sources=screen(sources); startQuiz=screen(startQuiz); play=screen(play); playOne=screen(playOne);
 document.getElementById('backBtn').onclick=goBack;
-const ROUTES={daily, sprint}; for(const [k,f] of Object.entries({practice:setup, challenge, terms, write, timeline, facts, success, shortq, sources})){ if(HAS.has(k)||(k==='success'&&SUCCESS_OK)) ROUTES[k]=f }
+const ROUTES={daily, sprint}; for(const [k,f] of Object.entries({practice:setup, challenge, terms, write, timeline, facts, success, shortq, sources, play})){ if(HAS.has(k)||(k==='success'&&SUCCESS_OK)) ROUTES[k]=f }
 const r=(location.hash||'').slice(1); window.__booted=true; if(closedNow(new Date())) showClosed(); else (ROUTES[r]||home)();
 })();
 </script>

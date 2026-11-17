@@ -1,0 +1,9 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'>
+<rect x='60' y='236' width='280' height='40' rx='8' fill='#2C4F7C'/><rect x='70' y='226' width='260' height='16' rx='6' fill='#D9A441'/>
+<g fill='none' stroke='#1B2420' stroke-width='10' stroke-linecap='round' stroke-linejoin='round'>
+ <path d='M200 60 V222 M150 222 H250 M80 100 H320'/>
+ <path d='M120 100 L72 186 H168 Z M280 100 L232 186 H328 Z'/>
+</g>
+<path d='M72 186 A48 24 0 0 0 168 186 Z' fill='#2F5D4B'/><path d='M232 186 A48 24 0 0 0 328 186 Z' fill='#B9472E'/>
+<circle cx='200' cy='60' r='16' fill='#D9A441' stroke='#1B2420' stroke-width='8'/>
+</svg>

@@ -7,7 +7,8 @@
  "data": {
   "bank": "data/civics/bank.json",
   "sources": "data/civics/scenarios.json",
-  "mythfact": "data/civics/mythfact.json"
+  "mythfact": "data/civics/mythfact.json",
+  "play": "data/civics/play.json"
  },
  "units": [
   {
@@ -16,7 +17,10 @@
    "icon": "ic-gov",
    "art": "art-gov",
    "blurb": "Democracy, the Constitution, three levels and three branches of government, parties and Parliament.",
-   "topicsNote": "Democracy in Action, Power in Australia, Parties, Policies and Power"
+   "topicsNote": "Democracy in Action, Power in Australia, Parties, Policies and Power",
+   "img": "c-gov",
+   "imgSize": "contain",
+   "imgPos": "right bottom"
   },
   {
    "name": "Citizens and participation",
@@ -24,7 +28,10 @@
    "icon": "ic-cit",
    "art": "art-cit",
    "blurb": "Citizenship and national identity, rights and responsibilities, and how to have your say.",
-   "topicsNote": "Many Stories, One Australia and Have Your Say!"
+   "topicsNote": "Many Stories, One Australia and Have Your Say!",
+   "img": "c-cit",
+   "imgSize": "contain",
+   "imgPos": "right bottom"
   },
   {
    "name": "Laws and justice",
@@ -32,25 +39,60 @@
    "icon": "ic-law",
    "art": "art-law",
    "blurb": "What makes a law effective, and fairness, equality and access in the justice system.",
-   "topicsNote": "Effective Laws and Justice for All"
+   "topicsNote": "Effective Laws and Justice for All",
+   "img": "c-law",
+   "imgSize": "contain",
+   "imgPos": "right bottom"
   }
  ],
  "colours": {
   "light": {
-   "jp": "#1F3A5F",
-   "jp-soft": "#E2E8F1",
-   "eu": "#A3482A",
-   "eu-soft": "#F3E4DC",
-   "sk": "#5B3F7A",
-   "sk-soft": "#ECE4F2"
+   "bg": "#F2F5F1",
+   "surface": "#FFFFFF",
+   "ink": "#1B2420",
+   "muted": "#5C6660",
+   "line": "#D3DAD2",
+   "navy": "#2F5D4B",
+   "navy-ink": "#FFFFFF",
+   "accent": "#B9472E",
+   "gold": "#D9A441",
+   "gold-ink": "#8A6012",
+   "sage": "#3E7A62",
+   "blush": "#EEE6D8",
+   "teal": "#1F6F7B",
+   "plum": "#5B3F7A",
+   "rose": "#B8356A",
+   "jp": "#2F5D4B",
+   "jp-soft": "#E3ECE6",
+   "eu": "#B9472E",
+   "eu-soft": "#F5E3DC",
+   "sk": "#2C4F7C",
+   "sk-soft": "#E1E8F2",
+   "pattern": "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Cg fill='%232F5D4B' opacity='.11'%3E%3Ccircle cx='8' cy='8' r='1.5'/%3E%3Ccircle cx='8' cy='24' r='1.5'/%3E%3Ccircle cx='8' cy='40' r='1.5'/%3E%3Ccircle cx='8' cy='56' r='1.5'/%3E%3Ccircle cx='24' cy='8' r='1.5'/%3E%3Ccircle cx='24' cy='24' r='1.5'/%3E%3Ccircle cx='24' cy='40' r='1.5'/%3E%3Ccircle cx='24' cy='56' r='1.5'/%3E%3Ccircle cx='40' cy='8' r='1.5'/%3E%3Ccircle cx='40' cy='24' r='1.5'/%3E%3Ccircle cx='40' cy='40' r='1.5'/%3E%3Ccircle cx='40' cy='56' r='1.5'/%3E%3Ccircle cx='56' cy='8' r='1.5'/%3E%3Ccircle cx='56' cy='24' r='1.5'/%3E%3Ccircle cx='56' cy='40' r='1.5'/%3E%3Ccircle cx='56' cy='56' r='1.5'/%3E%3C/g%3E%3C/svg%3E\")"
   },
   "dark": {
-   "jp": "#7FA0D1",
-   "jp-soft": "#232E44",
-   "eu": "#D98A6A",
-   "eu-soft": "#3A2A24",
-   "sk": "#B58AC4",
-   "sk-soft": "#2E2538"
+   "bg": "#131A16",
+   "surface": "#1B2420",
+   "ink": "#E9EDE8",
+   "muted": "#A3ADA7",
+   "line": "#2E3A34",
+   "navy": "#6FA58D",
+   "navy-ink": "#0F1A15",
+   "accent": "#E8795A",
+   "gold": "#E2B45C",
+   "gold-ink": "#E2B45C",
+   "sage": "#7FB89E",
+   "blush": "#2E2A22",
+   "teal": "#5FB3BF",
+   "plum": "#B58AC4",
+   "rose": "#E27AA6",
+   "jp": "#7FBFA3",
+   "jp-soft": "#1E2F27",
+   "eu": "#E08A6E",
+   "eu-soft": "#3A2620",
+   "sk": "#7FA0D1",
+   "sk-soft": "#1F2A3A",
+   "pattern": "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Cg fill='%23E2B45C' opacity='.09'%3E%3Ccircle cx='8' cy='8' r='1.5'/%3E%3Ccircle cx='8' cy='24' r='1.5'/%3E%3Ccircle cx='8' cy='40' r='1.5'/%3E%3Ccircle cx='8' cy='56' r='1.5'/%3E%3Ccircle cx='24' cy='8' r='1.5'/%3E%3Ccircle cx='24' cy='24' r='1.5'/%3E%3Ccircle cx='24' cy='40' r='1.5'/%3E%3Ccircle cx='24' cy='56' r='1.5'/%3E%3Ccircle cx='40' cy='8' r='1.5'/%3E%3Ccircle cx='40' cy='24' r='1.5'/%3E%3Ccircle cx='40' cy='40' r='1.5'/%3E%3Ccircle cx='40' cy='56' r='1.5'/%3E%3Ccircle cx='56' cy='8' r='1.5'/%3E%3Ccircle cx='56' cy='24' r='1.5'/%3E%3Ccircle cx='56' cy='40' r='1.5'/%3E%3Ccircle cx='56' cy='56' r='1.5'/%3E%3C/g%3E%3C/svg%3E\")"
   }
  },
  "hero": {
@@ -64,7 +106,7 @@
   "steps": [
    "<b>Three times</b>, do one <b>Scenario practice</b>. Read the scenario twice, answer the four questions, read every explanation.",
    "<b>Twice</b>, do <b>Multiple-choice practice</b> on the topics under 70 per cent in Your progress by topic.",
-   "<b>Once</b>, try <b>Challenge</b>, then <b>Key terms</b> for anything you blanked on."
+   "<b>Once</b>, try <b>Challenge</b>, then an <b>Interactive</b> and <b>Key terms</b> for anything you blanked on."
   ]
  },
  "breakdown": {
@@ -93,25 +135,36 @@
    "id": "practice",
    "go": "setup",
    "title": "Multiple-choice practice",
-   "blurb": "Pick topics, answer at your pace, read the explanation after every question. Word-bank gaps are mixed in."
+   "blurb": "Pick topics, answer at your pace, read the explanation after every question. Word-bank gaps are mixed in.",
+   "img": "c-practice"
   },
   {
    "id": "sources",
    "go": "sources",
    "title": "Scenario practice",
-   "blurb": "Seven scenarios you have not seen. Read one, then answer four quick questions with explanations."
+   "blurb": "Seven scenarios you have not seen. Read one, then answer four quick questions with explanations.",
+   "img": "c-scenarios"
   },
   {
    "id": "challenge",
    "go": "challenge",
    "title": "Challenge",
-   "blurb": "20 questions from the whole unit against a 10 minute clock."
+   "blurb": "20 questions from the whole unit against a 10 minute clock.",
+   "img": "c-challenge"
   },
   {
    "id": "terms",
    "go": "terms",
    "title": "Key terms",
-   "blurb": "Flashcards to flip, plus a ten-definition sprint against the clock."
+   "blurb": "Flashcards to flip, plus a ten-definition sprint against the clock.",
+   "img": "c-terms"
+  },
+  {
+   "id": "play",
+   "go": "play",
+   "title": "Interactives",
+   "img": "c-play",
+   "blurb": "Sort real responsibilities, pass a referendum, form a government, fix a law. Six things to try."
   }
  ],
  "challenge": {
@@ -130,5 +183,6 @@
   "Early days. Pick one topic at a time in Multiple-choice practice and build it up."
  ],
  "resultsImg": {},
- "credits": "Raphael, The School of Athens (1511), Wikimedia Commons, public domain."
+ "credits": "Raphael, The School of Athens (1511), Wikimedia Commons, public domain.",
+ "tiles": "glow"
 }

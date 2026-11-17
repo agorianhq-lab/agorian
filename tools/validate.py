@@ -25,7 +25,7 @@ def load(rel):
         err(rel, f'cannot parse: {e}'); return None
 
 def images():
-    return {f[:-4] for f in os.listdir(os.path.join(ROOT, 'img')) if f.endswith('.jpg')}
+    return {f.rsplit('.', 1)[0] for f in os.listdir(os.path.join(ROOT, 'img')) if f.endswith(('.jpg', '.svg'))}
 
 def check_question(q, imgs):
     w = f"bank.json question {q.get('id', '?')}"
@@ -148,6 +148,31 @@ def check_mythfact(rel):
     myths = sum(1 for x in d if isinstance(x, list) and len(x) == 3 and x[1] is False)
     print(f'{rel}: {len(d)} statements, {myths} myths')
 
+def check_play(rel):
+    d = load(rel)
+    if d is None: return
+    items = d.get('items')
+    if not isinstance(items, list) or not items: err(rel, 'needs a non-empty "items" list'); return
+    ids = [p.get('id') for p in items]
+    for i in {x for x in ids if ids.count(x) > 1}: err(rel, f'duplicate id {i}')
+    for p in items:
+        w = f"{rel} {p.get('id', '?')}"
+        if not nonempty(p.get('title')) or not nonempty(p.get('blurb')): err(w, 'title and blurb must be non-empty')
+        k = p.get('kind')
+        if k == 'sort':
+            bins = p.get('bins')
+            if not isinstance(bins, list) or len(bins) != 3: err(w, 'sort needs three bins'); continue
+            for it in p.get('items', []):
+                if not (isinstance(it, list) and len(it) == 3 and nonempty(it[0]) and isinstance(it[1], int) and 0 <= it[1] < 3 and nonempty(it[2])): err(w, f'bad sort item {it!r}')
+            if len(p.get('items', [])) < 12: err(w, 'sort needs at least 12 items')
+        elif k == 'law':
+            for col in p.get('columns', []):
+                if not nonempty(col.get('label')) or not isinstance(col.get('options'), list) or len(col['options']) < 2: err(w, f"column {col.get('id')!r} needs a label and at least two options")
+                for o in col.get('options', []):
+                    if not nonempty(o.get('t')) or not nonempty(o.get('why')): err(w, f"option {o.get('t')!r} needs t and why")
+        elif k not in ('referendum', 'government'): err(w, f'unknown kind {k!r}')
+    print(f'{rel}: {len(items)} interactives')
+
 def check_course(path, imgs):
     global UNITS
     c = load(os.path.relpath(path, ROOT))
@@ -169,6 +194,7 @@ def check_course(path, imgs):
     if d.get('shortq'): check_shortq(imgs, d['shortq'])
     if d.get('sources'): check_sources(imgs, d['sources'])
     if d.get('mythfact'): check_mythfact(d['mythfact'])
+    if d.get('play'): check_play(d['play'])
     if c.get('tile') == 'mythfact' and not d.get('mythfact'): err(rel, 'tile is mythfact but data.mythfact is not set')
 
 def check_images(imgs):
