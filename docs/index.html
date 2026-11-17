@@ -715,10 +715,15 @@ footer{margin-top:40px;font-size:13px;color:var(--muted)}
 .linkcard .lg.img{background:#fff;padding:6px;box-shadow:inset 0 0 0 1px var(--line)}.linkcard .lg.img img{width:100%;height:100%;object-fit:contain;display:block}
 .linkcard:hover .lg{transform:scale(1.08) rotate(-4deg)}
 .linkcard .txt{display:grid;gap:3px;min-width:0}
-.linkcard b{font-family:var(--display);font-size:20px;color:var(--c);line-height:1.2}
-.linkcard b::after{content:" \2197";font-family:var(--body);font-size:14px;color:var(--muted)}
+.linkcard .txt>b{font-family:var(--display);font-size:20px;color:var(--c);line-height:1.2}
+.linkcard .txt>b::after{content:" \2197";font-family:var(--body);font-size:14px;color:var(--muted)}
 .linkcard .by{font-size:11.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);font-weight:700}
-.linkcard .n{font-size:15px;color:var(--muted);line-height:1.4;margin-top:3px}
+.linkcard .tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:4px}
+.linkcard .tags .tag{--u:var(--sk);--us:var(--sk-soft);margin:0;background:var(--us);color:var(--u);font-size:10.5px;padding:3px 9px;letter-spacing:.05em}
+.linkcard .tags .tag.eu{--u:var(--eu);--us:var(--eu-soft)}.linkcard .tags .tag.jp{--u:var(--jp);--us:var(--jp-soft)}
+.linkcard .n{font-size:15px;color:var(--muted);line-height:1.4;margin-top:4px}
+.linkcard .n b{color:var(--ink)}
+.mf.inhero .revealbtn{display:none}
 /* the Myth or fact tile as a band at the top of the hero, and the how-to text under the heading */
 .mf.inhero{width:100%;max-width:none;grid-template-columns:minmax(0,1fr) 240px;grid-template-areas:"lbl lbl" "s btns" "why why" "foot foot";column-gap:22px;align-items:center;padding:14px 22px 12px}
 .mf.inhero .lbl{grid-area:lbl}.mf.inhero .s{grid-area:s;font-size:21px}.mf.inhero .btns{grid-area:btns}.mf.inhero .why{grid-area:why}.mf.inhero .foot{grid-area:foot}
@@ -1013,6 +1018,8 @@ function scratchCard(el, onDone, title='QUOTE OF THE HOUR'){
   c.onpointermove=e=>{ if(!drawing) return; const p=pt(e); x.beginPath(); x.moveTo(last.x,last.y); x.lineTo(p.x,p.y); x.stroke(); last=p };
   c.onpointerup=c.onpointercancel=()=>{ if(!drawing) return; drawing=false; check() };
   btn.onclick=finish;
+  // keyboard users cannot scratch: the card itself takes focus and Enter or Space reveals it
+  c.removeAttribute('aria-hidden'); c.tabIndex=0; c.setAttribute('role','button'); c.setAttribute('aria-label',title.charAt(0)+title.slice(1).toLowerCase()+'. Scratch with the pointer, or press Enter to reveal.'); c.onkeydown=e=>{ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); finish() } };
 }
 function heroTile(){ const qe=document.getElementById('qotd'), mf=document.getElementById('mf');
   if(COURSE.tile==='mythfact' && MYTH.length){ if(qe) qe.hidden=true; if(mf){ mf.hidden=false; mythTile() } }
@@ -1186,7 +1193,7 @@ function home(){
       <div class="badges">${BADGES.map(b=>`<div class="bdg ${badges[b.id]?'on':''}" style="--c:${b.col}"><span class="medal"><svg><use href="#${b.ic}"/></svg></span><span class="nm">${esc(b.name)}</span><span class="how">${badges[b.id]?'Earned '+fmtDay(badges[b.id]):esc(b.how)}</span></div>`).join('')}</div></div>`:''}
   </section>
   ${COURSE.links?`<section class="section links"><h2>${esc(COURSE.links.title)}</h2><p class="muted">${esc(COURSE.links.intro)}</p>
-    <div class="linkgrid">${COURSE.links.items.map(l=>`<a class="linkcard" href="${esc(l.url)}" target="_blank" rel="noopener noreferrer" style="--c:${esc(l.col||'var(--navy)')}"><span class="lg ${l.img&&IMG[l.img]?'img':''}">${l.img&&IMG[l.img]?`<img src="${IMG[l.img]}" alt="">`:`<svg><use href="#${esc(l.icon||'ic-gov')}"/></svg>`}</span><span class="txt"><b>${esc(l.name)}</b><span class="by">${l.by&&l.by!==l.name?esc(l.by)+' · ':''}${esc(l.url.replace(/^https?:\/\/(www\.)?/,'').split('/')[0])}</span><span class="n">${esc(l.blurb)}</span></span></a>`).join('')}</div></section>`:''}`);
+    <div class="linkgrid">${COURSE.links.items.map(l=>`<a class="linkcard" href="${esc(l.url)}" target="_blank" rel="noopener noreferrer" style="--c:${esc(l.col||'var(--navy)')}"><span class="lg ${l.img&&IMG[l.img]?'img':''}">${l.img&&IMG[l.img]?`<img src="${IMG[l.img]}" alt="">`:`<svg><use href="#${esc(l.icon||'ic-gov')}"/></svg>`}</span><span class="txt"><b>${esc(l.name)}</b><span class="by">${l.by&&l.by!==l.name?esc(l.by)+' · ':''}${esc(l.url.replace(/^https?:\/\/(www\.)?/,'').split('/')[0])}</span>${(l.topics||[]).length?`<span class="tags">${l.topics.map(t=>{ const u=(Q.find(q=>q.topic===t)||{}).unit; return `<span class="tag ${unitCls(u)}">${esc(t)}</span>` }).join('')}</span>`:''}<span class="n">${l.use?`<b>Best for</b> ${esc(l.use)}`:esc(l.blurb||'')}</span></span></a>`).join('')}</div></section>`:''}`);
   heroTile();
   app.querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>({setup, challenge, terms, write, daily, timeline, facts, sources, shortq, play, mistakes})[b.dataset.go]());
   const gw=app.querySelector('#goWelcome'); if(gw){ gw.onclick=()=>{ store.set('welcomed',true); home() }; app.querySelector('#snd0').onclick=()=>setSound(!soundOn) }

@@ -11,6 +11,7 @@ import json, os, re, sys, glob
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 UNITS = set()
+TOPICS = set()
 TYPES = {'mc', 'ms', 'gaps', 'text', 'short', 'extended'}
 errors = []
 SOURCE_IMGS = set()  # images named by course files and data; counted as used
@@ -232,8 +233,15 @@ def check_links(c, rel, imgs):
     for u in {x for x in urls if urls.count(x) > 1}: err(rel, f'links: duplicate url {u}')
     for x in items:
         w = f"{rel} link {x.get('name', '?')!r}"
-        for k in ('name', 'by', 'blurb'):
+        for k in ('name', 'by'):
             if not nonempty(x.get(k)): err(w, f'{k} is blank')
+        if not nonempty(x.get('use')) and not nonempty(x.get('blurb')): err(w, 'needs a one-sentence "use" (what it is best for)')
+        tp = x.get('topics')
+        if tp is not None:
+            if not isinstance(tp, list) or not tp or not all(nonempty(t) for t in tp): err(w, 'topics must be a non-empty list')
+            else:
+                for t in tp:
+                    if t not in TOPICS: err(w, f'topic {t!r} is not in the bank')
         if not re.fullmatch(r'https://[a-z0-9.-]+(/[^\s"<>]*)?', str(x.get('url'))): err(w, 'url must be https and contain no spaces or quotes')
         if x.get('icon') is not None and not re.fullmatch(r'[a-z0-9-]+', str(x['icon'])): err(w, 'icon must be a symbol id (letters, digits, hyphens)')
         if x.get('col') is not None and not re.fullmatch(r'var\(--[a-z-]+\)|#[0-9A-Fa-f]{3,8}', str(x['col'])): err(w, 'col must be a var(--token) or a hex colour')
@@ -257,6 +265,8 @@ def check_course(path, imgs):
         if k and k not in imgs: err(rel, f"image {k!r} missing from img/")
     if not isinstance(c.get('verdicts'), list) or len(c.get('verdicts', [])) != 4: err(rel, 'verdicts must be four strings')
     d = c.get('data', {})
+    global TOPICS
+    TOPICS = {q.get('topic') for q in (load(d['bank']) or {}).get('questions', [])} if d.get('bank') else set()
     if d.get('bank'): check_bank(imgs, d['bank'])
     else: err(rel, 'data.bank is required')
     if d.get('shortq'): check_shortq(imgs, d['shortq'])

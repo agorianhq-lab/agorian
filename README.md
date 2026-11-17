@@ -40,7 +40,7 @@ python3 build.py --inline [--course X] # one self-contained file (images and fon
 
 Adding a course: write `courses/<id>.json` (copy `civics.json`), point it at its data files, and build with `--course <id>`. Units take one of three colour slots (`eu`, `jp`, `sk`); a course can recolour the slots under `colours`.
 
-Per-course switches in the course file: `badges` (the badge row on the home page and the badge toasts), `board` (the Clear your mistakes board: a question a viewer gets wrong stays on it until answered correctly twice in a row), `challenge.classCode` (the Challenge opens with a lobby where a class code typed from the board gives everyone the same 20 questions in the same order; results carry the code and the attempt number), and `links` (the Trusted sites section, each entry `name`, `url`, `by`, `blurb`). History has all four off so its page is unchanged.
+Per-course switches in the course file: `badges` (the badge row on the home page and the badge toasts), `board` (the Clear your mistakes board: a question a viewer gets wrong stays on it until answered correctly twice in a row), `challenge.classCode` (the Challenge opens with a lobby where a class code typed from the board gives everyone the same 20 questions in the same order; results carry the code and the attempt number), and `links` (the Trusted sites section, each entry `name`, `url`, `by`, `icon` and `col` for the badge, `topics` from the bank, and a one-sentence `use` that completes "Best for …"; an `img` key shows a supplied logo instead of the drawn icon). History has all four off so its page is unchanged.
 
 Branches. Work on `staging`. **Anything pushed to `main` goes live within about two minutes**, including after the site has been unpublished in the Pages settings, because a commit to the publishing source republishes it. Push to `main` only to publish.
 
@@ -57,7 +57,7 @@ A GitHub workflow (`.github/workflows/validate.yml`) runs the validator and the 
 - `play.json`: known kinds only (`sort`, `referendum`, `government`, `law`, `spot`); a `spot` entry needs `data.errors`.
 - `errors.json`: ids unique, unit known, at least four segments, every planted error has a `fix` and a `why`, two or three planted errors per passage.
 - `explain.json`: ids unique, unit known, exactly three `must` ideas, model at most 30 words.
-- Course `links`: title, non-empty items with name, by and blurb, https urls, no duplicates. `badges`, `board` and `challenge.classCode` must be booleans if present.
+- Course `links`: title, non-empty items with name, by and use, https urls, no duplicates, topics that exist in the bank, logo images that exist. `badges`, `board` and `challenge.classCode` must be booleans if present.
 - Each course file names its units; every question, source and tagged term must use one of them.
 - Images: every key the page, the timeline bands or the data refer to exists as `img/<key>.jpg` or `img/<course>/<key>.jpg`. Unused files are listed, not failed.
 
