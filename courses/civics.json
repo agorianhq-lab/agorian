@@ -18,9 +18,9 @@
    "art": "art-gov",
    "blurb": "Democracy, the Constitution, three levels and three branches of government, parties and Parliament.",
    "topicsNote": "Democracy in Action, Power in Australia, Parties, Policies and Power",
-   "img": "c-gov",
-   "imgSize": "contain",
-   "imgPos": "right bottom"
+   "img": "ph-gov",
+   "imgSize": "cover",
+   "imgPos": "center 35%"
   },
   {
    "name": "Citizens and participation",
@@ -29,9 +29,9 @@
    "art": "art-cit",
    "blurb": "Citizenship and national identity, rights and responsibilities, and how to have your say.",
    "topicsNote": "Many Stories, One Australia and Have Your Say!",
-   "img": "c-cit",
-   "imgSize": "contain",
-   "imgPos": "right bottom"
+   "img": "ph-cit",
+   "imgSize": "cover",
+   "imgPos": "center 55%"
   },
   {
    "name": "Laws and justice",
@@ -40,9 +40,9 @@
    "art": "art-law",
    "blurb": "What makes a law effective, and fairness, equality and access in the justice system.",
    "topicsNote": "Effective Laws and Justice for All",
-   "img": "c-law",
-   "imgSize": "contain",
-   "imgPos": "right bottom"
+   "img": "ph-law",
+   "imgSize": "cover",
+   "imgPos": "center 40%"
   }
  ],
  "colours": {
@@ -116,35 +116,40 @@
    "go": "setup",
    "title": "Multiple-choice practice",
    "blurb": "Pick topics, answer at your pace, read the explanation after every question. Word-bank gaps are mixed in.",
-   "img": "c-practice"
+   "img": "ph-practice",
+   "imgPos": "center 45%"
   },
   {
    "id": "sources",
    "go": "sources",
    "title": "Scenario practice",
    "blurb": "Seven scenarios you have not seen. Read one, then answer four quick questions with explanations.",
-   "img": "c-scenarios"
+   "img": "ph-scenarios",
+   "imgPos": "center 50%"
   },
   {
    "id": "challenge",
    "go": "challenge",
    "title": "Challenge",
    "blurb": "20 questions from the whole unit against a 10 minute clock.",
-   "img": "c-challenge"
+   "img": "ph-challenge",
+   "imgPos": "center 55%"
   },
   {
    "id": "terms",
    "go": "terms",
    "title": "Key terms",
    "blurb": "Flashcards to flip, plus a ten-definition sprint against the clock.",
-   "img": "c-terms"
+   "img": "ph-terms",
+   "imgPos": "center top"
   },
   {
    "id": "play",
    "go": "play",
    "title": "Interactives",
-   "img": "c-play",
-   "blurb": "Sort real responsibilities, pass a referendum, form a government, fix a law. Six things to try."
+   "img": "ph-play",
+   "blurb": "Sort real responsibilities, pass a referendum, form a government, fix a law. Six things to try.",
+   "imgPos": "center 50%"
   }
  ],
  "challenge": {
@@ -163,6 +168,6 @@
   "Early days. Pick one topic at a time in Multiple-choice practice and build it up."
  ],
  "resultsImg": {},
- "credits": "Raphael, The School of Athens (1511), Wikimedia Commons, public domain.",
- "tiles": "glow"
+ "credits": "Raphael, The School of Athens (1511), Wikimedia Commons, public domain. Tile photographs via Wikimedia Commons: Parliament House, Canberra, by Kgbo (CC BY-SA 4.0); polling place at Mullumbimby Public School, 2025, by Aliceinthealice (CC0); High Court of Australia by Nick-D (CC BY-SA 4.0); ballot paper for the 2016 ACT election by Nick-D (CC BY-SA 3.0); Swanston Street, Melbourne, by Philip Mallis (CC BY-SA 2.0); House of Representatives chamber by JJ Harrison (CC BY-SA 3.0); Commonwealth of Australia Constitution Act, National Archives of Australia (public domain); election-day barbecue, Australian Electoral Commission (CC BY 3.0 AU).",
+ "tiles": "photo"
 }

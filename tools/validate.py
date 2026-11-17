@@ -25,7 +25,11 @@ def load(rel):
         err(rel, f'cannot parse: {e}'); return None
 
 def images():
-    return {f.rsplit('.', 1)[0] for f in os.listdir(os.path.join(ROOT, 'img')) if f.endswith(('.jpg', '.svg'))}
+    # shared artwork in img/ plus each course's own folder, img/<course>/
+    out = set()
+    for d, _, files in os.walk(os.path.join(ROOT, 'img')):
+        out |= {f.rsplit('.', 1)[0] for f in files if f.endswith(('.jpg', '.svg'))}
+    return out
 
 def check_question(q, imgs):
     w = f"bank.json question {q.get('id', '?')}"

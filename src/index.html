@@ -542,6 +542,26 @@ footer{margin-top:40px;font-size:13px;color:var(--muted)}
 [data-tiles="glow"] .mode .t,[data-tiles="glow"] .mode .n{max-width:none}
 [data-tiles="glow"] .upanel .photo{left:auto;width:42%;inset-block:10px 8px;right:10px;background-repeat:no-repeat;background-size:contain;background-position:right bottom;transition:transform .5s,filter .3s;filter:saturate(.6);transform-origin:right bottom}[data-tiles="glow"] .upanel:hover .photo{transform:scale(1.05);filter:none}[data-tiles="glow"] .upanel .photo::after{display:none}[data-tiles="glow"] .upanel{padding-right:46%}[data-tiles="glow"] .units.n3 .upanel .t{font-size:25px}
 @media (max-width:640px){[data-tiles="glow"] .mode{padding-right:30%;min-height:0}[data-tiles="glow"] .mode .pic{width:30%;height:50%;opacity:.45}[data-tiles="glow"] .upanel{padding-right:42%}}
+/* photo tiles (courses with tiles: photo): a muted photograph across the top of each card that lights up on hover */
+[data-tiles="photo"] .mode{padding-top:170px;min-height:0;align-content:start}
+[data-tiles="photo"] .mode .pic{inset:0 0 auto 0;height:150px;opacity:1;background-size:cover;background-position:center 35%;background-repeat:no-repeat;filter:saturate(.4) brightness(.84);transform:scale(1.01);transition:filter .35s,transform .6s;pointer-events:none}
+[data-tiles="photo"] .mode::after{inset:0 0 auto 0;height:150px;opacity:1;background:linear-gradient(180deg,color-mix(in srgb,var(--m) 46%,transparent),color-mix(in srgb,var(--m) 18%,transparent));transition:opacity .35s}
+[data-tiles="photo"] .mode:hover{background:var(--surface);border-color:var(--m);box-shadow:0 0 0 3px color-mix(in srgb,var(--m) 45%,transparent),0 22px 44px -16px color-mix(in srgb,var(--m) 75%,transparent)}
+[data-tiles="photo"] .mode:hover .pic{filter:none;transform:scale(1.06)}
+[data-tiles="photo"] .mode:hover::after{opacity:0;background:transparent}
+[data-tiles="photo"] .mode:hover .t{color:var(--m)}[data-tiles="photo"] .mode:hover .n{color:var(--muted)}
+[data-tiles="photo"] .mode .k{margin-top:-49px;box-shadow:0 0 0 4px var(--surface),0 6px 14px -6px color-mix(in srgb,var(--m) 70%,transparent)}
+[data-tiles="photo"] .mode:hover .k{background:linear-gradient(145deg,color-mix(in srgb,var(--m) 88%,#fff),color-mix(in srgb,var(--m) 100%,#000 12%));color:#fff;box-shadow:0 0 0 4px var(--surface),0 6px 14px -6px color-mix(in srgb,var(--m) 70%,transparent)}
+[data-tiles="photo"] .mode .t,[data-tiles="photo"] .mode .n{max-width:none}
+[data-tiles="photo"] .upanel{padding:176px 18px 16px;min-height:0}
+[data-tiles="photo"] .upanel.eu{--u:var(--eu)}[data-tiles="photo"] .upanel.jp{--u:var(--jp)}[data-tiles="photo"] .upanel.sk{--u:var(--sk)}
+[data-tiles="photo"] .upanel .photo{inset:0 0 auto 0;height:160px;background-size:cover;background-position:center;background-repeat:no-repeat;filter:saturate(.4) brightness(.84);transform:scale(1.01);transform-origin:center;transition:filter .35s,transform .6s}
+[data-tiles="photo"] .upanel .photo::after{display:block;inset:0;background:linear-gradient(180deg,color-mix(in srgb,var(--u) 46%,transparent),color-mix(in srgb,var(--u) 18%,transparent));transition:opacity .35s}
+[data-tiles="photo"] .upanel:hover .photo{filter:none;transform:scale(1.06)}
+[data-tiles="photo"] .upanel:hover .photo::after{opacity:0}
+[data-tiles="photo"] .upanel .t{margin-top:2px}[data-tiles="photo"] .units.n3 .upanel .t{font-size:25px}
+@media (min-width:1000px){[data-tiles="photo"] .units.n3 .upanel{min-height:0}}
+@media (max-width:640px){[data-tiles="photo"] .mode{padding-top:150px}[data-tiles="photo"] .mode .pic,[data-tiles="photo"] .mode::after{height:130px}[data-tiles="photo"] .upanel{padding-top:156px;min-height:0}[data-tiles="photo"] .upanel .photo{height:140px}}
 .mode.play{--m:var(--rose)}
 /* interactives */
 .playgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:14px}@media (max-width:900px){.playgrid{grid-template-columns:repeat(2,1fr)}}@media (max-width:560px){.playgrid{grid-template-columns:1fr}}
@@ -945,7 +965,7 @@ function home(){
     ${store.get('welcomed',false)?`<p class="hint" style="margin:0 0 6px"><button class="linkbtn" id="howto">How to use Agorian</button></p>`:`<div class="welcome" id="welcome"><h2>How to use Agorian</h2>
       <p style="margin:0;font-size:17px">${esc(COURSE.welcome.lead)}</p>
       <ol>${COURSE.welcome.steps.map(x=>`<li>${x}</li>`).join('')}</ol>
-      <p class="hint" style="font-size:14px;margin:0">Practice questions only. Scores stay in this browser, so use the same device. The site only counts page visits.</p>
+      <p class="hint" style="font-size:14px;margin:0">Scores stay in this browser, so use the same device. The site only counts page visits.</p>
       <div class="namerow"><button class="btn primary" id="goWelcome">Let’s go</button><button class="soundbtn ${soundOn?'on':''}" id="snd0">${soundOn?'&#9835; Sound on':'&#9835; Sound off'}</button></div></div>`}
     <h1><em>Challenge</em> what you know.</h1>
     <div class="herogrid">
@@ -965,12 +985,11 @@ function home(){
       ${COURSE.units.filter(u=>u.panel!==false).map(u=>`<button class="upanel ${u.cls} ${u.img?'':'noimg'}" data-unit="${esc(u.name)}">${u.img?`<span class="photo" style="background-image:url(${IMG[u.img]});background-position:${u.imgPos||'center'};background-size:${u.imgSize||'cover'}"></span>`:''}<span class="t">${esc(u.name)}</span><span class="n">${esc(u.blurb||'')}</span><span class="cta">Practise this unit \u2192</span><svg class="art"><use href="#${u.art||'art-eu'}"/></svg></button>`).join('')}
     </div>
     <div class="modes ${COURSE.modes.length===4?'n4':''}">
-      ${COURSE.modes.map(m=>`<button class="mode ${m.id}" data-go="${m.go}">${m.img&&IMG[m.img]?`<span class="pic" style="background-image:url(${IMG[m.img]})"></span>`:''}<span class="k">${m.id==='shortq'?'&#9998;':`<svg><use href="#m-${({practice:'practice',challenge:'challenge',timeline:'timeline',terms:'terms',write:'write',facts:'facts',sources:'sources',play:'play'})[m.id]||'practice'}"/></svg>`}</span><span class="t">${esc(m.title)}</span><span class="n">${esc(m.blurb)}${m.id==='challenge'&&best?` Personal best ${best}/${(COURSE.challenge||{}).count||20}.`:''}</span></button>`).join('')}
+      ${COURSE.modes.map(m=>`<button class="mode ${m.id}" data-go="${m.go}">${m.img&&IMG[m.img]?`<span class="pic" style="background-image:url(${IMG[m.img]})${m.imgPos?`;background-position:${esc(m.imgPos)}`:''}"></span>`:''}<span class="k">${m.id==='shortq'?'&#9998;':`<svg><use href="#m-${({practice:'practice',challenge:'challenge',timeline:'timeline',terms:'terms',write:'write',facts:'facts',sources:'sources',play:'play'})[m.id]||'practice'}"/></svg>`}</span><span class="t">${esc(m.title)}</span><span class="n">${esc(m.blurb)}${m.id==='challenge'&&best?` Personal best ${best}/${(COURSE.challenge||{}).count||20}.`:''}</span></button>`).join('')}
     </div>
   </section>
   <section class="section">
     <h2>Your progress by topic</h2>
-    <p class="muted" style="font-size:14px">Accuracy from questions you've answered on this device. Tap a topic to practise it.</p>
     <div class="topics">${UNITS.map(u=>`
       <div class="unit ${unitCls(u)}"><p class="eyebrow"><svg><use href="#${unitIcon(u)}"/></svg>${esc(u)}</p><div class="tlist" style="display:grid;gap:8px">${topicsIn(u).map(t=>{
         const s=topicStats(t), n=Q.filter(q=>q.topic===t&&AUTO.has(q.type)).length, pct=s.a?Math.round(100*s.c/s.a):0;

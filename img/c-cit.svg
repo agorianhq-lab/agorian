@@ -1,8 +1,0 @@
-<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'>
-<circle cx='330' cy='60' r='40' fill='#D9A441' opacity='.35'/>
-<g fill='#B9472E'><circle cx='110' cy='120' r='30'/><path d='M50 300 C50 210 80 180 110 180 C140 180 170 210 170 300 Z'/><path d='M62 206 L48 130' stroke='#B9472E' stroke-width='24' stroke-linecap='round'/></g>
-<g fill='#2F5D4B'><circle cx='210' cy='140' r='26'/><path d='M158 300 C158 222 184 196 210 196 C236 196 262 222 262 300 Z'/><path d='M258 222 L282 160' stroke='#2F5D4B' stroke-width='22' stroke-linecap='round'/></g>
-<g fill='#2C4F7C'><circle cx='300' cy='156' r='22'/><path d='M256 300 C256 236 278 214 300 214 C322 214 344 236 344 300 Z'/><path d='M340 236 L362 190' stroke='#2C4F7C' stroke-width='18' stroke-linecap='round'/></g>
-<g fill='#FFFFFF' stroke='#1B2420' stroke-width='6' stroke-linejoin='round'><path d='M150 40 h110 a14 14 0 0 1 14 14 v36 a14 14 0 0 1 -14 14 h-60 l-24 22 v-22 h-26 a14 14 0 0 1 -14 -14 v-36 a14 14 0 0 1 14 -14 z'/></g>
-<g fill='#1B2420'><rect x='168' y='60' width='70' height='8' rx='4'/><rect x='168' y='78' width='46' height='8' rx='4'/></g>
-</svg>

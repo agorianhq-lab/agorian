@@ -36,10 +36,11 @@ esc=lambda j: json.dumps(j,ensure_ascii=False,separators=(',',':')).replace('</'
 js=esc(b)
 out_dir='preview' if inline else C['out']
 os.makedirs(out_dir,exist_ok=True)
-# images: the History page refers to its artwork by name throughout, so it takes every file; other courses take only what they name
+# images: img/ holds the shared artwork and img/<course>/ anything only that course uses. The History page refers to its artwork
+# by name throughout, so it takes every shared file; other courses take only what they name
 want=None if course_id=='history' else json.dumps(C)+json.dumps(b)
 img={}
-for f in sorted(glob.glob('img/*.jpg')+glob.glob('img/*.svg')):
+for f in sorted(glob.glob('img/*.jpg')+glob.glob('img/*.svg')+glob.glob(f'img/{course_id}/*.jpg')+glob.glob(f'img/{course_id}/*.svg')):
     k=os.path.basename(f).rsplit('.',1)[0]
     if k.startswith('p-'): continue  # raw band sources, used only by the sandbox
     if want is not None and f'"{k}"' not in want: continue
