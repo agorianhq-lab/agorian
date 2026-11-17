@@ -20,7 +20,7 @@ One static page, no framework, no backend, no accounts. Everything a student doe
 | `tools/validate.py` | Content checks (see below). |
 | `build.py` | Validates, then assembles `docs/` from the files above. |
 | `docs/` | Build output. GitHub Pages serves this folder from `main`. Commit it. History builds to `docs/`, Civics to `docs/civics/`. |
-| `img/` | Artwork, public domain unless the page footer says otherwise. |
+| `img/` | Shared artwork, public domain unless the page footer says otherwise. `img/<course>/` holds artwork only that course uses (for example the civics tile photographs, credited in that page's footer). |
 | `fonts/` | Self-hosted Fraunces and Atkinson Hyperlegible (Next digits). No Google Fonts. |
 | `logo/`, `palettes/`, `square/` | Design assets and exploration sheets. Not built. |
 | `handout/` | Printable one-pagers. Not linked from the site. |
@@ -50,7 +50,7 @@ A GitHub workflow (`.github/workflows/validate.yml`) runs the validator and the 
 - `shortq.json` and `sources.json` (and `scenarios.json`): ids unique, required fields present, answer indices in range, marks in range, criteria and mark points non-empty. The timed write is optional; if a source has one it must be complete.
 - `mythfact.json`: a list of `[statement, true or false, why]`, statements unique and under 120 characters.
 - Each course file names its units; every question, source and tagged term must use one of them.
-- Images: every key the page, the timeline bands or the data refer to exists as `img/<key>.jpg`. Unused files are listed, not failed.
+- Images: every key the page, the timeline bands or the data refer to exists as `img/<key>.jpg` or `img/<course>/<key>.jpg`. Unused files are listed, not failed.
 
 ## Question formats
 
