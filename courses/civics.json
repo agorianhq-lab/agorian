@@ -1,0 +1,134 @@
+{
+ "id": "civics",
+ "out": "docs/civics",
+ "subtitle": "Year 8 Civics Revision",
+ "description": "Agorian. Year 8 Civics and Citizenship revision for the Democracy in Action unit. Challenge what you know.",
+ "ogDescription": "Year 8 Civics and Citizenship revision for the Democracy in Action unit. Quick questions with explanations, scenario practice, a timed challenge and flashcards for the key terms.",
+ "data": {
+  "bank": "data/civics/bank.json",
+  "sources": "data/civics/scenarios.json",
+  "mythfact": "data/civics/mythfact.json"
+ },
+ "units": [
+  {
+   "name": "Democracy and government",
+   "cls": "jp",
+   "icon": "ic-gov",
+   "art": "art-gov",
+   "blurb": "Democracy, the Constitution, three levels and three branches of government, parties and Parliament.",
+   "topicsNote": "Democracy in Action, Power in Australia, Parties, Policies and Power"
+  },
+  {
+   "name": "Citizens and participation",
+   "cls": "eu",
+   "icon": "ic-cit",
+   "art": "art-cit",
+   "blurb": "Citizenship and national identity, rights and responsibilities, and how to have your say.",
+   "topicsNote": "Many Stories, One Australia and Have Your Say!"
+  },
+  {
+   "name": "Laws and justice",
+   "cls": "sk",
+   "icon": "ic-law",
+   "art": "art-law",
+   "blurb": "What makes a law effective, and fairness, equality and access in the justice system.",
+   "topicsNote": "Effective Laws and Justice for All"
+  }
+ ],
+ "colours": {
+  "light": {
+   "jp": "#1F3A5F",
+   "jp-soft": "#E2E8F1",
+   "eu": "#A3482A",
+   "eu-soft": "#F3E4DC",
+   "sk": "#5B3F7A",
+   "sk-soft": "#ECE4F2"
+  },
+  "dark": {
+   "jp": "#7FA0D1",
+   "jp-soft": "#232E44",
+   "eu": "#D98A6A",
+   "eu-soft": "#3A2A24",
+   "sk": "#B58AC4",
+   "sk-soft": "#2E2538"
+  }
+ },
+ "hero": {
+  "text": "The agora was the open square of Athens where citizens traded, voted and were questioned by Socrates. This is yours. Quick questions with an explanation after every answer, scenario practice, a timed challenge and flashcards for the key terms, all across the Democracy in Action unit.",
+  "img": "gr-athens",
+  "alt": "Raphael's fresco The School of Athens, philosophers in debate under a great arch",
+  "cap": "Raphael, The School of Athens, 1511. Athenian thinkers arguing in a great hall. Athens is where the word democracy, rule by the people, was born."
+ },
+ "welcome": {
+  "lead": "An additional revision tool. Finish the revision booklet first, then test yourself here.",
+  "steps": [
+   "<b>Three times</b>, do one <b>Scenario practice</b>. Read the scenario twice, answer the four questions, read every explanation.",
+   "<b>Twice</b>, do <b>Multiple-choice practice</b> on the topics under 70 per cent in Your progress by topic.",
+   "<b>Once</b>, try <b>Challenge</b>, then <b>Key terms</b> for anything you blanked on."
+  ]
+ },
+ "breakdown": {
+  "title": "Test breakdown",
+  "items": [
+   "<b>30 questions, 1 mark each.</b>",
+   "<b>Multiple choice</b>, and <b>fill in the blank</b> from a word bank of three or four words.",
+   "<b>Six short scenarios</b>, each followed by three or four questions. Read the scenario twice before you answer.",
+   "Attempt every question."
+  ],
+  "links": [
+   [
+    "sources",
+    "Scenario practice",
+    ""
+   ],
+   [
+    "setup",
+    "Multiple-choice practice",
+    ""
+   ]
+  ]
+ },
+ "modes": [
+  {
+   "id": "practice",
+   "go": "setup",
+   "title": "Multiple-choice practice",
+   "blurb": "Pick topics, answer at your pace, read the explanation after every question. Word-bank gaps are mixed in."
+  },
+  {
+   "id": "sources",
+   "go": "sources",
+   "title": "Scenario practice",
+   "blurb": "Seven scenarios you have not seen. Read one, then answer four quick questions with explanations."
+  },
+  {
+   "id": "challenge",
+   "go": "challenge",
+   "title": "Challenge",
+   "blurb": "20 questions from the whole unit against a 10 minute clock."
+  },
+  {
+   "id": "terms",
+   "go": "terms",
+   "title": "Key terms",
+   "blurb": "Flashcards to flip, plus a ten-definition sprint against the clock."
+  }
+ ],
+ "challenge": {
+  "count": 20,
+  "secs": 600
+ },
+ "tile": "mythfact",
+ "clock": false,
+ "music": false,
+ "facts": false,
+ "exam": null,
+ "verdicts": [
+  "Test ready on these topics. Try a scenario next.",
+  "Solid. Read the explanations on the ones you missed and go again.",
+  "Getting there. Practise the weak topics below before the next challenge.",
+  "Early days. Pick one topic at a time in Multiple-choice practice and build it up."
+ ],
+ "resultsImg": {},
+ "credits": "Raphael, The School of Athens (1511), Wikimedia Commons, public domain."
+}

@@ -533,6 +533,21 @@ footer{margin-top:40px;font-size:13px;color:var(--muted)}
 .marksel button{min-width:44px;height:40px;border-radius:10px;border:2px solid var(--navy);background:var(--surface);font-weight:700;cursor:pointer}
 .marksel button.on{background:var(--navy);color:#fff}
 /*__CHRONO_CSS__*/
+/*__COURSE_CSS__*/
+.mf{position:relative;width:420px;max-width:100%;display:grid;gap:8px;padding:14px 18px 12px;border:2px solid var(--navy);border-radius:14px;text-align:left;background:linear-gradient(135deg,color-mix(in srgb,var(--gold) 16%,var(--surface)),var(--surface) 70%);box-shadow:var(--shadow);overflow:hidden}
+.mf .lbl{display:flex;align-items:center;gap:8px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-ink);font-weight:700}.mf .lbl::after{content:"";flex:1;height:1px;background:color-mix(in srgb,var(--gold) 50%,transparent)}.mf .lbl .st{font-size:10.5px;color:var(--muted);letter-spacing:.04em;text-transform:none}
+.mf .s{font-family:var(--display);font-size:18px;line-height:1.3;color:var(--ink);font-weight:600}
+.mf .btns{display:flex;gap:8px}.mf .btns button{flex:1;padding:8px 10px;border-radius:10px;border:2px solid var(--navy);background:var(--surface);font-weight:700;cursor:pointer;transition:transform .12s,background .12s}.mf .btns button:hover{transform:translateY(-1px);background:color-mix(in srgb,var(--navy) 8%,var(--surface))}
+.mf .btns button.right{background:var(--ok-bg);border-color:var(--ok);color:var(--ok)}.mf .btns button.wrong{background:var(--bad-bg);border-color:var(--bad);color:var(--bad)}.mf .btns button:disabled{cursor:default}
+.mf .why{font-size:14px;line-height:1.45;color:var(--ink)}.mf .why b{color:var(--gold-ink)}.mf .foot{display:flex;justify-content:space-between;align-items:center;font-size:12px;color:var(--muted)}.mf .foot button{border:0;background:none;color:var(--gold-ink);font-weight:700;cursor:pointer;font-size:12px;letter-spacing:.04em;text-transform:uppercase}
+.mf canvas.scratch{position:absolute;inset:0;width:100%;height:100%;border-radius:12px;cursor:crosshair;touch-action:none;z-index:2;transition:opacity .5s}.mf canvas.scratch.done{opacity:0;pointer-events:none}.mf .revealbtn{position:absolute;right:8px;bottom:6px;z-index:3;font-size:10px;letter-spacing:.06em;text-transform:uppercase;font-weight:700;border:0;background:none;color:var(--gold-ink);cursor:pointer;opacity:.8}.mf .revealbtn.done{display:none}
+.hdr-right.plain{flex-direction:row;display:flex;align-items:flex-start;gap:10px}
+@media (max-width:1180px){.hdr-right.plain{justify-content:center}.mf{width:100%;max-width:520px}}
+.modes.n4{grid-template-columns:repeat(4,1fr)}@media (max-width:1000px){.modes.n4{grid-template-columns:repeat(2,1fr)}}@media (max-width:560px){.modes.n4{grid-template-columns:1fr}}
+.units.n3{grid-template-columns:1fr}@media (min-width:1000px){.units.n3{grid-template-columns:repeat(3,1fr)}.units.n3 .upanel{min-height:230px}}
+.upanel.sk{background:linear-gradient(135deg,var(--sk-soft),var(--surface) 70%)}.upanel.sk:hover{border-color:var(--sk);box-shadow:0 0 0 2px color-mix(in srgb,var(--sk) 35%,transparent),0 18px 36px -14px color-mix(in srgb,var(--sk) 55%,transparent);transform:translateY(-3px)}.upanel.sk .t,.upanel.sk .cta{color:var(--sk)}
+.upanel.noimg{padding-right:34%}.upanel.noimg .art{display:block;right:6px;bottom:6px;width:30%;max-width:150px;opacity:.9}@media (max-width:640px){.upanel.noimg{padding-right:30%;padding-top:18px;min-height:0}.upanel.noimg .art{width:24%;bottom:auto;top:14px}}
+.upanel.sk .art{color:var(--sk)}.upanel.eu .art{color:var(--eu)}.upanel.jp .art{color:var(--jp)}
 </style>
 
 <div class="wrap" id="top">
@@ -577,6 +592,12 @@ footer{margin-top:40px;font-size:13px;color:var(--muted)}
   <symbol id="m-facts" viewBox="0 0 48 48"><path d="M24 4 C15 4 10 11 10 18 C10 25 15 27 16 32 H32 C33 27 38 25 38 18 C38 11 33 4 24 4 Z" fill="currentColor" opacity=".3"/><path d="M24 4 C15 4 10 11 10 18 C10 25 15 27 16 32 H32 C33 27 38 25 38 18 C38 11 33 4 24 4 Z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><path d="M18 37 H30 M20 42 H28" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/><path d="M24 12 V22 M24 26 V27" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/><path d="M5 10 L8 12 M43 10 L40 12 M24 0 V2" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" opacity=".7"/></symbol>
   <symbol id="ic-jp" viewBox="0 0 24 24"><g fill="currentColor"><rect x="5" y="8" width="2.4" height="13"/><rect x="16.6" y="8" width="2.4" height="13"/><rect x="3.5" y="6" width="17" height="2.2" rx=".5"/><rect x="6" y="11" width="12" height="1.8"/><path d="M2 4.5 Q12 2.5 22 4.5 L21.5 6.5 Q12 4.8 2.5 6.5 Z"/></g></symbol>
   <symbol id="ic-eu" viewBox="0 0 24 24"><g fill="currentColor"><path d="M3 21 V8 h3 V6 h2 v2 h2 V6 h2 v2 h2 V6 h2 v2 h2 V6 h2 v2 h1 v13 z M10 21 v-5 a2 2 0 0 1 4 0 v5 z" fill-rule="evenodd"/></g></symbol>
+  <symbol id="ic-gov" viewBox="0 0 24 24"><g fill="currentColor"><path d="M12 2 L21 7 H3 Z"/><rect x="4" y="8" width="16" height="2"/><rect x="5" y="11" width="2.4" height="7"/><rect x="9" y="11" width="2.4" height="7"/><rect x="12.6" y="11" width="2.4" height="7"/><rect x="16.6" y="11" width="2.4" height="7"/><rect x="3" y="19" width="18" height="2.5"/></g></symbol>
+  <symbol id="ic-cit" viewBox="0 0 24 24"><g fill="currentColor"><circle cx="8" cy="7" r="3"/><circle cx="16.5" cy="8" r="2.5"/><path d="M2 20 C2 14 5 12 8 12 C11 12 14 14 14 20 Z"/><path d="M13.5 20 C13.5 15.5 15 13.5 16.5 13.5 C19 13.5 22 15.5 22 20 Z"/></g></symbol>
+  <symbol id="ic-law" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 V21 M7 21 H17 M4 7 H20 M6 7 L3 14 H9 Z M18 7 L15 14 H21 Z"/></g></symbol>
+  <symbol id="art-gov" viewBox="0 0 200 150"><g fill="currentColor"><path d="M100 10 L190 55 H10 Z" opacity=".85"/><rect x="20" y="60" width="160" height="10" opacity=".9"/><rect x="30" y="76" width="18" height="52" opacity=".75"/><rect x="64" y="76" width="18" height="52" opacity=".75"/><rect x="98" y="76" width="18" height="52" opacity=".75"/><rect x="132" y="76" width="18" height="52" opacity=".75"/><rect x="12" y="132" width="176" height="14" opacity=".9"/></g><circle cx="100" cy="34" r="7" fill="var(--surface)" opacity=".9"/></symbol>
+  <symbol id="art-cit" viewBox="0 0 200 150"><g fill="currentColor"><circle cx="60" cy="42" r="22" opacity=".85"/><circle cx="118" cy="50" r="18" opacity=".7"/><circle cx="160" cy="46" r="15" opacity=".55"/><path d="M14 146 C14 96 36 80 60 80 C84 80 106 96 106 146 Z" opacity=".85"/><path d="M98 146 C98 108 108 92 118 92 C134 92 150 108 150 146 Z" opacity=".7"/><path d="M142 146 C142 114 150 100 160 100 C174 100 190 114 190 146 Z" opacity=".55"/></g></symbol>
+  <symbol id="art-law" viewBox="0 0 200 150"><g fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" opacity=".85"><path d="M100 18 V134 M64 136 H136 M30 46 H170"/><path d="M46 46 L22 100 H70 Z M154 46 L130 100 H178 Z"/></g><g fill="currentColor" opacity=".35"><path d="M22 100 A24 12 0 0 0 70 100 Z"/><path d="M130 100 A24 12 0 0 0 178 100 Z"/></g><circle cx="100" cy="18" r="9" fill="currentColor"/></symbol>
   <symbol id="ic-sk" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="6"/><path d="M15.5 15.5 L21 21"/><path d="M8.5 11 h5 M11 8.5 v5"/></g></symbol>
 </svg>
 <main id="app"></main>
@@ -588,9 +609,12 @@ footer{margin-top:40px;font-size:13px;color:var(--muted)}
 (function(){
 'use strict';
 const BANK = JSON.parse(document.getElementById('bank').textContent);
-const Q = BANK.questions, TERMS = BANK.terms, SHORTQ = BANK.shortq||[], SOURCES = BANK.sources||{sources:[],checklist:[]};
+const COURSE = __COURSE__;
+const Q = BANK.questions, TERMS = BANK.terms, SHORTQ = BANK.shortq||[], SOURCES = BANK.sources||{sources:[],checklist:[]}, MYTH = BANK.mythfact||[];
 const app = document.getElementById('app');
-const UNITS = ['Medieval Europe','Shogunate Japan','Skills and concepts'];
+const UNITS = COURSE.units.map(u=>u.name), UNIT_BY = Object.fromEntries(COURSE.units.map(u=>[u.name,u])), MINOR = new Set(COURSE.units.filter(u=>u.minor).map(u=>u.name));
+const HAS = new Set(COURSE.modes.map(m=>m.id)); const SUCCESS_OK = HAS.has('write')||HAS.has('shortq');
+const modeTitle = id => (COURSE.modes.find(m=>m.id===id)||{}).title || ({practice:'Multiple-choice practice',sources:'Source analysis practice',terms:'Key terms',challenge:'Challenge'})[id] || id;
 const AUTO = new Set(['mc','ms','gaps','text']);
 
 // ---------- storage (per viewer, best effort) ----------
@@ -604,7 +628,7 @@ let stats = store.get('stats', {}); // qid -> {a:attempts,c:correct}
 function log(){ /* No answer data leaves the device. The only thing sent anywhere is an anonymous page-visit count, see track(). */ }
 const GC_PATHS={home:'/',setup:'/practice',startQuiz:'/practice/quiz',challenge:'/challenge',terms:'/terms',write:'/write',daily:'/daily',timeline:'/timeline',timelineGame:'/timeline/order',sprint:'/sprint',facts:'/facts',successPage:'/success',shortq:'/shortq',sqView:'/shortq',sources:'/sources',srcView:'/sources'};
 let gcLast='';
-function track(fn,a){ if(location.hostname!=='agorian.au') return; let path=GC_PATHS[fn.name]||('/'+fn.name); const id=a&&a[0]; if(typeof id==='string'&&/^[\w-]{1,24}$/.test(id)&&['successPage','sqView','srcView'].includes(fn.name)) path+='/'+id; if(path===gcLast) return; gcLast=path; const ev={path, title:'Agorian '+path}; try{ if(window.goatcounter&&typeof window.goatcounter.count==='function') window.goatcounter.count(ev); else if(window.__gcq) window.__gcq.push(ev) }catch(e){} }
+function track(fn,a){ if(location.hostname!=='agorian.au') return; let path=(COURSE.id==='history'?'':'/'+COURSE.id)+(GC_PATHS[fn.name]||('/'+fn.name)); const id=a&&a[0]; if(typeof id==='string'&&/^[\w-]{1,24}$/.test(id)&&['successPage','sqView','srcView'].includes(fn.name)) path+='/'+id; if(path===gcLast) return; gcLast=path; const ev={path, title:'Agorian '+path}; try{ if(window.goatcounter&&typeof window.goatcounter.count==='function') window.goatcounter.count(ev); else if(window.__gcq) window.__gcq.push(ev) }catch(e){} }
 function record(q, correct, conf, hint){
   const s = stats[q.id] || {a:0,c:0}; s.a++; if(correct) s.c++; stats[q.id]=s; store.set('stats', stats);
   schedule(q, correct, conf);
@@ -619,7 +643,7 @@ const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':
 const shuffle = a => { a=a.slice(); for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]} return a };
 const topicsIn = unit => [...new Set(Q.filter(q=>q.unit===unit && q.type!=='extended').map(q=>q.topic))];
 const L = 'ABCDEFGH';
-function h(html){ app.innerHTML = html; window.scrollTo({top:0}); const qe=document.getElementById('qotd'); if(qe && !html.includes('class="hero"')) qe.hidden=true; }
+function h(html){ app.innerHTML = html; window.scrollTo({top:0}); if(!html.includes('class="hero"')){ ['qotd','mf'].forEach(id=>{ const e=document.getElementById(id); if(e) e.hidden=true }); const hd=document.querySelector('header'); if(hd) hd.style.minHeight='' } }
 const hist=[]; let navLock=false;
 function screen(fn){ return function(...a){ if(!navLock){ const top=hist[hist.length-1]; if(!top||top.fn!==fn||JSON.stringify(top.a)!==JSON.stringify(a)) hist.push({fn,a}); if(hist.length>30) hist.shift(); } if(fn===HOME_FN) hist.splice(0, hist.length-1); const b=document.getElementById('backBtn'); if(b) b.hidden=hist.length<2; track(fn,a); return fn.apply(this,a) } }
 let HOME_FN=null;
@@ -763,13 +787,13 @@ function quoteOfDay(){ const n=Math.floor(Date.now()/36e5); const [q,a]=QUOTES[n
   if(store.get('qRevealed',-1)===n || REDUCED){ el.querySelector('.scratch').classList.add('done'); el.querySelector('.revealbtn').classList.add('done'); return }
   requestAnimationFrame(()=>scratchCard(el, ()=>store.set('qRevealed',n)));
 }
-function scratchCard(el, onDone){
+function scratchCard(el, onDone, title='QUOTE OF THE HOUR'){
   const c=el.querySelector('.scratch'), btn=el.querySelector('.revealbtn'); const r=el.getBoundingClientRect(); const dpr=Math.min(2,devicePixelRatio||1);
   c.width=Math.round(r.width*dpr); c.height=Math.round(r.height*dpr); const x=c.getContext('2d'); x.scale(dpr,dpr);
   // gold foil with a faint meander and a hint
   const g=x.createLinearGradient(0,0,r.width,r.height); g.addColorStop(0,'#E2B45C'); g.addColorStop(.5,'#CF9A3A'); g.addColorStop(1,'#B9852E'); x.fillStyle=g; x.fillRect(0,0,r.width,r.height);
   x.strokeStyle='rgba(255,255,255,.22)'; x.lineWidth=2; for(let i=-r.height;i<r.width;i+=14){ x.beginPath(); x.moveTo(i,0); x.lineTo(i+r.height,r.height); x.stroke() }
-  x.fillStyle='rgba(30,36,54,.85)'; x.font='700 12px '+getComputedStyle(document.body).fontFamily; x.textAlign='center'; x.fillText('QUOTE OF THE HOUR',r.width/2,r.height/2-10);
+  x.fillStyle='rgba(30,36,54,.85)'; x.font='700 12px '+getComputedStyle(document.body).fontFamily; x.textAlign='center'; x.fillText(title,r.width/2,r.height/2-10);
   x.font='italic 500 16px Fraunces, Georgia, serif'; x.fillText('Scratch to reveal',r.width/2,r.height/2+12);
   x.globalCompositeOperation='destination-out'; x.strokeStyle='#000'; x.fillStyle='#000'; x.lineCap='round'; x.lineJoin='round'; x.lineWidth=34;
   let drawing=false, last=null, cleared=0, done=false;
@@ -780,6 +804,26 @@ function scratchCard(el, onDone){
   c.onpointermove=e=>{ if(!drawing) return; const p=pt(e); x.beginPath(); x.moveTo(last.x,last.y); x.lineTo(p.x,p.y); x.stroke(); last=p };
   c.onpointerup=c.onpointercancel=()=>{ if(!drawing) return; drawing=false; check() };
   btn.onclick=finish;
+}
+function heroTile(){ const qe=document.getElementById('qotd'), mf=document.getElementById('mf');
+  if(COURSE.tile==='mythfact' && MYTH.length){ if(qe) qe.hidden=true; if(mf){ mf.hidden=false; mythTile() } }
+  else { if(mf) mf.hidden=true; if(qe){ quoteOfDay(); qe.hidden=false } } }
+function mythTile(){ const el=document.getElementById('mf'); if(!el) return;
+  const hour=Math.floor(Date.now()/36e5), off=store.get('mfOff',0), n=(hour+off)%MYTH.length; const [st,isFact,why]=MYTH[n];
+  const done=store.get('mfDone',null); let ans=(done&&done.n===n&&done.h===hour)?done.a:null; let streak=store.get('mfStreak',0), best=store.get('mfBest',0);
+  const render=()=>{
+    const right=ans!==null && (ans===1)===isFact;
+    el.innerHTML=`<span class="lbl">Myth or fact?<span class="st">${streak>1?`${streak} in a row`:''}${best>2?`${streak>1?' · ':''}best ${best}`:''}</span></span><p class="s">${esc(st)}</p>
+      ${ans===null?`<div class="btns"><button type="button" data-a="0">Myth</button><button type="button" data-a="1">Fact</button></div>`
+        :`<div class="btns"><button type="button" disabled class="${ans===0?(right?'right':'wrong'):''}">Myth</button><button type="button" disabled class="${ans===1?(right?'right':'wrong'):''}">Fact</button></div><p class="why"><b>${right?'Correct. ':'Not quite. '}${isFact?'Fact.':'Myth.'}</b> ${esc(why)}</p><div class="foot"><span>A new statement every hour.</span><button type="button" id="mfNext">Another</button></div>`}
+      <canvas class="scratch" aria-hidden="true"></canvas><button class="revealbtn" type="button">Reveal</button>`;
+    el.querySelectorAll('.btns [data-a]').forEach(b=>b.onclick=()=>{ ans=+b.dataset.a; const ok=(ans===1)===isFact; streak=ok?streak+1:0; if(streak>best) best=streak; store.set('mfStreak',streak); store.set('mfBest',best); store.set('mfDone',{n,h:hour,a:ans}); beep(ok?'ok':'bad'); render() });
+    const nx=el.querySelector('#mfNext'); if(nx) nx.onclick=()=>{ store.set('mfOff',off+1); store.set('mfDone',null); mythTile() };
+    if(ans!==null || store.get('mfRevealed',-1)===n || REDUCED){ el.querySelector('.scratch').classList.add('done'); el.querySelector('.revealbtn').classList.add('done') }
+    else requestAnimationFrame(()=>scratchCard(el, ()=>store.set('mfRevealed',n), 'MYTH OR FACT?'));
+    const hd=document.querySelector('header'); if(hd){ hd.style.minHeight = matchMedia('(min-width:1181px)').matches ? (el.getBoundingClientRect().height+44)+'px' : '' }
+  };
+  render();
 }
 const today = () => new Date().toISOString().slice(0,10);
 function mastery(t){ const s=topicStats(t); if(s.a<8) return null; const p=s.c/s.a; return p>=.95?'gold':p>=.8?'silver':p>=.6?'bronze':null }
@@ -828,9 +872,10 @@ const FACTS=[
 ];
 const FACT_IMG=['f-domesday','f-armour','f-motte','f-ordeal','f-abbey','f-alhambra','f-lazzaretto','f-harvest','eu-bayeux','jp-samurai','f-mongol','f-nitobe','f-sankin','f-dejima','f-edo','f-ronin','f-perry','f-meiji','f-manesse'];
 const FACT_TITLES=['The Domesday Book','The weight of armour','A castle in weeks','The end of trial by ordeal','The Church as landlord','Words from Arabic','Where quarantine comes from','Wages after the plague','Not a tapestry at all','To serve','The divine wind','Bushido\u2019s late birth','Processions of thousands','Dejima, the fan-shaped island','A million people in Edo','The 47 ronin','Perry\u2019s toy railway','Enlightened rule','Knights and samurai'];
-function factFor(topics){ const pool=FACTS.filter(f=>!topics||topics.includes(f[0])); const f=(pool.length?pool:FACTS)[Math.random()*(pool.length||FACTS.length)|0]; return `<div class="fact"><span class="lamp">?</span><div><b>Did you know</b>${esc(f[1])}</div></div>` }
+function factFor(topics){ if(!COURSE.facts) return ''; const pool=FACTS.filter(f=>!topics||topics.includes(f[0])); const f=(pool.length?pool:FACTS)[Math.random()*(pool.length||FACTS.length)|0]; return `<div class="fact"><span class="lamp">?</span><div><b>Did you know</b>${esc(f[1])}</div></div>` }
 const MODEH = (name,title) => `<div class="modeh" style="--m:var(--${({practice:'accent',challenge:'gold',timeline:'teal',terms:'sage',write:'plum',facts:'rose',sources:'teal'})[name]})"><span class="k"><svg><use href="#m-${name}"/></svg></span><h2>${title}</h2></div>`;
-const unitCls = u => u==='Medieval Europe'?'eu':u==='Shogunate Japan'?'jp':'sk';
+const unitCls = u => (UNIT_BY[u]||{}).cls||'sk';
+const unitIcon = u => (UNIT_BY[u]||{}).icon||('ic-'+unitCls(u));
 // timeline events (years hidden until placed)
 const EVENTS=[
  ['Medieval Europe',1066,'Battle of Hastings. William of Normandy defeats Harold'],
@@ -861,60 +906,42 @@ const EVENTS=[
 
 // ---------- home ----------
 function home(){
-  state = {mode:null}; quoteOfDay(); document.getElementById('qotd').hidden=false;
+  state = {mode:null}; heroTile();
   const totalAuto = Q.filter(q=>AUTO.has(q.type)).length;
   const dailyDone = store.get('dailyDate','')===today(), dayStreak=store.get('dayStreak',0), best=store.get('best',0);
   h(`
   <section class="hero">
     ${store.get('welcomed',false)?`<p class="hint" style="margin:0 0 6px"><button class="linkbtn" id="howto">How to use Agorian</button></p>`:`<div class="welcome" id="welcome"><h2>How to use Agorian</h2>
-      <p style="margin:0;font-size:17px">An additional revision tool. Finish the revision booklet first, then test yourself here.</p>
-      <ol>
-        <li><b>Three times</b>, write one <b>Short answer practice</b> question and mark it honestly against the model response.</li>
-        <li><b>Twice</b>, do one <b>Source analysis practice</b> and one <b>Paragraph practice</b>, timed.</li>
-        <li><b>Once</b>, try <b>Challenge</b>, then <b>Key terms</b> for anything you blanked on.</li>
-      </ol>
+      <p style="margin:0;font-size:17px">${esc(COURSE.welcome.lead)}</p>
+      <ol>${COURSE.welcome.steps.map(x=>`<li>${x}</li>`).join('')}</ol>
       <p class="hint" style="font-size:14px;margin:0">Practice questions only. Scores stay in this browser, so use the same device. The site only counts page visits.</p>
       <div class="namerow"><button class="btn primary" id="goWelcome">Let’s go</button><button class="soundbtn ${soundOn?'on':''}" id="snd0">${soundOn?'&#9835; Sound on':'&#9835; Sound off'}</button></div></div>`}
     <h1><em>Challenge</em> what you know.</h1>
     <div class="herogrid">
-      <div class="herotext"><p>The agora was the open square of Athens where citizens traded, voted and were questioned by Socrates. This is yours. Quick questions with an explanation after every answer, timed challenges, a timeline game, flashcards for the key terms and exam-style paragraph prompts, all across Medieval Europe and Shogunate Japan.</p>
+      <div class="herotext"><p>${esc(COURSE.hero.text)}</p>
       <div class="daily">
         <div><p class="t">Ten quick revision questions</p><p class="n">${dailyDone?'Done for today. Back tomorrow for the next set.':'Ten questions aimed at what you find hardest.'} ${dayStreak>1?`Day streak <b>${dayStreak}</b>.`:''}</p></div>
         <button class="btn ${dailyDone?'done':''}" data-go="daily">${dailyDone?'Do it again':'Start'}</button>
       </div></div>
-      <figure class="pic" style="margin:0"><img src="${IMG['gr-athens']}" alt="Raphael's fresco The School of Athens, philosophers in debate under a great arch"><figcaption class="cap">Raphael, The School of Athens, 1511. Athenian thinkers arguing in a great hall. Socrates is at the left in the olive robe, counting off his points on his fingers.</figcaption></figure>
+      <figure class="pic" style="margin:0"><img src="${IMG[COURSE.hero.img]}" alt="${esc(COURSE.hero.alt)}"><figcaption class="cap">${esc(COURSE.hero.cap)}</figcaption></figure>
     </div>
     <div class="examband"><span class="k">&#9998;</span><div class="ex">
-      <span class="t">Exam breakdown</span>
-      <ul class="exlist">
-        <li><b>50 marks in 50 minutes</b>, plus 5 minutes reading time.</li>
-        <li><b>Section A:</b> multiple choice, 10 marks. About a minute a question.</li>
-        <li><b>Section B:</b> short answers, 32 marks. Identify, describe, explain and compare questions, some using a source. About 45 seconds a mark.</li>
-        <li><b>Section C:</b> extended response, 8 marks. Choose one of two questions and use a TEEAL structure with a clear contention. About 15 minutes.</li>
-        <li>Blue or black pen. Sources are in a separate booklet. Attempt every question.</li>
-      </ul>
-      <span class="exlinks"><button class="btn" data-go="shortq">Short answer practice</button><button class="btn" data-go="sources">Source analysis practice</button><button class="btn quiet" data-go="write">Paragraph practice</button></span>
+      <span class="t">${esc(COURSE.breakdown.title)}</span>
+      <ul class="exlist">${COURSE.breakdown.items.map(x=>`<li>${x}</li>`).join('')}</ul>
+      <span class="exlinks">${COURSE.breakdown.links.map(([go,label,cls])=>`<button class="btn ${cls||''}" data-go="${go}">${esc(label)}</button>`).join('')}</span>
     </div></div>
-    <div class="units">
-      <button class="upanel eu" data-unit="Medieval Europe"><span class="photo" style="background-image:url(${IMG['eu-bayeux']});background-position:right 40%;background-size:cover"></span><span class="t">Medieval Europe</span><span class="n">Feudalism, castles, the Church, the Crusades and the Black Death.</span><span class="cta">Practise this unit \u2192</span><svg class="art"><use href="#art-eu"/></svg></button>
-      <button class="upanel jp" data-unit="Shogunate Japan"><span class="photo" style="background-image:url(${IMG['jp-wave']});background-position:right 55%;background-size:auto 100%"></span><span class="t">Shogunate Japan</span><span class="n">Samurai, the Tokugawa, sakoku and the Meiji Restoration.</span><span class="cta">Practise this unit \u2192</span><svg class="art"><use href="#art-jp"/></svg></button>
+    <div class="units ${COURSE.units.filter(u=>u.panel!==false).length===3?'n3':''}">
+      ${COURSE.units.filter(u=>u.panel!==false).map(u=>`<button class="upanel ${u.cls} ${u.img?'':'noimg'}" data-unit="${esc(u.name)}">${u.img?`<span class="photo" style="background-image:url(${IMG[u.img]});background-position:${u.imgPos||'center'};background-size:${u.imgSize||'cover'}"></span>`:''}<span class="t">${esc(u.name)}</span><span class="n">${esc(u.blurb||'')}</span><span class="cta">Practise this unit \u2192</span><svg class="art"><use href="#${u.art||'art-eu'}"/></svg></button>`).join('')}
     </div>
-    <div class="modes">
-      <button class="mode practice" data-go="setup"><span class="pic" style="background-image:url(${IMG['t-practice']})"></span><span class="k"><svg><use href="#m-practice"/></svg></span><span class="t">Multiple-choice practice</span><span class="n">Pick topics, answer at your pace, read the explanation after every question.</span></button>
-      <button class="mode shortq" data-go="shortq"><span class="pic" style="background-image:url(${IMG['f-domesday']})"></span><span class="k">&#9998;</span><span class="t">Short answer practice</span><span class="n">Section B questions. Write yours and then check with a model response.</span></button>
-      <button class="mode write" data-go="write"><span class="pic" style="background-image:url(${IMG['t-write']})"></span><span class="k"><svg><use href="#m-write"/></svg></span><span class="t">Paragraph practice</span><span class="n">Six Section C practice prompts with a TEEAL scaffold and a timer.</span></button>
-      <button class="mode sources" data-go="sources"><span class="pic" style="background-image:url(${IMG['f-dejima']})"></span><span class="k"><svg><use href="#m-sources"/></svg></span><span class="t">Source analysis practice</span><span class="n">Ten sources you have not seen. Four quick questions each, then a timed 3-mark answer.</span></button>
-      <button class="mode challenge" data-go="challenge"><span class="pic" style="background-image:url(${IMG['t-challenge']})"></span><span class="k"><svg><use href="#m-challenge"/></svg></span><span class="t">Challenge</span><span class="n">20 questions from both units against a 10 minute clock.${best?` Personal best ${best}/20.`:''}</span></button>
-      <button class="mode timeline" data-go="timeline"><span class="pic" style="background-image:url(${IMG['t-timeline']})"></span><span class="k"><svg><use href="#m-timeline"/></svg></span><span class="t">Timeline</span><span class="n">Both units side by side, 800 to 1900. Starred years are the ones to learn; tap an event for detail.</span></button>
-      <button class="mode terms" data-go="terms"><span class="pic" style="background-image:url(${IMG['t-terms']})"></span><span class="k"><svg><use href="#m-terms"/></svg></span><span class="t">Key terms</span><span class="n">Flashcards to flip, plus a ten-definition sprint against the clock.</span></button>
-      <button class="mode facts" data-go="facts"><span class="pic" style="background-image:url(${IMG['t-facts']})"></span><span class="k"><svg><use href="#m-facts"/></svg></span><span class="t">Fun facts</span><span class="n">Did-you-know cards from both units. Read one, then practise the topic it came from.</span></button>
+    <div class="modes ${COURSE.modes.length===4?'n4':''}">
+      ${COURSE.modes.map(m=>`<button class="mode ${m.id}" data-go="${m.go}">${m.img&&IMG[m.img]?`<span class="pic" style="background-image:url(${IMG[m.img]})"></span>`:''}<span class="k">${m.id==='shortq'?'&#9998;':`<svg><use href="#m-${({practice:'practice',challenge:'challenge',timeline:'timeline',terms:'terms',write:'write',facts:'facts',sources:'sources'})[m.id]||'practice'}"/></svg>`}</span><span class="t">${esc(m.title)}</span><span class="n">${esc(m.blurb)}${m.id==='challenge'&&best?` Personal best ${best}/${(COURSE.challenge||{}).count||20}.`:''}</span></button>`).join('')}
     </div>
   </section>
   <section class="section">
     <h2>Your progress by topic</h2>
     <p class="muted" style="font-size:14px">Accuracy from questions you've answered on this device. Tap a topic to practise it.</p>
     <div class="topics">${UNITS.map(u=>`
-      <div class="unit ${unitCls(u)}"><p class="eyebrow"><svg><use href="#ic-${unitCls(u)}"/></svg>${esc(u)}</p><div class="tlist" style="display:grid;gap:8px">${topicsIn(u).map(t=>{
+      <div class="unit ${unitCls(u)}"><p class="eyebrow"><svg><use href="#${unitIcon(u)}"/></svg>${esc(u)}</p><div class="tlist" style="display:grid;gap:8px">${topicsIn(u).map(t=>{
         const s=topicStats(t), n=Q.filter(q=>q.topic===t&&AUTO.has(q.type)).length, pct=s.a?Math.round(100*s.c/s.a):0;
         const m=mastery(t); return `<button class="topic ${unitCls(u)}" data-topic="${esc(t)}" style="--p:${s.a?pct:0}%"><span class="name">${esc(t)}${m?` <span class="badge ${m}" title="${m} mastery" style="margin-left:6px;vertical-align:middle"></span>`:''}</span><span class="pct ${s.a?'':'none'}">${s.a?pct+'%':'Not yet'}${s.a&&pct===100?'<span class="tick" aria-label="complete">&#10003;</span>':''}</span></button>`}).join('')}</div></div>`).join('')}
     </div>
@@ -933,9 +960,9 @@ function setup(){
   h(`<section class="section">${MODEH('practice','Multiple-choice practice')}
   <div class="card">
     <div><p class="eyebrow">Choose topics</p><p class="hint">Tick as many as you like. Questions are shuffled.</p></div>
-    ${UNITS.map(u=>`<div class="ugroup ${unitCls(u)}"><p class="eyebrow"><svg><use href="#ic-${unitCls(u)}"/></svg>${esc(u)}</p><div class="checks">${topicsIn(u).map(t=>`<label class="check ${unitCls(u)} ${sel.has(t)?'on':''}"><input type="checkbox" id="t-${esc(t).replace(/\W+/g,'-')}" value="${esc(t)}" ${sel.has(t)?'checked':''}><span>${esc(t)}</span><span class="cnt">${Q.filter(q=>q.topic===t&&q.type!=='extended').length} q</span></label>`).join('')}</div></div>`).join('')}
+    ${UNITS.map(u=>`<div class="ugroup ${unitCls(u)}"><p class="eyebrow"><svg><use href="#${unitIcon(u)}"/></svg>${esc(u)}</p><div class="checks">${topicsIn(u).map(t=>`<label class="check ${unitCls(u)} ${sel.has(t)?'on':''}"><input type="checkbox" id="t-${esc(t).replace(/\W+/g,'-')}" value="${esc(t)}" ${sel.has(t)?'checked':''}><span>${esc(t)}</span><span class="cnt">${Q.filter(q=>q.topic===t&&q.type!=='extended').length} q</span></label>`).join('')}</div></div>`).join('')}
     <div class="row"><label class="hint">Number of questions <select class="sel" id="count"><option>10</option><option selected>15</option><option>25</option><option value="all">All</option></select></label>
-      <label class="row" style="gap:8px;cursor:pointer"><input type="checkbox" id="incShort" style="width:18px;height:18px;accent-color:var(--navy)"><span class="hint">Include short written answers (self marked)</span></label></div>
+      ${Q.some(q=>q.type==='short')?`<label class="row" style="gap:8px;cursor:pointer"><input type="checkbox" id="incShort" style="width:18px;height:18px;accent-color:var(--navy)"><span class="hint">Include short written answers (self marked)</span></label>`:''}</div>
     <div class="row"><button class="btn primary" id="go">Start practice</button><button class="btn" id="all">Select all</button><button class="btn quiet" id="back">Back</button></div>
   </div></section>`);
   const boxes=[...app.querySelectorAll('.checks input')];
@@ -947,26 +974,26 @@ function setup(){
     if(!topics.length){ boxes[0].focus(); return }
     store.set('lastTopics', topics);
     const c=app.querySelector('#count').value;
-    startQuiz({mode:'practice', topics, timed:false, count:c==='all'?Infinity:+c, incShort:app.querySelector('#incShort').checked});
+    const inc=app.querySelector('#incShort'); startQuiz({mode:'practice', topics, timed:false, count:c==='all'?Infinity:+c, incShort:!!(inc&&inc.checked)});
   };
 }
 
 function daily(){
-  const all=Q.filter(q=>AUTO.has(q.type) && q.unit!=='Skills and concepts'); const due=shuffle(all.filter(isDue)); const rest=shuffle(all.filter(q=>!isDue(q))).sort((a,b)=>weight(a)-weight(b)); const pool=due.concat(rest).slice(0,10);
+  const all=Q.filter(q=>AUTO.has(q.type) && !MINOR.has(q.unit)); const due=shuffle(all.filter(isDue)); const rest=shuffle(all.filter(q=>!isDue(q))).sort((a,b)=>weight(a)-weight(b)); const pool=due.concat(rest).slice(0,10);
   state={mode:'daily'}; startQuiz({mode:'daily', topics:null, timed:false, count:10, list:shuffle(pool)});
 }
 function challenge(){
-  startQuiz({mode:'challenge', topics:null, timed:600, count:20});
+  const c=COURSE.challenge||{}; startQuiz({mode:'challenge', topics:null, timed:c.secs||600, count:c.count||20});
 }
 
 // ---------- quiz engine ----------
 let timerId=null;
 function startQuiz(opts){
-  let pool = Q.filter(q => (opts.topics ? opts.topics.includes(q.topic) : q.unit!=='Skills and concepts' || Math.random()<0.5) && (AUTO.has(q.type) || (opts.incShort && q.type==='short')));
+  let pool = Q.filter(q => (opts.topics ? opts.topics.includes(q.topic) : !MINOR.has(q.unit) || Math.random()<0.5) && (AUTO.has(q.type) || (opts.incShort && q.type==='short')));
   if(opts.mode==='challenge'){
-    // balance across the two units
-    const me=shuffle(pool.filter(q=>q.unit==='Medieval Europe')).slice(0,9), sj=shuffle(pool.filter(q=>q.unit==='Shogunate Japan')).slice(0,9), sk=shuffle(pool.filter(q=>q.unit==='Skills and concepts')).slice(0,2);
-    pool=shuffle(me.concat(sj,sk));
+    // balance across the units when the course says how
+    const mix=(COURSE.challenge||{}).mix;
+    pool = mix ? shuffle(Object.entries(mix).flatMap(([u,n])=>shuffle(pool.filter(q=>q.unit===u)).slice(0,n))) : shuffle(pool);
   } else {
     // weight towards questions this viewer has got wrong or never seen
     pool = shuffle(pool).sort((a,b)=>weight(a)-weight(b));
@@ -1005,7 +1032,7 @@ function showQ(){
   h(`<div class="progress ${state.mode}"><span>${i+1} / ${list.length}</span><span class="track"><i style="width:${100*i/list.length}%"></i></span>${state.timed?`<span class="row" style="gap:10px"><span class="timer" id="timer">${fmt(state.left)}</span><button class="btn quiet" id="quit" style="padding:4px 8px">Finish</button></span>`:`<button class="btn quiet" id="quit" style="padding:4px 8px">End</button>`}</div>
   <div class="card ${unitCls(q.unit)}">
     ${si?'':art(TOPIC_IMG[q.topic])}
-    <div class="qhead"><span class="eyebrow" style="color:var(--${unitCls(q.unit)})"><svg><use href="#ic-${unitCls(q.unit)}"/></svg>${esc(q.unit)} · ${esc(q.topic)}</span>${q.skill?`<span class="hint">${esc(q.skill)}</span>`:''}</div>
+    <div class="qhead"><span class="eyebrow" style="color:var(--${unitCls(q.unit)})"><svg><use href="#${unitIcon(q.unit)}"/></svg>${esc(q.unit)} · ${esc(q.topic)}</span>${q.skill?`<span class="hint">${esc(q.skill)}</span>`:''}</div>
     ${stim}
     <p class="qtext">${esc(q.question)}</p>
     ${body}
@@ -1077,7 +1104,7 @@ const music={on:false, mode:store.get('musMode','auto'), vol:store.get('musVol',
 const SCALES={ jp:[0,2,3,7,8,12,14,15,19], eu:[0,2,3,5,7,9,10,12,14,15,17] }; // in-sen style pentatonic; dorian
 const ROOTS={jp:220, eu:196};
 function ensureCtx(){ actx=actx||new (window.AudioContext||window.webkitAudioContext)(); if(actx.state==='suspended') actx.resume(); return actx }
-function musicUnit(){ if(music.mode!=='auto') return music.mode; const q=state.list&&state.list[state.i]; return q&&q.unit==='Shogunate Japan'?'jp':'eu' }
+function musicUnit(){ if(music.mode!=='auto') return music.mode; const q=state.list&&state.list[state.i]; return (q&&(UNIT_BY[q.unit]||{}).music)||'eu' }
 function pluck(freq, when, dur, gain, bright){ const c=ensureCtx(); const o=c.createOscillator(); o.type=bright?'triangle':'sine'; o.frequency.value=freq;
   const o2=c.createOscillator(); o2.type='sine'; o2.frequency.value=freq*2.01; const g2=c.createGain(); g2.gain.value=bright?.25:.12;
   const f=c.createBiquadFilter(); f.type='lowpass'; f.frequency.setValueAtTime(freq*6,when); f.frequency.exponentialRampToValueAtTime(freq*1.5,when+dur);
@@ -1124,7 +1151,7 @@ function results(){
   const summary=[`AGORIAN  ${modeName.toUpperCase()}`,date,'',`Score   ${c} / ${n}   (${pct}%)`,`Time    ${mins}`,'','By topic',...rows.map(r=>`  ${r[0].padEnd(colw)}  ${r[1].padStart(7)}  ${r[2].padStart(4)}`),'',weak.length?`Revisit  ${weak.join(', ')}`:'No weak topics this round.'].join('\n');
   h(`<section class="section">${MODEH(state.mode==='challenge'?'challenge':'practice',({challenge:'Challenge complete',daily:'Ten quick revision questions complete',practice:'Multiple-choice practice complete'})[state.mode])}
   <div class="card">
-    ${art(state.mode==='challenge'?'jp-fuji':(TOPIC_IMG[Object.keys(byTopic)[0]]||'eu-bayeux'))}
+    ${art(state.mode==='challenge'?(COURSE.resultsImg||{}).challenge:(TOPIC_IMG[Object.keys(byTopic)[0]]||(COURSE.resultsImg||{}).default))}
     <div class="score"><div class="ring" style="--p:${pct}"><b>${pct}%</b></div>
       <div><p style="font-size:18px;font-weight:600">${c} of ${n} correct</p><p class="muted">${n?verdict(pct):'No questions answered.'}${newBest?' <b style="color:var(--accent)">New personal best.</b>':''}</p></div></div>
     <div><p class="eyebrow" style="margin-bottom:8px">By topic</p><div class="bytopic">${Object.entries(byTopic).map(([t,s])=>`<div class="bt"><div><div style="margin-bottom:4px">${esc(t)}</div><div class="bar"><i style="width:${100*s.c/s.a}%;background:${s.c/s.a<0.6?'var(--accent)':'var(--sage)'}"></i></div></div><span class="n">${s.c}/${s.a}</span></div>`).join('')}</div></div>
@@ -1137,25 +1164,25 @@ function results(){
     ${A.some(a=>!a.correct)?`<div><p class="eyebrow" style="margin-bottom:8px">Questions to revisit</p><div class="review">${A.filter(a=>!a.correct).map(a=>`<div class="rv"><span class="q">${esc(a.q.question)}${a.conf==='sure'?'<span class="tag sure">Sure but wrong</span>':''}</span>${(()=>{const q=a.q; let ans=''; if(q.type==='mc'||q.type==='ms') ans=q.answer.map(k=>q.options[k]).join('; '); else if(q.type==='gaps') ans=q.blanks.join(', '); else if(q.type==='text') ans=q.answer[0]; return ans?`<span><b>Answer:</b> ${esc(ans)}</span>`:''})()}<span class="muted">${esc(a.q.explanation||a.q.model||'')}</span></div>`).join('')}</div></div>`:''}
     ${A.some(a=>a.correct&&a.conf==='unsure')?`<p class="hint">${A.filter(a=>a.correct&&a.conf==='unsure').length} right but not sure. Those come back in three days. Sure and right come back in a week, wrong ones tomorrow.</p>`:''}
     ${A.some(a=>a.hint)?`<p class="hint">Hints used on ${A.filter(a=>a.hint).length}.</p>`:''}
-    <div class="row"><button class="btn primary" id="again">${state.mode==='challenge'?'New challenge':'Practise again'}</button><button class="btn" id="succ">What success looks like</button>${weak.length?`<button class="btn accent" id="weak">Practise weak topics</button>`:''}<button class="btn quiet" id="home">Home</button></div>
+    <div class="row"><button class="btn primary" id="again">${state.mode==='challenge'?'New challenge':'Practise again'}</button>${SUCCESS_OK?`<button class="btn" id="succ">What success looks like</button>`:''}${weak.length?`<button class="btn accent" id="weak">Practise weak topics</button>`:''}<button class="btn quiet" id="home">Home</button></div>
   </div></section>`);
   app.querySelector('#copy').onclick=async e=>{ try{ await navigator.clipboard.writeText(summary); e.target.textContent='Copied' }catch(err){ const r=document.createRange(); r.selectNodeContents(document.getElementById('sum')); const s=getSelection(); s.removeAllRanges(); s.addRange(r); e.target.textContent='Selected, press copy' } };
   app.querySelector('#again').onclick=()=> state.mode==='challenge'?challenge():state.mode==='daily'?daily():startQuiz({mode:'practice',topics:state.topics,timed:false,count:n||15});
   const w=app.querySelector('#weak'); if(w) w.onclick=()=>startQuiz({mode:'practice',topics:weak,timed:false,count:15});
-  app.querySelector('#home').onclick=home; app.querySelector('#succ').onclick=()=>success();
+  app.querySelector('#home').onclick=home; const sb=app.querySelector('#succ'); if(sb) sb.onclick=()=>success();
   log({event:'session_end', mode:state.mode, n, c});
 }
-function verdict(p){ return p>=85?'Exam ready on these topics. Try the paragraph prompts next.':p>=65?'Solid. Read the explanations on the ones you missed and go again.':p>=40?'Getting there. Practise the weak topics below before the next challenge.':'Early days. Pick one topic at a time in Practice and build it up.' }
+function verdict(p){ const v=COURSE.verdicts; return p>=85?v[0]:p>=65?v[1]:p>=40?v[2]:v[3] }
 
 // ---------- key terms ----------
 const JP_TERMS=new Set(['Archipelago','Bakufu','Bushido','Daimyo','Edict','Emperor','Outcast','Ronin','Sakoku','Samurai','Sankin Kotai','Seppuku','Shogun','Westernisation','Heian period','Kamakura period','Edo period','Treaty of Kanagawa','Meiji Restoration','Conscription','Kabuki','Ukiyo-e']);
 const SK_TERMS=new Set(['Cause and effect','Contestability','Continuity and change','Empathy','Evidence','Perspectives','Significance','Turning point']);
-const termUnit = t => JP_TERMS.has(t) ? 'Shogunate Japan' : SK_TERMS.has(t) ? 'Skills and concepts' : 'Medieval Europe';
+const termUnit = t => t.unit || (JP_TERMS.has(t.term) ? 'Shogunate Japan' : SK_TERMS.has(t.term) ? 'Skills and concepts' : 'Medieval Europe');
 function terms(){
   let order = shuffle(TERMS.map((_,i)=>i)); let i=0, flipped=false;
   const draw=()=>{ const t=TERMS[order[i]];
     h(`<section class="section"><div class="row" style="justify-content:space-between">${MODEH('terms','Key terms')}<span class="pill">${TERMS.length} terms</span></div>
-    <div class="flash ${unitCls(termUnit(t.term))} ${flipped?'back':''}" id="flash" role="button" tabindex="0" aria-label="Flashcard, tap to flip">${flipped?`<div><p class="unit">${esc(termUnit(t.term))}</p><p class="term">${esc(t.term)}</p><p class="def" style="margin-top:10px">${esc(t.definition)}</p></div>`:`<div><p class="unit">${esc(termUnit(t.term))}</p><p class="term">${esc(t.term)}</p><p class="tap">Tap to see the definition</p></div>`}</div>
+    <div class="flash ${unitCls(termUnit(t))} ${flipped?'back':''}" id="flash" role="button" tabindex="0" aria-label="Flashcard, tap to flip">${flipped?`<div><p class="unit">${esc(termUnit(t))}</p><p class="term">${esc(t.term)}</p><p class="def" style="margin-top:10px">${esc(t.definition)}</p></div>`:`<div><p class="unit">${esc(termUnit(t))}</p><p class="term">${esc(t.term)}</p><p class="tap">Tap to see the definition</p></div>`}</div>
     <div class="actions"><div class="row"><button class="btn" id="prev" style="display:inline-flex;align-items:center;gap:6px"><svg style="width:18px;height:18px"><use href="#ar-l"/></svg>Previous</button><button class="btn" id="next" style="display:inline-flex;align-items:center;gap:6px">Next<svg style="width:18px;height:18px"><use href="#ar-r"/></svg></button></div>
       <div class="row"><button class="btn accent" id="sprint">Term sprint</button><button class="btn quiet" id="home">Home</button></div></div>
     <p class="hint">${i+1} of ${order.length}. Space flips, arrow keys move.</p></section>`);
@@ -1231,7 +1258,7 @@ function facts(){
     <div class="factgrid">${pool.map(k=>{ const [topic,text]=FACTS[k]; const u=unitOf(topic); const c=unitCls(u); const img=FACT_IMG[k]||TOPIC_IMG[topic]; const canP=Q.some(q=>q.topic===topic&&AUTO.has(q.type));
       return `<div class="ftile ${seen.has(k)?'read':''}" tabindex="0" data-k="${k}" data-topic="${esc(topic)}" style="--u:var(--${c})">
         ${img&&IMG[img]?`<div class="bg" style="background-image:url(${IMG[img]});background-position:${FOCUS[img]||'center'}"></div>`:''}
-        <div class="front"><span class="eyebrow"><svg style="width:14px;height:14px"><use href="#ic-${c}"/></svg>${esc(topic)}</span><div class="tt">${esc(FACT_TITLES[k]||'Did you know?')}</div><div class="peek">Hover to reveal</div></div>
+        <div class="front"><span class="eyebrow"><svg style="width:14px;height:14px"><use href="#${unitIcon(u)}"/></svg>${esc(topic)}</span><div class="tt">${esc(FACT_TITLES[k]||'Did you know?')}</div><div class="peek">Hover to reveal</div></div>
         <div class="back"><span class="eyebrow">${esc(u)} · ${esc(topic)}</span><p>${esc(text)}</p>${canP?`<div class="row"><button class="btn prac" data-t="${esc(topic)}">Practise ${esc(topic)}</button></div>`:''}</div>
       </div>`}).join('')}</div>
     <div class="actions" style="margin-top:18px"><span class="hint">${pool.length} facts${filter==='all'?' across both units':''}.</span><button class="btn quiet" id="home">Home</button></div></section>`);
@@ -1297,19 +1324,20 @@ let srcDone=store.get('srcdrill',{});
 function sources(){
   const S=SOURCES.sources;
   const list=()=>{ const got=S.filter(x=>srcDone[x.id]).length;
-    h(`<section class="section"><div class="row xrow" style="justify-content:space-between">${MODEH('sources','Source analysis practice')}<span class="pill">${got} of ${S.length} done</span></div>
+    h(`<section class="section"><div class="row xrow" style="justify-content:space-between">${MODEH('sources',modeTitle('sources'))}<span class="pill">${got} of ${S.length} done</span></div>
     <p class="muted">${esc(SOURCES.intro)}</p>
-    <div class="card"><p class="eyebrow">The 3-mark checklist</p><ol style="margin:6px 0 0;padding-left:20px">${SOURCES.checklist.map(c=>`<li>${esc(c)}</li>`).join('')}</ol></div>
-    <div class="thumbs" style="margin-top:12px">${S.map(x=>{ const u=unitCls(x.unit); const d=srcDone[x.id]; return `<button class="thumb" data-id="${x.id}"><span class="th ${x.img?'':'txt'}">${x.img?`<img src="${IMG[x.img]}" alt="">`:'&ldquo;'+esc(x.text.slice(0,70))+'&hellip;&rdquo;'}</span><span class="body"><span class="eyebrow" style="color:var(--${u})">${esc(x.unit)} · ${x.img?'visual':'written'}</span><b>${esc(x.caption.split(',')[0])}</b>${d?`<span class="done">&#10003; ${d.mc}/4 quick · self-mark ${d.self??'–'}/3</span>`:''}</span></button>`}).join('')}</div>
-    <p class="hint" style="margin-top:12px">Sources are public domain, from Wikimedia Commons. Written extracts are adapted and shortened, as they would be in an exam.</p>
+    <div class="card"><p class="eyebrow">${esc(SOURCES.checklistTitle||'The 3-mark checklist')}</p><ol style="margin:6px 0 0;padding-left:20px">${SOURCES.checklist.map(c=>`<li>${esc(c)}</li>`).join('')}</ol></div>
+    <div class="thumbs" style="margin-top:12px">${S.map(x=>{ const u=unitCls(x.unit); const d=srcDone[x.id]; return `<button class="thumb" data-id="${x.id}"><span class="th ${x.img?'':'txt'}">${x.img?`<img src="${IMG[x.img]}" alt="">`:'&ldquo;'+esc(x.text.slice(0,70))+'&hellip;&rdquo;'}</span><span class="body"><span class="eyebrow" style="color:var(--${u})">${esc(x.unit)} · ${x.img?'visual':(SOURCES.kind||'written')}</span><b>${esc(x.caption.split(',')[0])}</b>${d?`<span class="done">&#10003; ${d.mc}/${x.qs.length}${x.write?` quick · self-mark ${d.self??'–'}/3`:''}</span>`:''}</span></button>`}).join('')}</div>
+    ${SOURCES.footnote===undefined?`<p class="hint" style="margin-top:12px">Sources are public domain, from Wikimedia Commons. Written extracts are adapted and shortened, as they would be in an exam.</p>`:SOURCES.footnote?`<p class="hint" style="margin-top:12px">${esc(SOURCES.footnote)}</p>`:''}
     <div class="row" style="margin-top:12px"><button class="btn quiet" id="home">Home</button></div></section>`);
     app.querySelectorAll('.thumb').forEach(b=>b.onclick=()=>one(b.dataset.id)); app.querySelector('#home').onclick=home };
   const one=screen(function srcView(id){
     const x=S.find(y=>y.id===id); const k=S.indexOf(x); const u=unitCls(x.unit); let mc=0, answered=0, startedAt=0, tid=null;
-    h(`<section class="section"><div class="row xrow" style="justify-content:space-between">${MODEH('sources','Source analysis practice')}<span class="pill">${esc(x.unit)} · ${x.img?'visual':'written'} source</span></div>
-    <div class="card xcard ${u}"><div class="srcgrid">${x.img?`<div><img src="${IMG[x.img]}" alt="${esc(x.caption)}"></div>`:`<blockquote class="srcq">${esc(x.text)}</blockquote>`}<div><p class="hint" style="font-size:14px;color:var(--ink)"><b>Source.</b> ${esc(x.caption)}</p><p class="hint" style="margin-top:10px">Read the caption first. It tells you the type, who made it, where and when. Then answer the four quick questions, then write.</p></div></div></div>
+    const KIND=SOURCES.kind?SOURCES.kind[0].toUpperCase()+SOURCES.kind.slice(1):'Source', ALL=`All ${SOURCES.kind?SOURCES.kind+'s':'sources'}`;
+    h(`<section class="section"><div class="row xrow" style="justify-content:space-between">${MODEH('sources',modeTitle('sources'))}<span class="pill">${esc(x.unit)} · ${x.img?'visual source':(SOURCES.kind||'written source')}</span></div>
+    <div class="card xcard ${u}"><div class="srcgrid">${x.img?`<div><img src="${IMG[x.img]}" alt="${esc(x.caption)}"></div>`:`<blockquote class="srcq">${esc(x.text)}</blockquote>`}<div><p class="hint" style="font-size:14px;color:var(--ink)">${SOURCES.sourceLabel===''?'':`<b>${esc(SOURCES.sourceLabel||'Source')}.</b> `}${esc(x.caption)}</p><p class="hint" style="margin-top:10px">${esc(SOURCES.readHint||'Read the caption first. It tells you the type, who made it, where and when. Then answer the four quick questions, then write.')}</p></div></div></div>
     ${x.qs.map((q,i)=>`<div class="card" data-i="${i}"><p class="qtext" style="font-size:16px">${i+1}. ${esc(q.q)}</p><div class="opts">${shuffle(q.o.map((o,kk)=>({o,kk}))).map(({o,kk},n)=>`<button class="opt" data-k="${kk}"><span class="l">${'ABCD'[n]}</span><span>${esc(o)}</span></button>`).join('')}</div><div class="srcx">${esc(q.x)}</div></div>`).join('')}
-    <div class="card xcard" id="wr" hidden><span class="eyebrow">Now write</span><p class="qtext">${esc(x.write)} <span class="muted" style="font-weight:400;white-space:nowrap">(3 marks)</span></p>
+    ${x.write?`<div class="card xcard" id="wr" hidden><span class="eyebrow">Now write</span><p class="qtext">${esc(x.write)} <span class="muted" style="font-weight:400;white-space:nowrap">(3 marks)</span></p>
       <div class="timerrow"><span><b>2 min 15 sec</b> at 45 seconds a mark.</span><button class="btn" id="tstart">Start writing</button><span class="tdisp" id="tdisp" hidden></span></div>
       <ul class="chk">${SOURCES.checklist.map(c=>`<li>${esc(c)}</li>`).join('')}</ul>
       <textarea id="ta" placeholder="Start with the source: 'The source shows…' or 'The writer says…', then 'which suggests…'" style="margin-top:12px;min-height:130px" disabled></textarea>
@@ -1318,13 +1346,17 @@ function sources(){
         <div class="sample full"><span class="marks full">likely 3 / 3</span><p>${esc(x.model)}</p><ol style="margin:4px 0 0;padding-left:20px;font-size:13.5px;color:var(--muted)">${x.mark.map(m=>`<li>${esc(m)}</li>`).join('')}</ol></div>
         <div class="card" style="margin:0"><p class="eyebrow">Mark yourself</p><p class="hint">One mark for each of the three points above that your answer has.</p><div class="marksel" id="marksel">${[0,1,2,3].map(i=>`<button data-m="${i}">${i}</button>`).join('')}<span class="hint">out of 3</span></div></div>
       </div>
-      ${pager(k,S.length,`Source ${k+1} of ${S.length}`)}
-      <div class="row" style="margin-top:12px"><button class="btn quiet" id="back">All sources</button></div></div>
-    <div class="row" id="early" style="margin-top:12px"><button class="btn quiet" id="back0">All sources</button></div></section>`);
+      ${pager(k,S.length,`${KIND} ${k+1} of ${S.length}`)}
+      <div class="row" style="margin-top:12px"><button class="btn quiet" id="back">${ALL}</button></div></div>`
+      :`<div class="card xcard" id="wr" hidden><span class="eyebrow">Done</span><p class="qtext" id="doneTxt"></p>
+      ${pager(k,S.length,`${KIND} ${k+1} of ${S.length}`)}
+      <div class="row" style="margin-top:12px"><button class="btn quiet" id="back">${ALL}</button></div></div>`}
+    <div class="row" id="early" style="margin-top:12px"><button class="btn quiet" id="back0">${ALL}</button></div></section>`);
     const $=q=>app.querySelector(q);
     app.querySelectorAll('.card[data-i]').forEach(box=>{ const i=+box.dataset.i; box.querySelectorAll('.opt').forEach(b=>b.onclick=()=>{ const kk=+b.dataset.k, ok=kk===x.qs[i].a; if(ok) mc++; answered++;
       box.querySelectorAll('.opt').forEach(o=>{ o.disabled=true; if(+o.dataset.k===x.qs[i].a) o.classList.add('right'); else if(o===b) o.classList.add('wrong') }); box.querySelector('.srcx').classList.add('show'); beep(ok?'ok':'bad');
-      if(answered===x.qs.length){ $('#wr').hidden=false; $('#early').hidden=true; $('#wr').scrollIntoView({behavior:'smooth',block:'start'}) } }) });
+      if(answered===x.qs.length){ $('#wr').hidden=false; $('#early').hidden=true; if(!x.write){ srcDone[x.id]={mc}; store.set('srcdrill',srcDone); $('#doneTxt').textContent=`${mc} of ${x.qs.length} correct. ${mc===x.qs.length?'Perfect. Try the next one.':'Read the explanations above, then try the next one.'}`; if(mc===x.qs.length) confetti(); if(S.every(y=>srcDone[y.id])) beep('win') } $('#wr').scrollIntoView({behavior:'smooth',block:'start'}) } }) });
+    if(x.write){
     const ta=$('#ta'), wc=$('#wc'); const count=()=>{ wc.textContent=`${ta.value.trim().split(/\s+/).filter(Boolean).length} words` }; ta.oninput=count;
     const disp=$('#tdisp'), startB=$('#tstart'); const fmt=ms=>{ const t=Math.max(0,Math.ceil(ms/1000)); return `${Math.floor(t/60)}:${String(t%60).padStart(2,'0')}` };
     startB.onclick=()=>{ if(tid) return; startedAt=Date.now(); const endAt=startedAt+135000; startB.disabled=true; ta.disabled=false; ta.focus(); $('#reveal').disabled=false; disp.hidden=false; beep('ok'); count();
@@ -1333,6 +1365,7 @@ function sources(){
     app.querySelectorAll('#marksel button').forEach(b=>b.onclick=()=>{ const m=+b.dataset.m; app.querySelectorAll('#marksel button').forEach(y=>y.classList.toggle('on',y===b)); srcDone[x.id]=Object.assign(srcDone[x.id]||{mc},{self:m}); store.set('srcdrill',srcDone); beep(m===3?'win':'ok');
       log({event:'sources', qid:x.id, n:mc, c:m, correct:m===3?1:0, secs:startedAt?Math.min(135,Math.round((Date.now()-startedAt)/1000)):0, unit:x.unit, type:'sources'});
       if(S.every(y=>srcDone[y.id]&&srcDone[y.id].self!==null&&srcDone[y.id].self!==undefined)) confetti() });
+    }
     const pv=app.querySelector('#pg-prev'), nx=app.querySelector('#pg-next'); if(pv) pv.onclick=()=>one(S[k-1].id); if(nx) nx.onclick=()=>one(S[k+1].id);
     $('#back').onclick=()=>sources(); $('#back0').onclick=()=>sources();
   });
@@ -1468,28 +1501,34 @@ function write(){
 }
 
 document.getElementById('homeBtn').onclick=()=>home();
+document.querySelector('.brand .desc').textContent=COURSE.subtitle;
+{ const cr=[...document.querySelectorAll('footer details')].find(d=>d.querySelector('summary').textContent==='Image credits'); if(cr&&COURSE.credits!=null) cr.innerHTML='<summary>Image credits</summary>'+esc(COURSE.credits) }
+if(!COURSE.music){ document.querySelectorAll('#audioPop .arow').forEach((r,i)=>{ if(i>0) r.hidden=true }) }
+if(!COURSE.clock){ const ct=document.querySelector('.clocktile'), hr=document.querySelector('.hdr-right'), aw=ct.querySelector('.audiowrap'); hr.classList.add('plain'); ct.hidden=true; hr.insertBefore(aw,ct);
+  if(COURSE.tile==='mythfact'){ const mf=document.createElement('aside'); mf.className='mf'; mf.id='mf'; mf.hidden=true; hr.insertBefore(mf,ct) } }
 document.getElementById('sndBtn').onclick=()=>setSound(!soundOn); setSound(soundOn);
 document.getElementById('musBtn').onclick=()=>setMusic(!music.on);
 const ab=document.getElementById('audioBtn'), ap=document.getElementById('audioPop'); ab.onclick=e=>{ e.stopPropagation(); ap.hidden=!ap.hidden; ab.setAttribute('aria-expanded',!ap.hidden) }; ap.onclick=e=>e.stopPropagation(); document.addEventListener('click',()=>{ ap.hidden=true; ab.setAttribute('aria-expanded','false') });
 const mm=document.getElementById('musMode'); mm.value=music.mode; mm.onchange=()=>{ music.mode=mm.value; store.set('musMode',mm.value); music.current=null; if(music.on){ clearTimeout(music.timer); phrase() } };
 const mv=document.getElementById('musVol'); mv.value=music.vol; mv.oninput=()=>{ music.vol=+mv.value; store.set('musVol',music.vol); if(music.master&&actx) music.master.gain.setTargetAtTime(music.vol/100*.6, actx.currentTime, .1) };
 document.addEventListener('visibilitychange',()=>{ if(document.hidden&&music.on){ clearTimeout(music.timer) } else if(music.on){ phrase() } });
-const EXAM_AT=new Date('2026-11-06T10:45:00+11:00'); // Friday 6 November, 10:45 Melbourne time
-const CLOSED_UNTIL=new Date('2026-11-06T12:00:00+11:00'); // the page hides itself from 10:45 until midday on exam day; the holding page on the server does the rest
-function closedNow(d){ return d>=EXAM_AT && d<CLOSED_UNTIL }
-function showClosed(){ if(document.body.classList.contains('closed')) return; document.body.className='closed'; [...document.body.children].forEach(e=>{ if(!/^(STYLE|SCRIPT|SVG)$/.test(e.tagName)) e.hidden=true }); const m=document.createElement('main'); m.className='closedbox'; m.innerHTML='<p class="word">A<sup>+</sup>gorian</p><h1>Closed for the exam.</h1><p>Good luck.</p>'; document.body.appendChild(m) }
-function examBlocks(now){ const ms=EXAM_AT-now; if(ms<=0){ return now-EXAM_AT<55*60000?'<span class="exam">Exam under way. Good luck.</span>':'<span class="exam">Exam done.</span>' }
+const EXAM_AT=COURSE.exam?new Date(COURSE.exam.at):null; // e.g. Friday 6 November 2026, 10:45 Melbourne time
+const CLOSED_UNTIL=COURSE.exam?new Date(COURSE.exam.until):null; // the page hides itself from the exam start until this time; the holding page on the server does the rest
+const NOUN=(COURSE.exam&&COURSE.exam.noun)||'Exam';
+function closedNow(d){ return !!EXAM_AT && d>=EXAM_AT && d<CLOSED_UNTIL }
+function showClosed(){ if(document.body.classList.contains('closed')) return; document.body.className='closed'; [...document.body.children].forEach(e=>{ if(!/^(STYLE|SCRIPT|SVG)$/.test(e.tagName)) e.hidden=true }); const m=document.createElement('main'); m.className='closedbox'; m.innerHTML=`<p class="word">A<sup>+</sup>gorian</p><h1>Closed for the ${NOUN.toLowerCase()}.</h1><p>Good luck.</p>`; document.body.appendChild(m) }
+function examBlocks(now){ if(!EXAM_AT) return ''; const ms=EXAM_AT-now; if(ms<=0){ return now-EXAM_AT<55*60000?`<span class="exam">${NOUN} under way. Good luck.</span>`:`<span class="exam">${NOUN} done.</span>` }
   const tot=Math.floor(ms/1000), days=Math.floor(tot/86400), hrs=Math.floor((tot%86400)/3600), mn=Math.floor((tot%3600)/60), sc=tot%60;
   const blk=(n,l)=>`<span class="cdb"><b>${n}</b><i>${l}</i></span>`;
   const row=days>=1?blk(days,days===1?'day':'days')+blk(hrs,'hrs')+blk(mn,'min'):blk(hrs,'hrs')+blk(mn,'min')+blk(String(sc).padStart(2,'0'),'sec');
-  return `<span class="cd" aria-label="Time until the exam">${row}</span><span class="when">Exam <b>Fri 6 Nov, 10:45 am</b></span>` }
-function ring(d){ const rr=document.getElementById('ringRect'); if(!rr) return; const t=rr.closest('.clocktile'); const W=t.offsetWidth, H=t.offsetHeight; rr.setAttribute('x',0.5); rr.setAttribute('y',0.5); rr.setAttribute('width',Math.max(0,W-1)); rr.setAttribute('height',Math.max(0,H-1)); rr.setAttribute('rx',13.5); rr.setAttribute('ry',13.5); const start=EXAM_AT-7*86400000; const pct=Math.max(0,Math.min(100,(d-start)/(EXAM_AT-start)*100)); rr.setAttribute('stroke-dasharray',`${pct.toFixed(2)} 100`);
+  return `<span class="cd" aria-label="Time until the ${NOUN.toLowerCase()}">${row}</span><span class="when">${NOUN} <b>${esc(COURSE.exam.label||'')}</b></span>` }
+function ring(d){ const rr=document.getElementById('ringRect'); if(!rr||!EXAM_AT) return; const t=rr.closest('.clocktile'); const W=t.offsetWidth, H=t.offsetHeight; rr.setAttribute('x',0.5); rr.setAttribute('y',0.5); rr.setAttribute('width',Math.max(0,W-1)); rr.setAttribute('height',Math.max(0,H-1)); rr.setAttribute('rx',13.5); rr.setAttribute('ry',13.5); const start=EXAM_AT-7*86400000; const pct=Math.max(0,Math.min(100,(d-start)/(EXAM_AT-start)*100)); rr.setAttribute('stroke-dasharray',`${pct.toFixed(2)} 100`);
   const dot=document.getElementById('ringDot'); if(dot){ if(pct<=0||pct>=100||!rr.getPointAtLength){ dot.style.display='none' } else { try{ const pt=rr.getPointAtLength(rr.getTotalLength()*pct/100); dot.setAttribute('cx',pt.x); dot.setAttribute('cy',pt.y); dot.style.display='' }catch(e){ dot.style.display='none' } } } }
 window.addEventListener('resize',()=>ring(new Date()));
 (function tick(){ const d=new Date(); if(closedNow(d)){ if(window.__booted) showClosed(); setTimeout(tick,30000); return } const el=document.getElementById('clock'); if(el){ const hh=d.getHours(), m=String(d.getMinutes()).padStart(2,'0'); const h12=((hh+11)%12)+1; el.innerHTML=`<span class="lbl">Melbourne</span><span class="time">${h12}:${m}<small>${hh<12?'am':'pm'}</small></span><span class="date">${d.toLocaleDateString('en-AU',{weekday:'long',day:'numeric',month:'long'})}</span>`; const cd=document.getElementById('cdown'); if(cd) cd.innerHTML=examBlocks(d) } ring(d); const left=EXAM_AT-d; const fast=left>0&&left<86400000; setTimeout(tick, fast?1000-(Date.now()%1000)+20:60000-(Date.now()%60000)+50) })();
 HOME_FN=home; home=screen(home); setup=screen(setup); challenge=screen(challenge); terms=screen(terms); write=screen(write); daily=screen(daily); timeline=screen(timeline); timelineGame=screen(timelineGame); sprint=screen(sprint); facts=screen(facts); shortq=screen(shortq); sources=screen(sources); startQuiz=screen(startQuiz);
 document.getElementById('backBtn').onclick=goBack;
-const ROUTES={practice:setup, challenge, terms, write, daily, timeline, sprint, facts, success, shortq, sources};
+const ROUTES={daily, sprint}; for(const [k,f] of Object.entries({practice:setup, challenge, terms, write, timeline, facts, success, shortq, sources})){ if(HAS.has(k)||(k==='success'&&SUCCESS_OK)) ROUTES[k]=f }
 const r=(location.hash||'').slice(1); window.__booted=true; if(closedNow(new Date())) showClosed(); else (ROUTES[r]||home)();
 })();
 </script>

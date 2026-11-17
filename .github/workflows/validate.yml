@@ -17,4 +17,5 @@ jobs:
       - name: Build and confirm docs/ is up to date
         run: |
           python3 build.py
-          git diff --exit-code -- docs/ || (echo "docs/ is stale: run python3 build.py and commit the result" && exit 1)
+          python3 build.py --course civics
+          git diff --exit-code -- docs/ || (echo "docs/ is stale: run python3 build.py and python3 build.py --course civics, then commit the result" && exit 1)
