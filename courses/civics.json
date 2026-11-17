@@ -175,16 +175,6 @@
  "credits": "Raphael, The School of Athens (1511), Wikimedia Commons, public domain. Tile photographs via Wikimedia Commons: Parliament House, Canberra, by Kgbo (CC BY-SA 4.0); polling place at Mullumbimby Public School, 2025, by Aliceinthealice (CC0); High Court of Australia by Nick-D (CC BY-SA 4.0); ballot paper for the 2016 ACT election by Nick-D (CC BY-SA 3.0); Swanston Street, Melbourne, by Philip Mallis (CC BY-SA 2.0); House of Representatives chamber by JJ Harrison (CC BY-SA 3.0); Commonwealth of Australia Constitution Act, National Archives of Australia (public domain); election-day barbecue, Australian Electoral Commission (CC BY 3.0 AU).",
  "tiles": "photo",
  "tilePos": "hero",
- "termImg": [
-  {"img": "ph-gov", "pos": "center 28%", "terms": ["Parliament", "Legislature", "Executive government", "Federal government", "Government", "Accountability", "Separation of powers"]},
-  {"img": "ph-challenge", "pos": "center 55%", "terms": ["House of Representatives", "Opposition", "Crossbench", "Hung parliament", "Majority government", "Minority government", "Coalition", "Political party", "Policy", "Portfolio"]},
-  {"img": "ph-practice", "pos": "center 45%", "terms": ["Candidate", "Independent", "Representative democracy", "Democracy"]},
-  {"img": "ph-cit", "pos": "center 55%", "terms": ["Direct democracy", "Citizen", "Citizenship", "Referendum", "Double majority"]},
-  {"img": "ph-terms", "pos": "center top", "terms": ["Constitution", "Federal system", "State or territory government", "Governor-General"]},
-  {"img": "ph-law", "pos": "center 40%", "terms": ["Judiciary", "Rule of law", "Law", "Effective law", "Fairness", "Equality", "Equity", "Access"]},
-  {"img": "ph-scenarios", "pos": "center 50%", "terms": ["Local council", "Civic action", "Petition"]},
-  {"img": "ph-play", "pos": "center 50%", "terms": ["National identity", "Values"]}
- ],
  "badges": true,
  "links": {
   "title": "Trusted sites",
