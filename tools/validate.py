@@ -223,7 +223,7 @@ def check_explain(rel):
         if n > 30: err(w, f'model is {n} words; keep it to about 25')
     print(f'{rel}: {len(items)} prompts')
 
-def check_links(c, rel):
+def check_links(c, rel, imgs):
     L = c.get('links')
     if L is None: return
     items = L.get('items')
@@ -235,6 +235,11 @@ def check_links(c, rel):
         for k in ('name', 'by', 'blurb'):
             if not nonempty(x.get(k)): err(w, f'{k} is blank')
         if not re.fullmatch(r'https://[a-z0-9.-]+(/[^\s"<>]*)?', str(x.get('url'))): err(w, 'url must be https and contain no spaces or quotes')
+        if x.get('icon') is not None and not re.fullmatch(r'[a-z0-9-]+', str(x['icon'])): err(w, 'icon must be a symbol id (letters, digits, hyphens)')
+        if x.get('col') is not None and not re.fullmatch(r'var\(--[a-z-]+\)|#[0-9A-Fa-f]{3,8}', str(x['col'])): err(w, 'col must be a var(--token) or a hex colour')
+        if x.get('img'):
+            SOURCE_IMGS.add(x['img'])
+            if x['img'] not in imgs: err(w, f"logo image {x['img']!r} missing from img/")
 
 def check_course(path, imgs):
     global UNITS
@@ -260,7 +265,9 @@ def check_course(path, imgs):
     if d.get('play'): check_play(d['play'])
     if d.get('errors'): check_errors(d['errors'])
     if d.get('explain'): check_explain(d['explain'])
-    check_links(c, rel)
+    check_links(c, rel, imgs)
+    if c.get('tilePos') not in (None, 'header', 'hero'): err(rel, 'tilePos must be header or hero')
+    if 'inline' in (c.get('welcome') or {}) and not isinstance(c['welcome']['inline'], bool): err(rel, 'welcome.inline must be true or false')
     for k in ('badges', 'board'):
         if k in c and not isinstance(c[k], bool): err(rel, f'{k} must be true or false')
     if 'classCode' in (c.get('challenge') or {}) and not isinstance(c['challenge']['classCode'], bool): err(rel, 'challenge.classCode must be true or false')

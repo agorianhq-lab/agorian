@@ -22,7 +22,7 @@
    "topicsNote": "Democracy in Action, Power in Australia, Parties, Policies and Power",
    "img": "ph-gov",
    "imgSize": "cover",
-   "imgPos": "center 35%"
+   "imgPos": "center 12%"
   },
   {
    "name": "Citizens and participation",
@@ -104,6 +104,7 @@
   "cap": "Raphael, The School of Athens, 1511. Athenian thinkers arguing in a great hall. Athens is where the word democracy, rule by the people, was born."
  },
  "welcome": {
+  "inline": true,
   "lead": "An additional revision tool. Finish the revision booklet first, then test yourself here.",
   "steps": [
    "<b>Three times</b>, do one <b>Scenario practice</b>. Read the scenario twice, answer the four questions, read every explanation.",
@@ -173,22 +174,23 @@
  "resultsImg": {},
  "credits": "Raphael, The School of Athens (1511), Wikimedia Commons, public domain. Tile photographs via Wikimedia Commons: Parliament House, Canberra, by Kgbo (CC BY-SA 4.0); polling place at Mullumbimby Public School, 2025, by Aliceinthealice (CC0); High Court of Australia by Nick-D (CC BY-SA 4.0); ballot paper for the 2016 ACT election by Nick-D (CC BY-SA 3.0); Swanston Street, Melbourne, by Philip Mallis (CC BY-SA 2.0); House of Representatives chamber by JJ Harrison (CC BY-SA 3.0); Commonwealth of Australia Constitution Act, National Archives of Australia (public domain); election-day barbecue, Australian Electoral Commission (CC BY 3.0 AU).",
  "tiles": "photo",
+ "tilePos": "hero",
  "badges": true,
  "links": {
   "title": "Trusted sites",
   "intro": "Official and well-established sources on how Australia's democracy works. Use them to check a fact or read further. They open in a new tab.",
   "items": [
-   {"name": "Parliamentary Education Office", "url": "https://peo.gov.au", "by": "Parliament of Australia", "blurb": "How Parliament, elections and the Constitution work, explained for students. The best first stop."},
-   {"name": "AEC for schools", "url": "https://education.aec.gov.au", "by": "Australian Electoral Commission", "blurb": "How voting and elections work in Australia, from the people who run them."},
-   {"name": "Museum of Australian Democracy", "url": "https://www.moadoph.gov.au", "by": "Old Parliament House, Canberra", "blurb": "Stories, objects and timelines from Australia's democratic history."},
-   {"name": "Parliament of Australia: education", "url": "https://www.aph.gov.au/About_Parliament/Education_Resources", "by": "Parliament of Australia", "blurb": "Fact sheets on the House, the Senate and how a bill becomes law."},
-   {"name": "Parliament of Victoria: teach and learn", "url": "https://www.parliament.vic.gov.au/teach-and-learn", "by": "Parliament of Victoria", "blurb": "How the Victorian Parliament works, with resources written for students."},
-   {"name": "Passport to Democracy", "url": "https://passport.vec.vic.gov.au", "by": "Victorian Electoral Commission", "blurb": "Taking action on an issue you care about: a step-by-step program for young people."},
-   {"name": "High Court of Australia", "url": "https://www.hcourt.gov.au", "by": "High Court of Australia", "blurb": "Australia's highest court: its role, its judges and how cases reach it."},
-   {"name": "National Archives: civics and citizenship", "url": "https://www.naa.gov.au/students-and-teachers/classroom-resources/civics-and-citizenship", "by": "National Archives of Australia", "blurb": "Original documents, including the Constitution, with classroom resources."},
-   {"name": "Rule of Law Education Centre", "url": "https://www.ruleoflaw.org.au/education", "by": "Rule of Law Education Centre", "blurb": "Plain-language explanations of the rule of law, the courts and the separation of powers."},
-   {"name": "Australian Human Rights Commission", "url": "https://humanrights.gov.au", "by": "Australian Human Rights Commission", "blurb": "Australia's national human rights body. Rights, responsibilities and fairness explained."},
-   {"name": "Youth Law Australia", "url": "https://yla.org.au", "by": "Youth Law Australia", "blurb": "Free, plain-English legal information for people under 25."}
+   {"name": "Parliamentary Education Office", "icon": "ic-gov", "col": "var(--jp)", "url": "https://peo.gov.au", "by": "Parliament of Australia", "blurb": "How Parliament, elections and the Constitution work, explained for students. The best first stop."},
+   {"name": "AEC for schools", "icon": "l-ballot", "col": "var(--plum)", "url": "https://education.aec.gov.au", "by": "Australian Electoral Commission", "blurb": "How voting and elections work in Australia, from the people who run them."},
+   {"name": "Museum of Australian Democracy", "icon": "l-columns", "col": "var(--accent)", "url": "https://www.moadoph.gov.au", "by": "Old Parliament House, Canberra", "blurb": "Stories, objects and timelines from Australia's democratic history."},
+   {"name": "Parliament of Australia: education", "icon": "p-government", "col": "var(--sage)", "url": "https://www.aph.gov.au/About_Parliament/Education_Resources", "by": "Parliament of Australia", "blurb": "Fact sheets on the House, the Senate and how a bill becomes law."},
+   {"name": "Parliament of Victoria: teach and learn", "icon": "l-steps", "col": "var(--sk)", "url": "https://www.parliament.vic.gov.au/teach-and-learn", "by": "Parliament of Victoria", "blurb": "How the Victorian Parliament works, with resources written for students."},
+   {"name": "Passport to Democracy", "icon": "l-passport", "col": "var(--rose)", "url": "https://passport.vec.vic.gov.au", "by": "Victorian Electoral Commission", "blurb": "Taking action on an issue you care about: a step-by-step program for young people."},
+   {"name": "High Court of Australia", "icon": "ic-law", "col": "var(--navy)", "url": "https://www.hcourt.gov.au", "by": "High Court of Australia", "blurb": "Australia's highest court: its role, its judges and how cases reach it."},
+   {"name": "National Archives: civics and citizenship", "icon": "l-archive", "col": "var(--gold-ink)", "url": "https://www.naa.gov.au/students-and-teachers/classroom-resources/civics-and-citizenship", "by": "National Archives of Australia", "blurb": "Original documents, including the Constitution, with classroom resources."},
+   {"name": "Rule of Law Education Centre", "icon": "l-scroll", "col": "var(--teal)", "url": "https://www.ruleoflaw.org.au/education", "by": "Rule of Law Education Centre", "blurb": "Plain-language explanations of the rule of law, the courts and the separation of powers."},
+   {"name": "Australian Human Rights Commission", "icon": "ic-cit", "col": "var(--eu)", "url": "https://humanrights.gov.au", "by": "Australian Human Rights Commission", "blurb": "Australia's national human rights body. Rights, responsibilities and fairness explained."},
+   {"name": "Youth Law Australia", "icon": "b-bubble", "col": "var(--plum)", "url": "https://yla.org.au", "by": "Youth Law Australia", "blurb": "Free, plain-English legal information for people under 25."}
   ]
  }
 }
