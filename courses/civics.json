@@ -109,27 +109,7 @@
    "<b>Once</b>, try <b>Challenge</b>, then an <b>Interactive</b> and <b>Key terms</b> for anything you blanked on."
   ]
  },
- "breakdown": {
-  "title": "Test breakdown",
-  "items": [
-   "<b>30 questions, 1 mark each.</b>",
-   "<b>Multiple choice</b>, and <b>fill in the blank</b> from a word bank of three or four words.",
-   "<b>Six short scenarios</b>, each followed by three or four questions. Read the scenario twice before you answer.",
-   "Attempt every question."
-  ],
-  "links": [
-   [
-    "sources",
-    "Scenario practice",
-    ""
-   ],
-   [
-    "setup",
-    "Multiple-choice practice",
-    ""
-   ]
-  ]
- },
+ "breakdown": null,
  "modes": [
   {
    "id": "practice",

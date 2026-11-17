@@ -956,11 +956,11 @@ function home(){
       </div></div>
       <figure class="pic" style="margin:0"><img src="${IMG[COURSE.hero.img]}" alt="${esc(COURSE.hero.alt)}"><figcaption class="cap">${esc(COURSE.hero.cap)}</figcaption></figure>
     </div>
-    <div class="examband"><span class="k">&#9998;</span><div class="ex">
+    ${COURSE.breakdown?`<div class="examband"><span class="k">&#9998;</span><div class="ex">
       <span class="t">${esc(COURSE.breakdown.title)}</span>
       <ul class="exlist">${COURSE.breakdown.items.map(x=>`<li>${x}</li>`).join('')}</ul>
       <span class="exlinks">${COURSE.breakdown.links.map(([go,label,cls])=>`<button class="btn ${cls||''}" data-go="${go}">${esc(label)}</button>`).join('')}</span>
-    </div></div>
+    </div></div>`:''}
     <div class="units ${COURSE.units.filter(u=>u.panel!==false).length===3?'n3':''}">
       ${COURSE.units.filter(u=>u.panel!==false).map(u=>`<button class="upanel ${u.cls} ${u.img?'':'noimg'}" data-unit="${esc(u.name)}">${u.img?`<span class="photo" style="background-image:url(${IMG[u.img]});background-position:${u.imgPos||'center'};background-size:${u.imgSize||'cover'}"></span>`:''}<span class="t">${esc(u.name)}</span><span class="n">${esc(u.blurb||'')}</span><span class="cta">Practise this unit \u2192</span><svg class="art"><use href="#${u.art||'art-eu'}"/></svg></button>`).join('')}
     </div>
