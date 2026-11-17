@@ -189,7 +189,8 @@ def check_images(imgs):
 
 def main():
     imgs = images()
-    for path in sorted(glob.glob(os.path.join(ROOT, 'courses', '*.json'))): check_course(path, imgs)
+    for path in sorted(glob.glob(os.path.join(ROOT, 'courses', '*.json'))):
+        if not path.endswith('.variants.json'): check_course(path, imgs)
     check_images(imgs)
     if errors:
         print(f'\n{len(errors)} problem(s):'); [print(' -', e) for e in errors]; return 1
