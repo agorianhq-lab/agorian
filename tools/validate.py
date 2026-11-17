@@ -277,6 +277,20 @@ def check_course(path, imgs):
     if d.get('explain'): check_explain(d['explain'])
     check_links(c, rel, imgs)
     if c.get('tilePos') not in (None, 'header', 'hero'): err(rel, 'tilePos must be header or hero')
+    if c.get('termImg') is not None:
+        terms = {t.get('term') for t in (load(d['bank']) or {}).get('terms', [])} if d.get('bank') else set()
+        seen = set()
+        for g in c['termImg']:
+            w = f"{rel} termImg {g.get('img', '?')!r}"
+            if not g.get('img'): err(w, 'needs an img')
+            else:
+                SOURCE_IMGS.add(g['img'])
+                if g['img'] not in imgs: err(w, f"image {g['img']!r} missing from img/")
+            if not isinstance(g.get('terms'), list) or not g['terms']: err(w, 'needs a non-empty terms list'); continue
+            for t in g['terms']:
+                if t not in terms: err(w, f'term {t!r} is not in the bank')
+                if t in seen: err(w, f'term {t!r} mapped twice')
+                seen.add(t)
     if 'inline' in (c.get('welcome') or {}) and not isinstance(c['welcome']['inline'], bool): err(rel, 'welcome.inline must be true or false')
     for k in ('badges', 'board'):
         if k in c and not isinstance(c[k], bool): err(rel, f'{k} must be true or false')

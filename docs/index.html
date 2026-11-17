@@ -280,6 +280,15 @@ input.text.right{border-color:var(--ok);background:var(--ok-bg)} input.text.wron
 .flash .def{font-size:clamp(20px,2vw,24px);max-width:56ch;line-height:1.45}
 .flash .tap{font-size:13px;opacity:.8;margin-top:16px}
 @media (max-width:600px){.flash{height:300px;padding:22px}}
+/* a photograph on the flashcard, muted until the pointer lights it up */
+.flash.hasphoto{height:auto;min-height:400px;padding-top:198px}
+.flash .photo{position:absolute;inset:0 0 auto 0;height:176px;background-size:cover;background-position:center;background-repeat:no-repeat;filter:saturate(.4) brightness(.84);transform:scale(1.01);transform-origin:center;transition:filter .35s,transform .6s;z-index:1}
+.flash .photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,color-mix(in srgb,var(--u) 46%,transparent),color-mix(in srgb,var(--u) 18%,transparent));transition:opacity .35s}
+.flash:hover .photo,.flash:focus-visible .photo{filter:none;transform:scale(1.06)}
+.flash:hover .photo::after,.flash:focus-visible .photo::after{opacity:0}
+.flash.hasphoto>div{z-index:2}
+.flash.back .photo{filter:saturate(.6) brightness(.92)}
+@media (max-width:600px){.flash.hasphoto{min-height:340px;padding-top:166px}.flash .photo{height:150px}}
 
 /* what success looks like */
 .tabs{display:flex;gap:6px;border-bottom:1px solid var(--line);margin-bottom:4px}
@@ -1452,11 +1461,13 @@ function verdict(p){ const v=COURSE.verdicts; return p>=85?v[0]:p>=65?v[1]:p>=40
 const JP_TERMS=new Set(['Archipelago','Bakufu','Bushido','Daimyo','Edict','Emperor','Outcast','Ronin','Sakoku','Samurai','Sankin Kotai','Seppuku','Shogun','Westernisation','Heian period','Kamakura period','Edo period','Treaty of Kanagawa','Meiji Restoration','Conscription','Kabuki','Ukiyo-e']);
 const SK_TERMS=new Set(['Cause and effect','Contestability','Continuity and change','Empathy','Evidence','Perspectives','Significance','Turning point']);
 const termUnit = t => t.unit || (JP_TERMS.has(t.term) ? 'Shogunate Japan' : SK_TERMS.has(t.term) ? 'Skills and concepts' : 'Medieval Europe');
+const TERM_IMG = {}; (COURSE.termImg||[]).forEach(g=>{ if(IMG[g.img]) g.terms.forEach(t=>{ TERM_IMG[t]={img:g.img,pos:g.pos||'center'} }) });
 function terms(){
   let order = shuffle(TERMS.map((_,i)=>i)); let i=0, flipped=false;
   const draw=()=>{ const t=TERMS[order[i]];
+    const ti=TERM_IMG[t.term];
     h(`<section class="section"><div class="row" style="justify-content:space-between">${MODEH('terms','Key terms')}<span class="pill">${TERMS.length} terms</span></div>
-    <div class="flash ${unitCls(termUnit(t))} ${flipped?'back':''}" id="flash" role="button" tabindex="0" aria-label="Flashcard, tap to flip">${flipped?`<div><p class="unit">${esc(termUnit(t))}</p><p class="term">${esc(t.term)}</p><p class="def" style="margin-top:10px">${esc(t.definition)}</p></div>`:`<div><p class="unit">${esc(termUnit(t))}</p><p class="term">${esc(t.term)}</p><p class="tap">Tap to see the definition</p></div>`}</div>
+    <div class="flash ${unitCls(termUnit(t))} ${flipped?'back':''} ${ti?'hasphoto':''}" id="flash" role="button" tabindex="0" aria-label="Flashcard, tap to flip">${ti?`<span class="photo" style="background-image:url(${IMG[ti.img]});background-position:${esc(ti.pos)}"></span>`:''}${flipped?`<div><p class="unit">${esc(termUnit(t))}</p><p class="term">${esc(t.term)}</p><p class="def" style="margin-top:10px">${esc(t.definition)}</p></div>`:`<div><p class="unit">${esc(termUnit(t))}</p><p class="term">${esc(t.term)}</p><p class="tap">Tap to see the definition</p></div>`}</div>
     <div class="actions"><div class="row"><button class="btn" id="prev" style="display:inline-flex;align-items:center;gap:6px"><svg style="width:18px;height:18px"><use href="#ar-l"/></svg>Previous</button><button class="btn" id="next" style="display:inline-flex;align-items:center;gap:6px">Next<svg style="width:18px;height:18px"><use href="#ar-r"/></svg></button></div>
       <div class="row"><button class="btn accent" id="sprint">Term sprint</button>${EXPLAIN.items.length?`<button class="btn" id="ex25">Explain it in 25 words</button>`:''}<button class="btn quiet" id="home">Home</button></div></div>
     <p class="hint">${i+1} of ${order.length}. Space flips, arrow keys move.</p></section>`);
