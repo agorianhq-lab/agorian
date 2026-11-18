@@ -101,6 +101,7 @@ header>*{max-width:100%}
 .brand .word{letter-spacing:-.01em}
 .brand .word .a{margin-right:.12em}
 .brand .desc{font-family:var(--display);font-size:clamp(18px,1.7vw,23px);font-weight:700;color:var(--navy);letter-spacing:.03em}
+.switch{display:flex;gap:8px;justify-content:center;margin-top:4px}.switch a{white-space:nowrap;font-size:13px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:4px 12px;background:var(--surface)}.switch a:hover{color:var(--navy);border-color:var(--navy)}
 .hdr-right{display:grid;gap:8px;justify-items:end}
 .pill{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);border-radius:999px;padding:4px 10px;font-size:13px;background:var(--surface);color:var(--muted)}
 .pill b{color:var(--ink);font-variant-numeric:tabular-nums}
@@ -1932,6 +1933,8 @@ function spotErrors(p){
 
 document.getElementById('homeBtn').onclick=()=>home();
 document.querySelector('.brand .desc').textContent=COURSE.subtitle;
+// a link to the other course on this site, under the brand (hosted pages only: the preview has nowhere to link to)
+if(Array.isArray(COURSE.other)&&COURSE.other.length&&location.protocol!=='file:'&&location.hostname!=='localhost'&&!/claude\.(ai|site)$/.test(location.hostname)){ const sw=document.createElement('nav'); sw.className='switch'; sw.setAttribute('aria-label','Other courses'); sw.innerHTML=COURSE.other.map(o=>`<a href="${esc(o.href)}">${esc(o.label)} <span aria-hidden="true">&rarr;</span></a>`).join(''); document.querySelector('header .brand').insertAdjacentElement('afterend',sw) }
 { const cr=[...document.querySelectorAll('footer details')].find(d=>d.querySelector('summary').textContent==='Image credits'); if(cr&&COURSE.credits!=null) cr.innerHTML='<summary>Image credits</summary>'+esc(COURSE.credits) }
 if(!COURSE.music){ document.querySelectorAll('#audioPop .arow').forEach((r,i)=>{ if(i>0) r.hidden=true }) }
 if(!COURSE.clock){ const ct=document.querySelector('.clocktile'), hr=document.querySelector('.hdr-right'), aw=ct.querySelector('.audiowrap'); hr.classList.add('plain'); ct.hidden=true; hr.insertBefore(aw,ct);
