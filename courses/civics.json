@@ -192,6 +192,5 @@
    {"name": "Australian Human Rights Commission", "icon": "ic-cit", "col": "var(--eu)", "url": "https://humanrights.gov.au", "by": "Australian Human Rights Commission", "topics": ["Many Stories, One Australia", "Justice for All"], "use": "rights and responsibilities, and what fairness and equality mean in practice."},
    {"name": "Youth Law Australia", "icon": "b-bubble", "col": "var(--plum)", "url": "https://yla.org.au", "by": "Youth Law Australia", "topics": ["Justice for All", "Effective Laws"], "use": "your own legal questions, answered in plain English for people under 25."}
   ]
- },
- "other": [{"label": "History", "href": "history/"}]
+ }
 }

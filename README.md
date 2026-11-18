@@ -22,7 +22,7 @@ One static page, no framework, no backend, no accounts. Everything a student doe
 | `tools/chrono.py` | Timeline events, periods and links, and the generator that renders them. |
 | `tools/validate.py` | Content checks (see below). |
 | `build.py` | Validates, then assembles `docs/` from the files above. |
-| `docs/` | Build output. GitHub Pages serves this folder from `main`. Commit it. Civics is the front page and builds to `docs/`; History builds to `docs/history/`. `docs/civics/` is a redirect to the front page for old links. |
+| `docs/` | Build output. GitHub Pages serves this folder from `main`. Commit it. Civics is the front page and builds to `docs/`. History is not published at the moment: it builds to `build/history/` (git-ignored); to publish it again, set its `out` back to `docs/history` and add the under-brand links (`other`) to both course files. `docs/civics/` redirects to the front page for old links; `docs/404.html` covers everything else. |
 | `img/` | Shared artwork, public domain unless the page footer says otherwise. `img/<course>/` holds artwork only that course uses (for example the civics tile photographs, credited in that page's footer). |
 | `fonts/` | Self-hosted Fraunces and Atkinson Hyperlegible (Next digits). No Google Fonts. |
 | `logo/`, `palettes/`, `square/` | Design assets and exploration sheets. Not built. |
@@ -33,7 +33,7 @@ One static page, no framework, no backend, no accounts. Everything a student doe
 
 ```
 python3 tools/validate.py              # check every course's content files
-python3 build.py                       # validate, then build docs/history/ (History) for hosting
+python3 build.py                       # validate, then build build/history/ (History, not published)
 python3 build.py --course civics       # build docs/ (Civics, the front page)
 python3 build.py --inline [--course X] # one self-contained file (images and fonts embedded) in preview/, for a sandbox
 ```

@@ -1,5 +1,5 @@
 """Build Agorian.
-  python3 build.py                        -> docs/history/index.html for the History course (hosting)
+  python3 build.py                        -> build/history/index.html for the History course (not published at present)
   python3 build.py --course civics        -> docs/index.html for the Civics course, the site's front page
   python3 build.py --inline [--course X]  -> preview/<course>.html, one file with images and fonts embedded
   python3 build.py --inline --course X --variants
