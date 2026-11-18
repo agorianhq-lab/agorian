@@ -1,6 +1,6 @@
 {
  "id": "civics",
- "out": "docs/civics",
+ "out": "docs",
  "subtitle": "Year 8 Civics Revision",
  "description": "Agorian. Year 8 Civics and Citizenship revision for the Democracy in Action unit. Challenge what you know.",
  "ogDescription": "Year 8 Civics and Citizenship revision for the Democracy in Action unit. Quick questions with explanations, scenario practice, a timed challenge and flashcards for the key terms.",
@@ -193,5 +193,5 @@
    {"name": "Youth Law Australia", "icon": "b-bubble", "col": "var(--plum)", "url": "https://yla.org.au", "by": "Youth Law Australia", "topics": ["Justice for All", "Effective Laws"], "use": "your own legal questions, answered in plain English for people under 25."}
   ]
  },
- "other": [{"label": "History", "href": "../"}]
+ "other": [{"label": "History", "href": "history/"}]
 }

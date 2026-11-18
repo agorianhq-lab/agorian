@@ -1,7 +1,0 @@
-<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'>
-<g stroke='#1B2420' stroke-width='10' stroke-linecap='round'><path d='M60 80 H340 M60 150 H340'/></g>
-<path d='M60 80 H210' stroke='#2F5D4B' stroke-width='10' stroke-linecap='round'/><path d='M60 150 H290' stroke='#B9472E' stroke-width='10' stroke-linecap='round'/>
-<circle cx='210' cy='80' r='22' fill='#FFFFFF' stroke='#1B2420' stroke-width='8'/><circle cx='290' cy='150' r='22' fill='#FFFFFF' stroke='#1B2420' stroke-width='8'/>
-<rect x='60' y='200' width='110' height='56' rx='28' fill='#2F5D4B'/><circle cx='142' cy='228' r='22' fill='#FFFFFF'/>
-<circle cx='300' cy='230' r='46' fill='#F2F5F1' stroke='#1B2420' stroke-width='8'/><path d='M300 230 L322 198' stroke='#D9A441' stroke-width='10' stroke-linecap='round'/><circle cx='300' cy='230' r='8' fill='#1B2420'/>
-</svg>
